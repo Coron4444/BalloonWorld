@@ -64,7 +64,7 @@ Copyright &copy; 2019 Kai Araki
 [url_shields_license]: https://img.shields.io/badge/license-MIT-blue.svg
 [url_fbx_converter]: https://github.com/Coron4444/FbxConverter
 [url_boost]: https://www.boost.org/users/history/version_1_69_0.html
-[url_document]: https://coron4444.github.io/FbxConverter/Document/html/index.html
+[url_document]: https://coron4444.github.io/BalloonWorld/Document/html/index.html
 [url_doxygen]: http://www.doxygen.jp/
 [url_author]: https://github.com/Coron4444
 [url_mit]: https://opensource.org/licenses/mit-license.php
