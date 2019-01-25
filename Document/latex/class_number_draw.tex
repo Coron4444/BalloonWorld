@@ -1,0 +1,252 @@
+\hypertarget{class_number_draw}{}\section{Number\+Draw クラス}
+\label{class_number_draw}\index{Number\+Draw@{Number\+Draw}}
+
+
+数字描画クラス  
+
+
+
+
+{\ttfamily \#include $<$Number\+Draw.\+h$>$}
+
+
+
+Number\+Draw の継承関係図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_number_draw__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_number_draw_ad52c1e8b9ae6e830a82c440cc18cb6c9}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_number_draw_a2b203d101f23f0d3f584937ff5ad662a}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_number_draw_a15e4e602b3f9372349d0b6ff9e4fc423}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_number_draw_abcd88040b2b6d5dd7d21e8cfd50b1682}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_number_draw_a2ea44b362c3a018faf46905d0f755410}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 行列ポインタ取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_number_draw_a4e1a672907ee288fc0c2c6caecdf3904}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアルポインタ取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_number_draw_a77d155c00ac4637154e62904556de05a}{getp\+Decale\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em デカールテクスチャポインタ取得関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_number}{Number}} $\ast$ \mbox{\hyperlink{class_number_draw_a8063f58804542a7f86b341eec4cc1e60}{number\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 数字 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+数字描画クラス 
+
+数字の描画クラス 
+
+ Number\+Draw.\+h の 29 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_number_draw_a15e4e602b3f9372349d0b6ff9e4fc423}\label{class_number_draw_a15e4e602b3f9372349d0b6ff9e4fc423}} 
+\index{Number\+Draw@{Number\+Draw}!Draw@{Draw}}
+\index{Draw@{Draw}!Number\+Draw@{Number\+Draw}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Number\+Draw\+::\+Draw (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & \+: オブジェクトインデックス mesh\+\_\+index \+: メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
+
+
+
+ Number\+Draw.\+cpp の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_number_draw_abcd88040b2b6d5dd7d21e8cfd50b1682}\label{class_number_draw_abcd88040b2b6d5dd7d21e8cfd50b1682}} 
+\index{Number\+Draw@{Number\+Draw}!get\+Mesh\+Num@{get\+Mesh\+Num}}
+\index{get\+Mesh\+Num@{get\+Mesh\+Num}!Number\+Draw@{Number\+Draw}}
+\subsubsection{\texorpdfstring{get\+Mesh\+Num()}{getMeshNum()}}
+{\footnotesize\ttfamily unsigned Number\+Draw\+::get\+Mesh\+Num (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+メッシュ数取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & メッシュ数 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a4c566a37d27fac3dcf76c7970443f375}{Draw\+Null}}を再実装しています。
+
+
+
+ Number\+Draw.\+cpp の 68 行目に定義があります。
+
+\mbox{\Hypertarget{class_number_draw_a77d155c00ac4637154e62904556de05a}\label{class_number_draw_a77d155c00ac4637154e62904556de05a}} 
+\index{Number\+Draw@{Number\+Draw}!getp\+Decale\+Texture@{getp\+Decale\+Texture}}
+\index{getp\+Decale\+Texture@{getp\+Decale\+Texture}!Number\+Draw@{Number\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Decale\+Texture()}{getpDecaleTexture()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Number\+Draw\+::getp\+Decale\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+デカールテクスチャポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & デカールテクスチャポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a87d21f70b6fed637a6e23029f29818c1}{Draw\+Null}}を再実装しています。
+
+
+
+ Number\+Draw.\+cpp の 104 行目に定義があります。
+
+\mbox{\Hypertarget{class_number_draw_a4e1a672907ee288fc0c2c6caecdf3904}\label{class_number_draw_a4e1a672907ee288fc0c2c6caecdf3904}} 
+\index{Number\+Draw@{Number\+Draw}!getp\+Material@{getp\+Material}}
+\index{getp\+Material@{getp\+Material}!Number\+Draw@{Number\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Material()}{getpMaterial()}}
+{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ Number\+Draw\+::getp\+Material (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+マテリアルポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアルポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a0c1efe55fea325ad277594be6fe1e938}{Draw\+Null}}を再実装しています。
+
+
+
+ Number\+Draw.\+cpp の 91 行目に定義があります。
+
+\mbox{\Hypertarget{class_number_draw_a2ea44b362c3a018faf46905d0f755410}\label{class_number_draw_a2ea44b362c3a018faf46905d0f755410}} 
+\index{Number\+Draw@{Number\+Draw}!getp\+Matrix@{getp\+Matrix}}
+\index{getp\+Matrix@{getp\+Matrix}!Number\+Draw@{Number\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Number\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+行列ポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & 行列ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a9aac059eb3b5d1f77e8bd3aa0647cff9}{Draw\+Null}}を再実装しています。
+
+
+
+ Number\+Draw.\+cpp の 79 行目に定義があります。
+
+\mbox{\Hypertarget{class_number_draw_ad52c1e8b9ae6e830a82c440cc18cb6c9}\label{class_number_draw_ad52c1e8b9ae6e830a82c440cc18cb6c9}} 
+\index{Number\+Draw@{Number\+Draw}!Init@{Init}}
+\index{Init@{Init}!Number\+Draw@{Number\+Draw}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Number\+Draw\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
+
+
+
+ Number\+Draw.\+cpp の 28 行目に定義があります。
+
+\mbox{\Hypertarget{class_number_draw_a2b203d101f23f0d3f584937ff5ad662a}\label{class_number_draw_a2b203d101f23f0d3f584937ff5ad662a}} 
+\index{Number\+Draw@{Number\+Draw}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Number\+Draw@{Number\+Draw}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Number\+Draw\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
+
+
+
+ Number\+Draw.\+cpp の 45 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_number_draw_a8063f58804542a7f86b341eec4cc1e60}\label{class_number_draw_a8063f58804542a7f86b341eec4cc1e60}} 
+\index{Number\+Draw@{Number\+Draw}!number\+\_\+@{number\+\_\+}}
+\index{number\+\_\+@{number\+\_\+}!Number\+Draw@{Number\+Draw}}
+\subsubsection{\texorpdfstring{number\+\_\+}{number\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_number}{Number}}$\ast$ Number\+Draw\+::number\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+数字 
+
+
+
+ Number\+Draw.\+h の 35 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Numbers/\+Number/\+Number\+Draw/\mbox{\hyperlink{_number_draw_8h}{Number\+Draw.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Numbers/\+Number/\+Number\+Draw/\mbox{\hyperlink{_number_draw_8cpp}{Number\+Draw.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>3DAction: Segment クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DAction
+   &#160;<span id="projectnumber">version 1.3</span>
+   </div>
+   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_segment.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="class_segment-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Segment クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_segment_8h_source.html">Segment.h</a>&gt;</code></p>
+<div class="dynheader">
+Segment の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_segment__inherit__graph.png" border="0" usemap="#_segment_inherit__map" alt="Inheritance graph"/></div>
+<map name="_segment_inherit__map" id="_segment_inherit__map">
+<area shape="rect" id="node2" href="class_collision_shape_base.html" title="衝突形状基底クラス " alt="" coords="5,5,144,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+Segment 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_segment__coll__graph.png" border="0" usemap="#_segment_coll__map" alt="Collaboration graph"/></div>
+<map name="_segment_coll__map" id="_segment_coll__map">
+<area shape="rect" id="node2" href="class_collision_shape_base.html" title="衝突形状基底クラス " alt="" coords="5,172,144,199"/>
+<area shape="rect" id="node4" href="class_vector3_d.html" title="Vector3D" alt="" coords="125,81,201,108"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:af491ed36fc8467aaaf503ba1053b85fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_segment.html#af491ed36fc8467aaaf503ba1053b85fd">Segment</a> (<a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a> position=<a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a>(0.0f, 0.0f, 0.0f), Vec3 vector=Vec3(0.0f, 0.0f, 0.0f))</td></tr>
+<tr class="separator:af491ed36fc8467aaaf503ba1053b85fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b45a453304f1f485e3bc2fcad58b59"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_segment.html#a76b45a453304f1f485e3bc2fcad58b59">~Segment</a> ()</td></tr>
+<tr class="separator:a76b45a453304f1f485e3bc2fcad58b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a889d62f6d4c10701464726da706ae043"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_segment.html#a889d62f6d4c10701464726da706ae043">GetSlopeSegment2D</a> () const</td></tr>
+<tr class="separator:a889d62f6d4c10701464726da706ae043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4223e990a42cc9e487ef51b82e63e777"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_segment.html#a4223e990a42cc9e487ef51b82e63e777">GetAddVectorPosition</a> () const</td></tr>
+<tr class="separator:a4223e990a42cc9e487ef51b82e63e777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_collision_shape_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_collision_shape_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_collision_shape_base.html">CollisionShapeBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a9dd2ab42e2a6e96c6bff832ce8ca62b9 inherit pub_methods_class_collision_shape_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a9dd2ab42e2a6e96c6bff832ce8ca62b9">CollisionShapeBase</a> (<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">Type</a> type)</td></tr>
+<tr class="memdesc:a9dd2ab42e2a6e96c6bff832ce8ca62b9 inherit pub_methods_class_collision_shape_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="class_collision_shape_base.html#a9dd2ab42e2a6e96c6bff832ce8ca62b9">[詳解]</a><br /></td></tr>
+<tr class="separator:a9dd2ab42e2a6e96c6bff832ce8ca62b9 inherit pub_methods_class_collision_shape_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64fa9e1ae6b582be42360e926ce5d6cb inherit pub_methods_class_collision_shape_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a64fa9e1ae6b582be42360e926ce5d6cb">~CollisionShapeBase</a> ()</td></tr>
+<tr class="memdesc:a64fa9e1ae6b582be42360e926ce5d6cb inherit pub_methods_class_collision_shape_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="class_collision_shape_base.html#a64fa9e1ae6b582be42360e926ce5d6cb">[詳解]</a><br /></td></tr>
+<tr class="separator:a64fa9e1ae6b582be42360e926ce5d6cb inherit pub_methods_class_collision_shape_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a662af47ebcd9f29d7c54047a0227b8bc inherit pub_methods_class_collision_shape_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a662af47ebcd9f29d7c54047a0227b8bc">getType</a> ()</td></tr>
+<tr class="separator:a662af47ebcd9f29d7c54047a0227b8bc inherit pub_methods_class_collision_shape_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17bd2d81ebf464459dd977152e02055b inherit pub_methods_class_collision_shape_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a17bd2d81ebf464459dd977152e02055b">getPositon</a> () const</td></tr>
+<tr class="separator:a17bd2d81ebf464459dd977152e02055b inherit pub_methods_class_collision_shape_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14132139e486926df11f438a8600907 inherit pub_methods_class_collision_shape_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#ac14132139e486926df11f438a8600907">setPosition</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> value)</td></tr>
+<tr class="separator:ac14132139e486926df11f438a8600907 inherit pub_methods_class_collision_shape_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:aee447b161d940d22e9aa222091789e08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_segment.html#aee447b161d940d22e9aa222091789e08">position_</a></td></tr>
+<tr class="separator:aee447b161d940d22e9aa222091789e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6834b88ecae688f0fc5b4ed95fab824b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_segment.html#a6834b88ecae688f0fc5b4ed95fab824b">vector_</a></td></tr>
+<tr class="separator:a6834b88ecae688f0fc5b4ed95fab824b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pub_types_class_collision_shape_base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_collision_shape_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_collision_shape_base.html">CollisionShapeBase</a> に属する継承公開型</td></tr>
+<tr class="memitem:a8abcef092855ad0ca191047044b002cb inherit pub_types_class_collision_shape_base"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">Type</a> { <br />
+&#160;&#160;<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba1129630002cc3cf03126a4ef39383c98">NONE</a> = -1, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba2512ecb2c7c72bdbdf8aa3f5a07671c7">AABB</a>, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba2cae7484589db3e777b158aeae2a633b">CAPSULE</a>, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba92f81388af31f36357b692f2aead2f19">CYLINDER</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba56e56c8ee634330847018d716ca222b0">OBB</a>, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba740709eb8c52c5d67d1c9af02af074cf">PLANE</a>, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cbae8cff591879b2ebec2c2f14bb7ff1b46">SEGMENT</a>, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cbaf5cbf5af4d5ef779592f1a293895c63e">SPHERE</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba4b6a6ea5d0152ec22ef54af55a4c872b">TRIANGLE</a>, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba4636454f94c8f39be9fed0b1a3124a2c">MAX</a>
+<br />
+ }</td></tr>
+<tr class="separator:a8abcef092855ad0ca191047044b002cb inherit pub_types_class_collision_shape_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="_segment_8h_source.html">Segment.h</a> の <a class="el" href="_segment_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="af491ed36fc8467aaaf503ba1053b85fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af491ed36fc8467aaaf503ba1053b85fd">&#9670;&nbsp;</a></span>Segment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Segment::Segment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a>&#160;</td>
+          <td class="paramname"><em>position</em> = <code><a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a>(0.0f,&#160;0.0f,&#160;0.0f)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a>&#160;</td>
+          <td class="paramname"><em>vector</em> = <code><a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a>(0.0f,&#160;0.0f,&#160;0.0f)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_segment_8h_source.html">Segment.h</a> の <a class="el" href="_segment_8h_source.html#l00077">77</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a76b45a453304f1f485e3bc2fcad58b59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76b45a453304f1f485e3bc2fcad58b59">&#9670;&nbsp;</a></span>~Segment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Segment::~Segment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_segment_8h_source.html">Segment.h</a> の <a class="el" href="_segment_8h_source.html#l00092">92</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a4223e990a42cc9e487ef51b82e63e777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4223e990a42cc9e487ef51b82e63e777">&#9670;&nbsp;</a></span>GetAddVectorPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Segment::GetAddVectorPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_segment_8h_source.html">Segment.h</a> の <a class="el" href="_segment_8h_source.html#l00050">50</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_segment_a4223e990a42cc9e487ef51b82e63e777_icgraph.png" border="0" usemap="#class_segment_a4223e990a42cc9e487ef51b82e63e777_icgraph" alt=""/></div>
+<map name="class_segment_a4223e990a42cc9e487ef51b82e63e777_icgraph" id="class_segment_a4223e990a42cc9e487ef51b82e63e777_icgraph">
+<area shape="rect" id="node2" href="_segment_8h.html#a0575d6a616fa95075f88623632bae170" title="ShortestDistance_Segment\l_Point" alt="" coords="264,39,445,80"/>
+<area shape="rect" id="node3" href="_segment_8h.html#a3ca962c690b73355253042cdab29b337" title="ShortestDistance_Segment\l_Segment" alt="" coords="493,8,675,49"/>
+<area shape="rect" id="node15" href="class_collision_judgment.html#a4cc335999fcbeadf0aa1b6ebcb749e5b" title="CollisionJudgment::\lHitCheck_Sphere_Capsule" alt="" coords="725,71,903,112"/>
+<area shape="rect" id="node4" href="class_collision_judgment.html#a95962556f370a964ec1961b1c461ae2a" title="CollisionJudgment::\lHitCheck_Capsule_Capsule" alt="" coords="723,5,905,47"/>
+<area shape="rect" id="node5" href="class_collision_manager.html#a87f64affda1906cd6eee3d177ca25045" title="衝突計算振り分け関数 " alt="" coords="953,39,1156,80"/>
+<area shape="rect" id="node6" href="class_collision_manager.html#ab7a212529ce17392d2ca120153318090" title="実際の計算関数 " alt="" coords="1204,39,1371,80"/>
+<area shape="rect" id="node7" href="class_collision_manager.html#a67c1ebc4d4a19e06122f11c3eeec89ec" title="衝突判定関数 " alt="" coords="1429,5,1607,47"/>
+<area shape="rect" id="node14" href="class_collision_manager.html#a25dbc14dbc709a6bc2dc4424e3965dbe" title="古い衝突判定関数 " alt="" coords="1419,71,1617,112"/>
+<area shape="rect" id="node8" href="class_collision_manager.html#a23c21d077dbfd7ca86e7c0649d775dfc" title="更新関数 " alt="" coords="1665,46,1836,73"/>
+<area shape="rect" id="node9" href="class_game_object_manager.html#a6f053b1c655de6ca1c9a8fa9b6e118ae" title="更新関数 " alt="" coords="1884,39,2037,80"/>
+<area shape="rect" id="node10" href="class_scene_manager.html#a493bc0d65558ce004f6f248a185ba956" title="シーン更新関数 " alt="" coords="2085,46,2280,73"/>
+<area shape="rect" id="node11" href="class_game_system.html#ab0add1f2bd97d3b125a5682f571053a3" title="更新関数 " alt="" coords="2328,46,2479,73"/>
+<area shape="rect" id="node12" href="main_8cpp.html#a0c8cdd6f9d1e6ea84da99015aebdeb61" title="MessageAndGameLoop" alt="" coords="2527,46,2688,73"/>
+<area shape="rect" id="node13" href="main_8cpp.html#a3f6dd90e9dfab2815b29d251b677f6e9" title="WinMain" alt="" coords="2736,46,2809,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a889d62f6d4c10701464726da706ae043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a889d62f6d4c10701464726da706ae043">&#9670;&nbsp;</a></span>GetSlopeSegment2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Segment::GetSlopeSegment2D </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_segment_8h_source.html">Segment.h</a> の <a class="el" href="_segment_8h_source.html#l00104">104</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_segment_a889d62f6d4c10701464726da706ae043_icgraph.png" border="0" usemap="#class_segment_a889d62f6d4c10701464726da706ae043_icgraph" alt=""/></div>
+<map name="class_segment_a889d62f6d4c10701464726da706ae043_icgraph" id="class_segment_a889d62f6d4c10701464726da706ae043_icgraph">
+<area shape="rect" id="node2" href="class_collision_judgment.html#aef83b0d1bff8ede9c3e1f836694a3153" title="CollisionJudgment::\lCrossPointCalculation\l_OneSideZeroSegment2D\l_Segment2D" alt="" coords="257,5,429,76"/>
+<area shape="rect" id="node14" href="class_collision_judgment.html#a25e0fb020e2a075322c9540bdd13b6c2" title="CollisionJudgment::\lCrossPointCalculation\l_Segment2D_Segment2D" alt="" coords="257,101,429,157"/>
+<area shape="rect" id="node3" href="class_collision_judgment.html#a612bc9e5cfcb243324417f5059c6e24d" title="CollisionJudgment::\lHitCheck_Segment2D_Segment2D" alt="" coords="477,64,703,105"/>
+<area shape="rect" id="node4" href="class_collision_manager.html#a87f64affda1906cd6eee3d177ca25045" title="衝突計算振り分け関数 " alt="" coords="751,64,953,105"/>
+<area shape="rect" id="node5" href="class_collision_manager.html#ab7a212529ce17392d2ca120153318090" title="実際の計算関数 " alt="" coords="1001,64,1168,105"/>
+<area shape="rect" id="node6" href="class_collision_manager.html#a67c1ebc4d4a19e06122f11c3eeec89ec" title="衝突判定関数 " alt="" coords="1226,31,1405,72"/>
+<area shape="rect" id="node13" href="class_collision_manager.html#a25dbc14dbc709a6bc2dc4424e3965dbe" title="古い衝突判定関数 " alt="" coords="1216,96,1415,137"/>
+<area shape="rect" id="node7" href="class_collision_manager.html#a23c21d077dbfd7ca86e7c0649d775dfc" title="更新関数 " alt="" coords="1463,71,1633,98"/>
+<area shape="rect" id="node8" href="class_game_object_manager.html#a6f053b1c655de6ca1c9a8fa9b6e118ae" title="更新関数 " alt="" coords="1681,64,1835,105"/>
+<area shape="rect" id="node9" href="class_scene_manager.html#a493bc0d65558ce004f6f248a185ba956" title="シーン更新関数 " alt="" coords="1883,71,2077,98"/>
+<area shape="rect" id="node10" href="class_game_system.html#ab0add1f2bd97d3b125a5682f571053a3" title="更新関数 " alt="" coords="2125,71,2276,98"/>
+<area shape="rect" id="node11" href="main_8cpp.html#a0c8cdd6f9d1e6ea84da99015aebdeb61" title="MessageAndGameLoop" alt="" coords="2324,71,2485,98"/>
+<area shape="rect" id="node12" href="main_8cpp.html#a3f6dd90e9dfab2815b29d251b677f6e9" title="WinMain" alt="" coords="2533,71,2607,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="aee447b161d940d22e9aa222091789e08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee447b161d940d22e9aa222091789e08">&#9670;&nbsp;</a></span>position_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Segment::position_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_segment_8h_source.html">Segment.h</a> の <a class="el" href="_segment_8h_source.html#l00057">57</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6834b88ecae688f0fc5b4ed95fab824b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6834b88ecae688f0fc5b4ed95fab824b">&#9670;&nbsp;</a></span>vector_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Segment::vector_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_segment_8h_source.html">Segment.h</a> の <a class="el" href="_segment_8h_source.html#l00058">58</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Component/Base/CollisionBase/CollisionObject/CollisionShapeBase/Segment/<a class="el" href="_segment_8h_source.html">Segment.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_segment.html">Segment</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

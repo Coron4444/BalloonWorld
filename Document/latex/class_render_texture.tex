@@ -1,0 +1,212 @@
+\hypertarget{class_render_texture}{}\section{Render\+Texture クラス}
+\label{class_render_texture}\index{Render\+Texture@{Render\+Texture}}
+
+
+フェードクラス  
+
+
+
+
+{\ttfamily \#include $<$Render\+Texture.\+h$>$}
+
+
+
+Render\+Texture の継承関係図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_render_texture__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_render_texture_a498eb8be8672e01164b3770cdff43291}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_texture_a0e55cd9b412d87dfe1f4b90f29f357c8}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_texture_ac27f8cfac7903dd502de61e22abfc457}{Update}} (float x, float y, \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} color)
+\item 
+void \mbox{\hyperlink{class_render_texture_a529ab829c676470ae5764b42cba9efb0}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_render_texture_adafb7e9aeea3c298cbfcc71e35ed9457}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 行列ポインタ取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_render_texture_a1defe8bfacccf91dc7479a977e70578c}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアルポインタ取得関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}} $\ast$ \mbox{\hyperlink{class_render_texture_ad354ed8b9968b5741feb43775cc821b9}{plane\+\_\+polygon\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 板ポリゴン \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_render_texture_a390e49a5efe8a6a977e8ba287ec969a2}{transform\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 状態 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+フェードクラス 
+
+フェードのクラス 
+
+ Render\+Texture.\+h の 31 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_render_texture_a529ab829c676470ae5764b42cba9efb0}\label{class_render_texture_a529ab829c676470ae5764b42cba9efb0}} 
+\index{Render\+Texture@{Render\+Texture}!Draw@{Draw}}
+\index{Draw@{Draw}!Render\+Texture@{Render\+Texture}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Render\+Texture\+::\+Draw (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
+
+
+
+ Render\+Texture.\+h の 77 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_texture_a1defe8bfacccf91dc7479a977e70578c}\label{class_render_texture_a1defe8bfacccf91dc7479a977e70578c}} 
+\index{Render\+Texture@{Render\+Texture}!getp\+Material@{getp\+Material}}
+\index{getp\+Material@{getp\+Material}!Render\+Texture@{Render\+Texture}}
+\subsubsection{\texorpdfstring{getp\+Material()}{getpMaterial()}}
+{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$ Render\+Texture\+::getp\+Material (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+マテリアルポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアルポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a0c1efe55fea325ad277594be6fe1e938}{Draw\+Null}}を再実装しています。
+
+
+
+ Render\+Texture.\+h の 92 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_texture_adafb7e9aeea3c298cbfcc71e35ed9457}\label{class_render_texture_adafb7e9aeea3c298cbfcc71e35ed9457}} 
+\index{Render\+Texture@{Render\+Texture}!getp\+Matrix@{getp\+Matrix}}
+\index{getp\+Matrix@{getp\+Matrix}!Render\+Texture@{Render\+Texture}}
+\subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}}$\ast$ Render\+Texture\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+行列ポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & 行列ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a9aac059eb3b5d1f77e8bd3aa0647cff9}{Draw\+Null}}を再実装しています。
+
+
+
+ Render\+Texture.\+h の 87 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_texture_a498eb8be8672e01164b3770cdff43291}\label{class_render_texture_a498eb8be8672e01164b3770cdff43291}} 
+\index{Render\+Texture@{Render\+Texture}!Init@{Init}}
+\index{Init@{Init}!Render\+Texture@{Render\+Texture}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Render\+Texture\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
+
+
+
+ Render\+Texture.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_texture_a0e55cd9b412d87dfe1f4b90f29f357c8}\label{class_render_texture_a0e55cd9b412d87dfe1f4b90f29f357c8}} 
+\index{Render\+Texture@{Render\+Texture}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Render\+Texture@{Render\+Texture}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Render\+Texture\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
+
+
+
+ Render\+Texture.\+h の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_texture_ac27f8cfac7903dd502de61e22abfc457}\label{class_render_texture_ac27f8cfac7903dd502de61e22abfc457}} 
+\index{Render\+Texture@{Render\+Texture}!Update@{Update}}
+\index{Update@{Update}!Render\+Texture@{Render\+Texture}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Render\+Texture\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Render\+Texture.\+h の 62 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_render_texture_ad354ed8b9968b5741feb43775cc821b9}\label{class_render_texture_ad354ed8b9968b5741feb43775cc821b9}} 
+\index{Render\+Texture@{Render\+Texture}!plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}}
+\index{plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}!Render\+Texture@{Render\+Texture}}
+\subsubsection{\texorpdfstring{plane\+\_\+polygon\+\_\+}{plane\_polygon\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}}$\ast$ Render\+Texture\+::plane\+\_\+polygon\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+板ポリゴン 
+
+
+
+ Render\+Texture.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_texture_a390e49a5efe8a6a977e8ba287ec969a2}\label{class_render_texture_a390e49a5efe8a6a977e8ba287ec969a2}} 
+\index{Render\+Texture@{Render\+Texture}!transform\+\_\+@{transform\+\_\+}}
+\index{transform\+\_\+@{transform\+\_\+}!Render\+Texture@{Render\+Texture}}
+\subsubsection{\texorpdfstring{transform\+\_\+}{transform\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}} Render\+Texture\+::transform\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+状態 
+
+
+
+ Render\+Texture.\+h の 38 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Render\+Texture/\mbox{\hyperlink{_render_texture_8h}{Render\+Texture.\+h}}\end{DoxyCompactItemize}

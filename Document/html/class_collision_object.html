@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>3DAction: CollisionObject クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DAction
+   &#160;<span id="projectnumber">version 1.3</span>
+   </div>
+   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_collision_object.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="#pri-static-attribs">静的非公開変数類</a> &#124;
+<a href="class_collision_object-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CollisionObject クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>衝突オブジェクトClass  
+ <a href="class_collision_object.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_collision_object_8h_source.html">CollisionObject.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a0a34797b95ae9bc9908f95ed51caffbb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#a0a34797b95ae9bc9908f95ed51caffbb">getTag</a> ()</td></tr>
+<tr class="memdesc:a0a34797b95ae9bc9908f95ed51caffbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">タグ取得関数  <a href="#a0a34797b95ae9bc9908f95ed51caffbb">[詳解]</a><br /></td></tr>
+<tr class="separator:a0a34797b95ae9bc9908f95ed51caffbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f9efe4e585d6e83c3e724d2a07ea2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_shape_base.html">CollisionShapeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#a63f9efe4e585d6e83c3e724d2a07ea2c">getpCollisionShape</a> ()</td></tr>
+<tr class="memdesc:a63f9efe4e585d6e83c3e724d2a07ea2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突形状ポインタ取得関数  <a href="#a63f9efe4e585d6e83c3e724d2a07ea2c">[詳解]</a><br /></td></tr>
+<tr class="separator:a63f9efe4e585d6e83c3e724d2a07ea2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c004b1cd134290efa386049103b1140"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#a9c004b1cd134290efa386049103b1140">getpHitVector</a> ()</td></tr>
+<tr class="memdesc:a9c004b1cd134290efa386049103b1140"><td class="mdescLeft">&#160;</td><td class="mdescRight">めり込みベクトルポインタ取得関数  <a href="#a9c004b1cd134290efa386049103b1140">[詳解]</a><br /></td></tr>
+<tr class="separator:a9c004b1cd134290efa386049103b1140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1087fa9cebfe0b1675923807b73d8868"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#a1087fa9cebfe0b1675923807b73d8868">setHitVector</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> value)</td></tr>
+<tr class="memdesc:a1087fa9cebfe0b1675923807b73d8868"><td class="mdescLeft">&#160;</td><td class="mdescRight">めり込みベクトルポインタ設定関数  <a href="#a1087fa9cebfe0b1675923807b73d8868">[詳解]</a><br /></td></tr>
+<tr class="separator:a1087fa9cebfe0b1675923807b73d8868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac39d971eb18ce6555064a69a5d541940"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#ac39d971eb18ce6555064a69a5d541940">getIsJudgment</a> ()</td></tr>
+<tr class="memdesc:ac39d971eb18ce6555064a69a5d541940"><td class="mdescLeft">&#160;</td><td class="mdescRight">判定するかフラグ取得関数  <a href="#ac39d971eb18ce6555064a69a5d541940">[詳解]</a><br /></td></tr>
+<tr class="separator:ac39d971eb18ce6555064a69a5d541940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3000144caea71e39cbdafebb249fef7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#a3000144caea71e39cbdafebb249fef7e">setIsJudgment</a> (bool value)</td></tr>
+<tr class="memdesc:a3000144caea71e39cbdafebb249fef7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">判定するかフラグ設定関数  <a href="#a3000144caea71e39cbdafebb249fef7e">[詳解]</a><br /></td></tr>
+<tr class="separator:a3000144caea71e39cbdafebb249fef7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf806d9b368ad38ad0fe81b4d93c3bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#aebf806d9b368ad38ad0fe81b4d93c3bb">CollisionObject</a> (<a class="el" href="class_collision_shape_base.html">CollisionShapeBase</a> *collision_shape, int tag)</td></tr>
+<tr class="memdesc:aebf806d9b368ad38ad0fe81b4d93c3bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#aebf806d9b368ad38ad0fe81b4d93c3bb">[詳解]</a><br /></td></tr>
+<tr class="separator:aebf806d9b368ad38ad0fe81b4d93c3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4e6916bc5911b8a82498536d5a27e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#a8c4e6916bc5911b8a82498536d5a27e1">~CollisionObject</a> ()</td></tr>
+<tr class="memdesc:a8c4e6916bc5911b8a82498536d5a27e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="#a8c4e6916bc5911b8a82498536d5a27e1">[詳解]</a><br /></td></tr>
+<tr class="separator:a8c4e6916bc5911b8a82498536d5a27e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92dd5d21c6674605d290e0d37d64505a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#a92dd5d21c6674605d290e0d37d64505a">ResetHitData</a> ()</td></tr>
+<tr class="memdesc:a92dd5d21c6674605d290e0d37d64505a"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突用データリセット関数  <a href="#a92dd5d21c6674605d290e0d37d64505a">[詳解]</a><br /></td></tr>
+<tr class="separator:a92dd5d21c6674605d290e0d37d64505a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a4ed81be0cf60ec47e54f83955853a6b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_shape_base.html">CollisionShapeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#a4ed81be0cf60ec47e54f83955853a6b1">collision_shape_</a></td></tr>
+<tr class="memdesc:a4ed81be0cf60ec47e54f83955853a6b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">形状  <a href="#a4ed81be0cf60ec47e54f83955853a6b1">[詳解]</a><br /></td></tr>
+<tr class="separator:a4ed81be0cf60ec47e54f83955853a6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fb64c6aaab4606a4e0a1058a844d10e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#a5fb64c6aaab4606a4e0a1058a844d10e">hit_vector_</a></td></tr>
+<tr class="memdesc:a5fb64c6aaab4606a4e0a1058a844d10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">めり込みベクトル  <a href="#a5fb64c6aaab4606a4e0a1058a844d10e">[詳解]</a><br /></td></tr>
+<tr class="separator:a5fb64c6aaab4606a4e0a1058a844d10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a104bfc5534ba8ea189a45de9ba32f6ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#a104bfc5534ba8ea189a45de9ba32f6ee">tag_</a></td></tr>
+<tr class="memdesc:a104bfc5534ba8ea189a45de9ba32f6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">タグ  <a href="#a104bfc5534ba8ea189a45de9ba32f6ee">[詳解]</a><br /></td></tr>
+<tr class="separator:a104bfc5534ba8ea189a45de9ba32f6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd29059add616ce619c72ebce6af720"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#a0dd29059add616ce619c72ebce6af720">is_judgment_</a> = true</td></tr>
+<tr class="memdesc:a0dd29059add616ce619c72ebce6af720"><td class="mdescLeft">&#160;</td><td class="mdescRight">判定するかフラグ  <a href="#a0dd29059add616ce619c72ebce6af720">[詳解]</a><br /></td></tr>
+<tr class="separator:a0dd29059add616ce619c72ebce6af720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5af3618b5605c1bcff1e403c85c3b1ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#a5af3618b5605c1bcff1e403c85c3b1ca">is_trigger_</a> = true</td></tr>
+<tr class="memdesc:a5af3618b5605c1bcff1e403c85c3b1ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">物理演算をするかのフラグ  <a href="#a5af3618b5605c1bcff1e403c85c3b1ca">[詳解]</a><br /></td></tr>
+<tr class="separator:a5af3618b5605c1bcff1e403c85c3b1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静的非公開変数類</h2></td></tr>
+<tr class="memitem:a22badef1e6fc9c2b1f002bd99ede049f"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_object.html#a22badef1e6fc9c2b1f002bd99ede049f">TAG_NONE</a> = -1</td></tr>
+<tr class="memdesc:a22badef1e6fc9c2b1f002bd99ede049f"><td class="mdescLeft">&#160;</td><td class="mdescRight">タグなし時の値  <a href="#a22badef1e6fc9c2b1f002bd99ede049f">[詳解]</a><br /></td></tr>
+<tr class="separator:a22badef1e6fc9c2b1f002bd99ede049f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>衝突オブジェクトClass </p>
+<p>衝突オブジェクトのClass </p>
+
+<p class="definition"> <a class="el" href="_collision_object_8h_source.html">CollisionObject.h</a> の <a class="el" href="_collision_object_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="aebf806d9b368ad38ad0fe81b4d93c3bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebf806d9b368ad38ad0fe81b4d93c3bb">&#9670;&nbsp;</a></span>CollisionObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CollisionObject::CollisionObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_collision_shape_base.html">CollisionShapeBase</a> *&#160;</td>
+          <td class="paramname"><em>collision_shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">collision_shape</td><td>衝突形状 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">collision_shape</td><td>タグ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_object_8cpp_source.html">CollisionObject.cpp</a> の <a class="el" href="_collision_object_8cpp_source.html#l00066">66</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8c4e6916bc5911b8a82498536d5a27e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c4e6916bc5911b8a82498536d5a27e1">&#9670;&nbsp;</a></span>~CollisionObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CollisionObject::~CollisionObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_object_8cpp_source.html">CollisionObject.cpp</a> の <a class="el" href="_collision_object_8cpp_source.html#l00075">75</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ac39d971eb18ce6555064a69a5d541940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac39d971eb18ce6555064a69a5d541940">&#9670;&nbsp;</a></span>getIsJudgment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CollisionObject::getIsJudgment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>判定するかフラグ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>判定するかフラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_object_8cpp_source.html">CollisionObject.cpp</a> の <a class="el" href="_collision_object_8cpp_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a63f9efe4e585d6e83c3e724d2a07ea2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63f9efe4e585d6e83c3e724d2a07ea2c">&#9670;&nbsp;</a></span>getpCollisionShape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_shape_base.html">CollisionShapeBase</a> * CollisionObject::getpCollisionShape </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>衝突形状ポインタ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">CollisionShapeBase*</td><td>衝突形状ポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_object_8cpp_source.html">CollisionObject.cpp</a> の <a class="el" href="_collision_object_8cpp_source.html#l00028">28</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9c004b1cd134290efa386049103b1140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c004b1cd134290efa386049103b1140">&#9670;&nbsp;</a></span>getpHitVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * CollisionObject::getpHitVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>めり込みベクトルポインタ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>めり込みベクトルポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_object_8cpp_source.html">CollisionObject.cpp</a> の <a class="el" href="_collision_object_8cpp_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0a34797b95ae9bc9908f95ed51caffbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a34797b95ae9bc9908f95ed51caffbb">&#9670;&nbsp;</a></span>getTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CollisionObject::getTag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>タグ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">int</td><td>タグ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_object_8cpp_source.html">CollisionObject.cpp</a> の <a class="el" href="_collision_object_8cpp_source.html#l00021">21</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a92dd5d21c6674605d290e0d37d64505a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92dd5d21c6674605d290e0d37d64505a">&#9670;&nbsp;</a></span>ResetHitData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionObject::ResetHitData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>衝突用データリセット関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_object_8cpp_source.html">CollisionObject.cpp</a> の <a class="el" href="_collision_object_8cpp_source.html#l00138">138</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1087fa9cebfe0b1675923807b73d8868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1087fa9cebfe0b1675923807b73d8868">&#9670;&nbsp;</a></span>setHitVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionObject::setHitVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>めり込みベクトルポインタ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>めり込みベクトルポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_object_8cpp_source.html">CollisionObject.cpp</a> の <a class="el" href="_collision_object_8cpp_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3000144caea71e39cbdafebb249fef7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3000144caea71e39cbdafebb249fef7e">&#9670;&nbsp;</a></span>setIsJudgment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionObject::setIsJudgment </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>判定するかフラグ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>判定するかフラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_object_8cpp_source.html">CollisionObject.cpp</a> の <a class="el" href="_collision_object_8cpp_source.html#l00056">56</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a4ed81be0cf60ec47e54f83955853a6b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ed81be0cf60ec47e54f83955853a6b1">&#9670;&nbsp;</a></span>collision_shape_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_shape_base.html">CollisionShapeBase</a>* CollisionObject::collision_shape_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>形状 </p>
+
+<p class="definition"> <a class="el" href="_collision_object_8h_source.html">CollisionObject.h</a> の <a class="el" href="_collision_object_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5fb64c6aaab4606a4e0a1058a844d10e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fb64c6aaab4606a4e0a1058a844d10e">&#9670;&nbsp;</a></span>hit_vector_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> CollisionObject::hit_vector_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>めり込みベクトル </p>
+
+<p class="definition"> <a class="el" href="_collision_object_8h_source.html">CollisionObject.h</a> の <a class="el" href="_collision_object_8h_source.html#l00047">47</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0dd29059add616ce619c72ebce6af720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd29059add616ce619c72ebce6af720">&#9670;&nbsp;</a></span>is_judgment_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CollisionObject::is_judgment_ = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判定するかフラグ </p>
+
+<p class="definition"> <a class="el" href="_collision_object_8h_source.html">CollisionObject.h</a> の <a class="el" href="_collision_object_8h_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5af3618b5605c1bcff1e403c85c3b1ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5af3618b5605c1bcff1e403c85c3b1ca">&#9670;&nbsp;</a></span>is_trigger_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CollisionObject::is_trigger_ = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>物理演算をするかのフラグ </p>
+
+<p class="definition"> <a class="el" href="_collision_object_8h_source.html">CollisionObject.h</a> の <a class="el" href="_collision_object_8h_source.html#l00050">50</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a104bfc5534ba8ea189a45de9ba32f6ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a104bfc5534ba8ea189a45de9ba32f6ee">&#9670;&nbsp;</a></span>tag_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CollisionObject::tag_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>タグ </p>
+
+<p class="definition"> <a class="el" href="_collision_object_8h_source.html">CollisionObject.h</a> の <a class="el" href="_collision_object_8h_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a22badef1e6fc9c2b1f002bd99ede049f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22badef1e6fc9c2b1f002bd99ede049f">&#9670;&nbsp;</a></span>TAG_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int CollisionObject::TAG_NONE = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>タグなし時の値 </p>
+
+<p class="definition"> <a class="el" href="_collision_object_8h_source.html">CollisionObject.h</a> の <a class="el" href="_collision_object_8h_source.html#l00038">38</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Component/Collision/CollisionBase/CollisionObject/<a class="el" href="_collision_object_8h_source.html">CollisionObject.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Component/Collision/CollisionBase/CollisionObject/<a class="el" href="_collision_object_8cpp_source.html">CollisionObject.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_collision_object.html">CollisionObject</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

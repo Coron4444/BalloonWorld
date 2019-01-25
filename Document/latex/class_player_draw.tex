@@ -1,0 +1,367 @@
+\hypertarget{class_player_draw}{}\section{Player\+Draw クラス}
+\label{class_player_draw}\index{Player\+Draw@{Player\+Draw}}
+
+
+プレイヤー描画クラス  
+
+
+
+
+{\ttfamily \#include $<$Player\+Draw.\+h$>$}
+
+
+
+Player\+Draw の継承関係図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_player_draw__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_draw_ad79a0fbeb618e0913822b573e5d0be68}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_draw_a917b2947914287f23d87ca75cd68f553}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_draw_a8b9e8caa6bea7295f58a0aaddeb9458b}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_player_draw_ac618153d70492f73299c58a50d565431}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_player_draw_a334e94f368f6bd571da866d69333f313}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 行列ポインタ取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_player_draw_acb94ea7611a99698507321e44b7e9acb}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアルポインタ取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_player_draw_ae69b46285241f390fbf62f6af2b5340d}{getp\+Decale\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em デカールテクスチャポインタ取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_player_draw_a231aa618a0bf71311b61897ccf7191b8}{getp\+Normal\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 法線テクスチャポインタ取得関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ \mbox{\hyperlink{class_player_draw_a01943b6dec9856ef843f7afc0f8b4c02}{player\+\_\+model\+\_\+}}
+\begin{DoxyCompactList}\small\item\em モデルオブジェクト \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_player_draw_ac106fde46e38f5ac7f33de5cc5f6fd76}{normal\+\_\+texture\+\_\+}} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em テクスチャオブジェクト \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{class_player_draw_a924cd73d9d8b1b2e662be2c79238354f}{M\+O\+D\+E\+L\+\_\+\+N\+A\+ME}} = \char`\"{}knight\+\_\+low/knight\+\_\+low.\+X\char`\"{}
+\begin{DoxyCompactList}\small\item\em モデル名 \end{DoxyCompactList}\item 
+static const std\+::string \mbox{\hyperlink{class_player_draw_a808cb174528d55fb35a35b161e262e16}{T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH}} = \char`\"{}resource/ModelX/\char`\"{}
+\begin{DoxyCompactList}\small\item\em モデルフォルダのテクスチャパス \end{DoxyCompactList}\item 
+static const std\+::string \mbox{\hyperlink{class_player_draw_a509edc24db83efdfeda88f12d1d6cc8c}{N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+M\+O\+D\+EL}} = \char`\"{}knight\+\_\+low/knight\+\_\+01.\+png\char`\"{}
+\begin{DoxyCompactList}\small\item\em 法線テクスチャ(モデル) \end{DoxyCompactList}\item 
+static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e21558e2dd9227937bdb}{N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+W\+O\+RD}} = \char`\"{}knight\+\_\+low/sword\+\_\+01.\+png\char`\"{}
+\begin{DoxyCompactList}\small\item\em 法線テクスチャ(剣) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+プレイヤー描画クラス 
+
+プレイヤーの描画クラス 
+
+ Player\+Draw.\+h の 31 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_player_draw_a8b9e8caa6bea7295f58a0aaddeb9458b}\label{class_player_draw_a8b9e8caa6bea7295f58a0aaddeb9458b}} 
+\index{Player\+Draw@{Player\+Draw}!Draw@{Draw}}
+\index{Draw@{Draw}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Player\+Draw\+::\+Draw (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & \+: オブジェクトインデックス mesh\+\_\+index \+: メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
+
+
+
+ Player\+Draw.\+cpp の 69 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_ac618153d70492f73299c58a50d565431}\label{class_player_draw_ac618153d70492f73299c58a50d565431}} 
+\index{Player\+Draw@{Player\+Draw}!get\+Mesh\+Num@{get\+Mesh\+Num}}
+\index{get\+Mesh\+Num@{get\+Mesh\+Num}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{get\+Mesh\+Num()}{getMeshNum()}}
+{\footnotesize\ttfamily unsigned Player\+Draw\+::get\+Mesh\+Num (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+メッシュ数取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & メッシュ数 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a4c566a37d27fac3dcf76c7970443f375}{Draw\+Null}}を再実装しています。
+
+
+
+ Player\+Draw.\+cpp の 82 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_ae69b46285241f390fbf62f6af2b5340d}\label{class_player_draw_ae69b46285241f390fbf62f6af2b5340d}} 
+\index{Player\+Draw@{Player\+Draw}!getp\+Decale\+Texture@{getp\+Decale\+Texture}}
+\index{getp\+Decale\+Texture@{getp\+Decale\+Texture}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Decale\+Texture()}{getpDecaleTexture()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Player\+Draw\+::getp\+Decale\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+デカールテクスチャポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & デカールテクスチャポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a87d21f70b6fed637a6e23029f29818c1}{Draw\+Null}}を再実装しています。
+
+
+
+ Player\+Draw.\+cpp の 118 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_acb94ea7611a99698507321e44b7e9acb}\label{class_player_draw_acb94ea7611a99698507321e44b7e9acb}} 
+\index{Player\+Draw@{Player\+Draw}!getp\+Material@{getp\+Material}}
+\index{getp\+Material@{getp\+Material}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Material()}{getpMaterial()}}
+{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ Player\+Draw\+::getp\+Material (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+マテリアルポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアルポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a0c1efe55fea325ad277594be6fe1e938}{Draw\+Null}}を再実装しています。
+
+
+
+ Player\+Draw.\+cpp の 106 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_a334e94f368f6bd571da866d69333f313}\label{class_player_draw_a334e94f368f6bd571da866d69333f313}} 
+\index{Player\+Draw@{Player\+Draw}!getp\+Matrix@{getp\+Matrix}}
+\index{getp\+Matrix@{getp\+Matrix}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Player\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+行列ポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & 行列ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a9aac059eb3b5d1f77e8bd3aa0647cff9}{Draw\+Null}}を再実装しています。
+
+
+
+ Player\+Draw.\+cpp の 94 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_a231aa618a0bf71311b61897ccf7191b8}\label{class_player_draw_a231aa618a0bf71311b61897ccf7191b8}} 
+\index{Player\+Draw@{Player\+Draw}!getp\+Normal\+Texture@{getp\+Normal\+Texture}}
+\index{getp\+Normal\+Texture@{getp\+Normal\+Texture}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Normal\+Texture()}{getpNormalTexture()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Player\+Draw\+::getp\+Normal\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+法線テクスチャポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Renderer\+Interface$\ast$} & 法線テクスチャポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_abdb03713b973fd1f65c914fa146414a1}{Draw\+Null}}を再実装しています。
+
+
+
+ Player\+Draw.\+cpp の 130 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_ad79a0fbeb618e0913822b573e5d0be68}\label{class_player_draw_ad79a0fbeb618e0913822b573e5d0be68}} 
+\index{Player\+Draw@{Player\+Draw}!Init@{Init}}
+\index{Init@{Init}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Player\+Draw\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
+
+
+
+ Player\+Draw.\+cpp の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_a917b2947914287f23d87ca75cd68f553}\label{class_player_draw_a917b2947914287f23d87ca75cd68f553}} 
+\index{Player\+Draw@{Player\+Draw}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Player\+Draw\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
+
+
+
+ Player\+Draw.\+cpp の 59 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_player_draw_a924cd73d9d8b1b2e662be2c79238354f}\label{class_player_draw_a924cd73d9d8b1b2e662be2c79238354f}} 
+\index{Player\+Draw@{Player\+Draw}!M\+O\+D\+E\+L\+\_\+\+N\+A\+ME@{M\+O\+D\+E\+L\+\_\+\+N\+A\+ME}}
+\index{M\+O\+D\+E\+L\+\_\+\+N\+A\+ME@{M\+O\+D\+E\+L\+\_\+\+N\+A\+ME}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{M\+O\+D\+E\+L\+\_\+\+N\+A\+ME}{MODEL\_NAME}}
+{\footnotesize\ttfamily const std\+::string Player\+Draw\+::\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME = \char`\"{}knight\+\_\+low/knight\+\_\+low.\+X\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+モデル名 
+
+
+
+ Player\+Draw.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_ac106fde46e38f5ac7f33de5cc5f6fd76}\label{class_player_draw_ac106fde46e38f5ac7f33de5cc5f6fd76}} 
+\index{Player\+Draw@{Player\+Draw}!normal\+\_\+texture\+\_\+@{normal\+\_\+texture\+\_\+}}
+\index{normal\+\_\+texture\+\_\+@{normal\+\_\+texture\+\_\+}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{normal\+\_\+texture\+\_\+}{normal\_texture\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Player\+Draw\+::normal\+\_\+texture\+\_\+\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+テクスチャオブジェクト 
+
+
+
+ Player\+Draw.\+h の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_a509edc24db83efdfeda88f12d1d6cc8c}\label{class_player_draw_a509edc24db83efdfeda88f12d1d6cc8c}} 
+\index{Player\+Draw@{Player\+Draw}!N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+M\+O\+D\+EL@{N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+M\+O\+D\+EL}}
+\index{N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+M\+O\+D\+EL@{N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+M\+O\+D\+EL}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+M\+O\+D\+EL}{NORMAL\_TEXTURE\_MODEL}}
+{\footnotesize\ttfamily const std\+::string Player\+Draw\+::\+N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+M\+O\+D\+EL = \char`\"{}knight\+\_\+low/knight\+\_\+01.\+png\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+法線テクスチャ(モデル) 
+
+
+
+ Player\+Draw.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_aa64bacc93024e21558e2dd9227937bdb}\label{class_player_draw_aa64bacc93024e21558e2dd9227937bdb}} 
+\index{Player\+Draw@{Player\+Draw}!N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+W\+O\+RD@{N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+W\+O\+RD}}
+\index{N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+W\+O\+RD@{N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+W\+O\+RD}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+W\+O\+RD}{NORMAL\_TEXTURE\_SWORD}}
+{\footnotesize\ttfamily const std\+::string Player\+Draw\+::\+N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+W\+O\+RD = \char`\"{}knight\+\_\+low/sword\+\_\+01.\+png\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+法線テクスチャ(剣) 
+
+
+
+ Player\+Draw.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_a01943b6dec9856ef843f7afc0f8b4c02}\label{class_player_draw_a01943b6dec9856ef843f7afc0f8b4c02}} 
+\index{Player\+Draw@{Player\+Draw}!player\+\_\+model\+\_\+@{player\+\_\+model\+\_\+}}
+\index{player\+\_\+model\+\_\+@{player\+\_\+model\+\_\+}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{player\+\_\+model\+\_\+}{player\_model\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}}$\ast$ Player\+Draw\+::player\+\_\+model\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+モデルオブジェクト 
+
+
+
+ Player\+Draw.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_a808cb174528d55fb35a35b161e262e16}\label{class_player_draw_a808cb174528d55fb35a35b161e262e16}} 
+\index{Player\+Draw@{Player\+Draw}!T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH@{T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH}}
+\index{T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH@{T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH}{TEXTURE\_PATH}}
+{\footnotesize\ttfamily const std\+::string Player\+Draw\+::\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH = \char`\"{}resource/ModelX/\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+モデルフォルダのテクスチャパス 
+
+
+
+ Player\+Draw.\+h の 39 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Player/\+Player\+Draw/\mbox{\hyperlink{_player_draw_8h}{Player\+Draw.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Player/\+Player\+Draw/\mbox{\hyperlink{_player_draw_8cpp}{Player\+Draw.\+cpp}}\end{DoxyCompactItemize}

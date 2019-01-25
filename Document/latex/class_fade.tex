@@ -1,0 +1,514 @@
+\hypertarget{class_fade}{}\section{Fade クラス}
+\label{class_fade}\index{Fade@{Fade}}
+
+
+フェードクラス  
+
+
+
+
+{\ttfamily \#include $<$Fade.\+h$>$}
+
+
+
+Fade の継承関係図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_fade__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Type}} \{ \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80aff416f0a20b074a38a4f67e20f001828}{T\+Y\+P\+E\+\_\+\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80a6058f5db637853756ba18166da96043e}{T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+AL}}, 
+\mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80af424897abd4b53f7af0bf51f1190a427}{T\+Y\+P\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+N\+\_\+01}}, 
+\mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80ab05e3987a6b16a8ebe7e284aa8922ea0}{T\+Y\+P\+E\+\_\+\+M\+AX}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80a}{State}} \{ \mbox{\hyperlink{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80aae593109007af793c6b0e7e287dcc7803}{S\+T\+A\+T\+E\+\_\+\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80aa5b9862985db043392d465dd7a7a7805b}{S\+T\+A\+T\+E\+\_\+\+F\+A\+D\+E\+\_\+\+IN}}, 
+\mbox{\hyperlink{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80aa41e3fdc3eb47279527440d923fccbb6e}{S\+T\+A\+T\+E\+\_\+\+F\+A\+D\+E\+\_\+\+O\+UT}}, 
+\mbox{\hyperlink{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80aab65dcff35c00997ef90c43d254906121}{S\+T\+A\+T\+E\+\_\+\+M\+AX}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fade_aec1ac5a0a80be8d7a2a43dbde2a741ee}{Fade}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fade_a58ddf7585cb85bf84f5e83adbe2734f9}{$\sim$\+Fade}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fade_aab12848f7102a219968c86ed699a6e5d}{Init}} (\mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Type}} type, \mbox{\hyperlink{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80a}{State}} state, \mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}} size, \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} color, float speed)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fade_ae77d06811869d3c8162a42c3e0e14f7f}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fade_a1579b5b9020344a1131ea11c15f2c0bd}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fade_a84a9e688650ac500e03cde74ff0210b8}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_fade_a2e41a31f9801476e63d2082804375e96}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 行列ポインタ取得関数 \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Type}} $\ast$ \mbox{\hyperlink{class_fade_aed5a29d39a5fd6161a9aed73d5f30870}{Get\+Type}} () const
+\item 
+const \mbox{\hyperlink{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80a}{State}} $\ast$ \mbox{\hyperlink{class_fade_aeb41dfcadf75dd4c980da68e243cc310}{Get\+State}} () const
+\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_fade_a69db8b97a493082644fbd82c9ef3d1aa}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアルポインタ取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_fade_acc8adf28ce2e4270e5fb3907d83dadd0}{Get\+End\+Flag}} () const
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} $\ast$ \mbox{\hyperlink{class_fade_a1a177209e72a27858ceb2d339321e9c4}{Get\+Transform}} ()
+\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_fade_a4e047c532d430095e7d0d70288289a82}{Get\+Transition01\+Object}} ()
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{class_fade_acd9c0d6231180af183d6301f31fa0053}{T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH}}
+\item 
+static const std\+::string \mbox{\hyperlink{class_fade_ab5d6f86f07e33205224fa486ff22c51d}{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+N\+\_\+01}} = \char`\"{}Fade/Transition\+\_\+01.\+png\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Type}} \mbox{\hyperlink{class_fade_a1d04a65762c863a1d3571f0e1d47532a}{type\+\_\+}}
+\begin{DoxyCompactList}\small\item\em タイプ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80a}{State}} \mbox{\hyperlink{class_fade_ad5ff5a5645edb88fd5544819077ff13f}{state\+\_\+}}
+\begin{DoxyCompactList}\small\item\em ステート \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}} $\ast$ \mbox{\hyperlink{class_fade_ab51b04ff5e6225016ccb012fce80dd74}{plane\+\_\+polygon\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 板ポリゴン \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_fade_a3b94f7f5317c98e1db1cc17346313626}{transform\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 状態 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_fade_af3b40978f7e38980379c9189aadcf310}{color\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 色 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_fade_af46cade81dd992a5d8a0fe241aefd8b2}{speed\+\_\+}}
+\begin{DoxyCompactList}\small\item\em フェード速度 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_fade_aeeddfe04f4dc156f2f4f0db903bb7fa1}{end\+\_\+flag\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 終了フラグ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_fade_a4ff29d821f15a33e2110acc03c8d8a84}{transition01\+\_\+texture\+\_\+}}
+\begin{DoxyCompactList}\small\item\em テクスチャオブジェクト \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+フェードクラス 
+
+フェードのクラス 
+
+ Fade.\+h の 31 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80a}\label{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80a}} 
+\index{Fade@{Fade}!State@{State}}
+\index{State@{State}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80a}{Fade\+::\+State}}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+A\+T\+E\+\_\+\+N\+O\+NE@{S\+T\+A\+T\+E\+\_\+\+N\+O\+NE}!Fade@{Fade}}\index{Fade@{Fade}!S\+T\+A\+T\+E\+\_\+\+N\+O\+NE@{S\+T\+A\+T\+E\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80aae593109007af793c6b0e7e287dcc7803}\label{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80aae593109007af793c6b0e7e287dcc7803}} 
+S\+T\+A\+T\+E\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+A\+T\+E\+\_\+\+F\+A\+D\+E\+\_\+\+IN@{S\+T\+A\+T\+E\+\_\+\+F\+A\+D\+E\+\_\+\+IN}!Fade@{Fade}}\index{Fade@{Fade}!S\+T\+A\+T\+E\+\_\+\+F\+A\+D\+E\+\_\+\+IN@{S\+T\+A\+T\+E\+\_\+\+F\+A\+D\+E\+\_\+\+IN}}}\mbox{\Hypertarget{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80aa5b9862985db043392d465dd7a7a7805b}\label{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80aa5b9862985db043392d465dd7a7a7805b}} 
+S\+T\+A\+T\+E\+\_\+\+F\+A\+D\+E\+\_\+\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+A\+T\+E\+\_\+\+F\+A\+D\+E\+\_\+\+O\+UT@{S\+T\+A\+T\+E\+\_\+\+F\+A\+D\+E\+\_\+\+O\+UT}!Fade@{Fade}}\index{Fade@{Fade}!S\+T\+A\+T\+E\+\_\+\+F\+A\+D\+E\+\_\+\+O\+UT@{S\+T\+A\+T\+E\+\_\+\+F\+A\+D\+E\+\_\+\+O\+UT}}}\mbox{\Hypertarget{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80aa41e3fdc3eb47279527440d923fccbb6e}\label{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80aa41e3fdc3eb47279527440d923fccbb6e}} 
+S\+T\+A\+T\+E\+\_\+\+F\+A\+D\+E\+\_\+\+O\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+A\+T\+E\+\_\+\+M\+AX@{S\+T\+A\+T\+E\+\_\+\+M\+AX}!Fade@{Fade}}\index{Fade@{Fade}!S\+T\+A\+T\+E\+\_\+\+M\+AX@{S\+T\+A\+T\+E\+\_\+\+M\+AX}}}\mbox{\Hypertarget{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80aab65dcff35c00997ef90c43d254906121}\label{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80aab65dcff35c00997ef90c43d254906121}} 
+S\+T\+A\+T\+E\+\_\+\+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Fade.\+h の 53 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_ac06f27215b454aa05b93c236476d6e80}\label{class_fade_ac06f27215b454aa05b93c236476d6e80}} 
+\index{Fade@{Fade}!Type@{Type}}
+\index{Type@{Type}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Fade\+::\+Type}}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+\_\+\+N\+O\+NE@{T\+Y\+P\+E\+\_\+\+N\+O\+NE}!Fade@{Fade}}\index{Fade@{Fade}!T\+Y\+P\+E\+\_\+\+N\+O\+NE@{T\+Y\+P\+E\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{class_fade_ac06f27215b454aa05b93c236476d6e80aff416f0a20b074a38a4f67e20f001828}\label{class_fade_ac06f27215b454aa05b93c236476d6e80aff416f0a20b074a38a4f67e20f001828}} 
+T\+Y\+P\+E\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+AL@{T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+AL}!Fade@{Fade}}\index{Fade@{Fade}!T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+AL@{T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+AL}}}\mbox{\Hypertarget{class_fade_ac06f27215b454aa05b93c236476d6e80a6058f5db637853756ba18166da96043e}\label{class_fade_ac06f27215b454aa05b93c236476d6e80a6058f5db637853756ba18166da96043e}} 
+T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+N\+\_\+01@{T\+Y\+P\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+N\+\_\+01}!Fade@{Fade}}\index{Fade@{Fade}!T\+Y\+P\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+N\+\_\+01@{T\+Y\+P\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+N\+\_\+01}}}\mbox{\Hypertarget{class_fade_ac06f27215b454aa05b93c236476d6e80af424897abd4b53f7af0bf51f1190a427}\label{class_fade_ac06f27215b454aa05b93c236476d6e80af424897abd4b53f7af0bf51f1190a427}} 
+T\+Y\+P\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+N\+\_\+01&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+\_\+\+M\+AX@{T\+Y\+P\+E\+\_\+\+M\+AX}!Fade@{Fade}}\index{Fade@{Fade}!T\+Y\+P\+E\+\_\+\+M\+AX@{T\+Y\+P\+E\+\_\+\+M\+AX}}}\mbox{\Hypertarget{class_fade_ac06f27215b454aa05b93c236476d6e80ab05e3987a6b16a8ebe7e284aa8922ea0}\label{class_fade_ac06f27215b454aa05b93c236476d6e80ab05e3987a6b16a8ebe7e284aa8922ea0}} 
+T\+Y\+P\+E\+\_\+\+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Fade.\+h の 45 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fade_aec1ac5a0a80be8d7a2a43dbde2a741ee}\label{class_fade_aec1ac5a0a80be8d7a2a43dbde2a741ee}} 
+\index{Fade@{Fade}!Fade@{Fade}}
+\index{Fade@{Fade}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{Fade()}{Fade()}}
+{\footnotesize\ttfamily Fade\+::\+Fade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+
+
+ Fade.\+cpp の 36 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_a58ddf7585cb85bf84f5e83adbe2734f9}\label{class_fade_a58ddf7585cb85bf84f5e83adbe2734f9}} 
+\index{Fade@{Fade}!````~Fade@{$\sim$\+Fade}}
+\index{````~Fade@{$\sim$\+Fade}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{$\sim$\+Fade()}{~Fade()}}
+{\footnotesize\ttfamily Fade\+::$\sim$\+Fade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+デストラクタ 
+
+
+
+ Fade.\+cpp の 56 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fade_a84a9e688650ac500e03cde74ff0210b8}\label{class_fade_a84a9e688650ac500e03cde74ff0210b8}} 
+\index{Fade@{Fade}!Draw@{Draw}}
+\index{Draw@{Draw}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Fade\+::\+Draw (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
+
+
+
+ Fade.\+cpp の 162 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_acc8adf28ce2e4270e5fb3907d83dadd0}\label{class_fade_acc8adf28ce2e4270e5fb3907d83dadd0}} 
+\index{Fade@{Fade}!Get\+End\+Flag@{Get\+End\+Flag}}
+\index{Get\+End\+Flag@{Get\+End\+Flag}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{Get\+End\+Flag()}{GetEndFlag()}}
+{\footnotesize\ttfamily bool Fade\+::\+Get\+End\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Fade.\+h の 139 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_a69db8b97a493082644fbd82c9ef3d1aa}\label{class_fade_a69db8b97a493082644fbd82c9ef3d1aa}} 
+\index{Fade@{Fade}!getp\+Material@{getp\+Material}}
+\index{getp\+Material@{getp\+Material}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{getp\+Material()}{getpMaterial()}}
+{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$ Fade\+::getp\+Material (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+マテリアルポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアルポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a0c1efe55fea325ad277594be6fe1e938}{Draw\+Null}}を再実装しています。
+
+
+
+ Fade.\+h の 132 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_a2e41a31f9801476e63d2082804375e96}\label{class_fade_a2e41a31f9801476e63d2082804375e96}} 
+\index{Fade@{Fade}!getp\+Matrix@{getp\+Matrix}}
+\index{getp\+Matrix@{getp\+Matrix}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}}$\ast$ Fade\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+行列ポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & 行列ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a9aac059eb3b5d1f77e8bd3aa0647cff9}{Draw\+Null}}を再実装しています。
+
+
+
+ Fade.\+h の 125 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_aeb41dfcadf75dd4c980da68e243cc310}\label{class_fade_aeb41dfcadf75dd4c980da68e243cc310}} 
+\index{Fade@{Fade}!Get\+State@{Get\+State}}
+\index{Get\+State@{Get\+State}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{Get\+State()}{GetState()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80a}{State}}$\ast$ Fade\+::\+Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Fade.\+h の 131 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_a1a177209e72a27858ceb2d339321e9c4}\label{class_fade_a1a177209e72a27858ceb2d339321e9c4}} 
+\index{Fade@{Fade}!Get\+Transform@{Get\+Transform}}
+\index{Get\+Transform@{Get\+Transform}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{Get\+Transform()}{GetTransform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}}$\ast$ Fade\+::\+Get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Fade.\+h の 140 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_a4e047c532d430095e7d0d70288289a82}\label{class_fade_a4e047c532d430095e7d0d70288289a82}} 
+\index{Fade@{Fade}!Get\+Transition01\+Object@{Get\+Transition01\+Object}}
+\index{Get\+Transition01\+Object@{Get\+Transition01\+Object}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{Get\+Transition01\+Object()}{GetTransition01Object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Fade\+::\+Get\+Transition01\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Fade.\+h の 141 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_aed5a29d39a5fd6161a9aed73d5f30870}\label{class_fade_aed5a29d39a5fd6161a9aed73d5f30870}} 
+\index{Fade@{Fade}!Get\+Type@{Get\+Type}}
+\index{Get\+Type@{Get\+Type}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{Get\+Type()}{GetType()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Type}}$\ast$ Fade\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Fade.\+h の 130 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_aab12848f7102a219968c86ed699a6e5d}\label{class_fade_aab12848f7102a219968c86ed699a6e5d}} 
+\index{Fade@{Fade}!Init@{Init}}
+\index{Init@{Init}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Fade\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Type}}}]{type,  }\item[{\mbox{\hyperlink{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80a}{State}}}]{state,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}}}]{size,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}}]{color,  }\item[{float}]{speed }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em type} & \+: タイプ state \+: ステート size \+: 拡縮 color \+: 色 speed \+: フェード速度 \\
+\hline
+\end{DoxyParams}
+
+
+ Fade.\+cpp の 67 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_ae77d06811869d3c8162a42c3e0e14f7f}\label{class_fade_ae77d06811869d3c8162a42c3e0e14f7f}} 
+\index{Fade@{Fade}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Fade\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
+
+
+
+ Fade.\+cpp の 112 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_a1579b5b9020344a1131ea11c15f2c0bd}\label{class_fade_a1579b5b9020344a1131ea11c15f2c0bd}} 
+\index{Fade@{Fade}!Update@{Update}}
+\index{Update@{Update}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Fade\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_ad32a508d269de7eda8ad24ea72230464}{Draw\+Null}}を再実装しています。
+
+
+
+ Fade.\+cpp の 132 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fade_af3b40978f7e38980379c9189aadcf310}\label{class_fade_af3b40978f7e38980379c9189aadcf310}} 
+\index{Fade@{Fade}!color\+\_\+@{color\+\_\+}}
+\index{color\+\_\+@{color\+\_\+}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{color\+\_\+}{color\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Fade\+::color\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+色 
+
+
+
+ Fade.\+h の 70 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_aeeddfe04f4dc156f2f4f0db903bb7fa1}\label{class_fade_aeeddfe04f4dc156f2f4f0db903bb7fa1}} 
+\index{Fade@{Fade}!end\+\_\+flag\+\_\+@{end\+\_\+flag\+\_\+}}
+\index{end\+\_\+flag\+\_\+@{end\+\_\+flag\+\_\+}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{end\+\_\+flag\+\_\+}{end\_flag\_}}
+{\footnotesize\ttfamily bool Fade\+::end\+\_\+flag\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+終了フラグ 
+
+
+
+ Fade.\+h の 73 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_ab51b04ff5e6225016ccb012fce80dd74}\label{class_fade_ab51b04ff5e6225016ccb012fce80dd74}} 
+\index{Fade@{Fade}!plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}}
+\index{plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{plane\+\_\+polygon\+\_\+}{plane\_polygon\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}}$\ast$ Fade\+::plane\+\_\+polygon\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+板ポリゴン 
+
+
+
+ Fade.\+h の 68 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_af46cade81dd992a5d8a0fe241aefd8b2}\label{class_fade_af46cade81dd992a5d8a0fe241aefd8b2}} 
+\index{Fade@{Fade}!speed\+\_\+@{speed\+\_\+}}
+\index{speed\+\_\+@{speed\+\_\+}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{speed\+\_\+}{speed\_}}
+{\footnotesize\ttfamily float Fade\+::speed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+フェード速度 
+
+
+
+ Fade.\+h の 72 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_ad5ff5a5645edb88fd5544819077ff13f}\label{class_fade_ad5ff5a5645edb88fd5544819077ff13f}} 
+\index{Fade@{Fade}!state\+\_\+@{state\+\_\+}}
+\index{state\+\_\+@{state\+\_\+}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{state\+\_\+}{state\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fade_ae77826bf3ff2ab95fb7b3b6f95cba80a}{State}} Fade\+::state\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ステート 
+
+
+
+ Fade.\+h の 66 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_ab5d6f86f07e33205224fa486ff22c51d}\label{class_fade_ab5d6f86f07e33205224fa486ff22c51d}} 
+\index{Fade@{Fade}!T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+N\+\_\+01@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+N\+\_\+01}}
+\index{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+N\+\_\+01@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+N\+\_\+01}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+N\+\_\+01}{TEXTURE\_NAME\_TRANSITION\_01}}
+{\footnotesize\ttfamily const std\+::string Fade\+::\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+N\+\_\+01 = \char`\"{}Fade/Transition\+\_\+01.\+png\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ Fade.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_acd9c0d6231180af183d6301f31fa0053}\label{class_fade_acd9c0d6231180af183d6301f31fa0053}} 
+\index{Fade@{Fade}!T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH@{T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH}}
+\index{T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH@{T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH}{TEXTURE\_PATH}}
+{\footnotesize\ttfamily const std\+::string Fade\+::\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ Fade.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_a3b94f7f5317c98e1db1cc17346313626}\label{class_fade_a3b94f7f5317c98e1db1cc17346313626}} 
+\index{Fade@{Fade}!transform\+\_\+@{transform\+\_\+}}
+\index{transform\+\_\+@{transform\+\_\+}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{transform\+\_\+}{transform\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}} Fade\+::transform\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+状態 
+
+
+
+ Fade.\+h の 69 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_a4ff29d821f15a33e2110acc03c8d8a84}\label{class_fade_a4ff29d821f15a33e2110acc03c8d8a84}} 
+\index{Fade@{Fade}!transition01\+\_\+texture\+\_\+@{transition01\+\_\+texture\+\_\+}}
+\index{transition01\+\_\+texture\+\_\+@{transition01\+\_\+texture\+\_\+}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{transition01\+\_\+texture\+\_\+}{transition01\_texture\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Fade\+::transition01\+\_\+texture\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+テクスチャオブジェクト 
+
+
+
+ Fade.\+h の 75 行目に定義があります。
+
+\mbox{\Hypertarget{class_fade_a1d04a65762c863a1d3571f0e1d47532a}\label{class_fade_a1d04a65762c863a1d3571f0e1d47532a}} 
+\index{Fade@{Fade}!type\+\_\+@{type\+\_\+}}
+\index{type\+\_\+@{type\+\_\+}!Fade@{Fade}}
+\subsubsection{\texorpdfstring{type\+\_\+}{type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Type}} Fade\+::type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+タイプ 
+
+
+
+ Fade.\+h の 65 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Fade/\mbox{\hyperlink{_fade_8h}{Fade.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Fade/\mbox{\hyperlink{_fade_8cpp}{Fade.\+cpp}}\end{DoxyCompactItemize}

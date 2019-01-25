@@ -1,0 +1,287 @@
+\hypertarget{class_field_draw}{}\section{Field\+Draw クラス}
+\label{class_field_draw}\index{Field\+Draw@{Field\+Draw}}
+
+
+地面描画クラス  
+
+
+
+
+{\ttfamily \#include $<$Field\+Draw.\+h$>$}
+
+
+
+Field\+Draw の継承関係図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_field_draw__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_field_draw_a4287d2ce33033b2413c1d3a81b173373}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_field_draw_a89a78212c141714d9e39e25e663aaeff}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_field_draw_a1915497654d079074dbd3e058db06a78}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_field_draw_a0894ddd73716f0db8ceed4b7d89f23fd}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_field_draw_ad399978201f737f4c0dd2b3990fa6b34}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 行列ポインタ取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_field_draw_a5ed29c14e0013513d72f79f8651db805}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアルポインタ取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_field_draw_a77cef7390fbe8fc68c0b325f4fcc839f}{getp\+Decale\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em デカールテクスチャポインタ取得関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_field}{Field}} $\ast$ \mbox{\hyperlink{class_field_draw_a5d81171db83ea98a33c0e6f68b5dd351}{field\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 地面 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_field_draw_a1d9e36a7e8d6dd8791d2dd82bceac28f}{decale\+\_\+texture\+\_\+}}
+\begin{DoxyCompactList}\small\item\em デカールテクスチャ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{class_field_draw_a0100eac615b34df95aaf3627182fb9f1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}} = \char`\"{}Field.\+png\char`\"{}
+\begin{DoxyCompactList}\small\item\em テクスチャ名 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+地面描画クラス 
+
+地面の描画クラス 
+
+ Field\+Draw.\+h の 31 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_field_draw_a1915497654d079074dbd3e058db06a78}\label{class_field_draw_a1915497654d079074dbd3e058db06a78}} 
+\index{Field\+Draw@{Field\+Draw}!Draw@{Draw}}
+\index{Draw@{Draw}!Field\+Draw@{Field\+Draw}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Field\+Draw\+::\+Draw (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & \+: オブジェクトインデックス mesh\+\_\+index \+: メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
+
+
+
+ Field\+Draw.\+cpp の 62 行目に定義があります。
+
+\mbox{\Hypertarget{class_field_draw_a0894ddd73716f0db8ceed4b7d89f23fd}\label{class_field_draw_a0894ddd73716f0db8ceed4b7d89f23fd}} 
+\index{Field\+Draw@{Field\+Draw}!get\+Mesh\+Num@{get\+Mesh\+Num}}
+\index{get\+Mesh\+Num@{get\+Mesh\+Num}!Field\+Draw@{Field\+Draw}}
+\subsubsection{\texorpdfstring{get\+Mesh\+Num()}{getMeshNum()}}
+{\footnotesize\ttfamily unsigned Field\+Draw\+::get\+Mesh\+Num (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+メッシュ数取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & メッシュ数 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a4c566a37d27fac3dcf76c7970443f375}{Draw\+Null}}を再実装しています。
+
+
+
+ Field\+Draw.\+cpp の 75 行目に定義があります。
+
+\mbox{\Hypertarget{class_field_draw_a77cef7390fbe8fc68c0b325f4fcc839f}\label{class_field_draw_a77cef7390fbe8fc68c0b325f4fcc839f}} 
+\index{Field\+Draw@{Field\+Draw}!getp\+Decale\+Texture@{getp\+Decale\+Texture}}
+\index{getp\+Decale\+Texture@{getp\+Decale\+Texture}!Field\+Draw@{Field\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Decale\+Texture()}{getpDecaleTexture()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Field\+Draw\+::getp\+Decale\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+デカールテクスチャポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & デカールテクスチャポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a87d21f70b6fed637a6e23029f29818c1}{Draw\+Null}}を再実装しています。
+
+
+
+ Field\+Draw.\+cpp の 112 行目に定義があります。
+
+\mbox{\Hypertarget{class_field_draw_a5ed29c14e0013513d72f79f8651db805}\label{class_field_draw_a5ed29c14e0013513d72f79f8651db805}} 
+\index{Field\+Draw@{Field\+Draw}!getp\+Material@{getp\+Material}}
+\index{getp\+Material@{getp\+Material}!Field\+Draw@{Field\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Material()}{getpMaterial()}}
+{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ Field\+Draw\+::getp\+Material (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+マテリアルポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアルポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a0c1efe55fea325ad277594be6fe1e938}{Draw\+Null}}を再実装しています。
+
+
+
+ Field\+Draw.\+cpp の 99 行目に定義があります。
+
+\mbox{\Hypertarget{class_field_draw_ad399978201f737f4c0dd2b3990fa6b34}\label{class_field_draw_ad399978201f737f4c0dd2b3990fa6b34}} 
+\index{Field\+Draw@{Field\+Draw}!getp\+Matrix@{getp\+Matrix}}
+\index{getp\+Matrix@{getp\+Matrix}!Field\+Draw@{Field\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Field\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+行列ポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & 行列ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a9aac059eb3b5d1f77e8bd3aa0647cff9}{Draw\+Null}}を再実装しています。
+
+
+
+ Field\+Draw.\+cpp の 87 行目に定義があります。
+
+\mbox{\Hypertarget{class_field_draw_a4287d2ce33033b2413c1d3a81b173373}\label{class_field_draw_a4287d2ce33033b2413c1d3a81b173373}} 
+\index{Field\+Draw@{Field\+Draw}!Init@{Init}}
+\index{Init@{Init}!Field\+Draw@{Field\+Draw}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Field\+Draw\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
+
+
+
+ Field\+Draw.\+cpp の 32 行目に定義があります。
+
+\mbox{\Hypertarget{class_field_draw_a89a78212c141714d9e39e25e663aaeff}\label{class_field_draw_a89a78212c141714d9e39e25e663aaeff}} 
+\index{Field\+Draw@{Field\+Draw}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Field\+Draw@{Field\+Draw}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Field\+Draw\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
+
+
+
+ Field\+Draw.\+cpp の 52 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_field_draw_a1d9e36a7e8d6dd8791d2dd82bceac28f}\label{class_field_draw_a1d9e36a7e8d6dd8791d2dd82bceac28f}} 
+\index{Field\+Draw@{Field\+Draw}!decale\+\_\+texture\+\_\+@{decale\+\_\+texture\+\_\+}}
+\index{decale\+\_\+texture\+\_\+@{decale\+\_\+texture\+\_\+}!Field\+Draw@{Field\+Draw}}
+\subsubsection{\texorpdfstring{decale\+\_\+texture\+\_\+}{decale\_texture\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Field\+Draw\+::decale\+\_\+texture\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+デカールテクスチャ 
+
+
+
+ Field\+Draw.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_field_draw_a5d81171db83ea98a33c0e6f68b5dd351}\label{class_field_draw_a5d81171db83ea98a33c0e6f68b5dd351}} 
+\index{Field\+Draw@{Field\+Draw}!field\+\_\+@{field\+\_\+}}
+\index{field\+\_\+@{field\+\_\+}!Field\+Draw@{Field\+Draw}}
+\subsubsection{\texorpdfstring{field\+\_\+}{field\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_field}{Field}}$\ast$ Field\+Draw\+::field\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+地面 
+
+
+
+ Field\+Draw.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_field_draw_a0100eac615b34df95aaf3627182fb9f1}\label{class_field_draw_a0100eac615b34df95aaf3627182fb9f1}} 
+\index{Field\+Draw@{Field\+Draw}!T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}}
+\index{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}!Field\+Draw@{Field\+Draw}}
+\subsubsection{\texorpdfstring{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}{TEXTURE\_NAME}}
+{\footnotesize\ttfamily const std\+::string Field\+Draw\+::\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME = \char`\"{}Field.\+png\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+テクスチャ名 
+
+
+
+ Field\+Draw.\+h の 37 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Field/\+Field\+Draw/\mbox{\hyperlink{_field_draw_8h}{Field\+Draw.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Field/\+Field\+Draw/\mbox{\hyperlink{_field_draw_8cpp}{Field\+Draw.\+cpp}}\end{DoxyCompactItemize}

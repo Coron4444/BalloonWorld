@@ -1,0 +1,829 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>3DAction: DrawManager クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DAction
+   &#160;<span id="projectnumber">version 1.3</span>
+   </div>
+   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_draw_manager.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="class_draw_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">DrawManager クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>描画マネージャークラス  
+ <a href="class_draw_manager.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_draw_manager_8h_source.html">DrawManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3cb9319d492285bd9dfc983d27e5d04f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a3cb9319d492285bd9dfc983d27e5d04f">Init</a> ()</td></tr>
+<tr class="memdesc:a3cb9319d492285bd9dfc983d27e5d04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a3cb9319d492285bd9dfc983d27e5d04f">[詳解]</a><br /></td></tr>
+<tr class="separator:a3cb9319d492285bd9dfc983d27e5d04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58095d9d734f30211011e9205aa57aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#ae58095d9d734f30211011e9205aa57aa">Uninit</a> ()</td></tr>
+<tr class="memdesc:ae58095d9d734f30211011e9205aa57aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#ae58095d9d734f30211011e9205aa57aa">[詳解]</a><br /></td></tr>
+<tr class="separator:ae58095d9d734f30211011e9205aa57aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b4ea38d625efbcc08d9b168cb5465f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a8b4ea38d625efbcc08d9b168cb5465f9">UninitWhenChangeScene</a> ()</td></tr>
+<tr class="memdesc:a8b4ea38d625efbcc08d9b168cb5465f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン変更時の終了関数  <a href="#a8b4ea38d625efbcc08d9b168cb5465f9">[詳解]</a><br /></td></tr>
+<tr class="separator:a8b4ea38d625efbcc08d9b168cb5465f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af498c44ff698bf3ef473df970e24c917"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#af498c44ff698bf3ef473df970e24c917">Update</a> ()</td></tr>
+<tr class="memdesc:af498c44ff698bf3ef473df970e24c917"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#af498c44ff698bf3ef473df970e24c917">[詳解]</a><br /></td></tr>
+<tr class="separator:af498c44ff698bf3ef473df970e24c917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43372495e68d77a2698f211cf921b37e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a43372495e68d77a2698f211cf921b37e">Draw</a> ()</td></tr>
+<tr class="memdesc:a43372495e68d77a2698f211cf921b37e"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画関数  <a href="#a43372495e68d77a2698f211cf921b37e">[詳解]</a><br /></td></tr>
+<tr class="separator:a43372495e68d77a2698f211cf921b37e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dbd645fdbf927cd43d400335ff9b286"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a9dbd645fdbf927cd43d400335ff9b286">AddDrawBaseToArray</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw)</td></tr>
+<tr class="memdesc:a9dbd645fdbf927cd43d400335ff9b286"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画基底クラスの追加関数  <a href="#a9dbd645fdbf927cd43d400335ff9b286">[詳解]</a><br /></td></tr>
+<tr class="separator:a9dbd645fdbf927cd43d400335ff9b286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ef5a241c8d78187a2a6c0ed3c9efec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a94ef5a241c8d78187a2a6c0ed3c9efec">OverwriteArrayDrawBase</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *game_object, <a class="el" href="class_draw_base.html">DrawBase</a> *new_draw)</td></tr>
+<tr class="memdesc:a94ef5a241c8d78187a2a6c0ed3c9efec"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画基底クラスの上書き関数  <a href="#a94ef5a241c8d78187a2a6c0ed3c9efec">[詳解]</a><br /></td></tr>
+<tr class="separator:a94ef5a241c8d78187a2a6c0ed3c9efec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a287d1f359b87f075b22df6a9b6e99316"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a287d1f359b87f075b22df6a9b6e99316">ReleaseDrawBaseFromArray</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw)</td></tr>
+<tr class="memdesc:a287d1f359b87f075b22df6a9b6e99316"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画基底クラスの解放関数  <a href="#a287d1f359b87f075b22df6a9b6e99316">[詳解]</a><br /></td></tr>
+<tr class="separator:a287d1f359b87f075b22df6a9b6e99316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a952023ad9e2e12844c93e37029a32700"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a952023ad9e2e12844c93e37029a32700">GetDirectionalLightVector</a> ()</td></tr>
+<tr class="separator:a952023ad9e2e12844c93e37029a32700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a470edae8248d36956a02bab7e59a4140"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a470edae8248d36956a02bab7e59a4140">SetDirectionalLightVector</a> (<a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a> value)</td></tr>
+<tr class="separator:a470edae8248d36956a02bab7e59a4140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e7e11e650f1c1736e9d3199a58191a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_back_buffer.html">BackBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a0e7e11e650f1c1736e9d3199a58191a7">GetBackBuffer</a> ()</td></tr>
+<tr class="separator:a0e7e11e650f1c1736e9d3199a58191a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:ad4326cddcb1cc4cec198c4f8069b81f0"><td class="memItemLeft" align="right" valign="top">static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#ad4326cddcb1cc4cec198c4f8069b81f0">DRAW_ARRAY_NUM</a> = 10000</td></tr>
+<tr class="memdesc:ad4326cddcb1cc4cec198c4f8069b81f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画配列数  <a href="#ad4326cddcb1cc4cec198c4f8069b81f0">[詳解]</a><br /></td></tr>
+<tr class="separator:ad4326cddcb1cc4cec198c4f8069b81f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:a984cd9de288151fd1d170f80f93a11e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a984cd9de288151fd1d170f80f93a11e8">AddContentsOfAwaitAddArray</a> ()</td></tr>
+<tr class="memdesc:a984cd9de288151fd1d170f80f93a11e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加待ち配列の中身を追加関数  <a href="#a984cd9de288151fd1d170f80f93a11e8">[詳解]</a><br /></td></tr>
+<tr class="separator:a984cd9de288151fd1d170f80f93a11e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76361402a035f02084e9faf31e782d69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a76361402a035f02084e9faf31e782d69">ReleaseContentsOfAwaitReleaseArray</a> ()</td></tr>
+<tr class="memdesc:a76361402a035f02084e9faf31e782d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">解放待ち配列の中身を解放関数  <a href="#a76361402a035f02084e9faf31e782d69">[詳解]</a><br /></td></tr>
+<tr class="separator:a76361402a035f02084e9faf31e782d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c989a2beae5de5a1fc7ab0bef8692f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a7c989a2beae5de5a1fc7ab0bef8692f9">UpdateAllDrawBase</a> ()</td></tr>
+<tr class="memdesc:a7c989a2beae5de5a1fc7ab0bef8692f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">全描画基底クラス更新関数  <a href="#a7c989a2beae5de5a1fc7ab0bef8692f9">[詳解]</a><br /></td></tr>
+<tr class="separator:a7c989a2beae5de5a1fc7ab0bef8692f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eb2f1e3957113ae99e8240c40c89744"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a8eb2f1e3957113ae99e8240c40c89744">UpdateAllRenderTarget</a> ()</td></tr>
+<tr class="memdesc:a8eb2f1e3957113ae99e8240c40c89744"><td class="mdescLeft">&#160;</td><td class="mdescRight">全レンダーターゲット更新関数  <a href="#a8eb2f1e3957113ae99e8240c40c89744">[詳解]</a><br /></td></tr>
+<tr class="separator:a8eb2f1e3957113ae99e8240c40c89744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20787acc9c5a096e80651dc1909ae60d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a20787acc9c5a096e80651dc1909ae60d">ResetAllRenderTarget</a> ()</td></tr>
+<tr class="memdesc:a20787acc9c5a096e80651dc1909ae60d"><td class="mdescLeft">&#160;</td><td class="mdescRight">全レンダーターゲットリセット関数  <a href="#a20787acc9c5a096e80651dc1909ae60d">[詳解]</a><br /></td></tr>
+<tr class="separator:a20787acc9c5a096e80651dc1909ae60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a09cb524187bc11f1e4812a06fe46d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a9a09cb524187bc11f1e4812a06fe46d6">DistributeDrawBase</a> ()</td></tr>
+<tr class="memdesc:a9a09cb524187bc11f1e4812a06fe46d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画基底クラス振り分け関数  <a href="#a9a09cb524187bc11f1e4812a06fe46d6">[詳解]</a><br /></td></tr>
+<tr class="separator:a9a09cb524187bc11f1e4812a06fe46d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a328d73b404a5609d3e89a299362253fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_draw_base.html">DrawBase</a> *, <a class="el" href="class_draw_manager.html#ad4326cddcb1cc4cec198c4f8069b81f0">DRAW_ARRAY_NUM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a328d73b404a5609d3e89a299362253fd">all_draw_</a></td></tr>
+<tr class="memdesc:a328d73b404a5609d3e89a299362253fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">全描画配列  <a href="#a328d73b404a5609d3e89a299362253fd">[詳解]</a><br /></td></tr>
+<tr class="separator:a328d73b404a5609d3e89a299362253fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a8468dd4469cde2cf162b91a5c1faf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_draw_base.html">DrawBase</a> *, <a class="el" href="class_draw_manager.html#ad4326cddcb1cc4cec198c4f8069b81f0">DRAW_ARRAY_NUM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#aa6a8468dd4469cde2cf162b91a5c1faf">await_add_</a></td></tr>
+<tr class="memdesc:aa6a8468dd4469cde2cf162b91a5c1faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加待ち配列  <a href="#aa6a8468dd4469cde2cf162b91a5c1faf">[詳解]</a><br /></td></tr>
+<tr class="separator:aa6a8468dd4469cde2cf162b91a5c1faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59fa29ded26b3609545a04b5c6927824"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_draw_base.html">DrawBase</a> *, <a class="el" href="class_draw_manager.html#ad4326cddcb1cc4cec198c4f8069b81f0">DRAW_ARRAY_NUM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a59fa29ded26b3609545a04b5c6927824">await_release_</a></td></tr>
+<tr class="memdesc:a59fa29ded26b3609545a04b5c6927824"><td class="mdescLeft">&#160;</td><td class="mdescRight">解放待ち配列  <a href="#a59fa29ded26b3609545a04b5c6927824">[詳解]</a><br /></td></tr>
+<tr class="separator:a59fa29ded26b3609545a04b5c6927824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac4cfc76f2953c30ed5eac54b544d0ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shader_manager.html">ShaderManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#aac4cfc76f2953c30ed5eac54b544d0ad">shader_manager_</a> = nullptr</td></tr>
+<tr class="memdesc:aac4cfc76f2953c30ed5eac54b544d0ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダーマネージャ  <a href="#aac4cfc76f2953c30ed5eac54b544d0ad">[詳解]</a><br /></td></tr>
+<tr class="separator:aac4cfc76f2953c30ed5eac54b544d0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e3e9c0794c049fde69e7e5603df22f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_back_buffer.html">BackBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a53e3e9c0794c049fde69e7e5603df22f">back_buffer_</a> = nullptr</td></tr>
+<tr class="memdesc:a53e3e9c0794c049fde69e7e5603df22f"><td class="mdescLeft">&#160;</td><td class="mdescRight">バックバッファ  <a href="#a53e3e9c0794c049fde69e7e5603df22f">[詳解]</a><br /></td></tr>
+<tr class="separator:a53e3e9c0794c049fde69e7e5603df22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec52b1d65b765e4fe336d814c2bc11c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_manager.html#a0ec52b1d65b765e4fe336d814c2bc11c">directional_light_vector_</a> = {0.5f, -1.0f, 0.8f}</td></tr>
+<tr class="memdesc:a0ec52b1d65b765e4fe336d814c2bc11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡散反射光ベクトル  <a href="#a0ec52b1d65b765e4fe336d814c2bc11c">[詳解]</a><br /></td></tr>
+<tr class="separator:a0ec52b1d65b765e4fe336d814c2bc11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>描画マネージャークラス </p>
+<p>登録されている描画基底クラスを管理するクラス </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8h_source.html">DrawManager.h</a> の <a class="el" href="_draw_manager_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a984cd9de288151fd1d170f80f93a11e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a984cd9de288151fd1d170f80f93a11e8">&#9670;&nbsp;</a></span>AddContentsOfAwaitAddArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::AddContentsOfAwaitAddArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>追加待ち配列の中身を追加関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00195">195</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9dbd645fdbf927cd43d400335ff9b286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dbd645fdbf927cd43d400335ff9b286">&#9670;&nbsp;</a></span>AddDrawBaseToArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::AddDrawBaseToArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画基底クラスの追加関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00136">136</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9a09cb524187bc11f1e4812a06fe46d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a09cb524187bc11f1e4812a06fe46d6">&#9670;&nbsp;</a></span>DistributeDrawBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::DistributeDrawBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画基底クラス振り分け関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00270">270</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a43372495e68d77a2698f211cf921b37e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43372495e68d77a2698f211cf921b37e">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00125">125</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0e7e11e650f1c1736e9d3199a58191a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e7e11e650f1c1736e9d3199a58191a7">&#9670;&nbsp;</a></span>GetBackBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_back_buffer.html">BackBuffer</a>* DrawManager::GetBackBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_draw_manager_8h_source.html">DrawManager.h</a> の <a class="el" href="_draw_manager_8h_source.html#l00116">116</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a952023ad9e2e12844c93e37029a32700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a952023ad9e2e12844c93e37029a32700">&#9670;&nbsp;</a></span>GetDirectionalLightVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a>* DrawManager::GetDirectionalLightVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_draw_manager_8h_source.html">DrawManager.h</a> の <a class="el" href="_draw_manager_8h_source.html#l00114">114</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3cb9319d492285bd9dfc983d27e5d04f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cb9319d492285bd9dfc983d27e5d04f">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00032">32</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a94ef5a241c8d78187a2a6c0ed3c9efec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ef5a241c8d78187a2a6c0ed3c9efec">&#9670;&nbsp;</a></span>OverwriteArrayDrawBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::OverwriteArrayDrawBase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td>
+          <td class="paramname"><em>game_object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>new_draw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画基底クラスの上書き関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00147">147</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a76361402a035f02084e9faf31e782d69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76361402a035f02084e9faf31e782d69">&#9670;&nbsp;</a></span>ReleaseContentsOfAwaitReleaseArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::ReleaseContentsOfAwaitReleaseArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>解放待ち配列の中身を解放関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00215">215</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a287d1f359b87f075b22df6a9b6e99316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a287d1f359b87f075b22df6a9b6e99316">&#9670;&nbsp;</a></span>ReleaseDrawBaseFromArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::ReleaseDrawBaseFromArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画基底クラスの解放関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00184">184</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a20787acc9c5a096e80651dc1909ae60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20787acc9c5a096e80651dc1909ae60d">&#9670;&nbsp;</a></span>ResetAllRenderTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::ResetAllRenderTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全レンダーターゲットリセット関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00259">259</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a470edae8248d36956a02bab7e59a4140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a470edae8248d36956a02bab7e59a4140">&#9670;&nbsp;</a></span>SetDirectionalLightVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::SetDirectionalLightVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_draw_manager_8h_source.html">DrawManager.h</a> の <a class="el" href="_draw_manager_8h_source.html#l00115">115</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae58095d9d734f30211011e9205aa57aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae58095d9d734f30211011e9205aa57aa">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>終了関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8b4ea38d625efbcc08d9b168cb5465f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b4ea38d625efbcc08d9b168cb5465f9">&#9670;&nbsp;</a></span>UninitWhenChangeScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::UninitWhenChangeScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>シーン変更時の終了関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00070">70</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af498c44ff698bf3ef473df970e24c917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af498c44ff698bf3ef473df970e24c917">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>更新関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00090">90</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7c989a2beae5de5a1fc7ab0bef8692f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c989a2beae5de5a1fc7ab0bef8692f9">&#9670;&nbsp;</a></span>UpdateAllDrawBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::UpdateAllDrawBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全描画基底クラス更新関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00235">235</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8eb2f1e3957113ae99e8240c40c89744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eb2f1e3957113ae99e8240c40c89744">&#9670;&nbsp;</a></span>UpdateAllRenderTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawManager::UpdateAllRenderTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全レンダーターゲット更新関数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a> の <a class="el" href="_draw_manager_8cpp_source.html#l00248">248</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a328d73b404a5609d3e89a299362253fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a328d73b404a5609d3e89a299362253fd">&#9670;&nbsp;</a></span>all_draw_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt;<a class="el" href="class_draw_base.html">DrawBase</a>*, <a class="el" href="class_draw_manager.html#ad4326cddcb1cc4cec198c4f8069b81f0">DRAW_ARRAY_NUM</a>&gt; DrawManager::all_draw_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全描画配列 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8h_source.html">DrawManager.h</a> の <a class="el" href="_draw_manager_8h_source.html#l00050">50</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa6a8468dd4469cde2cf162b91a5c1faf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a8468dd4469cde2cf162b91a5c1faf">&#9670;&nbsp;</a></span>await_add_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt;<a class="el" href="class_draw_base.html">DrawBase</a>*, <a class="el" href="class_draw_manager.html#ad4326cddcb1cc4cec198c4f8069b81f0">DRAW_ARRAY_NUM</a>&gt; DrawManager::await_add_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>追加待ち配列 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8h_source.html">DrawManager.h</a> の <a class="el" href="_draw_manager_8h_source.html#l00051">51</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a59fa29ded26b3609545a04b5c6927824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59fa29ded26b3609545a04b5c6927824">&#9670;&nbsp;</a></span>await_release_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt;<a class="el" href="class_draw_base.html">DrawBase</a>*, <a class="el" href="class_draw_manager.html#ad4326cddcb1cc4cec198c4f8069b81f0">DRAW_ARRAY_NUM</a>&gt; DrawManager::await_release_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>解放待ち配列 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8h_source.html">DrawManager.h</a> の <a class="el" href="_draw_manager_8h_source.html#l00052">52</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a53e3e9c0794c049fde69e7e5603df22f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e3e9c0794c049fde69e7e5603df22f">&#9670;&nbsp;</a></span>back_buffer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_back_buffer.html">BackBuffer</a>* DrawManager::back_buffer_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>バックバッファ </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8h_source.html">DrawManager.h</a> の <a class="el" href="_draw_manager_8h_source.html#l00055">55</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0ec52b1d65b765e4fe336d814c2bc11c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec52b1d65b765e4fe336d814c2bc11c">&#9670;&nbsp;</a></span>directional_light_vector_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a> DrawManager::directional_light_vector_ = {0.5f, -1.0f, 0.8f}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>拡散反射光ベクトル </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8h_source.html">DrawManager.h</a> の <a class="el" href="_draw_manager_8h_source.html#l00057">57</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad4326cddcb1cc4cec198c4f8069b81f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4326cddcb1cc4cec198c4f8069b81f0">&#9670;&nbsp;</a></span>DRAW_ARRAY_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned DrawManager::DRAW_ARRAY_NUM = 10000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画配列数 </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8h_source.html">DrawManager.h</a> の <a class="el" href="_draw_manager_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aac4cfc76f2953c30ed5eac54b544d0ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac4cfc76f2953c30ed5eac54b544d0ad">&#9670;&nbsp;</a></span>shader_manager_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shader_manager.html">ShaderManager</a>* DrawManager::shader_manager_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シェーダーマネージャ </p>
+
+<p class="definition"> <a class="el" href="_draw_manager_8h_source.html">DrawManager.h</a> の <a class="el" href="_draw_manager_8h_source.html#l00054">54</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/DrawManager/<a class="el" href="_draw_manager_8h_source.html">DrawManager.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/DrawManager/<a class="el" href="_draw_manager_8cpp_source.html">DrawManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_draw_manager.html">DrawManager</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

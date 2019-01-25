@@ -1,0 +1,637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>3DAction: FailureLogoDraw クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DAction
+   &#160;<span id="projectnumber">version 1.3</span>
+   </div>
+   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_failure_logo_draw.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="#pri-static-attribs">静的非公開変数類</a> &#124;
+<a href="class_failure_logo_draw-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">FailureLogoDraw クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>失敗ロゴ描画クラス  
+ <a href="class_failure_logo_draw.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_failure_logo_draw_8h_source.html">FailureLogoDraw.h</a>&gt;</code></p>
+<div class="dynheader">
+FailureLogoDraw の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_failure_logo_draw__inherit__graph.png" border="0" usemap="#_failure_logo_draw_inherit__map" alt="Inheritance graph"/></div>
+<map name="_failure_logo_draw_inherit__map" id="_failure_logo_draw_inherit__map">
+<area shape="rect" id="node2" href="class_draw_null.html" title="空白描画Class " alt="" coords="28,155,101,181"/>
+<area shape="rect" id="node3" href="class_draw_base.html" title="描画BaseClass " alt="" coords="24,80,105,107"/>
+<area shape="rect" id="node4" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="5,5,124,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a718d587edcabb1feea72153a79a65176"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_failure_logo_draw.html#a718d587edcabb1feea72153a79a65176">Init</a> () override</td></tr>
+<tr class="memdesc:a718d587edcabb1feea72153a79a65176"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a718d587edcabb1feea72153a79a65176">[詳解]</a><br /></td></tr>
+<tr class="separator:a718d587edcabb1feea72153a79a65176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97646253380b54f37565650e211f33cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_failure_logo_draw.html#a97646253380b54f37565650e211f33cd">Uninit</a> () override</td></tr>
+<tr class="memdesc:a97646253380b54f37565650e211f33cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#a97646253380b54f37565650e211f33cd">[詳解]</a><br /></td></tr>
+<tr class="separator:a97646253380b54f37565650e211f33cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee20e1697bbbaf7f41c18334830488a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_failure_logo_draw.html#a8ee20e1697bbbaf7f41c18334830488a">Draw</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
+<tr class="memdesc:a8ee20e1697bbbaf7f41c18334830488a"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画関数  <a href="#a8ee20e1697bbbaf7f41c18334830488a">[詳解]</a><br /></td></tr>
+<tr class="separator:a8ee20e1697bbbaf7f41c18334830488a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45bb5d0965ca73b06ae0836f27f9b0e3"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_failure_logo_draw.html#a45bb5d0965ca73b06ae0836f27f9b0e3">getMeshNum</a> (unsigned object_index) override</td></tr>
+<tr class="memdesc:a45bb5d0965ca73b06ae0836f27f9b0e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ数取得関数  <a href="#a45bb5d0965ca73b06ae0836f27f9b0e3">[詳解]</a><br /></td></tr>
+<tr class="separator:a45bb5d0965ca73b06ae0836f27f9b0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e6fb80dc21af9318d659bc3fa71c0b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_failure_logo_draw.html#a6e6fb80dc21af9318d659bc3fa71c0b5">getpMatrix</a> (unsigned object_index) override</td></tr>
+<tr class="memdesc:a6e6fb80dc21af9318d659bc3fa71c0b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列ポインタ取得関数  <a href="#a6e6fb80dc21af9318d659bc3fa71c0b5">[詳解]</a><br /></td></tr>
+<tr class="separator:a6e6fb80dc21af9318d659bc3fa71c0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60b0cd983365acdad363cdaf8ebdef46"><td class="memItemLeft" align="right" valign="top">D3DMATERIAL9 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_failure_logo_draw.html#a60b0cd983365acdad363cdaf8ebdef46">getpMaterial</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
+<tr class="memdesc:a60b0cd983365acdad363cdaf8ebdef46"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルポインタ取得関数  <a href="#a60b0cd983365acdad363cdaf8ebdef46">[詳解]</a><br /></td></tr>
+<tr class="separator:a60b0cd983365acdad363cdaf8ebdef46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29a9642997edb92eeec83e8bd6b1ddee"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DTEXTURE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_failure_logo_draw.html#a29a9642997edb92eeec83e8bd6b1ddee">getpDecaleTexture</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
+<tr class="memdesc:a29a9642997edb92eeec83e8bd6b1ddee"><td class="mdescLeft">&#160;</td><td class="mdescRight">デカールテクスチャポインタ取得関数  <a href="#a29a9642997edb92eeec83e8bd6b1ddee">[詳解]</a><br /></td></tr>
+<tr class="separator:a29a9642997edb92eeec83e8bd6b1ddee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_draw_null"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_draw_null')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_draw_null.html">DrawNull</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a8bddfa6ee87e47b2ecbbe6803b088e37 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a8bddfa6ee87e47b2ecbbe6803b088e37">getObjectNum</a> () override</td></tr>
+<tr class="memdesc:a8bddfa6ee87e47b2ecbbe6803b088e37 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト数取得関数  <a href="class_draw_null.html#a8bddfa6ee87e47b2ecbbe6803b088e37">[詳解]</a><br /></td></tr>
+<tr class="separator:a8bddfa6ee87e47b2ecbbe6803b088e37 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb03713b973fd1f65c914fa146414a1 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual LPDIRECT3DTEXTURE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#abdb03713b973fd1f65c914fa146414a1">getpNormalTexture</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
+<tr class="memdesc:abdb03713b973fd1f65c914fa146414a1 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">法線テクスチャポインタ取得関数  <a href="class_draw_null.html#abdb03713b973fd1f65c914fa146414a1">[詳解]</a><br /></td></tr>
+<tr class="separator:abdb03713b973fd1f65c914fa146414a1 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03c2d730ff3351baf234f89cc28303b inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#af03c2d730ff3351baf234f89cc28303b">~DrawNull</a> ()</td></tr>
+<tr class="memdesc:af03c2d730ff3351baf234f89cc28303b inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="class_draw_null.html#af03c2d730ff3351baf234f89cc28303b">[詳解]</a><br /></td></tr>
+<tr class="separator:af03c2d730ff3351baf234f89cc28303b inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32a508d269de7eda8ad24ea72230464 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#ad32a508d269de7eda8ad24ea72230464">Update</a> () override</td></tr>
+<tr class="memdesc:ad32a508d269de7eda8ad24ea72230464 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="class_draw_null.html#ad32a508d269de7eda8ad24ea72230464">[詳解]</a><br /></td></tr>
+<tr class="separator:ad32a508d269de7eda8ad24ea72230464 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3bbedfe8db8daf7cafa143750f2114 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#aed3bbedfe8db8daf7cafa143750f2114">DebugDisplay</a> () override</td></tr>
+<tr class="memdesc:aed3bbedfe8db8daf7cafa143750f2114 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ表示関数  <a href="class_draw_null.html#aed3bbedfe8db8daf7cafa143750f2114">[詳解]</a><br /></td></tr>
+<tr class="separator:aed3bbedfe8db8daf7cafa143750f2114 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3baf78b024837c8ebb2471e7505db6ea inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a3baf78b024837c8ebb2471e7505db6ea">SettingBeforeDrawing</a> (<a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index) override</td></tr>
+<tr class="memdesc:a3baf78b024837c8ebb2471e7505db6ea inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画前設定関数  <a href="class_draw_null.html#a3baf78b024837c8ebb2471e7505db6ea">[詳解]</a><br /></td></tr>
+<tr class="separator:a3baf78b024837c8ebb2471e7505db6ea inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3600d14d2ce10f4281723567f97c08be inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a3600d14d2ce10f4281723567f97c08be">SettingAfterDrawing</a> (<a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index) override</td></tr>
+<tr class="memdesc:a3600d14d2ce10f4281723567f97c08be inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画後設定関数  <a href="class_draw_null.html#a3600d14d2ce10f4281723567f97c08be">[詳解]</a><br /></td></tr>
+<tr class="separator:a3600d14d2ce10f4281723567f97c08be inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_draw_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_draw_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_draw_base.html">DrawBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:af5fe522d4bbce381e6fe8e5601b69e9f inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_order_list.html">DrawOrderList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#af5fe522d4bbce381e6fe8e5601b69e9f">getpDrawOrderList</a> ()</td></tr>
+<tr class="memdesc:af5fe522d4bbce381e6fe8e5601b69e9f inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画注文リストポインタ取得関数  <a href="class_draw_base.html#af5fe522d4bbce381e6fe8e5601b69e9f">[詳解]</a><br /></td></tr>
+<tr class="separator:af5fe522d4bbce381e6fe8e5601b69e9f inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af276fa23e7c5f51a4fdeab016456a992 inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#af276fa23e7c5f51a4fdeab016456a992">~DrawBase</a> ()=0</td></tr>
+<tr class="memdesc:af276fa23e7c5f51a4fdeab016456a992 inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="class_draw_base.html#af276fa23e7c5f51a4fdeab016456a992">[詳解]</a><br /></td></tr>
+<tr class="separator:af276fa23e7c5f51a4fdeab016456a992 inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa18abd488181eed72822f92a0f2521fe inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#aa18abd488181eed72822f92a0f2521fe">LimitedChangeCameraType</a> (<a class="el" href="class_camera.html">Camera</a> *camera, <a class="el" href="class_camera.html#a3b0a1f58deca679ac665f61c480d1dcb">Camera::Type</a> type)</td></tr>
+<tr class="memdesc:aa18abd488181eed72822f92a0f2521fe inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">限定カメラタイプ変更関数  <a href="class_draw_base.html#aa18abd488181eed72822f92a0f2521fe">[詳解]</a><br /></td></tr>
+<tr class="separator:aa18abd488181eed72822f92a0f2521fe inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b144e61928b7658c7a849017e40c79 inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a48b144e61928b7658c7a849017e40c79">RevivalCameraType</a> (<a class="el" href="class_camera.html">Camera</a> *camera)</td></tr>
+<tr class="memdesc:a48b144e61928b7658c7a849017e40c79 inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラタイプ復活関数  <a href="class_draw_base.html#a48b144e61928b7658c7a849017e40c79">[詳解]</a><br /></td></tr>
+<tr class="separator:a48b144e61928b7658c7a849017e40c79 inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_component_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_component_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_component_base.html">ComponentBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#ab9517b92e45e084b1cc450c147e16642">getpGameObject</a> ()</td></tr>
+<tr class="memdesc:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクトポインタ取得関数  <a href="class_component_base.html#ab9517b92e45e084b1cc450c147e16642">[詳解]</a><br /></td></tr>
+<tr class="separator:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#ae671317076d3c89ba0793ae2cd34d5ea">setGameObject</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *value)</td></tr>
+<tr class="memdesc:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクトポインタ設定関数  <a href="class_component_base.html#ae671317076d3c89ba0793ae2cd34d5ea">[詳解]</a><br /></td></tr>
+<tr class="separator:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80a37e33ecca2471b2186fba1aaf2cdd inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#a80a37e33ecca2471b2186fba1aaf2cdd">~ComponentBase</a> ()=0</td></tr>
+<tr class="memdesc:a80a37e33ecca2471b2186fba1aaf2cdd inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="class_component_base.html#a80a37e33ecca2471b2186fba1aaf2cdd">[詳解]</a><br /></td></tr>
+<tr class="separator:a80a37e33ecca2471b2186fba1aaf2cdd inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:aa6b60e289acc232d5bd1bc5a656a2551"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_failure_logo.html">FailureLogo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_failure_logo_draw.html#aa6b60e289acc232d5bd1bc5a656a2551">failure_logo_</a></td></tr>
+<tr class="memdesc:aa6b60e289acc232d5bd1bc5a656a2551"><td class="mdescLeft">&#160;</td><td class="mdescRight">失敗ロゴ  <a href="#aa6b60e289acc232d5bd1bc5a656a2551">[詳解]</a><br /></td></tr>
+<tr class="separator:aa6b60e289acc232d5bd1bc5a656a2551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02463e67fa2053739c667bb1213e1b9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_texture_object.html">TextureObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_failure_logo_draw.html#a02463e67fa2053739c667bb1213e1b9e">decale_texture_</a></td></tr>
+<tr class="memdesc:a02463e67fa2053739c667bb1213e1b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">デカールテクスチャ  <a href="#a02463e67fa2053739c667bb1213e1b9e">[詳解]</a><br /></td></tr>
+<tr class="separator:a02463e67fa2053739c667bb1213e1b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静的非公開変数類</h2></td></tr>
+<tr class="memitem:a287b81d9dcab4be17a88d9aff7c97a9a"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_failure_logo_draw.html#a287b81d9dcab4be17a88d9aff7c97a9a">TEXTURE_NAME</a> = &quot;UI/GameOver.png&quot;</td></tr>
+<tr class="memdesc:a287b81d9dcab4be17a88d9aff7c97a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ名  <a href="#a287b81d9dcab4be17a88d9aff7c97a9a">[詳解]</a><br /></td></tr>
+<tr class="separator:a287b81d9dcab4be17a88d9aff7c97a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356d2f6f14682ad6f2e9a01ffdd587b0"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_failure_logo_draw.html#a356d2f6f14682ad6f2e9a01ffdd587b0">SCALE</a> = 1.25f</td></tr>
+<tr class="memdesc:a356d2f6f14682ad6f2e9a01ffdd587b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡縮  <a href="#a356d2f6f14682ad6f2e9a01ffdd587b0">[詳解]</a><br /></td></tr>
+<tr class="separator:a356d2f6f14682ad6f2e9a01ffdd587b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>失敗ロゴ描画クラス </p>
+<p>失敗ロゴの描画クラス </p>
+
+<p class="definition"> <a class="el" href="_failure_logo_draw_8h_source.html">FailureLogoDraw.h</a> の <a class="el" href="_failure_logo_draw_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a8ee20e1697bbbaf7f41c18334830488a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ee20e1697bbbaf7f41c18334830488a">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FailureLogoDraw::Draw </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mesh_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object_index</td><td>: オブジェクトインデックス mesh_index : メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a72ac0b7dc40b1469582419dcc5b0e114">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_failure_logo_draw_8cpp_source.html">FailureLogoDraw.cpp</a> の <a class="el" href="_failure_logo_draw_8cpp_source.html#l00070">70</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a45bb5d0965ca73b06ae0836f27f9b0e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45bb5d0965ca73b06ae0836f27f9b0e3">&#9670;&nbsp;</a></span>getMeshNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned FailureLogoDraw::getMeshNum </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>メッシュ数取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">unsigned</td><td>メッシュ数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a4c566a37d27fac3dcf76c7970443f375">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_failure_logo_draw_8cpp_source.html">FailureLogoDraw.cpp</a> の <a class="el" href="_failure_logo_draw_8cpp_source.html#l00083">83</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a29a9642997edb92eeec83e8bd6b1ddee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29a9642997edb92eeec83e8bd6b1ddee">&#9670;&nbsp;</a></span>getpDecaleTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPDIRECT3DTEXTURE9 FailureLogoDraw::getpDecaleTexture </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mesh_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デカールテクスチャポインタ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">LPDIRECT3DTEXTURE9</td><td>デカールテクスチャポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a87d21f70b6fed637a6e23029f29818c1">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_failure_logo_draw_8cpp_source.html">FailureLogoDraw.cpp</a> の <a class="el" href="_failure_logo_draw_8cpp_source.html#l00121">121</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a60b0cd983365acdad363cdaf8ebdef46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b0cd983365acdad363cdaf8ebdef46">&#9670;&nbsp;</a></span>getpMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3DMATERIAL9 * FailureLogoDraw::getpMaterial </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mesh_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マテリアルポインタ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">D3DMATERIAL9*</td><td>マテリアルポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a0c1efe55fea325ad277594be6fe1e938">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_failure_logo_draw_8cpp_source.html">FailureLogoDraw.cpp</a> の <a class="el" href="_failure_logo_draw_8cpp_source.html#l00108">108</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6e6fb80dc21af9318d659bc3fa71c0b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e6fb80dc21af9318d659bc3fa71c0b5">&#9670;&nbsp;</a></span>getpMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> * FailureLogoDraw::getpMatrix </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行列ポインタ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">MATRIX*</td><td>行列ポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a9aac059eb3b5d1f77e8bd3aa0647cff9">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_failure_logo_draw_8cpp_source.html">FailureLogoDraw.cpp</a> の <a class="el" href="_failure_logo_draw_8cpp_source.html#l00095">95</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a718d587edcabb1feea72153a79a65176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718d587edcabb1feea72153a79a65176">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FailureLogoDraw::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+
+<p><a class="el" href="class_draw_null.html#a20aef1e54c1a158b741bfd731e18efdf">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_failure_logo_draw_8cpp_source.html">FailureLogoDraw.cpp</a> の <a class="el" href="_failure_logo_draw_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a97646253380b54f37565650e211f33cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97646253380b54f37565650e211f33cd">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FailureLogoDraw::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終了関数 </p>
+
+<p><a class="el" href="class_draw_null.html#a6e81d63efab7333e8d0e8af99362a4d9">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_failure_logo_draw_8cpp_source.html">FailureLogoDraw.cpp</a> の <a class="el" href="_failure_logo_draw_8cpp_source.html#l00061">61</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a02463e67fa2053739c667bb1213e1b9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02463e67fa2053739c667bb1213e1b9e">&#9670;&nbsp;</a></span>decale_texture_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_texture_object.html">TextureObject</a>* FailureLogoDraw::decale_texture_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デカールテクスチャ </p>
+
+<p class="definition"> <a class="el" href="_failure_logo_draw_8h_source.html">FailureLogoDraw.h</a> の <a class="el" href="_failure_logo_draw_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa6b60e289acc232d5bd1bc5a656a2551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b60e289acc232d5bd1bc5a656a2551">&#9670;&nbsp;</a></span>failure_logo_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_failure_logo.html">FailureLogo</a>* FailureLogoDraw::failure_logo_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>失敗ロゴ </p>
+
+<p class="definition"> <a class="el" href="_failure_logo_draw_8h_source.html">FailureLogoDraw.h</a> の <a class="el" href="_failure_logo_draw_8h_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a356d2f6f14682ad6f2e9a01ffdd587b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a356d2f6f14682ad6f2e9a01ffdd587b0">&#9670;&nbsp;</a></span>SCALE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float FailureLogoDraw::SCALE = 1.25f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>拡縮 </p>
+
+<p class="definition"> <a class="el" href="_failure_logo_draw_8h_source.html">FailureLogoDraw.h</a> の <a class="el" href="_failure_logo_draw_8h_source.html#l00038">38</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a287b81d9dcab4be17a88d9aff7c97a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a287b81d9dcab4be17a88d9aff7c97a9a">&#9670;&nbsp;</a></span>TEXTURE_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string FailureLogoDraw::TEXTURE_NAME = &quot;UI/GameOver.png&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テクスチャ名 </p>
+
+<p class="definition"> <a class="el" href="_failure_logo_draw_8h_source.html">FailureLogoDraw.h</a> の <a class="el" href="_failure_logo_draw_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/03_Object/2D/UI/FailureLogo/FailureLogoDraw/<a class="el" href="_failure_logo_draw_8h_source.html">FailureLogoDraw.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/03_Object/2D/UI/FailureLogo/FailureLogoDraw/<a class="el" href="_failure_logo_draw_8cpp_source.html">FailureLogoDraw.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_failure_logo_draw.html">FailureLogoDraw</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

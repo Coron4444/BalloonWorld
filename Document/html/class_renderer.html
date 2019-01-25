@@ -1,0 +1,847 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>3DAction: Renderer クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DAction
+   &#160;<span id="projectnumber">version 1.3</span>
+   </div>
+   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_renderer.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="#pri-static-attribs">静的非公開変数類</a> &#124;
+<a href="class_renderer-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Renderer クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>レンダラーClass  
+ <a href="class_renderer.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_renderer_8h_source.html">Renderer.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:ab5a9379ccadcf2b3394c61cf8c835fec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#ab5a9379ccadcf2b3394c61cf8c835fec">MODE</a> { <br />
+&#160;&#160;<a class="el" href="class_renderer.html#ab5a9379ccadcf2b3394c61cf8c835feca2a36637bde744b1f383e4fa8c3c10382">NONE</a> = -1, 
+<a class="el" href="class_renderer.html#ab5a9379ccadcf2b3394c61cf8c835feca6b296a07c01bb9de6258ca507e7c4eb6">DIRECTX9</a>, 
+<a class="el" href="class_renderer.html#ab5a9379ccadcf2b3394c61cf8c835fecaf72f39863653ad6fe6cb501a566fb714">DIRECTX11</a>, 
+<a class="el" href="class_renderer.html#ab5a9379ccadcf2b3394c61cf8c835fecac532ec7ed1c2ce77df467cbf829e575a">OPEN_GL</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_renderer.html#ab5a9379ccadcf2b3394c61cf8c835feca3304c74929f96df4042bc148ee9f3b50">MAX</a>
+<br />
+ }</td></tr>
+<tr class="separator:ab5a9379ccadcf2b3394c61cf8c835fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1c49b796eff197f77ef3f75757f7d468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_renderer_interface.html">RendererInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a1c49b796eff197f77ef3f75757f7d468">getpRenderer</a> ()</td></tr>
+<tr class="memdesc:a1c49b796eff197f77ef3f75757f7d468"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダラーポインタ取得関数  <a href="#a1c49b796eff197f77ef3f75757f7d468">[詳解]</a><br /></td></tr>
+<tr class="separator:a1c49b796eff197f77ef3f75757f7d468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e3c483b2c9d8024e51639a06159066"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a02e3c483b2c9d8024e51639a06159066">setRenderer</a> (<a class="el" href="class_renderer_factory_interface.html">RendererFactoryInterface</a> *factory, <a class="el" href="class_renderer.html#ab5a9379ccadcf2b3394c61cf8c835fec">MODE</a> mode)</td></tr>
+<tr class="memdesc:a02e3c483b2c9d8024e51639a06159066"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダラー設定関数  <a href="#a02e3c483b2c9d8024e51639a06159066">[詳解]</a><br /></td></tr>
+<tr class="separator:a02e3c483b2c9d8024e51639a06159066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7155d5c9df23afd21082c08931a2e72"><td class="memTemplParams" colspan="2">template&lt;class Type &gt; </td></tr>
+<tr class="memitem:ae7155d5c9df23afd21082c08931a2e72"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_renderer.html#ae7155d5c9df23afd21082c08931a2e72">getInterface</a> (Type **out_pointer)</td></tr>
+<tr class="memdesc:ae7155d5c9df23afd21082c08931a2e72"><td class="mdescLeft">&#160;</td><td class="mdescRight">インターフェース取得関数  <a href="#ae7155d5c9df23afd21082c08931a2e72">[詳解]</a><br /></td></tr>
+<tr class="separator:ae7155d5c9df23afd21082c08931a2e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f82c27d785abaee2d8014ad56eddeba"><td class="memTemplParams" colspan="2">template&lt;class Type &gt; </td></tr>
+<tr class="memitem:a0f82c27d785abaee2d8014ad56eddeba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_renderer.html#a0f82c27d785abaee2d8014ad56eddeba">getDevice</a> (Type **out_pointer)</td></tr>
+<tr class="memdesc:a0f82c27d785abaee2d8014ad56eddeba"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイス取得関数  <a href="#a0f82c27d785abaee2d8014ad56eddeba">[詳解]</a><br /></td></tr>
+<tr class="separator:a0f82c27d785abaee2d8014ad56eddeba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d576add80187f5be3f24ec6a8108100"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a8d576add80187f5be3f24ec6a8108100">Init</a> (HINSTANCE hInstance, HWND hWnd, BOOL is_full_screen, int window_width, int window_height)</td></tr>
+<tr class="memdesc:a8d576add80187f5be3f24ec6a8108100"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a8d576add80187f5be3f24ec6a8108100">[詳解]</a><br /></td></tr>
+<tr class="separator:a8d576add80187f5be3f24ec6a8108100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae865246d6a04d467ac22458f6f5f69d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#ae865246d6a04d467ac22458f6f5f69d4">Uninit</a> ()</td></tr>
+<tr class="memdesc:ae865246d6a04d467ac22458f6f5f69d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#ae865246d6a04d467ac22458f6f5f69d4">[詳解]</a><br /></td></tr>
+<tr class="separator:ae865246d6a04d467ac22458f6f5f69d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af420951c9c163f1151bd6600df204cee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#af420951c9c163f1151bd6600df204cee">DrawBegin</a> ()</td></tr>
+<tr class="memdesc:af420951c9c163f1151bd6600df204cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画開始関数  <a href="#af420951c9c163f1151bd6600df204cee">[詳解]</a><br /></td></tr>
+<tr class="separator:af420951c9c163f1151bd6600df204cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0393849bd4178a33861780bf07b0deee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a0393849bd4178a33861780bf07b0deee">DrawEnd</a> (bool is_begin_scene)</td></tr>
+<tr class="memdesc:a0393849bd4178a33861780bf07b0deee"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画終了関数  <a href="#a0393849bd4178a33861780bf07b0deee">[詳解]</a><br /></td></tr>
+<tr class="separator:a0393849bd4178a33861780bf07b0deee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dac4baae1fa79166442b0778a9c8728"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a1dac4baae1fa79166442b0778a9c8728">Present</a> ()</td></tr>
+<tr class="memdesc:a1dac4baae1fa79166442b0778a9c8728"><td class="mdescLeft">&#160;</td><td class="mdescRight">バックバッファをフロントバッファに反映関数  <a href="#a1dac4baae1fa79166442b0778a9c8728">[詳解]</a><br /></td></tr>
+<tr class="separator:a1dac4baae1fa79166442b0778a9c8728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a995648604452c47b494de005b30de863"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a995648604452c47b494de005b30de863">getpInstance</a> ()</td></tr>
+<tr class="memdesc:a995648604452c47b494de005b30de863"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスポインタ取得関数  <a href="#a995648604452c47b494de005b30de863">[詳解]</a><br /></td></tr>
+<tr class="separator:a995648604452c47b494de005b30de863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7ac523172faaf376ecddaed4bdc0781"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#aa7ac523172faaf376ecddaed4bdc0781">ReleaseInstance</a> ()</td></tr>
+<tr class="memdesc:aa7ac523172faaf376ecddaed4bdc0781"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス解放関数  <a href="#aa7ac523172faaf376ecddaed4bdc0781">[詳解]</a><br /></td></tr>
+<tr class="separator:aa7ac523172faaf376ecddaed4bdc0781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:a7ebf46f54dab9905f79b80f7fddb76a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a7ebf46f54dab9905f79b80f7fddb76a6">Renderer</a> ()</td></tr>
+<tr class="memdesc:a7ebf46f54dab9905f79b80f7fddb76a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#a7ebf46f54dab9905f79b80f7fddb76a6">[詳解]</a><br /></td></tr>
+<tr class="separator:a7ebf46f54dab9905f79b80f7fddb76a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e7732f4c952f3c13d9bb03a7510b7aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a1e7732f4c952f3c13d9bb03a7510b7aa">Renderer</a> (const <a class="el" href="class_renderer.html">Renderer</a> &amp;class_name)=delete</td></tr>
+<tr class="separator:a1e7732f4c952f3c13d9bb03a7510b7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80abe5f35a095f221f8c43916900d66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_renderer.html">Renderer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#ab80abe5f35a095f221f8c43916900d66">operator=</a> (const <a class="el" href="class_renderer.html">Renderer</a> &amp;class_name)=delete</td></tr>
+<tr class="separator:ab80abe5f35a095f221f8c43916900d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:adaed44b3c6c8b0879b8cd52f677941cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_renderer.html#ab5a9379ccadcf2b3394c61cf8c835fec">MODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#adaed44b3c6c8b0879b8cd52f677941cf">mode_</a> = MODE::NONE</td></tr>
+<tr class="memdesc:adaed44b3c6c8b0879b8cd52f677941cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">モード  <a href="#adaed44b3c6c8b0879b8cd52f677941cf">[詳解]</a><br /></td></tr>
+<tr class="separator:adaed44b3c6c8b0879b8cd52f677941cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静的非公開変数類</h2></td></tr>
+<tr class="memitem:aa0ca48ac8408e8726d5dd135432ae4fa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#aa0ca48ac8408e8726d5dd135432ae4fa">instance_</a> = nullptr</td></tr>
+<tr class="memdesc:aa0ca48ac8408e8726d5dd135432ae4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス  <a href="#aa0ca48ac8408e8726d5dd135432ae4fa">[詳解]</a><br /></td></tr>
+<tr class="separator:aa0ca48ac8408e8726d5dd135432ae4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d00cd885d84ff355228d884c0215dc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_renderer_interface.html">RendererInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a64d00cd885d84ff355228d884c0215dc">renderer_</a> = nullptr</td></tr>
+<tr class="memdesc:a64d00cd885d84ff355228d884c0215dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダラー  <a href="#a64d00cd885d84ff355228d884c0215dc">[詳解]</a><br /></td></tr>
+<tr class="separator:a64d00cd885d84ff355228d884c0215dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>レンダラーClass </p>
+<p>レンダラーのClass(Singleton) </p>
+
+<p class="definition"> <a class="el" href="_renderer_8h_source.html">Renderer.h</a> の <a class="el" href="_renderer_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="ab5a9379ccadcf2b3394c61cf8c835fec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a9379ccadcf2b3394c61cf8c835fec">&#9670;&nbsp;</a></span>MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_renderer.html#ab5a9379ccadcf2b3394c61cf8c835fec">Renderer::MODE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ab5a9379ccadcf2b3394c61cf8c835feca2a36637bde744b1f383e4fa8c3c10382"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab5a9379ccadcf2b3394c61cf8c835feca6b296a07c01bb9de6258ca507e7c4eb6"></a>DIRECTX9&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab5a9379ccadcf2b3394c61cf8c835fecaf72f39863653ad6fe6cb501a566fb714"></a>DIRECTX11&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab5a9379ccadcf2b3394c61cf8c835fecac532ec7ed1c2ce77df467cbf829e575a"></a>OPEN_GL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab5a9379ccadcf2b3394c61cf8c835feca3304c74929f96df4042bc148ee9f3b50"></a>MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="_renderer_8h_source.html">Renderer.h</a> の <a class="el" href="_renderer_8h_source.html#l00038">38</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a7ebf46f54dab9905f79b80f7fddb76a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ebf46f54dab9905f79b80f7fddb76a6">&#9670;&nbsp;</a></span>Renderer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Renderer::Renderer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_renderer_8h_source.html">Renderer.h</a> の <a class="el" href="_renderer_8h_source.html#l00229">229</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1e7732f4c952f3c13d9bb03a7510b7aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e7732f4c952f3c13d9bb03a7510b7aa">&#9670;&nbsp;</a></span>Renderer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Renderer::Renderer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_renderer.html">Renderer</a> &amp;&#160;</td>
+          <td class="paramname"><em>class_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="af420951c9c163f1151bd6600df204cee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af420951c9c163f1151bd6600df204cee">&#9670;&nbsp;</a></span>DrawBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Renderer::DrawBegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画開始関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>描画開始成功の有無 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00096">96</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0393849bd4178a33861780bf07b0deee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0393849bd4178a33861780bf07b0deee">&#9670;&nbsp;</a></span>DrawEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::DrawEnd </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_begin_scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_begin_scene</td><td>描画開始成功フラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00104">104</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0f82c27d785abaee2d8014ad56eddeba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f82c27d785abaee2d8014ad56eddeba">&#9670;&nbsp;</a></span>getDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::getDevice </td>
+          <td>(</td>
+          <td class="paramtype">Type **&#160;</td>
+          <td class="paramname"><em>out_pointer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デバイス取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_pointer</td><td>取得用ポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_renderer_8h_source.html">Renderer.h</a> の <a class="el" href="_renderer_8h_source.html#l00149">149</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae7155d5c9df23afd21082c08931a2e72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7155d5c9df23afd21082c08931a2e72">&#9670;&nbsp;</a></span>getInterface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::getInterface </td>
+          <td>(</td>
+          <td class="paramtype">Type **&#160;</td>
+          <td class="paramname"><em>out_pointer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インターフェース取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_pointer</td><td>取得用ポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_renderer_8h_source.html">Renderer.h</a> の <a class="el" href="_renderer_8h_source.html#l00117">117</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a995648604452c47b494de005b30de863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a995648604452c47b494de005b30de863">&#9670;&nbsp;</a></span>getpInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_renderer.html">Renderer</a> * Renderer::getpInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンスポインタ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Renderer*</td><td>レンダラーインスタンスポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00031">31</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1c49b796eff197f77ef3f75757f7d468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c49b796eff197f77ef3f75757f7d468">&#9670;&nbsp;</a></span>getpRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_renderer_interface.html">RendererInterface</a> * Renderer::getpRenderer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>レンダラーポインタ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">RendererInterface*</td><td>レンダラーポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00055">55</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8d576add80187f5be3f24ec6a8108100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d576add80187f5be3f24ec6a8108100">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Renderer::Init </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>is_full_screen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>window_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>window_height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hInstance</td><td>インスタンスハンドル </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hWnd</td><td>Windowsハンドル </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_full_screen</td><td>フルスクリーンフラグ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">window_width</td><td>ウィンドウ幅 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">window_height</td><td>ウィンドウ高さ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>初期化成功の有無 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00076">76</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab80abe5f35a095f221f8c43916900d66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab80abe5f35a095f221f8c43916900d66">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_renderer.html">Renderer</a>&amp; Renderer::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_renderer.html">Renderer</a> &amp;&#160;</td>
+          <td class="paramname"><em>class_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1dac4baae1fa79166442b0778a9c8728"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dac4baae1fa79166442b0778a9c8728">&#9670;&nbsp;</a></span>Present()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::Present </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>バックバッファをフロントバッファに反映関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00112">112</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa7ac523172faaf376ecddaed4bdc0781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7ac523172faaf376ecddaed4bdc0781">&#9670;&nbsp;</a></span>ReleaseInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::ReleaseInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンス解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a02e3c483b2c9d8024e51639a06159066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e3c483b2c9d8024e51639a06159066">&#9670;&nbsp;</a></span>setRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::setRenderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_renderer_factory_interface.html">RendererFactoryInterface</a> *&#160;</td>
+          <td class="paramname"><em>factory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_renderer.html#ab5a9379ccadcf2b3394c61cf8c835fec">MODE</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>レンダラー設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">factory</td><td>レンダラーファクトリー </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>レンダラーモード </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00060">60</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae865246d6a04d467ac22458f6f5f69d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae865246d6a04d467ac22458f6f5f69d4">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00085">85</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="aa0ca48ac8408e8726d5dd135432ae4fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0ca48ac8408e8726d5dd135432ae4fa">&#9670;&nbsp;</a></span>instance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_renderer.html">Renderer</a> * Renderer::instance_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンス </p>
+
+<p class="definition"> <a class="el" href="_renderer_8h_source.html">Renderer.h</a> の <a class="el" href="_renderer_8h_source.html#l00052">52</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adaed44b3c6c8b0879b8cd52f677941cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaed44b3c6c8b0879b8cd52f677941cf">&#9670;&nbsp;</a></span>mode_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_renderer.html#ab5a9379ccadcf2b3394c61cf8c835fec">MODE</a> Renderer::mode_ = MODE::NONE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>モード </p>
+
+<p class="definition"> <a class="el" href="_renderer_8h_source.html">Renderer.h</a> の <a class="el" href="_renderer_8h_source.html#l00086">86</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a64d00cd885d84ff355228d884c0215dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d00cd885d84ff355228d884c0215dc">&#9670;&nbsp;</a></span>renderer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_renderer_interface.html">RendererInterface</a> * Renderer::renderer_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>レンダラー </p>
+
+<p class="definition"> <a class="el" href="_renderer_8h_source.html">Renderer.h</a> の <a class="el" href="_renderer_8h_source.html#l00053">53</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/01_Main/Renderer/<a class="el" href="_renderer_8h_source.html">Renderer.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/01_Main/Renderer/<a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_renderer.html">Renderer</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

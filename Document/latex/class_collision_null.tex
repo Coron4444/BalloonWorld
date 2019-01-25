@@ -1,0 +1,338 @@
+\hypertarget{class_collision_null}{}\section{Collision\+Null クラス}
+\label{class_collision_null}\index{Collision\+Null@{Collision\+Null}}
+
+
+空白衝突\+Class  
+
+
+
+
+{\ttfamily \#include $<$Collision\+Null.\+h$>$}
+
+
+
+Collision\+Null の継承関係図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_collision_null__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_collision_null_a8cbc0114a4dcc343635787d50c6ce007}{$\sim$\+Collision\+Null}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_collision_null_a18cfc21fefcd3e8dec380ac44a85f111}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_collision_null_aafac3fdab43845465fd1e0198c423ccf}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_collision_null_ad6ac0e9b06fcb4e3d19a5c3c1cadfe7e}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_collision_null_a098fcf2c8ecc3c31706b720fbe852aca}{Debug\+Display}} () override
+\begin{DoxyCompactList}\small\item\em デバッグ表示関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_collision_null_a2bb1c8ca023aada97055256e033d823e}{Hit\+Collision}} (\mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$hit\+\_\+collision, \mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$hit\+\_\+object, \mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$hit\+\_\+my\+\_\+object) override
+\begin{DoxyCompactList}\small\item\em 衝突時関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_collision_null_aad9ac22b94ed4365c15aad56858ba37a}{Not\+Hit\+Collision}} (\mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$hit\+\_\+collision, \mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$hit\+\_\+object, \mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$hit\+\_\+my\+\_\+object) override
+\begin{DoxyCompactList}\small\item\em 非衝突時関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_collision_null_ac5645bca5f03262d1918e2ff8348440d}{Hit\+Ground}} (float position\+\_\+y) override
+\begin{DoxyCompactList}\small\item\em フィールドとの衝突時関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_collision_null_a77004653a17a43a8a4809297e6c71422}{Not\+Hit\+Ground}} (float position\+\_\+y) override
+\begin{DoxyCompactList}\small\item\em フィールドとの非衝突時関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+空白衝突\+Class 
+
+衝突の空白\+Class 
+
+ Collision\+Null.\+h の 24 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_collision_null_a8cbc0114a4dcc343635787d50c6ce007}\label{class_collision_null_a8cbc0114a4dcc343635787d50c6ce007}} 
+\index{Collision\+Null@{Collision\+Null}!````~Collision\+Null@{$\sim$\+Collision\+Null}}
+\index{````~Collision\+Null@{$\sim$\+Collision\+Null}!Collision\+Null@{Collision\+Null}}
+\subsubsection{\texorpdfstring{$\sim$\+Collision\+Null()}{~CollisionNull()}}
+{\footnotesize\ttfamily Collision\+Null\+::$\sim$\+Collision\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+デストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Collision\+Null.\+cpp の 19 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_collision_null_a098fcf2c8ecc3c31706b720fbe852aca}\label{class_collision_null_a098fcf2c8ecc3c31706b720fbe852aca}} 
+\index{Collision\+Null@{Collision\+Null}!Debug\+Display@{Debug\+Display}}
+\index{Debug\+Display@{Debug\+Display}!Collision\+Null@{Collision\+Null}}
+\subsubsection{\texorpdfstring{Debug\+Display()}{DebugDisplay()}}
+{\footnotesize\ttfamily void Collision\+Null\+::\+Debug\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+デバッグ表示関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_component_base_a36ae7d27ad9d756fa245bad443020407}{Component\+Base}}を実装しています。
+
+
+
+ Collision\+Null.\+cpp の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_collision_null_a2bb1c8ca023aada97055256e033d823e}\label{class_collision_null_a2bb1c8ca023aada97055256e033d823e}} 
+\index{Collision\+Null@{Collision\+Null}!Hit\+Collision@{Hit\+Collision}}
+\index{Hit\+Collision@{Hit\+Collision}!Collision\+Null@{Collision\+Null}}
+\subsubsection{\texorpdfstring{Hit\+Collision()}{HitCollision()}}
+{\footnotesize\ttfamily void Collision\+Null\+::\+Hit\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$}]{hit\+\_\+collision,  }\item[{\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$}]{hit\+\_\+object,  }\item[{\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$}]{hit\+\_\+my\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+衝突時関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in,out}  & {\em hit\+\_\+collision} & 相手の衝突基底クラス \\
+\hline
+\mbox{\tt in,out}  & {\em hit\+\_\+object} & 相手の衝突オブジェクト \\
+\hline
+\mbox{\tt in,out}  & {\em hit\+\_\+my\+\_\+object} & 自分の衝突オブジェクト \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_base_a5c94fe03f875595758e83eb2a176e45d}{Collision\+Base}}を実装しています。
+
+
+
+\mbox{\hyperlink{class_player_collision_ad937a5fd226e742270202bf4eff53767}{Player\+Collision}}で再実装されています。
+
+
+
+ Collision\+Null.\+cpp の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_collision_null_ac5645bca5f03262d1918e2ff8348440d}\label{class_collision_null_ac5645bca5f03262d1918e2ff8348440d}} 
+\index{Collision\+Null@{Collision\+Null}!Hit\+Ground@{Hit\+Ground}}
+\index{Hit\+Ground@{Hit\+Ground}!Collision\+Null@{Collision\+Null}}
+\subsubsection{\texorpdfstring{Hit\+Ground()}{HitGround()}}
+{\footnotesize\ttfamily void Collision\+Null\+::\+Hit\+Ground (\begin{DoxyParamCaption}\item[{float}]{position\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+フィールドとの衝突時関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em position\+\_\+y} & フィールドの高さ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_base_a48c9d1d9e4286cde5054d4d2aa70bdd8}{Collision\+Base}}を実装しています。
+
+
+
+\mbox{\hyperlink{class_player_collision_a3522ce17b1e1752f2737c2243582ecb0}{Player\+Collision}}で再実装されています。
+
+
+
+ Collision\+Null.\+cpp の 79 行目に定義があります。
+
+\mbox{\Hypertarget{class_collision_null_a18cfc21fefcd3e8dec380ac44a85f111}\label{class_collision_null_a18cfc21fefcd3e8dec380ac44a85f111}} 
+\index{Collision\+Null@{Collision\+Null}!Init@{Init}}
+\index{Init@{Init}!Collision\+Null@{Collision\+Null}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Collision\+Null\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_component_base_a125939d6befe42f28886a6523e86b18b}{Component\+Base}}を実装しています。
+
+
+
+\mbox{\hyperlink{class_goal_collision_ab6089638f5390e019a55ae11952e1cf9}{Goal\+Collision}}, \mbox{\hyperlink{class_coin_collision_a4119a7decab2410a4ada3568ad0c132d}{Coin\+Collision}}, \mbox{\hyperlink{class_enemy_collision_ae5c000a30c8c4a023dd0c8e658def772}{Enemy\+Collision}}, \mbox{\hyperlink{class_player_collision_a3dd6238b75933fd60aee77e92353cc44}{Player\+Collision}}で再実装されています。
+
+
+
+ Collision\+Null.\+cpp の 26 行目に定義があります。
+
+\mbox{\Hypertarget{class_collision_null_aad9ac22b94ed4365c15aad56858ba37a}\label{class_collision_null_aad9ac22b94ed4365c15aad56858ba37a}} 
+\index{Collision\+Null@{Collision\+Null}!Not\+Hit\+Collision@{Not\+Hit\+Collision}}
+\index{Not\+Hit\+Collision@{Not\+Hit\+Collision}!Collision\+Null@{Collision\+Null}}
+\subsubsection{\texorpdfstring{Not\+Hit\+Collision()}{NotHitCollision()}}
+{\footnotesize\ttfamily void Collision\+Null\+::\+Not\+Hit\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$}]{hit\+\_\+collision,  }\item[{\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$}]{hit\+\_\+object,  }\item[{\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$}]{hit\+\_\+my\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+非衝突時関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in,out}  & {\em hit\+\_\+collision} & 相手の衝突基底クラス \\
+\hline
+\mbox{\tt in,out}  & {\em hit\+\_\+object} & 相手の衝突オブジェクト \\
+\hline
+\mbox{\tt in,out}  & {\em hit\+\_\+my\+\_\+object} & 自分の衝突オブジェクト \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_base_a9b64fc5c3f2aac2a05296985ef799fb1}{Collision\+Base}}を実装しています。
+
+
+
+\mbox{\hyperlink{class_player_collision_a21b8f825ea142024212ab5fe3f427ab0}{Player\+Collision}}で再実装されています。
+
+
+
+ Collision\+Null.\+cpp の 67 行目に定義があります。
+
+\mbox{\Hypertarget{class_collision_null_a77004653a17a43a8a4809297e6c71422}\label{class_collision_null_a77004653a17a43a8a4809297e6c71422}} 
+\index{Collision\+Null@{Collision\+Null}!Not\+Hit\+Ground@{Not\+Hit\+Ground}}
+\index{Not\+Hit\+Ground@{Not\+Hit\+Ground}!Collision\+Null@{Collision\+Null}}
+\subsubsection{\texorpdfstring{Not\+Hit\+Ground()}{NotHitGround()}}
+{\footnotesize\ttfamily void Collision\+Null\+::\+Not\+Hit\+Ground (\begin{DoxyParamCaption}\item[{float}]{position\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+フィールドとの非衝突時関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em position\+\_\+y} & フィールドの高さ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_base_ac1ed5b1c0c9b6b70b432e6656f9c4b45}{Collision\+Base}}を実装しています。
+
+
+
+ Collision\+Null.\+cpp の 86 行目に定義があります。
+
+\mbox{\Hypertarget{class_collision_null_aafac3fdab43845465fd1e0198c423ccf}\label{class_collision_null_aafac3fdab43845465fd1e0198c423ccf}} 
+\index{Collision\+Null@{Collision\+Null}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Collision\+Null@{Collision\+Null}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Collision\+Null\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_component_base_a9f42beaf0383d6f629819579cab4de57}{Component\+Base}}を実装しています。
+
+
+
+\mbox{\hyperlink{class_goal_collision_ab818bad44ffcd595f1c495e659c0b348}{Goal\+Collision}}, \mbox{\hyperlink{class_coin_collision_aa852afdcdbedcf82809df9c7fd99be9e}{Coin\+Collision}}, \mbox{\hyperlink{class_enemy_collision_a2a194c606fd162db803c70c6fed9b9e4}{Enemy\+Collision}}, \mbox{\hyperlink{class_player_collision_aa1ab60a62fa2ae3231a1ea0bc8faf801}{Player\+Collision}}で再実装されています。
+
+
+
+ Collision\+Null.\+cpp の 32 行目に定義があります。
+
+\mbox{\Hypertarget{class_collision_null_ad6ac0e9b06fcb4e3d19a5c3c1cadfe7e}\label{class_collision_null_ad6ac0e9b06fcb4e3d19a5c3c1cadfe7e}} 
+\index{Collision\+Null@{Collision\+Null}!Update@{Update}}
+\index{Update@{Update}!Collision\+Null@{Collision\+Null}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Collision\+Null\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_component_base_a58e66d65bc8f3cd5ab67b4b2deab4fc2}{Component\+Base}}を実装しています。
+
+
+
+\mbox{\hyperlink{class_goal_collision_a1e3995dc2f5ba2678580d06699ca6936}{Goal\+Collision}}, \mbox{\hyperlink{class_coin_collision_a981fd9b1b8c688a757a456a56d80501b}{Coin\+Collision}}, \mbox{\hyperlink{class_enemy_collision_ab54133504d867c6d2070d2f3854a0aaf}{Enemy\+Collision}}, \mbox{\hyperlink{class_player_collision_a09f97f220903f5724a3af6b97af3a336}{Player\+Collision}}で再実装されています。
+
+
+
+ Collision\+Null.\+cpp の 43 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Null/\mbox{\hyperlink{_collision_null_8h}{Collision\+Null.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Null/\mbox{\hyperlink{_collision_null_8cpp}{Collision\+Null.\+cpp}}\end{DoxyCompactItemize}

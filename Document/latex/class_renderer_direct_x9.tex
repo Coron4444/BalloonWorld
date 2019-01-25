@@ -1,0 +1,547 @@
+\hypertarget{class_renderer_direct_x9}{}\section{Renderer\+Direct\+X9 クラス}
+\label{class_renderer_direct_x9}\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+
+
+レンダラー\+Direct\+X9\+Class  
+
+
+
+
+{\ttfamily \#include $<$Renderer\+Direct\+X9.\+h$>$}
+
+
+
+Renderer\+Direct\+X9 の継承関係図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_renderer_direct_x9__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_renderer_direct_x9_1_1_v_e_r_t_e_x__3_d}{V\+E\+R\+T\+E\+X\+\_\+3D}}
+\begin{DoxyCompactList}\small\item\em 頂点\+Class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D9 \mbox{\hyperlink{class_renderer_direct_x9_aad68389e45dd757dcde19d636f082a21}{getp\+Interface}} ()
+\begin{DoxyCompactList}\small\item\em インターフェースポインタ取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_renderer_direct_x9_afabcea127b5af61e4d80564369e72baa}{getp\+Device}} ()
+\begin{DoxyCompactList}\small\item\em デバイスポインタ取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_renderer_direct_x9_af015676b50f3ce1ba7cf20abf6074e3b}{Init}} (H\+I\+N\+S\+T\+A\+N\+CE h\+Instance, H\+W\+ND h\+Wnd, B\+O\+OL is\+\_\+full\+\_\+screen, int window\+\_\+width, int window\+\_\+height) override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_direct_x9_af7ff314cbaa894d71e37c10565002f8f}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_renderer_direct_x9_a5113bf4e6aefdb7bcab2016fbbee0174}{Draw\+Begin}} () override
+\begin{DoxyCompactList}\small\item\em 描画開始関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_direct_x9_a5f934597020f77dc9cf729acfb13a830}{Draw\+End}} (bool is\+\_\+begin\+\_\+scene) override
+\begin{DoxyCompactList}\small\item\em 描画終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_direct_x9_a77dbc76e8adbe4f9ee41c5f09e5ebe81}{Present}} () override
+\begin{DoxyCompactList}\small\item\em バックバッファをフロントバッファに反映関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_direct_x9_aa555dda63bdc0f4dfc28ac506d6e8d60}{Use\+Alpha\+Blending}} (bool flag)
+\begin{DoxyCompactList}\small\item\em バックバッファをフロントバッファに反映関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_direct_x9_abfb5264cbb0bf3bacc7b4ec416ddc05a}{Set\+Alpha\+Blending\+\_\+\+Linear}} ()
+\begin{DoxyCompactList}\small\item\em アルファ合成関数(線形合成) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_direct_x9_aa552107a3d5f8a61347fe10741fd04a3}{Set\+Alpha\+Blending\+\_\+\+Add}} ()
+\begin{DoxyCompactList}\small\item\em アルファ合成関数(加算合成) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_direct_x9_a6ddbb9f801ef6b2c86ec5cd4e97b317b}{Set\+Alpha\+Blending\+\_\+\+Sub}} ()
+\begin{DoxyCompactList}\small\item\em アルファ合成関数(減算合成) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_direct_x9_a75dbeaa680610e655c6ff202591f50d7}{Set\+Alpha\+Blending\+\_\+\+Mul}} ()
+\begin{DoxyCompactList}\small\item\em アルファ合成関数(乗算合成) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_direct_x9_a083f55d941075227189769fd9807ffd1}{Set\+Alpha\+Blending\+\_\+\+Baking}} ()
+\begin{DoxyCompactList}\small\item\em アルファ合成関数(焼きこみ合成) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_direct_x9_a5018efa829bf845405ac70beef7df947}{Set\+Alpha\+Blending\+\_\+\+Nega}} ()
+\begin{DoxyCompactList}\small\item\em アルファ合成関数(ネガポジ反転合成) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_direct_x9_a789206ba211e9cbffe0bfe4c7dfb7457}{Set\+Alpha\+Blending\+\_\+\+Opacity}} ()
+\begin{DoxyCompactList}\small\item\em アルファ合成関数(不透明合成) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_direct_x9_a229cd266427d96486c43d2e63300e438}{Set\+Default\+Sampler\+State}} ()
+\begin{DoxyCompactList}\small\item\em デフォルトサンプラーステート設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const D\+W\+O\+RD \mbox{\hyperlink{class_renderer_direct_x9_a80ce0089b01354986332553353625da6}{F\+V\+F\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+3D}} = (D3\+D\+F\+V\+F\+\_\+\+X\+YZ $\vert$ D3\+D\+F\+V\+F\+\_\+\+N\+O\+R\+M\+AL $\vert$ D3\+D\+F\+V\+F\+\_\+\+D\+I\+F\+F\+U\+SE $\vert$ D3\+D\+F\+V\+F\+\_\+\+T\+E\+X1)
+\begin{DoxyCompactList}\small\item\em F\+VF \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D9 \mbox{\hyperlink{class_renderer_direct_x9_a1616ee343f701fe647ed8d1727c8229d}{direct3d\+\_\+interface\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em インターフェース \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_renderer_direct_x9_aba9ae366d583e965418423ec76454a61}{direct3d\+\_\+device\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em デバイス \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+レンダラー\+Direct\+X9\+Class 
+
+Direct\+X9用レンダラー\+Class 
+
+ Renderer\+Direct\+X9.\+h の 28 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_renderer_direct_x9_a5113bf4e6aefdb7bcab2016fbbee0174}\label{class_renderer_direct_x9_a5113bf4e6aefdb7bcab2016fbbee0174}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Draw\+Begin@{Draw\+Begin}}
+\index{Draw\+Begin@{Draw\+Begin}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Draw\+Begin()}{DrawBegin()}}
+{\footnotesize\ttfamily bool Renderer\+Direct\+X9\+::\+Draw\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画開始関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 描画開始成功の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_renderer_interface_a86a487deb4e4207a67410d00ec670fd7}{Renderer\+Interface}}を実装しています。
+
+
+
+ Renderer\+Direct\+X9.\+cpp の 108 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_a5f934597020f77dc9cf729acfb13a830}\label{class_renderer_direct_x9_a5f934597020f77dc9cf729acfb13a830}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Draw\+End@{Draw\+End}}
+\index{Draw\+End@{Draw\+End}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Draw\+End()}{DrawEnd()}}
+{\footnotesize\ttfamily void Renderer\+Direct\+X9\+::\+Draw\+End (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+begin\+\_\+scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画終了関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em is\+\_\+begin\+\_\+scene} & 描画開始成功フラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_renderer_interface_a0034a44420e4746062e70e4d66d3bee2}{Renderer\+Interface}}を実装しています。
+
+
+
+ Renderer\+Direct\+X9.\+cpp の 126 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_afabcea127b5af61e4d80564369e72baa}\label{class_renderer_direct_x9_afabcea127b5af61e4d80564369e72baa}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!getp\+Device@{getp\+Device}}
+\index{getp\+Device@{getp\+Device}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{getp\+Device()}{getpDevice()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 Renderer\+Direct\+X9\+::getp\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+デバイスポインタ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9} & デバイスポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Renderer\+Direct\+X9.\+cpp の 36 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_aad68389e45dd757dcde19d636f082a21}\label{class_renderer_direct_x9_aad68389e45dd757dcde19d636f082a21}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!getp\+Interface@{getp\+Interface}}
+\index{getp\+Interface@{getp\+Interface}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{getp\+Interface()}{getpInterface()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D9 Renderer\+Direct\+X9\+::getp\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+インターフェースポインタ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D9} & インタフェースポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Renderer\+Direct\+X9.\+cpp の 29 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_af015676b50f3ce1ba7cf20abf6074e3b}\label{class_renderer_direct_x9_af015676b50f3ce1ba7cf20abf6074e3b}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Init@{Init}}
+\index{Init@{Init}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool Renderer\+Direct\+X9\+::\+Init (\begin{DoxyParamCaption}\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Instance,  }\item[{H\+W\+ND}]{h\+Wnd,  }\item[{B\+O\+OL}]{is\+\_\+full\+\_\+screen,  }\item[{int}]{window\+\_\+width,  }\item[{int}]{window\+\_\+height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+インターフェース及びデバイスの生成 
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em h\+Instance} & インスタンスハンドル \\
+\hline
+\mbox{\tt in}  & {\em h\+Wnd} & Windowsハンドル \\
+\hline
+\mbox{\tt in}  & {\em is\+\_\+full\+\_\+screen} & フルスクリーンフラグ \\
+\hline
+\mbox{\tt in}  & {\em window\+\_\+width} & ウィンドウ幅 \\
+\hline
+\mbox{\tt in}  & {\em window\+\_\+height} & ウィンドウ高さ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 初期化成功の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_renderer_interface_aabef76c27c2332c1af2dbcf7e8de5d38}{Renderer\+Interface}}を実装しています。
+
+
+
+ Renderer\+Direct\+X9.\+cpp の 46 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_a77dbc76e8adbe4f9ee41c5f09e5ebe81}\label{class_renderer_direct_x9_a77dbc76e8adbe4f9ee41c5f09e5ebe81}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Present@{Present}}
+\index{Present@{Present}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Present()}{Present()}}
+{\footnotesize\ttfamily void Renderer\+Direct\+X9\+::\+Present (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+バックバッファをフロントバッファに反映関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_renderer_interface_aa9e12d2a2f5ffa351c457cfc7806b6f1}{Renderer\+Interface}}を実装しています。
+
+
+
+ Renderer\+Direct\+X9.\+cpp の 134 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_aa552107a3d5f8a61347fe10741fd04a3}\label{class_renderer_direct_x9_aa552107a3d5f8a61347fe10741fd04a3}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Set\+Alpha\+Blending\+\_\+\+Add@{Set\+Alpha\+Blending\+\_\+\+Add}}
+\index{Set\+Alpha\+Blending\+\_\+\+Add@{Set\+Alpha\+Blending\+\_\+\+Add}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Set\+Alpha\+Blending\+\_\+\+Add()}{SetAlphaBlending\_Add()}}
+{\footnotesize\ttfamily void Renderer\+Direct\+X9\+::\+Set\+Alpha\+Blending\+\_\+\+Add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+アルファ合成関数(加算合成) 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Renderer\+Direct\+X9.\+cpp の 164 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_a083f55d941075227189769fd9807ffd1}\label{class_renderer_direct_x9_a083f55d941075227189769fd9807ffd1}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Set\+Alpha\+Blending\+\_\+\+Baking@{Set\+Alpha\+Blending\+\_\+\+Baking}}
+\index{Set\+Alpha\+Blending\+\_\+\+Baking@{Set\+Alpha\+Blending\+\_\+\+Baking}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Set\+Alpha\+Blending\+\_\+\+Baking()}{SetAlphaBlending\_Baking()}}
+{\footnotesize\ttfamily void Renderer\+Direct\+X9\+::\+Set\+Alpha\+Blending\+\_\+\+Baking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+アルファ合成関数(焼きこみ合成) 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Renderer\+Direct\+X9.\+cpp の 196 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_abfb5264cbb0bf3bacc7b4ec416ddc05a}\label{class_renderer_direct_x9_abfb5264cbb0bf3bacc7b4ec416ddc05a}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Set\+Alpha\+Blending\+\_\+\+Linear@{Set\+Alpha\+Blending\+\_\+\+Linear}}
+\index{Set\+Alpha\+Blending\+\_\+\+Linear@{Set\+Alpha\+Blending\+\_\+\+Linear}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Set\+Alpha\+Blending\+\_\+\+Linear()}{SetAlphaBlending\_Linear()}}
+{\footnotesize\ttfamily void Renderer\+Direct\+X9\+::\+Set\+Alpha\+Blending\+\_\+\+Linear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+アルファ合成関数(線形合成) 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Renderer\+Direct\+X9.\+cpp の 149 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_a75dbeaa680610e655c6ff202591f50d7}\label{class_renderer_direct_x9_a75dbeaa680610e655c6ff202591f50d7}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Set\+Alpha\+Blending\+\_\+\+Mul@{Set\+Alpha\+Blending\+\_\+\+Mul}}
+\index{Set\+Alpha\+Blending\+\_\+\+Mul@{Set\+Alpha\+Blending\+\_\+\+Mul}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Set\+Alpha\+Blending\+\_\+\+Mul()}{SetAlphaBlending\_Mul()}}
+{\footnotesize\ttfamily void Renderer\+Direct\+X9\+::\+Set\+Alpha\+Blending\+\_\+\+Mul (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+アルファ合成関数(乗算合成) 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Renderer\+Direct\+X9.\+cpp の 184 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_a5018efa829bf845405ac70beef7df947}\label{class_renderer_direct_x9_a5018efa829bf845405ac70beef7df947}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Set\+Alpha\+Blending\+\_\+\+Nega@{Set\+Alpha\+Blending\+\_\+\+Nega}}
+\index{Set\+Alpha\+Blending\+\_\+\+Nega@{Set\+Alpha\+Blending\+\_\+\+Nega}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Set\+Alpha\+Blending\+\_\+\+Nega()}{SetAlphaBlending\_Nega()}}
+{\footnotesize\ttfamily void Renderer\+Direct\+X9\+::\+Set\+Alpha\+Blending\+\_\+\+Nega (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+アルファ合成関数(ネガポジ反転合成) 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Renderer\+Direct\+X9.\+cpp の 208 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_a789206ba211e9cbffe0bfe4c7dfb7457}\label{class_renderer_direct_x9_a789206ba211e9cbffe0bfe4c7dfb7457}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Set\+Alpha\+Blending\+\_\+\+Opacity@{Set\+Alpha\+Blending\+\_\+\+Opacity}}
+\index{Set\+Alpha\+Blending\+\_\+\+Opacity@{Set\+Alpha\+Blending\+\_\+\+Opacity}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Set\+Alpha\+Blending\+\_\+\+Opacity()}{SetAlphaBlending\_Opacity()}}
+{\footnotesize\ttfamily void Renderer\+Direct\+X9\+::\+Set\+Alpha\+Blending\+\_\+\+Opacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+アルファ合成関数(不透明合成) 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Renderer\+Direct\+X9.\+cpp の 220 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_a6ddbb9f801ef6b2c86ec5cd4e97b317b}\label{class_renderer_direct_x9_a6ddbb9f801ef6b2c86ec5cd4e97b317b}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Set\+Alpha\+Blending\+\_\+\+Sub@{Set\+Alpha\+Blending\+\_\+\+Sub}}
+\index{Set\+Alpha\+Blending\+\_\+\+Sub@{Set\+Alpha\+Blending\+\_\+\+Sub}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Set\+Alpha\+Blending\+\_\+\+Sub()}{SetAlphaBlending\_Sub()}}
+{\footnotesize\ttfamily void Renderer\+Direct\+X9\+::\+Set\+Alpha\+Blending\+\_\+\+Sub (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+アルファ合成関数(減算合成) 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Renderer\+Direct\+X9.\+cpp の 174 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_a229cd266427d96486c43d2e63300e438}\label{class_renderer_direct_x9_a229cd266427d96486c43d2e63300e438}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Set\+Default\+Sampler\+State@{Set\+Default\+Sampler\+State}}
+\index{Set\+Default\+Sampler\+State@{Set\+Default\+Sampler\+State}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Set\+Default\+Sampler\+State()}{SetDefaultSamplerState()}}
+{\footnotesize\ttfamily void Renderer\+Direct\+X9\+::\+Set\+Default\+Sampler\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+デフォルトサンプラーステート設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Renderer\+Direct\+X9.\+cpp の 232 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_af7ff314cbaa894d71e37c10565002f8f}\label{class_renderer_direct_x9_af7ff314cbaa894d71e37c10565002f8f}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Renderer\+Direct\+X9\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+各種開放 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_renderer_interface_ada105489f9db98e7e9542b278699d558}{Renderer\+Interface}}を実装しています。
+
+
+
+ Renderer\+Direct\+X9.\+cpp の 97 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_aa555dda63bdc0f4dfc28ac506d6e8d60}\label{class_renderer_direct_x9_aa555dda63bdc0f4dfc28ac506d6e8d60}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!Use\+Alpha\+Blending@{Use\+Alpha\+Blending}}
+\index{Use\+Alpha\+Blending@{Use\+Alpha\+Blending}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{Use\+Alpha\+Blending()}{UseAlphaBlending()}}
+{\footnotesize\ttfamily void Renderer\+Direct\+X9\+::\+Use\+Alpha\+Blending (\begin{DoxyParamCaption}\item[{bool}]{flag }\end{DoxyParamCaption})}
+
+
+
+バックバッファをフロントバッファに反映関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Renderer\+Direct\+X9.\+cpp の 142 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_renderer_direct_x9_aba9ae366d583e965418423ec76454a61}\label{class_renderer_direct_x9_aba9ae366d583e965418423ec76454a61}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!direct3d\+\_\+device\+\_\+@{direct3d\+\_\+device\+\_\+}}
+\index{direct3d\+\_\+device\+\_\+@{direct3d\+\_\+device\+\_\+}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{direct3d\+\_\+device\+\_\+}{direct3d\_device\_}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 Renderer\+Direct\+X9\+::direct3d\+\_\+device\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+デバイス 
+
+
+
+ Renderer\+Direct\+X9.\+h の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_a1616ee343f701fe647ed8d1727c8229d}\label{class_renderer_direct_x9_a1616ee343f701fe647ed8d1727c8229d}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!direct3d\+\_\+interface\+\_\+@{direct3d\+\_\+interface\+\_\+}}
+\index{direct3d\+\_\+interface\+\_\+@{direct3d\+\_\+interface\+\_\+}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{direct3d\+\_\+interface\+\_\+}{direct3d\_interface\_}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D9 Renderer\+Direct\+X9\+::direct3d\+\_\+interface\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+インターフェース 
+
+
+
+ Renderer\+Direct\+X9.\+h の 63 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_direct_x9_a80ce0089b01354986332553353625da6}\label{class_renderer_direct_x9_a80ce0089b01354986332553353625da6}} 
+\index{Renderer\+Direct\+X9@{Renderer\+Direct\+X9}!F\+V\+F\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+3D@{F\+V\+F\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+3D}}
+\index{F\+V\+F\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+3D@{F\+V\+F\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+3D}!Renderer\+Direct\+X9@{Renderer\+Direct\+X9}}
+\subsubsection{\texorpdfstring{F\+V\+F\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+3D}{FVF\_VERTEX\_3D}}
+{\footnotesize\ttfamily const D\+W\+O\+RD Renderer\+Direct\+X9\+::\+F\+V\+F\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+3D = (D3\+D\+F\+V\+F\+\_\+\+X\+YZ $\vert$ D3\+D\+F\+V\+F\+\_\+\+N\+O\+R\+M\+AL $\vert$ D3\+D\+F\+V\+F\+\_\+\+D\+I\+F\+F\+U\+SE $\vert$ D3\+D\+F\+V\+F\+\_\+\+T\+E\+X1)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+F\+VF 
+
+
+
+ Renderer\+Direct\+X9.\+h の 56 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/01\+\_\+\+Main/\+Renderer/\+Renderer\+Direct\+X9/\mbox{\hyperlink{_renderer_direct_x9_8h}{Renderer\+Direct\+X9.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/01\+\_\+\+Main/\+Renderer/\+Renderer\+Direct\+X9/\mbox{\hyperlink{_renderer_direct_x9_8cpp}{Renderer\+Direct\+X9.\+cpp}}\end{DoxyCompactItemize}

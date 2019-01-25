@@ -1,0 +1,200 @@
+\hypertarget{class_scene_manager_1_1_common_data}{}\section{Scene\+Manager\+:\+:Common\+Data クラス}
+\label{class_scene_manager_1_1_common_data}\index{Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}}
+
+
+シーン間共通データ\+Class  
+
+
+
+
+{\ttfamily \#include $<$Scene\+Manager.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_scene_manager_1_1_common_data_a2e9f26617f0f0ce25b7c2c99fdfadb9c}{get\+Is\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新フラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_1_1_common_data_acff0faeef41334781fc49184ada1a5a4}{set\+Is\+Update}} (bool value)
+\begin{DoxyCompactList}\small\item\em 更新フラグ設定関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_scene_manager_1_1_common_data_a88aa3cc8dd3de9d2e10dc947ca06d397}{get\+Is\+Clear}} ()
+\begin{DoxyCompactList}\small\item\em クリアフラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_1_1_common_data_a63ed55beac6b37243cafdbec26870fc3}{set\+Is\+Clear}} (bool value)
+\begin{DoxyCompactList}\small\item\em クリアフラグ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_1_1_common_data_a32823be65c187b909e4159cef57931a9}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_scene_manager_1_1_common_data_a20614bc0af84ec92a4c3a564c0345f9e}{is\+\_\+update\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 全体を更新するかフラグ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_scene_manager_1_1_common_data_a467635269880aaf0e5983389cc2ca657}{is\+\_\+clear\+\_\+}}
+\begin{DoxyCompactList}\small\item\em ゲームをクリアしたかフラグ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+シーン間共通データ\+Class 
+
+シーン間の共通データ\+Class 
+
+ Scene\+Manager.\+h の 43 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_scene_manager_1_1_common_data_a88aa3cc8dd3de9d2e10dc947ca06d397}\label{class_scene_manager_1_1_common_data_a88aa3cc8dd3de9d2e10dc947ca06d397}} 
+\index{Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}!get\+Is\+Clear@{get\+Is\+Clear}}
+\index{get\+Is\+Clear@{get\+Is\+Clear}!Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}}
+\subsubsection{\texorpdfstring{get\+Is\+Clear()}{getIsClear()}}
+{\footnotesize\ttfamily bool Scene\+Manager\+::\+Common\+Data\+::get\+Is\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+クリアフラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & クリアの有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scene\+Manager.\+cpp の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_manager_1_1_common_data_a2e9f26617f0f0ce25b7c2c99fdfadb9c}\label{class_scene_manager_1_1_common_data_a2e9f26617f0f0ce25b7c2c99fdfadb9c}} 
+\index{Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}!get\+Is\+Update@{get\+Is\+Update}}
+\index{get\+Is\+Update@{get\+Is\+Update}!Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}}
+\subsubsection{\texorpdfstring{get\+Is\+Update()}{getIsUpdate()}}
+{\footnotesize\ttfamily bool Scene\+Manager\+::\+Common\+Data\+::get\+Is\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+更新フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 更新の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scene\+Manager.\+cpp の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_manager_1_1_common_data_a32823be65c187b909e4159cef57931a9}\label{class_scene_manager_1_1_common_data_a32823be65c187b909e4159cef57931a9}} 
+\index{Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}!Reset@{Reset}}
+\index{Reset@{Reset}!Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Common\+Data\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+リセット関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scene\+Manager.\+h の 100 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_manager_1_1_common_data_a63ed55beac6b37243cafdbec26870fc3}\label{class_scene_manager_1_1_common_data_a63ed55beac6b37243cafdbec26870fc3}} 
+\index{Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}!set\+Is\+Clear@{set\+Is\+Clear}}
+\index{set\+Is\+Clear@{set\+Is\+Clear}!Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}}
+\subsubsection{\texorpdfstring{set\+Is\+Clear()}{setIsClear()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Common\+Data\+::set\+Is\+Clear (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+クリアフラグ設定関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em value} & クリアフラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scene\+Manager.\+cpp の 56 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_manager_1_1_common_data_acff0faeef41334781fc49184ada1a5a4}\label{class_scene_manager_1_1_common_data_acff0faeef41334781fc49184ada1a5a4}} 
+\index{Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}!set\+Is\+Update@{set\+Is\+Update}}
+\index{set\+Is\+Update@{set\+Is\+Update}!Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}}
+\subsubsection{\texorpdfstring{set\+Is\+Update()}{setIsUpdate()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Common\+Data\+::set\+Is\+Update (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+更新フラグ設定関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em value} & 更新フラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scene\+Manager.\+cpp の 42 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_scene_manager_1_1_common_data_a467635269880aaf0e5983389cc2ca657}\label{class_scene_manager_1_1_common_data_a467635269880aaf0e5983389cc2ca657}} 
+\index{Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}!is\+\_\+clear\+\_\+@{is\+\_\+clear\+\_\+}}
+\index{is\+\_\+clear\+\_\+@{is\+\_\+clear\+\_\+}!Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}}
+\subsubsection{\texorpdfstring{is\+\_\+clear\+\_\+}{is\_clear\_}}
+{\footnotesize\ttfamily bool Scene\+Manager\+::\+Common\+Data\+::is\+\_\+clear\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ゲームをクリアしたかフラグ 
+
+
+
+ Scene\+Manager.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_manager_1_1_common_data_a20614bc0af84ec92a4c3a564c0345f9e}\label{class_scene_manager_1_1_common_data_a20614bc0af84ec92a4c3a564c0345f9e}} 
+\index{Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}!is\+\_\+update\+\_\+@{is\+\_\+update\+\_\+}}
+\index{is\+\_\+update\+\_\+@{is\+\_\+update\+\_\+}!Scene\+Manager\+::\+Common\+Data@{Scene\+Manager\+::\+Common\+Data}}
+\subsubsection{\texorpdfstring{is\+\_\+update\+\_\+}{is\_update\_}}
+{\footnotesize\ttfamily bool Scene\+Manager\+::\+Common\+Data\+::is\+\_\+update\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+全体を更新するかフラグ 
+
+
+
+ Scene\+Manager.\+h の 49 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/02\+\_\+\+Scene/\+Scene\+Manager/\mbox{\hyperlink{_scene_manager_8h}{Scene\+Manager.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/02\+\_\+\+Scene/\+Scene\+Manager/\mbox{\hyperlink{_scene_manager_8cpp}{Scene\+Manager.\+cpp}}\end{DoxyCompactItemize}

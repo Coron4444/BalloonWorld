@@ -1,0 +1,410 @@
+\hypertarget{class_capsule}{}\section{Capsule クラス}
+\label{class_capsule}\index{Capsule@{Capsule}}
+
+
+カプセル\+Class  
+
+
+
+
+{\ttfamily \#include $<$Capsule.\+h$>$}
+
+
+
+Capsule の継承関係図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{class_capsule__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sphere}{Sphere}} $\ast$ \mbox{\hyperlink{class_capsule_ad6590760125ad1b564bcd00fc9c0272e}{getp\+Sphere0}} ()
+\begin{DoxyCompactList}\small\item\em 球0ポインタ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sphere}{Sphere}} $\ast$ \mbox{\hyperlink{class_capsule_a3abd8375914c3ae6c5ff8ad585988d57}{getp\+Sphere1}} ()
+\begin{DoxyCompactList}\small\item\em 球1ポインタ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cylinder}{Cylinder}} $\ast$ \mbox{\hyperlink{class_capsule_a86fceb506f99d999cec56a5c316a5c7a}{getp\+Cylinder}} ()
+\begin{DoxyCompactList}\small\item\em 円柱ポインタ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_line_segment}{Line\+Segment}} $\ast$ \mbox{\hyperlink{class_capsule_aadd6a7e5e20796e3f591b83cc406070e}{getp\+Line\+Segment}} ()
+\begin{DoxyCompactList}\small\item\em 線分ポインタ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_capsule_ab0f3be95228fef65ef04d444aa5bcddd}{getp\+Position}} ()
+\begin{DoxyCompactList}\small\item\em 座標ポインタ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_capsule_a93bb5298cb7f9f8ab27e08825bcb2f76}{getp\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em 方向ポインタ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_capsule_a32991dc5e0331f716302ce73a8f9fd2f}{get\+Add\+Vector\+To\+Position}} ()
+\begin{DoxyCompactList}\small\item\em 方向ベクトル加算済み座標取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_capsule_a4e98e8545ea57fe682c5a2002bd49bdb}{get\+Radius}} ()
+\begin{DoxyCompactList}\small\item\em 半径取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_capsule_a42d2233293d60384377ab4f4213be612}{set\+Radius}} (float value)
+\begin{DoxyCompactList}\small\item\em 半径設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_capsule_a4324279c9cc08241083b53c3a3dec44c}{Capsule}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_capsule_a89dc585afa88e50e84a2f98bbf0bb400}{Init}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} position, \mbox{\hyperlink{class_vector3_d}{Vector3D}} vector, float radius)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cylinder}{Cylinder}} \mbox{\hyperlink{class_capsule_a7b7f46d36a0d810555aa5eb62da6a8ed}{cylinder\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 円柱 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sphere}{Sphere}} \mbox{\hyperlink{class_capsule_a37c7db7fe8cb06be2f374d7aba24267e}{sphere0\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 球0 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sphere}{Sphere}} \mbox{\hyperlink{class_capsule_ac478efc95993a85908a7cd2759133ab2}{sphere1\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 球1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+カプセル\+Class 
+
+カプセルの\+Class 
+
+ Capsule.\+h の 28 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_capsule_a4324279c9cc08241083b53c3a3dec44c}\label{class_capsule_a4324279c9cc08241083b53c3a3dec44c}} 
+\index{Capsule@{Capsule}!Capsule@{Capsule}}
+\index{Capsule@{Capsule}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{Capsule()}{Capsule()}}
+{\footnotesize\ttfamily Capsule\+::\+Capsule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Capsule.\+cpp の 86 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_capsule_a32991dc5e0331f716302ce73a8f9fd2f}\label{class_capsule_a32991dc5e0331f716302ce73a8f9fd2f}} 
+\index{Capsule@{Capsule}!get\+Add\+Vector\+To\+Position@{get\+Add\+Vector\+To\+Position}}
+\index{get\+Add\+Vector\+To\+Position@{get\+Add\+Vector\+To\+Position}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{get\+Add\+Vector\+To\+Position()}{getAddVectorToPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Capsule\+::get\+Add\+Vector\+To\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+方向ベクトル加算済み座標取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 方向ベクトル加算済み座標 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Capsule.\+cpp の 62 行目に定義があります。
+
+\mbox{\Hypertarget{class_capsule_a86fceb506f99d999cec56a5c316a5c7a}\label{class_capsule_a86fceb506f99d999cec56a5c316a5c7a}} 
+\index{Capsule@{Capsule}!getp\+Cylinder@{getp\+Cylinder}}
+\index{getp\+Cylinder@{getp\+Cylinder}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{getp\+Cylinder()}{getpCylinder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cylinder}{Cylinder}} $\ast$ Capsule\+::getp\+Cylinder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+円柱ポインタ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Cylinder$\ast$} & 円柱ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Capsule.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_capsule_aadd6a7e5e20796e3f591b83cc406070e}\label{class_capsule_aadd6a7e5e20796e3f591b83cc406070e}} 
+\index{Capsule@{Capsule}!getp\+Line\+Segment@{getp\+Line\+Segment}}
+\index{getp\+Line\+Segment@{getp\+Line\+Segment}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{getp\+Line\+Segment()}{getpLineSegment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_line_segment}{Line\+Segment}} $\ast$ Capsule\+::getp\+Line\+Segment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+線分ポインタ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Line\+Segment$\ast$} & 線分ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Capsule.\+cpp の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_capsule_ab0f3be95228fef65ef04d444aa5bcddd}\label{class_capsule_ab0f3be95228fef65ef04d444aa5bcddd}} 
+\index{Capsule@{Capsule}!getp\+Position@{getp\+Position}}
+\index{getp\+Position@{getp\+Position}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{getp\+Position()}{getpPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Capsule\+::getp\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+座標ポインタ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 座標ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Capsule.\+cpp の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_capsule_ad6590760125ad1b564bcd00fc9c0272e}\label{class_capsule_ad6590760125ad1b564bcd00fc9c0272e}} 
+\index{Capsule@{Capsule}!getp\+Sphere0@{getp\+Sphere0}}
+\index{getp\+Sphere0@{getp\+Sphere0}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{getp\+Sphere0()}{getpSphere0()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sphere}{Sphere}} $\ast$ Capsule\+::getp\+Sphere0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+球0ポインタ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Sphere$\ast$} & 球0ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Capsule.\+cpp の 20 行目に定義があります。
+
+\mbox{\Hypertarget{class_capsule_a3abd8375914c3ae6c5ff8ad585988d57}\label{class_capsule_a3abd8375914c3ae6c5ff8ad585988d57}} 
+\index{Capsule@{Capsule}!getp\+Sphere1@{getp\+Sphere1}}
+\index{getp\+Sphere1@{getp\+Sphere1}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{getp\+Sphere1()}{getpSphere1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sphere}{Sphere}} $\ast$ Capsule\+::getp\+Sphere1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+球1ポインタ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Sphere$\ast$} & 球1ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Capsule.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_capsule_a93bb5298cb7f9f8ab27e08825bcb2f76}\label{class_capsule_a93bb5298cb7f9f8ab27e08825bcb2f76}} 
+\index{Capsule@{Capsule}!getp\+Vector@{getp\+Vector}}
+\index{getp\+Vector@{getp\+Vector}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{getp\+Vector()}{getpVector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Capsule\+::getp\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+方向ポインタ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 方向ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Capsule.\+cpp の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_capsule_a4e98e8545ea57fe682c5a2002bd49bdb}\label{class_capsule_a4e98e8545ea57fe682c5a2002bd49bdb}} 
+\index{Capsule@{Capsule}!get\+Radius@{get\+Radius}}
+\index{get\+Radius@{get\+Radius}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{get\+Radius()}{getRadius()}}
+{\footnotesize\ttfamily float Capsule\+::get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+半径取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 半径 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Capsule.\+cpp の 69 行目に定義があります。
+
+\mbox{\Hypertarget{class_capsule_a89dc585afa88e50e84a2f98bbf0bb400}\label{class_capsule_a89dc585afa88e50e84a2f98bbf0bb400}} 
+\index{Capsule@{Capsule}!Init@{Init}}
+\index{Init@{Init}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Capsule\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{position,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{vector,  }\item[{float}]{radius }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em position} & 始点座標 \\
+\hline
+\mbox{\tt in}  & {\em vector} & 方向 \\
+\hline
+\mbox{\tt in}  & {\em radius} & 半径 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Capsule.\+cpp の 93 行目に定義があります。
+
+\mbox{\Hypertarget{class_capsule_a42d2233293d60384377ab4f4213be612}\label{class_capsule_a42d2233293d60384377ab4f4213be612}} 
+\index{Capsule@{Capsule}!set\+Radius@{set\+Radius}}
+\index{set\+Radius@{set\+Radius}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{set\+Radius()}{setRadius()}}
+{\footnotesize\ttfamily void Capsule\+::set\+Radius (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+半径設定関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em value} & 半径 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Capsule.\+cpp の 76 行目に定義があります。
+
+\mbox{\Hypertarget{class_capsule_af53f19ae224208814b21238c3661a643}\label{class_capsule_af53f19ae224208814b21238c3661a643}} 
+\index{Capsule@{Capsule}!Update@{Update}}
+\index{Update@{Update}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Capsule\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Capsule.\+cpp の 105 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_capsule_a7b7f46d36a0d810555aa5eb62da6a8ed}\label{class_capsule_a7b7f46d36a0d810555aa5eb62da6a8ed}} 
+\index{Capsule@{Capsule}!cylinder\+\_\+@{cylinder\+\_\+}}
+\index{cylinder\+\_\+@{cylinder\+\_\+}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{cylinder\+\_\+}{cylinder\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cylinder}{Cylinder}} Capsule\+::cylinder\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+円柱 
+
+
+
+ Capsule.\+h の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_capsule_a37c7db7fe8cb06be2f374d7aba24267e}\label{class_capsule_a37c7db7fe8cb06be2f374d7aba24267e}} 
+\index{Capsule@{Capsule}!sphere0\+\_\+@{sphere0\+\_\+}}
+\index{sphere0\+\_\+@{sphere0\+\_\+}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{sphere0\+\_\+}{sphere0\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sphere}{Sphere}} Capsule\+::sphere0\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+球0 
+
+
+
+ Capsule.\+h の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_capsule_ac478efc95993a85908a7cd2759133ab2}\label{class_capsule_ac478efc95993a85908a7cd2759133ab2}} 
+\index{Capsule@{Capsule}!sphere1\+\_\+@{sphere1\+\_\+}}
+\index{sphere1\+\_\+@{sphere1\+\_\+}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{sphere1\+\_\+}{sphere1\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sphere}{Sphere}} Capsule\+::sphere1\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+球1 
+
+
+
+ Capsule.\+h の 36 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+Capsule/\mbox{\hyperlink{_capsule_8h}{Capsule.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+Capsule/\mbox{\hyperlink{_capsule_8cpp}{Capsule.\+cpp}}\end{DoxyCompactItemize}

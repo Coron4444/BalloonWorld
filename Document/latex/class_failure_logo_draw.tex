@@ -1,0 +1,303 @@
+\hypertarget{class_failure_logo_draw}{}\section{Failure\+Logo\+Draw クラス}
+\label{class_failure_logo_draw}\index{Failure\+Logo\+Draw@{Failure\+Logo\+Draw}}
+
+
+失敗ロゴ描画クラス  
+
+
+
+
+{\ttfamily \#include $<$Failure\+Logo\+Draw.\+h$>$}
+
+
+
+Failure\+Logo\+Draw の継承関係図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_failure_logo_draw__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_failure_logo_draw_a718d587edcabb1feea72153a79a65176}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_failure_logo_draw_a97646253380b54f37565650e211f33cd}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_failure_logo_draw_a8ee20e1697bbbaf7f41c18334830488a}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_failure_logo_draw_a45bb5d0965ca73b06ae0836f27f9b0e3}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_failure_logo_draw_a6e6fb80dc21af9318d659bc3fa71c0b5}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 行列ポインタ取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_failure_logo_draw_a60b0cd983365acdad363cdaf8ebdef46}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアルポインタ取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_failure_logo_draw_a29a9642997edb92eeec83e8bd6b1ddee}{getp\+Decale\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em デカールテクスチャポインタ取得関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_failure_logo}{Failure\+Logo}} $\ast$ \mbox{\hyperlink{class_failure_logo_draw_aa6b60e289acc232d5bd1bc5a656a2551}{failure\+\_\+logo\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 失敗ロゴ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_failure_logo_draw_a02463e67fa2053739c667bb1213e1b9e}{decale\+\_\+texture\+\_\+}}
+\begin{DoxyCompactList}\small\item\em デカールテクスチャ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{class_failure_logo_draw_a287b81d9dcab4be17a88d9aff7c97a9a}{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}} = \char`\"{}UI/Game\+Over.\+png\char`\"{}
+\begin{DoxyCompactList}\small\item\em テクスチャ名 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_failure_logo_draw_a356d2f6f14682ad6f2e9a01ffdd587b0}{S\+C\+A\+LE}} = 1.\+25f
+\begin{DoxyCompactList}\small\item\em 拡縮 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+失敗ロゴ描画クラス 
+
+失敗ロゴの描画クラス 
+
+ Failure\+Logo\+Draw.\+h の 31 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_failure_logo_draw_a8ee20e1697bbbaf7f41c18334830488a}\label{class_failure_logo_draw_a8ee20e1697bbbaf7f41c18334830488a}} 
+\index{Failure\+Logo\+Draw@{Failure\+Logo\+Draw}!Draw@{Draw}}
+\index{Draw@{Draw}!Failure\+Logo\+Draw@{Failure\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Failure\+Logo\+Draw\+::\+Draw (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & \+: オブジェクトインデックス mesh\+\_\+index \+: メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
+
+
+
+ Failure\+Logo\+Draw.\+cpp の 70 行目に定義があります。
+
+\mbox{\Hypertarget{class_failure_logo_draw_a45bb5d0965ca73b06ae0836f27f9b0e3}\label{class_failure_logo_draw_a45bb5d0965ca73b06ae0836f27f9b0e3}} 
+\index{Failure\+Logo\+Draw@{Failure\+Logo\+Draw}!get\+Mesh\+Num@{get\+Mesh\+Num}}
+\index{get\+Mesh\+Num@{get\+Mesh\+Num}!Failure\+Logo\+Draw@{Failure\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{get\+Mesh\+Num()}{getMeshNum()}}
+{\footnotesize\ttfamily unsigned Failure\+Logo\+Draw\+::get\+Mesh\+Num (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+メッシュ数取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & メッシュ数 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a4c566a37d27fac3dcf76c7970443f375}{Draw\+Null}}を再実装しています。
+
+
+
+ Failure\+Logo\+Draw.\+cpp の 83 行目に定義があります。
+
+\mbox{\Hypertarget{class_failure_logo_draw_a29a9642997edb92eeec83e8bd6b1ddee}\label{class_failure_logo_draw_a29a9642997edb92eeec83e8bd6b1ddee}} 
+\index{Failure\+Logo\+Draw@{Failure\+Logo\+Draw}!getp\+Decale\+Texture@{getp\+Decale\+Texture}}
+\index{getp\+Decale\+Texture@{getp\+Decale\+Texture}!Failure\+Logo\+Draw@{Failure\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Decale\+Texture()}{getpDecaleTexture()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Failure\+Logo\+Draw\+::getp\+Decale\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+デカールテクスチャポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & デカールテクスチャポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a87d21f70b6fed637a6e23029f29818c1}{Draw\+Null}}を再実装しています。
+
+
+
+ Failure\+Logo\+Draw.\+cpp の 121 行目に定義があります。
+
+\mbox{\Hypertarget{class_failure_logo_draw_a60b0cd983365acdad363cdaf8ebdef46}\label{class_failure_logo_draw_a60b0cd983365acdad363cdaf8ebdef46}} 
+\index{Failure\+Logo\+Draw@{Failure\+Logo\+Draw}!getp\+Material@{getp\+Material}}
+\index{getp\+Material@{getp\+Material}!Failure\+Logo\+Draw@{Failure\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Material()}{getpMaterial()}}
+{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ Failure\+Logo\+Draw\+::getp\+Material (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+マテリアルポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアルポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a0c1efe55fea325ad277594be6fe1e938}{Draw\+Null}}を再実装しています。
+
+
+
+ Failure\+Logo\+Draw.\+cpp の 108 行目に定義があります。
+
+\mbox{\Hypertarget{class_failure_logo_draw_a6e6fb80dc21af9318d659bc3fa71c0b5}\label{class_failure_logo_draw_a6e6fb80dc21af9318d659bc3fa71c0b5}} 
+\index{Failure\+Logo\+Draw@{Failure\+Logo\+Draw}!getp\+Matrix@{getp\+Matrix}}
+\index{getp\+Matrix@{getp\+Matrix}!Failure\+Logo\+Draw@{Failure\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Failure\+Logo\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+行列ポインタ取得関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & 行列ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a9aac059eb3b5d1f77e8bd3aa0647cff9}{Draw\+Null}}を再実装しています。
+
+
+
+ Failure\+Logo\+Draw.\+cpp の 95 行目に定義があります。
+
+\mbox{\Hypertarget{class_failure_logo_draw_a718d587edcabb1feea72153a79a65176}\label{class_failure_logo_draw_a718d587edcabb1feea72153a79a65176}} 
+\index{Failure\+Logo\+Draw@{Failure\+Logo\+Draw}!Init@{Init}}
+\index{Init@{Init}!Failure\+Logo\+Draw@{Failure\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Failure\+Logo\+Draw\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
+
+
+
+ Failure\+Logo\+Draw.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_failure_logo_draw_a97646253380b54f37565650e211f33cd}\label{class_failure_logo_draw_a97646253380b54f37565650e211f33cd}} 
+\index{Failure\+Logo\+Draw@{Failure\+Logo\+Draw}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Failure\+Logo\+Draw@{Failure\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Failure\+Logo\+Draw\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+
+\mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
+
+
+
+ Failure\+Logo\+Draw.\+cpp の 61 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_failure_logo_draw_a02463e67fa2053739c667bb1213e1b9e}\label{class_failure_logo_draw_a02463e67fa2053739c667bb1213e1b9e}} 
+\index{Failure\+Logo\+Draw@{Failure\+Logo\+Draw}!decale\+\_\+texture\+\_\+@{decale\+\_\+texture\+\_\+}}
+\index{decale\+\_\+texture\+\_\+@{decale\+\_\+texture\+\_\+}!Failure\+Logo\+Draw@{Failure\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{decale\+\_\+texture\+\_\+}{decale\_texture\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Failure\+Logo\+Draw\+::decale\+\_\+texture\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+デカールテクスチャ 
+
+
+
+ Failure\+Logo\+Draw.\+h の 46 行目に定義があります。
+
+\mbox{\Hypertarget{class_failure_logo_draw_aa6b60e289acc232d5bd1bc5a656a2551}\label{class_failure_logo_draw_aa6b60e289acc232d5bd1bc5a656a2551}} 
+\index{Failure\+Logo\+Draw@{Failure\+Logo\+Draw}!failure\+\_\+logo\+\_\+@{failure\+\_\+logo\+\_\+}}
+\index{failure\+\_\+logo\+\_\+@{failure\+\_\+logo\+\_\+}!Failure\+Logo\+Draw@{Failure\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{failure\+\_\+logo\+\_\+}{failure\_logo\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_failure_logo}{Failure\+Logo}}$\ast$ Failure\+Logo\+Draw\+::failure\+\_\+logo\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+失敗ロゴ 
+
+
+
+ Failure\+Logo\+Draw.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_failure_logo_draw_a356d2f6f14682ad6f2e9a01ffdd587b0}\label{class_failure_logo_draw_a356d2f6f14682ad6f2e9a01ffdd587b0}} 
+\index{Failure\+Logo\+Draw@{Failure\+Logo\+Draw}!S\+C\+A\+LE@{S\+C\+A\+LE}}
+\index{S\+C\+A\+LE@{S\+C\+A\+LE}!Failure\+Logo\+Draw@{Failure\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{S\+C\+A\+LE}{SCALE}}
+{\footnotesize\ttfamily const float Failure\+Logo\+Draw\+::\+S\+C\+A\+LE = 1.\+25f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+拡縮 
+
+
+
+ Failure\+Logo\+Draw.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_failure_logo_draw_a287b81d9dcab4be17a88d9aff7c97a9a}\label{class_failure_logo_draw_a287b81d9dcab4be17a88d9aff7c97a9a}} 
+\index{Failure\+Logo\+Draw@{Failure\+Logo\+Draw}!T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}}
+\index{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}!Failure\+Logo\+Draw@{Failure\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}{TEXTURE\_NAME}}
+{\footnotesize\ttfamily const std\+::string Failure\+Logo\+Draw\+::\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME = \char`\"{}UI/Game\+Over.\+png\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+テクスチャ名 
+
+
+
+ Failure\+Logo\+Draw.\+h の 37 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/2\+D/\+U\+I/\+Failure\+Logo/\+Failure\+Logo\+Draw/\mbox{\hyperlink{_failure_logo_draw_8h}{Failure\+Logo\+Draw.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/2\+D/\+U\+I/\+Failure\+Logo/\+Failure\+Logo\+Draw/\mbox{\hyperlink{_failure_logo_draw_8cpp}{Failure\+Logo\+Draw.\+cpp}}\end{DoxyCompactItemize}

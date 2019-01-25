@@ -1,0 +1,1029 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>3DAction: GameObjectManager クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DAction
+   &#160;<span id="projectnumber">version 1.3</span>
+   </div>
+   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_game_object_manager.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-static-methods">静的非公開メンバ関数</a> &#124;
+<a href="#pri-static-attribs">静的非公開変数類</a> &#124;
+<a href="class_game_object_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">GameObjectManager クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ゲームオブジェクトマネージャクラス  
+ <a href="class_game_object_manager.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:abda84aa3b4c79090c43243f93b5a9c46"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#abda84aa3b4c79090c43243f93b5a9c46">Init</a> ()</td></tr>
+<tr class="memdesc:abda84aa3b4c79090c43243f93b5a9c46"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#abda84aa3b4c79090c43243f93b5a9c46">[詳解]</a><br /></td></tr>
+<tr class="separator:abda84aa3b4c79090c43243f93b5a9c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d2cb0e07fddeea160e64f6e1d2a326a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a4d2cb0e07fddeea160e64f6e1d2a326a">Uninit</a> ()</td></tr>
+<tr class="memdesc:a4d2cb0e07fddeea160e64f6e1d2a326a"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#a4d2cb0e07fddeea160e64f6e1d2a326a">[詳解]</a><br /></td></tr>
+<tr class="separator:a4d2cb0e07fddeea160e64f6e1d2a326a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad962739b2c2f54d4160c3513132930da"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#ad962739b2c2f54d4160c3513132930da">UninitWhenChangeScene</a> ()</td></tr>
+<tr class="memdesc:ad962739b2c2f54d4160c3513132930da"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン変更時の終了関数  <a href="#ad962739b2c2f54d4160c3513132930da">[詳解]</a><br /></td></tr>
+<tr class="separator:ad962739b2c2f54d4160c3513132930da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f053b1c655de6ca1c9a8fa9b6e118ae"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a6f053b1c655de6ca1c9a8fa9b6e118ae">Update</a> ()</td></tr>
+<tr class="memdesc:a6f053b1c655de6ca1c9a8fa9b6e118ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#a6f053b1c655de6ca1c9a8fa9b6e118ae">[詳解]</a><br /></td></tr>
+<tr class="separator:a6f053b1c655de6ca1c9a8fa9b6e118ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0549bd4b6575ee28803c0ff8fd2be2ee"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a0549bd4b6575ee28803c0ff8fd2be2ee">Draw</a> ()</td></tr>
+<tr class="memdesc:a0549bd4b6575ee28803c0ff8fd2be2ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画関数  <a href="#a0549bd4b6575ee28803c0ff8fd2be2ee">[詳解]</a><br /></td></tr>
+<tr class="separator:a0549bd4b6575ee28803c0ff8fd2be2ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38f980aec0970f45eb9bc55db8ac01a3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a38f980aec0970f45eb9bc55db8ac01a3">AllReset</a> ()</td></tr>
+<tr class="memdesc:a38f980aec0970f45eb9bc55db8ac01a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ゲームオブジェクトリセット関数  <a href="#a38f980aec0970f45eb9bc55db8ac01a3">[詳解]</a><br /></td></tr>
+<tr class="separator:a38f980aec0970f45eb9bc55db8ac01a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab42e8ca2c7e586d05d513e8a868a86ef"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#ab42e8ca2c7e586d05d513e8a868a86ef">AddGameObjectBaseToArray</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *game_object)</td></tr>
+<tr class="memdesc:ab42e8ca2c7e586d05d513e8a868a86ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクト基底クラスの追加関数  <a href="#ab42e8ca2c7e586d05d513e8a868a86ef">[詳解]</a><br /></td></tr>
+<tr class="separator:ab42e8ca2c7e586d05d513e8a868a86ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83342c1c358e32f6478ae3428fcb25fa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a83342c1c358e32f6478ae3428fcb25fa">ReleaseGameObjectBaseFromArray</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *game_object)</td></tr>
+<tr class="memdesc:a83342c1c358e32f6478ae3428fcb25fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクト基底クラスの解放関数  <a href="#a83342c1c358e32f6478ae3428fcb25fa">[詳解]</a><br /></td></tr>
+<tr class="separator:a83342c1c358e32f6478ae3428fcb25fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b905d160c31b234686a3d46c0743adb"><td class="memTemplParams" colspan="2">template&lt;class Type &gt; </td></tr>
+<tr class="memitem:a4b905d160c31b234686a3d46c0743adb"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a4b905d160c31b234686a3d46c0743adb">GetPointer_RegistrationReference</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *reference_object, Type *reference_destination, Type *reference_pointer)</td></tr>
+<tr class="memdesc:a4b905d160c31b234686a3d46c0743adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクト参照の取得  <a href="#a4b905d160c31b234686a3d46c0743adb">[詳解]</a><br /></td></tr>
+<tr class="separator:a4b905d160c31b234686a3d46c0743adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d34b53f99cc2264ab6a8c253392a865"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_update_manager.html">UpdateManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a7d34b53f99cc2264ab6a8c253392a865">GetUpdateManager</a> ()</td></tr>
+<tr class="separator:a7d34b53f99cc2264ab6a8c253392a865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a862e76bfd74495c20bddd377c62a22b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_draw_manager.html">DrawManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a862e76bfd74495c20bddd377c62a22b7">GetDrawManager</a> ()</td></tr>
+<tr class="separator:a862e76bfd74495c20bddd377c62a22b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41775a8308691a84b468a0aeeb1b3376"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_collision_manager.html">CollisionManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a41775a8308691a84b468a0aeeb1b3376">GetCollisionManager</a> ()</td></tr>
+<tr class="separator:a41775a8308691a84b468a0aeeb1b3376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:a591934d64d750c10c03c908371470681"><td class="memItemLeft" align="right" valign="top">static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a591934d64d750c10c03c908371470681">ARRAY_NUM</a> = 1000</td></tr>
+<tr class="memdesc:a591934d64d750c10c03c908371470681"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列数  <a href="#a591934d64d750c10c03c908371470681">[詳解]</a><br /></td></tr>
+<tr class="separator:a591934d64d750c10c03c908371470681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa5693c4aefc135e5e85140427c781d3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#aa5693c4aefc135e5e85140427c781d3e">GameObjectManager</a> ()=delete</td></tr>
+<tr class="memdesc:aa5693c4aefc135e5e85140427c781d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(削除)  <a href="#aa5693c4aefc135e5e85140427c781d3e">[詳解]</a><br /></td></tr>
+<tr class="separator:aa5693c4aefc135e5e85140427c781d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a8f9ec94ecca948fc7ab63454398e36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a8a8f9ec94ecca948fc7ab63454398e36">GameObjectManager</a> (const <a class="el" href="class_game_object_manager.html">GameObjectManager</a> &amp;value)=delete</td></tr>
+<tr class="memdesc:a8a8f9ec94ecca948fc7ab63454398e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ(削除)  <a href="#a8a8f9ec94ecca948fc7ab63454398e36">[詳解]</a><br /></td></tr>
+<tr class="separator:a8a8f9ec94ecca948fc7ab63454398e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af66275734b2098dc631fdb789d31fd52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object_manager.html">GameObjectManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#af66275734b2098dc631fdb789d31fd52">operator=</a> (const <a class="el" href="class_game_object_manager.html">GameObjectManager</a> &amp;value)=delete</td></tr>
+<tr class="memdesc:af66275734b2098dc631fdb789d31fd52"><td class="mdescLeft">&#160;</td><td class="mdescRight">代入演算子のオーバーロード(削除)  <a href="#af66275734b2098dc631fdb789d31fd52">[詳解]</a><br /></td></tr>
+<tr class="separator:af66275734b2098dc631fdb789d31fd52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静的非公開メンバ関数</h2></td></tr>
+<tr class="memitem:a783a9d55d566ab8c39e6ed86b3b52a09"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a783a9d55d566ab8c39e6ed86b3b52a09">AddContentsOfAwaitAddArray</a> ()</td></tr>
+<tr class="memdesc:a783a9d55d566ab8c39e6ed86b3b52a09"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加待ち配列の中身を追加関数  <a href="#a783a9d55d566ab8c39e6ed86b3b52a09">[詳解]</a><br /></td></tr>
+<tr class="separator:a783a9d55d566ab8c39e6ed86b3b52a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6c1208229decd93c6ef396bce35b3a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a5a6c1208229decd93c6ef396bce35b3a">ReleaseContentsOfAwaitReleaseArray</a> ()</td></tr>
+<tr class="memdesc:a5a6c1208229decd93c6ef396bce35b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">解放待ち配列の中身を解放関数  <a href="#a5a6c1208229decd93c6ef396bce35b3a">[詳解]</a><br /></td></tr>
+<tr class="separator:a5a6c1208229decd93c6ef396bce35b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c6cdb6d0a1f43a2e2e705677fa2f5f6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a4c6cdb6d0a1f43a2e2e705677fa2f5f6">SetComponentToManager</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *game_object)</td></tr>
+<tr class="memdesc:a4c6cdb6d0a1f43a2e2e705677fa2f5f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンポーネントをマネージャーへ設定関数  <a href="#a4c6cdb6d0a1f43a2e2e705677fa2f5f6">[詳解]</a><br /></td></tr>
+<tr class="separator:a4c6cdb6d0a1f43a2e2e705677fa2f5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3435fd94a3a7b9eb69f422e33848137a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a3435fd94a3a7b9eb69f422e33848137a">ReleaseComponentFromManager</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *game_object)</td></tr>
+<tr class="memdesc:a3435fd94a3a7b9eb69f422e33848137a"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンポーネントをマネージャーから解放関数  <a href="#a3435fd94a3a7b9eb69f422e33848137a">[詳解]</a><br /></td></tr>
+<tr class="separator:a3435fd94a3a7b9eb69f422e33848137a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e1266da3b18a4c0bded551e386c6ae"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a58e1266da3b18a4c0bded551e386c6ae">AllRelease</a> ()</td></tr>
+<tr class="memdesc:a58e1266da3b18a4c0bded551e386c6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ゲームオブジェクトの解放関数  <a href="#a58e1266da3b18a4c0bded551e386c6ae">[詳解]</a><br /></td></tr>
+<tr class="separator:a58e1266da3b18a4c0bded551e386c6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静的非公開変数類</h2></td></tr>
+<tr class="memitem:aeaf98831f542f93db15c54a4948d6331"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_game_object_base.html">GameObjectBase</a> *, <a class="el" href="class_game_object_manager.html#a591934d64d750c10c03c908371470681">ARRAY_NUM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#aeaf98831f542f93db15c54a4948d6331">all_game_object_</a></td></tr>
+<tr class="memdesc:aeaf98831f542f93db15c54a4948d6331"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ゲームオブジェクト配列  <a href="#aeaf98831f542f93db15c54a4948d6331">[詳解]</a><br /></td></tr>
+<tr class="separator:aeaf98831f542f93db15c54a4948d6331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac63518100cbdf391f137d277276e7824"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_game_object_base.html">GameObjectBase</a> *, <a class="el" href="class_game_object_manager.html#a591934d64d750c10c03c908371470681">ARRAY_NUM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#ac63518100cbdf391f137d277276e7824">await_add_</a></td></tr>
+<tr class="memdesc:ac63518100cbdf391f137d277276e7824"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加待ち配列  <a href="#ac63518100cbdf391f137d277276e7824">[詳解]</a><br /></td></tr>
+<tr class="separator:ac63518100cbdf391f137d277276e7824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5dbfcf8c724e1e21279ff9b1bc9fcbe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_game_object_base.html">GameObjectBase</a> *, <a class="el" href="class_game_object_manager.html#a591934d64d750c10c03c908371470681">ARRAY_NUM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#aa5dbfcf8c724e1e21279ff9b1bc9fcbe">await_release_</a></td></tr>
+<tr class="memdesc:aa5dbfcf8c724e1e21279ff9b1bc9fcbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">解放待ち配列  <a href="#aa5dbfcf8c724e1e21279ff9b1bc9fcbe">[詳解]</a><br /></td></tr>
+<tr class="separator:aa5dbfcf8c724e1e21279ff9b1bc9fcbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7346dd916f897462898a1b28c03cd466"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_game_object_reference_manager.html">GameObjectReferenceManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a7346dd916f897462898a1b28c03cd466">reference_manager_</a></td></tr>
+<tr class="memdesc:a7346dd916f897462898a1b28c03cd466"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照マネージャ  <a href="#a7346dd916f897462898a1b28c03cd466">[詳解]</a><br /></td></tr>
+<tr class="separator:a7346dd916f897462898a1b28c03cd466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330c1759e1a075fb257a01c6f48cf9f3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_update_manager.html">UpdateManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a330c1759e1a075fb257a01c6f48cf9f3">update_manager_</a></td></tr>
+<tr class="memdesc:a330c1759e1a075fb257a01c6f48cf9f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新マネージャ  <a href="#a330c1759e1a075fb257a01c6f48cf9f3">[詳解]</a><br /></td></tr>
+<tr class="separator:a330c1759e1a075fb257a01c6f48cf9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afad3b0a750982e55d71edd72b440c724"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_draw_manager.html">DrawManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#afad3b0a750982e55d71edd72b440c724">draw_manager_</a></td></tr>
+<tr class="memdesc:afad3b0a750982e55d71edd72b440c724"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画マネージャ  <a href="#afad3b0a750982e55d71edd72b440c724">[詳解]</a><br /></td></tr>
+<tr class="separator:afad3b0a750982e55d71edd72b440c724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a173415abbd4acbe2abaf40e0a6c1b8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_collision_manager.html">CollisionManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_manager.html#a3a173415abbd4acbe2abaf40e0a6c1b8">collision_manager_</a></td></tr>
+<tr class="memdesc:a3a173415abbd4acbe2abaf40e0a6c1b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突マネージャ  <a href="#a3a173415abbd4acbe2abaf40e0a6c1b8">[詳解]</a><br /></td></tr>
+<tr class="separator:a3a173415abbd4acbe2abaf40e0a6c1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ゲームオブジェクトマネージャクラス </p>
+<p>ゲームオブジェクト全体の管理をするクラス </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a> の <a class="el" href="_game_object_manager_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="aa5693c4aefc135e5e85140427c781d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5693c4aefc135e5e85140427c781d3e">&#9670;&nbsp;</a></span>GameObjectManager() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObjectManager::GameObjectManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ(削除) </p>
+
+</div>
+</div>
+<a id="a8a8f9ec94ecca948fc7ab63454398e36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a8f9ec94ecca948fc7ab63454398e36">&#9670;&nbsp;</a></span>GameObjectManager() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObjectManager::GameObjectManager </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_game_object_manager.html">GameObjectManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コピーコンストラクタ(削除) </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a783a9d55d566ab8c39e6ed86b3b52a09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a783a9d55d566ab8c39e6ed86b3b52a09">&#9670;&nbsp;</a></span>AddContentsOfAwaitAddArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjectManager::AddContentsOfAwaitAddArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>追加待ち配列の中身を追加関数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a> の <a class="el" href="_game_object_manager_8cpp_source.html#l00159">159</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab42e8ca2c7e586d05d513e8a868a86ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab42e8ca2c7e586d05d513e8a868a86ef">&#9670;&nbsp;</a></span>AddGameObjectBaseToArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjectManager::AddGameObjectBaseToArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td>
+          <td class="paramname"><em>game_object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ゲームオブジェクト基底クラスの追加関数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a> の <a class="el" href="_game_object_manager_8cpp_source.html#l00129">129</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a58e1266da3b18a4c0bded551e386c6ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e1266da3b18a4c0bded551e386c6ae">&#9670;&nbsp;</a></span>AllRelease()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjectManager::AllRelease </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全ゲームオブジェクトの解放関数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a> の <a class="el" href="_game_object_manager_8cpp_source.html#l00254">254</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a38f980aec0970f45eb9bc55db8ac01a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38f980aec0970f45eb9bc55db8ac01a3">&#9670;&nbsp;</a></span>AllReset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjectManager::AllReset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全ゲームオブジェクトリセット関数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a> の <a class="el" href="_game_object_manager_8cpp_source.html#l00115">115</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0549bd4b6575ee28803c0ff8fd2be2ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0549bd4b6575ee28803c0ff8fd2be2ee">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjectManager::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画関数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a> の <a class="el" href="_game_object_manager_8cpp_source.html#l00105">105</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a41775a8308691a84b468a0aeeb1b3376"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41775a8308691a84b468a0aeeb1b3376">&#9670;&nbsp;</a></span>GetCollisionManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_collision_manager.html">CollisionManager</a>* GameObjectManager::GetCollisionManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a> の <a class="el" href="_game_object_manager_8h_source.html#l00133">133</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a862e76bfd74495c20bddd377c62a22b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a862e76bfd74495c20bddd377c62a22b7">&#9670;&nbsp;</a></span>GetDrawManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_draw_manager.html">DrawManager</a>* GameObjectManager::GetDrawManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a> の <a class="el" href="_game_object_manager_8h_source.html#l00132">132</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4b905d160c31b234686a3d46c0743adb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b905d160c31b234686a3d46c0743adb">&#9670;&nbsp;</a></span>GetPointer_RegistrationReference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void GameObjectManager::GetPointer_RegistrationReference </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td>
+          <td class="paramname"><em>reference_object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type *&#160;</td>
+          <td class="paramname"><em>reference_destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type *&#160;</td>
+          <td class="paramname"><em>reference_pointer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ゲームオブジェクト参照の取得 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a> の <a class="el" href="_game_object_manager_8h_source.html#l00117">117</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7d34b53f99cc2264ab6a8c253392a865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d34b53f99cc2264ab6a8c253392a865">&#9670;&nbsp;</a></span>GetUpdateManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_update_manager.html">UpdateManager</a>* GameObjectManager::GetUpdateManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a> の <a class="el" href="_game_object_manager_8h_source.html#l00131">131</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abda84aa3b4c79090c43243f93b5a9c46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abda84aa3b4c79090c43243f93b5a9c46">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjectManager::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a> の <a class="el" href="_game_object_manager_8cpp_source.html#l00039">39</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af66275734b2098dc631fdb789d31fd52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af66275734b2098dc631fdb789d31fd52">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_object_manager.html">GameObjectManager</a>&amp; GameObjectManager::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_game_object_manager.html">GameObjectManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>代入演算子のオーバーロード(削除) </p>
+
+</div>
+</div>
+<a id="a3435fd94a3a7b9eb69f422e33848137a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3435fd94a3a7b9eb69f422e33848137a">&#9670;&nbsp;</a></span>ReleaseComponentFromManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjectManager::ReleaseComponentFromManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td>
+          <td class="paramname"><em>game_object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンポーネントをマネージャーから解放関数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a> の <a class="el" href="_game_object_manager_8cpp_source.html#l00231">231</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5a6c1208229decd93c6ef396bce35b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6c1208229decd93c6ef396bce35b3a">&#9670;&nbsp;</a></span>ReleaseContentsOfAwaitReleaseArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjectManager::ReleaseContentsOfAwaitReleaseArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>解放待ち配列の中身を解放関数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a> の <a class="el" href="_game_object_manager_8cpp_source.html#l00183">183</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a83342c1c358e32f6478ae3428fcb25fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83342c1c358e32f6478ae3428fcb25fa">&#9670;&nbsp;</a></span>ReleaseGameObjectBaseFromArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjectManager::ReleaseGameObjectBaseFromArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td>
+          <td class="paramname"><em>game_object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ゲームオブジェクト基底クラスの解放関数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a> の <a class="el" href="_game_object_manager_8cpp_source.html#l00139">139</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4c6cdb6d0a1f43a2e2e705677fa2f5f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c6cdb6d0a1f43a2e2e705677fa2f5f6">&#9670;&nbsp;</a></span>SetComponentToManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjectManager::SetComponentToManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td>
+          <td class="paramname"><em>game_object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンポーネントをマネージャーへ設定関数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a> の <a class="el" href="_game_object_manager_8cpp_source.html#l00208">208</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4d2cb0e07fddeea160e64f6e1d2a326a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d2cb0e07fddeea160e64f6e1d2a326a">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjectManager::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終了関数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a> の <a class="el" href="_game_object_manager_8cpp_source.html#l00052">52</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad962739b2c2f54d4160c3513132930da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad962739b2c2f54d4160c3513132930da">&#9670;&nbsp;</a></span>UninitWhenChangeScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjectManager::UninitWhenChangeScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シーン変更時の終了関数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a> の <a class="el" href="_game_object_manager_8cpp_source.html#l00069">69</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6f053b1c655de6ca1c9a8fa9b6e118ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f053b1c655de6ca1c9a8fa9b6e118ae">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjectManager::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新関数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a> の <a class="el" href="_game_object_manager_8cpp_source.html#l00086">86</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="aeaf98831f542f93db15c54a4948d6331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaf98831f542f93db15c54a4948d6331">&#9670;&nbsp;</a></span>all_game_object_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_game_object_base.html">GameObjectBase</a> *, <a class="el" href="class_game_object_manager.html#a591934d64d750c10c03c908371470681">GameObjectManager::ARRAY_NUM</a> &gt; GameObjectManager::all_game_object_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全ゲームオブジェクト配列 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a> の <a class="el" href="_game_object_manager_8h_source.html#l00050">50</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a591934d64d750c10c03c908371470681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a591934d64d750c10c03c908371470681">&#9670;&nbsp;</a></span>ARRAY_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned GameObjectManager::ARRAY_NUM = 1000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>配列数 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a> の <a class="el" href="_game_object_manager_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac63518100cbdf391f137d277276e7824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac63518100cbdf391f137d277276e7824">&#9670;&nbsp;</a></span>await_add_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_game_object_base.html">GameObjectBase</a> *, <a class="el" href="class_game_object_manager.html#a591934d64d750c10c03c908371470681">GameObjectManager::ARRAY_NUM</a> &gt; GameObjectManager::await_add_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>追加待ち配列 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a> の <a class="el" href="_game_object_manager_8h_source.html#l00051">51</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa5dbfcf8c724e1e21279ff9b1bc9fcbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5dbfcf8c724e1e21279ff9b1bc9fcbe">&#9670;&nbsp;</a></span>await_release_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_game_object_base.html">GameObjectBase</a> *, <a class="el" href="class_game_object_manager.html#a591934d64d750c10c03c908371470681">GameObjectManager::ARRAY_NUM</a> &gt; GameObjectManager::await_release_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>解放待ち配列 </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a> の <a class="el" href="_game_object_manager_8h_source.html#l00052">52</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3a173415abbd4acbe2abaf40e0a6c1b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a173415abbd4acbe2abaf40e0a6c1b8">&#9670;&nbsp;</a></span>collision_manager_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_manager.html">CollisionManager</a> GameObjectManager::collision_manager_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>衝突マネージャ </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a> の <a class="el" href="_game_object_manager_8h_source.html#l00057">57</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afad3b0a750982e55d71edd72b440c724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afad3b0a750982e55d71edd72b440c724">&#9670;&nbsp;</a></span>draw_manager_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_draw_manager.html">DrawManager</a> GameObjectManager::draw_manager_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画マネージャ </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a> の <a class="el" href="_game_object_manager_8h_source.html#l00056">56</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7346dd916f897462898a1b28c03cd466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7346dd916f897462898a1b28c03cd466">&#9670;&nbsp;</a></span>reference_manager_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_object_reference_manager.html">GameObjectReferenceManager</a> GameObjectManager::reference_manager_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>参照マネージャ </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a> の <a class="el" href="_game_object_manager_8h_source.html#l00054">54</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a330c1759e1a075fb257a01c6f48cf9f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a330c1759e1a075fb257a01c6f48cf9f3">&#9670;&nbsp;</a></span>update_manager_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_update_manager.html">UpdateManager</a> GameObjectManager::update_manager_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新マネージャ </p>
+
+<p class="definition"> <a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a> の <a class="el" href="_game_object_manager_8h_source.html#l00055">55</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/GameObjectManager/<a class="el" href="_game_object_manager_8h_source.html">GameObjectManager.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/GameObjectManager/<a class="el" href="_game_object_manager_8cpp_source.html">GameObjectManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_game_object_manager.html">GameObjectManager</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>
