@@ -12,10 +12,9 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../Vector3D.h"
-#include "../AxisVector/AxisVector.h"
-#include "../MatrixExtend/MatrixExtend.h"
-#include "../LimitedPointerArray/LimitedPointerArray.h"
+#include "Vector3D.h"
+#include "Axis.h"
+#include "MatrixGroup.h"
 
 
 
@@ -39,8 +38,8 @@ private:
 	Vector3D yaw_pitch_roll_angle_;			//!< YawPitchRoll角度
 	float look_at_speed_;					//!< 向く速度
 	float look_at_change_amount_;			//!< 向く変化量
-	MatrixExtend matrix_extend_;			//!< 行列
-	AxisVector axis_vector_;				//!< 軸
+	Axis axis_;								//!< 軸
+	MatrixGroup matrix_group_;				//!< 行列群
 
 
 //====================
@@ -53,7 +52,7 @@ public:
 	//! @param void なし
 	//! @retval Vector3D* 座標
 	//----------------------------------------
-	Vector3D* getpPosition() { return &position_; }
+	Vector3D* getpPosition();
 
 	//----------------------------------------
 	//! @brief 拡縮取得関数
@@ -61,7 +60,7 @@ public:
 	//! @param void なし
 	//! @retval Vector3D* 座標
 	//----------------------------------------
-	Vector3D* getpScale() { return &scale_; }
+	Vector3D* getpScale();
 
 	//----------------------------------------
 	//! @brief Pitch角度取得関数
@@ -120,6 +119,136 @@ public:
 	//----------------------------------------
 	void setTargetQuaternion(Vector3D axis, float angle);
 
+	//----------------------------------------
+	//! @brief 前ベクトル取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Vector3D* 前ベクトル
+	//----------------------------------------
+	Vector3D* getpForawrd();
+
+	//----------------------------------------
+	//! @brief 上ベクトル取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Vector3D* 上ベクトル
+	//----------------------------------------
+	Vector3D* getpUp();
+
+	//----------------------------------------
+	//! @brief 右ベクトル取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Vector3D* 右ベクトル
+	//----------------------------------------
+	Vector3D* getpRight();
+
+	//----------------------------------------
+	//! @brief 軸取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Axis* 軸
+	//----------------------------------------
+	Axis* getpAxis();
+
+	//----------------------------------------
+	//! @brief 座標行列取得関数
+	//! @details
+	//! @param void
+	//! @retval MATRIX* 座標行列
+	//----------------------------------------
+	MATRIX* getpPositionMatrix();
+
+	//----------------------------------------
+	//! @brief 座標行列設定関数
+	//! @details
+	//! @param value 行列にしたい座標値
+	//! @retval void なし
+	//----------------------------------------
+	void setPositionMatrix(Vec3* value);
+
+	//----------------------------------------
+	//! @brief 拡縮行列取得関数
+	//! @details
+	//! @param void
+	//! @retval MATRIX* 拡縮行列
+	//----------------------------------------
+	MATRIX* getpScaleMatrix();
+
+	//----------------------------------------
+	//! @brief 拡縮行列設定関数
+	//! @details
+	//! @param value 行列にしたい拡縮値
+	//! @retval void なし
+	//----------------------------------------
+	void setScaleMatrix(Vec3* value);
+
+	//----------------------------------------
+	//! @brief 回転行列取得関数
+	//! @details
+	//! @param void
+	//! @retval MATRIX* 拡縮行列
+	//----------------------------------------
+	MATRIX* getpRotationMatrix();
+
+	//----------------------------------------
+	//! @brief 回転行列設定関数
+	//! @details
+	//! @param value 行列にしたい回転値
+	//! @retval void なし
+	//----------------------------------------
+	void setRotationMatrix(Quaternion* value);
+
+	//----------------------------------------
+	//! @brief 逆行列取得関数
+	//! @details
+	//! @param void
+	//! @retval MATRIX* 逆行列
+	//----------------------------------------
+	MATRIX* getpInverseMatrix();
+
+	//----------------------------------------
+	//! @brief 逆行列設定関数
+	//! @details
+	//! @param value 逆行列にしたい行列
+	//! @retval void なし
+	//----------------------------------------
+	void setInverseMatrix(MATRIX* value);
+
+	//----------------------------------------
+	//! @brief 転置行列取得関数
+	//! @details
+	//! @param void
+	//! @retval MATRIX* 転置行列
+	//----------------------------------------
+	MATRIX* getpTransposeMatrix();
+
+	//----------------------------------------
+	//! @brief 転置行列設定関数
+	//! @details
+	//! @param value           転置行列にしたい行列
+	//! @param is_position_off 平行移動OFFフラグ
+	//! @retval void なし
+	//----------------------------------------
+	void setTransposeMatrix(MATRIX* value, bool is_position_off = false);
+
+	//----------------------------------------
+	//! @brief ワールド行列取得関数
+	//! @details
+	//! @param void
+	//! @retval MATRIX* 転置行列
+	//----------------------------------------
+	MATRIX* getpWorldMatrix();
+
+	//----------------------------------------
+	//! @brief 行列群取得関数
+	//! @details
+	//! @param void
+	//! @retval MatrixGroup* 行列群
+	//----------------------------------------
+	MatrixGroup* getpMatrixGroup();
+
+
 //====================
 // 関数
 //====================
@@ -132,42 +261,76 @@ public:
 	Transform();
 
 	//----------------------------------------
-	//! @brief デストラクタ関数
+	//! @brief 軸作成関数
 	//! @details
 	//! @param void なし
+	//! @retval void なし
 	//----------------------------------------
-	~Transform();
+	void CreateAxis();
 
-	
+	//----------------------------------------
+	//! @brief ワールド行列作成関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CreateWorldMatrix();
 
-	
-	
-	
-	
-	// 軸
-	void UpdateAxisVector();
-	const Vector3D* GetForawrd(){return axis_vector_.GetForawrd();}
-	const Vector3D* GetUp(){return axis_vector_.GetUp();}
-	const Vector3D* GetRight(){return axis_vector_.GetRight();}
-	AxisVector* GetAxisVector(){return &axis_vector_;}
+	//----------------------------------------
+	//! @brief 逆行列付きワールド行列作成関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CreateWorldMatrixPlusInverse();
 
-	// 行列
-	void UpdateWorldMatrixSRT();
-	void UpdateWorldMatrixISRT();
-	void UpdateInverseMatrix(const MATRIX* matrix){matrix_extend_.UpdateInverseMatrix(matrix);}
-	void UpdateTransposeMatrix(const MATRIX* matrix){matrix_extend_.UpdateTransposeMatrix(matrix);}
-	void TransposeMatrixTranslationOff(){matrix_extend_.TransposeMatrixTranslationOff();}
-	MATRIX* getpWorldMatrix(){return matrix_extend_.GetWorldMatrix();}
-	MatrixExtend* getpMatrixExtend(){return &matrix_extend_;}
+	//----------------------------------------
+	//! @brief 転置行列付きワールド行列作成関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CreateWorldMatrixPlusTranspose();
 
-	// 全体
-	void UpdateAxisVector_WorldMatrixSRT();
-	void UpdateAxisVector_WorldMatrixISRT();
+	//----------------------------------------
+	//! @brief ワールド行列に親行列追加関数
+	//! @details
+	//! @param parent_matrix 親の行列
+	//! @retval void なし
+	//----------------------------------------
+	void AddParentMatrixToWorldMatrix(MATRIX* parent_matrix);
 
+	//----------------------------------------
+	//! @brief 軸&ワールド行列作成関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CreateAxisAndWorldMatrix();
 
-//------------------------------------------------------------
+	//----------------------------------------
+	//! @brief 軸&逆行列付きワールド行列作成関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CreateAxisAndWorldMatrixPlusInverse();
+
+	//----------------------------------------
+	//! @brief 軸&転置行列付きワールド行列作成関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CreateAxisAndWorldMatrixPlusTranspose();
+
 private :
-	// 回転
+	//----------------------------------------
+	//! @brief クォータニオン作成関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void CreateQuaternion();
 
 };

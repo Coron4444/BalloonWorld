@@ -15,6 +15,7 @@
 #include <d3dx9.h>
 
 
+
 //****************************************
 // 型定義
 //****************************************
@@ -219,57 +220,57 @@ public:
 	//! @brief 正規化関数
 	//! @details
 	//! @param void なし
-	//! @retval void なし
+	//! @retval Vec3* 変更後ベクトル
 	//----------------------------------------
-	Vec3 ChangeNormalize();
+	Vec3* ChangeNormalize();
 
 	//----------------------------------------
 	//! @brief 任意の長さに変更関数
 	//! @details
 	//! @param length 長さ
-	//! @retval void なし
+	//! @retval Vec3* 変更後ベクトル
 	//----------------------------------------
-	Vec3 ChangeAnyLength(float length);
+	Vec3* ChangeAnyLength(float length);
 
 	//----------------------------------------
 	//! @brief X軸回転関数
 	//! @details
 	//! @param radian 角度
-	//! @retval void なし
+	//! @retval Vec3* 変更後ベクトル
 	//----------------------------------------
-	Vec3 RotationAxisX(float radian);
+	Vec3* RotationAxisX(float radian);
 
 	//----------------------------------------
 	//! @brief Y軸回転関数
 	//! @details
 	//! @param radian 角度
-	//! @retval void なし
+	//! @retval Vec3* 変更後ベクトル
 	//----------------------------------------
-	Vec3 RotationAxisY(float radian);
+	Vec3* RotationAxisY(float radian);
 
 	//----------------------------------------
 	//! @brief Z軸回転関数
 	//! @details
 	//! @param radian 角度
-	//! @retval void なし
+	//! @retval Vec3* 変更後ベクトル
 	//----------------------------------------
-	Vec3 RotationAxisZ(float radian);
+	Vec3* RotationAxisZ(float radian);
 
 	//----------------------------------------
 	//! @brief 任意軸回転関数
 	//! @details
 	//! @param radian 角度
-	//! @retval void なし
+	//! @retval Vec3* 変更後ベクトル
 	//----------------------------------------
-	Vec3 RotationAxisAny(Vec3 axis, float radian);
+	Vec3* RotationAxisAny(Vec3 axis, float radian);
 
 	//----------------------------------------
 	//! @brief 行列回転関数
 	//! @details
 	//! @param rotation_matrix 行列
-	//! @retval void なし
+	//! @retval Vec3* 変更後ベクトル
 	//----------------------------------------
-	Vec3 RotationMatrix(MATRIX* rotation_matrix);
+	Vec3* RotationMatrix(MATRIX* rotation_matrix);
 };
 
 

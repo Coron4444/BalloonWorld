@@ -1,42 +1,107 @@
 //================================================================================
-//
-//    有限ポインター配列クラス(クラステンプレート)
-//    Author : Araki Kai                                作成日 : 2018/04/18
-//
+//!	@file	 LimitedPointerArray.h
+//!	@brief	 有限ポインター配列Class
+//! @details template
+//!	@author  Kai Araki									@date 2018/04/18
 //================================================================================
-
 #ifndef	_LIMITED_POINTER_ARRAY_H_
 #define _LIMITED_POINTER_ARRAY_H_
 
 
 
-//======================================================================
-//
+//****************************************
 // インクルード文
-//
-//======================================================================
-
+//****************************************
 #include <unordered_map>
-#include <assert.h>
 
-#include <SafeRelease/SafeRelease.h>
-
+#include "SafeRelease.h"
 
 
-//======================================================================
-//
-// クラス定義
-//
-//======================================================================
 
+//************************************************************														   
+//! @brief   有限ポインター配列Class(template)
+//!
+//! @details 有限数のポインターを確保した配列Class(template)
+//************************************************************
 template<class Type, unsigned ARRAY_NUM = 100000>
 class LimitedPointerArray
 {
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//====================
+// 変数
+//====================
+private:
+	Type array_[ARRAY_NUM];									//!< 配列
+	unsigned end_index_ = 0									//!< 末尾インデックス
+	std::unordered_map<Type, unsigned> registration_map_;	//!< 登録マップ
+
+
+//====================
+// プロパティ
+//====================
 public:
-	// デフォルトコンストラクタ
+	//----------------------------------------
+	//! @brief オブジェクト取得関数
+	//! @details
+	//! @param index インデックス
+	//! @retval void なし
+	//----------------------------------------
+	Type getObject(unsigned index)
+	{
+		return array_[index];
+	}
+
+	//----------------------------------------
+	//! @brief 末尾インデックス取得関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	unsigned getEndIndex()
+	{
+		return end_index_;
+	}
+
+	//----------------------------------------
+	//! @brief 配列数取得関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	unsigned getArrayNum()
+	{
+		return ARRAY_NUM;
+	}
+
+	//----------------------------------------
+	//! @brief インデックス取得関数
+	//! @details
+	//! @param object オブジェクト
+	//! @retval void なし
+	//----------------------------------------
+	unsigned getIndex(Type object)
+	{
+		// 登録の確認
+		auto iterator = registration_map_.find(object);
+
+		// インデックス番号を返す
+		if (iterator != registration_map_.end())
+		{
+			return iterator->second;
+		}
+	}
+
+
+//====================
+// 関数
+//====================
+public:
+	//----------------------------------------
+	//! @brief コンストラクタ
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	LimitedPointerArray()
-		: end_pointer_(0)
 	{
 		// 配列の初期化
 		for (unsigned i = 0; i < ARRAY_NUM; i++)
@@ -48,11 +113,12 @@ public:
 		registration_map_.clear();
 	}
 
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-public:
-
-	// 配列に追加
+	//----------------------------------------
+	//! @brief 配列に追加関数
+	//! @details
+	//! @param object 追加オブジェクト
+	//! @retval void なし
+	//----------------------------------------
 	void AddToArray(Type object)
 	{
 		// 登録の確認
@@ -71,17 +137,21 @@ public:
 			registration_map_.insert(std::make_pair(object, i));
 
 			// エンドポインタの更新
-			if (end_pointer_ < (i + 1))
+			if (end_index_ < (i + 1))
 			{
-				end_pointer_ = (i + 1);
+				end_index_ = (i + 1);
 			}
 			return;
 		}
 	}
 
-
-
-	// 配列の上書き
+	//----------------------------------------
+	//! @brief 配列の上書き関数
+	//! @details
+	//! @param old_object 古いオブジェクト
+	//! @param new_object 新規オブジェクト
+	//! @retval void なし
+	//----------------------------------------
 	void OverwriteArray(Type old_object, Type new_object)
 	{
 		// 登録の確認
@@ -102,9 +172,13 @@ public:
 		}
 	}
 
-
-
-	// 配列の上書きと解放
+	//----------------------------------------
+	//! @brief 配列の上書きと解放関数
+	//! @details
+	//! @param old_object 古いオブジェクト
+	//! @param new_object 新規オブジェクト
+	//! @retval void なし
+	//----------------------------------------
 	void OverwriteArrayAndReleaseOldObject(Type old_object, Type new_object)
 	{
 		// 登録の確認
@@ -128,13 +202,16 @@ public:
 		}
 	}
 
-
-
-	// 配列リセット
-	void ResetArray()
+	//----------------------------------------
+	//! @brief リセット関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Reset()
 	{
 		// 配列からの削除
-		for (unsigned i = 0; i < end_pointer_; i++)
+		for (unsigned i = 0; i < end_index_; i++)
 		{
 			array_[i] = nullptr;
 		}
@@ -143,14 +220,19 @@ public:
 		registration_map_.clear();
 
 		// エンドポインタをリセット
-		end_pointer_ = 0;
+		end_index_ = 0;
 	}
 
-	// 登録先の解放と配列のリセット
-	void ReleaseObjectAndResetArray()
+	//----------------------------------------
+	//! @brief 登録オブジェクトの解放と配列のリセット関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void ReleaseObjectAndReset()
 	{
 		// 登録先の解放と配列からの削除
-		for (unsigned i = 0; i < end_pointer_; i++)
+		for (unsigned i = 0; i < end_index_; i++)
 		{
 			SafeRelease::Normal(&array_[i]);
 			array_[i] = nullptr;
@@ -160,10 +242,15 @@ public:
 		registration_map_.clear();
 
 		// エンドポインタをリセット
-		end_pointer_ = 0;
+		end_index_ = 0;
 	}
 
-	// 配列から削除
+	//----------------------------------------
+	//! @brief 配列から削除関数
+	//! @details
+	//! @param object 削除オブジェクト
+	//! @retval void なし
+	//----------------------------------------
 	void DeleteFromArray(Type object)
 	{
 		// 登録の確認
@@ -175,18 +262,23 @@ public:
 		registration_map_.erase(object);
 	}
 
-	// 配列のソート
-	void SortArray()
+	//----------------------------------------
+	//! @brief ソート関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Sort()
 	{
 		int temp_num = 0;
 
-		for (unsigned i = 0; i < end_pointer_; i++)
+		for (unsigned i = 0; i < end_index_; i++)
 		{
 			if (array_[i] != nullptr) continue;
 
 			temp_num++;
 
-			for (unsigned k = (end_pointer_ - 1); k > i; k--)
+			for (unsigned k = (end_index_ - 1); k > i; k--)
 			{
 				if (array_[k] == nullptr) continue;
 
@@ -201,18 +293,23 @@ public:
 		}
 
 		// エンドポインタの更新
-		end_pointer_ -= temp_num;
+		end_index_ -= temp_num;
 	}
 
-	// 配列からの削除とソート
-	void DeleteFromArrayAndSortArray(Type object)
+	//----------------------------------------
+	//! @brief 配列からの削除とソート関数
+	//! @details
+	//! @param object 削除オブジェクト
+	//! @retval void なし
+	//----------------------------------------
+	void DeleteFromArrayAndSort(Type object)
 	{
 		// 登録の確認
 		auto iterator = registration_map_.find(object);
 		if (iterator == registration_map_.end()) return;
 
 		// 削除先が配列の末端かどうか
-		if (iterator->second == (end_pointer_ - 1))
+		if (iterator->second == (end_index_ - 1))
 		{
 			// 配列から削除
 			array_[iterator->second] = nullptr;
@@ -220,7 +317,7 @@ public:
 		else
 		{
 			// ソート
-			for (unsigned i = (end_pointer_ - 1); i > iterator->second; i--)
+			for (unsigned i = (end_index_ - 1); i > iterator->second; i--)
 			{
 				if (array_[i] == nullptr) continue;
 
@@ -239,20 +336,18 @@ public:
 		registration_map_.erase(object);
 
 		// エンドポインタの更新
-		end_pointer_--;
+		end_index_--;
 	}
 
-	// 配列の2つのオブジェクトを並び替え
+	//----------------------------------------
+	//! @brief 配列の2つのオブジェクトを並び替え関数
+	//! @details
+	//! @param index0 インデックス0
+	//! @param index0 インデックス1
+	//! @retval void なし
+	//----------------------------------------
 	void SortTheTwoObject(unsigned index0, unsigned index1)
 	{
-		// インデックスがおかしいときに止める
-		assert(!((index0 < 0) || (index0 > end_pointer_ - 1)) && "不正なインデックスです(LimitedPointerArray.h)");
-		assert(!((index1 < 0) || (index1 > end_pointer_ - 1)) && "不正なインデックスです(LimitedPointerArray.h)");
-
-		// オブジェクトがnullptrの時
-		assert(array_[index0] != nullptr && "配列がnullptrです(LimitedPointerArray.h)");
-		assert(array_[index1] != nullptr && "配列がnullptrです(LimitedPointerArray.h)");
-
 		// マップの更新
 		unsigned temp_index = registration_map_.find(array_[index0])->second;
 		registration_map_.find(array_[index0])->second = registration_map_.find(array_[index1])->second;
@@ -264,56 +359,16 @@ public:
 		array_[index1] = temp;
 	}
 
-	// 配列のゲッタ
-	Type GetArrayObject(unsigned index)
-	{
-		// インデックスがおかしいときに止める
-		assert(!((index < 0) || (index > ARRAY_NUM - 1)) && "不正なインデックスです(LimitedPointerArray.h)");
-		return array_[index];
-	}
-
-	// エンドポインタのゲッタ
-	unsigned GetEndPointer()
-	{
-		return end_pointer_;
-	}
-
-	// 配列数のゲッタ
-	unsigned GetArrayNum()
-	{
-		return ARRAY_NUM;
-	}
-
-	// 登録インデックス番号のゲッタ
-	unsigned GetIndexNum(Type object)
-	{
-		// 登録の確認
-		auto iterator = registration_map_.find(object);
-
-		// 登録されていないオブジェクトが来たら止める
-		assert(iterator != registration_map_.end() && "登録されていないオブジェクト(LimitedPointerArray.h)");
-
-		// インデックス番号を返す
-		if (iterator != registration_map_.end())
-		{
-			return iterator->second;
-		}
-	}
-
-	// 登録数が最大かどうか
+	//----------------------------------------
+	//! @brief 登録数が最大か判定関数
+	//! @details
+	//! @param void なし
+	//! @retval bool 登録数が最大ならtrue
+	//----------------------------------------
 	bool IsMax()
 	{
-		return ARRAY_NUM == (end_pointer_ + 1);
+		return ARRAY_NUM == (end_index_ + 1);
 	}
-
-
-
-//------------------------------------------------------------
-private:
-	// メンバ変数
-	Type array_[ARRAY_NUM];
-	unsigned end_pointer_;
-	std::unordered_map<Type, unsigned> registration_map_;
 };
 
 

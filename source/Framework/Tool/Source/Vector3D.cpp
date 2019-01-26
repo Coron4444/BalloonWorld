@@ -176,66 +176,66 @@ void Vector3D::Reset()
 
 
 
-Vec3 Vector3D::ChangeNormalize()
+Vec3* Vector3D::ChangeNormalize()
 {
 	D3DXVec3Normalize(this, this);
-	return *this;
+	return this;
 }
 
 
 
-Vec3 Vector3D::ChangeAnyLength(float length)
+Vec3* Vector3D::ChangeAnyLength(float length)
 {
 	ChangeNormalize();
 	*this *= length;
-	return *this;
+	return this;
 }
 
 
 
-Vec3 Vector3D::RotationAxisX(float radian)
+Vec3* Vector3D::RotationAxisX(float radian)
 {
 	MATRIX rotation_matrix;
 	D3DXMatrixRotationX(&rotation_matrix, radian);
 	D3DXVec3TransformNormal(this, this, &rotation_matrix);
-	return *this;
+	return this;
 }
 
 
 
-Vec3 Vector3D::RotationAxisY(float radian)
+Vec3* Vector3D::RotationAxisY(float radian)
 {
 	MATRIX rotation_matrix;
 	D3DXMatrixRotationY(&rotation_matrix, radian);
 	D3DXVec3TransformNormal(this, this, &rotation_matrix);
-	return *this;
+	return this;
 }
 
 
 
-Vec3 Vector3D::RotationAxisZ(float radian)
+Vec3* Vector3D::RotationAxisZ(float radian)
 {
 	MATRIX rotation_matrix;
 	D3DXMatrixRotationZ(&rotation_matrix, radian);
 	D3DXVec3TransformNormal(this, this, &rotation_matrix);
-	return *this;
+	return this;
 }
 
 
 
-Vec3 Vector3D::RotationAxisAny(Vec3 axis, float radian)
+Vec3* Vector3D::RotationAxisAny(Vec3 axis, float radian)
 {
 	MATRIX rotation_matrix;
 	D3DXMatrixRotationAxis(&rotation_matrix, &axis, radian);
 	D3DXVec3TransformNormal(this, this, &rotation_matrix);
-	return *this;
+	return this;
 }
 
 
 
-Vec3 Vector3D::RotationMatrix(MATRIX* rotation_matrix)
+Vec3* Vector3D::RotationMatrix(MATRIX* rotation_matrix)
 {
 	D3DXVec3TransformNormal(this, this, rotation_matrix);
 
-	return *this;
+	return this;
 }
