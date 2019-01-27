@@ -1,7 +1,7 @@
 //================================================================================
 //!	@file	 MdBinData.cpp
 //!	@brief	 バイナリーモデルデータClass
-//! @details 
+//! @details License : MIT
 //!	@author  Kai Araki									@date 2018/12/29
 //================================================================================
 
@@ -13,7 +13,7 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/binary_iarchive.hpp>
 
-#include "MdBinData.h"
+#include "../MdBinData.h"
 
 
 

@@ -10,16 +10,16 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "ModelXManager.h"
+#include "../ModelXManager.h"
 
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 
 //****************************************
 // 定数定義
 //****************************************
-const std::string ModelXManager::DEFAULT_PATH = "resource/ModelX/";
+const std::string ModelXManager::DEFAULT_PATH = "Resource/ModelX/";
 
 
 

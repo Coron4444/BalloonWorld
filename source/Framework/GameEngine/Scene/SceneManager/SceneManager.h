@@ -12,8 +12,9 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <ComponentManager/DrawManager/Fade/Fade.h>
-#include <Vector3D.h>
+#include "../../Draw/DrawManager/Fade.h"
+
+#include <Tool/Vector3D.h>
 
 
 

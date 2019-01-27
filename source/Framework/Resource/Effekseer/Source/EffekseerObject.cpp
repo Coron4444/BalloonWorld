@@ -7,17 +7,16 @@
 
 
 
-
 //****************************************
 // インクルード文
 //****************************************
 #include <codecvt>
 
-#include "EffekseerObject.h"
+#include "../EffekseerObject.h"
 #include "../EffekseerManager/EffekseerManager.h"
 
-#include <Renderer\Renderer.h>
-#include <SafeRelease/SafeRelease.h>
+#include <GameEngine/Renderer/Renderer.h>
+#include <Tool/SafeRelease.h>
 
 
 
@@ -25,6 +24,7 @@
 // 定数定義
 //****************************************
 const int EffekseerObject::MAX_SPRITE_NUM = 2000;
+
 
 
 //****************************************

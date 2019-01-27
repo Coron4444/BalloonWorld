@@ -12,9 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../../ComponentBase/ComponentBase.h"
-
-#include <Vector3D.h>
+#include "../ComponentBase.h"
 
 
 

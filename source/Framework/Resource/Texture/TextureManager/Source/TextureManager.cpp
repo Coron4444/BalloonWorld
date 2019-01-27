@@ -10,16 +10,16 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "TextureManager.h"
+#include "../TextureManager.h"
 
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 
 //****************************************
 // 定数定義
 //****************************************
-const std::string TextureManager::DEFAULT_PATH = "resource/Texture/";
+const std::string TextureManager::DEFAULT_PATH = "Resource/Texture/";
 
 
 

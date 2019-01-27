@@ -1,31 +1,25 @@
 //================================================================================
-//
-//    メッシュ平面ポリゴンクラスヘッダ
-//    Author : Araki Kai                                作成日 : 2017/11/22
-//
+//!	@file	 MeshPlanePolygon.cpp
+//!	@brief	 メッシュ平面ポリゴンClass
+//! @details 
+//!	@author  Kai Araki									@date 2017/11/22
 //================================================================================
 
 
 
-//======================================================================
-//
+//****************************************
 // インクルード文
-//
-//======================================================================
+//****************************************
+#include "../MeshPlanePolygon.h"
 
-#include "MeshPlanePolygon.h"
-#include <Random.h>
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 
-//======================================================================
-//
+//****************************************
 // 定数定義
-//
-//======================================================================
-
-const float MeshPlanePolygon::TEXTURE_WIDTH  = 1.0f;
+//****************************************
+const float MeshPlanePolygon::TEXTURE_WIDTH = 1.0f;
 const float MeshPlanePolygon::TEXTURE_HEIGHT = 1.0f;
 
 const float MeshPlanePolygon::MESH_MIN = 1.0f;
@@ -45,105 +39,52 @@ const float field_height[100000] = {0.0f};
 	//0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f,
 	//0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f,
 
-	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f, 
-	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f, 
-	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f, 
-	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f, 
-	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f, 
-	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f, 
-	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f, 
-	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f, 
-	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f, 
-	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f, 
+	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f,
+	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f,
+	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f,
+	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f,
+	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f,
+	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f,
+	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f,
+	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f,
+	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f,
+	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f,
 	-0.6f, -0.8f, -1.0f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 1.0f, 0.6f, 0.2f
-};*/				  
+};*/
 
 
 
-//======================================================================
-//
-// 非静的メンバ関数定義
-//
-//======================================================================
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-// [ デフォルトコンストラクタ ]
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-MeshPlanePolygon::MeshPlanePolygon(Vec2 mesh_num, Vec2 mesh_scale, XColor4 color)
-	: device_(nullptr)
+//****************************************
+// プロパティ定義
+//****************************************
+void MeshPlanePolygon::setColor(XColor4 value)
 {
-	// メッシュフィールドの数チェック
-	mesh_num_.x = max(mesh_num.x, MESH_MIN);
-	mesh_num_.y = max(mesh_num.y, MESH_MIN);
-
-	// メッシュフィールドのスケールチェック
-	mesh_scale.x = max(mesh_scale.x, MESH_MIN);
-	mesh_scale.y = max(mesh_scale.y, MESH_MIN);
-	
-	CreateVertex(mesh_num_, mesh_scale, (Color4)color);
-	CreateIndex(mesh_num_);
-	CreatePrimitiveNum(mesh_num_);
-
-	CreateMaterial();
-
-	Renderer::getpInstance()->getDevice(&device_);
-	if (device_ == nullptr)
+	for (auto& contents : vertex_)
 	{
-		MessageBox(nullptr, "NotGetDevice!(MeshPlanePolygon.cpp)", "Error", MB_OK);
-		return;
+		contents.color_ = (Color4)value;
 	}
-
-	AccessVRAM();
-
-}
-
-
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-// [ デストラクタ ]
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-MeshPlanePolygon::~MeshPlanePolygon()
-{
-	// 頂点バッファの解放
-	SafeRelease::PlusRelease(&vertex_buffer_);
-
-	// インデックスバッファの解放
-	SafeRelease::PlusRelease(&index_buffer_);
-}
-
-
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-// [ カラーセット関数 ]
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-void MeshPlanePolygon::SetColor(XColor4 color)
-{
-	for(std::vector<RendererDirectX9::VERTEX_3D>::size_type i = 0; i < vertex_.size(); i++)
-	{
-		vertex_[i].color_ = (Color4)color;
-	}
-
 	RegistrationVertex();
+	material_.Diffuse = value;
+	material_.Ambient = value;
 }
 
 
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-// [ 高さ取得関数 ]
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+unsigned MeshPlanePolygon::getMeshNum()
+{
+	return 1;
+}
 
-float MeshPlanePolygon::GetHeight(Vec3 position)
+
+
+D3DMATERIAL9* MeshPlanePolygon::getpMaterial()
+{
+	return &material_;
+}
+
+
+
+float MeshPlanePolygon::getHeight(Vec3 position)
 {
 	// 座標からエリアを算出し計算
 	int left_up_index = 0;
@@ -178,11 +119,42 @@ float MeshPlanePolygon::GetHeight(Vec3 position)
 
 
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-// [ 描画関数 ]
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//****************************************
+// 関数定義
+//****************************************
+void MeshPlanePolygon::Init(Vec2 mesh_num, Vec2 mesh_scale, XColor4 color)
+{
+	// メッシュフィールドの数チェック
+	mesh_num_.x = max(mesh_num.x, MESH_MIN);
+	mesh_num_.y = max(mesh_num.y, MESH_MIN);
+
+	// メッシュフィールドのスケールチェック
+	mesh_scale.x = max(mesh_scale.x, MESH_MIN);
+	mesh_scale.y = max(mesh_scale.y, MESH_MIN);
+
+	CreateVertex(mesh_num_, mesh_scale, (Color4)color);
+	CreateIndex(mesh_num_);
+	CreatePrimitiveNum(mesh_num_);
+	CreateMaterial();
+
+	Renderer::getpInstance()->getDevice(&device_);
+	if (device_ == nullptr)
+	{
+		MessageBox(nullptr, "NotGetDevice!(MeshPlanePolygon.cpp)", "Error", MB_OK);
+		return;
+	}
+	AccessVRAM();
+}
+
+
+
+void MeshPlanePolygon::Uninit()
+{
+	SafeRelease::PlusRelease(&vertex_buffer_);
+	SafeRelease::PlusRelease(&index_buffer_);
+}
+
+
 
 void MeshPlanePolygon::Draw()
 {
@@ -192,29 +164,31 @@ void MeshPlanePolygon::Draw()
 	// 頂点バッファを使うGPUとバーテックスバッファのパイプライン
 	// 使いたくなかったらNULLをいれる
 	device_->SetStreamSource(0,										// パイプライン番号
-		                    vertex_buffer_,							// バーテックスバッファ変数名
-							0,										// どこから流し込むか
-							sizeof(RendererDirectX9::VERTEX_3D));	// ストライド値(隣の頂点までの長さ＝1頂点の大きさ)
+							 vertex_buffer_,						// バーテックスバッファ変数名
+							 0,										// どこから流し込むか
+							 sizeof(RendererDirectX9::VERTEX_3D));	// ストライド値(隣の頂点までの長さ＝1頂点の大きさ)
 
 
-	// インデックスをセットする
+	 // インデックスで描画
 	device_->SetIndices(index_buffer_);
-
-	device_->DrawIndexedPrimitive(D3DPT_TRIANGLESTRIP, 
-								 0,						// セットストリームからどれくらいずれているか
-								 0,						// インデックスで一番小さい値
-								 (UINT)vertex_.size(),	// 頂点数
-								 0,						// スタートインデックス番号
-								 primitive_num_);		// プリミティブ数
+	device_->DrawIndexedPrimitive(D3DPT_TRIANGLESTRIP,
+								  0,					// セットストリームからどれくらいずれているか
+								  0,					// インデックスで一番小さい値
+								  (UINT)vertex_.size(),	// 頂点数
+								  0,					// スタートインデックス番号
+								  primitive_num_);		// プリミティブ数
 }
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ 頂点作成関数 ]
-//
-//--------------------------------------------------------------------------------
+void MeshPlanePolygon::DrawWireFrame()
+{
+	device_->SetRenderState(D3DRS_FILLMODE, D3DFILL_WIREFRAME);
+	Draw();
+	device_->SetRenderState(D3DRS_FILLMODE, D3DFILL_SOLID);
+}
+
+
 
 void MeshPlanePolygon::CreateVertex(Vec2 mesh_num, Vec2 mesh_scale, Color4 color)
 {
@@ -224,31 +198,28 @@ void MeshPlanePolygon::CreateVertex(Vec2 mesh_num, Vec2 mesh_scale, Color4 color
 	vertex_.resize(temp_vertex_num);
 
 	// 頂点情報の入力
-	float coordinate_x = -((mesh_scale.x  / 2) * ((int)mesh_num.x));
-	float coordinate_z =  ((mesh_scale.y / 2) * ((int)mesh_num.y));
-	float tex_widht    =  0.0f;
-	float tex_heihgt   =  0.0f;
-	int   x_count      =  0;
+	float coordinate_x = -((mesh_scale.x / 2) * ((int)mesh_num.x));
+	float coordinate_z = ((mesh_scale.y / 2) * ((int)mesh_num.y));
+	float tex_widht = 0.0f;
+	float tex_heihgt = 0.0f;
+	int   x_count = 0;
 
-	for(std::vector<RendererDirectX9::VERTEX_3D>::size_type i = 0; i < vertex_.size(); i++)
+	for (std::vector<RendererDirectX9::VERTEX_3D>::size_type i = 0; i < vertex_.size(); i++)
 	{
 		vertex_[i].posisiont_ = Vec3(coordinate_x, field_height[i], coordinate_z);
-		vertex_[i].color_	  = color;
-		vertex_[i].texcoord_  = Vec2(tex_widht, tex_heihgt);
-		
+		vertex_[i].color_ = color;
+		vertex_[i].texcoord_ = Vec2(tex_widht, tex_heihgt);
 		coordinate_x += mesh_scale.x;
-		tex_widht    += TEXTURE_WIDTH;
+		tex_widht += TEXTURE_WIDTH;
 
 		bool is_x_end = x_count == ((int)mesh_num.x);
-
 		if (is_x_end)
 		{
-			x_count		  = 0;
-			coordinate_x  = -((mesh_scale.x  / 2) * ((int)mesh_num.x));
-			tex_widht     =  0.0f;
-
+			x_count = 0;
+			coordinate_x = -((mesh_scale.x / 2) * ((int)mesh_num.x));
+			tex_widht = 0.0f;
 			coordinate_z += -mesh_scale.y;
-			tex_heihgt   +=  TEXTURE_HEIGHT;
+			tex_heihgt += TEXTURE_HEIGHT;
 		}
 		else
 		{
@@ -258,7 +229,7 @@ void MeshPlanePolygon::CreateVertex(Vec2 mesh_num, Vec2 mesh_scale, Color4 color
 
 
 	// 法線計算
-	for(std::vector<RendererDirectX9::VERTEX_3D>::size_type i = 0; i < vertex_.size(); i++)
+	for (std::vector<RendererDirectX9::VERTEX_3D>::size_type i = 0; i < vertex_.size(); i++)
 	{
 		// フィールドの後ろ端の頂点
 		if (i / (unsigned)(mesh_num.x + 1.0f) == 0)
@@ -292,72 +263,53 @@ void MeshPlanePolygon::CreateVertex(Vec2 mesh_num, Vec2 mesh_scale, Color4 color
 		// x方向
 		Vec3 temp_vector = vertex_[i + 1].posisiont_ - vertex_[i - 1].posisiont_;
 		Vec3 normal_x = Vec3(-temp_vector.y, temp_vector.x, 0.0f);
-	
+
 		// z方向
 		temp_vector = vertex_[i - 5].posisiont_ - vertex_[i + 5].posisiont_;
 		Vec3 normal_z = Vec3(0.0f, temp_vector.z, -temp_vector.y);
-	
 		Vector3D normal = normal_x + normal_z;
-		
-		vertex_[i].normal_ = normal.CreateNormalize();
+		vertex_[i].normal_ = *normal.ChangeNormalize();
 	}
 }
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ インデックス作成関数 ]
-//
-//--------------------------------------------------------------------------------
-
 void MeshPlanePolygon::CreateIndex(Vec2 mesh_num)
 {
 	// インデックス数の決定
 	int temp_index_num = 4 + 2 * (((int)mesh_num.x) - 1);
-
 	temp_index_num += temp_index_num * (((int)mesh_num.y) - 1);
 	temp_index_num += 2 * (((int)mesh_num.y) - 1);
-
 	index_.resize(temp_index_num);
 
 
 	// インデックスの入力
 	WORD down_num = (WORD)(((int)mesh_num.x) + 1);
-	WORD up_num   = 0;
-	int  x_num	  = ((int)mesh_num.x) + 1;
-	int  y_num	  = ((int)mesh_num.y);
+	WORD up_num = 0;
+	int  x_num = ((int)mesh_num.x) + 1;
+	int  y_num = ((int)mesh_num.y);
 
-	for(std::vector< WORD >::size_type i = 0; i < index_.size(); i++)
+	for (std::vector< WORD >::size_type i = 0; i < index_.size(); i++)
 	{
 		index_[i] = down_num;
-
 		i++;
-
 		index_[i] = up_num;
-
 		down_num++;
 		up_num++;
 		x_num--;
 
 		bool is_end_x = x_num == 0;
-
 		if (is_end_x)
 		{
 			y_num--;
 
 			bool is_remain_y = y_num != 0;
-
 			if (is_remain_y)
 			{
 				i++;
-
 				index_[i] = up_num - 1;
-
 				i++;
-
 				index_[i] = down_num;
-
 				x_num = ((int)mesh_num.x) + 1;
 			}
 		}
@@ -366,33 +318,20 @@ void MeshPlanePolygon::CreateIndex(Vec2 mesh_num)
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ プリミティブ数作成関数 ]
-//
-//--------------------------------------------------------------------------------
-
 void MeshPlanePolygon::CreatePrimitiveNum(Vec2 mesh_num)
 {
 	// プリミティブ数の決定
 	primitive_num_ = 2 * ((int)mesh_num.x) * ((int)mesh_num.y);
-
 	primitive_num_ += 4 * (((int)mesh_num.y) - 1);
 }
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ マテリアル作成関数 ]
-//
-//--------------------------------------------------------------------------------
-
 void MeshPlanePolygon::CreateMaterial()
 {
 	// マテリアルの設定
 	ZeroMemory(&material_, sizeof(material_));	// 第一引数のアドレスからsizeof()分を0で埋める(クラスには使わない)
-													
+
 	// マテリアルカラーを白にする
 	material_.Diffuse.r = 1.0f;
 	material_.Diffuse.g = 1.0f;
@@ -407,12 +346,6 @@ void MeshPlanePolygon::CreateMaterial()
 }
 
 
-
-//--------------------------------------------------------------------------------
-//
-// [ VRAMへのアクセス操作関数 ]
-//
-//--------------------------------------------------------------------------------
 
 void MeshPlanePolygon::AccessVRAM()
 {
@@ -431,12 +364,12 @@ void MeshPlanePolygon::AccessVRAM()
 
 
 	// VRAMのメモリを確保(GPUに依頼)(インデックスバッファの作成)
-	hr = device_->CreateIndexBuffer(sizeof(WORD) * ( int )index_.size(),	// 借りたいbafの量(バイト)、つまり1頂点の容量×必要頂点数
-									D3DUSAGE_WRITEONLY,						// 使用用途(今回は書き込みのみ、GPUが早く動くが書き込んだデータを読んではダメ(値が不定))
-									D3DFMT_INDEX16,							// 頂点フォーマット(WORD型だから16、DWORD型なら32)
-									D3DPOOL_MANAGED,						// 頂点バッファの管理方法( MANAGEDは管理はDirect3Dにお任せという意味 )
-									&index_buffer_,							// 管理者の居場所のメモ帳(ポインタのポインタ)(全てはこれの値を知るための作業)
-									NULL);									// なぞ？
+	hr = device_->CreateIndexBuffer(sizeof(WORD) * (int)index_.size(),	// 借りたいbafの量(バイト)、つまり1頂点の容量×必要頂点数
+									D3DUSAGE_WRITEONLY,					// 使用用途(今回は書き込みのみ、GPUが早く動くが書き込んだデータを読んではダメ(値が不定))
+									D3DFMT_INDEX16,						// 頂点フォーマット(WORD型だから16、DWORD型なら32)
+									D3DPOOL_MANAGED,					// 頂点バッファの管理方法( MANAGEDは管理はDirect3Dにお任せという意味 )
+									&index_buffer_,						// 管理者の居場所のメモ帳(ポインタのポインタ)(全てはこれの値を知るための作業)
+									NULL);								// なぞ？
 
 	if (FAILED(hr))
 	{
@@ -444,17 +377,10 @@ void MeshPlanePolygon::AccessVRAM()
 	}
 
 	RegistrationVertex();
-
 	RegistrationIndex();
 }
 
 
-
-//--------------------------------------------------------------------------------
-//
-// [ 頂点の登録関数 ]
-//
-//--------------------------------------------------------------------------------
 
 void MeshPlanePolygon::RegistrationVertex()
 {
@@ -464,16 +390,14 @@ void MeshPlanePolygon::RegistrationVertex()
 
 	// ロックする
 	vertex_buffer_->Lock(0,						// どこからロックしたいか
-						  0,					// どのくらい借りたいか(0はVertexBuffer全部)
-						  (void**)&temp_vertex,	// ロックするとVRAMの仮想アドレスがもらえる(実際に書き込んでいるわけではない)
-						  D3DLOCK_DISCARD );	// 0でもよい
+						 0,						// どのくらい借りたいか(0はVertexBuffer全部)
+						 (void**)&temp_vertex,	// ロックするとVRAMの仮想アドレスがもらえる(実際に書き込んでいるわけではない)
+						 D3DLOCK_DISCARD);		// 0でもよい
 
-	for(std::vector<RendererDirectX9::VERTEX_3D>::size_type i = 0; i < vertex_.size(); i++)
+	for (std::vector<RendererDirectX9::VERTEX_3D>::size_type i = 0; i < vertex_.size(); i++)
 	{
 		temp_vertex[i] = vertex_[i];
 	}
-
-
 
 	// アンロック
 	vertex_buffer_->Unlock();
@@ -481,18 +405,11 @@ void MeshPlanePolygon::RegistrationVertex()
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ インデックスの登録関数 ]
-//
-//--------------------------------------------------------------------------------
-
 void MeshPlanePolygon::RegistrationIndex()
 {
 	// インデックスの登録
 	// 仮想アドレスをもらう頂点ポインタ 
 	LPWORD temp_index;
-
 
 	// ロックする
 	index_buffer_->Lock(0,						// どこからロックしたいか
@@ -500,7 +417,7 @@ void MeshPlanePolygon::RegistrationIndex()
 						(void**)&temp_index,	// ロックするとVRAMの仮想アドレスがもらえる(実際に書き込んでいるわけではない)
 						D3DLOCK_DISCARD);		// 0でもよい
 
-	for(std::vector<WORD>::size_type i = 0; i < index_.size(); i++)
+	for (std::vector<WORD>::size_type i = 0; i < index_.size(); i++)
 	{
 		temp_index[i] = index_[i];
 
@@ -512,13 +429,8 @@ void MeshPlanePolygon::RegistrationIndex()
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ 高さ計算関数 ]
-//
-//--------------------------------------------------------------------------------
-
-bool MeshPlanePolygon::CalculationHeight(Vec3* position, int index0, int index1, int index2)
+bool MeshPlanePolygon::CalculationHeight(Vec3* position, int index0, 
+										 int index1, int index2)
 {
 	// 三角形の各辺に沿うベクトルを算出
 	Vector3D v01 = vertex_[index1].posisiont_ - vertex_[index0].posisiont_;
@@ -539,13 +451,12 @@ bool MeshPlanePolygon::CalculationHeight(Vec3* position, int index0, int index1,
 	if (c0 <= 0.0f && c1 <= 0.0f && c2 <= 0.0f)
 	{
 		// y座標を求める
-		Vec3 temp_normal = v01.CreateVectorCross(v12);
+		
+		Vec3 temp_normal = Vector3D::CreateCross(&v01, &v12);
 		Vec3 p0 = vertex_[index0].posisiont_;
-		position->y = p0.y - ((temp_normal.x * (position->x - p0.x) + 
-					 temp_normal.z * (position->z - p0.z)) / temp_normal.y);
-
-		 return true;
+		position->y = p0.y - ((temp_normal.x * (position->x - p0.x) +
+							   temp_normal.z * (position->z - p0.z)) / temp_normal.y);
+		return true;
 	}
-
 	return false;
 }

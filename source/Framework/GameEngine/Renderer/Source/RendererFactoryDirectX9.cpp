@@ -11,8 +11,7 @@
 // インクルード文
 //****************************************
 #include "../RendererFactoryDirectX9.h"
-
-#include <Renderer/RendererDirectX9/RendererDirectX9.h>
+#include "../RendererDirectX9.h"
 
 
 

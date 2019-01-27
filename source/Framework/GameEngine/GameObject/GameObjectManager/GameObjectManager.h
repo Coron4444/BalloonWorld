@@ -1,10 +1,9 @@
 //================================================================================
-//
-//    ゲームオブジェクトマネージャクラス(static)
-//    Author : Araki Kai                                作成日 : 2018/07/13
-//
+//!	@file	 GameObjectManager.h
+//!	@brief	 ゲームオブジェクトマネージャClass
+//! @details Singleton
+//!	@author  Kai Araki									@date 2018/07/13
 //================================================================================
-
 #ifndef	_GAME_OBJECT_MANAGER_H_
 #define _GAME_OBJECT_MANAGER_H_
 
@@ -13,11 +12,12 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <LimitedPointerArray\LimitedPointerArray.h>
-#include "GameObjectReferenceManager\GameObjectReferenceManager.h"
-#include "ComponentManager/UpdateManager/UpdateManager.h"
-#include "ComponentManager/DrawManager/DrawManager.h"
-#include "ComponentManager/CollisionManager/CollisionManager.h"
+#include "GameObjectReferenceManager.h"
+#include "../../Update/UpdateManager/UpdateManager.h"
+#include "../../Draw/DrawManager/DrawManager.h"
+#include "../../Collision/CollisionManager/CollisionManager.h"
+
+#include <Tool/LimitedPointerArray.h>
 
 
 
@@ -28,164 +28,241 @@ class GameObjectBase;
 
 
 
-/*********************************************************//**
-* @brief
-* ゲームオブジェクトマネージャクラス
-*
-* ゲームオブジェクト全体の管理をするクラス
-*************************************************************/
+//************************************************************														   
+//! @brief   ゲームオブジェクトマネージャClass(Singleton)
+//!
+//! @details ゲームオブジェクトのマネージャClass(Singleton)
+//************************************************************
 class GameObjectManager
 {
-//==============================
+//====================
 // 定数
-//==============================
-public:
+//====================
+private:
 	static const unsigned ARRAY_NUM = 1000;		//!< 配列数
 
 
-//==============================
-// 静的メンバ変数
-//==============================
+//====================
+// static変数
+//====================
 private:
-	static LimitedPointerArray<GameObjectBase*, ARRAY_NUM> all_game_object_;	//!< 全ゲームオブジェクト配列
-	static LimitedPointerArray<GameObjectBase*, ARRAY_NUM> await_add_;			//!< 追加待ち配列
-	static LimitedPointerArray<GameObjectBase*, ARRAY_NUM> await_release_;		//!< 解放待ち配列
-
-	static GameObjectReferenceManager reference_manager_;	//!< 参照マネージャ
-	static UpdateManager update_manager_;					//!< 更新マネージャ
-	static DrawManager draw_manager_;						//!< 描画マネージャ
-	static CollisionManager collision_manager_;				//!< 衝突マネージャ
+	static GameObjectManager* instance_;	//!< インスタンス
 
 
-//==============================
-// 静的メンバ関数
-//==============================
+//====================
+// staticプロパティ
+//====================
 public:
-	/**
-	* @brief
-	* 初期化関数
-	*/
-	static void Init();
+	//----------------------------------------
+	//! @brief インスタンス取得関数
+	//! @details
+	//! @param void なし
+	//! @retval GameObjectManager* インスタンス
+	//----------------------------------------
+	static GameObjectManager* getpInstance();
 
-	/**
-	* @brief
-	* 終了関数
-	*/
-	static void Uninit();
 
-	/**
-	* @brief
-	* シーン変更時の終了関数
-	*/
-	static void UninitWhenChangeScene();
+//====================
+// static関数
+//====================
+public:
+	//----------------------------------------
+	//! @brief インスタンス解放関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	static void ReleaseInstance();
 
-	/**
-	* @brief
-	* 更新関数
-	*/
-	static void Update();
 
-	/**
-	* @brief
-	* 描画関数
-	*/
-	static void Draw();
+//====================
+// 変数
+//====================
+private:
+	LimitedPointerArray<GameObjectBase*, ARRAY_NUM> all_game_object_;	//!< 全ゲームオブジェクト配列
+	LimitedPointerArray<GameObjectBase*, ARRAY_NUM> await_add_;			//!< 追加待ち配列
+	LimitedPointerArray<GameObjectBase*, ARRAY_NUM> await_release_;		//!< 解放待ち配列
 
-	/**
-	* @brief
-	* 全ゲームオブジェクトリセット関数
-	*/
-	static void AllReset();
+	GameObjectReferenceManager reference_manager_;	//!< 参照マネージャ
+	UpdateManager update_manager_;					//!< 更新マネージャ
+	DrawManager draw_manager_;						//!< 描画マネージャ
+	CollisionManager collision_manager_;			//!< 衝突マネージャ
 
-	/**
-	* @brief
-	* ゲームオブジェクト基底クラスの追加関数
-	*/
-	static void AddGameObjectBaseToArray(GameObjectBase* game_object);
 
-	/**
-	* @brief
-	* ゲームオブジェクト基底クラスの解放関数
-	*/
-	static void ReleaseGameObjectBaseFromArray(GameObjectBase* game_object);
+//====================
+// プロパティ
+//====================
+public:
+	//----------------------------------------
+	//! @brief 更新マネージャ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval UpdateManager* 更新マネージャ
+	//----------------------------------------
+	UpdateManager* getpUpdateManager();
 
-	/**
-	* @brief
-	* ゲームオブジェクト参照の取得
-	*/
+	//----------------------------------------
+	//! @brief 描画マネージャ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval DrawManager* 描画マネージャ
+	//----------------------------------------
+	DrawManager* getpDrawManager();
+
+	//----------------------------------------
+	//! @brief 衝突マネージャ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval CollisionManager* 衝突マネージャ
+	//----------------------------------------
+	CollisionManager* getpCollisionManager();
+
+	//----------------------------------------
+	//! @brief ゲームオブジェクト参照取得関数
+	//! @details
+	//! @param reference_object      参照元オブジェクト
+	//! @param reference_destination 参照先オブジェクト
+	//! @param reference_pointer     参照ポインタ
+	//! @retval void なし
+	//----------------------------------------
 	template<class Type>
-	static void GetPointer_RegistrationReference(GameObjectBase* reference_object,
-												 Type* reference_destination,
-												 Type* reference_pointer)
+	void getpRegistrationReference(GameObjectBase* reference_object,
+								   Type* reference_destination,
+								   Type* reference_pointer)
 	{
 		// 参照先の代入
 		*reference_pointer = reference_destination;
 
 		// 参照の登録
-		reference_manager_.RegistrationReference(reference_object,
+		reference_manager_.AddReference(reference_object,
 			(void*)reference_pointer,
-												 (GameObjectBase*)reference_destination);
+										(GameObjectBase*)reference_destination);
 	}
 
-	// プロパティ
-	static UpdateManager* GetUpdateManager() { return &update_manager_; }
-	static DrawManager* GetDrawManager() { return &draw_manager_; }
-	static CollisionManager* GetCollisionManager() { return &collision_manager_; }
 
+//====================
+// 関数
+//====================
+private:
+	//----------------------------------------
+	//! @brief コンストラクタ
+	//! @param void なし
+	//----------------------------------------
+	GameObjectManager();
+
+public:
+	//----------------------------------------
+	//! @brief 初期化関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Init();
+
+	//----------------------------------------
+	//! @brief 終了関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Uninit();
+
+	//----------------------------------------
+	//! @brief シーン変更時の終了関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void UninitWhenChangeScene();
+
+	//----------------------------------------
+	//! @brief 更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Update();
+
+	//----------------------------------------
+	//! @brief 描画関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Draw();
+
+	//----------------------------------------
+	//! @brief リセット関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Reset();
+
+	//----------------------------------------
+	//! @brief ゲームオブジェクト基底クラス追加関数
+	//! @details
+	//! @param *game_object ゲームオブジェクト基底クラス
+	//! @retval void なし
+	//----------------------------------------
+	void AddGameObjectBaseToArray(GameObjectBase* game_object);
+
+	//----------------------------------------
+	//! @brief ゲームオブジェクト基底クラス解放関数
+	//! @details
+	//! @param *game_object ゲームオブジェクト基底クラス
+	//! @retval void なし
+	//----------------------------------------
+	void ReleaseGameObjectBaseFromArray(GameObjectBase* game_object);
 
 private:
-	/**
-	* @brief
-	* 追加待ち配列の中身を追加関数
-	*/
-	static void AddContentsOfAwaitAddArray();
+	//----------------------------------------
+	//! @brief 追加待ちの追加関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void AddContentsOfAwaitAddArray();
 
-	/**
-	* @brief
-	* 解放待ち配列の中身を解放関数
-	*/
-	static void ReleaseContentsOfAwaitReleaseArray();
+	//----------------------------------------
+	//! @brief 解放待ちの解放関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void ReleaseContentsOfAwaitReleaseArray();
 
-	/**
-	* @brief
-	* コンポーネントをマネージャーへ設定関数
-	*/
-	static void SetComponentToManager(GameObjectBase* game_object);
+	//----------------------------------------
+	//! @brief コンポーネントをマネージャーへ追加関数
+	//! @details
+	//! @param *game_object ゲームオブジェクト基底クラス
+	//! @retval void なし
+	//----------------------------------------
+	void AddComponentToManager(GameObjectBase* game_object);
 
-	/**
-	* @brief
-	* コンポーネントをマネージャーから解放関数
-	*/
-	static void ReleaseComponentFromManager(GameObjectBase* game_object);
+	//----------------------------------------
+	//! @brief コンポーネントをマネージャーから解放関数
+	//! @details
+	//! @param *game_object ゲームオブジェクト基底クラス
+	//! @retval void なし
+	//----------------------------------------
+	void ReleaseComponentFromManager(GameObjectBase* game_object);
 
-	/**
-	* @brief
-	* 全ゲームオブジェクトの解放関数
-	*/
-	static void AllRelease();
+	//----------------------------------------
+	//! @brief 解放関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Release();
 
 
-//==============================
-// 非静的メンバ関数
-//==============================
+//====================
+// 消去済み関数
+//====================
 private:
-	/**
-	* @brief
-	* コンストラクタ(削除)
-	*/
-	GameObjectManager() = delete;
-
-	/**
-	* @brief
-	* コピーコンストラクタ(削除)
-	*/
-	GameObjectManager(const GameObjectManager& value) = delete;
-
-	/**
-	* @brief
-	* 代入演算子のオーバーロード(削除)
-	*/
-	GameObjectManager& operator = (const GameObjectManager& value) = delete;
+	GameObjectManager(const GameObjectManager& class_name) = delete;
+	GameObjectManager& operator = (const GameObjectManager& class_name) = delete;
 };
 
 

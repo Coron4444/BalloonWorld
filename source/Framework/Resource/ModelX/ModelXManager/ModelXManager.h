@@ -16,13 +16,13 @@
 #include <vector>
 #include <unordered_map>
 
-#include <ModelX\ModelXObject\ModelXObject.h>
-#include <Texture/TextureManager/TextureManager.h>
+#include "../ModelXObject.h"
+#include "../../../Texture/TextureManager/TextureManager.h"
 
 
 
 //************************************************************														   
-//! @brief   XモデルマネージャClass
+//! @brief   XモデルマネージャClass(Singleton)
 //!
 //! @details XモデルのマネージャClass(Singleton)
 //************************************************************

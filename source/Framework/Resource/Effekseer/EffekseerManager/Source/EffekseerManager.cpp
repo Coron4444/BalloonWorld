@@ -12,11 +12,12 @@
 //****************************************
 #include <algorithm>
 
-#include "EffekseerManager.h"
+#include "../EffekseerManager.h"
 
-#include <main.h>
-#include <Renderer/Renderer.h>
-#include <ComponentManager/DrawManager/Camera/Camera.h>
+#include <GameEngine/GameEngine.h>
+#include <GameEngine/Renderer/Renderer.h>
+#include <GameEngine/Draw/Camera/Camera.h>
+#include <Tool/SafeRelease.h>
 
 
 
@@ -42,7 +43,7 @@ public:
 //****************************************
 // íËêîíËã`
 //****************************************
-const std::string EffekseerManager::DEFAULT_PATH = "resource/Effekseer/";
+const std::string EffekseerManager::DEFAULT_PATH = "Resource/Effekseer/";
 
 
 
@@ -243,7 +244,7 @@ void EffekseerManager::CreateViewMatrix(Vec3 camera_position, Vec3 look_at_point
 void EffekseerManager::CreateProjectionMatrix(int angle_of_view_)
 {
 	projection_matrix_ = Effekseer::Matrix44().PerspectiveFovLH(D3DXToRadian(angle_of_view_),
-		(float)SCREEN_WIDTH / SCREEN_HEIGHT,
+		(float)GameEngine::SCREEN_WIDTH / GameEngine::SCREEN_HEIGHT,
 																Camera::NEAR_CLIPPING_PLANE,
 																Camera::FAR_CLIPPING_PLANE);
 }

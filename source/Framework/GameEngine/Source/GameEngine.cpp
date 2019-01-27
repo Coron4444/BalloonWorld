@@ -10,17 +10,21 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <assert.h>
-
 #include "../GameEngine.h"
+#include "../Renderer/Renderer.h"
+#include "../Renderer/RendererFactoryDirectX9.h"
+#include "../Scene/SceneManager/SceneManager.h"
 
-#include <Renderer/Renderer.h>
-#include <Renderer/RendererFactory/RendererFactoryDirectX9/RendererFactoryDirectX9.h>
-#include <SafeRelease/SafeRelease.h>
 #include <Controller/Controller.h>
 #include <Keyboard/Keyboard.h>
-#include <Sound/Sound.h>
-#include <SceneManager/SceneManager.h>
+
+#include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>
+#include <Resource/Texture/TextureManager/TextureManager.h>
+#include <Resource/ModelX/ModelXManager/ModelXManager.h>
+#include <Resource/MdBin/MdBinManager/MdBinManager.h>
+#include <Resource/Sound/SoundManager.h>
+#include <Tool/SafeRelease.h>
+
 #include <Scenes/TitleScene/TitleScene.h>
 #include <Scenes/TitleScene/TitleSceneState/TitleSceneState_Start/TitleSceneState_Start.h>
 #include <Scenes/GameScene/GameScene.h>
@@ -28,8 +32,8 @@
 
 
 //#ifdef _DEBUG
-#include <ImGUI/imgui.h>
-#include <ImGUI/imgui_impl_dx9.h>
+#include <Tool/Debug/ImGUI/imgui.h>
+#include <Tool/Debug/ImGUI/imgui_impl_dx9.h>
 //#endif
 
 
@@ -60,9 +64,6 @@ bool GameEngine::Init(HINSTANCE hInstance, HWND hWnd, BOOL is_full_screen,
 	is_init = is_init;
 #endif
 
-	// サウンドの初期化
-	InitSound(hWnd);
-
 	// キーボード入力の初期化
 	InitKeyboard(hInstance, hWnd);
 
@@ -78,6 +79,13 @@ bool GameEngine::Init(HINSTANCE hInstance, HWND hWnd, BOOL is_full_screen,
 	ImGui_ImplDX9_Init(hWnd, device);
 //#endif
 
+	// リソースの初期化
+	EffekseerManager::getpInstance()->Init();
+	TextureManager::getpInstance()->Init();
+	ModelXManager::getpInstance()->Init();
+	MdBinManager::getpInstance()->Init();
+	SoundManager::getpInstance()->Init();
+
 	// シーンマネージャーの生成
 	scene_manager_ = new SceneManager();
 	scene_manager_->Init(new TitleScene(new TitleSceneState_Start()));
@@ -92,6 +100,18 @@ void GameEngine::Uninit()
 	// シーンマネージャーの解放
 	SafeRelease::PlusUninit(&scene_manager_);
 
+	// リソースの終了処理
+	SoundManager::getpInstance()->Uninit();
+	SoundManager::ReleaseInstance();
+	MdBinManager::getpInstance()->Uninit();
+	MdBinManager::ReleaseInstance();
+	ModelXManager::getpInstance()->Uninit();
+	ModelXManager::ReleaseInstance();
+	TextureManager::getpInstance()->Uninit();
+	TextureManager::ReleaseInstance();
+	EffekseerManager::getpInstance()->Uninit();
+	EffekseerManager::ReleaseInstance();
+
 	// ImGUIの終了
 //#ifdef _DEBUG
 	ImGui_ImplDX9_Shutdown();
@@ -99,9 +119,6 @@ void GameEngine::Uninit()
 
 	// キーボード入力の終了処理
 	UninitKeyboard();
-
-	// サウンドの終了処理
-	UninitSound();
 
 	// レンダラーの終了
 	Renderer::getpInstance()->Uninit();

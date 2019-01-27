@@ -1,58 +1,89 @@
 //================================================================================
-//
-//    平面ポリゴンクラス
-//    Author : Araki Kai                                作成日 : 2017/12/06
-//
+//!	@file	 PlanePolygon.cpp
+//!	@brief	 平面ポリゴンClass
+//! @details 
+//!	@author  Kai Araki									@date 2017/10/16
 //================================================================================
 
 
 
-
-//======================================================================
-//
+//****************************************
 // インクルード文
-//
-//======================================================================
+//****************************************
+#include "../PlanePolygon.h"
 
-#include "PlanePolygon.h"
-
-#include <main.h>
-#include <SafeRelease/SafeRelease.h>
-
-#include <Texture\TextureObject\TextureObject.h>
+#include <GameEngine/GameEngine.h>
+#include <Resource/Texture/TextureObject.h>
+#include <Tool/SafeRelease.h>
 
 
 
-//======================================================================
-//
+//****************************************
 // 定数定義
-//
-//======================================================================
-
+//****************************************
 const int PlanePolygon::PRIMITIVE_NUM = 2;
 
 
 
-//======================================================================
-//
-// 非静的メンバ関数定義
-//
-//======================================================================
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-// [ デフォルトコンストラクタ ]
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-PlanePolygon::PlanePolygon(XColor4 color, Vec2 plane_size)
-	: vertex_buffer_(nullptr),
-	index_buffer_(nullptr),
-	device_(nullptr)
+//****************************************
+// プロパティ定義
+//****************************************
+XColor4 PlanePolygon::getColor()
 {
-	CreateVertex((Color4)color, plane_size);
-	CreateIndex();
+	return vertex_[0].color_;
+}
 
+
+
+void PlanePolygon::setColor(XColor4 value)
+{
+	for (auto& contents : vertex_)
+	{
+		contents.color_ = (Color4)value;
+	}
+	RegistrationVertex();
+	material_.Diffuse = value;
+	material_.Ambient = value;
+}
+
+
+
+unsigned PlanePolygon::getMeshNum()
+{
+	return 1;
+}
+
+
+
+D3DMATERIAL9* PlanePolygon::getpMaterial()
+{
+	return &material_;
+}
+
+
+
+void PlanePolygon::setUV(TextureObject* texture, int pattern_num = 0)
+{
+	vertex_[0].texcoord_ = Vec2(*texture->getpUV(pattern_num)->getpLeftUpU(),
+								*texture->getpUV(pattern_num)->getpLeftUpV());
+	vertex_[1].texcoord_ = Vec2(*texture->getpUV(pattern_num)->getpRightButtomU(),
+								*texture->getpUV(pattern_num)->getpLeftUpV());
+	vertex_[2].texcoord_ = Vec2(*texture->getpUV(pattern_num)->getpLeftUpU(),
+								*texture->getpUV(pattern_num)->getpRightButtomV());
+	vertex_[3].texcoord_ = Vec2(*texture->getpUV(pattern_num)->getpRightButtomU(),
+								*texture->getpUV(pattern_num)->getpRightButtomV());
+	RegistrationVertex();
+}
+
+
+
+//****************************************
+// 関数定義
+//****************************************
+void PlanePolygon::Init(Vec2 mesh_scale, XColor4 color)
+{
+	CreateVertex(mesh_scale, (Color4)color);
+	CreateIndex();
 	CreateMaterial();
 
 	Renderer::getpInstance()->getDevice(&device_);
@@ -61,74 +92,18 @@ PlanePolygon::PlanePolygon(XColor4 color, Vec2 plane_size)
 		MessageBox(nullptr, "NotGetDevice!(PlanePolygon.cpp)", "Error", MB_OK);
 		return;
 	}
-
 	AccessVRAM();
 }
 
 
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-// [ デストラクタ ]
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-PlanePolygon::~PlanePolygon()
+void PlanePolygon::Uninit()
 {
-	// 頂点バッファの解放
 	SafeRelease::PlusRelease(&vertex_buffer_);
-
-	// インデックスバッファの解放
 	SafeRelease::PlusRelease(&index_buffer_);
 }
 
 
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-// [ カラーセット関数 ]
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-void PlanePolygon::SetColor(XColor4 color)
-{
-	for (std::vector<RendererDirectX9::VERTEX_3D>::size_type i = 0; i < vertex_.size(); i++)
-	{
-		vertex_[i].color_ = (Color4)color;
-	}
-
-	RegistrationVertex();
-}
-
-
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-// [ UV設定関数 ]
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-void PlanePolygon::SetUV(TextureObject* texture, int pattern_num)
-{
-	vertex_[0].texcoord_ = Vec2(*texture->getpUV(pattern_num)->getpLeftUpU(), 
-								*texture->getpUV(pattern_num)->getpLeftUpV());
-	vertex_[1].texcoord_ = Vec2(*texture->getpUV(pattern_num)->getpRightButtomU(), 
-								*texture->getpUV(pattern_num)->getpLeftUpV());
-	vertex_[2].texcoord_ = Vec2(*texture->getpUV(pattern_num)->getpLeftUpU(), 
-								*texture->getpUV(pattern_num)->getpRightButtomV());
-	vertex_[3].texcoord_ = Vec2(*texture->getpUV(pattern_num)->getpRightButtomU(), 
-								*texture->getpUV(pattern_num)->getpRightButtomV());
-
-	RegistrationVertex();
-}
-
-
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-// [ 描画関数 ]
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 void PlanePolygon::Draw()
 {
@@ -138,41 +113,33 @@ void PlanePolygon::Draw()
 	// 頂点バッファを使うGPUとバーテックスバッファのパイプライン
 	// 使いたくなかったらNULLをいれる
 	device_->SetStreamSource(0,										// パイプライン番号
-							vertex_buffer_,							// バーテックスバッファ変数名
-							0,										// どこから流し込むか
-							sizeof(RendererDirectX9::VERTEX_3D));	// ストライド値(隣の頂点までの長さ＝1頂点の大きさ)
+							 vertex_buffer_,						// バーテックスバッファ変数名
+							 0,										// どこから流し込むか
+							 sizeof(RendererDirectX9::VERTEX_3D));	// ストライド値(隣の頂点までの長さ＝1頂点の大きさ)
 
-	// インデックスをセットする
-	device_->SetIndices(index_buffer_);
-
-	// ライティングをONにする(ライト全てをON、OFFする)
+	 // ライティングOFF
 	device_->SetRenderState(D3DRS_LIGHTING, FALSE);
 
+	// インデックスで描画
+	device_->SetIndices(index_buffer_);
 	device_->DrawIndexedPrimitive(D3DPT_TRIANGLESTRIP,
-								 0,						// セットストリームからどれくらいずれているか
-								 0,						// インデックスで一番小さい値
-								 (UINT)vertex_.size(),	// 頂点数
-								 0,						// スタートインデックス番号
-								 PRIMITIVE_NUM);		// プリミティブ数
+								  0,						// セットストリームからどれくらいずれているか
+								  0,						// インデックスで一番小さい値
+								  (UINT)vertex_.size(),		// 頂点数
+								  0,						// スタートインデックス番号
+								  PRIMITIVE_NUM);			// プリミティブ数
 
-
-	// ライティングをONにする(ライト全てをON、OFFする)
+	 // ライティングON
 	device_->SetRenderState(D3DRS_LIGHTING, TRUE);
 }
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ 頂点作成関数 ]
-//
-//--------------------------------------------------------------------------------
-
-void PlanePolygon::CreateVertex(Color4 color, Vec2 plane_size)
+void PlanePolygon::CreateVertex(Vec2 mesh_scale, XColor4 color)
 {
 	// 頂点情報の入力
-	float temp_x = plane_size.x / 2;
-	float temp_y = plane_size.y / 2;
+	float temp_x = mesh_scale.x / 2;
+	float temp_y = mesh_scale.y / 2;
 
 	float u0 = 0.0f;
 	float v0 = 0.0f;
@@ -187,12 +154,6 @@ void PlanePolygon::CreateVertex(Color4 color, Vec2 plane_size)
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ インデックス作成関数 ]
-//
-//--------------------------------------------------------------------------------
-
 void PlanePolygon::CreateIndex()
 {
 	index_.push_back(2);
@@ -202,12 +163,6 @@ void PlanePolygon::CreateIndex()
 }
 
 
-
-//--------------------------------------------------------------------------------
-//
-// [ マテリアル作成関数 ]
-//
-//--------------------------------------------------------------------------------
 
 void PlanePolygon::CreateMaterial()
 {
@@ -229,12 +184,6 @@ void PlanePolygon::CreateMaterial()
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ VRAMへのアクセス操作関数 ]
-//
-//--------------------------------------------------------------------------------
-
 void PlanePolygon::AccessVRAM()
 {
 	// VRAMのメモリを確保(GPUに依頼)(頂点バッファの作成)
@@ -250,14 +199,13 @@ void PlanePolygon::AccessVRAM()
 		MessageBox(NULL, "Vertex buffer was not created.", "Error", MB_OK);
 	}
 
-
 	// VRAMのメモリを確保(GPUに依頼)(インデックスバッファの作成)
-	hr = device_->CreateIndexBuffer(sizeof(WORD) * (int)index_.size(),		// 借りたいbafの量(バイト)、つまり1頂点の容量×必要頂点数
-									D3DUSAGE_WRITEONLY,		// 使用用途(今回は書き込みのみ、GPUが早く動くが書き込んだデータを読んではダメ(値が不定))
-									D3DFMT_INDEX16,			// 頂点フォーマット(WORD型だから16、DWORD型なら32)
-									D3DPOOL_MANAGED,			// 頂点バッファの管理方法( MANAGEDは管理はDirect3Dにお任せという意味 )
-									&index_buffer_,			// 管理者の居場所のメモ帳(ポインタのポインタ)(全てはこれの値を知るための作業)
-									NULL);					// なぞ？
+	hr = device_->CreateIndexBuffer(sizeof(WORD) * (int)index_.size(),	// 借りたいbafの量(バイト)、つまり1頂点の容量×必要頂点数
+									D3DUSAGE_WRITEONLY,					// 使用用途(今回は書き込みのみ、GPUが早く動くが書き込んだデータを読んではダメ(値が不定))
+									D3DFMT_INDEX16,						// 頂点フォーマット(WORD型だから16、DWORD型なら32)
+									D3DPOOL_MANAGED,					// 頂点バッファの管理方法( MANAGEDは管理はDirect3Dにお任せという意味 )
+									&index_buffer_,						// 管理者の居場所のメモ帳(ポインタのポインタ)(全てはこれの値を知るための作業)
+									NULL);								// なぞ？
 
 	if (FAILED(hr))
 	{
@@ -265,17 +213,10 @@ void PlanePolygon::AccessVRAM()
 	}
 
 	RegistrationVertex();
-
 	RegistrationIndex();
 }
 
 
-
-//--------------------------------------------------------------------------------
-//
-// [ 頂点の登録関数 ]
-//
-//--------------------------------------------------------------------------------
 
 void PlanePolygon::RegistrationVertex()
 {
@@ -294,25 +235,17 @@ void PlanePolygon::RegistrationVertex()
 		temp_vertex[i] = vertex_[i];
 	}
 
-
 	// アンロック
 	vertex_buffer_->Unlock();
 }
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ インデックスの登録関数 ]
-//
-//--------------------------------------------------------------------------------
-
 void PlanePolygon::RegistrationIndex()
 {
 	// インデックスの登録
 	// 仮想アドレスをもらう頂点ポインタ 
 	LPWORD temp_index;
-
 
 	// ロックする
 	index_buffer_->Lock(0,						// どこからロックしたいか

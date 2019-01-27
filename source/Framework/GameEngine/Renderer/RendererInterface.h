@@ -32,7 +32,7 @@ public:
 	//! @details
 	//! @param void ‚È‚µ
 	//----------------------------------------
-	virtual ~RendererInterface() {}
+	virtual ~RendererInterface() = 0;
 	
 	//----------------------------------------
 	//! @brief ‰Šú‰»ŠÖ”

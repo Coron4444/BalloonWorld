@@ -13,8 +13,8 @@
 // インクルード文
 //****************************************
 #ifdef _DEBUG
-#include <ImGUI/imgui.h>
-#include <ImGUI/imgui_impl_dx9.h>
+#include <Tool/Debug/ImGUI/imgui.h>
+#include <Tool/Debug/ImGUI/imgui_impl_dx9.h>
 #endif
 
 

@@ -1,8 +1,8 @@
 //================================================================================
-//
-//    ゲームオブジェクト基底クラス
-//    Author : Araki Kai                                作成日 : 2018/03/22
-//
+//!	@file	 GameObjectBase.cpp
+//!	@brief	 ゲームオブジェクトBaseClass
+//! @details 
+//!	@author  Kai Araki									@date 2018/03/22
 //================================================================================
 
 
@@ -10,21 +10,88 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "GameObjectBase.h"
+#include "../GameObjectBase.h"
+#include "../GameObjectManager/GameObjectManager.h"
+#include "../../Update/UpdateManager/UpdateManager.h"
+#include "../../Draw/DrawManager/DrawManager.h"
+#include "../../Collision/CollisionManager/CollisionManager.h"
 
-#include <GameObjectManager/GameObjectManager.h>
-#include <ComponentManager/UpdateManager/UpdateManager.h>
-#include <ComponentManager/DrawManager/DrawManager.h>
-#include <ComponentManager/CollisionManager/CollisionManager.h>
+#include <Tool/SafeRelease.h>
 
 
 
 //****************************************
-// 非静的メンバ関数定義
+// プロパティ定義
 //****************************************
-//--------------------------------------------------
-// +コンストラクタ
-//--------------------------------------------------
+Transform* GameObjectBase::getpTransform()
+{
+	return &transform_;
+}
+
+
+
+Physics* GameObjectBase::getpPhysics()
+{
+	return physics_;
+}
+
+
+
+void GameObjectBase::setAllComponent(UpdateBase* update, DrawBase* draw,
+									 CollisionBase* collision)
+{
+	setUpdate(update);
+	setDraw(draw);
+	setCollision(collision);
+}
+
+
+
+UpdateBase* GameObjectBase::getpUpdate()
+{
+	return update_;
+}
+
+
+
+void GameObjectBase::setUpdate(UpdateBase* value)
+{
+	update_ = value;
+}
+
+
+
+DrawBase* GameObjectBase::getpDraw()
+{
+	return draw_;
+}
+
+
+
+void GameObjectBase::setDraw(DrawBase* value)
+{
+	draw_ = value;
+}
+
+
+
+CollisionBase* GameObjectBase::getpCollision()
+{
+	return collision_;
+}
+
+
+
+void GameObjectBase::setCollision(CollisionBase* value)
+{
+	collision_ = value;
+}
+
+
+
+//****************************************
+// 関数定義
+//****************************************
 GameObjectBase::GameObjectBase(bool is_registration)
 	: is_registration_(is_registration),
 	physics_(nullptr),
@@ -36,12 +103,8 @@ GameObjectBase::GameObjectBase(bool is_registration)
 
 
 
-//--------------------------------------------------
-// +デストラクタ
-//--------------------------------------------------
 GameObjectBase::~GameObjectBase()
 {
-	// 各種開放
 	SafeRelease::Normal(&update_);
 	SafeRelease::Normal(&draw_);
 	SafeRelease::Normal(&collision_);
@@ -50,49 +113,35 @@ GameObjectBase::~GameObjectBase()
 
 
 
-//--------------------------------------------------
-// +終了関数
-//--------------------------------------------------
 void GameObjectBase::Uninit()
 {
-	// コンポーネントの終了処理
 	UninitComponent();
 }
 
 
 
-//--------------------------------------------------
-// +剛体生成関数
-//--------------------------------------------------
 void GameObjectBase::CreatePhysics()
 {
 	if (physics_ != nullptr) return;
-	physics_ = new Physics(this);
+	physics_ = new Physics();
+	physics_->setGameObject(this);
 }
 
 
 
-//--------------------------------------------------
-// #基底クラス初期化関数
-//--------------------------------------------------
 void GameObjectBase::Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision)
 {
-	// コンポーネントをセット
-	SetAllComponent(update, draw, collision);
-
-	// コンポーネントの初期化
+	// コンポーネント初期化
+	setAllComponent(update, draw, collision);
 	InitComponent();
 
 	// オブジェクトマネージャーに登録
 	if (!is_registration_) return;
-	GameObjectManager::AddGameObjectBaseToArray(this);
+	GameObjectManager::getpInstance()->AddGameObjectBaseToArray(this);
 }
 
 
 
-//--------------------------------------------------
-// -コンポーネント初期化関数
-//--------------------------------------------------
 void GameObjectBase::InitComponent()
 {
 	if (update_ != nullptr)
@@ -116,9 +165,6 @@ void GameObjectBase::InitComponent()
 
 
 
-//--------------------------------------------------
-// -コンポーネント終了関数
-//--------------------------------------------------
 void GameObjectBase::UninitComponent()
 {
 	if (update_ != nullptr)

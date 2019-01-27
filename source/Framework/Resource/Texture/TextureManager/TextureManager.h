@@ -16,12 +16,12 @@
 #include <vector>
 #include <unordered_map>
 
-#include <Texture\TextureObject\TextureObject.h>
+#include "../TextureObject.h"
 
 
 
 //************************************************************														   
-//! @brief   テクスチャマネージャClass
+//! @brief   テクスチャマネージャClass(Singleton)
 //!
 //! @details テクスチャのマネージャClass(Singleton)
 //************************************************************

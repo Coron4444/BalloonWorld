@@ -226,14 +226,61 @@ public:
 	void AddBounciness(float bounciness);
 
 
-//------------------------------------------------------------
 private :
+	//----------------------------------------
+	//! @brief リセット関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void Reset();
+
+	//----------------------------------------
+	//! @brief 加速度更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void UpdateAcceleration();
+
+	//----------------------------------------
+	//! @brief 速度更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void UpdateVelocity();
+
+	//----------------------------------------
+	//! @brief 座標更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void UpdatePosition();
-	void SetGravity();
-	void SetGround();
+
+	//----------------------------------------
+	//! @brief 重力追加関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void AddGravity();
+
+	//----------------------------------------
+	//! @brief 地面更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void UpdateGround();
+
+	//----------------------------------------
+	//! @brief 速度の最小値・最大値チェック関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void CheckVelocityMinMax();
 
 };

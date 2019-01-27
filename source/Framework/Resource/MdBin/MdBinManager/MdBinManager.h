@@ -16,13 +16,13 @@
 #include <vector>
 #include <unordered_map>
 
-#include <MdBin/MdBinObject/MdBinObject.h>
-#include <Texture/TextureManager/TextureManager.h>
+#include "../MdBinObject.h"
+#include "../../../Texture/TextureManager/TextureManager.h"
 
 
 
 //************************************************************														   
-//! @brief   バイナリーモデルマネージャClass
+//! @brief   バイナリーモデルマネージャClass(Singleton)
 //!
 //! @details バイナリーモデルのマネージャClass(Singleton)
 //************************************************************

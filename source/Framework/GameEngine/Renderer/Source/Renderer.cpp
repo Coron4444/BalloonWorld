@@ -11,9 +11,9 @@
 // インクルード文
 //****************************************
 #include "../Renderer.h"
-#include "RendererFactoryInterface.h"
+#include "../RendererFactoryInterface.h"
 
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 

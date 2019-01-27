@@ -32,7 +32,7 @@ public:
 	//! @details
 	//! @param void Ç»Çµ
 	//----------------------------------------
-	virtual ~RendererFactoryInterface() {}
+	virtual ~RendererFactoryInterface() = 0;
 
 	//----------------------------------------
 	//! @brief ê∂ê¨ä÷êî

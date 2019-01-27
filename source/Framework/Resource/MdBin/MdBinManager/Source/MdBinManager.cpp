@@ -10,16 +10,16 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "MdBinManager.h"
+#include "../MdBinManager.h"
 
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 
 //****************************************
 // 定数定義
 //****************************************
-const std::string MdBinManager::DEFAULT_PATH = "resource/MdBin/";
+const std::string MdBinManager::DEFAULT_PATH = "Resource/MdBin/";
 
 
 

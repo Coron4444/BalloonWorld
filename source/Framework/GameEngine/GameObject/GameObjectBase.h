@@ -1,10 +1,9 @@
 //================================================================================
-//
-//    ゲームオブジェクト基底クラス
-//    Author : Araki Kai                                作成日 : 2018/03/22
-//
+//!	@file	 GameObjectBase.h
+//!	@brief	 ゲームオブジェクトBaseClass
+//! @details 
+//!	@author  Kai Araki									@date 2018/03/22
 //================================================================================
-
 #ifndef	_GAME_OBJECT_BASE_H_
 #define _GAME_OBJECT_BASE_H_
 
@@ -13,116 +12,185 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <SafeRelease/SafeRelease.h>
-#include <Transform\Transform.h>
-#include <Physics\Physics.h>
+#include "../Update/UpdateBase.h"
+#include "../Draw/DrawBase.h"
+#include "../Collision/CollisionBase.h"
 
-#include "../Component/Update/UpdateBase/UpdateBase.h"
-#include "../Component/Draw/DrawBase/DrawBase.h"
-#include "../Component/Collision/CollisionBase/CollisionBase.h"
-
+#include <Tool/Transform.h>
+#include <Tool/Physics.h>
 
 
-/*********************************************************//**
-* @brief
-* ゲームオブジェクト基底クラス
-*
-* ゲームオブジェクトの基底クラス
-*************************************************************/
+
+//************************************************************														   
+//! @brief   ゲームオブジェクトBaseClass
+//!
+//! @details ゲームオブジェクトのBaseClass
+//************************************************************
 class GameObjectBase
 {
-//==============================
-// 非静的メンバ変数
-//==============================
+//====================
+// 変数
+//====================
 private:
-	Transform transform_;		//!< トランスフォーム
-	Physics*  physics_;			//!< 剛体
+	Transform transform_;		//!< 変形
+	Physics*  physics_;			//!< 物理
 
 	bool is_registration_;		//!< 登録フラグ
 
-	UpdateBase*    update_;		//!< 更新コンポーネント
-	DrawBase*      draw_;		//!< 描画コンポーネント
-	CollisionBase* collision_;	//!< 衝突コンポーネント
+	UpdateBase*    update_;		//!< 更新基底クラス
+	DrawBase*      draw_;		//!< 描画基底クラス
+	CollisionBase* collision_;	//!< 衝突基底クラス
 
 
-
-//==============================
-// 非静的メンバ関数
-//==============================
+//====================
+// プロパティ
+//====================
 public:
-	/**
-	* @brief
-	* コンストラクタ
-	* @param
-	* is_registration : 登録フラグ
-	*/
+	//----------------------------------------
+	//! @brief 変形取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Transform* 変形
+	//----------------------------------------
+	Transform* getpTransform();
+
+	//----------------------------------------
+	//! @brief 物理取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Transform* 変形
+	//----------------------------------------
+	Physics* getpPhysics();
+
+	//----------------------------------------
+	//! @brief 全基底クラス設定関数
+	//! @details
+	//! @param update    更新基底クラス
+	//! @param draw      描画基底クラス
+	//! @param collision 衝突基底クラス
+	//! @retval void なし
+	//----------------------------------------
+	void setAllComponent(UpdateBase* update, DrawBase* draw, CollisionBase* collision);
+
+	//----------------------------------------
+	//! @brief 更新基底クラス取得関数
+	//! @details
+	//! @param void なし
+	//! @retval UpdateBase* 更新基底クラス
+	//----------------------------------------
+	UpdateBase* getpUpdate();
+
+	//----------------------------------------
+	//! @brief 更新基底クラス設定関数
+	//! @details
+	//! @param value 更新基底クラス
+	//! @retval void なし
+	//----------------------------------------
+	void setUpdate(UpdateBase* value);
+
+	//----------------------------------------
+	//! @brief 描画基底クラス取得関数
+	//! @details
+	//! @param void なし
+	//! @retval DrawBase* 描画基底クラス
+	//----------------------------------------
+	DrawBase* getpDraw();
+
+	//----------------------------------------
+	//! @brief 描画基底クラス設定関数
+	//! @details
+	//! @param value 描画基底クラス
+	//! @retval void なし
+	//----------------------------------------
+	void setDraw(DrawBase* value);
+
+	//----------------------------------------
+	//! @brief 衝突基底クラス取得関数
+	//! @details
+	//! @param void なし
+	//! @retval CollisionBase* 衝突基底クラス
+	//----------------------------------------
+	CollisionBase* getpCollision();
+
+	//----------------------------------------
+	//! @brief 衝突基底クラス設定関数
+	//! @details
+	//! @param value 衝突基底クラス
+	//! @retval void なし
+	//----------------------------------------
+	void setCollision(CollisionBase* value);
+
+
+//====================
+// 関数
+//====================
+public:
+	//----------------------------------------
+	//! @brief コンストラクタ
+	//! @details
+	//! @param is_registration 登録フラグ
+	//----------------------------------------
 	GameObjectBase(bool is_registration = true);
 
-	/**
-	* @brief
-	* 仮想デストラクタ
-	*/
+	//----------------------------------------
+	//! @brief デストラクタ
+	//! @details
+	//! @param void なし
+	//----------------------------------------
 	virtual ~GameObjectBase();
 
-	/**
-	* @brief
-	* 終了関数
-	*/
+	//----------------------------------------
+	//! @brief 終了関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	virtual void Uninit();
 
-	/**
-	* @brief
-	* リセット関数
-	*/
+	//----------------------------------------
+	//! @brief リセット関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	virtual void Reset() = 0;
 
-	/**
-	* @brief
-	* 剛体生成関数
-	*/
+	//----------------------------------------
+	//! @brief 物理生成関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void CreatePhysics();
 
-	// プロパティ
-	Transform* GetTransform() { return &transform_; }
-	Physics* GetPhysics() { return physics_; }
-	void SetAllComponent(UpdateBase* value0, DrawBase* value1, CollisionBase* value2)
-	{
-		SetUpdate(value0);
-		SetDraw(value1);
-		SetCollision(value2);
-	}
-	UpdateBase* GetUpdate() { return update_; }
-	void SetUpdate(UpdateBase* value) { update_ = value; }
-	DrawBase* GetDraw() { return draw_; }
-	void SetDraw(DrawBase* value) { draw_ = value; }
-	CollisionBase* GetCollision() { return collision_; }
-	void SetCollision(CollisionBase* value) { collision_ = value; }
-	
-
 protected:
-	/**
-	* @brief
-	* 初期化関数
-	* @param
-	* update : 更新基底クラス
-	* draw : 描画基底クラス
-	* collision : 衝突基底クラス
-	*/
+	//----------------------------------------
+	//! @brief 初期化関数
+	//! @details
+	//! @param update    更新基底クラス
+	//! @param draw      描画基底クラス
+	//! @param collision 衝突基底クラス
+	//! @retval void なし
+	//----------------------------------------
 	void Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision);
-	
-	
+
+
 
 private:
-	/**
-	* @brief
-	* コンポーネント初期化関数
-	*/
+	//----------------------------------------
+	//! @brief コンポーネント初期化関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void InitComponent();
 
-	/**
-	* @brief
-	* コンポーネント終了関数
-	*/
+	//----------------------------------------
+	//! @brief コンポーネント終了関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void UninitComponent();
 };
 

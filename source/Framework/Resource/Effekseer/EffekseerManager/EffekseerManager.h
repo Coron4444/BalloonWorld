@@ -16,12 +16,12 @@
 #include <list>
 #include <unordered_map>
 
-#include "../EffekseerObject/EffekseerObject.h"
+#include "../EffekseerObject.h"
 
 
 
 //************************************************************														   
-//! @brief   エフェクシアマネージャClass
+//! @brief   エフェクシアマネージャClass(Singleton)
 //!
 //! @details エフェクシアのマネージャClass(Singleton)
 //************************************************************

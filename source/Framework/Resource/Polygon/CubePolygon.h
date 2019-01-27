@@ -1,90 +1,164 @@
 //================================================================================
-//
-//    キューブポリゴンクラスヘッダ
-//    Author : Araki Kai                                作成日 : 2017/10/16
-//
+//!	@file	 CubePolygon.h
+//!	@brief	 キューブポリゴンClass
+//! @details 
+//!	@author  Kai Araki									@date 2017/10/16
 //================================================================================
-
 #ifndef	_CUBE_POLYGON_H_
 #define _CUBE_POLYGON_H_
 
 
 
-//======================================================================
-//
+//****************************************
 // インクルード文
-//
-//======================================================================
-
+//****************************************
 #include <vector>
 #include <string>
 
-#include <Vector3D.h>
-
-#include <Renderer\Renderer.h>
-
+#include <GameEngine/Renderer\Renderer.h>
+#include <Tool/Vector3D.h>
 
 
-//======================================================================
-//
-// クラス定義
-//
-//======================================================================
 
+//************************************************************														   
+//! @brief   キューブポリゴンClass
+//!
+//! @details キューブのポリゴンClass
+//************************************************************
 class CubePolygon
 {
-//------------------------------------------------------------
+//====================
+// 定数
+//====================
 private:
-	// 定数
-	static const int PRIMITIVE_NUM;
+	static const int PRIMITIVE_NUM;		//!< プリミティブ数
 
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//====================
+// 変数
+//====================
+private:
+	std::vector<RendererDirectX9::VERTEX_3D> vertex_;	//!< 頂点
+	std::vector<WORD> index_;							//!< インデックス
+	D3DMATERIAL9 material_;								//!< マテリアル
+	LPDIRECT3DVERTEXBUFFER9 vertex_buffer_ = nullptr;	//!< 頂点バッファ
+	LPDIRECT3DINDEXBUFFER9 index_buffer_ = nullptr;		//!< インデックスバッファ
+	LPDIRECT3DDEVICE9 device_ = nullptr;				//!< デバイス
+
+
+//====================
+// プロパティ
+//====================
 public:
-	// デフォルトコンストラクタ
-	CubePolygon(XColor4 color = XColor4(1.0f, 1.0f, 1.0f, 1.0f));
+	//----------------------------------------
+	//! @brief 色設定関数
+	//! @details
+	//! @param value 色
+	//! @retval void なし
+	//----------------------------------------
+	void setColor(XColor4 value);
+
+	//----------------------------------------
+	//! @brief メッシュ数取得関数
+	//! @details
+	//! @param void なし
+	//! @retval unsigned メッシュ数
+	//----------------------------------------
+	unsigned getMeshNum();
+
+	//----------------------------------------
+	//! @brief マテリアル取得関数
+	//! @details
+	//! @param void なし
+	//! @retval D3DMATERIAL9* マテリアル
+	//----------------------------------------
+	D3DMATERIAL9* getpMaterial();
 
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//====================
+// 関数
+//====================
 public:
-	// デストラクタ
-	~CubePolygon();
+	//----------------------------------------
+	//! @brief 初期化関数
+	//! @details
+	//! @param color 色
+	//! @retval void なし
+	//----------------------------------------
+	void Init(XColor4 color = {1.0f, 1.0f, 1.0f, 1.0f});
 
+	//----------------------------------------
+	//! @brief 終了関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Uninit();
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-public:
-	// メンバ関数
+	//----------------------------------------
+	//! @brief 描画関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void Draw();
 
-	void SetColor(XColor4 color);
+	//----------------------------------------
+	//! @brief ワイヤーフレームで描画関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void DrawWireFrame();
 
-	unsigned getMeshNum() { return 1; }
-	D3DMATERIAL9* GetMaterial() { return &material_; }
-
-
-
-//------------------------------------------------------------
 private:
-	// 非公開メンバ関数
+	//----------------------------------------
+	//! @brief 頂点作成関数
+	//! @details
+	//! @param color 色
+	//! @retval void なし
+	//----------------------------------------
 	void CreateVertex(Color4 color);
+
+	//----------------------------------------
+	//! @brief インデックス作成関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void CreateIndex();
+
+	//----------------------------------------
+	//! @brief マテリアル作成関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void CreateMaterial();
 
+	//----------------------------------------
+	//! @brief VRAMへアクセス関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void AccessVRAM();
 
+	//----------------------------------------
+	//! @brief 頂点バッファに登録関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void RegistrationVertex();
+
+	//----------------------------------------
+	//! @brief インデックスバッファに登録関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
 	void RegistrationIndex();
-
-
-//------------------------------------------------------------
-private:
-	std::vector<RendererDirectX9::VERTEX_3D> vertex_;
-	std::vector<WORD>      index_;
-
-	LPDIRECT3DVERTEXBUFFER9 vertex_buffer_;
-	LPDIRECT3DINDEXBUFFER9  index_buffer_;
-	D3DMATERIAL9			material_;
-	LPDIRECT3DDEVICE9		device_;
 };
 
 

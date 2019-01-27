@@ -17,12 +17,11 @@
 #pragma warning(push)
 #pragma warning(disable: 4100)
 #pragma warning(disable: 4099)
-#include <Effekseer/Effekseer.h>
-#include <Effekseer/EffekseerRendererDX9.h>
+#include "Effekseer.h"
+#include "EffekseerRendererDX9.h"
 #pragma warning(pop)
 
-#include <Vector3D.h>
-#include <Transform\Transform.h>
+#include <Tool/Transform.h>
 
 
 

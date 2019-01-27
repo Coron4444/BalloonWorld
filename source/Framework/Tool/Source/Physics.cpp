@@ -13,7 +13,7 @@
 #include "../Physics.h"
 #include "../MeterToFrame.h"
 
-#include <GameObjectBase/GameObjectBase.h>
+#include <GameEngine/GameObject/GameObjectBase.h>
 
 
 
@@ -177,58 +177,30 @@ void Physics::AddFriction(float friction)
 
 
 
-void Physics::AddFriction(float friction)
+void Physics::AddBounciness(float bounciness)
 {
 	bounciness_ += bounciness;
 }
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ リセット関数 ]
-//
-//--------------------------------------------------------------------------------
-
 void Physics::Reset()
 {
-	// 地面判定
-	is_on_tha_ground_ = false;
-
-	// 摩擦力
 	friction_ = 0.0f;
-
-	// 反発力
 	bounciness_ = 0.0f;
-
-	// 加速度
-	acceleration_.ResetVector();
+	is_on_tha_ground_ = false;
+	acceleration_.Reset();
 }
 
 
-
-//--------------------------------------------------------------------------------
-//
-// [ 加速度更新関数 ]
-//
-//--------------------------------------------------------------------------------
 
 void Physics::UpdateAcceleration()
 {
-	// 重力の追加
-	SetGravity();
-
-	// 地面上の処理
-	SetGround();
+	AddGravity();
+	UpdateGround();
 }
 
 
-
-//--------------------------------------------------------------------------------
-//
-// [ 速度更新関数 ]
-//
-//--------------------------------------------------------------------------------
 
 void Physics::UpdateVelocity()
 {
@@ -253,36 +225,24 @@ void Physics::UpdateVelocity()
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ 座標更新関数 ]
-//
-//--------------------------------------------------------------------------------
-
 void Physics::UpdatePosition()
 {
 	// 速度を座標に作用
-	*game_object_->GetTransform()->GetPosition() += velocity_;
+	*game_object_->GetTransform()->getpPosition() += velocity_;
 
-	// 行列の更新(ビルボードにも対応)
-	game_object_->GetTransform()->UpdateWorldMatrixISRT();
+	// 行列の更新
+	game_object_->GetTransform()->CreateWorldMatrix();
 }
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ 重力追加関数 ]
-//
-//--------------------------------------------------------------------------------
-
-void Physics::SetGravity()
+void Physics::AddGravity()
 {
 	// 重力を作用させるかどうか
 	if (!is_gravity_) return;
 
 	// 重力の大きさ算出
-	gravity_direction_.AnyLengthVector(mass_ * gravity_acceleration_);
+	gravity_direction_.ChangeAnyLength(mass_ * gravity_acceleration_);
 
 	// オブジェクトの加速度に重力を追加
 	acceleration_ += gravity_direction_;
@@ -290,13 +250,7 @@ void Physics::SetGravity()
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ 地面の処理関数 ]
-//
-//--------------------------------------------------------------------------------
-
-void Physics::SetGround()
+void Physics::UpdateGround()
 {
 	// 地面上にいるかどうか
 	if (is_on_tha_ground_)
@@ -322,23 +276,17 @@ void Physics::SetGround()
 
 
 
-//--------------------------------------------------------------------------------
-//
-// [ 速度の最小値・最大値チェック関数 ]
-//
-//--------------------------------------------------------------------------------
-
 void Physics::CheckVelocityMinMax()
 {
 	// 最小値
-	if (velocity_.GetLength() <= VELOCITY_MIN)
+	if (velocity_.getLength() <= VELOCITY_MIN)
 	{
-		velocity_.ResetVector();
+		velocity_.Reset();
 	}
 
 	// 最大値
-	if (velocity_.GetLength() >= max_velocity_)
+	if (velocity_.getLength() >= max_velocity_)
 	{
-		velocity_.AnyLengthVector(max_velocity_);
+		velocity_.ChangeAnyLength(max_velocity_);
 	}
 }

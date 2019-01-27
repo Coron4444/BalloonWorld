@@ -15,8 +15,8 @@
 #include <string>
 #include <vector>
 
-#include <Renderer\Renderer.h>
-#include <Vector3D.h>
+#include <GameEngine/Renderer/Renderer.h>
+#include <Tool/Vector3D.h>
 
 
 

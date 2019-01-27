@@ -1,8 +1,8 @@
 //================================================================================
-//
-//    ゲームオブジェクトのマネージャクラス(static)
-//    Author : Araki Kai                                作成日 : 2018/07/13
-//
+//!	@file	 GameObjectManager.cpp
+//!	@brief	 ゲームオブジェクトマネージャClass
+//! @details Singleton
+//!	@author  Kai Araki									@date 2018/07/13
 //================================================================================
 
 
@@ -10,32 +10,71 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "GameObjectManager.h"
-#include "../GameObjectBase/GameObjectBase.h"
-#include <SafeRelease/SafeRelease.h>
+#include "../GameObjectManager.h"
+#include "../../GameObjectBase.h"
+
+#include <Tool/SafeRelease.h>
 
 
 
 //****************************************
-// 静的メンバ変数定義
+// static変数定義
 //****************************************
-LimitedPointerArray<GameObjectBase*, GameObjectManager::ARRAY_NUM> GameObjectManager::all_game_object_;
-LimitedPointerArray<GameObjectBase*, GameObjectManager::ARRAY_NUM> GameObjectManager::await_add_;
-LimitedPointerArray<GameObjectBase*, GameObjectManager::ARRAY_NUM> GameObjectManager::await_release_;
-
-GameObjectReferenceManager GameObjectManager::reference_manager_;
-UpdateManager GameObjectManager::update_manager_;
-DrawManager GameObjectManager::draw_manager_;
-CollisionManager GameObjectManager::collision_manager_;
+GameObjectManager* GameObjectManager::instance_ = nullptr;
 
 
 
 //****************************************
-// 静的メンバ関数定義
+// staticプロパティ定義
 //****************************************
-//--------------------------------------------------
-// +初期化関数
-//--------------------------------------------------
+GameObjectManager* GameObjectManager::getpInstance()
+{
+	if (instance_ == nullptr)
+	{
+		instance_ = new GameObjectManager();
+	}
+	return instance_;
+}
+
+
+
+//****************************************
+// static関数定義
+//****************************************
+void GameObjectManager::ReleaseInstance()
+{
+	SafeRelease::Normal(&instance_);
+}
+
+
+
+//****************************************
+// プロパティ定義
+//****************************************
+UpdateManager* GameObjectManager::getpUpdateManager()
+{
+	return &update_manager_;
+}
+
+
+
+DrawManager* GameObjectManager::getpDrawManager()
+{
+	return &draw_manager_;
+}
+
+
+
+CollisionManager* GameObjectManager::getpCollisionManager()
+{
+	return &collision_manager_;
+}
+
+
+
+//****************************************
+// 関数定義
+//****************************************
 void GameObjectManager::Init()
 {
 	// 各種マネージャの初期化
@@ -46,43 +85,32 @@ void GameObjectManager::Init()
 
 
 
-//--------------------------------------------------
-// +終了関数
-//--------------------------------------------------
 void GameObjectManager::Uninit()
 {
-	// 全ゲームオブジェクトの解放
-	AllRelease();
+	// ゲームオブジェクトの解放
+	Release();
 
 	// 各種マネージャの終了処理
 	collision_manager_.Uninit();
 	draw_manager_.Uninit();
 	update_manager_.Uninit();
-
 }
 
 
 
-//--------------------------------------------------
-// +シーン変更時の終了関数
-//--------------------------------------------------
 void GameObjectManager::UninitWhenChangeScene()
 {
-	// 全ゲームオブジェクトの解放
-	AllRelease();
+	// ゲームオブジェクトの解放
+	Release();
 
 	// 各種マネージャのシーン変更時の終了処理
 	collision_manager_.UninitWhenChangeScene();
 	draw_manager_.UninitWhenChangeScene();
 	update_manager_.UninitWhenChangeScene();
-	
 }
 
 
 
-//--------------------------------------------------
-// +更新関数
-//--------------------------------------------------
 void GameObjectManager::Update()
 {
 	// 追加待ち配列の中身を追加
@@ -99,9 +127,6 @@ void GameObjectManager::Update()
 
 
 
-//--------------------------------------------------
-// +描画関数
-//--------------------------------------------------
 void GameObjectManager::Draw()
 {
 	draw_manager_.Draw();
@@ -109,23 +134,17 @@ void GameObjectManager::Draw()
 
 
 
-//--------------------------------------------------
-// +全ゲームオブジェクトリセット関数
-//--------------------------------------------------
-void GameObjectManager::AllReset()
+void GameObjectManager::Reset()
 {
 	// 登録されているオブジェクトを全てリセット
-	for (unsigned i = 0; i < all_game_object_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < all_game_object_.getEndIndex(); i++)
 	{
-		all_game_object_.GetArrayObject(i)->Reset();
+		all_game_object_.getObject(i)->Reset();
 	}
 }
 
 
 
-//--------------------------------------------------
-// +ゲームオブジェクト基底クラスの追加関数
-//--------------------------------------------------
 void GameObjectManager::AddGameObjectBaseToArray(GameObjectBase* game_object)
 {
 	await_add_.AddToArray(game_object);
@@ -133,9 +152,6 @@ void GameObjectManager::AddGameObjectBaseToArray(GameObjectBase* game_object)
 
 
 
-//--------------------------------------------------
-// +ゲームオブジェクト基底クラスの解放関数
-//--------------------------------------------------
 void GameObjectManager::ReleaseGameObjectBaseFromArray(GameObjectBase* game_object)
 {
 	// ゲームオブジェクト終了処理
@@ -145,7 +161,7 @@ void GameObjectManager::ReleaseGameObjectBaseFromArray(GameObjectBase* game_obje
 	ReleaseComponentFromManager(game_object);
 
 	// 参照データ解放
-	reference_manager_.ReleaseReference(game_object);
+	reference_manager_.Release(game_object);
 
 	// 解放待ち配列に追加
 	await_release_.AddToArray(game_object);
@@ -153,126 +169,111 @@ void GameObjectManager::ReleaseGameObjectBaseFromArray(GameObjectBase* game_obje
 
 
 
-//--------------------------------------------------
-// -追加待ち配列の中身を追加関数
-//--------------------------------------------------
 void GameObjectManager::AddContentsOfAwaitAddArray()
 {
 	// 追加待ちがあるかどうか
-	if (await_add_.GetEndPointer() <= 0) return;
+	if (await_add_.getEndIndex() <= 0) return;
 
 	// 追加
-	for (unsigned i = 0; i < await_add_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < await_add_.getEndIndex(); i++)
 	{
 		// 全体配列へ追加
-		all_game_object_.AddToArray(await_add_.GetArrayObject(i));
+		all_game_object_.AddToArray(await_add_.getObject(i));
 
 		// コンポーネントをマネージャにセット
-		SetComponentToManager(await_add_.GetArrayObject(i));
+		AddComponentToManager(await_add_.getObject(i));
 	}
 
 	// 追加待ち配列をリセット
-	await_add_.ResetArray();
+	await_add_.Reset();
 }
 
 
 
-//--------------------------------------------------
-// -解放待ち配列の中身を解放関数
-//--------------------------------------------------
 void GameObjectManager::ReleaseContentsOfAwaitReleaseArray()
 {
 	// 解放待ちがあるかどうか
-	if (await_release_.GetEndPointer() <= 0) return;
+	if (await_release_.getEndIndex() <= 0) return;
 
 	// 解放とソート
-	for (unsigned i = 0; i < await_release_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < await_release_.getEndIndex(); i++)
 	{
 		// 全体配列からの消去
-		all_game_object_.DeleteFromArrayAndSortArray(await_release_.GetArrayObject(i));
+		all_game_object_.DeleteFromArrayAndSort(await_release_.getObject(i));
 
 		// オブジェクトの消去
-		GameObjectBase* temp = await_release_.GetArrayObject(i);
+		GameObjectBase* temp = await_release_.getObject(i);
 		SafeRelease::Normal(&temp);
 	}
 
 	// 解放待ち配列をリセット
-	await_release_.ResetArray();
+	await_release_.Reset();
 }
 
 
 
-//--------------------------------------------------
-// -コンポーネントをマネージャーへ設定関数
-//--------------------------------------------------
-void GameObjectManager::SetComponentToManager(GameObjectBase* game_object)
+void GameObjectManager::AddComponentToManager(GameObjectBase* game_object)
 {
-	if (game_object->GetUpdate() != nullptr)
+	if (game_object->getpUpdate() != nullptr)
 	{
-		update_manager_.AddUpdateBaseToArray(game_object->GetUpdate());
+		update_manager_.AddUpdateBaseToArray(game_object->getpUpdate());
 	}
 
-	if (game_object->GetDraw() != nullptr)
+	if (game_object->getpDraw() != nullptr)
 	{
-		draw_manager_.AddDrawBaseToArray(game_object->GetDraw());
+		draw_manager_.AddDrawBaseToArray(game_object->getpDraw());
 	}
 
-	if (game_object->GetCollision() != nullptr)
+	if (game_object->getpCollision() != nullptr)
 	{
-		collision_manager_.AddCollisionBaseToArray(game_object->GetCollision());
+		collision_manager_.AddCollisionBaseToArray(game_object->getpCollision());
 	}
 }
 
 
 
-//--------------------------------------------------
-// -コンポーネントをマネージャーから解放関数
-//--------------------------------------------------
 void GameObjectManager::ReleaseComponentFromManager(GameObjectBase* game_object)
 {
-	if (game_object->GetUpdate() != nullptr)
+	if (game_object->getpUpdate() != nullptr)
 	{
-		update_manager_.ReleaseUpdateBaseFromArray(game_object->GetUpdate());
+		update_manager_.ReleaseUpdateBaseFromArray(game_object->getpUpdate());
 	}
 
-	if (game_object->GetDraw() != nullptr)
+	if (game_object->getpDraw() != nullptr)
 	{
-		draw_manager_.ReleaseDrawBaseFromArray(game_object->GetDraw());
+		draw_manager_.ReleaseDrawBaseFromArray(game_object->getpDraw());
 	}
 
-	if (game_object->GetCollision() != nullptr)
+	if (game_object->getpCollision() != nullptr)
 	{
-		collision_manager_.ReleaseCollisionBaseFromArray(game_object->GetCollision());
+		collision_manager_.ReleaseCollisionBaseFromArray(game_object->getpCollision());
 	}
 }
 
 
 
-//--------------------------------------------------
-// -全ゲームオブジェクトの解放関数
-//--------------------------------------------------
-void GameObjectManager::AllRelease()
+void GameObjectManager::Release()
 {
 	// 参照データを全て消去
-	reference_manager_.AllReleaseReference();
+	reference_manager_.AllRelease();
 
 	// 解放待ち配列の中身を解放
 	ReleaseContentsOfAwaitReleaseArray();
 
 	// 残りのオブジェクトを全て解放待ちに登録
-	for (unsigned i = 0; i < await_add_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < await_add_.getEndIndex(); i++)
 	{
-		ReleaseGameObjectBaseFromArray(await_add_.GetArrayObject(i));
+		ReleaseGameObjectBaseFromArray(await_add_.getObject(i));
 	}
 
-	for (unsigned i = 0; i < all_game_object_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < all_game_object_.getEndIndex(); i++)
 	{
-		ReleaseGameObjectBaseFromArray(all_game_object_.GetArrayObject(i));
+		ReleaseGameObjectBaseFromArray(all_game_object_.getObject(i));
 	}
 
 	// 解放待ち配列の中身を解放
 	ReleaseContentsOfAwaitReleaseArray();
 	
 	// オブジェクト配列をリセット
-	all_game_object_.ResetArray();
+	all_game_object_.Reset();
 }

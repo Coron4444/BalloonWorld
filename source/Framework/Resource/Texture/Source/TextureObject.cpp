@@ -10,10 +10,10 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "TextureObject.h"
+#include "../TextureObject.h"
 #include "../TextureManager/TextureManager.h"
 
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 
