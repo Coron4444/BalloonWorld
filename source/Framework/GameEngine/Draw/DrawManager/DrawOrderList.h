@@ -12,8 +12,10 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <ComponentManager/DrawManager/ShaderManager/ShaderManager.h>
-#include <Flag/Flag.h>
+#include "Shader/ShaderManager/ShaderManager.h"
+
+#include <Tool/BitFlag.h>
+
 
 
 //************************************************************														   
@@ -49,12 +51,11 @@ public:
 // 変数
 //====================
 private:
+	DrawType draw_type_ = DrawType::OPACITY;			//!< 描画の種類
+	DrawType temp_change_draw_type_ = DrawType::NONE;	//!< 一時変更描画の種類
 	ShaderManager::VertexShaderType vertex_shader_type_ = ShaderManager::VertexShaderType::FIXED;	//!< 頂点シェーダータイプ
 	ShaderManager::PixelShaderType pixel_shader_type_ = ShaderManager::PixelShaderType::FIXED;		//!< ピクセルシェーダータイプ
-
-	DrawType draw_type_ = DrawType::OPACITY;	//!< 描画の種類
-
-	Flag render_target_flag_;			//!< レンダーターゲットフラグ
+	BitFlag render_target_flag_;		//!< レンダーターゲットフラグ
 	bool is_billboard_ = false;			//!< ビルボードフラグ
 	bool is_lighting_ = true;			//!< ラインティングフラグ
 	int layer_num_ = 0;					//!< レイヤー数
@@ -111,14 +112,30 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void setDrawType(DrawType value);
+
+	//----------------------------------------
+	//! @brief 一時変更描画タイプ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval DrawType 一時変更描画タイプ
+	//----------------------------------------
+	DrawType getTempChangeDrawType();
+
+	//----------------------------------------
+	//! @brief 一時変更描画タイプ設定関数
+	//! @details
+	//! @param value 一時変更描画タイプ
+	//! @retval void なし
+	//----------------------------------------
+	void setTempChangeDrawType(DrawType value);
 	
 	//----------------------------------------
 	//! @brief レンダーターゲットフラグ取得関数
 	//! @details
 	//! @param void なし
-	//! @retval Flag* レンダーターゲットフラグ
+	//! @retval BitFlag* レンダーターゲットフラグ
 	//----------------------------------------
-	Flag* getpRenderTargetFlag();
+	BitFlag* getpRenderTargetFlag();
 	
 	//----------------------------------------
 	//! @brief ビルボードフラグ取得関数

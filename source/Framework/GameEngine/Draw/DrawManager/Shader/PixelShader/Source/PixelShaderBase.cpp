@@ -10,9 +10,9 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "PixelShaderBase.h"
+#include "../PixelShaderBase.h"
 
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 

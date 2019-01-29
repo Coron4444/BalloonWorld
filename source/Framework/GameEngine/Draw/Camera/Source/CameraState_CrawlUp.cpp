@@ -10,9 +10,8 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "CameraState_CrawlUp.h"
-
-#include <Keyboard\Keyboard.h>
+#include "../CameraState_CrawlUp.h"
+#include "../../../Input/Keyboard.h"
 
 
 
@@ -49,12 +48,12 @@ void CameraState_CrawlUp::Update()
 	if (GetKeyboardPress(DIK_I))
 	{
 		// 前ベクトルを保存
-		Vector3D temp_vector = *getpCamera()->getpAxis()->GetForawrd();
+		Vector3D temp_vector = *getpCamera()->getpAxis()->getpForawrd();
 
 		// 地をはう準備
 		temp_vector.y = 0.0f;
 
-		temp_vector.AnyLengthVector(TRANSLATION_SPEED);
+		temp_vector.ChangeAnyLength(TRANSLATION_SPEED);
 
 		*getpCamera()->getpPositon() += temp_vector;
 		*getpCamera()->getpLookAtPoint() += temp_vector;
@@ -64,12 +63,12 @@ void CameraState_CrawlUp::Update()
 	if (GetKeyboardPress(DIK_K))
 	{
 		// 前ベクトルを保存
-		Vector3D temp_vector = *getpCamera()->getpAxis()->GetForawrd();
+		Vector3D temp_vector = *getpCamera()->getpAxis()->getpForawrd();
 
 		// 地をはう準備
 		temp_vector.y = 0.0f;
 
-		temp_vector.AnyLengthVector(TRANSLATION_SPEED);
+		temp_vector.ChangeAnyLength(TRANSLATION_SPEED);
 
 		*getpCamera()->getpPositon() += -temp_vector;
 		*getpCamera()->getpLookAtPoint() += -temp_vector;
@@ -80,12 +79,12 @@ void CameraState_CrawlUp::Update()
 	if (GetKeyboardPress(DIK_L))
 	{
 		// 右ベクトルを保存
-		Vector3D temp_vector = *getpCamera()->getpAxis()->GetRight();
+		Vector3D temp_vector = *getpCamera()->getpAxis()->getpRight();
 
 		// 地をはう準備
 		temp_vector.y = 0.0f;
 
-		temp_vector.AnyLengthVector(TRANSLATION_SPEED);
+		temp_vector.ChangeAnyLength(TRANSLATION_SPEED);
 
 		*getpCamera()->getpPositon() += temp_vector;
 		*getpCamera()->getpLookAtPoint() += temp_vector;
@@ -96,12 +95,12 @@ void CameraState_CrawlUp::Update()
 	if (GetKeyboardPress(DIK_J))
 	{
 		// 右ベクトルを保存
-		Vector3D temp_vector = *getpCamera()->getpAxis()->GetRight();
+		Vector3D temp_vector = *getpCamera()->getpAxis()->getpRight();
 
 		// 地をはう準備
 		temp_vector.y = 0.0f;
 
-		temp_vector.AnyLengthVector(TRANSLATION_SPEED);
+		temp_vector.ChangeAnyLength(TRANSLATION_SPEED);
 
 		*getpCamera()->getpPositon() += -temp_vector;
 		*getpCamera()->getpLookAtPoint() += -temp_vector;
@@ -115,20 +114,20 @@ void CameraState_CrawlUp::Update()
 		Vector3D temp_vector = *getpCamera()->getpLookAtPoint() 
 			- *getpCamera()->getpPositon();
 		
-		getpCamera()->getpAxis()->SetForward(temp_vector);
+		getpCamera()->getpAxis()->setForward(temp_vector);
 
 		// 軸ベクトルの回転
-		getpCamera()->getpAxis()->RotationAxis_PivotY(D3DXToRadian(ROTATION_SPEED));
+		getpCamera()->getpAxis()->RotationAxisY(D3DXToRadian(ROTATION_SPEED));
 
 		// 注視点の作成
-		float length = temp_vector.GetLength();
-		temp_vector = *getpCamera()->getpAxis()->GetForawrd();
-		temp_vector.AnyLengthVector(length);
+		float length = temp_vector.getLength();
+		temp_vector = *getpCamera()->getpAxis()->getpForawrd();
+		temp_vector.ChangeAnyLength(length);
 
 		*getpCamera()->getpLookAtPoint() = *getpCamera()->getpPositon() + temp_vector;
 
 		// 前ベクトルを作成( 前ベクトル = 視点座標 - カメラ座標 )
-		getpCamera()->getpAxis()->SetForward(*getpCamera()->getpLookAtPoint() 
+		getpCamera()->getpAxis()->setForward(*getpCamera()->getpLookAtPoint() 
 											 - *getpCamera()->getpPositon());
 	}
 
@@ -140,20 +139,20 @@ void CameraState_CrawlUp::Update()
 		Vector3D temp_vector = *getpCamera()->getpLookAtPoint() 
 			- *getpCamera()->getpPositon();
 		
-		getpCamera()->getpAxis()->SetForward(temp_vector);
+		getpCamera()->getpAxis()->setForward(temp_vector);
 
 		// 軸ベクトルの回転
-		getpCamera()->getpAxis()->RotationAxis_PivotY(D3DXToRadian(-ROTATION_SPEED));
+		getpCamera()->getpAxis()->RotationAxisY(D3DXToRadian(-ROTATION_SPEED));
 
 		// 注視点の作成
-		float length = temp_vector.GetLength();
-		temp_vector = *getpCamera()->getpAxis()->GetForawrd();
-		temp_vector.AnyLengthVector(length);
+		float length = temp_vector.getLength();
+		temp_vector = *getpCamera()->getpAxis()->getpForawrd();
+		temp_vector.ChangeAnyLength(length);
 
 		*getpCamera()->getpLookAtPoint() = *getpCamera()->getpPositon() + temp_vector;
 
 		// 前ベクトルを作成( 前ベクトル = 視点座標 - カメラ座標 )
-		getpCamera()->getpAxis()->SetForward(*getpCamera()->getpLookAtPoint() 
+		getpCamera()->getpAxis()->setForward(*getpCamera()->getpLookAtPoint() 
 											 - *getpCamera()->getpPositon());
 	}
 
@@ -164,20 +163,20 @@ void CameraState_CrawlUp::Update()
 		Vector3D temp_vector = *getpCamera()->getpLookAtPoint() 
 			- *getpCamera()->getpPositon();
 		
-		getpCamera()->getpAxis()->SetForward(temp_vector);
+		getpCamera()->getpAxis()->setForward(temp_vector);
 
 		// 軸ベクトルの回転
-		getpCamera()->getpAxis()->RotationAxis_PivotRight(D3DXToRadian(-ROTATION_SPEED));
+		getpCamera()->getpAxis()->RotationAxisRight(D3DXToRadian(-ROTATION_SPEED));
 
 		// 注視点の作成
-		float length = temp_vector.GetLength();
-		temp_vector = *getpCamera()->getpAxis()->GetForawrd();
-		temp_vector.AnyLengthVector(length);
+		float length = temp_vector.getLength();
+		temp_vector = *getpCamera()->getpAxis()->getpForawrd();
+		temp_vector.ChangeAnyLength(length);
 
 		*getpCamera()->getpLookAtPoint() = *getpCamera()->getpPositon() + temp_vector;
 
 		// 前ベクトルを作成( 前ベクトル = 視点座標 - カメラ座標 )
-		getpCamera()->getpAxis()->SetForward(*getpCamera()->getpLookAtPoint() 
+		getpCamera()->getpAxis()->setForward(*getpCamera()->getpLookAtPoint() 
 											 - *getpCamera()->getpPositon());
 	}
 
@@ -188,20 +187,20 @@ void CameraState_CrawlUp::Update()
 		Vector3D temp_vector = *getpCamera()->getpLookAtPoint() 
 			- *getpCamera()->getpPositon();
 	
-		getpCamera()->getpAxis()->SetForward(temp_vector);
+		getpCamera()->getpAxis()->setForward(temp_vector);
 
 		// 軸ベクトルの回転
-		getpCamera()->getpAxis()->RotationAxis_PivotRight(D3DXToRadian(ROTATION_SPEED));
+		getpCamera()->getpAxis()->RotationAxisRight(D3DXToRadian(ROTATION_SPEED));
 
 		// 注視点の作成
-		float length = temp_vector.GetLength();
-		temp_vector = *getpCamera()->getpAxis()->GetForawrd();
-		temp_vector.AnyLengthVector(length);
+		float length = temp_vector.getLength();
+		temp_vector = *getpCamera()->getpAxis()->getpForawrd();
+		temp_vector.ChangeAnyLength(length);
 
 		*getpCamera()->getpLookAtPoint() = *getpCamera()->getpPositon() + temp_vector;
 
 		// 前ベクトルを作成( 前ベクトル = 視点座標 - カメラ座標 )
-		getpCamera()->getpAxis()->SetForward(*getpCamera()->getpLookAtPoint() 
+		getpCamera()->getpAxis()->setForward(*getpCamera()->getpLookAtPoint() 
 											 - *getpCamera()->getpPositon());
 	}
 
@@ -213,20 +212,20 @@ void CameraState_CrawlUp::Update()
 		Vector3D temp_vector = *getpCamera()->getpPositon() 
 			- *getpCamera()->getpLookAtPoint();
 		
-		getpCamera()->getpAxis()->SetForward(temp_vector);
+		getpCamera()->getpAxis()->setForward(temp_vector);
 
 		// 軸ベクトルの回転
-		getpCamera()->getpAxis()->RotationAxis_PivotY(D3DXToRadian(ROTATION_SPEED));
+		getpCamera()->getpAxis()->RotationAxisY(D3DXToRadian(ROTATION_SPEED));
 
 		// カメラ座標の作成
-		float length = temp_vector.GetLength();
-		temp_vector = *getpCamera()->getpAxis()->GetForawrd();
-		temp_vector.AnyLengthVector(length);
+		float length = temp_vector.getLength();
+		temp_vector = *getpCamera()->getpAxis()->getpForawrd();
+		temp_vector.ChangeAnyLength(length);
 
 		*getpCamera()->getpPositon() = *getpCamera()->getpLookAtPoint() + temp_vector;
 
 		// 前ベクトルを作成( 前ベクトル = 視点座標 - カメラ座標 )
-		getpCamera()->getpAxis()->SetForward(*getpCamera()->getpLookAtPoint() 
+		getpCamera()->getpAxis()->setForward(*getpCamera()->getpLookAtPoint() 
 											 - *getpCamera()->getpPositon());
 	}
 	
@@ -237,20 +236,20 @@ void CameraState_CrawlUp::Update()
 		Vector3D temp_vector = *getpCamera()->getpPositon() 
 			- *getpCamera()->getpLookAtPoint();
 		
-		getpCamera()->getpAxis()->SetForward(temp_vector);
+		getpCamera()->getpAxis()->setForward(temp_vector);
 
 		// 軸ベクトルの回転
-		getpCamera()->getpAxis()->RotationAxis_PivotY(D3DXToRadian(-ROTATION_SPEED));
+		getpCamera()->getpAxis()->RotationAxisY(D3DXToRadian(-ROTATION_SPEED));
 
 		// カメラ座標の作成
-		float length = temp_vector.GetLength();
-		temp_vector = *getpCamera()->getpAxis()->GetForawrd();
-		temp_vector.AnyLengthVector(length);
+		float length = temp_vector.getLength();
+		temp_vector = *getpCamera()->getpAxis()->getpForawrd();
+		temp_vector.ChangeAnyLength(length);
 
 		*getpCamera()->getpPositon() = *getpCamera()->getpLookAtPoint()  + temp_vector;
 
 		// 前ベクトルを作成( 前ベクトル = 視点座標 - カメラ座標 )
-		getpCamera()->getpAxis()->SetForward(*getpCamera()->getpLookAtPoint() 
+		getpCamera()->getpAxis()->setForward(*getpCamera()->getpLookAtPoint() 
 											 - *getpCamera()->getpPositon());
 	}
 }

@@ -10,19 +10,17 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "CollisionManager.h"
-#include "CollisionPairCheck/CollisionPairCheck.h"
-#include "CollisionCalculation/CollisionCalculation.h"
-#include <Component/Collision/CollisionBase/CollisionBase.h>
-#include <Component/Collision/CollisionBase/CollisionObject/CollisionObject.h>
+#include "../CollisionManager.h"
+#include "../CollisionPairCheck.h"
+#include "../CollisionCalculation.h"
+#include "../../CollisionBase.h"
+#include "../../CollisionObject.h"
+#include "../../../GameObject/GameObjectBase.h"
 
-#include <GameObjectBase/GameObjectBase.h>
-#include <Polygon\MeshPlanePolygon\MeshPlanePolygon.h>
-
-#include <SafeRelease/SafeRelease.h>
-
-#include <ImGUI\imgui.h>
-#include <ImGUI\imgui_impl_dx9.h>
+#include <Resource/Polygon/MeshPlanePolygon.h>
+#include <Tool/SafeRelease.h>
+#include <Tool/Debug/ImGUI/imgui.h>
+#include <Tool/Debug/ImGUI/imgui_impl_dx9.h>
 
 
 
@@ -61,12 +59,12 @@ void CollisionManager::Uninit()
 
 	// 8分木
 	SafeRelease::PlusUninit(&liner_octree_);
-	for (unsigned i = 0; i < all_collision_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < all_collision_.getEndIndex(); i++)
 	{
-		for (unsigned j = 0; j < all_collision_.GetArrayObject(i)->getEndIndexOfArray(); j++)
+		for (unsigned j = 0; j < all_collision_.getObject(i)->getEndIndexOfArray(); j++)
 		{
 			// 移動オブジェクトはリストから一時的に離脱する
-			ObjectOfTree<CollisionObjects*>* temp = all_collision_.GetArrayObject(i)
+			ObjectOfTree<CollisionObjects*>* temp = all_collision_.getObject(i)
 				->getpCollisionObjects(j)->getpObjectOfTree();
 			temp->DeleteFromList();
 			SafeRelease::Normal(&temp);
@@ -75,13 +73,13 @@ void CollisionManager::Uninit()
 	collision_objects_list_.clear();
 
 	// 追加待ち配列のリセット
-	await_add_.ResetArray();
+	await_add_.Reset();
 
 	// 解放待ち配列のリセット
-	await_release_.ResetArray();
+	await_release_.Reset();
 
 	// 全衝突配列のリセット
-	all_collision_.ResetArray();
+	all_collision_.Reset();
 }
 
 
@@ -92,12 +90,12 @@ void CollisionManager::UninitWhenChangeScene()
 	ReleaseContentsOfAwaitReleaseArray();
 
 	// 8分木
-	for (unsigned i = 0; i < all_collision_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < all_collision_.getEndIndex(); i++)
 	{
-		for (unsigned j = 0; j < all_collision_.GetArrayObject(i)->getEndIndexOfArray(); j++)
+		for (unsigned j = 0; j < all_collision_.getObject(i)->getEndIndexOfArray(); j++)
 		{
 			// 移動オブジェクトはリストから一時的に離脱する
-			ObjectOfTree<CollisionObjects*>* temp = all_collision_.GetArrayObject(i)
+			ObjectOfTree<CollisionObjects*>* temp = all_collision_.getObject(i)
 				->getpCollisionObjects(j)->getpObjectOfTree();
 			temp->DeleteFromList();
 			SafeRelease::Normal(&temp);
@@ -106,13 +104,13 @@ void CollisionManager::UninitWhenChangeScene()
 	collision_objects_list_.clear();
 
 	// 追加待ち配列のリセット
-	await_add_.ResetArray();
+	await_add_.Reset();
 
 	// 解放待ち配列のリセット
-	await_release_.ResetArray();
+	await_release_.Reset();
 
 	// 全衝突配列のリセット
-	all_collision_.ResetArray();
+	all_collision_.Reset();
 }
 
 
@@ -126,20 +124,20 @@ void CollisionManager::Update()
 	ReleaseContentsOfAwaitReleaseArray();
 
 	// 衝突クラスの更新
-	for (unsigned i = 0; i < all_collision_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < all_collision_.getEndIndex(); i++)
 	{
-		all_collision_.GetArrayObject(i)->Update();
+		all_collision_.getObject(i)->Update();
 	}
 
 	// 8分木の処理
 	if (is_octree_)
 	{
-		for (unsigned i = 0; i < all_collision_.GetEndPointer(); i++)
+		for (unsigned i = 0; i < all_collision_.getEndIndex(); i++)
 		{
-			for (unsigned j = 0; j < all_collision_.GetArrayObject(i)->getEndIndexOfArray(); j++)
+			for (unsigned j = 0; j < all_collision_.getObject(i)->getEndIndexOfArray(); j++)
 			{
 				// 移動オブジェクトはリストから一時的に離脱する
-				ObjectOfTree<CollisionObjects*>* temp = all_collision_.GetArrayObject(i)
+				ObjectOfTree<CollisionObjects*>* temp = all_collision_.getObject(i)
 					->getpCollisionObjects(j)->getpObjectOfTree();
 				temp->DeleteFromList();
 
@@ -174,10 +172,10 @@ void CollisionManager::Update()
 
 	// デバッグ
 #ifdef _DEBUG
-	for (unsigned i = 0; i < all_collision_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < all_collision_.getEndIndex(); i++)
 	{
-		if (all_collision_.GetArrayObject(i) == nullptr) continue;
-		all_collision_.GetArrayObject(i)->DebugDisplay();
+		if (all_collision_.getObject(i) == nullptr) continue;
+		all_collision_.getObject(i)->DebugDisplay();
 	}
 #endif
 }
@@ -199,26 +197,26 @@ void CollisionManager::OverwriteArrayCollisionBase(GameObjectBase* game_object,
 	if (new_collision == nullptr)
 	{
 		// 古い衝突基底クラスの解放
-		ReleaseCollisionBaseFromArray(game_object->GetCollision());
+		ReleaseCollisionBaseFromArray(game_object->getpCollision());
 
 		// 古い衝突基底クラスの消去
-		CollisionBase* temp = game_object->GetCollision();
+		CollisionBase* temp = game_object->getpCollision();
 		SafeRelease::Normal(&temp);
 
 		// nullptrの代入
-		game_object->SetCollision(new_collision);
+		game_object->setCollision(new_collision);
 	}
 	else
 	{
 		// 配列の上書き
-		all_collision_.OverwriteArray(game_object->GetCollision(), new_collision);
+		all_collision_.OverwriteArray(game_object->getpCollision(), new_collision);
 
 		// 古い衝突基底クラスの消去
-		CollisionBase* temp = game_object->GetCollision();
+		CollisionBase* temp = game_object->getpCollision();
 		SafeRelease::Normal(&temp);
 
 		// 新規コンポーネントの初期化
-		game_object->SetCollision(new_collision);
+		game_object->setCollision(new_collision);
 		*new_collision->getpGameObject() = *game_object;
 		new_collision->Init();
 	}
@@ -245,18 +243,18 @@ void CollisionManager::ReleaseCollisionBaseFromArray(CollisionBase* collision)
 void CollisionManager::AddContentsOfAwaitAddArray()
 {
 	// 追加待ちがあるかどうか
-	if (await_add_.GetEndPointer() <= 0) return;
+	if (await_add_.getEndIndex() <= 0) return;
 
 	// 追加
-	for (unsigned i = 0; i < await_add_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < await_add_.getEndIndex(); i++)
 	{
-		all_collision_.AddToArray(await_add_.GetArrayObject(i));
+		all_collision_.AddToArray(await_add_.getObject(i));
 
 		// 8分木への追加
-		for (unsigned j = 0; j < await_add_.GetArrayObject(i)->getEndIndexOfArray(); j++)
+		for (unsigned j = 0; j < await_add_.getObject(i)->getEndIndexOfArray(); j++)
 		{
 			ObjectOfTree<CollisionObjects*>* temp = new ObjectOfTree<CollisionObjects*>;
-			CollisionObjects* temp_objects = await_add_.GetArrayObject(i)->getpCollisionObjects(j);
+			CollisionObjects* temp_objects = await_add_.getObject(i)->getpCollisionObjects(j);
 			temp->setObject(temp_objects);
 			temp_objects->setObjectOfTree(temp);
 			liner_octree_->Add(temp, temp_objects->getOctreeAABB()->getpMin(),
@@ -265,7 +263,7 @@ void CollisionManager::AddContentsOfAwaitAddArray()
 	}
 
 	// 追加待ち配列をリセット
-	await_add_.ResetArray();
+	await_add_.Reset();
 }
 
 
@@ -273,17 +271,17 @@ void CollisionManager::AddContentsOfAwaitAddArray()
 void CollisionManager::ReleaseContentsOfAwaitReleaseArray()
 {
 	// 解放待ちがあるかどうか
-	if (await_release_.GetEndPointer() <= 0) return;
+	if (await_release_.getEndIndex() <= 0) return;
 
 	// 解放とソート
-	for (unsigned i = 0; i < await_release_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < await_release_.getEndIndex(); i++)
 	{
 		// 全体配列から解放
-		all_collision_.DeleteFromArrayAndSortArray(await_release_.GetArrayObject(i));
+		all_collision_.DeleteFromArrayAndSort(await_release_.getObject(i));
 	}
 
 	// 解放待ち配列をリセット
-	await_release_.ResetArray();
+	await_release_.Reset();
 }
 
 
@@ -328,65 +326,65 @@ void CollisionManager::CollisionDetermination()
 void CollisionManager::OldCollisionDetermination()
 {
 	// 衝突基底クラスが2つ以上かどうか
-	if (all_collision_.GetEndPointer() < 2) return;
+	if (all_collision_.getEndIndex() < 2) return;
 
 	// 衝突判定
-	for (unsigned i = 0; i < all_collision_.GetEndPointer() - 1; i++)
+	for (unsigned i = 0; i < all_collision_.getEndIndex() - 1; i++)
 	{
 		// 衝突基底クラスがあるかどうか
-		if (all_collision_.GetArrayObject(i) == nullptr) continue;
+		if (all_collision_.getObject(i) == nullptr) continue;
 
 		// 総当たり
-		for (unsigned j = i + 1; j < all_collision_.GetEndPointer(); j++)
+		for (unsigned j = i + 1; j < all_collision_.getEndIndex(); j++)
 		{
 			// 衝突基底クラスがあるかどうか
-			if (all_collision_.GetArrayObject(j) == nullptr) continue;
+			if (all_collision_.getObject(j) == nullptr) continue;
 
 			// 判定をする組み合わせか？
 			if (is_pair_check_)
 			{
-				if (!CollisionPairCheck::IsCheck(all_collision_.GetArrayObject(i),
-												 all_collision_.GetArrayObject(j))) continue;
+				if (!CollisionPairCheck::IsCheck(all_collision_.getObject(i),
+												 all_collision_.getObject(j))) continue;
 			}
 
-			for (unsigned a = 0; a < all_collision_.GetArrayObject(i)->getEndIndexOfArray(); a++)
+			for (unsigned a = 0; a < all_collision_.getObject(i)->getEndIndexOfArray(); a++)
 			{
 				// 複数衝突オブジェクトが判定するかどうか
-				if (!all_collision_.GetArrayObject(i)->getpCollisionObjects(a)
+				if (!all_collision_.getObject(i)->getpCollisionObjects(a)
 					->getIsJudgment()) continue;
 
-				for (unsigned b = 0; b < all_collision_.GetArrayObject(i)->getEndIndexOfArray(); b++)
+				for (unsigned b = 0; b < all_collision_.getObject(i)->getEndIndexOfArray(); b++)
 				{
 					// 複数衝突オブジェクトが判定するかどうか
-					if (!all_collision_.GetArrayObject(j)->getpCollisionObjects(b)
+					if (!all_collision_.getObject(j)->getpCollisionObjects(b)
 						->getIsJudgment()) continue;
 
 					// 実際の判定処理
-					ActualCalculation(all_collision_.GetArrayObject(i)->getpCollisionObjects(a),
-									  all_collision_.GetArrayObject(j)->getpCollisionObjects(b));
+					ActualCalculation(all_collision_.getObject(i)->getpCollisionObjects(a),
+									  all_collision_.getObject(j)->getpCollisionObjects(b));
 
 					// 各コンポーネントの衝突オブジェクトの判定をリセット
-					if (all_collision_.GetArrayObject(i)->getpCollisionObjects(a)
+					if (all_collision_.getObject(i)->getpCollisionObjects(a)
 						->getIsJudgment())
 					{
-						all_collision_.GetArrayObject(i)->getpCollisionObjects(a)
+						all_collision_.getObject(i)->getpCollisionObjects(a)
 							->ResetHitDataAllCollisionObject();
 					}
 					else
 					{
-						a = all_collision_.GetArrayObject(i)->getEndIndexOfArray();
+						a = all_collision_.getObject(i)->getEndIndexOfArray();
 						break;
 					}
 
-					if (all_collision_.GetArrayObject(j)->getpCollisionObjects(b)
+					if (all_collision_.getObject(j)->getpCollisionObjects(b)
 						->getIsJudgment())
 					{
-						all_collision_.GetArrayObject(j)->getpCollisionObjects(b)
+						all_collision_.getObject(j)->getpCollisionObjects(b)
 							->ResetHitDataAllCollisionObject();
 					}
 					else
 					{
-						a = all_collision_.GetArrayObject(i)->getEndIndexOfArray();
+						a = all_collision_.getObject(i)->getEndIndexOfArray();
 						break;
 					}
 
@@ -402,27 +400,27 @@ void CollisionManager::CollisionGround()
 {
 	if (ground_polygon_ == nullptr) return;
 
-	for (unsigned i = 0; i < all_collision_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < all_collision_.getEndIndex(); i++)
 	{
 		// 地面との判定をするかどうか
-		if (!all_collision_.GetArrayObject(i)->getIsJudgmentGround()) continue;
+		if (!all_collision_.getObject(i)->getIsJudgmentGround()) continue;
 
 		// 地面高さ取得
-		float position_y = ground_polygon_->GetHeight(*all_collision_.GetArrayObject(i)
-													  ->getpGameObject()->GetTransform()
-													  ->GetPosition());
+		float position_y = ground_polygon_->getHeight(*all_collision_.getObject(i)
+													  ->getpGameObject()->getpTransform()
+													  ->getpPosition());
 
 		// 衝突してるか
-		if (position_y >= all_collision_.GetArrayObject(i)
-			->getpGameObject()->GetTransform()->GetPosition()->y)
+		if (position_y >= all_collision_.getObject(i)
+			->getpGameObject()->getpTransform()->getpPosition()->y)
 		{
 			// 地面との衝突処理
-			all_collision_.GetArrayObject(i)->HitGround(position_y);
+			all_collision_.getObject(i)->HitGround(position_y);
 		}
 		else
 		{
 			// 地面との非衝突処理
-			all_collision_.GetArrayObject(i)->NotHitGround(position_y);
+			all_collision_.getObject(i)->NotHitGround(position_y);
 		}
 	}
 }
@@ -608,8 +606,8 @@ bool CollisionManager::SortCollisionCalculation(CollisionObject* collision_objec
 						(Plane*)collision_object0->getpCollisionShape(),
 																					(Plane*)collision_object1->getpCollisionShape());
 
-					collision_object0->getpHitVector()->ResetVector();
-					collision_object1->getpHitVector()->ResetVector();
+					collision_object0->getpHitVector()->Reset();
+					collision_object1->getpHitVector()->Reset();
 
 					break;
 				}
@@ -644,8 +642,8 @@ bool CollisionManager::SortCollisionCalculation(CollisionObject* collision_objec
 					is_hit = CollisionCalculation::CollisionJudgmentOfPlaneAndTriangle((Plane*)collision_object0->getpCollisionShape(),
 						(Triangle*)collision_object1->getpCollisionShape());
 
-					collision_object0->getpHitVector()->ResetVector();
-					collision_object1->getpHitVector()->ResetVector();
+					collision_object0->getpHitVector()->Reset();
+					collision_object1->getpHitVector()->Reset();
 
 					break;
 				}
@@ -833,8 +831,8 @@ bool CollisionManager::SortCollisionCalculation(CollisionObject* collision_objec
 					is_hit = CollisionCalculation::CollisionJudgmentOfPlaneAndTriangle((Plane*)collision_object1->getpCollisionShape(),
 						(Triangle*)collision_object0->getpCollisionShape());
 
-					collision_object0->getpHitVector()->ResetVector();
-					collision_object1->getpHitVector()->ResetVector();
+					collision_object0->getpHitVector()->Reset();
+					collision_object1->getpHitVector()->Reset();
 
 					break;
 				}
@@ -869,8 +867,8 @@ bool CollisionManager::SortCollisionCalculation(CollisionObject* collision_objec
 					is_hit = CollisionCalculation::CollisionJudgmentOfTriangleAndTriangle((Triangle*)collision_object0->getpCollisionShape(),
 						(Triangle*)collision_object1->getpCollisionShape());
 
-					collision_object0->getpHitVector()->ResetVector();
-					collision_object1->getpHitVector()->ResetVector();
+					collision_object0->getpHitVector()->Reset();
+					collision_object1->getpHitVector()->Reset();
 
 					break;
 				}
@@ -907,7 +905,7 @@ void CollisionManager::DebugDisplay()
 	}
 	else
 	{
-		ImGui::Text("CombiNum : %06d", (all_collision_.GetEndPointer()) * (all_collision_.GetEndPointer() - 1) / 2);
+		ImGui::Text("CombiNum : %06d", (all_collision_.getEndIndex()) * (all_collision_.getEndIndex() - 1) / 2);
 	}
 
 	// 8分木の有無

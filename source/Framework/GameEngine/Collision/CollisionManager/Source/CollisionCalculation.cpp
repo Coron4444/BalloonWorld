@@ -10,18 +10,24 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "CollisionCalculation.h"
+#include "../CollisionCalculation.h"
+#include "../../CollisionShape/AABB.h"
+#include "../../CollisionShape/Capsule.h"
+#include "../../CollisionShape/Cylinder.h"
+#include "../../CollisionShape/OBB.h"
+#include "../../CollisionShape/Plane.h"
+#include "../../CollisionShape/LineSegment.h"
+#include "../../CollisionShape/Sphere.h"
+#include "../../CollisionShape/Triangle.h"
 
-#include "../../../Component/Collision/CollisionBase/CollisionObject/CollisionShapeBase/AABB/AABB.h"
-#include "../../../Component/Collision/CollisionBase/CollisionObject/CollisionShapeBase/Capsule/Capsule.h"
-#include "../../../Component/Collision/CollisionBase/CollisionObject/CollisionShapeBase/Cylinder/Cylinder.h"
-#include "../../../Component/Collision/CollisionBase/CollisionObject/CollisionShapeBase/OBB/OBB.h"
-#include "../../../Component/Collision/CollisionBase/CollisionObject/CollisionShapeBase/Plane/Plane.h"
-#include "../../../Component/Collision/CollisionBase/CollisionObject/CollisionShapeBase/LineSegment/LineSegment.h"
-#include "../../../Component/Collision/CollisionBase/CollisionObject/CollisionShapeBase/Sphere/Sphere.h"
-#include "../../../Component/Collision/CollisionBase/CollisionObject/CollisionShapeBase/Triangle/Triangle.h"
+#include <Tool/QuadraticEquation.h>
 
-#include <QuadraticEquation\QuadraticEquation.h>
+
+
+//****************************************
+// 定数定義
+//****************************************
+const float CollisionCalculation::ERROR_RANGE = 0.000001f;
 
 
 
@@ -79,8 +85,8 @@ bool CollisionCalculation::CollisionJudgmentOfLineSegmentAndSphere(Vector3D* hit
 	if (!is_calculable) return false;
 
 	// 線分内の1番手前の比率を求める
-	float ratio = CalculateTheRatioOfTheFrontInTheLineSegment(equation.t0_,
-															  equation.t1_);
+	float ratio = CalculateTheRatioOfTheFrontInTheLineSegment(equation.getAnswer0(),
+															  equation.getAnswer1());
 	if (!DetermineWhetherTheRatioIsBetweenZeroAndOne(ratio)) return false;
 
 	// 衝突点の算出
@@ -99,11 +105,12 @@ bool CollisionCalculation::CollisionJudgmentOfLineSegmentAndPlane(Vector3D* hit_
 																  Plane* plane)
 {
 	// 表裏チェック
-	float temp_dot = line_segment->getpVector()->CreateVectorDot(*plane->getpNormal());
+
+	float temp_dot = Vector3D::CreateDot(line_segment->getpVector(), plane->getpNormal());
 	if (temp_dot >= 0.0f) return false;
 
 	// 線分始点と平面との距離を算出
-	float length = Length_Point(plane, line_segment->getpPosition());
+	float length = CalculateTheShortestDistanceBetweenPlaneAndPoint(plane, line_segment->getpPosition());
 
 	// 距離と線分の比較
 	if (DetermineIfItIsLongerThanVector(line_segment->getpVector(),
@@ -119,7 +126,7 @@ bool CollisionCalculation::CollisionJudgmentOfLineSegmentAndPlane(Vector3D* hit_
 	// 衝突点の算出
 	if (hit_point)
 	{
-		line_segment->getpVector()->AnyLengthVector(length);
+		line_segment->getpVector()->ChangeAnyLength(length);
 		*hit_point = line_segment->getAddVectorToPosition();
 	}
 	return true;
@@ -136,7 +143,7 @@ bool CollisionCalculation::CollisionJudgmentOfLineSegmentAndTriangle(Vector3D* h
 	if (!CollisionJudgmentOfLineSegmentAndPlane(&temp_position, line_segment, triangle->getpPlane())) return false;
 
 	// 交点が3角形内かの判定
-	if (!CheckInnerPoint(triangle, &temp_position)) return false;
+	if (!IsPointsAreIncludedInThePlane(triangle, &temp_position)) return false;
 
 	// 衝突点の算出
 	if (hit_point)
@@ -162,8 +169,8 @@ bool CollisionCalculation::CollisionJudgmentOfLineSegmentAndCylinder(Vector3D* h
 	if (!is_calculable) return false;
 
 	// 線分内の1番手前の比率を求める
-	float ratio = CalculateTheRatioOfTheFrontInTheLineSegment(equation.t0_,
-															  equation.t1_);
+	float ratio = CalculateTheRatioOfTheFrontInTheLineSegment(equation.getAnswer0(),
+															  equation.getAnswer1());
 	if (!DetermineWhetherTheRatioIsBetweenZeroAndOne(ratio)) return false;
 
 	// 衝突点の算出
@@ -188,9 +195,9 @@ bool CollisionCalculation::CollisionJudgmentOfLineSegmentAndCapsule(Vector3D* hi
 												capsule->getpSphere0()))
 	{
 		// 鈍角かどうか
-		if (IsObtuseAngle(*capsule->getpSphere1()->getpPosition(),
-						  *capsule->getpSphere0()->getpPosition(),
-						  temp_hit_position))
+		if (IsObtuseAnglePoint3(capsule->getpSphere1()->getpPosition(),
+										  capsule->getpSphere0()->getpPosition(),
+										  &temp_hit_position))
 		{
 			// 衝突点の算出
 			if (hit_point)
@@ -205,9 +212,9 @@ bool CollisionCalculation::CollisionJudgmentOfLineSegmentAndCapsule(Vector3D* hi
 	if (CollisionJudgmentOfLineSegmentAndSphere(&temp_hit_position, line_segment, capsule->getpSphere1()))
 	{
 		// 鈍角かどうか
-		if (IsObtuseAngle(*capsule->getpSphere0()->getpPosition(),
-						  *capsule->getpSphere1()->getpPosition(),
-						  temp_hit_position))
+		if (IsObtuseAnglePoint3(capsule->getpSphere0()->getpPosition(),
+										  capsule->getpSphere1()->getpPosition(),
+										  &temp_hit_position))
 		{
 			// 衝突点の算出
 			if (hit_point)
@@ -223,14 +230,14 @@ bool CollisionCalculation::CollisionJudgmentOfLineSegmentAndCapsule(Vector3D* hi
 												  capsule->getpCylinder()))
 	{
 		// 全て鋭角かどうか
-		if (!IsObtuseAngle(*capsule->getpSphere0()->getpPosition(),
-						   *capsule->getpSphere1()->getpPosition(),
-						   temp_hit_position)) return false;
-		if (!IsObtuseAngle(*capsule->getpSphere1()->getpPosition(),
-						   *capsule->getpSphere0()->getpPosition(),
-						   temp_hit_position)) return false;
+		if (!IsObtuseAnglePoint3(capsule->getpSphere0()->getpPosition(),
+										   capsule->getpSphere1()->getpPosition(),
+										   &temp_hit_position)) return false;
+		if (!IsObtuseAnglePoint3(capsule->getpSphere1()->getpPosition(),
+										   capsule->getpSphere0()->getpPosition(),
+										   &temp_hit_position)) return false;
 
-		// 衝突点の算出
+						// 衝突点の算出
 		if (hit_point)
 		{
 			*hit_point = temp_hit_position;
@@ -257,8 +264,8 @@ bool CollisionCalculation::CollisionJudgmentOfSphereAndSphere(Vector3D* hit_vect
 	// 衝突ベクトルの算出
 	if (hit_vector)
 	{
-		float length = two_radius - center_to_center_vector.GetLength();
-		*hit_vector = center_to_center_vector.AnyLengthVector(length);
+		float length = two_radius - center_to_center_vector.getLength();
+		*hit_vector = *center_to_center_vector.ChangeAnyLength(length);
 	}
 	return true;
 }
@@ -270,15 +277,15 @@ bool CollisionCalculation::CollisionJudgmentOfSphereAndPlane(Vector3D* hit_vecto
 															 Plane* plane)
 {
 	// 平面と球の中心距離と半径との判定
-	float temp_length = Length_Point(plane, sphere->getpPosition());
+	float temp_length = CalculateTheShortestDistanceBetweenPlaneAndPoint(plane, sphere->getpPosition());
 	if (!(sphere->getRadius() > temp_length)) return false;
 
 	// 衝突ベクトルの算出
 	if (hit_vector)
 	{
-		temp_length = sphere->getRadius() - Length_Point(plane, sphere->getpPosition());
+		temp_length = sphere->getRadius() - CalculateTheShortestDistanceBetweenPlaneAndPoint(plane, sphere->getpPosition());
 		Vector3D temp_vector = *plane->getpNormal();
-		*hit_vector = temp_vector.AnyLengthVector(temp_length);
+		*hit_vector = *temp_vector.ChangeAnyLength(temp_length);
 	}
 	return true;
 }
@@ -325,10 +332,11 @@ bool CollisionCalculation::CollisionJudgmentOfSphereAndCapsule(Vector3D* hit_vec
 {
 	// 球の中心とカプセルとの距離を算出
 	Vec3  intersection_point;
-	float temp_t;
-	float length = ShortestDistancePointAndLineSegment(&intersection_point, &temp_t,
-													   sphere->getpPosition(),
-													   capsule->getpLineSegment());
+	float ratio;
+	float length = CalculateTheShortestDistanceBetweenPointsAndLineSegments(&intersection_point,
+																			&ratio,
+																			sphere->getpPosition(),
+																			capsule->getpLineSegment());
 
 	// 距離と2つの半径との合計の比較
 	float two_radius = sphere->getRadius() + capsule->getRadius();
@@ -339,7 +347,7 @@ bool CollisionCalculation::CollisionJudgmentOfSphereAndCapsule(Vector3D* hit_vec
 	{
 		length = two_radius - length;
 		*hit_vector = *sphere->getpPosition() - intersection_point;
-		hit_vector->AnyLengthVector(length);
+		hit_vector->ChangeAnyLength(length);
 	}
 
 	return true;
@@ -352,17 +360,17 @@ bool CollisionCalculation::CollisionJudgmentOfSphereAndOBB(Vector3D* hit_vector,
 														   OBB* obb)
 {
 	// 球とOBBの最短距離のベクトルを算出
-	Vector3D temp_vector = ShortestDistance_OBB_Point(obb, sphere->getpPosition());
+	Vector3D temp_vector = CalculateTheShortestDistanceVectorBetweenOBBAndPoint(obb, sphere->getpPosition());
 
 	// 距離と半径の比較
-	if (FroatTruncation(temp_vector.GetLength()) > sphere->getRadius()) return false;
+	if (FroatTruncation(temp_vector.getLength()) > sphere->getRadius()) return false;
 
 	// 衝突ベクトルの算出
 	if (hit_vector)
 	{
-		float length = sphere->getRadius() - temp_vector.GetLength();
+		float length = sphere->getRadius() - temp_vector.getLength();
 		*hit_vector = temp_vector;
-		hit_vector->AnyLengthVector(length);
+		hit_vector->ChangeAnyLength(length);
 	}
 	return true;
 }
@@ -390,13 +398,13 @@ bool CollisionCalculation::CollisionJudgmentOfPlaneAndPlane(LineSegment* hit_lin
 bool CollisionCalculation::CollisionJudgmentOfPlaneAndTriangle(Plane* plane,
 															   Triangle* triangle)
 {
-	int side0 = (int)Length_Point(plane, triangle->getpPoint0());
-	int side1 = (int)Length_Point(plane, triangle->getpPoint1());
+	int side0 = (int)CalculateTheShortestDistanceBetweenPlaneAndPoint(plane, triangle->getpPoint0());
+	int side1 = (int)CalculateTheShortestDistanceBetweenPlaneAndPoint(plane, triangle->getpPoint1());
 
 	// この2点が両方同じ側か
 	if ((side0 && !side1) || (!side0 && side1)) return true;
 
-	int side2 = (int)Length_Point(plane, triangle->getpPoint2());
+	int side2 = (int)CalculateTheShortestDistanceBetweenPlaneAndPoint(plane, triangle->getpPoint2());
 
 	// この2点が両方同じ側か
 	if ((side1 && !side2) || (!side1 && side2)) return true;
@@ -412,7 +420,7 @@ bool CollisionCalculation::CollisionJudgmentOfTriangleAndTriangle(Triangle* tria
 	bool is_hit_segment_one = false;
 
 	// 片方の三角形がもう片方を貫いているか
-	if (DetermineIfATrianglePenetrates(&is_hit_segment_one, 
+	if (DetermineIfATrianglePenetrates(&is_hit_segment_one,
 									   triangle0, triangle1)) return true;
 
 	// もう片方をチェック
@@ -434,13 +442,13 @@ bool CollisionCalculation::CollisionJudgmentOfCapsuleAndCapsule(Vector3D* hit_ve
 {
 	Vector3D intersection_point0;
 	Vector3D intersection_point1;
-	float t0;
-	float t1;
+	float ratio0;
+	float ratio1;
 
 	// 線分間の最短距離と半径の合計を算出
-	float length = ShortestDistance_Segment_Segment(&intersection_point0, &intersection_point1, &t0,
-													&t1, capsule0->getpLineSegment(),
-													capsule1->getpLineSegment());
+	float length = CalculateTheShortestDistanceBetweenLineSegmentAndLineSegment(&intersection_point0, &intersection_point1, &ratio0,
+																				&ratio1, capsule0->getpLineSegment(),
+																				capsule1->getpLineSegment());
 	float center_to_center_length = capsule0->getRadius() + capsule1->getRadius();
 
 	// 長さの比較
@@ -455,16 +463,15 @@ bool CollisionCalculation::CollisionJudgmentOfCapsuleAndCapsule(Vector3D* hit_ve
 
 		length = center_to_center_length - length;
 
-		if (temp_vector.GetLengthSquare() > 0.0f)
+		if (temp_vector.getLengthSquare() > 0.0f)
 		{
-			*hit_vector = temp_vector.AnyLengthVector(length);
+			*hit_vector = *temp_vector.ChangeAnyLength(length);
 		}
 		else
 		{
-			*hit_vector = active_vector.AnyLengthVector(length);
+			*hit_vector = *active_vector.ChangeAnyLength(length);
 		}
 	}
-
 	return true;
 }
 
@@ -477,22 +484,22 @@ bool CollisionCalculation::CollisionJudgmentOfOBBAndOBB(Vector3D* hit_vector,
 	hit_vector = hit_vector;
 
 	// 分離軸の確保(軸方向の半分の長さ)
-	Vector3D obb0_separation_axis0 = obb0->getForwardVectorHalf();
-	Vector3D obb0_separation_axis1 = obb0->getRightVectorHalf();
-	Vector3D obb0_separation_axis2 = obb0->getUpVectorHalf();
+	Vector3D obb0_separation_axis0 = obb0->getForwardHalf();
+	Vector3D obb0_separation_axis1 = obb0->getRightHalf();
+	Vector3D obb0_separation_axis2 = obb0->getUpHalf();
 
-	Vector3D obb1_separation_axis0 = obb1->getForwardVectorHalf();
-	Vector3D obb1_separation_axis1 = obb1->getRightVectorHalf();
-	Vector3D obb1_separation_axis2 = obb1->getUpVectorHalf();
+	Vector3D obb1_separation_axis0 = obb1->getForwardHalf();
+	Vector3D obb1_separation_axis1 = obb1->getRightHalf();
+	Vector3D obb1_separation_axis2 = obb1->getUpHalf();
 
 	// 分離軸単位ベクトルの確保(軸ベクトル)
-	Vector3D obb0_normal_separation_axis0 = *obb0->getpAxisVector()->GetForawrd();
-	Vector3D obb0_normal_separation_axis1 = *obb0->getpAxisVector()->GetRight();
-	Vector3D obb0_normal_separation_axis2 = *obb0->getpAxisVector()->GetUp();
+	Vector3D obb0_normal_separation_axis0 = *obb0->getpAxis()->getpForawrd();
+	Vector3D obb0_normal_separation_axis1 = *obb0->getpAxis()->getpRight();
+	Vector3D obb0_normal_separation_axis2 = *obb0->getpAxis()->getpUp();
 
-	Vector3D obb1_normal_separation_axis0 = *obb1->getpAxisVector()->GetForawrd();
-	Vector3D obb1_normal_separation_axis1 = *obb1->getpAxisVector()->GetRight();
-	Vector3D obb1_normal_separation_axis2 = *obb1->getpAxisVector()->GetUp();
+	Vector3D obb1_normal_separation_axis0 = *obb1->getpAxis()->getpForawrd();
+	Vector3D obb1_normal_separation_axis1 = *obb1->getpAxis()->getpRight();
+	Vector3D obb1_normal_separation_axis2 = *obb1->getpAxis()->getpUp();
 
 	// 両者の中心間の距離
 	Vector3D interval_vector = *obb0->getpPosition() - *obb1->getpPosition();
@@ -674,7 +681,7 @@ bool CollisionCalculation::DetermineWhetherItIsParallelFromSlope(float slope0,
 bool CollisionCalculation::DetermineIfItIsLongerThanVector(Vector3D* vector,
 														   float length)
 {
-	return vector->GetLengthSquare() <= (length * length);
+	return vector->getLengthSquare() <= (length * length);
 }
 
 
@@ -722,7 +729,7 @@ bool CollisionCalculation::DetermineWhetherTheSphereIsSinkingInside(Sphere* sphe
 bool CollisionCalculation::DetermineWhetherThePlaneIsParallel(Plane* plane0,
 															  Plane* plane1)
 {
-	float temp_dot = plane0->getpNormal()->CreateVectorDot(*plane1->getpNormal());
+	float temp_dot = Vector3D::CreateDot(plane0->getpNormal(), plane1->getpNormal());
 	if ((temp_dot >= 1.0f) || (temp_dot <= -1.0f)) return false;
 	return true;
 }
@@ -843,13 +850,13 @@ bool CollisionCalculation::QuadraticEquationCalculationForLineSegmentsAndSpheres
 
 
 
-	equation->a_ = line_segment->getpVector()->GetSquareX()
-		+ line_segment->getpVector()->GetSquareY()
-		+ line_segment->getpVector()->GetSquareZ();
-	equation->b_ = 2.0f * (line_segment->getpVector()->x
-						   * temp_x + line_segment->getpVector()->y
-						   * temp_y + line_segment->getpVector()->z * temp_z);
-	equation->c_ = (temp_x * temp_x) + (temp_y * temp_y) + (temp_z * temp_z)
+	*equation->getpA() = line_segment->getpVector()->getSquareX()
+		+ line_segment->getpVector()->getSquareY()
+		+ line_segment->getpVector()->getSquareZ();
+	*equation->getpB() = 2.0f * (line_segment->getpVector()->x
+								 * temp_x + line_segment->getpVector()->y
+								 * temp_y + line_segment->getpVector()->z * temp_z);
+	*equation->getpC() = (temp_x * temp_x) + (temp_y * temp_y) + (temp_z * temp_z)
 		- (sphere->getRadius() * sphere->getRadius());
 
 	// 解の公式を解く
@@ -869,20 +876,20 @@ bool CollisionCalculation::QuadraticEquationCalculationForLineSegmentsAndCylinde
 	Vector3D tempS = *cylinder->getpVector();
 
 	// 各種内積値の算出
-	float dot_vector_vector = line_segment->getpVector()->CreateVectorDot(*line_segment->getpVector());
-	float dot_tempS_vector = tempS.CreateVectorDot(*line_segment->getpVector());
-	float dot_position0_vector = cylinder->getpPosition()->CreateVectorDot(*line_segment->getpVector());
-	float dot_tempS_tempS = tempS.CreateVectorDot(tempS);
-	float dot_position0_tempS = cylinder->getpPosition()->CreateVectorDot(tempS);
-	float dot_position0_position0 = cylinder->getpPosition()->CreateVectorDot(*cylinder->getpPosition());
+	float dot_vector_vector = Vector3D::CreateDot(line_segment->getpVector(), line_segment->getpVector());
+	float dot_tempS_vector = Vector3D::CreateDot(&tempS, line_segment->getpVector());
+	float dot_position0_vector = Vector3D::CreateDot(cylinder->getpPosition(), line_segment->getpVector());
+	float dot_tempS_tempS = Vector3D::CreateDot(&tempS, &tempS);
+	float dot_position0_tempS = Vector3D::CreateDot(cylinder->getpPosition(), &tempS);
+	float dot_position0_position0 = Vector3D::CreateDot(cylinder->getpPosition(), cylinder->getpPosition());
 
 	// 円柱が成立しない
 	if (dot_tempS_tempS == 0.0f) return false;
 
 
-	equation->a_ = dot_vector_vector - (dot_tempS_vector * dot_tempS_vector) / dot_tempS_tempS;
-	equation->b_ = dot_position0_vector - (dot_position0_tempS * dot_tempS_vector) / dot_tempS_tempS;
-	equation->c_ = dot_position0_position0 - (dot_position0_tempS * dot_position0_tempS) / dot_tempS_tempS;
+	*equation->getpA() = dot_vector_vector - (dot_tempS_vector * dot_tempS_vector) / dot_tempS_tempS;
+	*equation->getpB() = dot_position0_vector - (dot_position0_tempS * dot_tempS_vector) / dot_tempS_tempS;
+	*equation->getpC() = dot_position0_position0 - (dot_position0_tempS * dot_position0_tempS) / dot_tempS_tempS;
 
 
 	// 解の公式を解く
@@ -924,8 +931,9 @@ float CollisionCalculation::CalculateTheDistanceTheLineSegmentReachesThePlane(Ve
 																			  float length)
 {
 	// 線分ベクトル(正規化済み)と平面法線の反対からcosΘを求める
-	segment_vector.CreateNormalize();
-	float cos_theta = segment_vector.CreateVectorDot((*plane->getpNormal() * -1));
+	segment_vector.ChangeNormalize();
+	Vector3D inverse_normal = *plane->getpNormal() * -1;
+	float cos_theta = Vector3D::CreateDot(&segment_vector, &inverse_normal);
 
 	// 線分が平面に届く距離を算出
 	return length / cos_theta;
@@ -938,7 +946,8 @@ void CollisionCalculation::CalculationOfCollisionLineSegment(LineSegment* hit_li
 															 Plane* plane1)
 {
 	// 外積により交差するベクトルを作成
-	*hit_line_segment->getpVector() = plane0->getpNormal()->CreateVectorCross(*plane1->getpNormal());
+
+	*hit_line_segment->getpVector() = Vector3D::CreateCross(plane0->getpNormal(), plane1->getpNormal());
 
 	// 交差線分の始点を算出
 	if (hit_line_segment->getpVector()->z != 0.0f)
@@ -992,10 +1001,11 @@ float CollisionCalculation::CalculateTheLengthOfTheProjectionLineSegment(Vector3
 																		 Vector3D* other_separation_axis1,
 																		 Vector3D* other_separation_axis2)
 {
-	float r1 = fabsf(my_separation_axis->CreateVectorDot(*other_separation_axis0));
-	float r2 = fabsf(my_separation_axis->CreateVectorDot(*other_separation_axis1));
+
+	float r1 = fabsf(Vector3D::CreateDot(my_separation_axis, other_separation_axis0));
+	float r2 = fabsf(Vector3D::CreateDot(my_separation_axis, other_separation_axis1));
 	float r3 = (other_separation_axis2 != nullptr)
-		? fabsf(my_separation_axis->CreateVectorDot(*other_separation_axis2)) : 0;
+		? fabsf(Vector3D::CreateDot(my_separation_axis, other_separation_axis2)) : 0;
 
 	return r1 + r2 + r3;
 }
@@ -1009,12 +1019,12 @@ bool CollisionCalculation::DeterminationOfCollisionWithOrdinarySeparationAxis(Ve
 																			  Vector3D* other_separation_axis2,
 																			  Vector3D* interval_vector)
 {
-	float r_a = my_separation_axis->GetLength();
+	float r_a = my_separation_axis->getLength();
 	float r_b = CalculateTheLengthOfTheProjectionLineSegment(my_separation_axis_normal,
 															 other_separation_axis0,
 															 other_separation_axis1,
 															 other_separation_axis2);
-	float length = fabsf(interval_vector->CreateVectorDot(*my_separation_axis_normal));
+	float length = fabsf(Vector3D::CreateDot(interval_vector, my_separation_axis_normal));
 	if (length > (r_a + r_b)) return false;
 	return true;
 }
@@ -1029,15 +1039,16 @@ bool CollisionCalculation::DeterminationOfCollisionWithOuterAxisSeparationAxis(V
 																			   Vector3D* other_separation_axis1,
 																			   Vector3D* interval_vector)
 {
-	Vector3D temp_cross = my_separation_axis_normal
-		->CreateVectorCross(*other_separation_axis_normal);
+
+	Vector3D temp_cross = Vector3D::CreateCross(my_separation_axis_normal,
+												other_separation_axis_normal);
 	float r_a = CalculateTheLengthOfTheProjectionLineSegment(&temp_cross,
 															 my_separation_axis0,
 															 my_separation_axis1);
 	float r_b = CalculateTheLengthOfTheProjectionLineSegment(&temp_cross,
 															 other_separation_axis0,
 															 other_separation_axis1);
-	float length = fabsf(interval_vector->CreateVectorDot(temp_cross));
+	float length = fabsf(Vector3D::CreateDot(interval_vector, &temp_cross));
 	if (length > (r_a + r_b)) return false;
 	return true;
 }
@@ -1086,4 +1097,417 @@ float CollisionCalculation::CalculateTheShortestDistanceBetweenAABBAndAPoint(AAB
 																			  point->z);
 
 	return (float)sqrt(length);
+}
+
+
+
+bool CollisionCalculation::IsParallelLine(LineSegment* line0, LineSegment* line1)
+{
+	// 2直線が平行かどうか( 外積の長さが0かどうか )
+	Vector3D temp_vector = Vector3D::CreateCross(line0->getpVector(),
+												 line1->getpVector());
+
+	// 誤差範囲かどうか
+	bool is_error_range = ((-ERROR_RANGE < temp_vector.getLengthSquare())
+						   && (temp_vector.getLengthSquare() < ERROR_RANGE));
+	if (is_error_range) return true;
+	return false;
+}
+
+
+
+void CollisionCalculation::Clamp0_1(float* ratio)
+{
+	if (*ratio <= 0.0f)
+	{
+		*ratio = 0.0f;
+	}
+	else if (*ratio >= 1.0f)
+	{
+		*ratio = 1.0f;
+	}
+}
+
+
+
+float CollisionCalculation::CalculateTheShortestDistanceBetweenPointsAndLine(Vec3* intersection_point,
+																			 float* ratio,
+																			 Vector3D* point,
+																			 LineSegment* line)
+{
+	// 点と線分の始点のベクトル
+	Vector3D temp_vector = *point - *line->getpPosition();
+
+	// 線分が0以上かどうか
+	if (line->getpVector()->getLengthSquare() > 0.0f)
+	{
+		// 交点のtの算出
+
+		*ratio = Vector3D::CreateDot(line->getpVector(), &temp_vector)
+			/ Vector3D::CreateDot(line->getpVector(), line->getpVector());
+	}
+	else
+	{
+		*ratio = 0.0f;
+	}
+
+	// 交点のhの算出
+	*intersection_point = *line->getpPosition() + *line->getpVector() * (*ratio);
+
+	// 距離を返す
+	temp_vector = *intersection_point - *point;
+	return temp_vector.getLength();
+}
+
+
+
+float CollisionCalculation::CalculateTheShortestDistanceBetweenPointsAndLineSegments(Vec3* intersection_point,
+																					 float* ratio,
+																					 Vector3D* point,
+																					 LineSegment* line_segment)
+{
+	// 線分の末端を保存
+	Vec3 segment_position1 = line_segment->getAddVectorToPosition();
+
+	// 直線と点の最短距離を算出
+	float length = CalculateTheShortestDistanceBetweenPointsAndLine(intersection_point, ratio, point, line_segment);
+
+	// 線分の始点より点が外側の時
+	if (IsObtuseAnglePoint3(point, line_segment->getpPosition(),
+									  &segment_position1))
+	{
+		*intersection_point = *line_segment->getpPosition();
+
+		Vector3D temp_vector = *line_segment->getpPosition() - *point;
+
+		return temp_vector.getLength();
+	}
+
+	// 線分の終点より点が外側の時
+	if (IsObtuseAnglePoint3(point, &segment_position1,
+									  line_segment->getpPosition()))
+	{
+		*intersection_point = segment_position1;
+
+		Vector3D temp_vector = *line_segment->getpPosition() - *point;
+
+		return temp_vector.getLength();
+	}
+
+	return length;
+}
+
+
+
+float CollisionCalculation::CalculateTheShortestDistanceBetweenLineAndLine(Vec3* intersection_point0,
+																		   Vec3* intersection_point1,
+																		   float* ratio0,
+																		   float* ratio1,
+																		   LineSegment* line0,
+																		   LineSegment* line1)
+{
+	// 2直線が平行
+	if (IsParallelLine(line0, line1))
+	{
+		// 直線1と直線0の座標との最短距離を算出
+		float length = CalculateTheShortestDistanceBetweenPointsAndLine(intersection_point1, ratio1,
+																		line0->getpPosition(),
+																		line1);
+		*intersection_point0 = *line0->getpPosition();
+		*ratio0 = 0.0f;
+
+		return length;
+	}
+
+	// 平行でない
+	Vector3D between_position_vector = *line0->getpPosition()
+		- *line1->getpPosition();
+	float dot_vector0_vector1 = Vector3D::CreateDot(line0->getpVector(),
+													line1->getpVector());
+	float dot_vector0_vector0 = line0->getpVector()->getLengthSquare();
+	float dot_vector1_vector1 = line1->getpVector()->getLengthSquare();
+	float dot_vector0_position = Vector3D::CreateDot(line0->getpVector(),
+													 &between_position_vector);
+	float dot_vector1_position = Vector3D::CreateDot(line1->getpVector(),
+													 &between_position_vector);
+
+	*ratio0 = (dot_vector0_vector1 * dot_vector1_position - dot_vector1_vector1 * dot_vector0_position) / (dot_vector0_vector0 * dot_vector1_vector1 - dot_vector0_vector1 * dot_vector0_vector1);
+	*intersection_point0 = *line0->getpPosition() + *line0->getpVector() * (*ratio0);
+
+	Vector3D temp_vector = *intersection_point0 - *line1->getpPosition();
+
+	*ratio1 = Vector3D::CreateDot(line1->getpVector(), &temp_vector)
+		/ dot_vector1_vector1;
+
+	*intersection_point1 = *line1->getpPosition() + *line1->getpVector() * (*ratio1);
+
+	temp_vector = *intersection_point1 - *intersection_point0;
+
+	return temp_vector.getLength();
+}
+
+
+
+float CollisionCalculation::CalculateTheShortestDistanceBetweenLineSegmentAndLineSegment(Vec3* intersection_point0,
+																						 Vec3* intersection_point1,
+																						 float* ratio0,
+																						 float* ratio1,
+																						 LineSegment* line_segment0,
+																						 LineSegment* line_segment1)
+{
+	// segment0が縮退している
+	if (line_segment0->getpPosition()->getLengthSquare() <= 0.0f)
+	{
+		if (line_segment1->getpVector()->getLengthSquare() <= 0.0f)
+		{
+			// 点と点の距離
+			Vector3D temp_vector = *line_segment1->getpPosition()
+				- *line_segment0->getpPosition();
+			*intersection_point0 = *line_segment0->getpPosition();
+			*intersection_point1 = *line_segment1->getpPosition();
+			*ratio0 = 0.0f;
+			*ratio1 = 0.0f;
+
+			return temp_vector.getLength();
+		}
+		else
+		{
+			// segment0の座標とsegment1の最短距離
+			float length = CalculateTheShortestDistanceBetweenPointsAndLineSegments(intersection_point1, ratio1, line_segment0->getpPosition(), line_segment1);
+			*intersection_point0 = *line_segment0->getpPosition();
+			*ratio0 = 0.0f;
+			Clamp0_1(ratio1);
+			return length;
+		}
+	}
+
+
+	// segment1が縮退してる
+	if (line_segment1->getpVector()->getLengthSquare() <= 0.0f)
+	{
+		// segment0の座標とsegment1の最短距離
+		float length = CalculateTheShortestDistanceBetweenPointsAndLineSegments(intersection_point0, ratio0, line_segment1->getpPosition(), line_segment0);
+		*intersection_point1 = *line_segment1->getpPosition();
+		*ratio1 = 0.0f;
+		Clamp0_1(ratio0);
+		return length;
+	}
+
+	// 線分同士
+	// 平行の時
+	if (IsParallelLine(line_segment0, line_segment1))
+	{
+		// 垂線の端点の1つを仮決定
+		float length = CalculateTheShortestDistanceBetweenPointsAndLineSegments(intersection_point1, ratio1, line_segment0->getpPosition(), line_segment1);
+		*intersection_point0 = *line_segment0->getpPosition();
+		*ratio0 = 0.0f;
+
+		// t1が収まってい居れば終了
+		bool within_range = *ratio1 >= 0.0f && *ratio1 <= 1.0f;
+		if (within_range) return length;
+
+	}
+	else
+	{
+		// 2直線の最短距離を求めて、t0,t1を仮決定
+		float length = CalculateTheShortestDistanceBetweenLineAndLine(intersection_point0, intersection_point1, ratio0, ratio1, line_segment0, line_segment1);
+
+		// 線分内に収まっていれば終了
+		bool within_range = *ratio0 >= 0.0f && *ratio0 <= 1.0f && *ratio1 >= 0.0f && *ratio1 <= 1.0f;
+		if (within_range) return length;
+	}
+
+	// segment0側のt0をクランプし、垂線を降ろす
+	Clamp0_1(ratio0);
+	*intersection_point0 = *line_segment0->getpPosition() + *line_segment0->getpVector() * (*ratio0);
+	Vector3D temp_point = *intersection_point0;
+	float length = CalculateTheShortestDistanceBetweenPointsAndLineSegments(intersection_point1, ratio1, &temp_point, line_segment1);
+
+	// 降ろした垂線が線分内にあるか
+	bool within_range = *ratio1 >= 0.0f && *ratio1 <= 1.0f;
+	if (within_range) return length;
+
+	// segment1をクランプし、垂線を降ろす
+	Clamp0_1(ratio1);
+	*intersection_point1 = *line_segment1->getpPosition() + *line_segment1->getpVector() * (*ratio1);
+	temp_point = *intersection_point1;
+	length = CalculateTheShortestDistanceBetweenPointsAndLineSegments(intersection_point0, ratio0, &temp_point, line_segment0);
+
+	// 降ろした垂線が線分内にあるか
+	within_range = *ratio0 >= 0.0f && *ratio0 <= 1.0f;
+	if (within_range) return length;
+
+	// 2直線の端点の距離が最短と判明
+	Clamp0_1(ratio0);
+	*intersection_point0 = *line_segment0->getpPosition() + *line_segment0->getpVector() * (*ratio0);
+	Vector3D temp_vector = *intersection_point1 - *intersection_point0;
+
+	return temp_vector.getLength();
+}
+
+
+
+void CollisionCalculation::CalculationOfProtrudingVector(Vector3D* overhang_vector,
+														 Vector3D* obb_position,
+														 Vector3D obb_vector_half,
+														 Vector3D obb_axis,
+														 Vector3D* point)
+{
+	// 長さが0以上か
+	float temp_length = obb_vector_half.getLength();
+	if (temp_length <= 0.0f) return;
+
+	// 点から直線に垂線を降ろしたときの交点の位置を表す値(tとする)を算出
+	Vector3D temp_vector = *point - *obb_position;
+	float t = Vector3D::CreateDot(&temp_vector, &obb_axis) / temp_length;
+
+	// はみ出した部分のベクトルを算出
+	if (t < -1.0f)
+	{
+		*overhang_vector += (t + 1.0f) * (obb_vector_half);
+	}
+	else if (t > 1.0f)
+	{
+		*overhang_vector += (t - 1.0f) * (obb_vector_half);
+	}
+}
+
+
+
+Vector3D CollisionCalculation::CalculateTheShortestDistanceVectorBetweenOBBAndPoint(OBB* obb, Vector3D* point)
+{
+	// OBBまでの最短距離を求めるベクトル
+	Vector3D temp_vector;
+
+	// 各軸に対してはみ出し部分を算出
+	CalculationOfProtrudingVector(&temp_vector,
+								  obb->getpPosition(),
+								  obb->getForwardHalf(),
+								  *obb->getpAxis()->getpForawrd(),
+								  point);
+
+	CalculationOfProtrudingVector(&temp_vector,
+								  obb->getpPosition(),
+								  obb->getUpHalf(),
+								  *obb->getpAxis()->getpUp(),
+								  point);
+
+	CalculationOfProtrudingVector(&temp_vector,
+								  obb->getpPosition(),
+								  obb->getRightHalf(),
+								  *obb->getpAxis()->getpRight(),
+								  point);
+	return temp_vector;
+}
+
+
+
+float CollisionCalculation::CalculateTheShortestDistanceBetweenPlaneAndPoint(Plane* plane, Vec3* point)
+{
+	return (plane->getpNormal()->x * point->x)
+		+ (plane->getpNormal()->y * point->y)
+		+ (plane->getpNormal()->z * point->z) + plane->getAdjustmetD();
+}
+
+
+
+bool CollisionCalculation::IsThePointOnTheFrontSideOfThePlane(Plane* plane, Vec3* point)
+{
+	if (CalculateTheShortestDistanceBetweenPlaneAndPoint(plane, point) < 0.0f) return false;
+	return true;
+}
+
+
+
+bool CollisionCalculation::IsPointsAreIncludedInThePlane(Triangle* triangle, Vec3* point)
+{
+	// 任意の点から各頂点へのベクトルを算出
+	Vector3D vector0 = *triangle->getpPoint0() - *point;
+	Vector3D vector1 = *triangle->getpPoint1() - *point;
+	Vector3D vector2 = *triangle->getpPoint2() - *point;
+
+
+	// 3角形の辺をなぞるベクトルを算出
+	Vector3D edge_vector0 = *triangle->getpPoint0() - *triangle->getpPoint1();
+	Vector3D edge_vector1 = *triangle->getpPoint1() - *triangle->getpPoint2();
+	Vector3D edge_vector2 = *triangle->getpPoint2() - *triangle->getpPoint0();
+
+
+	// 外積の算出
+	Vector3D cross_vector0 = Vector3D::CreateCross(&vector0, &edge_vector0);
+	Vector3D cross_vector1 = Vector3D::CreateCross(&vector1, &edge_vector1);
+	Vector3D cross_vector2 = Vector3D::CreateCross(&vector2, &edge_vector2);
+
+	int zero_vector = 0;
+
+	if (cross_vector0.getLengthSquare() == 0.0f)
+	{
+		zero_vector++;
+	}
+
+	if (cross_vector1.getLengthSquare() == 0.0f)
+	{
+		zero_vector++;
+	}
+
+	if (cross_vector2.getLengthSquare() == 0.0f)
+	{
+		zero_vector++;
+	}
+
+	if (zero_vector >= 2)
+	{
+		return true;
+	}
+	else if (zero_vector == 1)
+	{
+		float dot0 = 0.0f;
+
+		if (cross_vector0.getLengthSquare() == 0.0f)
+		{
+			// 外積の向きがそろっているかのチェック
+			dot0 = Vector3D::CreateDot(&cross_vector1, &cross_vector2);
+		}
+		if (cross_vector1.getLengthSquare() == 0.0f)
+		{
+			// 外積の向きがそろっているかのチェック
+			dot0 = Vector3D::CreateDot(&cross_vector0, &cross_vector2);
+		}
+		if (cross_vector2.getLengthSquare() == 0.0f)
+		{
+			// 外積の向きがそろっているかのチェック
+			dot0 = Vector3D::CreateDot(&cross_vector0, &cross_vector1);
+		}
+
+		bool is_same_direction = dot0 > 0.0f;
+
+		if (is_same_direction) return true;
+	}
+	else
+	{
+		// 外積の向きがそろっているかのチェック
+		float dot0 = Vector3D::CreateDot(&cross_vector0, &cross_vector1);
+		float dot1 = Vector3D::CreateDot(&cross_vector1, &cross_vector2);
+		float dot2 = Vector3D::CreateDot(&cross_vector0, &cross_vector2);
+
+		bool is_same_direction0 = (dot0 * dot1) > 0.0f;
+		bool is_same_direction1 = (dot0 * dot2) > 0.0f;
+		bool is_same_direction2 = (dot1 * dot2) > 0.0f;
+
+		int  same_count = 0;
+		if (is_same_direction0 == is_same_direction1) same_count++;
+		if (is_same_direction0 == is_same_direction2) same_count++;
+		if (is_same_direction1 == is_same_direction2) same_count++;
+
+		if (same_count == 3) return true;
+	}
+
+	return false;
+}
+
+
+
+bool CollisionCalculation::IsObtuseAnglePoint3(Vec3* point0, Vec3* point1, Vec3* point2)
+{
+	return Vector3D::CreateDotPoint3(point0, point1, point2) <= 0.0f;
 }

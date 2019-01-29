@@ -10,21 +10,34 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "DrawManager.h"
-#include "ShaderManager/ShaderManager.h"
+#include "../DrawCommonData.h"
+#include "../DrawManager.h"
+#include "../Fade.h"
+#include "../RenderTarget/RenderTargetMain.h"
+#include "../RenderTexturePolygon.h"
+#include "../Shader/ShaderManager/ShaderManager.h"
+#include "../../DrawBase.h"
+#include "../../../GameObject/GameObjectBase.h"
+#include "../../../GameEngine.h"
+#include "../PostEffect/MotionBlur.h"
 
-#include <Component/Draw/DrawBase/DrawBase.h>
-#include <GameObjectBase/GameObjectBase.h>
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 
 //****************************************
 // プロパティ定義
 //****************************************
-BackBuffer* DrawManager::getpBackBuffer()
+DrawCommonData* DrawManager::getpDrawCommonData()
 {
-	return back_buffer_; 
+	return common_data_;
+}
+
+
+
+Camera* DrawManager::getpCamera(RenderTargetType type)
+{
+	return camera_[(int)type];
 }
 
 
@@ -34,79 +47,120 @@ BackBuffer* DrawManager::getpBackBuffer()
 //****************************************
 void DrawManager::Init()
 {
+	// カメラ作成
+	for (auto& contents : camera_)
+	{
+		contents = new Camera();
+	}
+
+	// 共通データ初期化
+	common_data_ = new DrawCommonData();
+	common_data_->Init();
+
+	// フェード作成
+	fade_ = new Fade();
+	is_fade_ = false;
+
 	// シェーダーマネージャー初期化
 	shader_manager_ = new ShaderManager();
 	shader_manager_->Init();
 
-	// バックバッファ初期化
-	back_buffer_ = new BackBuffer();
-	back_buffer_->Init();
-	back_buffer_->setShaderManager(shader_manager_);
+	// バックバッファサーフェスの保存
+	Renderer::getpInstance()->getDevice(&device_);
+	device_->GetRenderTarget(0, &back_buffer_surface_);
+
+	// BackBuffer用ポリゴン作成
+	back_buffer_polygon_ = new RenderTexturePolygon();
+	back_buffer_polygon_->Init();
+	back_buffer_polygon_->Update(-0.5f, -0.5f,
+		(float)GameEngine::SCREEN_WIDTH,
+								 (float)GameEngine::SCREEN_HEIGHT,
+								 XColor4(1.0f, 1.0f, 1.0f, 1.0f));
+
+	// レンダーターゲットメイン初期化
+	render_target_main_ = new RenderTargetMain();
+	render_target_main_->setCamera(camera_[(int)RenderTargetType::MAIN]);
+	render_target_main_->setDrawCommonData(common_data_);
+	render_target_main_->setShaderManager(shader_manager_);
+	render_target_main_->Init();
+
+	// モーションブラー初期化
+	motion_blur_ = new MotionBlur();
+	motion_blur_->setCamera(camera_[(int)RenderTargetType::MAIN]);
+	motion_blur_->setDrawCommonData(common_data_);
+	motion_blur_->setShaderManager(shader_manager_);
+	motion_blur_->Init();
 }
 
 
 
 void DrawManager::Uninit()
 {
-	// 追加待ち配列のリセット
-	await_add_.ResetArray();
+	await_add_.Reset();
+	await_release_.Reset();
+	all_draw_.Reset();
 
-	// 解放待ち配列のリセット
-	await_release_.ResetArray();
-
-	// 全描画配列のリセット
-	all_draw_.ResetArray();
-
-	// バックバッファ終了処理
-	SafeRelease::PlusUninit(&back_buffer_);
+	SafeRelease::PlusUninit(&motion_blur_);
+	SafeRelease::PlusUninit(&render_target_main_);
+	SafeRelease::PlusUninit(&back_buffer_polygon_);
 	SafeRelease::PlusUninit(&shader_manager_);
+	SafeRelease::PlusUninit(&fade_);
+	SafeRelease::PlusUninit(&common_data_);
+	for (auto& contents : camera_)
+	{
+		SafeRelease::PlusUninit(&contents);
+	}
 }
 
 
 
 void DrawManager::UninitWhenChangeScene()
 {
-	// 追加待ち配列のリセット
-	await_add_.ResetArray();
+	await_add_.Reset();
+	await_release_.Reset();
+	all_draw_.Reset();
 
-	// 解放待ち配列のリセット
-	await_release_.ResetArray();
-
-	// 全描画配列のリセット
-	all_draw_.ResetArray();
-
-	// バックバッファ終了処理
-	back_buffer_->UninitWhenChangeScene();
+	render_target_main_->UninitWhenChangeScene();
+	motion_blur_->UninitWhenChangeScene();
 }
 
 
 
 void DrawManager::Update()
 {
-	// 追加待ち配列の中身を追加
 	AddContentsOfAwaitAddArray();
-
-	// 解放待ち配列の中身を解放
 	ReleaseContentsOfAwaitReleaseArray();
+
+	// カメラ更新
+	for (auto contents : camera_)
+	{
+		contents->Update();
+	}
 
 	// 全描画基底クラス更新関数
 	UpdateAllDrawBase();
-	
-	// 全レンダーターゲットのリセット
+
+	// レンダーターゲットのリセット
 	ResetAllRenderTarget();
 
-	// レンダーターゲットごとの振り分け
+	// レンダーターゲットの振り分け
 	DistributeDrawBase();
 
-	// 全レンダーターゲット更新関数
+	// レンダーターゲット更新
 	UpdateAllRenderTarget();
+
+	// ポストエフェクト更新
+	motion_blur_->Update();
+
+	// フェード更新
+	if (is_fade_) fade_->Update();
 
 	// デバッグ表示
 #ifdef _DEBUG
-	for (unsigned i = 0; i < all_draw_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < all_draw_.getEndIndex(); i++)
 	{
-		if (all_draw_.GetArrayObject(i) == nullptr) continue;
-		all_draw_.GetArrayObject(i)->DebugDisplay();
+		if (all_draw_.getObject(i) == nullptr) continue;
+		all_draw_.getObject(i)->DebugDisplay();
 	}
 #endif
 }
@@ -115,8 +169,20 @@ void DrawManager::Update()
 
 void DrawManager::Draw()
 {
-	// バックバッファ
-	back_buffer_->Draw();
+	// レンダーターゲット描画
+	render_target_main_->Draw();
+
+	// ポストエフェクト描画
+	motion_blur_->Draw();
+
+	// フェード
+	DrawFade();
+
+	// BackBuffer描画
+	DrawBackBuffer();
+
+	// ポストエフェクト後更新
+	motion_blur_->LateUpdate();
 }
 
 
@@ -136,26 +202,26 @@ void DrawManager::OverwriteArrayDrawBase(GameObjectBase* game_object,
 	if (new_draw == nullptr)
 	{
 		// 古い描画基底クラスの解放
-		ReleaseDrawBaseFromArray(game_object->GetDraw());
+		ReleaseDrawBaseFromArray(game_object->getpDraw());
 
 		// 古い描画基底クラスの消去
-		DrawBase* temp = game_object->GetDraw();
+		DrawBase* temp = game_object->getpDraw();
 		SafeRelease::Normal(&temp);
 
 		// nullptrの代入
-		game_object->SetDraw(new_draw);
+		game_object->setDraw(new_draw);
 	}
 	else
 	{
 		// 配列の上書き
-		all_draw_.OverwriteArray(game_object->GetDraw(), new_draw);
+		all_draw_.OverwriteArray(game_object->getpDraw(), new_draw);
 
 		// 古い描画基底クラスの消去
-		DrawBase* temp = game_object->GetDraw();
+		DrawBase* temp = game_object->getpDraw();
 		SafeRelease::Normal(&temp);
 
 		// 新規コンポーネントの初期化
-		game_object->SetDraw(new_draw);
+		game_object->setDraw(new_draw);
 		*new_draw->getpGameObject() = *game_object;
 		new_draw->Init();
 	}
@@ -171,19 +237,66 @@ void DrawManager::ReleaseDrawBaseFromArray(DrawBase* draw)
 
 
 
+void DrawManager::InitFadeIn(Fade::Type type, Vec2 size, XColor4 color, float speed)
+{
+	// フェードの初期化
+	fade_->Init(type, Fade::State::FADE_IN, size, color, speed);
+
+	// フェードフラグON
+	is_fade_ = true;
+}
+
+
+
+void DrawManager::InitFadeOut(Fade::Type type, Vec2 size, XColor4 color, float speed)
+{
+	// フェードの初期化
+	fade_->Init(type, Fade::State::FADE_OUT, size, color, speed);
+
+	// フェードフラグON
+	is_fade_ = true;
+}
+
+
+
+void DrawManager::UninitFade()
+{
+	// フェードの終了処理
+	fade_->Uninit();
+
+	// フェードフラグOFF
+	is_fade_ = false;
+}
+
+
+
+bool DrawManager::IsFadeEnd()
+{
+	return fade_->getpEndFlag();
+}
+
+
+
+bool DrawManager::IsFadeState(Fade::State state)
+{
+	return *fade_->getpState() == state;
+}
+
+
+
 void DrawManager::AddContentsOfAwaitAddArray()
 {
 	// 追加待ちがあるかどうか
-	if (await_add_.GetEndPointer() <= 0) return;
+	if (await_add_.getEndIndex() <= 0) return;
 
 	// 追加
-	for (unsigned i = 0; i < await_add_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < await_add_.getEndIndex(); i++)
 	{
-		all_draw_.AddToArray(await_add_.GetArrayObject(i));
+		all_draw_.AddToArray(await_add_.getObject(i));
 	}
 
 	// 追加待ち配列をリセット
-	await_add_.ResetArray();
+	await_add_.Reset();
 }
 
 
@@ -191,25 +304,47 @@ void DrawManager::AddContentsOfAwaitAddArray()
 void DrawManager::ReleaseContentsOfAwaitReleaseArray()
 {
 	// 解放待ちがあるかどうか
-	if (await_release_.GetEndPointer() <= 0) return;
+	if (await_release_.getEndIndex() <= 0) return;
 
 	// 解放とソート
-	for (unsigned i = 0; i < await_release_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < await_release_.getEndIndex(); i++)
 	{
-		all_draw_.DeleteFromArrayAndSortArray(await_release_.GetArrayObject(i));
+		all_draw_.DeleteFromArrayAndSort(await_release_.getObject(i));
 	}
 
 	// 解放待ち配列をリセット
-	await_release_.ResetArray();
+	await_release_.Reset();
 }
 
 
 
 void DrawManager::UpdateAllDrawBase()
 {
-	for (unsigned i = 0; i < all_draw_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < all_draw_.getEndIndex(); i++)
 	{
-		all_draw_.GetArrayObject(i)->Update();
+		all_draw_.getObject(i)->Update();
+	}
+}
+
+
+
+void DrawManager::ResetAllRenderTarget()
+{
+	render_target_main_->Reset();
+}
+
+
+
+void DrawManager::DistributeDrawBase()
+{
+	for (unsigned i = 0; i < all_draw_.getEndIndex(); i++)
+	{
+		// レンダーターゲットメイン
+		if (all_draw_.getObject(i)->getpDrawOrderList()->getpRenderTargetFlag()
+			->CheckAny(DrawOrderList::RENDER_TARGET_BACK_BUFFER))
+		{
+			render_target_main_->AddDrawBaseToArray(all_draw_.getObject(i));
+		}
 	}
 }
 
@@ -217,29 +352,81 @@ void DrawManager::UpdateAllDrawBase()
 
 void DrawManager::UpdateAllRenderTarget()
 {
-	// バックバッファ
-	back_buffer_->Update();
+	render_target_main_->Update();
 }
 
 
 
-void DrawManager::ResetAllRenderTarget()
+void DrawManager::DrawBackBuffer()
 {
-	// バックバッファ
-	back_buffer_->ResetAllArray();
+	// レンダーターゲットの切り替え
+	device_->SetRenderTarget(0, back_buffer_surface_);
+	bool is_begin = Renderer::getpInstance()->DrawBegin();
+
+	// カメラ切り替え
+	camera_[(int)RenderTargetType::MAIN]->setType(Camera::Type::TWO_DIMENSIONAL);
+
+	// シェーダーセット
+	shader_manager_->ShaderSetToDevice(back_buffer_polygon_,
+									   ShaderManager::VertexShaderType::FIXED,
+									   ShaderManager::PixelShaderType::FIXED);
+
+	// オブジェクト設定
+	shader_manager_->ObjectSetting(back_buffer_polygon_,
+								   camera_[(int)RenderTargetType::MAIN], 0);
+
+	// サンプラー変更
+	device_->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_POINT);
+	device_->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_POINT);
+	device_->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_POINT);
+
+	// 描画
+	device_->SetTexture(0, common_data_->getpRenderTextureMain()->getpTexture());
+	back_buffer_polygon_->Draw(0, 0);
+
+	// サンプラー変更
+	((RendererDirectX9*)Renderer::getpInstance()->getpRenderer())
+		->SetDefaultSamplerState();
+
+	Renderer::getpInstance()->DrawEnd(is_begin);
 }
 
 
 
-void DrawManager::DistributeDrawBase()
+void DrawManager::DrawFade()
 {
-	for (unsigned i = 0; i < all_draw_.GetEndPointer(); i++)
+	// レンダーターゲットの切り替え
+	LPDIRECT3DDEVICE9 device;
+	Renderer::getpInstance()->getDevice(&device);
+	common_data_->getpRenderTextureMain()->setRenderTarget(0);
+	bool is_begin = Renderer::getpInstance()->DrawBegin();
+
+	// カメラ切り替え
+	camera_[(int)RenderTargetType::MAIN]->setType(Camera::Type::TWO_DIMENSIONAL);
+
+	switch (*fade_->getpType())
 	{
-		// バックバッファ
-		if (all_draw_.GetArrayObject(i)->getpDrawOrderList()->getpRenderTargetFlag()
-			->CheckAny(DrawOrderList::RENDER_TARGET_BACK_BUFFER))
+		case Fade::Type::NORMAL:
 		{
-			back_buffer_->AddDrawBaseToArray(all_draw_.GetArrayObject(i));
+			// シェーダーをセット
+			shader_manager_->ShaderSetToDevice(fade_,
+											   ShaderManager::VertexShaderType::NONE,
+											   ShaderManager::PixelShaderType::NONE);
+
+			// オブジェクト設定
+			shader_manager_->ObjectSetting(fade_,
+										   camera_[(int)RenderTargetType::MAIN], 0);
+
+			// メッシュ設定
+			shader_manager_->MeshSetting(fade_,
+										 camera_[(int)RenderTargetType::MAIN], 0, 0);
+
+			fade_->Draw(0, 0);
+			break;
+		}
+		case Fade::Type::TRANSITION_01:
+		{
+			break;
 		}
 	}
 }

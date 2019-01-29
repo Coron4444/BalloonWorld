@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../CollisionBase/CollisionBase.h"
+#include "CollisionBase.h"
 
 
 

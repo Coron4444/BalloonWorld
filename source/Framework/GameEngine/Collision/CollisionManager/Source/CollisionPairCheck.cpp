@@ -10,7 +10,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "CollisionPairCheck.h"
+#include "../CollisionPairCheck.h"
 
 
 

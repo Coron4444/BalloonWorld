@@ -192,6 +192,14 @@ private:
 	//! @retval void なし
 	//----------------------------------------
 	void UninitComponent();
+
+	//----------------------------------------
+	//! @brief 描画共通データ追加関数
+	//! @details
+	//! @param draw 描画基底クラス
+	//! @retval void なし
+	//----------------------------------------
+	void AddDrawCommonData(DrawBase* draw);
 };
 
 

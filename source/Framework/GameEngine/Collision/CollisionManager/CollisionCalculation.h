@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <Vector3D.h>
+#include <Tool/Vector3D.h>
 
 
 
@@ -38,6 +38,13 @@ class QuadraticEquation;
 //************************************************************
 class CollisionCalculation
 {
+//====================
+// static関数
+//====================
+private:
+	static const float ERROR_RANGE;		//!< 誤差範囲
+
+
 //====================
 // static関数
 //====================
@@ -506,6 +513,148 @@ private:
 	//----------------------------------------
 	float CalculateTheShortestDistanceBetweenAABBAndAPoint(AABB* aabb, Vector3D* point);
 
+	//----------------------------------------
+	//! @brief 直線が平行か判定関数
+	//! @details
+	//! @param *line0 直線0
+	//! @param *line1 直線1
+	//! @retval bool 平行ならtrue
+	//----------------------------------------
+	static bool IsParallelLine(LineSegment* line0, LineSegment* line1);
+
+	//----------------------------------------
+	//! @brief 0～1の間に収める関数
+	//! @details
+	//! @param *ratio 比率
+	//! @retval void なし
+	//----------------------------------------
+	static void Clamp0_1(float* ratio);
+
+	//----------------------------------------
+	//! @brief 点と直線の最短距離の算出関数
+	//! @details
+	//! @param *intersection_point 交点
+	//! @param *ratio			   比率
+	//! @param *point			   点
+	//! @param *line			   直線
+	//! @retval float 点と直線の最短距離
+	//----------------------------------------
+	static float CalculateTheShortestDistanceBetweenPointsAndLine(Vec3* intersection_point,
+																  float* ratio,
+																  Vector3D* point,
+																  LineSegment* line);
+
+	//----------------------------------------
+	//! @brief 点と線分の最短距離の算出関数
+	//! @details
+	//! @param *intersection_point 交点
+	//! @param *ratio			   比率
+	//! @param *point			   点
+	//! @param *line_segment	   線分
+	//! @retval float 点と線分の最短距離
+	//----------------------------------------
+	static float CalculateTheShortestDistanceBetweenPointsAndLineSegments(Vec3* intersection_point,
+																		  float* ratio,
+																		  Vector3D* point,
+																		  LineSegment* line_segment);
+
+	//----------------------------------------
+	//! @brief 直線と直線の最短距離の算出関数
+	//! @details
+	//! @param *intersection_point0 交点0
+	//! @param *intersection_point1 交点1
+	//! @param *ratio0				比率0
+	//! @param *ratio1				比率1
+	//! @param *line0				直線0
+	//! @param *line1				直線1
+	//! @retval float 直線と直線の最短距離
+	//----------------------------------------
+	static float CalculateTheShortestDistanceBetweenLineAndLine(Vec3* intersection_point0,
+																Vec3* intersection_point1,
+																float* ratio0,
+																float* ratio1,
+																LineSegment* line0,
+																LineSegment* line1);
+
+	//----------------------------------------
+	//! @brief 線分と線分の最短距離の算出関数
+	//! @details
+	//! @param *intersection_point0 交点0
+	//! @param *intersection_point1 交点1
+	//! @param *ratio0				比率0
+	//! @param *ratio1				比率1
+	//! @param *line_segment0		線分0
+	//! @param *line_segment1		線分1
+	//! @retval float 線分と線分の最短距離
+	//----------------------------------------
+	static float CalculateTheShortestDistanceBetweenLineSegmentAndLineSegment(Vec3* intersection_point0,
+																			  Vec3* intersection_point1,
+																			  float* ratio0,
+																			  float* ratio1,
+																			  LineSegment* line_segment0,
+																			  LineSegment* line_segment1);
+
+	//----------------------------------------
+	//! @brief 1次元線分と点のはみ出し部分のベクトルを算出関数
+	//! @details
+	//! @param *overhang_vector はみ出しベクトル
+	//! @param *obb_position    OBB座標
+	//! @param *obb_vector_half	OBB半分ベクトル
+	//! @param obb_axis		    BB軸
+	//! @param *point		    点
+	//! @retval void なし
+	//----------------------------------------
+	static void CalculationOfProtrudingVector(Vector3D* overhang_vector,
+											  Vector3D* obb_position,
+											  Vector3D obb_vector_half,
+											  Vector3D obb_axis,
+											  Vector3D* point);
+
+	//----------------------------------------
+	//! @brief OBBと点の最短距離ベクトルの算出関数
+	//! @details
+	//! @param *obb   OBB
+	//! @param *point 点
+	//! @retval Vector3D 最短距離ベクトル
+	//----------------------------------------
+	static Vector3D CalculateTheShortestDistanceVectorBetweenOBBAndPoint(OBB* obb, Vector3D* point);
+
+	//----------------------------------------
+	//! @brief 平面と点の最短距離の算出関数
+	//! @details
+	//! @param *plane 平面
+	//! @param *point 点
+	//! @retval float 平面と点の最短距離
+	//----------------------------------------
+	static float CalculateTheShortestDistanceBetweenPlaneAndPoint(Plane* plane, Vec3* point);
+
+	//----------------------------------------
+	//! @brief 点が平面の表側にあるか判定関数
+	//! @details
+	//! @param *plane 平面
+	//! @param *point 点
+	//! @retval bool 表面にあればtrue
+	//----------------------------------------
+	static bool IsThePointOnTheFrontSideOfThePlane(Plane* plane, Vec3* point);
+
+	//----------------------------------------
+	//! @brief 点が三角形平面に含まれているか判定関数
+	//! @details
+	//! @param *triangle 三角形平面
+	//! @param *point    点
+	//! @retval bool 表面にあればtrue
+	//----------------------------------------
+	static bool IsPointsAreIncludedInThePlane(Triangle* triangle, Vec3* point);
+
+	//----------------------------------------
+	//! @brief 3点のなす角が鈍角か判定関数
+	//! @details
+	//! @param *point0 点0
+	//! @param *point1 点1
+	//! @param *point2 点2
+	//! @retval bool 鈍角の有無
+	//----------------------------------------
+	static bool IsObtuseAnglePoint3(Vec3* point0, Vec3* point1, Vec3* point2);
 
 //====================
 // 消去済み関数

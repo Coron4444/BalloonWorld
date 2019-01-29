@@ -9,7 +9,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "DrawBase.h"
+#include "../DrawBase.h"
 
 
 
@@ -18,7 +18,14 @@
 //****************************************
 DrawOrderList* DrawBase::getpDrawOrderList() 
 {
-	return &draw_order_list_; 
+	return &order_list_; 
+}
+
+
+
+DrawCommonData* DrawBase::getpDrawCommonData()
+{
+	return common_data_;
 }
 
 
@@ -28,20 +35,4 @@ DrawOrderList* DrawBase::getpDrawOrderList()
 //****************************************
 DrawBase::~DrawBase()
 {
-}
-
-
-
-void DrawBase::LimitedChangeCameraType(Camera* camera, Camera::Type type)
-{
-	save_camera_type_ = camera->getType();
-	camera->setType(type);
-}
-
-
-
-void DrawBase::RevivalCameraType(Camera* camera)
-{
-	if (save_camera_type_ == Camera::Type::NONE) return;
-	camera->setType(save_camera_type_);
 }

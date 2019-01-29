@@ -9,7 +9,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "DrawOrderList.h"
+#include "../DrawOrderList.h"
 
 
 
@@ -58,7 +58,21 @@ void DrawOrderList::setDrawType(DrawOrderList::DrawType value)
 
 
 
-Flag* DrawOrderList::getpRenderTargetFlag()
+DrawOrderList::DrawType DrawOrderList::getTempChangeDrawType()
+{
+	return temp_change_draw_type_;
+}
+
+
+
+void DrawOrderList::setTempChangeDrawType(DrawOrderList::DrawType value)
+{
+	temp_change_draw_type_ = value;
+}
+
+
+
+BitFlag* DrawOrderList::getpRenderTargetFlag()
 { 
 	return &render_target_flag_; 
 }

@@ -12,11 +12,11 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../CollisionShapeBase.h"
-#include "../Cylinder/Cylinder.h"
-#include "../Sphere/Sphere.h"
+#include "CollisionShapeBase.h"
+#include "Cylinder.h"
+#include "Sphere.h"
 
-#include <Vector3D.h>
+#include <Tool/Vector3D.h>
 
 
 

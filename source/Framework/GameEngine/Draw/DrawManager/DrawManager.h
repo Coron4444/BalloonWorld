@@ -12,9 +12,13 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "RenderTarget/BackBuffer/BackBuffer.h"
+#include "fade.h"
+#include "../Camera/Camera.h"
+#include "../Camera/CameraState_CrawlUp.h"
+#include "../Camera/CameraState_HomingTarget.h"
+#include "../../Renderer/Renderer.h"
 
-#include <LimitedPointerArray\LimitedPointerArray.h>
+#include <Tool/LimitedPointerArray.h>
 
 
 
@@ -22,8 +26,12 @@
 // クラス宣言
 //****************************************
 class DrawBase;
-class GameObjectBase;
+class DrawCommonData;
 class ShaderManager;
+class RenderTargetMain;
+class MotionBlur;
+class RenderTexturePolygon;
+class GameObjectBase;
 
 
 
@@ -34,6 +42,26 @@ class ShaderManager;
 //************************************************************
 class DrawManager
 {
+//====================
+// 列挙型定義
+//====================
+public:
+	enum class RenderTargetType
+	{
+		NONE = -1,
+		MAIN,
+		DEPTH_SHADOW,
+		MAX
+	};
+
+
+//====================
+// 定数
+//====================
+public:
+	static const unsigned RENDER_TARGET_BACK_BUFFER = 1 << 0;
+
+
 //====================
 // 定数
 //====================
@@ -49,24 +77,38 @@ private:
 	LimitedPointerArray<DrawBase*, DRAW_ARRAY_NUM> await_add_;		//!< 追加待ち配列
 	LimitedPointerArray<DrawBase*, DRAW_ARRAY_NUM> await_release_;	//!< 解放待ち配列
 
-	ShaderManager* shader_manager_ = nullptr;	//!< シェーダーマネージャ
-	BackBuffer* back_buffer_ = nullptr;			//!< バックバッファ
+	Camera* camera_[(int)RenderTargetType::MAX];			//!< カメラ群
+	Fade* fade_;											//!< フェード
+	bool is_fade_;											//!< フェード中フラグ
+	DrawCommonData* common_data_ = nullptr;					//!< 共通データ
+	ShaderManager* shader_manager_ = nullptr;				//!< シェーダーマネージャ
+	RenderTargetMain* render_target_main_ = nullptr;		//!< レンダーターゲットメイン
+	MotionBlur* motion_blur_ = nullptr;						//!< モーションブラー
+	LPDIRECT3DSURFACE9 back_buffer_surface_ = nullptr;		//!< BackBufferサーフェス
+	RenderTexturePolygon* back_buffer_polygon_ = nullptr;	//!< BackBuffer用ポリゴン
+	LPDIRECT3DDEVICE9 device_ = nullptr;					//!< デバイス
 
-	Vec3 directional_light_vector_ = {0.5f, -1.0f, 0.8f};	//!< ディレクショナルライト方向
 
 //====================
 // プロパティ
 //====================
 public:
 	//----------------------------------------
-	//! @brief バックバッファ取得関数
+	//! @brief 描画共通データ取得関数
 	//! @details
 	//! @param void なし
-	//! @retval BackBuffer* バックバッファ
+	//! @retval DrawCommonData* 描画共通データ
 	//----------------------------------------
-	BackBuffer* getpBackBuffer();
+	DrawCommonData* getpDrawCommonData();
 
-	const Vec3* GetDirectionalLightVector() { return &directional_light_vector_; }
+	//----------------------------------------
+	//! @brief カメラ取得関数
+	//! @details
+	//! @param type レンダーターゲットタイプ
+	//! @retval Camera* カメラ
+	//----------------------------------------
+	Camera* getpCamera(RenderTargetType type);
+
 
 //====================
 // 関数
@@ -138,6 +180,52 @@ public:
 	//----------------------------------------
 	void ReleaseDrawBaseFromArray(DrawBase* draw);
 	
+	//----------------------------------------
+	//! @brief フェードイン初期化関数
+	//! @details
+	//! @param type  タイプ
+	//! @param size  拡縮
+	//! @param color 色
+	//! @param speed フェード速度
+	//! @retval void なし
+	//----------------------------------------
+	void InitFadeIn(Fade::Type type, Vec2 size, XColor4 color, float speed);
+
+	//----------------------------------------
+	//! @brief フェードアウト初期化関数
+	//! @details
+	//! @param type  タイプ
+	//! @param size  拡縮
+	//! @param color 色
+	//! @param speed フェード速度
+	//! @retval void なし
+	//----------------------------------------
+	void InitFadeOut(Fade::Type type, Vec2 size, XColor4 color, float speed);
+
+	//----------------------------------------
+	//! @brief フェード終了関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void UninitFade();
+
+	//----------------------------------------
+	//! @brief フェード終了確認関数
+	//! @details
+	//! @param void なし
+	//! @retval bool フェード終了の有無
+	//----------------------------------------
+	bool IsFadeEnd();
+
+	//----------------------------------------
+	//! @brief フェードステート判定関数
+	//! @details
+	//! @param state ステート
+	//! @retval bool 引数と合っていればtrue
+	//----------------------------------------
+	bool IsFadeState(Fade::State state);
+
 private:
 	//----------------------------------------
 	//! @brief 追加待ち配列の中身を追加関数
@@ -164,14 +252,6 @@ private:
 	void UpdateAllDrawBase();
 
 	//----------------------------------------
-	//! @brief 全レンダーターゲット更新関数
-	//! @details
-	//! @param void なし
-	//! @retval void なし
-	//----------------------------------------
-	void UpdateAllRenderTarget();
-
-	//----------------------------------------
 	//! @brief 全レンダーターゲットリセット関数
 	//! @details
 	//! @param void なし
@@ -186,6 +266,30 @@ private:
 	//! @retval void なし
 	//----------------------------------------
 	void DistributeDrawBase();
+
+	//----------------------------------------
+	//! @brief 全レンダーターゲット更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void UpdateAllRenderTarget();
+
+	//----------------------------------------
+	//! @brief BackBuffer描画関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void DrawBackBuffer();
+
+	//----------------------------------------
+	//! @brief フェード描画関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void DrawFade();
 };
 
 

@@ -14,6 +14,7 @@
 //****************************************
 class DrawBase;
 class Camera;
+class DrawCommonData;
 class VertexShaderBase;
 class PixelShaderBase;
 
@@ -55,9 +56,9 @@ public:
 private:
 	VertexShaderBase* vertex_shader_[(int)VertexShaderType::MAX] = {nullptr};	//!< 頂点シェーダー
 	PixelShaderBase* pixel_shader_[(int)PixelShaderType::MAX] = {nullptr};		//!< ピクセルシェーダー
-	VertexShaderType forced_vertex_;	//!< 強制頂点シェーダータイプ
-	PixelShaderType forced_pixel_;		//!< 強制ピクセルシェーダータイプ
-
+	VertexShaderType forced_vertex_;			//!< 強制頂点シェーダータイプ
+	PixelShaderType forced_pixel_;				//!< 強制ピクセルシェーダータイプ
+	
 
 //====================
 // 関数
@@ -66,10 +67,10 @@ public:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
-	//! @param void なし
+	//! @param *common_data 描画共通データ
 	//! @retval void なし
 	//----------------------------------------
-	void Init();
+	void Init(DrawCommonData* common_data);
 
 	//----------------------------------------
 	//! @brief 終了関数
@@ -117,18 +118,18 @@ private:
 	//----------------------------------------
 	//! @brief 頂点シェーダー初期化関数
 	//! @details
-	//! @param void なし
+	//! @param *common_data 描画共通データ
 	//! @retval void なし
 	//----------------------------------------
-	void InitVertexShader();
+	void InitVertexShader(DrawCommonData* common_data);
 
 	//----------------------------------------
 	//! @brief ピクセルシェーダー初期化関数
 	//! @details
-	//! @param void なし
+	//! @param *common_data 描画共通データ
 	//! @retval void なし
 	//----------------------------------------
-	void InitPixelShader();
+	void InitPixelShader(DrawCommonData* common_data);
 
 	//----------------------------------------
 	//! @brief 頂点シェーダー終了関数

@@ -12,12 +12,12 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../../ComponentBase/ComponentBase.h"
-#include "CollisionObjects/CollisionObjects.h"
+#include "../ComponentBase.h"
+#include "CollisionObjects.h"
 
-#include <LimitedPointerArray/LimitedPointerArray.h>
-#include <Transform/Transform.h>
-#include <Vector3D.h>
+#include <Tool/LimitedPointerArray.h>
+#include <Tool/Transform.h>
+#include <Tool/Vector3D.h>
 
 
 
@@ -33,7 +33,7 @@ class CollisionBase : public ComponentBase
 //====================
 public:
 	// タイプ
-	enum Type
+	enum class Type
 	{
 		NONE = -1,
 		PLAYER,

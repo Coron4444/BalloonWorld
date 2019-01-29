@@ -1,29 +1,28 @@
 //================================================================================
-//!	@file	 BackBuffer.h
-//!	@brief	 バックバッファーClass
+//!	@file	 RenderTargetMain.h
+//!	@brief	 レンダーターゲットメインClass
 //! @details 
 //!	@author  Kai Araki									@date 2018/05/08
 //================================================================================
-#ifndef	_BACK_BUFFER_H_
-#define _BACK_BUFFER_H_
+#ifndef	_RENDER_TARGET_MAIN_H_
+#define _RENDER_TARGET_MAIN_H_
 
 
 
 //****************************************
 // インクルード文
 //****************************************
-#include "../../Fade/Fade.h"
-#include <LimitedPointerArray\LimitedPointerArray.h>
-#include <ComponentManager/DrawManager/RenderTexture/RenderTexture.h>
+#include "../../Camera/Camera.h"
+
+#include <Tool/LimitedPointerArray.h>
 
 
 
 //****************************************
 // クラス宣言
 //****************************************
-class Camera;
 class DrawBase;
-class Fade;
+class DrawCommonData;
 class ShaderManager;
 
 
@@ -33,7 +32,7 @@ class ShaderManager;
 //!
 //! @details バックバッファーへ描画する描画基底クラスを管理するClass
 //************************************************************
-class BackBuffer
+class RenderTargetMain
 {
 //====================
 // 定数
@@ -46,26 +45,14 @@ public:
 // 変数
 //====================
 private:
-	LimitedPointerArray<DrawBase*, ARRAY_NUM> all_opacity_draw_;		//!< 不透明配列
-	LimitedPointerArray<DrawBase*, ARRAY_NUM> all_transparency_draw_;	//!< 透明配列
-	LimitedPointerArray<DrawBase*, ARRAY_NUM> all_2D_draw_;				//!< 2D配列
+	LimitedPointerArray<DrawBase*, ARRAY_NUM> draw_opacity_;		//!< 不透明配列
+	LimitedPointerArray<DrawBase*, ARRAY_NUM> draw_transparent_;	//!< 透明配列
+	LimitedPointerArray<DrawBase*, ARRAY_NUM> draw_2D_;				//!< 2D配列
 
-	Camera* camera_ = false;	//!< カメラ
-
-	Fade* fade_ = false;		//!< フェード
-	bool  is_fade_ = false;		//!< フェード中フラグ
-
+	Camera* camera_ = nullptr;					//!< カメラ
+	Camera::Type save_camera_type_;				//!< 保存用カメラタイプ
+	DrawCommonData* common_data_ = nullptr;		//!< 描画共通データ
 	ShaderManager* shader_manager_ = nullptr;	//!< シェーダーマネージャ
-
-	LPDIRECT3DTEXTURE9 main_screen_texture_;
-	LPDIRECT3DSURFACE9 main_screen_surface_;
-
-	LPDIRECT3DTEXTURE9 post_effect_texture_;
-	LPDIRECT3DSURFACE9 post_effect_surface_;
-
-	LPDIRECT3DSURFACE9 back_buffer_surface_;
-
-	RenderTexture render_texture_;
 
 
 //====================
@@ -73,13 +60,21 @@ private:
 //====================
 public:
 	//----------------------------------------
-	//! @brief カメラ取得関数
+	//! @brief カメラ設定関数
 	//! @details
-	//! @param void なし
-	//! @retval Camera* カメラ
+	//! @param *value カメラ
+	//! @retval void なし
 	//----------------------------------------
-	Camera* getpCamera();
-	
+	void setCamera(Camera* value);
+
+	//----------------------------------------
+	//! @brief 描画共通データ設定関数
+	//! @details
+	//! @param *value 描画共通データ
+	//! @retval void なし
+	//----------------------------------------
+	void setDrawCommonData(DrawCommonData* value);
+
 	//----------------------------------------
 	//! @brief シェーダーマネージャ設定関数
 	//! @details
@@ -142,49 +137,12 @@ public:
 	void AddDrawBaseToArray(DrawBase* draw);
 
 	//----------------------------------------
-	//! @brief 全配列のリセット関数
+	//! @brief リセット関数
 	//! @details
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void ResetAllArray();
-
-	//----------------------------------------
-	//! @brief フェード初期化関数
-	//! @details
-	//! @param type  タイプ
-	//! @param state ステート
-	//! @param size  拡縮
-	//! @param color 色
-	//! @param speed フェード速度
-	//! @retval void なし
-	//----------------------------------------
-	void InitFade(Fade::Type type, Fade::State state, Vec2 size,
-				  XColor4 fade_color, float fade_speed);
-
-	//----------------------------------------
-	//! @brief フェード終了関数
-	//! @details
-	//! @param void なし
-	//! @retval void なし
-	//----------------------------------------
-	void UninitFade();
-
-	//----------------------------------------
-	//! @brief フェード終了かの確認関数
-	//! @details
-	//! @param void なし
-	//! @retval bool フェード終了かの有無
-	//----------------------------------------
-	bool IsFadeEnd();
-
-	//----------------------------------------
-	//! @brief フェードステートの名前判定関数
-	//! @details
-	//! @param state ステート
-	//! @retval bool ステートと合っていればtrue
-	//----------------------------------------
-	bool IsFadeStateName(Fade::State state);
+	void Reset();
 
 private:
 	//----------------------------------------
@@ -209,7 +167,7 @@ private:
 	//! @param draw 描画基底クラス
 	//! @retval void なし
 	//----------------------------------------
-	void SetBillboardMatrix(DrawBase* draw);
+	void ChangeBillboardMatrix(DrawBase* draw);
 	
 	//----------------------------------------
 	//! @brief 全ビルボード更新関数
@@ -220,12 +178,52 @@ private:
 	void AllBillboardUpdate();
 
 	//----------------------------------------
-	//! @brief フェード描画関数
+	//! @brief カメラタイプ変更関数
+	//! @details
+	//! @param camera_type カメラタイプ
+	//! @retval void なし
+	//----------------------------------------
+	void ChangeCameraType(Camera::Type camera_type);
+
+	//----------------------------------------
+	//! @brief カメラタイプ一時変更関数
+	//! @details
+	//! @param draw 描画基底クラス
+	//! @retval void なし
+	//----------------------------------------
+	void TempChangeCameraType(DrawBase* draw);
+
+	//----------------------------------------
+	//! @brief カメラタイプ一時変更を戻す関数
+	//! @details
+	//! @param draw 描画基底クラス
+	//! @retval void なし
+	//----------------------------------------
+	void RevertTempChangeCameraType(DrawBase* draw);
+
+	//----------------------------------------
+	//! @brief 不透明オブジェクト描画関数
 	//! @details
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void FadeDraw();
+	void DrawOpacity();
+
+	//----------------------------------------
+	//! @brief 透明オブジェクト描画関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void DrawTransparent();
+
+	//----------------------------------------
+	//! @brief 不透明オブジェクト描画関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Draw2D();
 };
 
 

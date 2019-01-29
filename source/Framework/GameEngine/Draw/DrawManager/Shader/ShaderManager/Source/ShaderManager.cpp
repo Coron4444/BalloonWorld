@@ -10,27 +10,27 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "ShaderManager.h"
-#include "../Shader/VertexShader/VertexShaderNull/VertexShaderNull.h"
-#include "../Shader/VertexShader/VertexShaderFixed/VertexShaderFixed.h"
-#include "../Shader/VertexShader/VertexShaderAnimatedDefault/VertexShaderAnimatedDefault.h"
-#include "../Shader/VertexShader/VertexShaderBumpMapping/VertexShaderBumpMapping.h"
-#include "../Shader/PixelShader/PixelShaderNull/PixelShaderNull.h"
-#include "../Shader/PixelShader/PixelShaderDefault/PixelShaderDefault.h"
-#include "../Shader/PixelShader/PixelShaderBumpMapping/PixelShaderBumpMapping.h"
+#include "../ShaderManager.h"
+#include "../../VertexShader/VertexShaderNull.h"
+#include "../../VertexShader/VertexShaderFixed.h"
+#include "../../VertexShader/VertexShaderAnimatedDefault.h"
+#include "../../VertexShader/VertexShaderBumpMapping.h"
+#include "../../PixelShader/PixelShaderNull.h"
+#include "../../PixelShader/PixelShaderDefault.h"
+#include "../../PixelShader/PixelShaderBumpMapping.h"
+#include "../../../../DrawBase.h"
 
-#include <Component/Draw/DrawBase/DrawBase.h>
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 
 //****************************************
 // 関数定義
 //****************************************
-void ShaderManager::Init()
+void ShaderManager::Init(DrawCommonData* common_data)
 {
-	InitVertexShader();
-	InitPixelShader();
+	InitVertexShader(common_data);
+	InitPixelShader(common_data);
 }
 
 
@@ -76,7 +76,7 @@ void ShaderManager::MeshSetting(DrawBase* draw, Camera* camera,
 
 
 
-void ShaderManager::InitVertexShader()
+void ShaderManager::InitVertexShader(DrawCommonData* common_data)
 {
 	// 生成
 	vertex_shader_[(int)VertexShaderType::FIXED] = new VertexShaderFixed();
@@ -86,13 +86,14 @@ void ShaderManager::InitVertexShader()
 	// 初期化
 	for (int i = 0; i < (int)VertexShaderType::MAX; i++)
 	{
+		vertex_shader_[i]->setDrawCommonData(common_data);
 		vertex_shader_[i]->Init();
 	}
 }
 
 
 
-void ShaderManager::InitPixelShader()
+void ShaderManager::InitPixelShader(DrawCommonData* common_data)
 {
 	// 生成
 	pixel_shader_[(int)PixelShaderType::FIXED] = new PixelShaderNull();
@@ -102,6 +103,7 @@ void ShaderManager::InitPixelShader()
 	// 初期化
 	for (int i = 0; i < (int)PixelShaderType::MAX; i++)
 	{
+		pixel_shader_[i]->setDrawCommonData(common_data);
 		pixel_shader_[i]->Init();
 	}
 }

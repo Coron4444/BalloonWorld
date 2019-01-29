@@ -14,9 +14,9 @@
 //****************************************
 #include <vector>
 
-#include <LimitedPointerArray\LimitedPointerArray.h>
+#include "LinerOctree.h"
 
-#include "LinerOctree/LinerOctree.h"
+#include <Tool/LimitedPointerArray.h>
 
 
 

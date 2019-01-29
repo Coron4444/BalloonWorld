@@ -12,7 +12,8 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <LimitedPointerArray\LimitedPointerArray.h>
+#include <Tool/LimitedPointerArray.h>
+
 
 
 //****************************************

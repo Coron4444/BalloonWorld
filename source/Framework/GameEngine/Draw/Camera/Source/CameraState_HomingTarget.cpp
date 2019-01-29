@@ -10,10 +10,10 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "CameraState_HomingTarget.h"
+#include "../CameraState_HomingTarget.h"
+#include "../../../GameObject/GameObjectBase.h"
 
-#include <GameObjectBase/GameObjectBase.h>
-#include <Vector3D.h>
+#include <Tool/Vector3D.h>
 
 
 
@@ -57,13 +57,13 @@ void CameraState_HomingTarget::Update()
 	if (target_object_ == nullptr) return;
 
 	// カメラポジションの作成
-	*getpCamera()->getpPositon() = *target_object_->GetTransform()->GetPosition();
+	*getpCamera()->getpPositon() = *target_object_->getpTransform()->getpPosition();
 
 	getpCamera()->getpPositon()->y += HOMING_CAMERA_POSITION_Y;
 	getpCamera()->getpPositon()->z += HOMING_CAMERA_POSITION_Z;
 
 	// 注視点の作成
-	Vec3 temp_position = *target_object_->GetTransform()->GetPosition();
+	Vec3 temp_position = *target_object_->getpTransform()->getpPosition();
 	temp_position.y += HOMING_CAMERA_LOOK_AT_POINT_Y;
 	*getpCamera()->getpLookAtPoint() = temp_position;
 }

@@ -10,9 +10,9 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "VertexShaderBase.h"
+#include "../VertexShaderBase.h"
 
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 

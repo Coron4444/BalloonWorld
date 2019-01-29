@@ -10,11 +10,11 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "UpdateManager.h"
+#include "../UpdateManager.h"
+#include "../../UpdateBase.h"
+#include "../../../GameObject/GameObjectBase.h"
 
-#include <Component/Update/UpdateBase/UpdateBase.h>
-#include <GameObjectBase/GameObjectBase.h>
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 
@@ -30,13 +30,13 @@ void UpdateManager::Init()
 void UpdateManager::Uninit()
 {
 	// 追加待ち配列のリセット
-	await_add_.ResetArray();
+	await_add_.Reset();
 
 	// 解放待ち配列のリセット
-	await_release_.ResetArray();
+	await_release_.Reset();
 
 	// 全更新配列のリセット
-	all_update_.ResetArray();
+	all_update_.Reset();
 }
 
 
@@ -44,13 +44,13 @@ void UpdateManager::Uninit()
 void UpdateManager::UninitWhenChangeScene()
 {
 	// 追加待ち配列のリセット
-	await_add_.ResetArray();
+	await_add_.Reset();
 
 	// 解放待ち配列のリセット
-	await_release_.ResetArray();
+	await_release_.Reset();
 
 	// 全更新配列のリセット
-	all_update_.ResetArray();
+	all_update_.Reset();
 }
 
 
@@ -64,33 +64,33 @@ void UpdateManager::Update()
 	ReleaseContentsOfAwaitReleaseArray();
 
 	// 更新
-	for (unsigned i = 0; i < all_update_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < all_update_.getEndIndex(); i++)
 	{
-		if (all_update_.GetArrayObject(i) == nullptr) continue;
-		all_update_.GetArrayObject(i)->Update();
+		if (all_update_.getObject(i) == nullptr) continue;
+		all_update_.getObject(i)->Update();
 	}
 
 	// 後更新
-	for (unsigned i = 0; i < all_update_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < all_update_.getEndIndex(); i++)
 	{
-		if (all_update_.GetArrayObject(i) == nullptr) continue;
-		all_update_.GetArrayObject(i)->LateUpdate();
+		if (all_update_.getObject(i) == nullptr) continue;
+		all_update_.getObject(i)->LateUpdate();
 	}
 
 	// 物理更新
-	for (unsigned i = 0; i < all_update_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < all_update_.getEndIndex(); i++)
 	{
-		if (all_update_.GetArrayObject(i)->getpGameObject()->GetPhysics() == nullptr) continue;
-		all_update_.GetArrayObject(i)->getpGameObject()->GetPhysics()->Update();
+		if (all_update_.getObject(i)->getpGameObject()->getpPhysics() == nullptr) continue;
+		all_update_.getObject(i)->getpGameObject()->getpPhysics()->Update();
 	}
 
 
 	// デバッグ
 #ifdef _DEBUG
-	for (unsigned i = 0; i < all_update_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < all_update_.getEndIndex(); i++)
 	{
-		if (all_update_.GetArrayObject(i) == nullptr) continue;
-		all_update_.GetArrayObject(i)->DebugDisplay();
+		if (all_update_.getObject(i) == nullptr) continue;
+		all_update_.getObject(i)->DebugDisplay();
 	}
 #endif
 }
@@ -112,26 +112,26 @@ void UpdateManager::OverwriteArrayUpdateBase(GameObjectBase* game_object,
 	if (new_update == nullptr)
 	{
 		// 古い更新基底クラスの解放
-		ReleaseUpdateBaseFromArray(game_object->GetUpdate());
+		ReleaseUpdateBaseFromArray(game_object->getpUpdate());
 
 		// 古い更新基底クラスの消去
-		UpdateBase* temp = game_object->GetUpdate();
+		UpdateBase* temp = game_object->getpUpdate();
 		SafeRelease::Normal(&temp);
 
 		// nullptrの代入
-		game_object->SetUpdate(new_update);
+		game_object->setUpdate(new_update);
 	}
 	else
 	{
 		// 配列の上書き
-		all_update_.OverwriteArray(game_object->GetUpdate(), new_update);
+		all_update_.OverwriteArray(game_object->getpUpdate(), new_update);
 
 		// 古い更新基底クラスの消去
-		UpdateBase* temp = game_object->GetUpdate();
+		UpdateBase* temp = game_object->getpUpdate();
 		SafeRelease::Normal(&temp);
 
 		// 新規更新基底クラスの初期化
-		game_object->SetUpdate(new_update);
+		game_object->setUpdate(new_update);
 		*new_update->getpGameObject() = *game_object;
 		new_update->Init();
 	}
@@ -150,16 +150,16 @@ void UpdateManager::ReleaseUpdateBaseFromArray(UpdateBase* update)
 void UpdateManager::AddContentsOfAwaitAddArray()
 {
 	// 追加待ちがあるかどうか
-	if(await_add_.GetEndPointer() <= 0) return;
+	if(await_add_.getEndIndex() <= 0) return;
 
 	// 追加
-	for (unsigned i = 0; i < await_add_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < await_add_.getEndIndex(); i++)
 	{
-		all_update_.AddToArray(await_add_.GetArrayObject(i));
+		all_update_.AddToArray(await_add_.getObject(i));
 	}
 
 	// 追加待ち配列をリセット
-	await_add_.ResetArray();
+	await_add_.Reset();
 }
 
 
@@ -167,14 +167,14 @@ void UpdateManager::AddContentsOfAwaitAddArray()
 void UpdateManager::ReleaseContentsOfAwaitReleaseArray()
 {
 	// 解放待ちがあるかどうか
-	if(await_release_.GetEndPointer() <= 0) return;
+	if(await_release_.getEndIndex() <= 0) return;
 
 	// 解放とソート
-	for (unsigned i = 0; i < await_release_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < await_release_.getEndIndex(); i++)
 	{
-		all_update_.DeleteFromArrayAndSortArray(await_release_.GetArrayObject(i));
+		all_update_.DeleteFromArrayAndSort(await_release_.getObject(i));
 	}
 
 	// 解放待ち配列をリセット
-	await_release_.ResetArray();
+	await_release_.Reset();
 }

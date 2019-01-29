@@ -10,9 +10,9 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "VertexShaderAnimatedDefault.h"
+#include "../VertexShaderAnimatedDefault.h"
 
-#include <GameObjectManager/GameObjectManager.h>
+#include <Tool/SafeRelease.h>
 
 
 

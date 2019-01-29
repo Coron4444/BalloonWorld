@@ -1,8 +1,8 @@
 //================================================================================
 //!	@file	 RenderTexture.cpp
-//!	@brief	 レンダラーテクスチャClass
+//!	@brief	 レンダーテクスチャClass
 //! @details 
-//!	@author  Kai Araki									@date 2018/05/08
+//!	@author  Kai Araki									@date 2019/01/28
 //================================================================================
 
 
@@ -10,32 +10,46 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "RenderTexture.h"
+#include "../RenderTexture.h"
 
-#include <Renderer\RendererDirectX9\RendererDirectX9.h>
-#include <SafeRelease/SafeRelease.h>
-#include <Vector\ConvertToFrame\TimeToFrame\TimeToFrame.h>
-#include <Transform\Transform.h>
-#include <Polygon\PlanePolygon\PlanePolygon.h>
+#include <Tool/SafeRelease.h>
 
 
 
 //****************************************
 // プロパティ定義
 //****************************************
-MATRIX* RenderTexture::getpMatrix(unsigned object_index)
+LPDIRECT3DTEXTURE9 RenderTexture::getpTexture()
 {
-	object_index = object_index;
-	return transform_->getpMatrixExtend()->GetWorldMatrix();
+	return texture_;
 }
 
 
 
-D3DMATERIAL9* RenderTexture::getpMaterial(unsigned object_index, unsigned mesh_index)
+void RenderTexture::setTexture(LPDIRECT3DTEXTURE9 value)
 {
-	object_index = object_index;
-	mesh_index = mesh_index;
-	return plane_polygon_->GetMaterial();
+	texture_ = value;
+}
+
+
+
+LPDIRECT3DSURFACE9 RenderTexture::getpSurface()
+{
+	return surface_;
+}
+
+
+
+void RenderTexture::setSurface(LPDIRECT3DSURFACE9 value)
+{
+	surface_ = value;
+}
+
+
+
+void RenderTexture::setRenderTarget(int render_target_index)
+{
+	device_->SetRenderTarget(render_target_index, surface_);
 }
 
 
@@ -43,40 +57,19 @@ D3DMATERIAL9* RenderTexture::getpMaterial(unsigned object_index, unsigned mesh_i
 //****************************************
 // 関数定義
 //****************************************
-void RenderTexture::Init()
+void RenderTexture::Init(float texture_width, float texture_height)
 {
-	plane_polygon_ = new PlanePolygon();
-	transform_ = new Transform();
+	Renderer::getpInstance()->getDevice(&device_);
+	D3DXCreateTexture(device_, texture_width, texture_height, 1,
+					  D3DUSAGE_RENDERTARGET, D3DFMT_A8R8G8B8,
+					  D3DPOOL_DEFAULT, &texture_);
+	texture_->GetSurfaceLevel(0, &surface_);
 }
 
 
 
 void RenderTexture::Uninit()
 {
-	SafeRelease::Normal(&plane_polygon_);
-	SafeRelease::Normal(&transform_);
-}
-
-
-
-void RenderTexture::Update(float x, float y, XColor4 color)
-{
-	transform_->GetPosition()->x = -0.5f;
-	transform_->GetPosition()->y = -0.5f;
-	transform_->GetScale()->x = x;
-	transform_->GetScale()->y = y;
-	transform_->UpdateWorldMatrixSRT();
-
-	plane_polygon_->SetColor(color);
-}
-
-
-
-void RenderTexture::Draw(unsigned object_index, unsigned mesh_index)
-{
-	object_index = object_index;
-	mesh_index = mesh_index;
-
-	// ポリゴン描画
-	plane_polygon_->Draw();
+	SafeRelease::PlusRelease(&texture_);
+	SafeRelease::PlusRelease(&surface_);
 }

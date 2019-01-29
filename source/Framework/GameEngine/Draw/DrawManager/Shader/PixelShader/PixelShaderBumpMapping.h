@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../PixelShaderNull/PixelShaderNull.h"
+#include "PixelShaderNull.h"
 
 
 

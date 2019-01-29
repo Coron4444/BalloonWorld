@@ -9,9 +9,9 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "CollisionObject.h"
+#include "../CollisionObject.h"
 
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 
@@ -137,6 +137,6 @@ CollisionObject::~CollisionObject()
 
 void CollisionObject::ResetHitData()
 {
-	hit_vector_.ResetVector();
+	hit_vector_.Reset();
 	is_judgment_ = true;
 }

@@ -12,23 +12,24 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "CollisionShapeBase/AABB/AABB.h"
-#include "CollisionShapeBase/Capsule/Capsule.h"
-#include "CollisionShapeBase/Cylinder/Cylinder.h"
-#include "CollisionShapeBase/OBB/OBB.h"
-#include "CollisionShapeBase/Plane/Plane.h"
-#include "CollisionShapeBase/LineSegment/LineSegment.h"
-#include "CollisionShapeBase/Sphere/Sphere.h"
-#include "CollisionShapeBase/Triangle/Triangle.h"
+#include "CollisionShape/AABB.h"
+#include "CollisionShape/Capsule.h"
+#include "CollisionShape/Cylinder.h"
+#include "CollisionShape/OBB.h"
+#include "CollisionShape/Plane.h"
+#include "CollisionShape/LineSegment.h"
+#include "CollisionShape/Sphere.h"
+#include "CollisionShape/Triangle.h"
+
+#include <Tool/Vector3D.h>
 
 
 
-/*********************************************************//**
-* @brief
-* 衝突オブジェクトClass
-*
-* 衝突オブジェクトのClass
-*************************************************************/
+//************************************************************														   
+//! @brief   衝突オブジェクトClass
+//!
+//! @details 衝突オブジェクトのClass
+//************************************************************
 class CollisionObject
 {
 //====================

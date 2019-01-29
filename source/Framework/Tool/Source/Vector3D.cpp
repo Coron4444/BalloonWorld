@@ -53,13 +53,6 @@ Vec3 Vector3D::CreateCrossPoint3(Vec3* point0, Vec3* point1, Vec3* point2)
 
 
 
-bool Vector3D::IsObtuseAnglePoint3(Vec3* point0, Vec3* point1, Vec3* point2)
-{
-	return CreateDotPoint3(point0, point1, point2) <= 0.0f;
-}
-
-
-
 //****************************************
 // プロパティ定義
 //****************************************

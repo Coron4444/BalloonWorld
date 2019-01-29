@@ -12,9 +12,9 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../CollisionShapeBase.h"
+#include "CollisionShapeBase.h"
 
-#include <Vector3D.h>
+#include <Tool/Vector3D.h>
 
 
 
@@ -84,36 +84,6 @@ public:
 	//----------------------------------------
 	void Init(Vec3 point0, Vec3 point1, Vec3 point2);
 };
-
-
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-// [ 平面と座標との長さ関数 ]
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-inline float Length_Point(Plane* plane, Vec3* point)
-{
-	return (plane->getpNormal()->x * point->x) 
-		+ (plane->getpNormal()->y * point->y) 
-		+ (plane->getpNormal()->z * point->z) + plane->getAdjustmetD();
-}
-
-
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-// [ 座標が平面の表側にあるか判定関数 ]
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-inline bool IsFrontSide_Point(Plane* plane, Vec3* point)
-{
-	if (Length_Point(plane, point) < 0.0f) return false;
-
-	return true;
-}
 
 
 

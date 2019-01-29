@@ -14,10 +14,8 @@
 //****************************************
 #include <string>
 
-#include <Component/Draw/DrawNull/DrawNull.h>
-#include <Vector3D.h>
-#include <Transform\Transform.h>
-#include <Polygon\PlanePolygon\PlanePolygon.h>
+#include "../DrawNull.h"
+#include <Tool/Vector3D.h>
 
 
 
@@ -25,7 +23,9 @@
 // クラス宣言
 //****************************************
 class PlanePolygon;
+class Transform;
 class TextureObject;
+
 
 
 //************************************************************														   
@@ -39,20 +39,20 @@ class Fade : public DrawNull
 // 列挙型定義
 //====================
 public:
-	enum Type
+	enum class Type
 	{
-		TYPE_NONE = -1,
-		TYPE_NORMAL,
-		TYPE_TRANSITION_01,
-		TYPE_MAX
+		NONE = -1,
+		NORMAL,
+		TRANSITION_01,
+		MAX
 	};
 
-	enum State
+	enum class State
 	{
-		STATE_NONE = -1,
-		STATE_FADE_IN,
-		STATE_FADE_OUT,
-		STATE_MAX
+		NONE = -1,
+		FADE_IN,
+		FADE_OUT,
+		MAX
 	};
 
 
@@ -60,7 +60,6 @@ public:
 // 定数
 //====================
 public:
-	static const std::string TEXTURE_PATH;					//!< テクスチャパス
 	static const std::string TEXTURE_NAME_TRANSITION_01;	//!< テクスチャ名
 
 
@@ -70,8 +69,8 @@ public:
 private:
 	Type type_;										//!< タイプ
 	State state_;									//!< ステート
-	PlanePolygon plane_polygon_;					//!< 板ポリゴン
-	Transform transform_;							//!< 状態
+	PlanePolygon* plane_polygon_ = nullptr;			//!< 板ポリゴン
+	Transform* transform_ = nullptr;				//!< 状態
 	TextureObject* transition01_texture_ = nullptr;	//!< テクスチャオブジェクト
 	XColor4 color_;									//!< 色
 	float speed_;									//!< フェード速度
@@ -105,7 +104,7 @@ public:
 	//! @param void なし
 	//! @retval Type* タイプ
 	//----------------------------------------
-	const Type* getpType() const;
+	Type* getpType();
 	
 	//----------------------------------------
 	//! @brief ステート取得関数
@@ -113,7 +112,7 @@ public:
 	//! @param void なし
 	//! @retval State* ステート
 	//----------------------------------------
-	const State* getpState() const;
+	State* getpState();
 	
 	//----------------------------------------
 	//! @brief 終了フラグ取得関数
@@ -121,7 +120,7 @@ public:
 	//! @param void なし
 	//! @retval bool 終了フラグ
 	//----------------------------------------
-	bool getpEndFlag() const;
+	bool getpEndFlag();
 	
 	//----------------------------------------
 	//! @brief 状態取得関数

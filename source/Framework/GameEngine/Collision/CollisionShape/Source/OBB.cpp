@@ -10,7 +10,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "OBB.h"
+#include "../OBB.h"
 
 
 
@@ -31,57 +31,57 @@ Vector3D* OBB::getpLength()
 
 
 
-AxisVector* OBB::getpAxisVector()
+Axis* OBB::getpAxis()
 { 
 	return &axis_; 
 }
 
 
 
-Vector3D OBB::getRightVector()
+Vector3D OBB::getRight()
 {
-	math_vector_ = *axis_.GetRight();
-	math_vector_.AnyLengthVector(length_.x);
+	math_vector_ = *axis_.getpRight();
+	math_vector_.ChangeAnyLength(length_.x);
 	return math_vector_;
 }
 
 
 
-Vector3D OBB::getUpVector()
+Vector3D OBB::getUp()
 {
-	math_vector_ = *axis_.GetUp();
-	math_vector_.AnyLengthVector(length_.y);
+	math_vector_ = *axis_.getpUp();
+	math_vector_.ChangeAnyLength(length_.y);
 	return math_vector_;
 }
 
 
 
-Vector3D OBB::getForwardVector()
+Vector3D OBB::getForward()
 {
-	math_vector_ = *axis_.GetForawrd();
-	math_vector_.AnyLengthVector(length_.z);
+	math_vector_ = *axis_.getpForawrd();
+	math_vector_.ChangeAnyLength(length_.z);
 	return math_vector_;
 }
 
 
 
-Vector3D OBB::getRightVectorHalf()
+Vector3D OBB::getRightHalf()
 {
-	return getRightVector() / 2;
+	return getRight() / 2;
 }
 
 
 
-Vector3D OBB::getUpVectorHalf()
+Vector3D OBB::getUpHalf()
 {
-	return getUpVector() / 2;
+	return getUp() / 2;
 }
 
 
 
-Vector3D OBB::getForwardVectorHalf()
+Vector3D OBB::getForwardHalf()
 {
-	return getForwardVector() / 2;
+	return getForward() / 2;
 }
 
 

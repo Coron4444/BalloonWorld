@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../DrawBase/DrawBase.h"
+#include "DrawBase.h"
 
 
 
@@ -157,22 +157,20 @@ public:
 	virtual void Draw(unsigned object_index, unsigned mesh_index) override;
 
 	//----------------------------------------
-	//! @brief 描画前設定関数
+	//! @brief オブジェクト前設定関数
 	//! @details
-	//! @param *camera       カメラ
 	//! @param object_index オブジェクトインデックス
 	//! @retval void なし
 	//----------------------------------------
-	virtual void SettingBeforeDrawing(Camera* camera, unsigned object_index) override;
+	virtual void ObjectSettingBefore(unsigned object_index) override;
 
 	//----------------------------------------
-	//! @brief 描画後設定関数
+	//! @brief オブジェクト後設定関数
 	//! @details
-	//! @param *camera      カメラ
 	//! @param object_index オブジェクトインデックス
 	//! @retval void なし
 	//----------------------------------------
-	virtual void SettingAfterDrawing(Camera* camera, unsigned object_index) override;
+	virtual void ObjectSettingAfter(unsigned object_index) override;
 };
 
 

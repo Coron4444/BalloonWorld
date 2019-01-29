@@ -12,9 +12,9 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../VertexShaderNull/VertexShaderNull.h"
+#include "VertexShaderNull.h"
 
-#include <Vector3D.h>
+#include <Tool/Vector3D.h>
 
 
 

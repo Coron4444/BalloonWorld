@@ -80,17 +80,6 @@ public:
 	//----------------------------------------
 	static Vec3 CreateCrossPoint3(Vec3* point0, Vec3* point1, Vec3* point2);
 
-	//----------------------------------------
-	//! @brief 3点のなす角が鈍角か判定関数
-	//! @details
-	//! @param *point0 点0
-	//! @param *point1 点1
-	//! @param *point2 点2
-	//! @retval bool 鈍角の有無
-	//----------------------------------------
-	bool IsObtuseAnglePoint3(Vec3* point0, Vec3* point1, Vec3* point2);
-
-
 //====================
 // プロパティ
 //====================

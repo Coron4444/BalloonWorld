@@ -10,7 +10,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "CollisionObjects.h"
+#include "../CollisionObjects.h"
 
 
 
@@ -19,14 +19,14 @@
 //****************************************
 unsigned CollisionObjects::getEndIndexOfArray()
 {
-	return collision_object_.GetEndPointer();
+	return collision_object_.getEndIndex();
 }
 
 
 
 CollisionObject* CollisionObjects::getpCollisionObject(unsigned index)
 {
-	return collision_object_.GetArrayObject(index);
+	return collision_object_.getObject(index);
 }
 
 
@@ -100,22 +100,22 @@ void CollisionObjects::OverwriteArrayCollisionObject(CollisionObject* old_object
 
 void CollisionObjects::ReleaseCollisionObjectFromArray(CollisionObject* object)
 {
-	collision_object_.DeleteFromArrayAndSortArray(object);
+	collision_object_.DeleteFromArrayAndSort(object);
 }
 
 
 
 void CollisionObjects::ReleaseAllCollisionObjectFromArray()
 {
-	collision_object_.ReleaseObjectAndResetArray();
+	collision_object_.ReleaseObjectAndReset();
 }
 
 
 
 void CollisionObjects::ResetHitDataAllCollisionObject()
 {
-	for (unsigned i = 0; i < collision_object_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < collision_object_.getEndIndex(); i++)
 	{
-		collision_object_.GetArrayObject(i)->ResetHitData();
+		collision_object_.getObject(i)->ResetHitData();
 	}
 }

@@ -10,12 +10,14 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "Fade.h"
+#include "../Fade.h"
+#include "../../../Renderer/Renderer.h"
 
-#include <Renderer\RendererDirectX9\RendererDirectX9.h>
-#include <SafeRelease/SafeRelease.h>
-#include <Vector\ConvertToFrame\TimeToFrame\TimeToFrame.h>
-#include <Texture\TextureManager\TextureManager.h>
+#include <Resource/Texture/TextureManager/TextureManager.h>
+#include <Resource/Polygon/PlanePolygon.h>
+#include <Tool/SafeRelease.h>
+#include <Tool/TimeToFrame.h>
+#include <Tool/Transform.h>
 
 
 
@@ -32,7 +34,7 @@ const std::string Fade::TEXTURE_NAME_TRANSITION_01 = "Fade/Transition_01.png";
 MATRIX* Fade::getpMatrix(unsigned object_index)
 {
 	object_index = object_index;
-	return transform_.getpMatrixExtend()->GetWorldMatrix();
+	return transform_->getpMatrixGroup()->getpWorldMatrix();
 }
 
 
@@ -41,26 +43,26 @@ D3DMATERIAL9* Fade::getpMaterial(unsigned object_index, unsigned mesh_index)
 {
 	object_index = object_index;
 	mesh_index = mesh_index;
-	return plane_polygon_.GetMaterial();
+	return plane_polygon_->getpMaterial();
 }
 
 
 
-const Fade::Type* Fade::getpType() const 
+Fade::Type* Fade::getpType()
 {
 	return &type_; 
 }
 
 
 
-const Fade::State* Fade::getpState() const
+Fade::State* Fade::getpState()
 {
 	return &state_; 
 }
 
 
 
-bool Fade::getpEndFlag() const 
+bool Fade::getpEndFlag()
 {
 	return end_flag_; 
 }
@@ -69,7 +71,7 @@ bool Fade::getpEndFlag() const
 
 Transform* Fade::getpTransform() 
 {
-	return &transform_;
+	return transform_;
 }
 
 
@@ -99,38 +101,38 @@ void Fade::Init(Type type, State state, Vec2 size, XColor4 color, float speed)
 
 	// オーダーリスト設定
 	getpDrawOrderList()->setDrawType(DrawOrderList::DrawType::TWO_DIMENSIONAL);
-	getpDrawOrderList()->getpRenderTargetFlag()->Set(DrawOrderList::RENDER_TARGET_BACK_BUFFER);
+	getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_BACK_BUFFER);
 	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::FIXED);
 	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::FIXED);
 
 	// フェードを指定サイズに変更
-	transform_.GetScale()->x = size.x;
-	transform_.GetScale()->y = size.y;
-	transform_.UpdateWorldMatrixSRT();
+	transform_->getpScale()->x = size.x;
+	transform_->getpScale()->y = size.y;
+	transform_->CreateWorldMatrix();
 
 	// エンドフラグOFF
 	end_flag_ = false;
 
 	// ステートごとの処理
-	if (state_ == State::STATE_FADE_IN)
+	if (state_ == State::FADE_IN)
 	{
 		// カラー
 		color.a = 1.0f;
 		color_ = color;
-		plane_polygon_.SetColor(color_);
+		plane_polygon_->setColor(color_);
 
 		// フェード速度(単位：秒)
-		speed_ = -(1.0f / (float)Second_To_Frame(speed));
+		speed_ = -(1.0f / (float)TimeToFrame::SecondToFrame(speed));
 	}
-	else if (state_ == State::STATE_FADE_OUT)
+	else if (state_ == State::FADE_OUT)
 	{
 		// カラー
 		color.a = 0.0f;
 		color_ = color;
-		plane_polygon_.SetColor(color_);
+		plane_polygon_->setColor(color_);
 
 		// フェード速度(単位：秒)
-		speed_ = 1.0f / (float)Second_To_Frame(speed);
+		speed_ = 1.0f / (float)TimeToFrame::SecondToFrame(speed);
 	}
 }
 
@@ -139,18 +141,15 @@ void Fade::Init(Type type, State state, Vec2 size, XColor4 color, float speed)
 void Fade::Uninit()
 {
 	// ステートごとの処理
-	if (state_ == State::STATE_FADE_IN)
+	if (state_ == State::FADE_IN)
 	{
 
 	}
-	else if (state_ == State::STATE_FADE_OUT)
+	else if (state_ == State::FADE_OUT)
 	{
 
 	}
-
 	end_flag_ = false;
-
-	// 各種開放
 	SafeRelease::PlusRelease(&transition01_texture_);
 }
 
@@ -160,18 +159,18 @@ void Fade::Update()
 {
 	// α値を変更
 	color_.a += speed_;
-	plane_polygon_.SetColor(color_);
+	plane_polygon_->setColor(color_);
 
 	// フェードオブジェクトの更新
-	if (state_ == State::STATE_FADE_IN)
+	if (state_ == State::FADE_IN)
 	{
-		// α値が1を上回ったら
+		// α値が0を下回ったら
 		if (color_.a <= 0.0f)
 		{
 			end_flag_ = true;
 		}
 	}
-	else if (state_ == State::STATE_FADE_OUT)
+	else if (state_ == State::FADE_OUT)
 	{
 		// α値が1を上回ったら
 		if (color_.a >= 1.0f)
@@ -189,5 +188,5 @@ void Fade::Draw(unsigned object_index, unsigned mesh_index)
 	mesh_index = mesh_index;
 
 	// ポリゴン描画
-	plane_polygon_.Draw();
+	plane_polygon_->Draw();
 }

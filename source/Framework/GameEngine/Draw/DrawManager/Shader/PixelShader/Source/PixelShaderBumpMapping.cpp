@@ -10,9 +10,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "PixelShaderBumpMapping.h"
-
-#include <GameObjectManager/GameObjectManager.h>
+#include "../PixelShaderBumpMapping.h"
 
 
 
@@ -51,8 +49,7 @@ void PixelShaderBumpMapping::ObjectSetting(DrawBase* draw, Camera* camera,
 	camera = camera;
 
 	// ライト方向をセット
-	Vec4 light_position = (Vec4)*GameObjectManager::GetDrawManager()
-		->GetDirectionalLightVector();
+	Vec4 light_position = (Vec4)*getpDrawCommonData()->getpDirectionalLightVector();
 	light_position.w = 0.0f;
 	D3DXMatrixIdentity(&math_matrix_);
 	D3DXMatrixInverse(&math_matrix_, nullptr, draw->getpMatrix(object_index));

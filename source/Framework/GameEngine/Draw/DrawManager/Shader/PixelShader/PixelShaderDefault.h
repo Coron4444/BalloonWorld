@@ -12,9 +12,9 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../PixelShaderNull/PixelShaderNull.h"
+#include "PixelShaderNull.h"
 
-#include <Vector3D.h>
+#include <Tool/Vector3D.h>
 
 
 

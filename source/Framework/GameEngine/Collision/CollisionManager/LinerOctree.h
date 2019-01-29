@@ -16,16 +16,16 @@
 #include <vector>
 #include <list>
 
-#include "ObjectOfTree/ObjectOfTree.h"
-#include "SpaceOfTree/SpaceOfTree.h"
+#include "ObjectOfTree.h"
+#include "SpaceOfTree.h"
 
-#include <Vector3D.h>
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/Vector3D.h>
+#include <Tool/SafeRelease.h>
 
 
 
 //************************************************************														   
-//! @brief   線形8分木Class
+//! @brief   線形8分木Class(template)
 //!
 //! @details 線形配列による8分木の管理Class(template)
 //************************************************************

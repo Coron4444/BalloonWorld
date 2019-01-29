@@ -131,6 +131,9 @@ void GameObjectBase::CreatePhysics()
 
 void GameObjectBase::Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision)
 {
+	// 描画共通データ設定
+	AddDrawCommonData(draw);
+
 	// コンポーネント初期化
 	setAllComponent(update, draw, collision);
 	InitComponent();
@@ -181,4 +184,13 @@ void GameObjectBase::UninitComponent()
 	{
 		collision_->Uninit();
 	}
+}
+
+
+
+void GameObjectBase::AddDrawCommonData(DrawBase* draw)
+{
+	if (draw == nullptr) return;
+	*draw->getpDrawCommonData() = *GameObjectManager::getpInstance()
+		->getpDrawManager()->getpDrawCommonData();
 }

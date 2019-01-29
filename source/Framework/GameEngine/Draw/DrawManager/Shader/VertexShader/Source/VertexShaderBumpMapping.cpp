@@ -10,10 +10,9 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "VertexShaderBumpMapping.h"
+#include "../VertexShaderBumpMapping.h"
 
-#include <GameObjectManager/GameObjectManager.h>
-#include <ModelX/ModelXManager/ModelXManager.h>
+#include <Resource/ModelX/ModelXManager/ModelXManager.h>
 
 
 
@@ -85,8 +84,7 @@ void VertexShaderBumpMapping::ObjectSetting(DrawBase* draw, Camera* camera,
 								   camera->getpProjectionMatrix());
 
 	// ライト方向をセット
-	Vec4 light_position = (Vec4)*GameObjectManager::GetDrawManager()
-		->GetDirectionalLightVector();
+	Vec4 light_position = (Vec4)*getpDrawCommonData()->getpDirectionalLightVector();
 	light_position.w = 0.0f;
 	D3DXMatrixIdentity(&math_matrix_);
 	D3DXMatrixInverse(&math_matrix_, nullptr, draw->getpMatrix(object_index));

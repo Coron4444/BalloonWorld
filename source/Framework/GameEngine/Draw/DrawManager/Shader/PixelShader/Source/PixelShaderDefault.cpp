@@ -10,9 +10,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "PixelShaderDefault.h"
-
-#include <GameObjectManager/GameObjectManager.h>
+#include "../PixelShaderDefault.h"
 
 
 

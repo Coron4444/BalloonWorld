@@ -10,10 +10,10 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "Camera.h"
+#include "../Camera.h"
+#include "../../../GameEngine.h"
 
-#include <main.h>
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 
@@ -43,7 +43,7 @@ void Camera::State::setCamera(Camera* value)
 
 
 
-const MATRIX* Camera::getpViewMatrix() const
+MATRIX* Camera::getpViewMatrix()
 {
 	if (type_ == Type::TWO_DIMENSIONAL) return &view_2D_;
 	return &view_;
@@ -51,7 +51,7 @@ const MATRIX* Camera::getpViewMatrix() const
 
 
 
-const MATRIX* Camera::getpProjectionMatrix() const
+MATRIX* Camera::getpProjectionMatrix()
 {
 	if (type_ == Type::PERSPECTIVE) return &projection_perspective_;
 	if (type_ == Type::ORTHO) return &projection_ortho_;
@@ -91,27 +91,27 @@ int Camera::getAngleOfView()
 void Camera::setAngleOfView(int value)
 {
 	angle_of_view_ = value;
-	CreateProjectionMatrix_PerspectiveFov();
-	CreateProjectionMatrix_Ortho();
+	CreateProjectionMatrixPerspectiveFov();
+	CreateProjectionMatrixOrtho();
 }
 
 
 
-AxisVector* Camera::getpAxis()
+Axis* Camera::getpAxis()
 {
 	return &axis_;
 }
 
 
 
-const Vector3D* Camera::getpForwardVector() const
+Vector3D* Camera::getpForwardVector()
 {
-	return axis_.GetForawrd();
+	return axis_.getpForawrd();
 }
 
 
 
-const Camera::State* Camera::getpState() const
+Camera::State* Camera::getpState()
 {
 	return state_;
 }
@@ -168,7 +168,7 @@ void Camera::Init(State* state, Vec3 position, Vec3 look_at_point, Vec3 up)
 	angle_of_view_ = DEFAULT_ANGLE_OF_VIEW;
 
 	// 軸ベクトルを作成
-	axis_.SetForward(look_at_point_ - position_);
+	axis_.setForward(look_at_point_ - position_);
 
 	// ステートの初期化
 	setState(state);
@@ -178,9 +178,9 @@ void Camera::Init(State* state, Vec3 position, Vec3 look_at_point, Vec3 up)
 	CreateViewMatrix();
 
 	// プロジェクション行列の作成
-	CreateProjectionMatrix_PerspectiveFov();
-	CreateProjectionMatrix_Ortho();
-	CreateProjectionMatrix_2D();
+	CreateProjectionMatrixPerspectiveFov();
+	CreateProjectionMatrixOrtho();
+	CreateProjectionMatrix2D();
 }
 
 
@@ -212,39 +212,40 @@ void Camera::CreateViewMatrix()
 
 
 
-void Camera::CreateProjectionMatrix_PerspectiveFov()
+void Camera::CreateProjectionMatrixPerspectiveFov()
 {
 	// 行列初期化
 	D3DXMatrixIdentity(&projection_perspective_);
 
 	D3DXMatrixPerspectiveFovLH(&projection_perspective_,
 							   D3DXToRadian(angle_of_view_),
-							   (float)SCREEN_WIDTH / SCREEN_HEIGHT,
+							   (float)GameEngine::SCREEN_WIDTH / (float)GameEngine::SCREEN_HEIGHT,
 							   NEAR_CLIPPING_PLANE,
 							   FAR_CLIPPING_PLANE);
 }
 
 
 
-void Camera::CreateProjectionMatrix_Ortho()
+void Camera::CreateProjectionMatrixOrtho()
 {
 	// 行列初期化
 	D3DXMatrixIdentity(&projection_ortho_);
 
 	D3DXMatrixOrthoLH(&projection_ortho_,
-		(float)SCREEN_WIDTH  * angle_of_view_,
-					  (float)SCREEN_HEIGHT * angle_of_view_,
+		(float)GameEngine::SCREEN_WIDTH  * angle_of_view_,
+					  (float)GameEngine::SCREEN_HEIGHT * angle_of_view_,
 					  NEAR_CLIPPING_PLANE, FAR_CLIPPING_PLANE);
 }
 
 
 
-void Camera::CreateProjectionMatrix_2D()
+void Camera::CreateProjectionMatrix2D()
 {
-	projection_2D_
-		= {2.0f / SCREEN_WIDTH,					0.0f, 0.0f, 0.0f,
-						  0.0f, 2.0f / SCREEN_HEIGHT, 0.0f, 0.0f,
-						  0.0f,                 0.0f, 1.0f, 0.0f,
-						  0.0f,                 0.0f, 0.0f, 1.0f
+	projection_2D_ =
+	{
+		2.0f / (float)GameEngine::SCREEN_WIDTH,	0.0f, 0.0f, 0.0f,
+		0.0f, 2.0f / (float)GameEngine::SCREEN_HEIGHT, 0.0f, 0.0f,
+		0.0f, 0.0f, 1.0f, 0.0f,
+		0.0f, 0.0f, 0.0f, 1.0f
 	};
 }

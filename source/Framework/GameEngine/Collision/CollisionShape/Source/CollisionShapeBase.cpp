@@ -10,7 +10,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "CollisionShapeBase.h"
+#include "../CollisionShapeBase.h"
 
 
 

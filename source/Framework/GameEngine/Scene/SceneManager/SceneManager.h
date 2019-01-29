@@ -124,9 +124,9 @@ public:
 // 定数
 //====================
 private:
-	static const Fade::Type DEFAULT_FADE_TYPE;		//!< 初期フェードタイプ
-	static const float      DEFAULT_FADE_SPEED;		//!< 初期フェード速度
-	static const XColor4    DEFAULT_FADE_COLOR;		//!< 初期フェード色
+	static const Fade::Type DEFAULT_FADE_TYPE;	//!< 初期フェードタイプ
+	static const float   DEFAULT_FADE_SPEED;	//!< 初期フェード速度
+	static const XColor4 DEFAULT_FADE_COLOR;	//!< 初期フェード色
 
 
 //====================
@@ -137,7 +137,7 @@ private:
 	CommonData* common_data_ = nullptr;				//!< シーン間共通データ
 	SceneBase* current_scene_ = nullptr;			//!< 現在のシーン
 	SceneBase* next_scene_ = nullptr;				//!< 次のシーン
-	Fade::Type fade_type_ = DEFAULT_FADE_TYPE;		//!< フェードの種類
+	Fade::Type fade_type_ = DEFAULT_FADE_TYPE;		//!< フェードタイプ
 	float fade_speed_ = DEFAULT_FADE_SPEED;			//!< フェード速度
 	XColor4 fade_color_ = DEFAULT_FADE_COLOR;		//!< フェード色
 

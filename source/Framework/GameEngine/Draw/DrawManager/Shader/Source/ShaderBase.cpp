@@ -10,11 +10,9 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "ShaderBase.h"
+#include "../ShaderBase.h"
 
-#include <Component/Draw/DrawBase/DrawBase.h>
-#include <ComponentManager/DrawManager/Camera/Camera.h>
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 
@@ -26,9 +24,25 @@ LPD3DXCONSTANTTABLE ShaderBase::getpConstantTable()
 	return constant_table_; 
 }
 
+
+
 LPDIRECT3DDEVICE9 ShaderBase::getpDevice()
 {
 	return device_; 
+}
+
+
+
+DrawCommonData* ShaderBase::getpDrawCommonData()
+{
+	return common_data_;
+}
+
+
+
+void ShaderBase::setDrawCommonData(DrawCommonData* value)
+{
+	common_data_ = value;
 }
 
 

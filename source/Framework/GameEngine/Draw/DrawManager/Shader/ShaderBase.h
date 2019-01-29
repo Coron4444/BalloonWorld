@@ -12,15 +12,10 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <Renderer/Renderer.h>
-
-
-
-//****************************************
-// クラス宣言
-//****************************************
-class DrawBase;
-class Camera;
+#include "../DrawCommonData.h"
+#include "../../DrawBase.h"
+#include "../../Camera/Camera.h"
+#include "../../../Renderer/Renderer.h"
 
 
 
@@ -37,6 +32,7 @@ class ShaderBase
 private:
 	LPD3DXCONSTANTTABLE	constant_table_ = nullptr;	//!< 定数テーブル
 	LPDIRECT3DDEVICE9 device_ = nullptr;			//!< デバイス
+	DrawCommonData* common_data_ = nullptr;		//!< 描画共通データ
 
 
 //====================
@@ -51,7 +47,6 @@ public:
 	//----------------------------------------
 	LPD3DXCONSTANTTABLE getpConstantTable();
 
-protected:
 	//----------------------------------------
 	//! @brief デバイス取得関数
 	//! @details
@@ -59,6 +54,22 @@ protected:
 	//! @retval LPDIRECT3DDEVICE9 デバイス
 	//----------------------------------------
 	LPDIRECT3DDEVICE9 getpDevice();
+
+	//----------------------------------------
+	//! @brief 描画共通データ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval void 描画共通データ
+	//----------------------------------------
+	DrawCommonData* getpDrawCommonData();
+
+	//----------------------------------------
+	//! @brief 描画共通データ設定関数
+	//! @details
+	//! @param *value 描画共通データ
+	//! @retval void なし
+	//----------------------------------------
+	void setDrawCommonData(DrawCommonData* value);
 
 
 //====================

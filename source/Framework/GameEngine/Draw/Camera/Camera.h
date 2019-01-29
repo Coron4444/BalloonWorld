@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <Transform\AxisVector\AxisVector.h>
+#include <Tool/Axis.h>
 
 
 
@@ -102,7 +102,7 @@ public:
 // 列挙型定義
 //====================
 public:
-	enum Type
+	enum class Type
 	{
 		NONE = -1,
 		PERSPECTIVE,
@@ -129,7 +129,7 @@ private:
 	Vector3D look_at_point_;			//!< 注視点
 	Vector3D up_;						//!< 上方向
 	int angle_of_view_;					//!< 画角
-	AxisVector axis_;					//!< 軸
+	Axis axis_;							//!< 軸
 	MATRIX view_;						//!< ビュー行列
 	MATRIX view_2D_;					//!< ビュー行列(2D)
 	MATRIX projection_perspective_;		//!< プロジェクション行列(透視投影)
@@ -149,7 +149,7 @@ public:
 	//! @param void なし
 	//! @retval MATRIX* ビュー行列
 	//----------------------------------------
-	const MATRIX* getpViewMatrix() const;
+	MATRIX* getpViewMatrix();
 
 	//----------------------------------------
 	//! @brief プロジェクション行列取得関数
@@ -157,7 +157,7 @@ public:
 	//! @param void なし
 	//! @retval MATRIX* プロジェクション行列
 	//----------------------------------------
-	const MATRIX* getpProjectionMatrix() const;
+	MATRIX* getpProjectionMatrix();
 
 	//----------------------------------------
 	//! @brief 座標取得関数
@@ -203,9 +203,9 @@ public:
 	//! @brief 軸取得関数
 	//! @details
 	//! @param void なし
-	//! @retval AxisVector* 軸
+	//! @retval Axis* 軸
 	//----------------------------------------
-	AxisVector* getpAxis();
+	Axis* getpAxis();
 	
 	//----------------------------------------
 	//! @brief 前ベクトル取得関数
@@ -213,7 +213,7 @@ public:
 	//! @param void なし
 	//! @retval Vector3D* 前ベクトル
 	//----------------------------------------
-	const Vector3D* getpForwardVector() const;
+	Vector3D* getpForwardVector();
 	
 	//----------------------------------------
 	//! @brief ステート取得関数
@@ -221,7 +221,7 @@ public:
 	//! @param void なし
 	//! @retval State* ステート
 	//----------------------------------------
-	const State* getpState() const;
+	State* getpState();
 
 	//----------------------------------------
 	//! @brief ステート設定関数
@@ -289,28 +289,28 @@ public:
 	void CreateViewMatrix();
 
 	//----------------------------------------
-	//! @brief プロジェクション行列作成関数(透視投影行列)
+	//! @brief 透視投影プロジェクション行列作成関数
 	//! @details
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void CreateProjectionMatrix_PerspectiveFov();
+	void CreateProjectionMatrixPerspectiveFov();
 
 	//----------------------------------------
-	//! @brief プロジェクション行列作成関数(正射影行列)
+	//! @brief 正射影プロジェクション行列作成関数
 	//! @details
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void CreateProjectionMatrix_Ortho();
+	void CreateProjectionMatrixOrtho();
 
 	//----------------------------------------
-	//! @brief プロジェクション行列作成関数(2D)
+	//! @brief 2Dプロジェクション行列作成関数
 	//! @details
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void CreateProjectionMatrix_2D();
+	void CreateProjectionMatrix2D();
 };
 
 

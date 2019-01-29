@@ -11,7 +11,7 @@
 //****************************************
 #include <assert.h>
 
-#include "DrawNull.h"
+#include "../DrawNull.h"
 
 
 
@@ -137,16 +137,14 @@ void DrawNull::Draw(unsigned object_index, unsigned mesh_index)
 
 
 
-void DrawNull::SettingBeforeDrawing(Camera* camera, unsigned object_index)
+void DrawNull::ObjectSettingBefore(unsigned object_index)
 {
-	camera = camera;
 	object_index = object_index;
 }
 
 
 
-void DrawNull::SettingAfterDrawing(Camera* camera, unsigned object_index)
+void DrawNull::ObjectSettingAfter(unsigned object_index)
 {
-	camera = camera;
 	object_index = object_index;
 }

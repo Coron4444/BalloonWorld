@@ -1,8 +1,8 @@
 //================================================================================
 //!	@file	 RenderTexture.h
-//!	@brief	 レンダラーテクスチャClass
+//!	@brief	 レンダーテクスチャClass
 //! @details 
-//!	@author  Kai Araki									@date 2018/05/08
+//!	@author  Kai Araki									@date 2019/01/28
 //================================================================================
 #ifndef	_RENDER_TEXTURE_H_
 #define _RENDER_TEXTURE_H_
@@ -12,34 +12,24 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <string>
-
-#include <Component/Draw/DrawNull/DrawNull.h>
-#include <Vector3D.h>
-
-
-
-//****************************************
-// クラス宣言
-//****************************************
-class PlanePolygon;
-class Transform;
+#include "../../Renderer/Renderer.h"
 
 
 
 //************************************************************														   
-//! @brief   レンダラーテクスチャClass
+//! @brief   レンダーテクスチャClass
 //!
-//! @details レンダラーテクスチャのClass
+//! @details レンダーテクスチャのClass
 //************************************************************
-class RenderTexture : public DrawNull
+class RenderTexture
 {
 //====================
 // 変数
 //====================
 private:
-	PlanePolygon* plane_polygon_ = nullptr;			//!< 板ポリゴン
-	Transform* transform_ = nullptr;				//!< 状態
+	LPDIRECT3DTEXTURE9 texture_ = nullptr;		//!< テクスチャ
+	LPDIRECT3DSURFACE9 surface_ = nullptr;		//!< サーフェス
+	LPDIRECT3DDEVICE9 device_ = nullptr;		//!< デバイス
 
 
 //====================
@@ -47,34 +37,58 @@ private:
 //====================
 public:
 	//----------------------------------------
-	//! @brief 行列取得関数
+	//! @brief テクスチャ取得関数
 	//! @details
-	//! @param object_index オブジェクトインデックス
-	//! @retval MATRIX* 行列
+	//! @param void なし
+	//! @retval LPDIRECT3DTEXTURE9 テクスチャ
 	//----------------------------------------
-	MATRIX* getpMatrix(unsigned object_index) override;
+	LPDIRECT3DTEXTURE9 getpTexture();
 
 	//----------------------------------------
-	//! @brief マテリアル取得関数
+	//! @brief テクスチャ設定関数
 	//! @details
-	//! @param object_index オブジェクトインデックス
-	//! @param mesh_index   メッシュインデックス
-	//! @retval D3DMATERIAL9* マテリアル
+	//! @param value テクスチャ
+	//! @retval void なし
 	//----------------------------------------
-	D3DMATERIAL9* getpMaterial(unsigned object_index, unsigned mesh_index) override;
+	void setTexture(LPDIRECT3DTEXTURE9 value);
+
+	//----------------------------------------
+	//! @brief サーフェス取得関数
+	//! @details
+	//! @param void なし
+	//! @retval LPDIRECT3DSURFACE9 サーフェス
+	//----------------------------------------
+	LPDIRECT3DSURFACE9 getpSurface();
+
+	//----------------------------------------
+	//! @brief サーフェス設定関数
+	//! @details
+	//! @param value サーフェス
+	//! @retval void なし
+	//----------------------------------------
+	void setSurface(LPDIRECT3DSURFACE9 value);
+
+	//----------------------------------------
+	//! @brief レンダーターゲット設定関数
+	//! @details
+	//! @param render_target_index レンダーターゲットインデックス
+	//! @retval void なし
+	//----------------------------------------
+	void setRenderTarget(int render_target_index);
 
 
-//==============================
-// 非静的メンバ関数
-//==============================
+//====================
+// 関数
+//====================
 public:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
-	//! @param void なし
+	//! @param texture_width なし
+	//! @param texture_height なし
 	//! @retval void なし
 	//----------------------------------------
-	void Init();
+	void Init(float texture_width, float texture_height);
 
 	//----------------------------------------
 	//! @brief 終了関数
@@ -82,27 +96,7 @@ public:
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void Uninit() override;
-
-	//----------------------------------------
-	//! @brief 更新関数
-	//! @details
-	//! @param x     X座標
-	//! @param y     Y座標
-	//! @param color 色
-	//! @retval void なし
-	//----------------------------------------
-	void Update(float x, float y, XColor4 color);
-	
-
-	//----------------------------------------
-	//! @brief 描画関数
-	//! @details
-	//! @param object_index オブジェクトインデックス
-	//! @param mesh_index   メッシュインデックス
-	//! @retval void なし
-	//----------------------------------------
-	void Draw(unsigned object_index, unsigned mesh_index) override;
+	void Uninit();
 };
 
 

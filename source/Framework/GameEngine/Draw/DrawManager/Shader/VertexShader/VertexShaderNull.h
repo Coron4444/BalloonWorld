@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../VertexShaderBase/VertexShaderBase.h"
+#include "VertexShaderBase.h"
 
 
 

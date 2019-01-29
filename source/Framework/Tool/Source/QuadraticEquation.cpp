@@ -45,6 +45,20 @@ float* QuadraticEquation::getpD()
 
 
 
+float QuadraticEquation::getAnswer0()
+{
+	return answer0_;
+}
+
+
+
+float QuadraticEquation::getAnswer1()
+{
+	return answer1_;
+}
+
+
+
 //****************************************
 // ŠÖ”’è‹`
 //****************************************
@@ -65,8 +79,8 @@ bool QuadraticEquation::CalculateTheSolutionFormula()
 	// ‰ğ‚ÌŒö®‚ğ‰ğ‚­
 	d_ = sqrtf(d_);
 
-	t0_ = (-b_ + d_) / (2.0f * a_);
-	t1_ = (-b_ - d_) / (2.0f * a_);
+	answer0_ = (-b_ + d_) / (2.0f * a_);
+	answer1_ = (-b_ - d_) / (2.0f * a_);
 
 	return true;
 }

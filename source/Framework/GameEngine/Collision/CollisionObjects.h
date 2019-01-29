@@ -12,10 +12,10 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <LimitedPointerArray\LimitedPointerArray.h>
+#include "CollisionObject.h"
+#include "CollisionManager/ObjectOfTree.h"
 
-#include "../CollisionObject/CollisionObject.h"
-#include "../ComponentManager/CollisionManager/LinerOctree/ObjectOfTree/ObjectOfTree.h"
+#include <Tool/LimitedPointerArray.h>
 
 
 
