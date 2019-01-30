@@ -140,6 +140,16 @@ public:
 	virtual ~GameObjectBase();
 
 	//----------------------------------------
+	//! @brief 初期化関数
+	//! @details
+	//! @param update    更新基底クラス
+	//! @param draw      描画基底クラス
+	//! @param collision 衝突基底クラス
+	//! @retval void なし
+	//----------------------------------------
+	void Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision);
+
+	//----------------------------------------
 	//! @brief 終了関数
 	//! @details
 	//! @param void なし
@@ -153,7 +163,7 @@ public:
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	virtual void Reset() = 0;
+	virtual void Reset();
 
 	//----------------------------------------
 	//! @brief 物理生成関数
@@ -162,19 +172,7 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void CreatePhysics();
-
-protected:
-	//----------------------------------------
-	//! @brief 初期化関数
-	//! @details
-	//! @param update    更新基底クラス
-	//! @param draw      描画基底クラス
-	//! @param collision 衝突基底クラス
-	//! @retval void なし
-	//----------------------------------------
-	void Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision);
-
-
+:
 
 private:
 	//----------------------------------------
@@ -192,6 +190,14 @@ private:
 	//! @retval void なし
 	//----------------------------------------
 	void UninitComponent();
+
+	//----------------------------------------
+	//! @brief コンポーネントリセット関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void ResetComponent();
 
 	//----------------------------------------
 	//! @brief 描画共通データ追加関数

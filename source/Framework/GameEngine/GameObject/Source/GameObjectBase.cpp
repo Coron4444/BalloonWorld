@@ -113,22 +113,6 @@ GameObjectBase::~GameObjectBase()
 
 
 
-void GameObjectBase::Uninit()
-{
-	UninitComponent();
-}
-
-
-
-void GameObjectBase::CreatePhysics()
-{
-	if (physics_ != nullptr) return;
-	physics_ = new Physics();
-	physics_->setGameObject(this);
-}
-
-
-
 void GameObjectBase::Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision)
 {
 	// 描画共通データ設定
@@ -141,6 +125,22 @@ void GameObjectBase::Init(UpdateBase* update, DrawBase* draw, CollisionBase* col
 	// オブジェクトマネージャーに登録
 	if (!is_registration_) return;
 	GameObjectManager::getpInstance()->AddGameObjectBaseToArray(this);
+}
+
+
+
+void GameObjectBase::Uninit()
+{
+	UninitComponent();
+}
+
+
+
+void GameObjectBase::CreatePhysics()
+{
+	if (physics_ != nullptr) return;
+	physics_ = new Physics();
+	physics_->setGameObject(this);
 }
 
 
@@ -183,6 +183,26 @@ void GameObjectBase::UninitComponent()
 	if (collision_ != nullptr)
 	{
 		collision_->Uninit();
+	}
+}
+
+
+
+void GameObjectBase::ResetComponent()
+{
+	if (update_ != nullptr)
+	{
+		update_->Reset();
+	}
+
+	if (draw_ != nullptr)
+	{
+		draw_->Reset();
+	}
+
+	if (collision_ != nullptr)
+	{
+		collision_->Reset();
 	}
 }
 

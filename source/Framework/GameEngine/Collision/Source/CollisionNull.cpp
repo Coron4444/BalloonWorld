@@ -46,6 +46,12 @@ void CollisionNull::Update()
 
 
 
+void CollisionNull::Reset()
+{
+}
+
+
+
 void CollisionNull::DebugDisplay()
 {
 }

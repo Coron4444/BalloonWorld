@@ -12,7 +12,7 @@
 //****************************************
 #include "../ClearLogoDraw.h"
 
-#include <Resource/Polygon/PlanePolygon/PlanePolygon.h>
+#include <Resource/Polygon/PlanePolygon.h>
 #include <Tool/SafeRelease.h>
 
 
@@ -51,7 +51,7 @@ D3DMATERIAL9* ClearLogoDraw::getpMaterial(unsigned object_index, unsigned mesh_i
 	object_index = object_index;
 	mesh_index = mesh_index;
 
-	return plane_polygon_->GetMaterial();
+	return plane_polygon_->getpMaterial();
 }
 
 
@@ -74,25 +74,29 @@ void ClearLogoDraw::Init()
 {
 	// オーダーリスト設定
 	getpDrawOrderList()->setDrawType(DrawOrderList::DrawType::TWO_DIMENSIONAL);
-	getpDrawOrderList()->getpRenderTargetFlag()->Set(DrawOrderList::RENDER_TARGET_BACK_BUFFER);
+	getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_BACK_BUFFER);
 	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::FIXED);
 	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::FIXED);
 
 	// テクスチャの登録
 	diffuse_texture_ = TextureManager::getpInstance()->getpObject(&TEXTURE_NAME);
 
+	// 平面ポリゴン作成
+	plane_polygon_ = new PlanePolygon();
+	plane_polygon_->Init();
+
 	// 拡縮&移動
-	clear_logo_->GetTransform()->GetScale()->x = diffuse_texture_->getWidth() * SCALE;
-	clear_logo_->GetTransform()->GetScale()->y = diffuse_texture_->getHeight() * (SCALE + 0.2f);
-	*clear_logo_->GetTransform()->GetPosition() = Vec3(0.0f, 0.0f, 0.0f);
-	clear_logo_->GetTransform()->UpdateWorldMatrixSRT();
+	getpGameObject()->getpTransform()->getpScale()->x = diffuse_texture_->getWidth() * SCALE;
+	getpGameObject()->getpTransform()->getpScale()->y = diffuse_texture_->getHeight() * (SCALE + 0.2f);
+	*getpGameObject()->getpTransform()->getpPosition() = Vec3(0.0f, 0.0f, 0.0f);
+	getpGameObject()->getpTransform()->CreateWorldMatrix();
 }
 
 
 
 void ClearLogoDraw::Uninit()
 {
-	SafeRelease::PlusUninit()(&plane_polygon_);
+	SafeRelease::PlusUninit(&plane_polygon_);
 	SafeRelease::PlusRelease(&diffuse_texture_);
 }
 

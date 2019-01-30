@@ -1,49 +1,41 @@
 //================================================================================
-//
-//    敵クラス
-//    Author : Araki Kai                                作成日 : 2018/07/24
-//
+//!	@file	 Enemy.h
+//!	@brief	 敵Class
+//! @details 
+//!	@author  Kai Araki									@date 2018/07/24
 //================================================================================
-
 #ifndef	_ENEMY_H_
 #define _ENEMY_H_
 
 
 
-//======================================================================
-//
+//****************************************
 // インクルード文
-//
-//======================================================================
-
-#include <GameObjectBase/GameObjectBase.h>
-
-#include <Polygon\CubePolygon\CubePolygon.h>
+//****************************************
+#include <GameEngine/GameObject/GameObjectNull.h>
 
 
 
-//======================================================================
-//
-// クラス定義
-//
-//======================================================================
-
-class Enemy : public GameObjectBase
+//************************************************************														   
+//! @brief   敵Class
+//!
+//! @details 敵のClass
+//************************************************************
+class Enemy : public GameObjectNull
 {
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-public :
-	// メンバ関数
-	void Init(UpdateBase*    update,
-			  DrawBase*      draw,
-			  CollisionBase* collision);
-	void Uninit() override;
-	void Reset()  override;
-
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-public :
-	// 公開メンバ変数
-	CubePolygon* cube_polygon_;
+//====================
+// 関数
+//====================
+public:
+	//----------------------------------------
+	//! @brief 初期化関数
+	//! @details
+	//! @param *update    更新基底クラス
+	//! @param *draw      描画基底クラス
+	//! @param *collision 衝突基底クラス
+	//! @retval void なし
+	//----------------------------------------
+	void Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision);
 };
 
 

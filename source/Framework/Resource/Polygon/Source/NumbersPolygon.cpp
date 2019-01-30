@@ -55,6 +55,13 @@ Transform* NumbersPolygon::NumberPolygon::getpTransform()
 
 
 
+D3DMATERIAL9* NumbersPolygon::NumberPolygon::getpMaterial()
+{
+	return plane_polygon_->getpMaterial();
+}
+
+
+
 void NumbersPolygon::setNumber(int value)
 {
 	int temp_digits_num = digits_num_;
@@ -120,9 +127,16 @@ unsigned NumbersPolygon::getObjectNum()
 
 
 
-MATRIX* NumbersPolygon::getpMatrix(int mesh_index)
+MATRIX* NumbersPolygon::getpMatrix(int object_index)
 {
-	return number_[mesh_index]->getpTransform()->getpWorldMatrix();
+	return number_[object_index]->getpTransform()->getpWorldMatrix();
+}
+
+
+
+D3DMATERIAL9* NumbersPolygon::getpMaterial(int object_index)
+{
+	return number_[object_index]->getpMaterial();
 }
 
 
@@ -157,8 +171,16 @@ void NumbersPolygon::NumberPolygon::Draw()
 
 
 
-void NumbersPolygon::Init()
+void NumbersPolygon::Init(int number, int digits_num, bool is_zero, Vec2 position,
+						  Vec2 scale, XColor4 color, TextureObject* texture)
 {
+	setDigitsNum(digits_num);
+	setIsZero(is_zero);
+	setPosition(position);
+	setScale(scale);
+	setColor(color);
+	setTextureObject(texture);
+	setNumber(number);
 }
 
 
@@ -169,9 +191,9 @@ void NumbersPolygon::Uninit()
 
 
 
-void NumbersPolygon::Draw(int mesh_index)
+void NumbersPolygon::Draw(int object_index)
 {
-	number_[mesh_index]->Draw();
+	number_[object_index]->Draw();
 }
 
 

@@ -45,8 +45,8 @@ private:
 // 変数
 //====================
 private:
-	PlanePolygon* plane_polygon_;		//!< 平面ポリゴン
-	TextureObject* diffuse_texture_;	//!< ディヒューズテクスチャ
+	PlanePolygon* plane_polygon_ = nullptr;		//!< 平面ポリゴン
+	TextureObject* diffuse_texture_ = nullptr;	//!< ディヒューズテクスチャ
 
 
 //====================

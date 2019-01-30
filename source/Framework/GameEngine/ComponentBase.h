@@ -17,12 +17,7 @@
 #include <Tool/Debug/ImGUI/imgui_impl_dx9.h>
 #endif
 
-
-
-//****************************************
-// クラス宣言
-//****************************************
-class GameObjectBase;
+#include "GameObject/GameObjectBase.h"
 
 
 
@@ -95,6 +90,14 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	virtual void Update() = 0;
+
+	//----------------------------------------
+	//! @brief リセット関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	virtual void Reset() = 0;
 
 	//----------------------------------------
 	//! @brief デバッグ表示関数

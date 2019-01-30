@@ -121,6 +121,12 @@ void DrawNull::Update()
 
 
 
+void DrawNull::Reset()
+{
+}
+
+
+
 void DrawNull::DebugDisplay()
 {
 }

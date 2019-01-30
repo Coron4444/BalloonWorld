@@ -17,9 +17,11 @@
 #include <Tool/Transform.h>
 
 
+
 //****************************************
 // クラス宣言
 //****************************************
+class D3DMATERIAL9;
 class PlanePolygon;
 class TextureObject;
 
@@ -89,6 +91,13 @@ public:
 		//----------------------------------------
 		Transform* getpTransform();
 
+		//----------------------------------------
+		//! @brief マテリアル取得関数
+		//! @details
+		//! @param void なし
+		//! @retval D3DMATERIAL9* マテリアル
+		//----------------------------------------
+		D3DMATERIAL9* getpMaterial();
 
 	//====================
 	// 関数
@@ -204,10 +213,18 @@ public:
 	//----------------------------------------
 	//! @brief 行列取得関数
 	//! @details
-	//! @param mesh_index メッシュインデックス
-	//! @retval unsigned メッシュ数
+	//! @param object_index オブジェクトインデックス
+	//! @retval MATRIX* 行列
 	//----------------------------------------
-	MATRIX* getpMatrix(int mesh_index);
+	MATRIX* getpMatrix(int object_index);
+
+	//----------------------------------------
+	//! @brief マテリアル取得関数
+	//! @details
+	//! @param object_index オブジェクトインデックス
+	//! @retval D3DMATERIAL9* マテリアル
+	//----------------------------------------
+	D3DMATERIAL9* getpMaterial(int object_index);
 
 
 //====================
@@ -217,10 +234,17 @@ public:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
-	//! @param void なし
+	//! @param number     数字
+	//! @param digits_num 桁数
+	//! @param is_zero    ゼロ埋めフラグ
+	//! @param position   座標
+	//! @param scale      拡縮
+	//! @param color      色
+	//! @param *texture   テクスチャオブジェクト
 	//! @retval void なし
 	//----------------------------------------
-	void Init();
+	void Init(int number, int digits_num, bool is_zero, Vec2 position,
+			  Vec2 scale, XColor4 color, TextureObject* texture);
 
 	//----------------------------------------
 	//! @brief 終了関数
@@ -233,10 +257,10 @@ public:
 	//----------------------------------------
 	//! @brief 描画関数
 	//! @details
-	//! @param mesh_index メッシュインデックス
+	//! @param object_index オブジェクトインデックス
 	//! @retval void なし
 	//----------------------------------------
-	void Draw(int mesh_index);
+	void Draw(int object_index);
 
 
 private:

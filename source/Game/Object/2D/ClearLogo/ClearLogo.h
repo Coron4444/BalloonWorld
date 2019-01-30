@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <GameEngine/GameObject/GameObjectBase.h>
+#include <GameEngine/GameObject/GameObjectNull.h>
 
 
 
@@ -21,33 +21,19 @@
 //!
 //! @details クリアロゴのClass
 //************************************************************
-class ClearLogo : public GameObjectBase
+class ClearLogo : public GameObjectNull
 {
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-public :
+//====================
+// 関数
+//====================
+public:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
-	//! @param draw 描画基底クラス
+	//! @param *draw 描画基底クラス
 	//! @retval void なし
 	//----------------------------------------
 	void Init(DrawBase* draw);
-
-	//----------------------------------------
-	//! @brief 終了関数
-	//! @details
-	//! @param void なし
-	//! @retval void なし
-	//----------------------------------------
-	void Uninit() override;
-
-	//----------------------------------------
-	//! @brief リセット関数
-	//! @details
-	//! @param void なし
-	//! @retval void なし
-	//----------------------------------------
-	void Reset() override;
 };
 
 

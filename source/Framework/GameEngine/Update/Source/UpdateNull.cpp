@@ -40,6 +40,12 @@ void UpdateNull::Update()
 
 
 
+void UpdateNull::Reset()
+{
+}
+
+
+
 void UpdateNull::DebugDisplay()
 {
 }
