@@ -57,7 +57,7 @@ void RenderTexture::setRenderTarget(int render_target_index)
 //****************************************
 // ŠÖ”’è‹`
 //****************************************
-void RenderTexture::Init(float texture_width, float texture_height)
+void RenderTexture::Init(int texture_width, int texture_height)
 {
 	Renderer::getpInstance()->getDevice(&device_);
 	D3DXCreateTexture(device_, texture_width, texture_height, 1,

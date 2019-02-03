@@ -58,7 +58,7 @@ public:
 	//----------------------------------------
 	//! @brief Še•Ó‚Ì’·‚³İ’èŠÖ”
 	//! @details
-	//! @param[in] value Še•Ó‚Ì’·‚³
+	//! @param value Še•Ó‚Ì’·‚³
 	//! @retval void ‚È‚µ
 	//----------------------------------------
 	void setLength(Vector3D value);

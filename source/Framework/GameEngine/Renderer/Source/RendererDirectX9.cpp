@@ -123,6 +123,16 @@ bool RendererDirectX9::DrawBegin()
 
 
 
+bool RendererDirectX9::NoClearDrawBegin()
+{
+	// •`‰æ‚ÌŠJn
+	if (SUCCEEDED(direct3d_device_->BeginScene())) return true;
+
+	return false;
+}
+
+
+
 void RendererDirectX9::DrawEnd(bool is_begin_scene)
 {
 	// •`‰æ‚ÌI—¹

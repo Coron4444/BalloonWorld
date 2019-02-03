@@ -87,6 +87,12 @@ SceneBase::SceneBase(StateBase* state)
 
 
 
+SceneBase::~SceneBase()
+{
+}
+
+
+
 void SceneBase::Init()
 {
 	if (state_ == nullptr) return;

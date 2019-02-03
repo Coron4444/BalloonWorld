@@ -178,8 +178,8 @@ void NumbersPolygon::Init(int number, int digits_num, bool is_zero, Vec2 positio
 	setIsZero(is_zero);
 	setPosition(position);
 	setScale(scale);
-	setColor(color);
 	setTextureObject(texture);
+	setColor(color);
 	setNumber(number);
 }
 
@@ -187,6 +187,7 @@ void NumbersPolygon::Init(int number, int digits_num, bool is_zero, Vec2 positio
 
 void NumbersPolygon::Uninit()
 {
+	ReleaseNumberPolygon();
 }
 
 
@@ -218,12 +219,12 @@ void NumbersPolygon::LeftJustified(int number, int* digits_num)
 	}
 
 	// ”šƒ|ƒŠƒSƒ“ì¬
-	CreateNumberPolygon(number, digits_num);
+	CreateNumberPolygon(digits_num);
 }
 
 
 
-void NumbersPolygon::CreateNumberPolygon(int number, int* digits_num)
+void NumbersPolygon::CreateNumberPolygon(int* digits_num)
 {
 	// Œ»İ‚Ì”’l‚Ì‰ğ•ú
 	ReleaseNumberPolygon();

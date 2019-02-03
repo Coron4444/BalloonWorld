@@ -12,12 +12,17 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../Update/UpdateBase.h"
-#include "../Draw/DrawBase.h"
-#include "../Collision/CollisionBase.h"
-
 #include <Tool/Transform.h>
 #include <Tool/Physics.h>
+
+
+
+//****************************************
+// クラス宣言
+//****************************************
+class UpdateBase;
+class DrawBase;
+class CollisionBase;
 
 
 
@@ -172,7 +177,6 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void CreatePhysics();
-:
 
 private:
 	//----------------------------------------

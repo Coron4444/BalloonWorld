@@ -90,8 +90,8 @@ public:
 
 	//----------------------------------------
 	//! @brief 描画関数
-	//! @param[in] object_index オブジェクトインデックス
-	//! @param[in] mesh_index   メッシュインデックス
+	//! @param object_index オブジェクトインデックス
+	//! @param mesh_index   メッシュインデックス
 	//! @retval void なし
 	//----------------------------------------
 	void Draw(unsigned object_index, unsigned mesh_index) override;

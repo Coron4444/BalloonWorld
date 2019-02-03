@@ -1,456 +1,240 @@
 //================================================================================
-//
-//    コントローラー
-//    Author : Araki Kai                                作成日 : 2017/09/24
-//
+//!	@file	 Controller.h
+//!	@brief	 コントローラーClass
+//! @details 
+//!	@author  Kai Araki									@date 2017/09/24
 //================================================================================
 
 
 
-//**********************************************************************
-//
+//****************************************
 // インクルード文
-//
-//**********************************************************************
-
+//****************************************
 #include "../Controller.h"
 
 
 
-//**********************************************************************
-//
+//****************************************
 // 定数定義
-//
-//**********************************************************************
-
-// スティック感度(トリガー)
-const int STICK_TRIGGER_SENSITIVITY  = 30000;
-const int STICK_HOLD_SENSITIVITY     = 100;
-const int TRIGGER_BUTTON_SENSITIVITY = 5;
+//****************************************
+const int Controller::STICK_TRIGGER_SENSITIVITY = 30000;
+const int Controller::STICK_HOLD_SENSITIVITY = 100;
+const int Controller::TRIGGER_BUTTON_SENSITIVITY = 5;
 
 
 
-//**********************************************************************
-//
-// グローバル変数
-//
-//**********************************************************************
-
-namespace
+//****************************************
+// プロパティ定義
+//****************************************
+XINPUT_STATE* Controller::XInputController::getpState()
 {
-	XInputController controller[CONTOROLLER_NUM_MAX];
+	return &state_;
 }
 
 
 
-
-
-
-//**********************************************************************
-//
-// プロトタイプ宣言
-//
-//**********************************************************************
-
-//================================================================================
-//
-// [ コントローラーの値設定関数 ]
-//
-// ｢ 引数 ｣
-//
-// ･なし
-//
-// ｢ 戻り値 ｣
-//
-// ･なし
-//
-//【 詳細 】
-//
-// ･コントローラーの値を設定する
-//
-//================================================================================
-
-void SetController()
+XINPUT_STATE* Controller::XInputController::getpOldState()
 {
-	for (int i = 0; i < CONTOROLLER_NUM_MAX; i++)
-	{
-		controller[i].oldState = controller[i].state;
-
-		controller[i].connectionMessage = XInputGetState(i, &controller[i].state);
-
-	}
+	return &old_state_;
 }
 
 
 
-//================================================================================
-//
-// [ コントローラーのボタン判定関数( HOLD ) ]
-//
-// ｢ 引数 ｣
-//
-// ･controllerNum : コントローラー番号
-// ･buttonNum     : 判定したいボタン
-//
-// ｢ 戻り値 ｣
-//
-// ･bool型 : 押しっぱなしかどうかを返す
-//
-//【 詳細 】
-//
-// ･引数で渡されたコントローラーのボタンがHOLD状態かを判定する
-//
-//================================================================================
-
-bool InputHoldController(int controllerNum, int buttonNum)
+DWORD* Controller::XInputController::getpConnectionMessage()
 {
-	if (controller[controllerNum].state.Gamepad.wButtons & buttonNum)
-	{
-		return true;
-	}
+	return &connection_message_;
+}
 
+
+
+bool Controller::getHold(int controller_index, int value)
+{
+	if (controller_[controller_index].getpState()->Gamepad.wButtons & value) return true;
 	return false;
 }
 
 
 
-//================================================================================
-//
-// [ コントローラーのボタン判定関数( TRIG ) ]
-//
-// ｢ 引数 ｣
-//
-// ･controllerNum : コントローラー番号
-// ･buttonNum     : 判定したいボタン
-//
-// ｢ 戻り値 ｣
-//
-// ･bool型 : 押しっぱなしかどうかを返す
-//
-//【 詳細 】
-//
-// ･引数で渡されたコントローラーのボタンがTRIG状態かを判定する
-//
-//================================================================================
-
-bool InputTriggerController(int controllerNum, int buttonNum)
+bool Controller::getTrigger(int controller_index, int value)
 {
-	if (controller[controllerNum].state.Gamepad.wButtons & buttonNum)
-	{
-		if (controller[controllerNum].oldState.Gamepad.wButtons & buttonNum)
-		{
-			return false;
-		}
-
-		return true;
-	}
-
-	return false;
-}
-
-
-
-//================================================================================
-//
-// [ コントローラーのボタン判定関数( RELEASE ) ]
-//
-// ｢ 引数 ｣
-//
-// ･controllerNum : コントローラー番号
-// ･buttonNum     : 判定したいボタン
-//
-// ｢ 戻り値 ｣
-//
-// ･bool型 : 押しっぱなしかどうかを返す
-//
-//【 詳細 】
-//
-// ･引数で渡されたコントローラーのボタンがRELEASE状態かを判定する
-//
-//================================================================================
-
-bool InputReleaseController(int controllerNum, int buttonNum)
-{
-	if (controller[controllerNum].oldState.Gamepad.wButtons & buttonNum)
-	{
-		if (!(controller[controllerNum].state.Gamepad.wButtons & buttonNum))
-		{
-			return true;
-		}
-	}
-
-	return false;
-}
-
-
-
-//================================================================================
-//
-// [ コントローラーのLスティック判定関数(TRIG ) ]
-//
-// ｢ 引数 ｣
-//
-// ･controllerNum : コントローラー番号
-//
-// ｢ 戻り値 ｣
-//
-// ･bool型 : ある一定数を超えたら反応する
-//
-//【 詳細 】
-//
-// ･引数で渡されたコントローラーのLスティックのTRIGかを判定する
-//
-//================================================================================
-
-bool InputLStickTriggerController(int controllerNum, int direction)
-{
-	switch (direction)
-	{
-		case STICK_UP :
-		{
-			if (controller[controllerNum].state.Gamepad.sThumbLY      <  STICK_TRIGGER_SENSITIVITY) return false;
-			if (controller[ controllerNum ].oldState.Gamepad.sThumbLY >= STICK_TRIGGER_SENSITIVITY) return false;
-			return true;
-		}	
-		case STICK_DOWN :
-		{
-			if (controller[controllerNum].state.Gamepad.sThumbLY    >  -STICK_TRIGGER_SENSITIVITY) return false;
-			if (controller[controllerNum].oldState.Gamepad.sThumbLY <= -STICK_TRIGGER_SENSITIVITY) return false;
-			return true;
-		}
-		case STICK_LEFT :
-		{
-			if (controller[controllerNum].state.Gamepad.sThumbLX    >  -STICK_TRIGGER_SENSITIVITY) return false;
-			if (controller[controllerNum].oldState.Gamepad.sThumbLX <= -STICK_TRIGGER_SENSITIVITY) return false;
-			return true;
-		}
-		case STICK_RIGHT :
-		{
-			if (controller[controllerNum].state.Gamepad.sThumbLX    <  STICK_TRIGGER_SENSITIVITY) return false;
-			if (controller[controllerNum].oldState.Gamepad.sThumbLX >= STICK_TRIGGER_SENSITIVITY) return false;
-			return true;
-		}
-	}
-
-	return false;
-}
-
-
-
-//================================================================================
-//
-// [ コントローラーのLスティック判定関数(HOLD) ]
-//
-//================================================================================
-
-bool InputLStickHoldController(int controllerNum, int direction)
-{
-	switch (direction)
-	{
-		case STICK_UP :
-		{
-			if (controller[controllerNum].state.Gamepad.sThumbLY < STICK_HOLD_SENSITIVITY) return false;
-			return true;
-		}	
-		case STICK_DOWN :
-		{
-			if (controller[controllerNum].state.Gamepad.sThumbLY > -STICK_HOLD_SENSITIVITY) return false;
-			return true;
-		}
-		case STICK_LEFT :
-		{
-			if (controller[controllerNum].state.Gamepad.sThumbLX > -STICK_HOLD_SENSITIVITY) return false;
-			return true;
-		}
-		case STICK_RIGHT :
-		{
-			if (controller[controllerNum].state.Gamepad.sThumbLX < STICK_HOLD_SENSITIVITY) return false;
-			return true;
-		}
-	}
-
-	return false;
-}
-
-
-
-//================================================================================
-//
-// [コントローラーのR2L2判定関数(TRIG)]
-//
-//================================================================================
-
-bool InputR2L2TriggerController(int controllerNum, int direction)
-{
-	switch (direction)
-	{
-		case TRIGGER_BUTTON_R2 :
-		{
-			if (controller[controllerNum].state.Gamepad.bRightTrigger    <  TRIGGER_BUTTON_SENSITIVITY) return false;
-			if (controller[controllerNum].oldState.Gamepad.bRightTrigger >= TRIGGER_BUTTON_SENSITIVITY) return false;
-			return true;
-		}	
-		case TRIGGER_BUTTON_L2 :
-		{
-			if (controller[controllerNum].state.Gamepad.bLeftTrigger    <  TRIGGER_BUTTON_SENSITIVITY) return false;
-			if (controller[controllerNum].oldState.Gamepad.bLeftTrigger >= TRIGGER_BUTTON_SENSITIVITY) return false;
-			return true;
-		}
-	}
-
-	return false;
-}
-
-
-
-//================================================================================
-//
-// [コントローラーのR2L2判定関数(HOLD)]
-//
-//================================================================================
-
-bool InputR2L2HoldController(int controllerNum, int direction)
-{
-	switch (direction)
-	{
-		case TRIGGER_BUTTON_R2 :
-		{
-			if (controller[controllerNum].state.Gamepad.bRightTrigger < TRIGGER_BUTTON_SENSITIVITY) return false;
-			return true;
-		}	
-		case TRIGGER_BUTTON_L2 :
-		{
-			if (controller[controllerNum].state.Gamepad.bLeftTrigger < TRIGGER_BUTTON_SENSITIVITY) return false;
-			return true;
-		}
-	}
-
-	return false;
-}
-
-
-
-//================================================================================
-//
-// [コントローラーのR2L2判定関数(RELEASE)]
-//
-//================================================================================
-
-bool InputR2L2ReleaseController(int controllerNum, int direction)
-{
-	switch (direction)
-	{
-		case TRIGGER_BUTTON_R2 :
-		{
-			if (controller[controllerNum].state.Gamepad.bRightTrigger    >  TRIGGER_BUTTON_SENSITIVITY) return false;
-			if (controller[controllerNum].oldState.Gamepad.bRightTrigger <= TRIGGER_BUTTON_SENSITIVITY) return false;
-			return true;
-		}	
-		case TRIGGER_BUTTON_L2 :
-		{
-			if (controller[controllerNum].state.Gamepad.bLeftTrigger    >  TRIGGER_BUTTON_SENSITIVITY) return false;
-			if (controller[controllerNum].oldState.Gamepad.bLeftTrigger <= TRIGGER_BUTTON_SENSITIVITY) return false;
-			return true;
-		}
-	}
-
-	return false;
-}
-
-
-
-//================================================================================
-//
-// [ コントローラーが繋がっているかの判定関数 ]
-//
-// ｢ 引数 ｣
-//
-// ･controllerNum : コントローラー番号
-//
-// ｢ 戻り値 ｣
-//
-// ･bool型 : 接続されていればtrueを返す
-//
-//【 詳細 】
-//
-// ･接続されていればtrueを返す
-//
-//================================================================================
-
-bool CheckController(int controllerNum)
-{
-	if (controller[controllerNum].connectionMessage == ERROR_DEVICE_NOT_CONNECTED)
-	{
-		return false;
-	}
-
+	if (!(controller_[controller_index].getpState()->Gamepad.wButtons & value)) return false;
+	if (controller_[controller_index].getpOldState()->Gamepad.wButtons & value) return false;
 	return true;
 }
 
 
 
-//================================================================================
-//
-// [ 接続されているコントローラー数の取得関数 ]
-//
-// ｢ 引数 ｣
-//
-// ･なし
-//
-// ｢ 戻り値 ｣
-//
-// ･int型 : 接続されているコントローラーの数を返す
-//
-//【 詳細 】
-//
-// ･接続されているコントローラー数を返す
-//
-//================================================================================
-
-int GetControllerNum()
+bool Controller::getRelease(int controller_index, int value)
 {
-	int tempNum = 0;
-
-	for (int i = 0; i < CONTOROLLER_NUM_MAX; i++)
-	{
-		if (controller[i].connectionMessage == ERROR_SUCCESS)
-		{
-			tempNum++;
-		}
-	}
-
-	return tempNum;
+	if (!(controller_[controller_index].getpOldState()->Gamepad.wButtons & value)) return false;
+	if (controller_[controller_index].getpState()->Gamepad.wButtons & value) return false;
+	return true;
 }
 
 
 
-//================================================================================
-//
-// [ 1台でもコントローラーが接続されているかフラグ関数 ]
-//
-// ｢ 引数 ｣
-//
-// ･なし
-//
-// ｢ 戻り値 ｣
-//
-// ･int型 : 1台でもコントローラーが接続されていると1を返す
-//
-//【 詳細 】
-//
-// ･1台でもコントローラーが接続されていると1を返す
-//
-//================================================================================
-
-int GetControllerConnect()
+bool Controller::getHoldLStick(int controller_index, Controller::Direction value)
 {
-	for (int i = 0; i < CONTOROLLER_NUM_MAX; i++)
+	switch (value)
 	{
-		if (controller[i].connectionMessage == ERROR_SUCCESS)
+		case Controller::Direction::UP:
 		{
-			return CONNECT_ONE;
+			if (controller_[controller_index].getpState()->Gamepad.sThumbLY < STICK_HOLD_SENSITIVITY) return false;
+			return true;
+		}
+		case Controller::Direction::DOWN:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.sThumbLY > -STICK_HOLD_SENSITIVITY) return false;
+			return true;
+		}
+		case Controller::Direction::LEFT:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.sThumbLX > -STICK_HOLD_SENSITIVITY) return false;
+			return true;
+		}
+		case Controller::Direction::RIGHT:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.sThumbLX < STICK_HOLD_SENSITIVITY) return false;
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+bool Controller::getTriggerLStick(int controller_index, Controller::Direction value)
+{
+	switch (value)
+	{
+		case Controller::Direction::UP:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.sThumbLY < STICK_TRIGGER_SENSITIVITY) return false;
+			if (controller_[controller_index].getpOldState()->Gamepad.sThumbLY >= STICK_TRIGGER_SENSITIVITY) return false;
+			return true;
+		}
+		case Controller::Direction::DOWN:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.sThumbLY > -STICK_TRIGGER_SENSITIVITY) return false;
+			if (controller_[controller_index].getpOldState()->Gamepad.sThumbLY <= -STICK_TRIGGER_SENSITIVITY) return false;
+			return true;
+		}
+		case Controller::Direction::LEFT:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.sThumbLX > -STICK_TRIGGER_SENSITIVITY) return false;
+			if (controller_[controller_index].getpOldState()->Gamepad.sThumbLX <= -STICK_TRIGGER_SENSITIVITY) return false;
+			return true;
+		}
+		case Controller::Direction::RIGHT:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.sThumbLX < STICK_TRIGGER_SENSITIVITY) return false;
+			if (controller_[controller_index].getpOldState()->Gamepad.sThumbLX >= STICK_TRIGGER_SENSITIVITY) return false;
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+bool Controller::getHoldTriggerButton(int controller_index, 
+									  Controller::TriggerButton value)
+{
+	switch (value)
+	{
+		case Controller::TriggerButton::R2:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.bRightTrigger < TRIGGER_BUTTON_SENSITIVITY) return false;
+			if (controller_[controller_index].getpOldState()->Gamepad.bRightTrigger >= TRIGGER_BUTTON_SENSITIVITY) return false;
+			return true;
+		}
+		case Controller::TriggerButton::L2:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.bLeftTrigger < TRIGGER_BUTTON_SENSITIVITY) return false;
+			if (controller_[controller_index].getpOldState()->Gamepad.bLeftTrigger >= TRIGGER_BUTTON_SENSITIVITY) return false;
+			return true;
 		}
 	}
 
-	return 0;
+	return false;
+}
+
+
+
+bool Controller::getTriggerTriggerButton(int controller_index, 
+										 Controller::TriggerButton value)
+{
+	switch (value)
+	{
+		case Controller::TriggerButton::R2:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.bRightTrigger < TRIGGER_BUTTON_SENSITIVITY) return false;
+			return true;
+		}
+		case Controller::TriggerButton::L2:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.bLeftTrigger < TRIGGER_BUTTON_SENSITIVITY) return false;
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+bool Controller::getReleaseTriggerButton(int controller_index, 
+										 Controller::TriggerButton value)
+{
+	switch (value)
+	{
+		case Controller::TriggerButton::R2:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.bRightTrigger > TRIGGER_BUTTON_SENSITIVITY) return false;
+			if (controller_[controller_index].getpOldState()->Gamepad.bRightTrigger <= TRIGGER_BUTTON_SENSITIVITY) return false;
+			return true;
+		}
+		case Controller::TriggerButton::L2:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.bLeftTrigger > TRIGGER_BUTTON_SENSITIVITY) return false;
+			if (controller_[controller_index].getpOldState()->Gamepad.bLeftTrigger <= TRIGGER_BUTTON_SENSITIVITY) return false;
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+int Controller::getControllerNum()
+{
+	int num = 0;
+	for (int i = 0; i < (int)Controller::Number::MAX; i++)
+	{
+		if (*controller_[i].getpConnectionMessage() != ERROR_SUCCESS) continue;
+		num++;
+	}
+	return num;
+}
+
+
+
+//****************************************
+// 関数定義
+//****************************************
+void Controller::Update()
+{
+	for (int i = 0; i < (int)Controller::Number::MAX; i++)
+	{
+		*controller_[i].getpOldState() = *controller_[i].getpState();
+		*controller_[i].getpConnectionMessage() = XInputGetState(i, controller_[i].getpState());
+	}
+}
+
+
+
+bool Controller::IsConnection(int controller_index)
+{
+	if (*controller_[controller_index].getpConnectionMessage()
+		!= ERROR_DEVICE_NOT_CONNECTED) return true;
+	return false;
 }

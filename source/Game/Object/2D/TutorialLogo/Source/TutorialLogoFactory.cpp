@@ -11,8 +11,6 @@
 // インクルード文
 //****************************************
 #include "../TutorialLogoFactory.h"
-#include "../TutorialLogo.h"
-#include "../TutorialLogoDraw.h"
 
 
 

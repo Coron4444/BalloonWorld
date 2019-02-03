@@ -11,9 +11,6 @@
 // インクルード文
 //****************************************
 #include "../PushSpaceLogoFactory.h"
-#include "../PushSpaceLogo.h"
-#include "../PushSpaceLogoUpdate.h"
-#include "../PushSpaceLogoDraw.h"
 
 
 

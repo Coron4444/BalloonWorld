@@ -11,10 +11,6 @@
 // インクルード文
 //****************************************
 #include "../EnemyFactory.h"
-#include "../Enemy.h"
-#include "../EnemyUpdate.h"
-#include "../EnemyDraw.h"
-#include "../EnemyCollision.h"
 
 
 

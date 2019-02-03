@@ -75,6 +75,12 @@ CollisionManager* GameObjectManager::getpCollisionManager()
 //****************************************
 // 関数定義
 //****************************************
+GameObjectManager::GameObjectManager()
+{
+}
+
+
+
 void GameObjectManager::Init()
 {
 	// 各種マネージャの初期化

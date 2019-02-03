@@ -88,7 +88,7 @@ public:
 	//! @param texture_height Ç»Çµ
 	//! @retval void Ç»Çµ
 	//----------------------------------------
-	void Init(float texture_width, float texture_height);
+	void Init(int texture_width, int texture_height);
 
 	//----------------------------------------
 	//! @brief èIóπä÷êî

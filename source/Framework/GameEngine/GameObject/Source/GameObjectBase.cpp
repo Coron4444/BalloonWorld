@@ -12,8 +12,11 @@
 //****************************************
 #include "../GameObjectBase.h"
 #include "../GameObjectManager/GameObjectManager.h"
+#include "../../Update/UpdateBase.h"
 #include "../../Update/UpdateManager/UpdateManager.h"
+#include "../../Draw/DrawBase.h"
 #include "../../Draw/DrawManager/DrawManager.h"
+#include "../../Collision/CollisionBase.h"
 #include "../../Collision/CollisionManager/CollisionManager.h"
 
 #include <Tool/SafeRelease.h>
@@ -136,6 +139,13 @@ void GameObjectBase::Uninit()
 
 
 
+void GameObjectBase::Reset()
+{
+	ResetComponent();
+}
+
+
+
 void GameObjectBase::CreatePhysics()
 {
 	if (physics_ != nullptr) return;
@@ -211,6 +221,6 @@ void GameObjectBase::ResetComponent()
 void GameObjectBase::AddDrawCommonData(DrawBase* draw)
 {
 	if (draw == nullptr) return;
-	*draw->getpDrawCommonData() = *GameObjectManager::getpInstance()
-		->getpDrawManager()->getpDrawCommonData();
+	draw->setDrawCommonData(GameObjectManager::getpInstance()
+							->getpDrawManager()->getpDrawCommonData());
 }

@@ -10,9 +10,12 @@
 
 
 //****************************************
-// クラス宣言
+// インクルード文
 //****************************************
-class Enemy;
+#include "Enemy.h"
+#include "EnemyUpdate.h"
+#include "EnemyDraw.h"
+#include "EnemyCollision.h"
 
 
 

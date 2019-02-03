@@ -63,7 +63,7 @@ void MotionBlur::Init()
 
 void MotionBlur::Uninit()
 {
-	SafeRelease::PlusRelease(&polygon_);
+	SafeRelease::PlusUninit(&polygon_);
 }
 
 
@@ -107,7 +107,7 @@ void MotionBlur::Draw()
 	LPDIRECT3DDEVICE9 device;
 	Renderer::getpInstance()->getDevice(&device);
 	common_data_->getpRenderTextureMain()->setRenderTarget(0);
-	bool is_begin = Renderer::getpInstance()->DrawBegin();
+	bool is_begin = Renderer::getpInstance()->NoClearDrawBegin();
 
 	// ƒJƒƒ‰Ø‚è‘Ö‚¦
 	camera_->setType(Camera::Type::TWO_DIMENSIONAL);

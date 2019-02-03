@@ -29,6 +29,12 @@ DrawCommonData* DrawBase::getpDrawCommonData()
 }
 
 
+void DrawBase::setDrawCommonData(DrawCommonData* value)
+{
+	common_data_ = value;
+}
+
+
 
 //****************************************
 // ä÷êîíËã`

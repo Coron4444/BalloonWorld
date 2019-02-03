@@ -17,9 +17,9 @@
 //****************************************
 // プロパティ定義
 //****************************************
-GameScene* PushSpaceLogo::getpGameScene()
+GameScene* Score::getpGameScene()
 {
-	return &game_scene_;
+	return game_scene_;
 }
 
 

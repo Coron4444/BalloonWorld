@@ -39,7 +39,7 @@ public:
 	//! @brief 色変更カウンタ取得関数
 	//! @details
 	//! @param void なし
-	//! @retval void なし
+	//! @retval int* 色変更カウンタ
 	//----------------------------------------
 	int* getpColorChangeCounter();
 
@@ -47,7 +47,7 @@ public:
 	//! @brief 色取得関数
 	//! @details
 	//! @param void なし
-	//! @retval void なし
+	//! @retval XColor4* 色
 	//----------------------------------------
 	XColor4* getpColor();
 
@@ -58,6 +58,7 @@ public:
 	//! @retval bool 色変更フラグ
 	//----------------------------------------
 	bool* getpIsColorChange();
+
 
 //====================
 // 関数

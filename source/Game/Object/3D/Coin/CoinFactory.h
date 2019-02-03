@@ -10,9 +10,12 @@
 
 
 //****************************************
-// クラス宣言
+// インクルード文
 //****************************************
-class Coin;
+#include "Coin.h"
+#include "CoinUpdate.h"
+#include "CoinDraw.h"
+#include "CoinCollision.h"
 
 
 

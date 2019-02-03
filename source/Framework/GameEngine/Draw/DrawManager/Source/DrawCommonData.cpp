@@ -42,8 +42,8 @@ RenderTexture* DrawCommonData::getpRenderTextureMotionBlur()
 //****************************************
 void DrawCommonData::Init()
 {
-	main_.Init((float)GameEngine::SCREEN_WIDTH, (float)GameEngine::SCREEN_HEIGHT);
-	motion_blur_.Init((float)GameEngine::SCREEN_WIDTH, (float)GameEngine::SCREEN_HEIGHT);
+	main_.Init(GameEngine::SCREEN_WIDTH, GameEngine::SCREEN_HEIGHT);
+	motion_blur_.Init(GameEngine::SCREEN_WIDTH, GameEngine::SCREEN_HEIGHT);
 }
 
 

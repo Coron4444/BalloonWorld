@@ -145,7 +145,7 @@ private:
 	//! @param color      色
 	//! @retval void なし
 	//----------------------------------------
-	void CreateVertex(Vec2 mesh_scale, XColor4 color);
+	void CreateVertex(Vec2 mesh_scale, Color4 color);
 
 	//----------------------------------------
 	//! @brief インデックス作成関数

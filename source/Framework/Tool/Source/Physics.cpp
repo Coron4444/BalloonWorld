@@ -228,10 +228,10 @@ void Physics::UpdateVelocity()
 void Physics::UpdatePosition()
 {
 	// 速度を座標に作用
-	*game_object_->GetTransform()->getpPosition() += velocity_;
+	*game_object_->getpTransform()->getpPosition() += velocity_;
 
 	// 行列の更新
-	game_object_->GetTransform()->CreateWorldMatrix();
+	game_object_->getpTransform()->CreateWorldMatrix();
 }
 
 

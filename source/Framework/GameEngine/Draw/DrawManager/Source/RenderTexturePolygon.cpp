@@ -45,6 +45,7 @@ D3DMATERIAL9* RenderTexturePolygon::getpMaterial(unsigned object_index, unsigned
 void RenderTexturePolygon::Init()
 {
 	plane_polygon_ = new PlanePolygon();
+	plane_polygon_->Init();
 	transform_ = new Transform();
 }
 
@@ -52,7 +53,7 @@ void RenderTexturePolygon::Init()
 
 void RenderTexturePolygon::Uninit()
 {
-	SafeRelease::Normal(&plane_polygon_);
+	SafeRelease::PlusUninit(&plane_polygon_);
 	SafeRelease::Normal(&transform_);
 }
 
@@ -61,8 +62,8 @@ void RenderTexturePolygon::Uninit()
 void RenderTexturePolygon::Update(float position_x, float position_y, 
 								  float scale_x, float scale_y, XColor4 color)
 {
-	transform_->getpPosition()->x = position_x;//-0.5f;
-	transform_->getpPosition()->y = position_y;//-0.5f;
+	transform_->getpPosition()->x = position_x;
+	transform_->getpPosition()->y = position_y;
 	transform_->getpScale()->x = scale_x;
 	transform_->getpScale()->y = scale_y;
 	transform_->CreateWorldMatrix();

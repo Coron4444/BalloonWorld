@@ -83,8 +83,8 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	virtual void HitCollision(CollisionBase* hit_collision,
-							  CollisionObject*  hit_object,
-							  CollisionObject*  hit_my_object) override;
+							  CollisionObject* hit_object,
+							  CollisionObject* hit_my_object) override;
 
 	//----------------------------------------
 	//! @brief 非衝突時関数
@@ -95,8 +95,8 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	virtual void NotHitCollision(CollisionBase*	hit_collision,
-								 CollisionObject*  hit_object,
-								 CollisionObject*  hit_my_object) override;
+								 CollisionObject* hit_object,
+								 CollisionObject* hit_my_object) override;
 
 	//----------------------------------------
 	//! @brief フィールドとの衝突時関数

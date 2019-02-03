@@ -34,7 +34,7 @@ const std::string Fade::TEXTURE_NAME_TRANSITION_01 = "Fade/Transition_01.png";
 MATRIX* Fade::getpMatrix(unsigned object_index)
 {
 	object_index = object_index;
-	return transform_->getpMatrixGroup()->getpWorldMatrix();
+	return transform_->getpWorldMatrix();
 }
 
 
@@ -86,71 +86,31 @@ TextureObject* Fade::getpTransition01Object()
 //****************************************
 // 関数定義
 //****************************************
-void Fade::Init(Type type, State state, Vec2 size, XColor4 color, float speed)
+void Fade::Init()
 {
-	// 各種代入
-	type_ = type;
-	state_ = state;
-
 	// テクスチャの登録
-	if (transition01_texture_ == nullptr)
-	{
-		transition01_texture_ = TextureManager::getpInstance()
-			->getpObject(&TEXTURE_NAME_TRANSITION_01);
-	}
+	transition01_texture_ = TextureManager::getpInstance()
+		->getpObject(&TEXTURE_NAME_TRANSITION_01);
 
-	// オーダーリスト設定
-	getpDrawOrderList()->setDrawType(DrawOrderList::DrawType::TWO_DIMENSIONAL);
-	getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_BACK_BUFFER);
-	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::FIXED);
-	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::FIXED);
+	// 変形作成
+	transform_ = new Transform();
 
-	// フェードを指定サイズに変更
-	transform_->getpScale()->x = size.x;
-	transform_->getpScale()->y = size.y;
-	transform_->CreateWorldMatrix();
+	// 平面ポリゴン作成
+	plane_polygon_ = new PlanePolygon();
+	plane_polygon_->Init();
 
-	// エンドフラグOFF
-	end_flag_ = false;
-
-	// ステートごとの処理
-	if (state_ == State::FADE_IN)
-	{
-		// カラー
-		color.a = 1.0f;
-		color_ = color;
-		plane_polygon_->setColor(color_);
-
-		// フェード速度(単位：秒)
-		speed_ = -(1.0f / (float)TimeToFrame::SecondToFrame(speed));
-	}
-	else if (state_ == State::FADE_OUT)
-	{
-		// カラー
-		color.a = 0.0f;
-		color_ = color;
-		plane_polygon_->setColor(color_);
-
-		// フェード速度(単位：秒)
-		speed_ = 1.0f / (float)TimeToFrame::SecondToFrame(speed);
-	}
+	type_ = Fade::Type::NONE;
+	state_ = Fade::State::NONE;
+	end_flag_ = true;
 }
 
 
 
 void Fade::Uninit()
 {
-	// ステートごとの処理
-	if (state_ == State::FADE_IN)
-	{
-
-	}
-	else if (state_ == State::FADE_OUT)
-	{
-
-	}
-	end_flag_ = false;
+	SafeRelease::PlusUninit(&plane_polygon_);
 	SafeRelease::PlusRelease(&transition01_texture_);
+	SafeRelease::Normal(&transform_);
 }
 
 
@@ -189,4 +149,49 @@ void Fade::Draw(unsigned object_index, unsigned mesh_index)
 
 	// ポリゴン描画
 	plane_polygon_->Draw();
+}
+
+
+
+void Fade::Start(Type type, State state, Vec2 size, XColor4 color, float speed)
+{
+	// 各種代入
+	type_ = type;
+	state_ = state;
+
+	// オーダーリスト設定
+	getpDrawOrderList()->setDrawType(DrawOrderList::DrawType::TWO_DIMENSIONAL);
+	getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_BACK_BUFFER);
+	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::FIXED);
+	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::FIXED);
+
+	// フェードを指定サイズに変更
+	transform_->getpScale()->x = size.x;
+	transform_->getpScale()->y = size.y;
+	transform_->CreateWorldMatrix();
+
+	// エンドフラグOFF
+	end_flag_ = false;
+
+	// ステートごとの処理
+	if (state_ == State::FADE_IN)
+	{
+		// カラー
+		color.a = 1.0f;
+		color_ = color;
+		plane_polygon_->setColor(color_);
+
+		// フェード速度(単位：秒)
+		speed_ = -(1.0f / (float)TimeToFrame::SecondToFrame(speed));
+	}
+	else if (state_ == State::FADE_OUT)
+	{
+		// カラー
+		color.a = 0.0f;
+		color_ = color;
+		plane_polygon_->setColor(color_);
+
+		// フェード速度(単位：秒)
+		speed_ = 1.0f / (float)TimeToFrame::SecondToFrame(speed);
+	}
 }

@@ -45,7 +45,7 @@ void Plane::Init(Vector3D normal, Vector3D point)
 {
 	// –@ü
 	normal_ = normal;
-	normal_.CreateNormalize();
+	normal_.ChangeNormalize();
 
 	// D¬•ª
 	adjustmet_d_ = -((normal_.x * point.x) + (normal_.y * point.y) 
@@ -57,7 +57,7 @@ void Plane::Init(Vector3D normal, Vector3D point)
 void Plane::Init(Vec3 point0, Vec3 point1, Vec3 point2)
 {
 	// –@ü‚Ìì¬
-	Vec3 temp_normal_vector = Point3_Cross(point0, point1, point2);
+	Vec3 temp_normal_vector = Vector3D::CreateCrossPoint3(&point0, &point1, &point2);
 
 	// ‰Šú‰»
 	Init(temp_normal_vector, point0);

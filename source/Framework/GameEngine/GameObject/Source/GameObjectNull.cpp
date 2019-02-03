@@ -36,6 +36,8 @@ void GameObjectNull::Uninit()
 	GameObjectBase::Uninit();
 }
 
+
+
 void GameObjectNull::Reset()
 {
 	// 基底クラスのリセット処理

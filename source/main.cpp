@@ -12,10 +12,9 @@
 //****************************************
 #include <windows.h>
 #include <crtdbg.h>
-#include <assert.h>
 
 #include <GameEngine/GameEngine.h>
-#include <SafeRelease/SafeRelease.h>
+#include <Tool/SafeRelease.h>
 
 
 
@@ -57,7 +56,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevinstance, LPSTR lpCmdLi
 
 	// メモリリーク検出
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF | _CRTDBG_CHECK_ALWAYS_DF);
-	//_CrtSetBreakAlloc(11526);
+	//_CrtSetBreakAlloc(48332);
 
 
 	// ウィンドウの作成
@@ -150,7 +149,7 @@ void RegistrationWindowClassEx(HINSTANCE hInstance)
 void SetClientAreaSize(int* window_width, int* window_height)
 {
 	// クライアント領域の座標を示す矩形データ
-	RECT wr = {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};
+	RECT wr = {0, 0, (LONG)GameEngine::SCREEN_WIDTH, (LONG)GameEngine::SCREEN_HEIGHT};
 
 	// 指定したクライアント領域のサイズ+メニューバーなどの領域のサイズを合計した矩形データを算出
 	AdjustWindowRect(&wr,			// クライアント領域の座標を示す矩形データ 
@@ -196,12 +195,17 @@ void SetWindowPositionCenter(int* window_position_x, int* window_position_y,
 //--------------------------------------------------
 void MessageAndGameLoop(HINSTANCE hInstance, HWND window_handle, MSG* message)
 {
-	// ゲームシステムの作成
-	GameSystem* game_system = new GameSystem();
+	// ゲームエンジンの作成
+	GameEngine* game_engine = new GameEngine();
 
-	// ゲームシステムの初期化
-	bool is_init = game_system->Init(hInstance, window_handle, TRUE, SCREEN_WIDTH, SCREEN_HEIGHT);
-	assert(is_init && "初期化に失敗しました!!(main.cpp)");
+	// ゲームエンジンの初期化
+	bool is_init = game_engine->Init(hInstance, window_handle, TRUE, 
+									 GameEngine::SCREEN_WIDTH, 
+									 GameEngine::SCREEN_HEIGHT);
+	if (!is_init)
+	{
+		MessageBox(window_handle, "ゲームエンジン初期化失敗", "Error", MB_OK);
+	}
 
 	// タイマー用変数
 	DWORD time = timeGetTime();
@@ -235,14 +239,14 @@ void MessageAndGameLoop(HINSTANCE hInstance, HWND window_handle, MSG* message)
 			// 1000ms / 60ごとに処理(60FPS)
 			if ((time - old_time) >= (1000 / 60))
 			{
-				// ゲームシステムの更新
-				game_system->Update();
+				// ゲームエンジンの更新
+				game_engine->Update();
 
-				// ゲームシステムの描画
-				game_system->Draw();
+				// ゲームエンジンの描画
+				game_engine->Draw();
 
-				// 後更新
-				game_system->LateUpdate();
+				// ゲームエンジンの後更新
+				game_engine->LateUpdate();
 
 				// 前回の時刻の更新
 				old_time = time;
@@ -250,9 +254,8 @@ void MessageAndGameLoop(HINSTANCE hInstance, HWND window_handle, MSG* message)
 		}
 	}
 
-	// ゲームシステムの終了処理
-	game_system->Uninit();
-	SafeRelease::Normal(&game_system);
+	// ゲームエンジンの終了
+	SafeRelease::PlusUninit(&game_engine);
 
 	// タイマーの性能を戻す
 	timeEndPeriod(1);

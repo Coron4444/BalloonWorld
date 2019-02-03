@@ -148,13 +148,6 @@ MATRIX* Transform::getpPositionMatrix()
 
 
 
-void Transform::setPositionMatrix(Vec3* value)
-{
-	matrix_group_.setPositionMatrix(value);
-}
-
-
-
 MATRIX* Transform::getpScaleMatrix()
 {
 	return matrix_group_.getpScaleMatrix();
@@ -162,23 +155,9 @@ MATRIX* Transform::getpScaleMatrix()
 
 
 
-void Transform::setScaleMatrix(Vec3* value)
-{
-	matrix_group_.setScaleMatrix(value);
-}
-
-
-
 MATRIX* Transform::getpRotationMatrix()
 {
 	return matrix_group_.getpRotationMatrix();
-}
-
-
-
-void Transform::setRotationMatrix(Quaternion* value)
-{
-	matrix_group_.setRotationMatrix(value);
 }
 
 
@@ -261,6 +240,7 @@ void Transform::CreateAxis()
 
 void Transform::CreateWorldMatrix()
 {
+	ReflectMatrix();
 	matrix_group_.CreateWorldMatrix();
 }
 
@@ -268,6 +248,7 @@ void Transform::CreateWorldMatrix()
 
 void Transform::CreateWorldMatrixPlusInverse()
 {
+	ReflectMatrix();
 	matrix_group_.CreateWorldMatrixPlusInverse();
 }
 
@@ -275,6 +256,7 @@ void Transform::CreateWorldMatrixPlusInverse()
 
 void Transform::CreateWorldMatrixPlusTranspose()
 {
+	ReflectMatrix();
 	matrix_group_.CreateWorldMatrixPlusTranspose();
 }
 
@@ -329,4 +311,13 @@ void Transform::CreateQuaternion()
 	// クォータニオンの結合
 	D3DXQuaternionMultiply(&now_quaternion_, &now_quaternion_, 
 						   &yaw_pitch_roll_quaternion_);
+}
+
+
+
+void Transform::ReflectMatrix()
+{
+	matrix_group_.setPositionMatrix(&position_);
+	matrix_group_.setScaleMatrix(&scale_);
+	matrix_group_.setRotationMatrix(&now_quaternion_);
 }

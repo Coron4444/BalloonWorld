@@ -14,9 +14,7 @@
 #include "../Renderer/Renderer.h"
 #include "../Renderer/RendererFactoryDirectX9.h"
 #include "../Scene/SceneManager/SceneManager.h"
-
-#include <Controller/Controller.h>
-#include <Keyboard/Keyboard.h>
+#include "../Input/InputManager/InputManager.h"
 
 #include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>
 #include <Resource/Texture/TextureManager/TextureManager.h>
@@ -26,9 +24,9 @@
 #include <Tool/SafeRelease.h>
 
 #include <Scenes/TitleScene/TitleScene.h>
-#include <Scenes/TitleScene/TitleSceneState/TitleSceneState_Start/TitleSceneState_Start.h>
+#include <Scenes/TitleScene/TitleSceneState_Start.h>
 #include <Scenes/GameScene/GameScene.h>
-#include <Scenes/GameScene/GameSceneState/GameSceneState_Start/GameSceneState_Start.h>
+#include <Scenes/GameScene/GameSceneState_Start.h>
 
 
 //#ifdef _DEBUG
@@ -57,15 +55,11 @@ bool GameEngine::Init(HINSTANCE hInstance, HWND hWnd, BOOL is_full_screen,
 										  Renderer::MODE::DIRECTX9);
 	bool is_init = Renderer::getpInstance()->Init(hInstance, hWnd, is_full_screen,
 												  window_width, window_height);
-
-#ifdef _DEBUG
-	assert(is_init && "DirectX9用レンダラーの初期化に失敗!!");
-#else
-	is_init = is_init;
-#endif
-
-	// キーボード入力の初期化
-	InitKeyboard(hInstance, hWnd);
+	if (!is_init)
+	{
+		MessageBox(nullptr, "レンダラー初期化失敗(GameEngine.cpp)", "Error", MB_OK);
+		return false;
+	}
 
 	// ImGUIの初期化
 //#ifdef _DEBUG
@@ -79,12 +73,15 @@ bool GameEngine::Init(HINSTANCE hInstance, HWND hWnd, BOOL is_full_screen,
 	ImGui_ImplDX9_Init(hWnd, device);
 //#endif
 
+	// 入力マネージャの初期化
+	InputManager::getpInstance()->Init(hInstance, hWnd);
+
 	// リソースの初期化
 	EffekseerManager::getpInstance()->Init();
 	TextureManager::getpInstance()->Init();
 	ModelXManager::getpInstance()->Init();
 	MdBinManager::getpInstance()->Init();
-	SoundManager::getpInstance()->Init();
+	SoundManager::getpInstance()->Init(hWnd);
 
 	// シーンマネージャーの生成
 	scene_manager_ = new SceneManager();
@@ -112,13 +109,14 @@ void GameEngine::Uninit()
 	EffekseerManager::getpInstance()->Uninit();
 	EffekseerManager::ReleaseInstance();
 
+	// 入力マネージャの終了処理
+	InputManager::getpInstance()->Uninit();
+	InputManager::getpInstance()->ReleaseInstance();
+
 	// ImGUIの終了
 //#ifdef _DEBUG
 	ImGui_ImplDX9_Shutdown();
 //#endif
-
-	// キーボード入力の終了処理
-	UninitKeyboard();
 
 	// レンダラーの終了
 	Renderer::getpInstance()->Uninit();
@@ -134,11 +132,8 @@ void GameEngine::Update()
 	ImGui_ImplDX9_NewFrame();
 //#endif
 
-	// キーボードの入力処理
-	UpdateKeyboard();
-
-	// ゲームパッドの入力処理
-	SetController();
+	// 入力マネージャ更新
+	InputManager::getpInstance()->Update();
 
 	// シーンの更新
 	scene_manager_->UpdateScene();
@@ -148,14 +143,8 @@ void GameEngine::Update()
 
 void GameEngine::Draw()
 {
-	// 描画開始
-	//bool is_begin = Renderer::GetInstance()->DrawBegin();
-
 	// シーンの描画
 	scene_manager_->DrawScene();
-
-	// 描画終了
-	//Renderer::GetInstance()->DrawEnd(is_begin);
 
 	// ImGUIの描画
 //#ifdef _DEBUG

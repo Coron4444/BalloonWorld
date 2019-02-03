@@ -11,8 +11,6 @@
 // インクルード文
 //****************************************
 #include "../ScoreFactory.h"
-#include "../Score.h"
-#include "../ScoreDraw.h"
 
 
 

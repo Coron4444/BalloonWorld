@@ -11,9 +11,6 @@
 // インクルード文
 //****************************************
 #include "../GoalFactory.h"
-#include "../Goal.h"
-#include "../GoalDraw.h"
-#include "../GoalCollision.h"
 
 
 

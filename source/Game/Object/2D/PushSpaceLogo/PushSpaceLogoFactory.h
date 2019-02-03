@@ -10,9 +10,11 @@
 
 
 //****************************************
-// クラス宣言
+// インクルード文
 //****************************************
-class PushSpaceLogo;
+#include "PushSpaceLogo.h"
+#include "PushSpaceLogoUpdate.h"
+#include "PushSpaceLogoDraw.h"
 
 
 

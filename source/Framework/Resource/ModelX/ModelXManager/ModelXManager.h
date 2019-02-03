@@ -17,7 +17,7 @@
 #include <unordered_map>
 
 #include "../ModelXObject.h"
-#include "../../../Texture/TextureManager/TextureManager.h"
+#include "../../Texture/TextureManager/TextureManager.h"
 
 
 

@@ -10,9 +10,11 @@
 
 
 //****************************************
-// クラス宣言
+// インクルード文
 //****************************************
-class Goal;
+#include "Goal.h"
+#include "GoalDraw.h"
+#include "GoalCollision.h"
 
 
 

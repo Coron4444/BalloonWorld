@@ -99,9 +99,9 @@ typedef	int ( EFK_STDCALL *RandFunc ) (void);
 
 /**
 	@brief	エフェクトのインスタンス破棄時のコールバックイベント
-	@param	manager	[in]	所属しているマネージャー
-	@param	handle	[in]	エフェクトのインスタンスのハンドル
-	@param	isRemovingManager	[in]	マネージャーを破棄したときにエフェクトのインスタンスを破棄しているか
+	@param	manager		所属しているマネージャー
+	@param	handle		エフェクトのインスタンスのハンドル
+	@param	isRemovingManager		マネージャーを破棄したときにエフェクトのインスタンスを破棄しているか
 */
 typedef	void ( EFK_STDCALL *EffectInstanceRemovingCallback ) ( Manager* manager, Handle handle, bool isRemovingManager );
 
@@ -291,8 +291,8 @@ inline void SinCos(float x, float& s, float& c)
 /**
 	@brief	文字コードを変換する。(UTF16 -> UTF8)
 	@param	dst	[out]	出力配列の先頭ポインタ
-	@param	dst_size	[in]	出力配列の長さ
-	@param	src			[in]	入力配列の先頭ポインタ
+	@param	dst_size		出力配列の長さ
+	@param	src				入力配列の先頭ポインタ
 	@return	文字数
 */
 inline int32_t ConvertUtf16ToUtf8( int8_t* dst, int32_t dst_size, const int16_t* src )
@@ -335,8 +335,8 @@ inline int32_t ConvertUtf16ToUtf8( int8_t* dst, int32_t dst_size, const int16_t*
 /**
 	@brief	文字コードを変換する。(UTF8 -> UTF16)
 	@param	dst	[out]	出力配列の先頭ポインタ
-	@param	dst_size	[in]	出力配列の長さ
-	@param	src			[in]	入力配列の先頭ポインタ
+	@param	dst_size		出力配列の長さ
+	@param	src				入力配列の先頭ポインタ
 	@return	文字数
 */
 inline int32_t ConvertUtf8ToUtf16( int16_t* dst, int32_t dst_size, const int8_t* src )
@@ -840,66 +840,66 @@ public:
 
 	/**
 		@brief	拡大行列化を行う。
-		@param	x	[in]	X方向拡大率
-		@param	y	[in]	Y方向拡大率
-		@param	z	[in]	Z方向拡大率
+		@param	x		X方向拡大率
+		@param	y		Y方向拡大率
+		@param	z		Z方向拡大率
 	*/
 	void Scaling( float x, float y, float z );
 
 	/**
 		@brief	反時計周り方向のX軸回転行列化を行う。
-		@param	angle	[in]	角度(ラジアン)
+		@param	angle		角度(ラジアン)
 	*/
 	void RotationX( float angle );
 
 	/**
 		@brief	反時計周り方向のY軸回転行列化を行う。
-		@param	angle	[in]	角度(ラジアン)
+		@param	angle		角度(ラジアン)
 	*/
 	void RotationY( float angle );
 
 	/**
 		@brief	反時計周り方向のZ軸回転行列化を行う。
-		@param	angle	[in]	角度(ラジアン)
+		@param	angle		角度(ラジアン)
 	*/
 	void RotationZ( float angle );
 	
 	/**
 		@brief	反時計周り方向のXYZ軸回転行列化を行う。
-		@param	rx	[in]	角度(ラジアン)
-		@param	ry	[in]	角度(ラジアン)
-		@param	rz	[in]	角度(ラジアン)
+		@param	rx		角度(ラジアン)
+		@param	ry		角度(ラジアン)
+		@param	rz		角度(ラジアン)
 	*/
 	void RotationXYZ( float rx, float ry, float rz );
 	
 	/**
 		@brief	反時計周り方向のZXY軸回転行列化を行う。
-		@param	rz	[in]	角度(ラジアン)
-		@param	rx	[in]	角度(ラジアン)
-		@param	ry	[in]	角度(ラジアン)
+		@param	rz		角度(ラジアン)
+		@param	rx		角度(ラジアン)
+		@param	ry		角度(ラジアン)
 	*/
 	void RotationZXY( float rz, float rx, float ry );
 
 	/**
 		@brief	任意軸に対する反時計周り方向回転行列化を行う。
-		@param	axis	[in]	回転軸
-		@param	angle	[in]	角度(ラジアン)
+		@param	axis		回転軸
+		@param	angle		角度(ラジアン)
 	*/
 	void RotationAxis( const Vector3D& axis, float angle );
 
 	/**
 		@brief	任意軸に対する反時計周り方向回転行列化を行う。
-		@param	axis	[in]	回転軸
-		@param	s	[in]	サイン
-		@param	c	[in]	コサイン
+		@param	axis		回転軸
+		@param	s		サイン
+		@param	c		コサイン
 	*/
 	void RotationAxis( const Vector3D& axis, float s, float c );
 
 	/**
 		@brief	移動行列化を行う。
-		@param	x	[in]	X方向移動
-		@param	y	[in]	Y方向移動
-		@param	z	[in]	Z方向移動
+		@param	x		X方向移動
+		@param	y		Y方向移動
+		@param	z		Z方向移動
 	*/
 	void Translation( float x, float y, float z );
 
@@ -931,17 +931,17 @@ public:
 	
 	/**
 		@brief	行列の拡大、回転、移動を設定する。
-		@param	s	[in]	拡大行列
-		@param	r	[in]	回転行列
-		@param	t	[in]	位置
+		@param	s		拡大行列
+		@param	r		回転行列
+		@param	t		位置
 	*/
 	void SetSRT( const Vector3D& s, const Matrix43& r, const Vector3D& t );
 
 	/**
 		@brief	行列同士の乗算を行う。
 		@param	out	[out]	結果
-		@param	in1	[in]	乗算の左側
-		@param	in2	[in]	乗算の右側
+		@param	in1		乗算の左側
+		@param	in2		乗算の右側
 	*/
 	static void Multiple( Matrix43& out, const Matrix43& in1, const Matrix43& in2 );
 };
@@ -1295,42 +1295,42 @@ public:
 
 	/**
 		@brief	エフェクトを生成する。
-		@param	manager			[in]	管理クラス
-		@param	data			[in]	データ配列の先頭のポインタ
-		@param	size			[in]	データ配列の長さ
-		@param	magnification	[in]	読み込み時の拡大率
-		@param	materialPath	[in]	素材ロード時の基準パス
+		@param	manager				管理クラス
+		@param	data				データ配列の先頭のポインタ
+		@param	size				データ配列の長さ
+		@param	magnification		読み込み時の拡大率
+		@param	materialPath		素材ロード時の基準パス
 		@return	エフェクト。失敗した場合はNULLを返す。
 	*/
 	static Effect* Create( Manager* manager, void* data, int32_t size, float magnification = 1.0f, const EFK_CHAR* materialPath = NULL );
 
 	/**
 		@brief	エフェクトを生成する。
-		@param	manager			[in]	管理クラス
-		@param	path			[in]	読込元のパス
-		@param	magnification	[in]	読み込み時の拡大率
-		@param	materialPath	[in]	素材ロード時の基準パス
+		@param	manager				管理クラス
+		@param	path				読込元のパス
+		@param	magnification		読み込み時の拡大率
+		@param	materialPath		素材ロード時の基準パス
 		@return	エフェクト。失敗した場合はNULLを返す。
 	*/
 	static Effect* Create( Manager* manager, const EFK_CHAR* path, float magnification = 1.0f, const EFK_CHAR* materialPath = NULL );
 
 		/**
 		@brief	エフェクトを生成する。
-		@param	setting			[in]	設定クラス
-		@param	data			[in]	データ配列の先頭のポインタ
-		@param	size			[in]	データ配列の長さ
-		@param	magnification	[in]	読み込み時の拡大率
-		@param	materialPath	[in]	素材ロード時の基準パス
+		@param	setting				設定クラス
+		@param	data				データ配列の先頭のポインタ
+		@param	size				データ配列の長さ
+		@param	magnification		読み込み時の拡大率
+		@param	materialPath		素材ロード時の基準パス
 		@return	エフェクト。失敗した場合はNULLを返す。
 	*/
 	static Effect* Create( Setting*	setting, void* data, int32_t size, float magnification = 1.0f, const EFK_CHAR* materialPath = NULL );
 
 	/**
 		@brief	エフェクトを生成する。
-		@param	setting			[in]	設定クラス
-		@param	path			[in]	読込元のパス
-		@param	magnification	[in]	読み込み時の拡大率
-		@param	materialPath	[in]	素材ロード時の基準パス
+		@param	setting				設定クラス
+		@param	path				読込元のパス
+		@param	magnification		読み込み時の拡大率
+		@param	materialPath		素材ロード時の基準パス
 		@return	エフェクト。失敗した場合はNULLを返す。
 	*/
 	static Effect* Create( Setting*	setting, const EFK_CHAR* path, float magnification = 1.0f, const EFK_CHAR* materialPath = NULL );
@@ -1359,7 +1359,7 @@ public:
 
 	/**
 		@brief	格納されている色画像のポインタを取得する。
-		@param	n	[in]	画像のインデックス
+		@param	n		画像のインデックス
 		@return	画像のポインタ
 	*/
 	virtual TextureData* GetColorImage( int n ) const = 0;
@@ -1371,7 +1371,7 @@ public:
 
 	/**
 	@brief	格納されている法線画像のポインタを取得する。
-	@param	n	[in]	画像のインデックス
+	@param	n		画像のインデックス
 	@return	画像のポインタ
 	*/
 	virtual TextureData* GetNormalImage(int n) const = 0;
@@ -1383,7 +1383,7 @@ public:
 
 	/**
 	@brief	格納されている歪み画像のポインタを取得する。
-	@param	n	[in]	画像のインデックス
+	@param	n		画像のインデックス
 	@return	画像のポインタ
 	*/
 	virtual TextureData* GetDistortionImage(int n) const = 0;
@@ -1425,11 +1425,11 @@ public:
 
 	/**
 		@brief	エフェクトのリロードを行う。
-		@param	managers	[in]	マネージャーの配列
-		@param	managersCount	[in]	マネージャーの個数
-		@param	data	[in]	エフェクトのデータ
-		@param	size	[in]	エフェクトのデータサイズ
-		@param	materialPath	[in]	リソースの読み込み元
+		@param	managers		マネージャーの配列
+		@param	managersCount		マネージャーの個数
+		@param	data		エフェクトのデータ
+		@param	size		エフェクトのデータサイズ
+		@param	materialPath		リソースの読み込み元
 		@return	成否
 		@note
 		Settingを用いてエフェクトを生成したときに、Managerを指定することで対象のManager内のエフェクトのリロードを行う。
@@ -1438,10 +1438,10 @@ public:
 
 	/**
 	@brief	エフェクトのリロードを行う。
-	@param	managers	[in]	マネージャーの配列
-	@param	managersCount	[in]	マネージャーの個数
-	@param	path	[in]	エフェクトの読み込み元
-	@param	materialPath	[in]	リソースの読み込み元
+	@param	managers		マネージャーの配列
+	@param	managersCount		マネージャーの個数
+	@param	path		エフェクトの読み込み元
+	@param	materialPath		リソースの読み込み元
 	@return	成否
 	@note
 	Settingを用いてエフェクトを生成したときに、Managerを指定することで対象のManager内のエフェクトのリロードを行う。
@@ -1577,8 +1577,8 @@ protected:
 public:
 	/**
 		@brief マネージャーを生成する。
-		@param	instance_max	[in]	最大インスタンス数
-		@param	autoFlip		[in]	自動でスレッド間のデータを入れ替えるかどうか、を指定する。trueの場合、Update時に入れ替わる。
+		@param	instance_max		最大インスタンス数
+		@param	autoFlip			自動でスレッド間のデータを入れ替えるかどうか、を指定する。trueの場合、Update時に入れ替わる。
 		@return	マネージャー
 	*/
 	static Manager* Create( int instance_max, bool autoFlip = true );
@@ -1638,7 +1638,7 @@ public:
 
 	/**
 		@brief	座標系を設定する。
-		@param	coordinateSystem	[in]	座標系
+		@param	coordinateSystem		座標系
 		@note
 		座標系を設定する。
 		エフェクトファイルを読み込む前に設定する必要がある。
@@ -1702,7 +1702,7 @@ public:
 
 	/**
 		@brief	設定クラスを設定する。
-		@param	setting	[in]	設定
+		@param	setting		設定
 	*/
 	virtual void SetSetting(Setting* setting) = 0;
 
@@ -1758,7 +1758,7 @@ public:
 
 	/**
 		@brief	エフェクトを停止する。
-		@param	handle	[in]	インスタンスのハンドル
+		@param	handle		インスタンスのハンドル
 	*/
 	virtual void StopEffect( Handle handle ) = 0;
 
@@ -1769,26 +1769,26 @@ public:
 
 	/**
 		@brief	エフェクトのルートだけを停止する。
-		@param	handle	[in]	インスタンスのハンドル
+		@param	handle		インスタンスのハンドル
 	*/
 	virtual void StopRoot( Handle handle ) = 0;
 
 	/**
 		@brief	エフェクトのルートだけを停止する。
-		@param	effect	[in]	エフェクト
+		@param	effect		エフェクト
 	*/
 	virtual void StopRoot( Effect* effect ) = 0;
 
 	/**
 		@brief	エフェクトのインスタンスが存在しているか取得する。
-		@param	handle	[in]	インスタンスのハンドル
+		@param	handle		インスタンスのハンドル
 		@return	存在してるか?
 	*/
 	virtual bool Exists( Handle handle ) = 0;
 
 	/**
 		@brief	エフェクトに使用されているインスタンス数を取得する。
-		@param	handle	[in]	インスタンスのハンドル
+		@param	handle		インスタンスのハンドル
 		@return	インスタンス数
 		@note
 		Rootも個数に含まれる。つまり、Root削除をしていない限り、
@@ -1799,42 +1799,42 @@ public:
 
 	/**
 		@brief	エフェクトのインスタンスに設定されている行列を取得する。
-		@param	handle	[in]	インスタンスのハンドル
+		@param	handle		インスタンスのハンドル
 		@return	行列
 	*/
 	virtual Matrix43 getMatrix( Handle handle ) = 0;
 
 	/**
 		@brief	エフェクトのインスタンスに変換行列を設定する。
-		@param	handle	[in]	インスタンスのハンドル
-		@param	mat		[in]	変換行列
+		@param	handle		インスタンスのハンドル
+		@param	mat			変換行列
 	*/
 	virtual void SetMatrix( Handle handle, const Matrix43& mat ) = 0;
 
 	/**
 		@brief	エフェクトのインスタンスの位置を取得する。
-		@param	handle	[in]	インスタンスのハンドル
+		@param	handle		インスタンスのハンドル
 		@return	位置
 	*/
 	virtual Vector3D GetLocation( Handle handle ) = 0;
 
 	/**
 		@brief	エフェクトのインスタンスの位置を指定する。
-		@param	x	[in]	X座標
-		@param	y	[in]	Y座標
-		@param	z	[in]	Z座標
+		@param	x		X座標
+		@param	y		Y座標
+		@param	z		Z座標
 	*/
 	virtual void SetLocation( Handle handle, float x, float y, float z ) = 0;
 
 	/**
 		@brief	エフェクトのインスタンスの位置を指定する。
-		@param	location	[in]	位置
+		@param	location		位置
 	*/
 	virtual void SetLocation( Handle handle, const Vector3D& location ) = 0;
 
 	/**
 		@brief	エフェクトのインスタンスの位置に加算する。
-		@param	location	[in]	加算する値
+		@param	location		加算する値
 	*/
 	virtual void AddLocation( Handle handle, const Vector3D& location ) = 0;
 
@@ -1845,18 +1845,18 @@ public:
 
 	/**
 		@brief	エフェクトのインスタンスの任意軸周りの反時計周りの回転角度を指定する。
-		@param	handle	[in]	インスタンスのハンドル
-		@param	axis	[in]	軸
-		@param	angle	[in]	角度(ラジアン)
+		@param	handle		インスタンスのハンドル
+		@param	axis		軸
+		@param	angle		角度(ラジアン)
 	*/
 	virtual void SetRotation( Handle handle, const Vector3D& axis, float angle ) = 0;
 	
 	/**
 		@brief	エフェクトのインスタンスの拡大率を指定する。
-		@param	handle	[in]	インスタンスのハンドル
-		@param	x		[in]	X方向拡大率
-		@param	y		[in]	Y方向拡大率
-		@param	z		[in]	Z方向拡大率
+		@param	handle		インスタンスのハンドル
+		@param	x			X方向拡大率
+		@param	y			Y方向拡大率
+		@param	z			Z方向拡大率
 	*/
 	virtual void SetScale( Handle handle, float x, float y, float z ) = 0;
 
@@ -1869,29 +1869,29 @@ public:
 
 	/**
 		@brief	エフェクトのインスタンスのターゲット位置を指定する。
-		@param	x	[in]	X座標
-		@param	y	[in]	Y座標
-		@param	z	[in]	Z座標
+		@param	x		X座標
+		@param	y		Y座標
+		@param	z		Z座標
 	*/
 	virtual void SetTargetLocation( Handle handle, float x, float y, float z ) = 0;
 
 	/**
 		@brief	エフェクトのインスタンスのターゲット位置を指定する。
-		@param	location	[in]	位置
+		@param	location		位置
 	*/
 	virtual void SetTargetLocation( Handle handle, const Vector3D& location ) = 0;
 
 	/**
 		@brief	エフェクトのベース行列を取得する。
-		@param	handle	[in]	インスタンスのハンドル
+		@param	handle		インスタンスのハンドル
 		@return	ベース行列
 	*/
 	virtual Matrix43 GetBaseMatrix( Handle handle ) = 0;
 
 	/**
 		@brief	エフェクトのベース行列を設定する。
-		@param	handle	[in]	インスタンスのハンドル
-		@param	mat		[in]	設定する行列
+		@param	handle		インスタンスのハンドル
+		@param	mat			設定する行列
 		@note
 		エフェクト全体の表示位置を指定する行列を設定する。
 	*/
@@ -1899,8 +1899,8 @@ public:
 
 	/**
 		@brief	エフェクトのインスタンスに廃棄時のコールバックを設定する。
-		@param	handle	[in]	インスタンスのハンドル
-		@param	callback	[in]	コールバック
+		@param	handle		インスタンスのハンドル
+		@param	callback		コールバック
 	*/
 	virtual void SetRemovingCallback( Handle handle, EffectInstanceRemovingCallback callback ) = 0;
 
@@ -1915,8 +1915,8 @@ public:
 
 	/**
 		@brief	エフェクトのインスタンスをDraw時に描画するか設定する。
-		@param	handle	[in]	インスタンスのハンドル
-		@param	shown	[in]	描画するか?
+		@param	handle		インスタンスのハンドル
+		@param	shown		描画するか?
 	*/
 	virtual void SetShown( Handle handle, bool shown ) = 0;
 
@@ -1933,8 +1933,8 @@ public:
 		@brief	\~English	Pause or resume a particle of effect specified.
 		\~Japanese	指定したエフェクトのパーティクルを一時停止、もしくは再開する。
 
-		@param	handle	[in]	インスタンスのハンドル
-		@param	paused	[in]	更新するか?
+		@param	handle		インスタンスのハンドル
+		@param	paused		更新するか?
 	*/
 	virtual void SetPaused( Handle handle, bool paused ) = 0;
 
@@ -1961,15 +1961,15 @@ public:
 
 	/**
 		@brief	エフェクトのインスタンスを再生スピードを設定する。
-		@param	handle	[in]	インスタンスのハンドル
-		@param	speed	[in]	スピード
+		@param	handle		インスタンスのハンドル
+		@param	speed		スピード
 	*/
 	virtual void SetSpeed( Handle handle, float speed ) = 0;
 
 	/**
 		@brief	エフェクトがDrawで描画されるか設定する。
 				autoDrawがfalseの場合、DrawHandleで描画する必要がある。
-		@param	autoDraw	[in]	自動描画フラグ
+		@param	autoDraw		自動描画フラグ
 	*/
 	virtual void SetAutoDrawing( Handle handle, bool autoDraw ) = 0;
 
@@ -1980,7 +1980,7 @@ public:
 
 	/**
 		@brief	更新処理を行う。
-		@param	deltaFrame	[in]	更新するフレーム数(60fps基準)	
+		@param	deltaFrame		更新するフレーム数(60fps基準)	
 	*/
 	virtual void Update( float deltaFrame = 1.0f ) = 0;
 
@@ -2000,8 +2000,8 @@ public:
 
 	/**
 		@brief	ハンドル単位の更新を行う。
-		@param	handle		[in]	ハンドル
-		@param	deltaFrame	[in]	更新するフレーム数(60fps基準)
+		@param	handle			ハンドル
+		@param	deltaFrame		更新するフレーム数(60fps基準)
 		@note
 		更新する前にBeginUpdate、更新し終わった後にEndUpdateを実行する必要がある。
 	*/
@@ -2051,10 +2051,10 @@ public:
 
 	/**
 		@brief	再生する。
-		@param	effect	[in]	エフェクト
-		@param	x	[in]	X座標
-		@param	y	[in]	Y座標
-		@param	z	[in]	Z座標
+		@param	effect		エフェクト
+		@param	x		X座標
+		@param	y		Y座標
+		@param	z		Z座標
 		@return	エフェクトのインスタンスのハンドル
 	*/
 	virtual Handle Play( Effect* effect, float x, float y, float z ) = 0;
@@ -2525,7 +2525,7 @@ public:
 
 	/**
 		@brief	エフェクトファイルを読み込む。
-		@param	path	[in]	読み込み元パス
+		@param	path		読み込み元パス
 		@param	data	[out]	データ配列の先頭のポインタを出力する先
 		@param	size	[out]	データ配列の長さを出力する先
 		@return	成否
@@ -2537,7 +2537,7 @@ public:
 
 	/**
 		@brief	エフェクトファイルを破棄する。
-		@param	data	[in]	データ配列の先頭のポインタ
+		@param	data		データ配列の先頭のポインタ
 		@param	size	[int]	データ配列の長さ
 		@note
 		エフェクトファイルを破棄する。
@@ -2587,8 +2587,8 @@ public:
 
 	/**
 		@brief	テクスチャを読み込む。
-		@param	path	[in]	読み込み元パス
-		@param	textureType	[in]	テクスチャの種類
+		@param	path		読み込み元パス
+		@param	textureType		テクスチャの種類
 		@return	テクスチャのポインタ
 		@note
 		テクスチャを読み込む。
@@ -2598,7 +2598,7 @@ public:
 
 	/**
 		@brief	テクスチャを破棄する。
-		@param	data	[in]	テクスチャ
+		@param	data		テクスチャ
 		@note
 		テクスチャを破棄する。
 		::Effekseer::Effectのインスタンスが破棄された時に使用される。
@@ -2647,7 +2647,7 @@ public:
 
 	/**
 		@brief	モデルを読み込む。
-		@param	path	[in]	読み込み元パス
+		@param	path		読み込み元パス
 		@return	モデルのポインタ
 		@note
 		モデルを読み込む。
@@ -2657,7 +2657,7 @@ public:
 
 	/**
 		@brief	モデルを破棄する。
-		@param	data	[in]	モデル
+		@param	data		モデル
 		@note
 		モデルを破棄する。
 		::Effekseer::Effectのインスタンスが破棄された時に使用される。
@@ -3115,7 +3115,7 @@ public:
 
 	/**
 		@brief	サウンドを読み込む。
-		@param	path	[in]	読み込み元パス
+		@param	path		読み込み元パス
 		@return	サウンドのポインタ
 		@note
 		サウンドを読み込む。
@@ -3125,7 +3125,7 @@ public:
 
 	/**
 		@brief	サウンドを破棄する。
-		@param	data	[in]	サウンド
+		@param	data		サウンド
 		@note
 		サウンドを破棄する。
 		::Effekseer::Effectのインスタンスが破棄された時に使用される。
@@ -3199,7 +3199,7 @@ namespace Effekseer {
 
 		/**
 		@brief	座標系を設定する。
-		@param	coordinateSystem	[in]	座標系
+		@param	coordinateSystem		座標系
 		@note
 		座標系を設定する。
 		エフェクトファイルを読み込む前に設定する必要がある。
@@ -3214,7 +3214,7 @@ namespace Effekseer {
 
 		/**
 			@brief	エフェクトローダーを設定する。
-			@param	loader	[in]		ローダー
+			@param	loader			ローダー
 			*/
 		void SetEffectLoader(EffectLoader* loader);
 
@@ -3226,7 +3226,7 @@ namespace Effekseer {
 
 		/**
 			@brief	テクスチャローダーを設定する。
-			@param	loader	[in]		ローダー
+			@param	loader			ローダー
 			*/
 		void SetTextureLoader(TextureLoader* loader);
 
@@ -3238,7 +3238,7 @@ namespace Effekseer {
 
 		/**
 			@brief	モデルローダーを設定する。
-			@param	loader	[in]		ローダー
+			@param	loader			ローダー
 			*/
 		void SetModelLoader(ModelLoader* loader);
 
@@ -3250,7 +3250,7 @@ namespace Effekseer {
 
 		/**
 			@brief	サウンドローダーを設定する。
-			@param	loader	[in]		ローダー
+			@param	loader			ローダー
 			*/
 		void SetSoundLoader(SoundLoader* loader);
 	};
@@ -3298,14 +3298,14 @@ public:
 
 	/**
 		@brief	エフェクトをリロードの対象として登録する。
-		@param	key	[in]	検索用キー
-		@param	effect	[in]	リロードする対象のエフェクト
+		@param	key		検索用キー
+		@param	effect		リロードする対象のエフェクト
 	*/
 	virtual void Regist( const EFK_CHAR* key, Effect* effect ) = 0;
 
 	/**
 		@brief	エフェクトをリロードの対象から外す。
-		@param	effect	[in]	リロードから外すエフェクト
+		@param	effect		リロードから外すエフェクト
 	*/
 	virtual void Unregist( Effect* effect ) = 0;
 

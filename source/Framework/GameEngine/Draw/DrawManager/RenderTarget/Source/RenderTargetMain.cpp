@@ -91,8 +91,6 @@ void RenderTargetMain::Update()
 void RenderTargetMain::Draw()
 {
 	// レンダーターゲットの切り替え
-	LPDIRECT3DDEVICE9 device;
-	Renderer::getpInstance()->getDevice(&device);
 	common_data_->getpRenderTextureMain()->setRenderTarget(0);
 	bool is_begin = Renderer::getpInstance()->DrawBegin();
 

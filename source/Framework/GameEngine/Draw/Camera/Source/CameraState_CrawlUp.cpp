@@ -11,7 +11,7 @@
 // インクルード文
 //****************************************
 #include "../CameraState_CrawlUp.h"
-#include "../../../Input/Keyboard.h"
+#include "../../../Input/InputManager/InputManager.h"
 
 
 
@@ -45,7 +45,7 @@ void CameraState_CrawlUp::Uninit()
 void CameraState_CrawlUp::Update()
 {
 	// 前
-	if (GetKeyboardPress(DIK_I))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_I))
 	{
 		// 前ベクトルを保存
 		Vector3D temp_vector = *getpCamera()->getpAxis()->getpForawrd();
@@ -60,7 +60,7 @@ void CameraState_CrawlUp::Update()
 	}
 
 	// 後ろ
-	if (GetKeyboardPress(DIK_K))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_K))
 	{
 		// 前ベクトルを保存
 		Vector3D temp_vector = *getpCamera()->getpAxis()->getpForawrd();
@@ -76,7 +76,7 @@ void CameraState_CrawlUp::Update()
 
 
 	// 右
-	if (GetKeyboardPress(DIK_L))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_L))
 	{
 		// 右ベクトルを保存
 		Vector3D temp_vector = *getpCamera()->getpAxis()->getpRight();
@@ -92,7 +92,7 @@ void CameraState_CrawlUp::Update()
 
 
 	// 左
-	if (GetKeyboardPress(DIK_J))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_J))
 	{
 		// 右ベクトルを保存
 		Vector3D temp_vector = *getpCamera()->getpAxis()->getpRight();
@@ -108,7 +108,7 @@ void CameraState_CrawlUp::Update()
 
 
 	// 右周り
-	if (GetKeyboardPress(DIK_E))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_E))
 	{
 		// 前ベクトルの作成
 		Vector3D temp_vector = *getpCamera()->getpLookAtPoint() 
@@ -133,7 +133,7 @@ void CameraState_CrawlUp::Update()
 
 
 	// 左周り
-	if (GetKeyboardPress(DIK_Q))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_Q))
 	{
 		// 前ベクトルの作成
 		Vector3D temp_vector = *getpCamera()->getpLookAtPoint() 
@@ -157,7 +157,7 @@ void CameraState_CrawlUp::Update()
 	}
 
 	// 上周り
-	if (GetKeyboardPress(DIK_T))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_T))
 	{
 		// 前ベクトルの作成
 		Vector3D temp_vector = *getpCamera()->getpLookAtPoint() 
@@ -181,7 +181,7 @@ void CameraState_CrawlUp::Update()
 	}
 
 	// 下周り
-	if (GetKeyboardPress(DIK_G))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_G))
 	{
 		// 前ベクトルの作成
 		Vector3D temp_vector = *getpCamera()->getpLookAtPoint() 
@@ -206,7 +206,7 @@ void CameraState_CrawlUp::Update()
 
 
 	// 右周り( 視点中心 )
-	if (GetKeyboardPress(DIK_Y))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_Y))
 	{
 		// 逆前ベクトルの作成
 		Vector3D temp_vector = *getpCamera()->getpPositon() 
@@ -230,7 +230,7 @@ void CameraState_CrawlUp::Update()
 	}
 	
 	// 左周り( 視点中心 )
-	if (GetKeyboardPress(DIK_H))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_H))
 	{
 		// 逆前ベクトルの作成
 		Vector3D temp_vector = *getpCamera()->getpPositon() 

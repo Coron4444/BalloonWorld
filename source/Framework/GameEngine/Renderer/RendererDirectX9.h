@@ -120,6 +120,14 @@ public:
 	bool DrawBegin() override;
 
 	//----------------------------------------
+	//! @brief クリア無描画開始関数
+	//! @details
+	//! @param void なし
+	//! @retval bool 描画開始成功の有無
+	//----------------------------------------
+	bool NoClearDrawBegin() override;
+
+	//----------------------------------------
 	//! @brief 描画終了関数
 	//! @details
 	//! @param is_begin_scene 描画開始成功フラグ

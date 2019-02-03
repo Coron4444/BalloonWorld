@@ -51,6 +51,7 @@ void DrawManager::Init()
 	for (auto& contents : camera_)
 	{
 		contents = new Camera();
+		contents->Init(nullptr);
 	}
 
 	// 共通データ初期化
@@ -59,11 +60,11 @@ void DrawManager::Init()
 
 	// フェード作成
 	fade_ = new Fade();
-	is_fade_ = false;
+	fade_->Init();
 
 	// シェーダーマネージャー初期化
 	shader_manager_ = new ShaderManager();
-	shader_manager_->Init();
+	shader_manager_->Init(common_data_);
 
 	// バックバッファサーフェスの保存
 	Renderer::getpInstance()->getDevice(&device_);
@@ -122,6 +123,11 @@ void DrawManager::UninitWhenChangeScene()
 
 	render_target_main_->UninitWhenChangeScene();
 	motion_blur_->UninitWhenChangeScene();
+
+	for (auto& contents : camera_)
+	{
+		contents->setState(nullptr);
+	}
 }
 
 
@@ -153,7 +159,7 @@ void DrawManager::Update()
 	motion_blur_->Update();
 
 	// フェード更新
-	if (is_fade_) fade_->Update();
+	if (!fade_->getpEndFlag()) fade_->Update();
 
 	// デバッグ表示
 #ifdef _DEBUG
@@ -173,16 +179,16 @@ void DrawManager::Draw()
 	render_target_main_->Draw();
 
 	// ポストエフェクト描画
-	motion_blur_->Draw();
+	//motion_blur_->Draw();
 
 	// フェード
 	DrawFade();
 
 	// BackBuffer描画
 	DrawBackBuffer();
-
+	
 	// ポストエフェクト後更新
-	motion_blur_->LateUpdate();
+	//motion_blur_->LateUpdate();
 }
 
 
@@ -237,35 +243,18 @@ void DrawManager::ReleaseDrawBaseFromArray(DrawBase* draw)
 
 
 
-void DrawManager::InitFadeIn(Fade::Type type, Vec2 size, XColor4 color, float speed)
+void DrawManager::StartFadeIn(Fade::Type type, Vec2 size, XColor4 color, float speed)
 {
 	// フェードの初期化
-	fade_->Init(type, Fade::State::FADE_IN, size, color, speed);
-
-	// フェードフラグON
-	is_fade_ = true;
+	fade_->Start(type, Fade::State::FADE_IN, size, color, speed);
 }
 
 
 
-void DrawManager::InitFadeOut(Fade::Type type, Vec2 size, XColor4 color, float speed)
+void DrawManager::StartFadeOut(Fade::Type type, Vec2 size, XColor4 color, float speed)
 {
 	// フェードの初期化
-	fade_->Init(type, Fade::State::FADE_OUT, size, color, speed);
-
-	// フェードフラグON
-	is_fade_ = true;
-}
-
-
-
-void DrawManager::UninitFade()
-{
-	// フェードの終了処理
-	fade_->Uninit();
-
-	// フェードフラグOFF
-	is_fade_ = false;
+	fade_->Start(type, Fade::State::FADE_OUT, size, color, speed);
 }
 
 
@@ -396,10 +385,8 @@ void DrawManager::DrawBackBuffer()
 void DrawManager::DrawFade()
 {
 	// レンダーターゲットの切り替え
-	LPDIRECT3DDEVICE9 device;
-	Renderer::getpInstance()->getDevice(&device);
 	common_data_->getpRenderTextureMain()->setRenderTarget(0);
-	bool is_begin = Renderer::getpInstance()->DrawBegin();
+	bool is_begin = Renderer::getpInstance()->NoClearDrawBegin();
 
 	// カメラ切り替え
 	camera_[(int)RenderTargetType::MAIN]->setType(Camera::Type::TWO_DIMENSIONAL);
@@ -429,4 +416,6 @@ void DrawManager::DrawFade()
 			break;
 		}
 	}
+
+	Renderer::getpInstance()->DrawEnd(is_begin);
 }

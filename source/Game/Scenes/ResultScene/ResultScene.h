@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <SceneBase/SceneBase.h>
+#include <GameEngine/Scene/SceneBase.h>
 
 
 

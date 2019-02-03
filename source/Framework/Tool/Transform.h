@@ -160,14 +160,6 @@ public:
 	MATRIX* getpPositionMatrix();
 
 	//----------------------------------------
-	//! @brief À•Ws—ñİ’èŠÖ”
-	//! @details
-	//! @param value s—ñ‚É‚µ‚½‚¢À•W’l
-	//! @retval void ‚È‚µ
-	//----------------------------------------
-	void setPositionMatrix(Vec3* value);
-
-	//----------------------------------------
 	//! @brief Šgks—ñæ“¾ŠÖ”
 	//! @details
 	//! @param void
@@ -176,28 +168,12 @@ public:
 	MATRIX* getpScaleMatrix();
 
 	//----------------------------------------
-	//! @brief Šgks—ñİ’èŠÖ”
-	//! @details
-	//! @param value s—ñ‚É‚µ‚½‚¢Šgk’l
-	//! @retval void ‚È‚µ
-	//----------------------------------------
-	void setScaleMatrix(Vec3* value);
-
-	//----------------------------------------
 	//! @brief ‰ñ“]s—ñæ“¾ŠÖ”
 	//! @details
 	//! @param void
 	//! @retval MATRIX* Šgks—ñ
 	//----------------------------------------
 	MATRIX* getpRotationMatrix();
-
-	//----------------------------------------
-	//! @brief ‰ñ“]s—ñİ’èŠÖ”
-	//! @details
-	//! @param value s—ñ‚É‚µ‚½‚¢‰ñ“]’l
-	//! @retval void ‚È‚µ
-	//----------------------------------------
-	void setRotationMatrix(Quaternion* value);
 
 	//----------------------------------------
 	//! @brief ‹ts—ñæ“¾ŠÖ”
@@ -333,6 +309,13 @@ private :
 	//----------------------------------------
 	void CreateQuaternion();
 
+	//----------------------------------------
+	//! @brief s—ñ”½‰fŠÖ”
+	//! @details
+	//! @param void ‚È‚µ
+	//! @retval void ‚È‚µ
+	//----------------------------------------
+	void ReflectMatrix();
 };
 
 

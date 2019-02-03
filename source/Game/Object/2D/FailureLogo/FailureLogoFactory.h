@@ -10,9 +10,10 @@
 
 
 //****************************************
-// クラス宣言
+// インクルード文
 //****************************************
-class FailureLogo;
+#include "FailureLogo.h"
+#include "FailureLogoDraw.h"
 
 
 

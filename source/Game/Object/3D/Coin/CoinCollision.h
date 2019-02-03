@@ -49,7 +49,7 @@ private:
 private:
 	CollisionObjects* collision_objects_;		//!< 衝突オブジェクト群
 	CollisionObject* bounding_obb_;				//!< バウンディングOBB
-	CollisionObject* substance_obb_;				//!< 実体OBB
+	CollisionObject* substance_obb_;			//!< 実体OBB
 
 
 //====================

@@ -31,7 +31,7 @@ class LimitedPointerArray
 //====================
 private:
 	Type array_[ARRAY_NUM];									//!< 配列
-	unsigned end_index_ = 0									//!< 末尾インデックス
+	unsigned end_index_ = 0;								//!< 末尾インデックス
 	std::unordered_map<Type, unsigned> registration_map_;	//!< 登録マップ
 
 

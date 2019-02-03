@@ -18,14 +18,14 @@
 //****************************************
 unsigned CollisionBase::getEndIndexOfArray()
 {
-	return collision_objects_.GetEndPointer();
+	return collision_objects_.getEndIndex();
 }
 
 
 
 CollisionObjects* CollisionBase::getpCollisionObjects(unsigned index)
 {
-	return collision_objects_.GetArrayObject(index);
+	return collision_objects_.getObject(index);
 }
 
 
@@ -86,25 +86,24 @@ void CollisionBase::OverwriteArrayCollisionsObject(CollisionObjects* old_object,
 void CollisionBase::ReleaseCollisionObjectsFromArray(CollisionObjects* object)
 {
 	object->ReleaseAllCollisionObjectFromArray();
-	collision_objects_.DeleteFromArrayAndSortArray(object);
+	collision_objects_.DeleteFromArrayAndSort(object);
 }
 
 
 
 void CollisionBase::ReleaseAllCollisionObjectsFromArray()
 {
-	for (unsigned i = 0; i < collision_objects_.GetEndPointer(); i++)
+	for (unsigned i = 0; i < collision_objects_.getEndIndex(); i++)
 	{
-		collision_objects_.GetArrayObject(i)
-			->ReleaseAllCollisionObjectFromArray();
+		collision_objects_.getObject(i)->ReleaseAllCollisionObjectFromArray();
 	}
-	collision_objects_.ReleaseObjectAndResetArray();
+	collision_objects_.ReleaseObjectAndReset();
 }
 
 
 
 void CollisionBase::EliminationOfNesting(Transform* transform, const Vec3* hit_vector)
 {
-	*transform->GetPosition() += *hit_vector;
-	transform->UpdateWorldMatrixISRT();
+	*transform->getpPosition() += *hit_vector;
+	transform->CreateWorldMatrixPlusTranspose();
 }

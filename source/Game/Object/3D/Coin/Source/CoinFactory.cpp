@@ -11,10 +11,6 @@
 // インクルード文
 //****************************************
 #include "../CoinFactory.h"
-#include "../Coin.h"
-#include "../CoinUpdate.h"
-#include "../CoinDraw.h"
-#include "../CoinCollision.h"
 
 
 

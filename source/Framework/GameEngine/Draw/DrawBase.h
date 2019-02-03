@@ -131,6 +131,14 @@ public:
 	//----------------------------------------
 	DrawCommonData* getpDrawCommonData();
 
+	//----------------------------------------
+	//! @brief 描画共通データ設定関数
+	//! @details
+	//! @param value 描画共通データ
+	//! @retval void なし
+	//----------------------------------------
+	void setDrawCommonData(DrawCommonData* value);
+
 
 //====================
 // 関数

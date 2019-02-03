@@ -79,7 +79,6 @@ private:
 
 	Camera* camera_[(int)RenderTargetType::MAX];			//!< カメラ群
 	Fade* fade_;											//!< フェード
-	bool is_fade_;											//!< フェード中フラグ
 	DrawCommonData* common_data_ = nullptr;					//!< 共通データ
 	ShaderManager* shader_manager_ = nullptr;				//!< シェーダーマネージャ
 	RenderTargetMain* render_target_main_ = nullptr;		//!< レンダーターゲットメイン
@@ -181,7 +180,7 @@ public:
 	void ReleaseDrawBaseFromArray(DrawBase* draw);
 	
 	//----------------------------------------
-	//! @brief フェードイン初期化関数
+	//! @brief フェードインスタート関数
 	//! @details
 	//! @param type  タイプ
 	//! @param size  拡縮
@@ -189,10 +188,10 @@ public:
 	//! @param speed フェード速度
 	//! @retval void なし
 	//----------------------------------------
-	void InitFadeIn(Fade::Type type, Vec2 size, XColor4 color, float speed);
+	void StartFadeIn(Fade::Type type, Vec2 size, XColor4 color, float speed);
 
 	//----------------------------------------
-	//! @brief フェードアウト初期化関数
+	//! @brief フェードアウトスタート関数
 	//! @details
 	//! @param type  タイプ
 	//! @param size  拡縮
@@ -200,15 +199,7 @@ public:
 	//! @param speed フェード速度
 	//! @retval void なし
 	//----------------------------------------
-	void InitFadeOut(Fade::Type type, Vec2 size, XColor4 color, float speed);
-
-	//----------------------------------------
-	//! @brief フェード終了関数
-	//! @details
-	//! @param void なし
-	//! @retval void なし
-	//----------------------------------------
-	void UninitFade();
+	void StartFadeOut(Fade::Type type, Vec2 size, XColor4 color, float speed);
 
 	//----------------------------------------
 	//! @brief フェード終了確認関数

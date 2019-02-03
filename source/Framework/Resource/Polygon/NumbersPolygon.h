@@ -21,7 +21,6 @@
 //****************************************
 // クラス宣言
 //****************************************
-class D3DMATERIAL9;
 class PlanePolygon;
 class TextureObject;
 
@@ -276,11 +275,10 @@ private:
 	//----------------------------------------
 	//! @brief 数字ポリゴン作成関数
 	//! @details
-	//! @param number      数字
 	//! @param *digits_num 桁数
 	//! @retval void なし
 	//----------------------------------------
-	void CreateNumberPolygon(int number, int* digits_num);
+	void CreateNumberPolygon(int* digits_num);
 
 	//----------------------------------------
 	//! @brief カンスト処理関数

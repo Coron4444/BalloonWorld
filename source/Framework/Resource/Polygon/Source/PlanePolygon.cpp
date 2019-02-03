@@ -62,7 +62,7 @@ D3DMATERIAL9* PlanePolygon::getpMaterial()
 
 
 
-void PlanePolygon::setUV(TextureObject* texture, int pattern_num = 0)
+void PlanePolygon::setUV(TextureObject* texture, int pattern_num)
 {
 	vertex_[0].texcoord_ = Vec2(*texture->getpUV(pattern_num)->getpLeftUpU(),
 								*texture->getpUV(pattern_num)->getpLeftUpV());
@@ -135,7 +135,7 @@ void PlanePolygon::Draw()
 
 
 
-void PlanePolygon::CreateVertex(Vec2 mesh_scale, XColor4 color)
+void PlanePolygon::CreateVertex(Vec2 mesh_scale, Color4 color)
 {
 	// ’¸“_î•ñ‚Ì“ü—Í
 	float temp_x = mesh_scale.x / 2;

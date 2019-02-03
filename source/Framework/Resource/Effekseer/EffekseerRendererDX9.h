@@ -5,7 +5,7 @@
 //----------------------------------------------------------------------------------
 // Include
 //----------------------------------------------------------------------------------
-#include <Effekseer/Effekseer.h>
+#include "Effekseer.h"
 
 #include <windows.h>
 #include <d3d9.h>
@@ -40,7 +40,7 @@ class Renderer;
 //----------------------------------------------------------------------------------
 // Include
 //----------------------------------------------------------------------------------
-#include <Effekseer/Effekseer.h>
+#include "Effekseer.h"
 
 //-----------------------------------------------------------------------------------
 //
@@ -317,8 +317,8 @@ protected:
 public:
 	/**
 		@brief	インスタンスを生成する。
-		@param	device	[in]	DirectXのデバイス
-		@param	squareMaxCount	[in]	最大描画スプライト数
+		@param	device		DirectXのデバイス
+		@param	squareMaxCount		最大描画スプライト数
 		@return	インスタンス
 	*/
 	static Renderer* Create( LPDIRECT3DDEVICE9 device, int32_t squareMaxCount );

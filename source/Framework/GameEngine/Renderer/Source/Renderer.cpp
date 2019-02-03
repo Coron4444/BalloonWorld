@@ -107,6 +107,14 @@ bool Renderer::DrawBegin()
 
 
 
+bool Renderer::NoClearDrawBegin()
+{
+	if (renderer_ == nullptr) return false;
+	return renderer_->NoClearDrawBegin();
+}
+
+
+
 void Renderer::DrawEnd(bool is_begin_scene)
 {
 	if (renderer_ == nullptr) return;

@@ -70,7 +70,7 @@ float TimeToFrame::FrameToHour(int frame)
 
 void TimeToFrame::FrameToTime(int frame, float* hour, float* minute, float* second)
 {
-	*hour = FrameToHour  (frame);
-	*min  = FrameToMinute(frame % HourToFrame(1.0f));
-	*sec  = FrameToSecond(frame % MinuteToFrame(1.0f));
+	*hour = FrameToHour(frame);
+	*minute = FrameToMinute(frame % HourToFrame(1.0f));
+	*second = FrameToSecond(frame % MinuteToFrame(1.0f));
 }

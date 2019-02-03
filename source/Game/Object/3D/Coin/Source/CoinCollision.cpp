@@ -21,6 +21,7 @@ const Vec3 CoinCollision::BOUNDING_OBB_LENGTH(1.0f, 1.0f, 1.0f);
 const Vec3 CoinCollision::SUBSTANCE_OBB_LENGTH(1.0f, 1.0f, 1.0f);
 
 
+
 //****************************************
 // ä÷êîíËã`
 //****************************************

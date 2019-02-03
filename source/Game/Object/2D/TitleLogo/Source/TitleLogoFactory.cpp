@@ -11,8 +11,6 @@
 // インクルード文
 //****************************************
 #include "../TitleLogoFactory.h"
-#include "../TitleLogo.h"
-#include "../TitleLogoDraw.h"
 
 
 

@@ -11,8 +11,6 @@
 // インクルード文
 //****************************************
 #include "../FailureLogoFactory.h"
-#include "../FailureLogo.h"
-#include "../FailureLogoDraw.h"
 
 
 

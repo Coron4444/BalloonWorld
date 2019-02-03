@@ -80,9 +80,9 @@ protected:
 public:
 	/**
 		@brief	インスタンスを生成する。
-		@param	device	[in]	XAudio2のデバイス
-		@param	voiceCount1ch	[in]	モノラルボイス数
-		@param	voiceCount2ch	[in]	ステレオボイス数
+		@param	device		XAudio2のデバイス
+		@param	voiceCount1ch		モノラルボイス数
+		@param	voiceCount2ch		ステレオボイス数
 		@return	インスタンス
 	*/
 	static Sound* Create( IXAudio2* xaudio2, int32_t num1chVoices, int32_t num2chVoices );

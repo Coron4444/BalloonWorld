@@ -11,8 +11,6 @@
 // インクルード文
 //****************************************
 #include "../ClearLogoFactory.h"
-#include "../ClearLogo.h"
-#include "../ClearLogoDraw.h"
 
 
 

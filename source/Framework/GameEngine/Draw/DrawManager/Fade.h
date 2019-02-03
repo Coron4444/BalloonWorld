@@ -74,7 +74,7 @@ private:
 	TextureObject* transition01_texture_ = nullptr;	//!< テクスチャオブジェクト
 	XColor4 color_;									//!< 色
 	float speed_;									//!< フェード速度
-	bool end_flag_;									//!< 終了フラグ
+	bool end_flag_ = true;							//!< 終了フラグ
 
 
 //====================
@@ -146,14 +146,10 @@ public:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
-	//! @param type  タイプ
-	//! @param state ステート
-	//! @param size  拡縮
-	//! @param color 色
-	//! @param speed フェード速度
+	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void Init(Type type, State state, Vec2 size, XColor4 color, float speed);
+	void Init();
 
 	//----------------------------------------
 	//! @brief 終了関数
@@ -179,6 +175,18 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void Draw(unsigned object_index, unsigned mesh_index) override;
+
+	//----------------------------------------
+	//! @brief スタート関数
+	//! @details
+	//! @param type  タイプ
+	//! @param state ステート
+	//! @param size  拡縮
+	//! @param color 色
+	//! @param speed フェード速度
+	//! @retval void なし
+	//----------------------------------------
+	void Start(Type type, State state, Vec2 size, XColor4 color, float speed);
 };
 
 
