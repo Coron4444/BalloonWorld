@@ -15,7 +15,9 @@
 #include <string>
 
 #include "../DrawNull.h"
+
 #include <Tool/Vector3D.h>
+#include <Tool/Interpolation.h>
 
 
 
@@ -75,6 +77,8 @@ private:
 	XColor4 color_;									//!< 色
 	float speed_;									//!< フェード速度
 	bool end_flag_ = true;							//!< 終了フラグ
+	Interpolation<float> inter_container_;			//!< 補間コンテナ
+	Interpolation<float>::Iterator inter_iter_;		//!< 補間イテレータ
 
 
 //====================

@@ -230,6 +230,7 @@ void CollisionManager::ReleaseCollisionBaseFromArray(CollisionBase* collision)
 	for (unsigned i = 0; i < collision->getEndIndexOfArray(); i++)
 	{
 		ObjectOfTree<CollisionObjects*>* temp = collision->getpCollisionObjects(i)->getpObjectOfTree();
+		if (temp == nullptr) continue;
 		temp->DeleteFromList();
 		SafeRelease::Normal(&temp);
 	}

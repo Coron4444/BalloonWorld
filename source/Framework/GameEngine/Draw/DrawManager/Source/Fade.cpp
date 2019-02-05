@@ -117,27 +117,10 @@ void Fade::Uninit()
 
 void Fade::Update()
 {
-	// α値を変更
-	color_.a += speed_;
+	color_.a = *inter_iter_;
 	plane_polygon_->setColor(color_);
-
-	// フェードオブジェクトの更新
-	if (state_ == State::FADE_IN)
-	{
-		// α値が0を下回ったら
-		if (color_.a <= 0.0f)
-		{
-			end_flag_ = true;
-		}
-	}
-	else if (state_ == State::FADE_OUT)
-	{
-		// α値が1を上回ったら
-		if (color_.a >= 1.0f)
-		{
-			end_flag_ = true;
-		}
-	}
+	if (inter_iter_.getIsFinished()) end_flag_ = true;
+	inter_iter_++;
 }
 
 
@@ -174,24 +157,49 @@ void Fade::Start(Type type, State state, Vec2 size, XColor4 color, float speed)
 	end_flag_ = false;
 
 	// ステートごとの処理
+	color_ = color;
+	double distance = 0.0f;
 	if (state_ == State::FADE_IN)
 	{
-		// カラー
-		color.a = 1.0f;
-		color_ = color;
+		float alpha = 1.0f;
+		color_.a = alpha;
 		plane_polygon_->setColor(color_);
 
-		// フェード速度(単位：秒)
-		speed_ = -(1.0f / (float)TimeToFrame::SecondToFrame(speed));
+		// 補間設定
+		inter_container_.clear();
+		inter_container_.push_back(alpha, distance);
+		
+		alpha = 0.0f;
+		distance = (double)TimeToFrame::SecondToFrame(speed);
+		inter_container_.push_back(alpha, distance);
+
+		inter_iter_ = inter_container_.begin();
 	}
 	else if (state_ == State::FADE_OUT)
 	{
-		// カラー
-		color.a = 0.0f;
-		color_ = color;
+		float alpha = 0.0f;
+		color_.a = alpha;
 		plane_polygon_->setColor(color_);
 
-		// フェード速度(単位：秒)
-		speed_ = 1.0f / (float)TimeToFrame::SecondToFrame(speed);
+		// 補間設定
+		inter_container_.clear();
+		inter_container_.push_back(alpha, distance);
+
+		alpha = 1.0f;
+		distance = (double)TimeToFrame::SecondToFrame(speed);
+		inter_container_.push_back(alpha, distance);
+		
+		for (int i = 0; i < 10; i++)
+		{
+			alpha = 0.0f;
+			distance = (double)TimeToFrame::SecondToFrame(0.1f);
+			inter_container_.push_back(alpha, distance);
+
+			alpha = 1.0f;
+			distance = (double)TimeToFrame::SecondToFrame(0.1f);
+			inter_container_.push_back(alpha, distance);
+		}
+
+		inter_iter_ = inter_container_.begin();
 	}
 }
