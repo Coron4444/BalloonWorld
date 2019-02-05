@@ -44,6 +44,9 @@ void PlayerUpdate::Init()
 	player_->getpPhysics()->setMass(8.0f);
 	player_->getpPhysics()->setMyFriction(1.0f);
 	player_->getpPhysics()->setMyBounciness(1.0f);
+
+	// ‰ŠúŽp¨
+	player_->getpTransform()->setInitAngle(Vector3D(0.0f, D3DXToRadian(-90.0f), 0.0f));
 }
 
 

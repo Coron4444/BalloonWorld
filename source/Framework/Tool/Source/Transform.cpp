@@ -31,6 +31,17 @@ Vector3D* Transform::getpScale()
 
 
 
+void Transform::setInitAngle(Vector3D value)
+{
+	D3DXQuaternionIdentity(&init_quaternion_);
+	D3DXQuaternionRotationYawPitchRoll(&init_quaternion_,
+									   value.y,
+									   value.x,
+									   value.z);
+}
+
+
+
 float* Transform::getpAnglePitch()
 {
 	return &yaw_pitch_roll_angle_.x;
@@ -215,6 +226,7 @@ Transform::Transform()
 	look_at_change_amount_(0.0f)
 {
 	// クォータニオンの初期化
+	D3DXQuaternionIdentity(&init_quaternion_);
 	D3DXQuaternionIdentity(&now_quaternion_);
 	D3DXQuaternionIdentity(&yaw_pitch_roll_quaternion_);
 	D3DXQuaternionIdentity(&old_target_quaternion_);
@@ -240,6 +252,7 @@ void Transform::CreateAxis()
 
 void Transform::CreateWorldMatrix()
 {
+	CreateQuaternion();
 	ReflectMatrix();
 	matrix_group_.CreateWorldMatrix();
 }
@@ -248,6 +261,7 @@ void Transform::CreateWorldMatrix()
 
 void Transform::CreateWorldMatrixPlusInverse()
 {
+	CreateQuaternion();
 	ReflectMatrix();
 	matrix_group_.CreateWorldMatrixPlusInverse();
 }
@@ -256,6 +270,7 @@ void Transform::CreateWorldMatrixPlusInverse()
 
 void Transform::CreateWorldMatrixPlusTranspose()
 {
+	CreateQuaternion();
 	ReflectMatrix();
 	matrix_group_.CreateWorldMatrixPlusTranspose();
 }
@@ -319,5 +334,8 @@ void Transform::ReflectMatrix()
 {
 	matrix_group_.setPositionMatrix(&position_);
 	matrix_group_.setScaleMatrix(&scale_);
+
+	D3DXQuaternionMultiply(&now_quaternion_, &now_quaternion_,
+						   &init_quaternion_);
 	matrix_group_.setRotationMatrix(&now_quaternion_);
 }

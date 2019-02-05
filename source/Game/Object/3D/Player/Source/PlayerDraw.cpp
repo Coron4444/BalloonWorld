@@ -124,12 +124,7 @@ void PlayerDraw::Init()
 	normal_texture_[1] = TextureManager::getpInstance()->getpObject(&NORMAL_TEXTURE_SWORD, &TEXTURE_PATH);
 
 	// テスト用オブジェクト
-	//std::string test = "neko_anime_hasiru3/neko_anime_hasiru3.mdbin_l";
-	std::string test = "unitychan_Jump/unitychan_Jump.mdbin_l";
-	//std::string test = "Unarmed Equip Over Shoulder/Unarmed Equip Over Shoulder.mdbin_l";
-	//std::string test = "unitychan/unitychan.mdbin_l";
-	//std::string test = "goblin-sapper/goblin-sapper.mdbin_l";
-	//std::string test = "humanoid/humanoid.mdbin_l";
+	std::string test = "neko_anime_tat2i/neko_anime_tat2i.mdbin_l";
 	test_object_ = MdBinManager::getpInstance()->getpObject(&test);
 }
 

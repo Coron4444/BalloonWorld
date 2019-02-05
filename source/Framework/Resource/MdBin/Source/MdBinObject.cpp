@@ -483,11 +483,21 @@ void MdBinObject::CreateColor(int mesh_index, int vertex_index)
 void MdBinObject::CreateUV(int mesh_index, int vertex_index,
 						   MdBinData* md_bin_data)
 {
-	float u = *md_bin_data->getpMesh(mesh_index)->getpUVSet(0)->getpU(vertex_index);
-	float v = *md_bin_data->getpMesh(mesh_index)->getpUVSet(0)->getpV(vertex_index);
-	MdBinObject::Vertex* vertex = mesh_[mesh_index].getpVertex(vertex_index);
-	vertex->uv_.x = u;
-	vertex->uv_.y = v;
+	if (md_bin_data->getpMesh(mesh_index)->getUVSetArraySize() != 0)
+	{
+		float u = *md_bin_data->getpMesh(mesh_index)->getpUVSet(0)->getpU(vertex_index);
+		float v = *md_bin_data->getpMesh(mesh_index)->getpUVSet(0)->getpV(vertex_index);
+		MdBinObject::Vertex* vertex = mesh_[mesh_index].getpVertex(vertex_index);
+		vertex->uv_.x = u;
+		vertex->uv_.y = v;
+	}
+	else
+	{
+		MdBinObject::Vertex* vertex = mesh_[mesh_index].getpVertex(vertex_index);
+		vertex->uv_.x = 0.0f;
+		vertex->uv_.y = 0.0f;
+	}
+	
 }
 
 
@@ -520,6 +530,7 @@ void MdBinObject::CreateBoneWeight(int mesh_index, int vertex_index,
 void MdBinObject::CreateDiffuseTexture(int mesh_index, std::string* file_path,
 									   MdBinData* md_bin_data)
 {
+	if (md_bin_data->getpMesh(mesh_index)->getUVSetArraySize() <= 0) return;
 	if (md_bin_data->getpMesh(mesh_index)->getpUVSet(0)->getTextureArraySize() <= 0) return;
 
 	std::string key_name = *md_bin_data->getpMesh(mesh_index)->getpUVSet(0)

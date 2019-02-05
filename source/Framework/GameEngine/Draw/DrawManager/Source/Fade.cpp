@@ -188,17 +188,6 @@ void Fade::Start(Type type, State state, Vec2 size, XColor4 color, float speed)
 		alpha = 1.0f;
 		distance = (double)TimeToFrame::SecondToFrame(speed);
 		inter_container_.push_back(alpha, distance);
-		
-		for (int i = 0; i < 10; i++)
-		{
-			alpha = 0.0f;
-			distance = (double)TimeToFrame::SecondToFrame(0.1f);
-			inter_container_.push_back(alpha, distance);
-
-			alpha = 1.0f;
-			distance = (double)TimeToFrame::SecondToFrame(0.1f);
-			inter_container_.push_back(alpha, distance);
-		}
 
 		inter_iter_ = inter_container_.begin();
 	}

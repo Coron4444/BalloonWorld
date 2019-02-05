@@ -26,6 +26,7 @@
 #include <Object/3D/SkyDome/SkyDomeFactory.h>
 #include <Object/3D/Player/PlayerFactory.h>
 #include <Object/3D/StencilShadowTest/StencilShadowTestFactory.h>
+#include <Object/3D/Balloon/BalloonFactory.h>
 
 #include <Scenes/ResultScene/ResultScene.h>
 #include <Scenes/ResultScene/ResultSceneState_Start.h>
@@ -108,6 +109,10 @@ void GameSceneState_Start::Init()
 	*temp2->getpTransform()->getpPosition() = Vec3(-5.0f, 0.0f, 5.0f);
 	temp2->getpTransform()->CreateWorldMatrix();
 	
+	// •—‘Dì¬
+	BalloonFactory balloon_factory;
+	balloon_factory.Create();
+
 	// ƒS[ƒ‹
 	GoalFactory goal_factory;
 	Goal* temp3 = goal_factory.Create();

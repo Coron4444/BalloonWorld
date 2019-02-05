@@ -31,6 +31,7 @@ class Transform
 private:
 	Vector3D position_;						//!< 座標
 	Vector3D scale_;						//!< 拡縮
+	Quaternion init_quaternion_;			//!< 初期値クォータニオン
 	Quaternion now_quaternion_;				//!< 現在のクォータニオン
 	Quaternion yaw_pitch_roll_quaternion_;	//!< YawPitchRollクォータニオン
 	Quaternion target_quaternion_;			//!< ターゲットクォータニオン
@@ -61,6 +62,14 @@ public:
 	//! @retval Vector3D* 座標
 	//----------------------------------------
 	Vector3D* getpScale();
+
+	//----------------------------------------
+	//! @brief 初期角度取得関数
+	//! @details
+	//! @param value 角度
+	//! @retval void なし
+	//----------------------------------------
+	void setInitAngle(Vector3D value);
 
 	//----------------------------------------
 	//! @brief Pitch角度取得関数
