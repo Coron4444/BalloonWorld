@@ -10,6 +10,13 @@
 //****************************************
 // インクルード文
 //****************************************
+#pragma warning(push)
+#pragma warning(disable: 4100)
+#pragma warning(disable: 4099)
+#pragma warning(disable: 4127)
+//#include <btBulletDynamicsCommon.h>
+#pragma warning(pop)
+
 #include "../BalloonDraw.h"
 
 #include <GameEngine/Draw/DrawManager/Shader/VertexShader/VertexShaderBumpMapping.h>
@@ -80,6 +87,8 @@ void BalloonDraw::Init()
 
 	// オブジェクト取得
 	object_ = ModelXManager::getpInstance()->getpObject(&MODEL_NAME);
+
+
 }
 
 

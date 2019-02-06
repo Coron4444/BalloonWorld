@@ -369,9 +369,17 @@ void DrawManager::DrawBackBuffer()
 	device_->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_POINT);
 	device_->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_POINT);
 
+	// アルファブレンドOFF
+	((RendererDirectX9*)Renderer::getpInstance()->getpRenderer())
+		->UseAlphaBlending(false);
+
 	// 描画
 	device_->SetTexture(0, common_data_->getpRenderTextureMain()->getpTexture());
 	back_buffer_polygon_->Draw(0, 0);
+
+	// アルファブレンドON
+	((RendererDirectX9*)Renderer::getpInstance()->getpRenderer())
+		->UseAlphaBlending(true);
 
 	// サンプラー変更
 	((RendererDirectX9*)Renderer::getpInstance()->getpRenderer())
@@ -407,7 +415,6 @@ void DrawManager::DrawFade()
 			// メッシュ設定
 			shader_manager_->MeshSetting(fade_,
 										 camera_[(int)RenderTargetType::MAIN], 0, 0);
-
 			fade_->Draw(0, 0);
 			break;
 		}

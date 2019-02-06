@@ -45,6 +45,7 @@ public:
 //====================
 private:
 	SceneManager* scene_manager_ = nullptr;		//!< ƒV[ƒ“ŠÇ—ŽÒ
+	
 
 
 //====================

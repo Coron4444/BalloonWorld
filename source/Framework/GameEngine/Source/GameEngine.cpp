@@ -15,6 +15,7 @@
 #include "../Renderer/RendererFactoryDirectX9.h"
 #include "../Scene/SceneManager/SceneManager.h"
 #include "../Input/InputManager/InputManager.h"
+#include "../Collision/BulletPhysics/BulletPhysicsManager/BulletPhysicsManager.h"
 
 #include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>
 #include <Resource/Texture/TextureManager/TextureManager.h>
@@ -73,6 +74,9 @@ bool GameEngine::Init(HINSTANCE hInstance, HWND hWnd, BOOL is_full_screen,
 	ImGui_ImplDX9_Init(hWnd, device);
 //#endif
 
+	// Bulletの初期化
+	BulletPhysicsManager::getpInstance()->Init();
+	
 	// 入力マネージャの初期化
 	InputManager::getpInstance()->Init(hInstance, hWnd);
 
@@ -111,7 +115,11 @@ void GameEngine::Uninit()
 
 	// 入力マネージャの終了処理
 	InputManager::getpInstance()->Uninit();
-	InputManager::getpInstance()->ReleaseInstance();
+	InputManager::ReleaseInstance();
+
+	// Bulletの終了
+	BulletPhysicsManager::getpInstance()->Uninit();
+	BulletPhysicsManager::ReleaseInstance();
 
 	// ImGUIの終了
 //#ifdef _DEBUG
@@ -132,6 +140,9 @@ void GameEngine::Update()
 	ImGui_ImplDX9_NewFrame();
 //#endif
 
+	// Bullet更新
+	BulletPhysicsManager::getpInstance()->Update();
+	
 	// 入力マネージャ更新
 	InputManager::getpInstance()->Update();
 
