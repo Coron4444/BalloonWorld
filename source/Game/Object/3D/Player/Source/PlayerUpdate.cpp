@@ -15,10 +15,10 @@
 #include "../Player.h"
 
 #include <GameEngine/Input/InputManager/InputManager.h>
+#include <GameEngine/Collision/BulletPhysics/BulletPhysicsManager/BulletPhysicsManager.h>
 #include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
 #include <Tool/MeterToFrame.h>
 #include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>
-
 
 
 //****************************************
@@ -132,6 +132,16 @@ void PlayerUpdate::Update()
 		temp_object->Play();
 	}
 
+	btTransform temp_transform;
+	BulletPhysicsManager::getpInstance()->getpMotionState()->getWorldTransform(temp_transform);
+	*player_->getpTransform()->getpPosition() = Vec3(temp_transform.getOrigin().getX(),
+													 temp_transform.getOrigin().getY(),
+													 temp_transform.getOrigin().getZ());
+	player_->getpTransform()->ResetAddQuaternion();
+	player_->getpTransform()->setAddQuaternion(Quaternion(temp_transform.getRotation().getX(),
+														  temp_transform.getRotation().getY(),
+														  temp_transform.getRotation().getZ(),
+														  temp_transform.getRotation().getW()));
 	player_->getpTransform()->CreateAxisAndWorldMatrix();
 }
 
@@ -141,40 +151,40 @@ void PlayerUpdate::DebugDisplay()
 {
 #ifdef _DEBUG
 	// ウィンドウの設定
-    ImGui::SetNextWindowPos(ImVec2(30, 30), ImGuiSetCond_Once);
+	ImGui::SetNextWindowPos(ImVec2(30, 30), ImGuiSetCond_Once);
 	ImGui::SetNextWindowSize(ImVec2(150, 500), ImGuiSetCond_Once);
-	ImGui::PushStyleColor(ImGuiCol_TitleBgActive,    ImVec4(1.0f, 0.0f, 0.0f, 0.8f));
-    ImGui::PushStyleColor(ImGuiCol_TitleBgCollapsed, ImVec4(0.0f, 0.5f, 1.0f, 0.8f));
-	ImGui::PushStyleColor(ImGuiCol_TitleBg,          ImVec4(0.5f, 0.0f, 0.0f, 0.8f));
+	ImGui::PushStyleColor(ImGuiCol_TitleBgActive, ImVec4(1.0f, 0.0f, 0.0f, 0.8f));
+	ImGui::PushStyleColor(ImGuiCol_TitleBgCollapsed, ImVec4(0.0f, 0.5f, 1.0f, 0.8f));
+	ImGui::PushStyleColor(ImGuiCol_TitleBg, ImVec4(0.5f, 0.0f, 0.0f, 0.8f));
 	ImGui::PushStyleColor(ImGuiCol_Header, ImVec4(0.0f, 0.5f, 0.5f, 1.0f));
 
 	// 開始
 	ImGui::Begin("Player", nullptr, ImGuiWindowFlags_MenuBar);
 
 	// メニュー
-	if (ImGui::BeginMenuBar()) 
+	if (ImGui::BeginMenuBar())
 	{
 		// メニュー名
 		if (ImGui::BeginMenu("File"))
 		{
-		    // メニューごとの処理
-		    if (ImGui::MenuItem("Save")) 
-		    {
+			// メニューごとの処理
+			if (ImGui::MenuItem("Save"))
+			{
 
-		    }
-		    if (ImGui::MenuItem("Load"))
-		    {
-		    }
+			}
+			if (ImGui::MenuItem("Load"))
+			{
+			}
 
-		    ImGui::EndMenu();
+			ImGui::EndMenu();
 		}
-			ImGui::EndMenuBar();	
+		ImGui::EndMenuBar();
 	}
 
 	// 座標
 	if (ImGui::CollapsingHeader("Position"))
-    {
-        // テキスト表示
+	{
+		// テキスト表示
 		ImGui::Text("X : %f", player_->getpTransform()->getpPosition()->x);
 		ImGui::Text("Y : %f", player_->getpTransform()->getpPosition()->y);
 		ImGui::Text("Z : %f", player_->getpTransform()->getpPosition()->z);
@@ -182,10 +192,10 @@ void PlayerUpdate::DebugDisplay()
 
 	// 軸ベクトル
 	if (ImGui::CollapsingHeader("Axis"))
-    {
-        // ノード
+	{
+		// ノード
 		ImGui::SetNextTreeNodeOpen(true, ImGuiSetCond_Once);
-		if (ImGui::TreeNode("Right")) 
+		if (ImGui::TreeNode("Right"))
 		{
 			ImGui::Text("X : %f", player_->getpTransform()->getpRight()->x);
 			ImGui::Text("Y : %f", player_->getpTransform()->getpRight()->y);
@@ -195,7 +205,7 @@ void PlayerUpdate::DebugDisplay()
 		}
 
 		ImGui::SetNextTreeNodeOpen(true, ImGuiSetCond_Once);
-		if (ImGui::TreeNode("Up")) 
+		if (ImGui::TreeNode("Up"))
 		{
 			ImGui::Text("X : %f", player_->getpTransform()->getpUp()->x);
 			ImGui::Text("Y : %f", player_->getpTransform()->getpUp()->y);
@@ -205,7 +215,7 @@ void PlayerUpdate::DebugDisplay()
 		}
 
 		ImGui::SetNextTreeNodeOpen(true, ImGuiSetCond_Once);
-		if (ImGui::TreeNode("Forawrd")) 
+		if (ImGui::TreeNode("Forawrd"))
 		{
 			ImGui::Text("X : %f", player_->getpTransform()->getpForawrd()->x);
 			ImGui::Text("Y : %f", player_->getpTransform()->getpForawrd()->y);
@@ -217,10 +227,10 @@ void PlayerUpdate::DebugDisplay()
 
 	// 物理
 	if (ImGui::CollapsingHeader("Physics"))
-    {
-        // ノード
+	{
+		// ノード
 		ImGui::SetNextTreeNodeOpen(true, ImGuiSetCond_Once);
-		if (ImGui::TreeNode("Velocity")) 
+		if (ImGui::TreeNode("Velocity"))
 		{
 			ImGui::Text("X : %f", player_->getpPhysics()->getpVelocity()->x);
 			ImGui::Text("Y : %f", player_->getpPhysics()->getpVelocity()->y);
@@ -230,7 +240,7 @@ void PlayerUpdate::DebugDisplay()
 		}
 
 		ImGui::SetNextTreeNodeOpen(true, ImGuiSetCond_Once);
-		if (ImGui::TreeNode("Mass")) 
+		if (ImGui::TreeNode("Mass"))
 		{
 			static float mass = 0.1f;
 			ImGui::SliderFloat("slider 1", &mass, 0.1f, 2.0f);
@@ -239,7 +249,7 @@ void PlayerUpdate::DebugDisplay()
 		}
 
 		ImGui::SetNextTreeNodeOpen(true, ImGuiSetCond_Once);
-		if (ImGui::TreeNode("Friction")) 
+		if (ImGui::TreeNode("Friction"))
 		{
 			static float friction = 0.0f;
 			ImGui::SliderFloat("slider 1", &friction, 0.0f, 1.0f);
@@ -249,10 +259,10 @@ void PlayerUpdate::DebugDisplay()
 	}
 
 	// 終了
-    ImGui::End();
+	ImGui::End();
 
-    // 色の解放(設定でプッシュした分だけ)
-    ImGui::PopStyleColor();
+	// 色の解放(設定でプッシュした分だけ)
+	ImGui::PopStyleColor();
 	ImGui::PopStyleColor();
 	ImGui::PopStyleColor();
 	ImGui::PopStyleColor();

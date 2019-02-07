@@ -54,37 +54,22 @@ void GameSceneState_Start::Init()
 	//	->GetCamera()->ChangeState(new CameraState_HomingTarget());
 
 	// コインの作成
-	CoinFactory coin_factory;
-	Coin* temp = coin_factory.Create();
-	*temp->getpTransform()->getpPosition() = Vec3(5.0f, 0.0f, 0.0f);
-	temp->getpTransform()->CreateWorldMatrix();
-	
-	temp = coin_factory.Create();
-	*temp->getpTransform()->getpPosition() = Vec3(5.0f, 0.0f, 5.0f);
-	temp->getpTransform()->CreateWorldMatrix();
-	
-	temp = coin_factory.Create();
-	*temp->getpTransform()->getpPosition() = Vec3(-5.0f, 0.0f, -5.0f);
-	temp->getpTransform()->CreateWorldMatrix();
-
-	//for (unsigned i = 0; i < 5; i++)
-	//{
-	//	for (unsigned j = 0; j < 3; j++)
-	//	{
-	//		for (unsigned k = 0; k < 5; k++)
-	//		{
-	//			Coin* temp = coin_factory.Create();
-	//			*temp->GetTransform()->GetPosition() = Vec3(-10.0f + i * 5.0f, 
-	//														  0.0f + j * 3.0f, 
-	//														-10.0f + k * 5.0f);
-	//			temp->GetTransform()->UpdateWorldMatrixSRT();
-	//		}
-	//	}
-	//}
+	//CoinFactory coin_factory;
+	//Coin* temp = coin_factory.Create();
+	//*temp->getpTransform()->getpPosition() = Vec3(5.0f, 0.0f, 0.0f);
+	//temp->getpTransform()->CreateWorldMatrix();
+	//
+	//temp = coin_factory.Create();
+	//*temp->getpTransform()->getpPosition() = Vec3(5.0f, 0.0f, 5.0f);
+	//temp->getpTransform()->CreateWorldMatrix();
+	//
+	//temp = coin_factory.Create();
+	//*temp->getpTransform()->getpPosition() = Vec3(-5.0f, 0.0f, -5.0f);
+	//temp->getpTransform()->CreateWorldMatrix();
 
 	// スカイドーム
-	SkyDomeFactory sky_dome_factory;
-	sky_dome_factory.Create();
+	//SkyDomeFactory sky_dome_factory;
+	//sky_dome_factory.Create();
 
 
 	// フィールド
@@ -93,8 +78,8 @@ void GameSceneState_Start::Init()
 	GameObjectManager::getpInstance()->getpCollisionManager()
 		->setGround(field->getpMeshPlanePolygon());
 	
-	StencilShadowTestFactory stencil_factory;
-	stencil_factory.Create();
+	//StencilShadowTestFactory stencil_factory;
+	//stencil_factory.Create();
 
 	// プレイヤー
 	PlayerFactory player_factory;
@@ -104,20 +89,20 @@ void GameSceneState_Start::Init()
 	//	->GetCamera()->GetCameraState())->SetTarget(player);
 
 	// 敵
-	EnemyFactory enemy_factory;
-	Enemy* temp2 = enemy_factory.Create();
-	*temp2->getpTransform()->getpPosition() = Vec3(-5.0f, 0.0f, 5.0f);
-	temp2->getpTransform()->CreateWorldMatrix();
+	//EnemyFactory enemy_factory;
+	//Enemy* temp2 = enemy_factory.Create();
+	//*temp2->getpTransform()->getpPosition() = Vec3(-5.0f, 0.0f, 5.0f);
+	//temp2->getpTransform()->CreateWorldMatrix();
 	
 	// 風船作成
-	BalloonFactory balloon_factory;
-	balloon_factory.Create();
+	//BalloonFactory balloon_factory;
+	//balloon_factory.Create();
 
 	// ゴール
-	GoalFactory goal_factory;
-	Goal* temp3 = goal_factory.Create();
-	*temp3->getpTransform()->getpPosition() = Vec3(10.0f, 0.0f, 20.0f);
-	temp3->getpTransform()->CreateWorldMatrix();
+	//GoalFactory goal_factory;
+	//Goal* temp3 = goal_factory.Create();
+	//*temp3->getpTransform()->getpPosition() = Vec3(10.0f, 0.0f, 20.0f);
+	//temp3->getpTransform()->CreateWorldMatrix();
 	
 	// スコア
 	ScoreFactory score_factory;

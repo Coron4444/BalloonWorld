@@ -42,6 +42,14 @@ void Transform::setInitAngle(Vector3D value)
 
 
 
+void Transform::setAddQuaternion(Quaternion value)
+{
+	D3DXQuaternionMultiply(&add_quaternion_, &add_quaternion_,
+						   &value);
+}
+
+
+
 float* Transform::getpAnglePitch()
 {
 	return &yaw_pitch_roll_angle_.x;
@@ -228,9 +236,25 @@ Transform::Transform()
 	// クォータニオンの初期化
 	D3DXQuaternionIdentity(&init_quaternion_);
 	D3DXQuaternionIdentity(&now_quaternion_);
+	D3DXQuaternionIdentity(&add_quaternion_);
 	D3DXQuaternionIdentity(&yaw_pitch_roll_quaternion_);
 	D3DXQuaternionIdentity(&old_target_quaternion_);
 	D3DXQuaternionIdentity(&target_quaternion_);
+}
+
+
+
+void Transform::ResetAddQuaternion()
+{
+	// 追加用初期化
+	D3DXQuaternionIdentity(&add_quaternion_);
+}
+
+
+
+void Transform::AddParentMatrixToWorldMatrix(MATRIX* parent_matrix)
+{
+	matrix_group_.AddParentMatrixToWorldMatrix(parent_matrix);
 }
 
 
@@ -241,7 +265,6 @@ void Transform::CreateAxis()
 	axis_.Reset();
 
 	// 回転行列の更新
-	CreateQuaternion();
 	matrix_group_.setRotationMatrix(&now_quaternion_);
 
 	// 軸の更新
@@ -277,55 +300,59 @@ void Transform::CreateWorldMatrixPlusTranspose()
 
 
 
-void Transform::AddParentMatrixToWorldMatrix(MATRIX* parent_matrix)
-{
-	matrix_group_.AddParentMatrixToWorldMatrix(parent_matrix);
-}
-
-
-
 void Transform::CreateAxisAndWorldMatrix()
 {
+	CreateQuaternion();
 	CreateAxis();
-	CreateWorldMatrix();
+	ReflectMatrix();
+	matrix_group_.CreateWorldMatrix();
 }
 
 
 
 void Transform::CreateAxisAndWorldMatrixPlusInverse()
 {
+	CreateQuaternion();
 	CreateAxis();
-	CreateWorldMatrixPlusInverse();
+	ReflectMatrix();
+	matrix_group_.CreateWorldMatrixPlusInverse();
 }
 
 
 
 void Transform::CreateAxisAndWorldMatrixPlusTranspose()
 {
+	CreateQuaternion();
 	CreateAxis();
-	CreateWorldMatrixPlusTranspose();
+	ReflectMatrix();
+	matrix_group_.CreateWorldMatrixPlusTranspose();
 }
 
 
 
 void Transform::CreateQuaternion()
 {
+	// 現在のクォータニオン初期化
+	D3DXQuaternionIdentity(&now_quaternion_);
+
 	// YawPitchRollクォータニオンの作成
 	D3DXQuaternionIdentity(&yaw_pitch_roll_quaternion_);
 	D3DXQuaternionRotationYawPitchRoll(&yaw_pitch_roll_quaternion_, 
 									   yaw_pitch_roll_angle_.y, 
 									   yaw_pitch_roll_angle_.x,
 									   yaw_pitch_roll_angle_.z);
-
+	
 	// 球面線形補完によるクォータニオンの作成
 	look_at_change_amount_ += look_at_speed_;
 	if (look_at_change_amount_ >= 1.0f) look_at_change_amount_ = 1.0f;
 	D3DXQuaternionSlerp(&now_quaternion_, &old_target_quaternion_, &target_quaternion_, 
 						look_at_change_amount_);
-
-	// クォータニオンの結合
-	D3DXQuaternionMultiply(&now_quaternion_, &now_quaternion_, 
-						   &yaw_pitch_roll_quaternion_);
+	
+	// YawPitchRoll→球面線形補完→追加の順で結合
+	D3DXQuaternionMultiply(&now_quaternion_, &yaw_pitch_roll_quaternion_,
+						   &now_quaternion_);
+	D3DXQuaternionMultiply(&now_quaternion_, &now_quaternion_,
+						   &add_quaternion_);
 }
 
 
@@ -334,8 +361,8 @@ void Transform::ReflectMatrix()
 {
 	matrix_group_.setPositionMatrix(&position_);
 	matrix_group_.setScaleMatrix(&scale_);
-
-	D3DXQuaternionMultiply(&now_quaternion_, &now_quaternion_,
-						   &init_quaternion_);
+	// 初期用→YawPitchRoll→球面線形補完→追加の順で結合
+	D3DXQuaternionMultiply(&now_quaternion_, &init_quaternion_,
+						   &now_quaternion_);
 	matrix_group_.setRotationMatrix(&now_quaternion_);
 }

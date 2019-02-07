@@ -132,7 +132,15 @@ void ShaderManager::UninitPixelShader()
 
 void ShaderManager::VertexShaderSetToDevice(DrawBase* draw)
 {
-	int type = (forced_vertex_ != VertexShaderType::NONE) ? (int)forced_vertex_ : (int)draw->getpDrawOrderList()->getVertexShaderType();
+	int type = 0;
+	if (draw != nullptr)
+	{
+		type = (forced_vertex_ != VertexShaderType::NONE) ? (int)forced_vertex_ : (int)draw->getpDrawOrderList()->getVertexShaderType();
+	}
+	else
+	{
+		type = (int)forced_vertex_;
+	}
 	vertex_shader_[type]->ShaderSetToDevice();
 }
 
@@ -140,7 +148,15 @@ void ShaderManager::VertexShaderSetToDevice(DrawBase* draw)
 
 void ShaderManager::PixelShaderSetToDevice(DrawBase* draw)
 {
-	int type = (forced_pixel_!= PixelShaderType::NONE) ? (int)forced_pixel_ : (int)draw->getpDrawOrderList()->getPixelShaderType();
+	int type = 0;
+	if (draw != nullptr)
+	{
+		type = (forced_pixel_ != PixelShaderType::NONE) ? (int)forced_pixel_ : (int)draw->getpDrawOrderList()->getPixelShaderType();
+	}
+	else
+	{
+		type = (int)forced_pixel_;
+	}
 	pixel_shader_[type]->ShaderSetToDevice();
 }
 
@@ -149,7 +165,15 @@ void ShaderManager::PixelShaderSetToDevice(DrawBase* draw)
 void ShaderManager::ObjectSettingVertexShader(DrawBase* draw, Camera* camera,
 											  unsigned object_index)
 {
-	int type = (forced_vertex_ != VertexShaderType::NONE) ? (int)forced_vertex_ : (int)draw->getpDrawOrderList()->getVertexShaderType();
+	int type = 0;
+	if (draw != nullptr)
+	{
+		type = (forced_vertex_ != VertexShaderType::NONE) ? (int)forced_vertex_ : (int)draw->getpDrawOrderList()->getVertexShaderType();
+	}
+	else
+	{
+		type = (int)forced_vertex_;
+	}
 	vertex_shader_[type]->ObjectSetting(draw, camera, object_index);
 }
 
@@ -158,7 +182,15 @@ void ShaderManager::ObjectSettingVertexShader(DrawBase* draw, Camera* camera,
 void ShaderManager::ObjectSettingPixelShader(DrawBase* draw, Camera* camera,
 											 unsigned object_index)
 {
-	int type = (forced_pixel_ != PixelShaderType::NONE) ? (int)forced_pixel_ : (int)draw->getpDrawOrderList()->getPixelShaderType();
+	int type = 0;
+	if (draw != nullptr)
+	{
+		type = (forced_pixel_ != PixelShaderType::NONE) ? (int)forced_pixel_ : (int)draw->getpDrawOrderList()->getPixelShaderType();
+	}
+	else
+	{
+		type = (int)forced_pixel_;
+	}
 	pixel_shader_[type]->ObjectSetting(draw, camera, object_index);
 }
 
@@ -167,7 +199,15 @@ void ShaderManager::ObjectSettingPixelShader(DrawBase* draw, Camera* camera,
 void ShaderManager::MeshSettingVertexShader(DrawBase* draw, Camera* camera,
 											unsigned object_index, unsigned mesh_index)
 {
-	int type = (forced_vertex_ != VertexShaderType::NONE) ? (int)forced_vertex_ : (int)draw->getpDrawOrderList()->getVertexShaderType();
+	int type = 0;
+	if (draw != nullptr)
+	{
+		type = (forced_vertex_ != VertexShaderType::NONE) ? (int)forced_vertex_ : (int)draw->getpDrawOrderList()->getVertexShaderType();
+	}
+	else
+	{
+		type = (int)forced_vertex_;
+	}
 	vertex_shader_[type]->MeshSetting(draw, camera, object_index, mesh_index);
 }
 
@@ -176,6 +216,14 @@ void ShaderManager::MeshSettingVertexShader(DrawBase* draw, Camera* camera,
 void ShaderManager::MeshSettingPixelShader(DrawBase* draw, Camera* camera,
 										   unsigned object_index, unsigned mesh_index)
 {
-	int type = (forced_pixel_ != PixelShaderType::NONE) ? (int)forced_pixel_ : (int)draw->getpDrawOrderList()->getPixelShaderType();
+	int type = 0;
+	if (draw != nullptr)
+	{
+		type = (forced_pixel_ != PixelShaderType::NONE) ? (int)forced_pixel_ : (int)draw->getpDrawOrderList()->getPixelShaderType();
+	}
+	else
+	{
+		type = (int)forced_pixel_;
+	}
 	pixel_shader_[type]->MeshSetting(draw, camera, object_index, mesh_index);
 }

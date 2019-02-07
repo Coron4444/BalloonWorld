@@ -32,7 +32,8 @@ private:
 	Vector3D position_;						//!< 座標
 	Vector3D scale_;						//!< 拡縮
 	Quaternion init_quaternion_;			//!< 初期値クォータニオン
-	Quaternion now_quaternion_;				//!< 現在のクォータニオン
+	Quaternion now_quaternion_;				//!< 現在用クォータニオン
+	Quaternion add_quaternion_;				//!< 追加用クォータニオン
 	Quaternion yaw_pitch_roll_quaternion_;	//!< YawPitchRollクォータニオン
 	Quaternion target_quaternion_;			//!< ターゲットクォータニオン
 	Quaternion old_target_quaternion_;		//!< 古いターゲットクォータニオン
@@ -70,6 +71,14 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void setInitAngle(Vector3D value);
+
+	//----------------------------------------
+	//! @brief 追加用クォータニオン設定関数
+	//! @details
+	//! @param value 追加用クォータニオン
+	//! @retval void なし
+	//----------------------------------------
+	void setAddQuaternion(Quaternion value);
 
 	//----------------------------------------
 	//! @brief Pitch角度取得関数
@@ -246,6 +255,22 @@ public:
 	Transform();
 
 	//----------------------------------------
+	//! @brief 追加用クォータニオンリセット関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void ResetAddQuaternion();
+
+	//----------------------------------------
+	//! @brief ワールド行列に親行列追加関数
+	//! @details
+	//! @param parent_matrix 親の行列
+	//! @retval void なし
+	//----------------------------------------
+	void AddParentMatrixToWorldMatrix(MATRIX* parent_matrix);
+
+	//----------------------------------------
 	//! @brief 軸作成関数
 	//! @details
 	//! @param void なし
@@ -276,15 +301,7 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void CreateWorldMatrixPlusTranspose();
-
-	//----------------------------------------
-	//! @brief ワールド行列に親行列追加関数
-	//! @details
-	//! @param parent_matrix 親の行列
-	//! @retval void なし
-	//----------------------------------------
-	void AddParentMatrixToWorldMatrix(MATRIX* parent_matrix);
-
+	
 	//----------------------------------------
 	//! @brief 軸&ワールド行列作成関数
 	//! @details

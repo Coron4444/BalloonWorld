@@ -19,6 +19,16 @@
 #include <btBulletDynamicsCommon.h>
 #pragma warning(pop)
 
+#include <vector>
+
+
+
+//****************************************
+// クラス宣言
+//****************************************
+class BulletPhysicsDebug;
+class Camera;
+
 
 
 //************************************************************														   
@@ -79,6 +89,22 @@ private:
 	btDbvtBroadphase* broadphase_ = nullptr;					//!< ブロードフェーズ法(衝突する可能性のあるオブジェクトの検出)
 	btSequentialImpulseConstraintSolver* solver_ = nullptr;		//!< 拘束ソルバ(オブジェクトの重なり解消などの設定)
 	btDiscreteDynamicsWorld* dynamics_world_ = nullptr;			//!< Bulletワールド
+	BulletPhysicsDebug* debug_ = nullptr;						//!< デバッグ表示
+
+	// テスト用
+	std::vector<btCollisionShape*> shape_;
+	std::vector<btRigidBody*> rigid_body_;
+	std::vector<btDefaultMotionState*> motion_state_;
+
+	btCollisionShape* ground_;						// 形
+	btDefaultMotionState* ground_motion_state_;		// 外部から剛体を操作する用
+	btRigidBody* ground_rigid_body_;				// 剛体
+
+	// 組み合わせ
+	btCollisionShape* comp_shape_[2];
+	btRigidBody* comp_rigid_body_;
+	btDefaultMotionState* comp_motion_state_;
+	btCompoundShape* comp_;
 
 
 //====================
@@ -86,12 +112,20 @@ private:
 //====================
 public:
 	//----------------------------------------
-	//! @brief オブジェクト取得関数
+	//! @brief デバッグ設定関数
+	//! @details
+	//! @param value デバッグフラグ
+	//! @retval void なし
+	//----------------------------------------
+	void setDebug(bool value);
+
+	//----------------------------------------
+	//! @brief モーションステート取得関数
 	//! @details
 	//! @param void なし
-	//! @retval TextureObject* オブジェクト
+	//! @retval btDefaultMotionState* モーションステート取得
 	//----------------------------------------
-
+	btDefaultMotionState* getpMotionState();
 
 //====================
 // 関数
@@ -128,6 +162,13 @@ public:
 	//----------------------------------------
 	void Update();
 
+	//----------------------------------------
+	//! @brief デバッグ表示関数
+	//! @details
+	//! @param camera カメラ
+	//! @retval void なし
+	//----------------------------------------
+	void DrawDebug(Camera* camera);
 
 
 //====================

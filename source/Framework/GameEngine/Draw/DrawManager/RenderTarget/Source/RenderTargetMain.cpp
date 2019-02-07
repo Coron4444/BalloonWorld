@@ -15,6 +15,7 @@
 #include "../../../DrawBase.h"
 #include "../../../Camera/Camera.h"
 #include "../../../../GameObject/GameObjectBase.h"
+#include "../../../../Collision/BulletPhysics/BulletPhysicsManager/BulletPhysicsManager.h"
 
 #include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>
 #include <Tool/SafeRelease.h>
@@ -98,6 +99,9 @@ void RenderTargetMain::Draw()
 	DrawOpacity();
 	DrawTransparent();
 	EffekseerManager::getpInstance()->Draw();
+#ifdef _DEBUG
+	BulletPhysicsManager::getpInstance()->DrawDebug(camera_);
+#endif
 	Draw2D();
 
 	Renderer::getpInstance()->DrawEnd(is_begin);
