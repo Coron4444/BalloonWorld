@@ -1,15 +1,17 @@
 //================================================================================
-//!	@file	 CollisionObject.cpp
-//!	@brief	 衝突オブジェクトClass
+//!	@file	 BulletPhysicsObject.cpp
+//!	@brief	 バレットフィジックスオブジェクトClass
 //! @details 
-//!	@author  Kai Araki									@date 2018/05/08
+//!	@author  Kai Araki									@date 2019/02/08
 //================================================================================
+
 
 
 //****************************************
 // インクルード文
 //****************************************
-#include "../CollisionObject.h"
+#include "../BulletPhysicsObject.h"
+#include "../BulletPhysicsManager/BulletPhysicsManager.h"
 
 #include <Tool/SafeRelease.h>
 
@@ -18,44 +20,23 @@
 //****************************************
 // プロパティ定義
 //****************************************
-int	CollisionObject::getTag()
-{ 
-	return tag_; 
-}
-
-
-
-CollisionShapeBase* CollisionObject::getpCollisionShape()
-{ 
-	return collision_shape_; 
-}
-
-
-
-Vector3D* CollisionObject::getpHitVector()
-{ 
-	return &hit_vector_;
-}
-
-
-
-void CollisionObject::setHitVector(Vector3D value)
+btCollisionShape* BulletPhysicsObject::getpCollisionShape()
 {
-	hit_vector_ = value;
+	return collision_shape_;
 }
 
 
 
-bool CollisionObject::getIsJudgment()
-{ 
-	return is_judgment_; 
+btDefaultMotionState* BulletPhysicsObject::getpMotionState()
+{
+	return motion_state_;
 }
 
 
 
-void CollisionObject::setIsJudgment(bool value)
-{ 
-	is_judgment_ = value;
+btRigidBody* BulletPhysicsObject::getpRigidBody()
+{
+	return rigid_body_;
 }
 
 
@@ -63,80 +44,79 @@ void CollisionObject::setIsJudgment(bool value)
 //****************************************
 // 関数定義
 //****************************************
-CollisionObject::CollisionObject(CollisionShapeBase* collision_shape, int tag)
-	: collision_shape_(collision_shape),
-	tag_(tag),
-	is_judgment_(true)
+void BulletPhysicsObject::InitSphere(float mass, btVector3 inertia,
+									 btVector3 position, btQuaternion quaternion,
+									 float radius)
 {
+
+	collision_shape_ = new btSphereShape(radius);
+
+	// 共通初期化
+	InitCommon(mass, inertia, position, quaternion);
 }
 
 
 
-CollisionObject::~CollisionObject()
+void BulletPhysicsObject::InitOBB(float mass, btVector3 inertia,
+								  btVector3 position, btQuaternion quaternion,
+								  btVector3 edge_half_length)
 {
-	switch (collision_shape_->getType())
-	{
-		case CollisionShapeBase::Type::AABB:
-		{
-			AABB* temp = (AABB*)collision_shape_;
-			SafeRelease::Normal(&temp);
-			break;
-		}
-		case CollisionShapeBase::Type::CAPSULE:
-		{
-			Capsule* temp = (Capsule*)collision_shape_;
-			SafeRelease::Normal(&temp);
-			break;
-		}
-		case CollisionShapeBase::Type::CYLINDER:
-		{
-			Cylinder* temp = (Cylinder*)collision_shape_;
-			SafeRelease::Normal(&temp);
 
-			break;
-		}
-		case CollisionShapeBase::Type::OBB:
-		{
-			OBB* temp = (OBB*)collision_shape_;
-			SafeRelease::Normal(&temp);
+	collision_shape_ = new btBoxShape(edge_half_length);
 
-			break;
-		}
-		case CollisionShapeBase::Type::PLANE:
-		{
-			Plane* temp = (Plane*)collision_shape_;
-			SafeRelease::Normal(&temp);
-
-			break;
-		}
-		case CollisionShapeBase::Type::LINE_SEGMENT:
-		{
-			LineSegment* temp = (LineSegment*)collision_shape_;
-			SafeRelease::Normal(&temp);
-
-			break;
-		}
-		case CollisionShapeBase::Type::SPHERE:
-		{
-			Sphere* temp = (Sphere*)collision_shape_;
-			SafeRelease::Normal(&temp);
-
-			break;
-		}
-		case CollisionShapeBase::Type::TRIANGLE:
-		{
-			Triangle* temp = (Triangle*)collision_shape_;
-			SafeRelease::Normal(&temp);
-
-			break;
-		}
-	}
+	// 共通初期化
+	InitCommon(mass, inertia, position, quaternion);
 }
 
 
 
-void CollisionObject::ResetHitData()
+void BulletPhysicsObject::Release()
 {
-	hit_vector_.Reset();
-	is_judgment_ = true;
+	reference_counter_--;
+	if (reference_counter_ > 0) return;
+
+	SafeRelease::Normal(&rigid_body_);
+	SafeRelease::Normal(&motion_state_);
+	SafeRelease::Normal(&collision_shape_);
+
+	BulletPhysicsManager::getpInstance()->ReleaseFromTheList(this);
+	delete this;
+}
+
+
+
+void BulletPhysicsObject::ForcedRelease()
+{
+	reference_counter_ = 0;
+	Release();
+}
+
+
+
+void BulletPhysicsObject::AddReferenceCounter()
+{
+	reference_counter_++;
+}
+
+
+
+void BulletPhysicsObject::InitCommon(float mass, btVector3 inertia,
+									 btVector3 position, btQuaternion quaternion)
+{
+	// 慣性モーメント算出
+	collision_shape_->calculateLocalInertia(mass, inertia);
+
+	// 外部から剛体を操作するハンドル作成
+	btTransform transform;
+	transform.setIdentity();
+	transform.setOrigin(position);
+	transform.setRotation(quaternion);
+	motion_state_ = new btDefaultMotionState(transform);
+
+	// 剛体作成
+	btRigidBody::btRigidBodyConstructionInfo rigidbody_info(mass, motion_state_,
+															collision_shape_, inertia);
+	rigid_body_ = new btRigidBody(rigidbody_info);
+	rigid_body_->setAnisotropicFriction(collision_shape_->getAnisotropicRollingFrictionDirection(),
+										btCollisionObject::CF_ANISOTROPIC_ROLLING_FRICTION);
 }

@@ -132,16 +132,16 @@ void PlayerUpdate::Update()
 		temp_object->Play();
 	}
 
-	btTransform temp_transform;
-	BulletPhysicsManager::getpInstance()->getpMotionState()->getWorldTransform(temp_transform);
-	*player_->getpTransform()->getpPosition() = Vec3(temp_transform.getOrigin().getX(),
-													 temp_transform.getOrigin().getY(),
-													 temp_transform.getOrigin().getZ());
-	player_->getpTransform()->ResetAddQuaternion();
-	player_->getpTransform()->setAddQuaternion(Quaternion(temp_transform.getRotation().getX(),
-														  temp_transform.getRotation().getY(),
-														  temp_transform.getRotation().getZ(),
-														  temp_transform.getRotation().getW()));
+	//btTransform temp_transform;
+	//BulletPhysicsManager::getpInstance()->getpMotionState()->getWorldTransform(temp_transform);
+	//*player_->getpTransform()->getpPosition() = Vec3(temp_transform.getOrigin().getX(),
+	//												 temp_transform.getOrigin().getY(),
+	//												 temp_transform.getOrigin().getZ());
+	//player_->getpTransform()->ResetAddQuaternion();
+	//player_->getpTransform()->setAddQuaternion(Quaternion(temp_transform.getRotation().getX(),
+	//													  temp_transform.getRotation().getY(),
+	//													  temp_transform.getRotation().getZ(),
+	//													  temp_transform.getRotation().getW()));
 	player_->getpTransform()->CreateAxisAndWorldMatrix();
 }
 

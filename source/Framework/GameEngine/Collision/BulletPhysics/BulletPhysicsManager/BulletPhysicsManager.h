@@ -17,13 +17,10 @@
 #pragma warning(disable: 4099)
 #pragma warning(disable: 4127)
 #include <btBulletDynamicsCommon.h>
-#include <BulletDynamics/Featherstone/btMultiBody.h>
-#include <BulletDynamics/Featherstone/btMultiBodyLinkCollider.h>
-#include <BulletDynamics/Featherstone/btMultiBodyDynamicsWorld.h>
-#include <BulletDynamics/Featherstone/btMultiBodyConstraintSolver.h>
 #pragma warning(pop)
 
 #include <vector>
+#include <list>
 
 
 
@@ -31,6 +28,7 @@
 // クラス宣言
 //****************************************
 class BulletPhysicsDebug;
+class BulletPhysicsObject;
 class Camera;
 
 
@@ -94,15 +92,7 @@ private:
 	btSequentialImpulseConstraintSolver* solver_ = nullptr;		//!< 拘束ソルバ(オブジェクトの重なり解消などの設定)
 	btDynamicsWorld* dynamics_world_ = nullptr;					//!< Bulletワールド
 	BulletPhysicsDebug* debug_ = nullptr;						//!< デバッグ表示
-
-	// テスト用
-	std::vector<btCollisionShape*> shape_;
-	std::vector<btRigidBody*> rigid_body_;
-	std::vector<btDefaultMotionState*> motion_state_;
-
-	btCollisionShape* ground_;						// 形
-	btDefaultMotionState* ground_motion_state_;		// 外部から剛体を操作する用
-	btRigidBody* ground_rigid_body_;				// 剛体
+	std::list<BulletPhysicsObject*> object_;					//!< オブジェクトリスト
 
 	// 組み合わせ
 	btCollisionShape* comp_shape_[2];
@@ -116,10 +106,6 @@ private:
 	std::vector<btDefaultMotionState*> constraint_motion_state_;
 	std::vector<btTypedConstraint*> constraint_;
 
-	// マルチボディ
-	btMultiBody* multi_body_;
-	std::vector<btCollisionShape*> multi_shape_;
-	std::vector<btMultiBodyLinkCollider*> link_collider_;
 
 //====================
 // プロパティ
@@ -183,6 +169,14 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void DrawDebug(Camera* camera);
+
+	//----------------------------------------
+	//! @brief リストから解放関数
+	//! @details
+	//! @param *object オブジェクト自身のポインタ
+	//! @retval void なし
+	//----------------------------------------
+	void ReleaseFromTheList(BulletPhysicsObject* object);
 
 
 //====================

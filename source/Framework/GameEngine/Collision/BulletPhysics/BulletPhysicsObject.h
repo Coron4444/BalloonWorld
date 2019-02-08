@@ -1,54 +1,41 @@
 //================================================================================
-//!	@file	 BulletPhysicsManager.h
+//!	@file	 BulletPhysicsObject.h
 //!	@brief	 バレットフィジックスオブジェクトClass
-//! @details Singleton
-//!	@author  Kai Araki									@date 2019/02/06
+//! @details 
+//!	@author  Kai Araki									@date 2019/02/08
 //================================================================================
-#ifndef	_COLLISION_OBJECT_H_
-#define _COLLISION_OBJECT_H_
+#ifndef	_BULLET_PHYSICS_OBJECT_H_
+#define _BULLET_PHYSICS_OBJECT_H_
 
 
 
 //****************************************
 // インクルード文
 //****************************************
-#include "CollisionShape/AABB.h"
-#include "CollisionShape/Capsule.h"
-#include "CollisionShape/Cylinder.h"
-#include "CollisionShape/OBB.h"
-#include "CollisionShape/Plane.h"
-#include "CollisionShape/LineSegment.h"
-#include "CollisionShape/Sphere.h"
-#include "CollisionShape/Triangle.h"
-
-#include <Tool/Vector3D.h>
+#pragma warning(push)
+#pragma warning(disable: 4100)
+#pragma warning(disable: 4099)
+#pragma warning(disable: 4127)
+#include <btBulletDynamicsCommon.h>
+#pragma warning(pop)
 
 
 
 //************************************************************														   
-//! @brief   衝突オブジェクトClass
+//! @brief   バレットフィジックスオブジェクトClass
 //!
-//! @details 衝突オブジェクトのClass
+//! @details バレットフィジックスのオブジェクトClass
 //************************************************************
-class CollisionObject
+class BulletPhysicsObject
 {
-//====================
-// 定数
-//====================
-private:
-	static const int TAG_NONE = -1;			//!< タグなし時の値
-
-
 //====================
 // 変数
 //====================
 private:
-
-	CollisionShapeBase* collision_shape_;		//!< 形状
-	Vector3D hit_vector_;						//!< めり込みベクトル
-	int	tag_;					//!< タグ
-	bool is_judgment_ = true;	//!< 判定するかフラグ
-	bool is_trigger_ = true;	//!< 物理演算をするかのフラグ
+	btCollisionShape* collision_shape_ = nullptr;	//!< 衝突形状
+	btDefaultMotionState* motion_state_ = nullptr;	//!< 外部から剛体を操作するハンドル
+	btRigidBody* rigid_body_ = nullptr;				//!< 剛体
+	int reference_counter_ = 0;						//!< 参照カウンタ
 
 
 //====================
@@ -56,52 +43,28 @@ private:
 //====================
 public:
 	//----------------------------------------
-	//! @brief タグ取得関数
-	//! @details
-	//! @param void なし
-	//! @retval int タグ
-	//----------------------------------------
-	int	getTag();
-
-	//----------------------------------------
 	//! @brief 衝突形状取得関数
 	//! @details
 	//! @param void なし
-	//! @retval CollisionShapeBase* 衝突形状
+	//! @retval btCollisionShape* 衝突形状
 	//----------------------------------------
-	CollisionShapeBase* getpCollisionShape();
+	btCollisionShape* getpCollisionShape();
 
 	//----------------------------------------
-	//! @brief めり込みベクトル取得関数
+	//! @brief 外部から剛体を操作するハンドル得関数
 	//! @details
 	//! @param void なし
-	//! @retval Vector3D* めり込みベクトル
+	//! @retval btDefaultMotionState* 外部から剛体を操作するハンドル
 	//----------------------------------------
-	Vector3D* getpHitVector();
+	btDefaultMotionState* getpMotionState();
 
 	//----------------------------------------
-	//! @brief めり込みベクトル設定関数
-	//! @details
-	//! @param value めり込みベクトル
-	//! @retval void なし
-	//----------------------------------------
-	void setHitVector(Vector3D value);
-
-	//----------------------------------------
-	//! @brief 判定するかフラグ取得関数
+	//! @brief 剛体取得関数
 	//! @details
 	//! @param void なし
-	//! @retval bool 判定するかフラグ
+	//! @retval btRigidBody* 剛体
 	//----------------------------------------
-	bool getIsJudgment();
-
-	//----------------------------------------
-	//! @brief 判定するかフラグ設定関数
-	//! @details
-	//! @param value 判定するかフラグ
-	//! @retval void なし
-	//----------------------------------------
-	void setIsJudgment(bool value);
+	btRigidBody* getpRigidBody();
 
 
 //====================
@@ -109,27 +72,70 @@ public:
 //====================
 public:
 	//----------------------------------------
-	//! @brief コンストラクタ
+	//! @brief 球初期化関数
 	//! @details
-	//! @param *collision_shape 衝突形状
-	//! @param collision_shape  タグ
+	//! @param mass       質量
+	//! @param inertia    慣性モーメント
+	//! @param position   座標
+	//! @param quaternion クォータニオン
+	//! @param radius     半径
+	//! @retval void なし
 	//----------------------------------------
-	CollisionObject(CollisionShapeBase* collision_shape, int tag);
+	void InitSphere(float mass, btVector3 inertia,
+					btVector3 position, btQuaternion quaternion,
+					float radius);
 
 	//----------------------------------------
-	//! @brief デストラクタ
+	//! @brief OBB初期化関数
 	//! @details
-	//! @param void なし
+	//! @param mass             質量
+	//! @param inertia          慣性モーメント
+	//! @param position         座標
+	//! @param quaternion       クォータニオン
+	//! @param edge_half_length 辺の半分の長さ
+	//! @retval void なし
 	//----------------------------------------
-	~CollisionObject();
+	void InitOBB(float mass, btVector3 inertia,
+				 btVector3 position, btQuaternion quaternion,
+				 btVector3 edge_half_length);
+
 
 	//----------------------------------------
-	//! @brief 衝突用データリセット関数
+	//! @brief 解放関数
 	//! @details
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void ResetHitData();
+	void Release();
+
+	//----------------------------------------
+	//! @brief 強制解放関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void ForcedRelease();
+
+	//----------------------------------------
+	//! @brief 参照カウンタ追加関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void AddReferenceCounter();
+
+private:
+	//----------------------------------------
+	//! @brief 共通初期化関数
+	//! @details
+	//! @param mass       質量
+	//! @param inertia    慣性モーメント
+	//! @param position   座標
+	//! @param quaternion クォータニオン
+	//! @retval void なし
+	//----------------------------------------
+	void InitCommon(float mass, btVector3 inertia,
+					btVector3 position, btQuaternion quaternion);
 };
 
 
