@@ -17,6 +17,10 @@
 #pragma warning(disable: 4099)
 #pragma warning(disable: 4127)
 #include <btBulletDynamicsCommon.h>
+#include <BulletDynamics/Featherstone/btMultiBody.h>
+#include <BulletDynamics/Featherstone/btMultiBodyLinkCollider.h>
+#include <BulletDynamics/Featherstone/btMultiBodyDynamicsWorld.h>
+#include <BulletDynamics/Featherstone/btMultiBodyConstraintSolver.h>
 #pragma warning(pop)
 
 #include <vector>
@@ -88,7 +92,7 @@ private:
 	btCollisionDispatcher* dispatcher_ = nullptr;				//!< 衝突計算の設定
 	btDbvtBroadphase* broadphase_ = nullptr;					//!< ブロードフェーズ法(衝突する可能性のあるオブジェクトの検出)
 	btSequentialImpulseConstraintSolver* solver_ = nullptr;		//!< 拘束ソルバ(オブジェクトの重なり解消などの設定)
-	btDiscreteDynamicsWorld* dynamics_world_ = nullptr;			//!< Bulletワールド
+	btDynamicsWorld* dynamics_world_ = nullptr;					//!< Bulletワールド
 	BulletPhysicsDebug* debug_ = nullptr;						//!< デバッグ表示
 
 	// テスト用
@@ -106,6 +110,16 @@ private:
 	btDefaultMotionState* comp_motion_state_;
 	btCompoundShape* comp_;
 
+	// 拘束
+	std::vector<btCollisionShape*> constraint_shape_;
+	std::vector<btRigidBody*> constraint_rigid_body_;
+	std::vector<btDefaultMotionState*> constraint_motion_state_;
+	std::vector<btTypedConstraint*> constraint_;
+
+	// マルチボディ
+	btMultiBody* multi_body_;
+	std::vector<btCollisionShape*> multi_shape_;
+	std::vector<btMultiBodyLinkCollider*> link_collider_;
 
 //====================
 // プロパティ
