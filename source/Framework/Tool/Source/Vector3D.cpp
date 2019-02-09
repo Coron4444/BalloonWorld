@@ -229,6 +229,15 @@ Vec3* Vector3D::RotationAxisAny(Vec3 axis, float radian)
 Vec3* Vector3D::RotationMatrix(MATRIX* rotation_matrix)
 {
 	D3DXVec3TransformNormal(this, this, rotation_matrix);
+	return this;
+}
 
+
+
+Vec3* Vector3D::RotationQuaternion(Quaternion* Quaternion)
+{
+	MATRIX rotation_matrix;
+	D3DXMatrixRotationQuaternion(&rotation_matrix, Quaternion);
+	D3DXVec3TransformNormal(this, this, &rotation_matrix);
 	return this;
 }

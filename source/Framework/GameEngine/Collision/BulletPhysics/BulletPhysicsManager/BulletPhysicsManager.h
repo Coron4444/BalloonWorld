@@ -18,9 +18,13 @@
 #pragma warning(disable: 4127)
 #include <btBulletDynamicsCommon.h>
 #pragma warning(pop)
-
 #include <vector>
 #include <list>
+
+#include "../BulletPhysicsObject.h"
+#include "../BulletPhysicsConstraint.h"
+
+#include <Tool/Vector3D.h>
 
 
 
@@ -28,7 +32,6 @@
 // クラス宣言
 //****************************************
 class BulletPhysicsDebug;
-class BulletPhysicsObject;
 class Camera;
 
 
@@ -93,18 +96,7 @@ private:
 	btDynamicsWorld* dynamics_world_ = nullptr;					//!< Bulletワールド
 	BulletPhysicsDebug* debug_ = nullptr;						//!< デバッグ表示
 	std::list<BulletPhysicsObject*> object_;					//!< オブジェクトリスト
-
-	// 組み合わせ
-	btCollisionShape* comp_shape_[2];
-	btRigidBody* comp_rigid_body_;
-	btDefaultMotionState* comp_motion_state_;
-	btCompoundShape* comp_;
-
-	// 拘束
-	std::vector<btCollisionShape*> constraint_shape_;
-	std::vector<btRigidBody*> constraint_rigid_body_;
-	std::vector<btDefaultMotionState*> constraint_motion_state_;
-	std::vector<btTypedConstraint*> constraint_;
+	std::list<BulletPhysicsConstraint*> constraint_;			//!< 拘束
 
 
 //====================
@@ -120,12 +112,66 @@ public:
 	void setDebug(bool value);
 
 	//----------------------------------------
-	//! @brief モーションステート取得関数
+	//! @brief 球オブジェクト取得関数
 	//! @details
-	//! @param void なし
-	//! @retval btDefaultMotionState* モーションステート取得
+	//! @param mass       質量
+	//! @param inertia    慣性モーメント
+	//! @param position   座標
+	//! @param quaternion クォータニオン
+	//! @param radius     半径
+	//! @retval BulletPhysicsObject* 球オブジェクト
 	//----------------------------------------
-	btDefaultMotionState* getpMotionState();
+	BulletPhysicsObject* getpObjectSphere(float mass, Vec3 inertia, Vec3 position,
+										  Quaternion quaternion, float radius);
+
+	//----------------------------------------
+	//! @brief OBBオブジェクト取得関数
+	//! @details
+	//! @param mass             質量
+	//! @param inertia          慣性モーメント
+	//! @param position         座標
+	//! @param quaternion       クォータニオン
+	//! @param edge_half_length 辺の半分の長さ
+	//! @retval BulletPhysicsObject* OBBオブジェクト
+	//----------------------------------------
+	BulletPhysicsObject* getpObjectOBB(float mass, Vec3 inertia, Vec3 position,
+									   Quaternion quaternion, Vec3 edge_half_length);
+
+	//----------------------------------------
+	//! @brief ポイントとポイントの拘束設定関数
+	//! @details
+	//! @param bullet_object0 オブジェクト0
+	//! @param bullet_object1 オブジェクト1
+	//! @param point0         ポイント0
+	//! @param point1         ポイント1
+	//! @retval BulletPhysicsConstraint* 拘束
+	//----------------------------------------
+	BulletPhysicsConstraint* setConstraintPointToPoint(BulletPhysicsObject* bullet_object0,
+													   BulletPhysicsObject* bullet_object1,
+													   Vec3 point0, Vec3 point1);
+
+	//----------------------------------------
+	//! @brief 接続点とそれを中心とした2軸の拘束設定関数
+	//! @details
+	//! @param *bullet_object0 オブジェクト0
+	//! @param *bullet_object1 オブジェクト1
+	//! @param anchor          接続点(ワールド座標)
+	//! @param angle_min0      最小角度0(1.0f~0.0fで1.0fに近いほど自由が利く)
+	//! @param angle_min1      最小角度1(1.0f~0.0fで1.0fに近いほど自由が利く)
+	//! @param angle_max0      最大角度0(1.0f~0.0fで1.0fに近いほど自由が利く)
+	//! @param angle_max1      最大角度1(1.0f~0.0fで1.0fに近いほど自由が利く)
+	//! @param axis0           回転軸0
+	//! @param axis1           回転軸1
+	//! @retval BulletPhysicsConstraint* 拘束
+	//----------------------------------------
+	BulletPhysicsConstraint* setConstraintUniversal(BulletPhysicsObject* bullet_object0,
+													BulletPhysicsObject* bullet_object1,
+													Vec3 anchor, 
+													float angle_min0, float angle_min1,
+													float angle_max0, float angle_max1,
+													Vec3 axis0 = {1.0f, 0.0f, 0.0f},
+													Vec3 axis1 = {0.0f, 0.0f, 1.0f});
+
 
 //====================
 // 関数
@@ -171,12 +217,20 @@ public:
 	void DrawDebug(Camera* camera);
 
 	//----------------------------------------
-	//! @brief リストから解放関数
+	//! @brief オブジェクトリストから解放関数
 	//! @details
 	//! @param *object オブジェクト自身のポインタ
 	//! @retval void なし
 	//----------------------------------------
-	void ReleaseFromTheList(BulletPhysicsObject* object);
+	void ReleaseFromTheObjectList(BulletPhysicsObject* object);
+
+	//----------------------------------------
+	//! @brief 拘束リストから解放関数
+	//! @details
+	//! @param *constraint 拘束自身のポインタ
+	//! @retval void なし
+	//----------------------------------------
+	void ReleaseFromTheConstraintList(BulletPhysicsConstraint* constraint);
 
 
 //====================

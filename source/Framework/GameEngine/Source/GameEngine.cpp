@@ -76,7 +76,7 @@ bool GameEngine::Init(HINSTANCE hInstance, HWND hWnd, BOOL is_full_screen,
 
 	// Bulletの初期化
 	BulletPhysicsManager::getpInstance()->Init();
-	BulletPhysicsManager::getpInstance()->setDebug(true);
+	BulletPhysicsManager::getpInstance()->setDebug(false);
 	
 	// 入力マネージャの初期化
 	InputManager::getpInstance()->Init(hInstance, hWnd);

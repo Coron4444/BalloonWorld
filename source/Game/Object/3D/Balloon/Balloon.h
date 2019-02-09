@@ -16,6 +16,14 @@
 
 
 
+//****************************************
+// クラス定義
+//****************************************
+class BulletPhysicsObject;
+class BulletPhysicsConstraint;
+
+
+
 //************************************************************														   
 //! @brief   風船Class
 //!
@@ -23,6 +31,25 @@
 //************************************************************
 class Balloon : public GameObjectNull
 {
+//====================
+// 定数
+//====================
+public:
+	static const unsigned MAX_BULLET_OBJECT = 25;
+	static const unsigned MAX_BULLET_CONSTRAINT = MAX_BULLET_OBJECT - 1;
+	static const Vec3 OBB_EDGE_LENGTH_HALF;
+	static const float SPHERE_RADIUS;
+
+
+//====================
+// 変数
+//====================
+public:
+	BulletPhysicsObject* bullet_object_[MAX_BULLET_OBJECT];				//!< バレットオブジェクト
+	BulletPhysicsConstraint* bullet_constraint_[MAX_BULLET_CONSTRAINT];	//!< バレット拘束
+	Transform bullet_transform_[MAX_BULLET_OBJECT];
+	
+
 //====================
 // 関数
 //====================
@@ -35,6 +62,15 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void Init(UpdateBase* update, DrawBase* draw);
+
+private:
+	//----------------------------------------
+	//! @brief バレットオブジェクト初期化関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void InitBulletPhysicsObject();
 };
 
 

@@ -21,6 +21,7 @@
 //****************************************
 // クラス宣言
 //****************************************
+class Balloon;
 class MdBinObject;
 class ModelXObject;
 
@@ -37,20 +38,31 @@ class BalloonDraw : public DrawNull
 // 定数
 //====================
 private:
-	static const std::string MODEL_NAME;				//!< モデル名
+	static const std::string BALLOON_MODEL_NAME;		//!< 風船モデル名
+	static const std::string BALLOON_LINE_MODEL_NAME;	//!< 風船の線モデル名
 
 
 //====================
 // 変数
 //====================
 private:
-	ModelXObject* object_;		//!< オブジェクト
+	Balloon* balloon_;	//!< 風船
+	ModelXObject* balloon_object_;			//!< 風船オブジェクト
+	ModelXObject* balloon_line_object_;		//!< 風船の線オブジェクト
 
 
 //====================
 // プロパティ
 //====================
 public:
+	//----------------------------------------
+	//! @brief オブジェクト数取得関数
+	//! @details
+	//! @param void なし
+	//! @retval unsigned オブジェクト数
+	//----------------------------------------
+	virtual unsigned getObjectNum() override;
+
 	//----------------------------------------
 	//! @brief メッシュ数取得関数
 	//! @details
@@ -76,16 +88,6 @@ public:
 	//----------------------------------------
 	D3DMATERIAL9* getpMaterial(unsigned object_index,
 									   unsigned mesh_index) override;
-
-	//----------------------------------------
-	//! @brief ディヒューズテクスチャ取得関数
-	//! @details
-	//! @param object_index オブジェクトインデックス
-	//! @param mesh_index   メッシュインデックス
-	//! @retval LPDIRECT3DTEXTURE9 ディヒューズテクスチャ
-	//----------------------------------------
-	LPDIRECT3DTEXTURE9 getpDiffuseTexture(unsigned object_index,
-												  unsigned mesh_index) override;
 
 
 //====================

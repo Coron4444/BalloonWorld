@@ -260,6 +260,14 @@ public:
 	//! @retval Vec3* 変更後ベクトル
 	//----------------------------------------
 	Vec3* RotationMatrix(MATRIX* rotation_matrix);
+
+	//----------------------------------------
+	//! @brief クォータニオン回転回転関数
+	//! @details
+	//! @param rotation_matrix 行列
+	//! @retval Vec3* 変更後ベクトル
+	//----------------------------------------
+	Vec3* RotationQuaternion(Quaternion* Quaternion);
 };
 
 

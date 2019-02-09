@@ -95,8 +95,8 @@ void GameSceneState_Start::Init()
 	//temp2->getpTransform()->CreateWorldMatrix();
 	
 	// •—‘Dì¬
-	//BalloonFactory balloon_factory;
-	//balloon_factory.Create();
+	BalloonFactory balloon_factory;
+	balloon_factory.Create();
 
 	// ƒS[ƒ‹
 	//GoalFactory goal_factory;

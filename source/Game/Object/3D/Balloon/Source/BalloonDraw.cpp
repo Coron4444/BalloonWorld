@@ -10,19 +10,10 @@
 //****************************************
 // インクルード文
 //****************************************
-#pragma warning(push)
-#pragma warning(disable: 4100)
-#pragma warning(disable: 4099)
-#pragma warning(disable: 4127)
-//#include <btBulletDynamicsCommon.h>
-#pragma warning(pop)
-
 #include "../BalloonDraw.h"
+#include "../Balloon.h"
 
-#include <GameEngine/Draw/DrawManager/Shader/VertexShader/VertexShaderBumpMapping.h>
-#include <Resource/MdBin/MdBinManager/MdBinManager.h>
 #include <Resource/ModelX/ModelXManager/ModelXManager.h>
-#include <Resource/Texture/TextureManager/TextureManager.h>
 #include <Tool/SafeRelease.h>
 
 
@@ -30,46 +21,52 @@
 //****************************************
 // 定数定義
 //****************************************
-const std::string BalloonDraw::MODEL_NAME = "sen/sen.x";
+const std::string BalloonDraw::BALLOON_MODEL_NAME = "Balloon/Balloon.x";
+const std::string BalloonDraw::BALLOON_LINE_MODEL_NAME = "Balloon/Line.x";
 
 
 
 //****************************************
 // プロパティ定義
 //****************************************
+unsigned BalloonDraw::getObjectNum()
+{
+	return Balloon::MAX_BULLET_OBJECT;
+}
+
+
+
 unsigned BalloonDraw::getMeshNum(unsigned object_index)
 {
-	object_index = object_index;
-
-	return object_->getMeshNum();
+	if (object_index != 0)
+	{
+		return balloon_line_object_->getMeshNum();
+	}
+	else
+	{
+		return balloon_object_->getMeshNum();
+	}
 }
 
 
 
 MATRIX* BalloonDraw::getpMatrix(unsigned object_index)
 {
-	object_index = object_index;
-
-	return getpGameObject()->getpTransform()->getpWorldMatrix();
+	return balloon_->bullet_transform_[object_index].getpWorldMatrix();
 }
 
 
 
 D3DMATERIAL9* BalloonDraw::getpMaterial(unsigned object_index, unsigned mesh_index)
 {
-	object_index = object_index;
-
-	return object_->getpMaterial(mesh_index);
-}
-
-
-
-LPDIRECT3DTEXTURE9 BalloonDraw::getpDiffuseTexture(unsigned object_index, unsigned mesh_index)
-{
-	object_index = object_index;
-	mesh_index = mesh_index;
-
-	return nullptr;// object_->getpDiffuseTextureObject(mesh_index)->getpHandler();
+	if (object_index != 0)
+	{
+		return balloon_line_object_->getpMaterial(mesh_index);
+	}
+	else
+	{
+		return balloon_object_->getpMaterial(mesh_index);
+	}
 }
 
 
@@ -79,6 +76,9 @@ LPDIRECT3DTEXTURE9 BalloonDraw::getpDiffuseTexture(unsigned object_index, unsign
 //****************************************
 void BalloonDraw::Init()
 {
+	// ダウンキャスト
+	balloon_ = (Balloon*)getpGameObject();
+
 	// オーダーリスト設定
 	getpDrawOrderList()->setDrawType(DrawOrderList::DrawType::OPACITY);
 	getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_BACK_BUFFER);
@@ -86,8 +86,8 @@ void BalloonDraw::Init()
 	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::FIXED);
 
 	// オブジェクト取得
-	object_ = ModelXManager::getpInstance()->getpObject(&MODEL_NAME);
-
+	balloon_object_ = ModelXManager::getpInstance()->getpObject(&BALLOON_MODEL_NAME);
+	balloon_line_object_ = ModelXManager::getpInstance()->getpObject(&BALLOON_LINE_MODEL_NAME);
 
 }
 
@@ -95,13 +95,22 @@ void BalloonDraw::Init()
 
 void BalloonDraw::Uninit()
 {
-	SafeRelease::PlusRelease(&object_);
+	SafeRelease::PlusRelease(&balloon_line_object_);
+	SafeRelease::PlusRelease(&balloon_object_);
 }
 
 
 
 void BalloonDraw::Draw(unsigned object_index, unsigned mesh_index)
 {
-	object_index = object_index;
-	object_->getpMesh()->DrawSubset(mesh_index);
+	if (object_index >= Balloon::MAX_BULLET_OBJECT - 2) return;
+
+	if (object_index != 0)
+	{
+		balloon_line_object_->getpMesh()->DrawSubset(mesh_index);
+	}
+	else
+	{
+		balloon_object_->getpMesh()->DrawSubset(mesh_index);
+	}
 }
