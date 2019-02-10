@@ -23,6 +23,7 @@
 #include <Resource/MdBin/MdBinManager/MdBinManager.h>
 #include <Resource/Sound/SoundManager.h>
 #include <Tool/SafeRelease.h>
+#include <Tool/Random.h>
 
 #include <Scenes/TitleScene/TitleScene.h>
 #include <Scenes/TitleScene/TitleSceneState_Start.h>
@@ -74,6 +75,9 @@ bool GameEngine::Init(HINSTANCE hInstance, HWND hWnd, BOOL is_full_screen,
 	ImGui_ImplDX9_Init(hWnd, device);
 //#endif
 
+	// óêêîèâä˙âª
+	Random::getpInstance()->Init();
+
 	// BulletÇÃèâä˙âª
 	BulletPhysicsManager::getpInstance()->Init();
 	BulletPhysicsManager::getpInstance()->setDebug(false);
@@ -122,6 +126,10 @@ void GameEngine::Uninit()
 	// BulletÇÃèIóπ
 	BulletPhysicsManager::getpInstance()->Uninit();
 	BulletPhysicsManager::ReleaseInstance();
+
+	// óêêîÇÃèIóπ
+	Random::getpInstance()->Uninit();
+	Random::ReleaseInstance();
 
 	// ImGUIÇÃèIóπ
 //#ifdef _DEBUG

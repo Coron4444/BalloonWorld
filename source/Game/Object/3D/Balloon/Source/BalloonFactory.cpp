@@ -17,10 +17,11 @@
 //****************************************
 // ŠÖ”’è‹`
 //****************************************
-Balloon* BalloonFactory::Create()
+Balloon* BalloonFactory::Create(unsigned balloon_line_num)
 {
 	Balloon* temp = new Balloon();
 	temp->Init(new BalloonUpdate(),
-			   new BalloonDraw());
+			   new BalloonDraw(),
+			   balloon_line_num);
 	return temp;
 }

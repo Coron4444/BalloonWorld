@@ -32,10 +32,10 @@ public:
 	//----------------------------------------
 	//! @brief •—‘D¶¬ŠÖ”
 	//! @details
-	//! @param void ‚È‚µ
+	//! @param balloon_line_num  •—‘D‚Ìü‚Ì”
 	//! @retval Balloon* •—‘D
 	//----------------------------------------
-	Balloon* Create();
+	Balloon* Create(unsigned balloon_line_num);
 };
 
 

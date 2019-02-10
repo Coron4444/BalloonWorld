@@ -42,6 +42,7 @@ private:
 //====================
 private:
 	Balloon* balloon_;	//!< •—‘D
+	float acc_z = 0.0f;
 
 
 //====================

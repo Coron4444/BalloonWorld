@@ -49,6 +49,7 @@ private:
 	Balloon* balloon_;	//!< 風船
 	ModelXObject* balloon_object_;			//!< 風船オブジェクト
 	ModelXObject* balloon_line_object_;		//!< 風船の線オブジェクト
+	XColor4 color_;							//!< 色
 
 
 //====================

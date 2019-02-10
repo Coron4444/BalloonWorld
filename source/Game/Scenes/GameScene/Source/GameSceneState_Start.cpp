@@ -96,7 +96,13 @@ void GameSceneState_Start::Init()
 	
 	// ïóëDçÏê¨
 	BalloonFactory balloon_factory;
-	balloon_factory.Create();
+	balloon_factory.Create(20);
+	balloon_factory.Create(20);
+	balloon_factory.Create(20);
+	balloon_factory.Create(20);
+	balloon_factory.Create(20);
+
+
 
 	// ÉSÅ[Éã
 	//GoalFactory goal_factory;

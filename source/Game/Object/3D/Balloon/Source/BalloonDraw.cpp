@@ -15,6 +15,7 @@
 
 #include <Resource/ModelX/ModelXManager/ModelXManager.h>
 #include <Tool/SafeRelease.h>
+#include <Tool/Random.h>
 
 
 
@@ -31,20 +32,20 @@ const std::string BalloonDraw::BALLOON_LINE_MODEL_NAME = "Balloon/Line.x";
 //****************************************
 unsigned BalloonDraw::getObjectNum()
 {
-	return Balloon::MAX_BULLET_OBJECT;
+	return balloon_->getAllObjectNum();
 }
 
 
 
 unsigned BalloonDraw::getMeshNum(unsigned object_index)
 {
-	if (object_index != 0)
+	if (object_index == (unsigned)balloon_->getAllObjectNum() - 1)
 	{
-		return balloon_line_object_->getMeshNum();
+		return balloon_object_->getMeshNum();
 	}
 	else
 	{
-		return balloon_object_->getMeshNum();
+		return balloon_line_object_->getMeshNum();
 	}
 }
 
@@ -52,20 +53,21 @@ unsigned BalloonDraw::getMeshNum(unsigned object_index)
 
 MATRIX* BalloonDraw::getpMatrix(unsigned object_index)
 {
-	return balloon_->bullet_transform_[object_index].getpWorldMatrix();
+	return balloon_->getpObjectTransform(object_index)->getpWorldMatrix();
 }
 
 
 
 D3DMATERIAL9* BalloonDraw::getpMaterial(unsigned object_index, unsigned mesh_index)
 {
-	if (object_index != 0)
+	if (object_index == (unsigned)balloon_->getAllObjectNum() - 1)
 	{
-		return balloon_line_object_->getpMaterial(mesh_index);
+		balloon_object_->setMaterialColor(mesh_index, color_);
+		return balloon_object_->getpMaterial(mesh_index);
 	}
 	else
 	{
-		return balloon_object_->getpMaterial(mesh_index);
+		return balloon_line_object_->getpMaterial(mesh_index);
 	}
 }
 
@@ -80,7 +82,7 @@ void BalloonDraw::Init()
 	balloon_ = (Balloon*)getpGameObject();
 
 	// オーダーリスト設定
-	getpDrawOrderList()->setDrawType(DrawOrderList::DrawType::OPACITY);
+	getpDrawOrderList()->setDrawType(DrawOrderList::DrawType::TRANSPARENCY);
 	getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_BACK_BUFFER);
 	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::FIXED);
 	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::FIXED);
@@ -89,6 +91,22 @@ void BalloonDraw::Init()
 	balloon_object_ = ModelXManager::getpInstance()->getpObject(&BALLOON_MODEL_NAME);
 	balloon_line_object_ = ModelXManager::getpInstance()->getpObject(&BALLOON_LINE_MODEL_NAME);
 
+	int random = Random::getpInstance()->getInt(0, 2);
+	for (unsigned i = 0; i < balloon_object_->getMeshNum(); i++)
+	{
+		if (random == 0)
+		{
+			color_ = XColor4(0.3f, 1.0f, 1.0f, 1.0f);
+		}
+		else if (random == 1)
+		{
+			color_ = XColor4(1.0f, 1.0f, 0.5f, 1.0f);
+		}
+		else
+		{
+			color_ = XColor4(1.0f, 0.3f, 0.5f, 1.0f);
+		}
+	}
 }
 
 
@@ -103,14 +121,14 @@ void BalloonDraw::Uninit()
 
 void BalloonDraw::Draw(unsigned object_index, unsigned mesh_index)
 {
-	if (object_index >= Balloon::MAX_BULLET_OBJECT - 2) return;
+	if (object_index <= 1) return;
 
-	if (object_index != 0)
+	if (object_index == (unsigned)balloon_->getAllObjectNum() - 1)
 	{
-		balloon_line_object_->getpMesh()->DrawSubset(mesh_index);
+		balloon_object_->getpMesh()->DrawSubset(mesh_index);
 	}
 	else
 	{
-		balloon_object_->getpMesh()->DrawSubset(mesh_index);
+		balloon_line_object_->getpMesh()->DrawSubset(mesh_index);
 	}
 }
