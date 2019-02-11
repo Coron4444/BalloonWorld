@@ -19,6 +19,8 @@
 #include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
 #include <Tool/MeterToFrame.h>
 #include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>
+#include <Object/3D/Balloon/BalloonGroup.h>
+
 
 
 //****************************************
@@ -26,9 +28,7 @@
 //****************************************
 const float PlayerUpdate::SPEED = MeterToFrame::MeterPerSecondSquaredToMeterPerFrameSquared(50.0f);
 
-static const std::string TEST_EFFEKSEER = "Beam/Beam.efk";
-
-
+static BulletPhysicsObject* test_;
 
 //****************************************
 // ŠÖ”’è‹`
@@ -47,6 +47,14 @@ void PlayerUpdate::Init()
 
 	// ‰ŠúŽp¨
 	player_->getpTransform()->setInitAngle(Vector3D(0.0f, D3DXToRadian(-90.0f), 0.0f));
+
+	float mass = 0.0f;
+	Vec3 inertia(0.0f, 0.0f, 0.0f);
+	Quaternion quaternion(0.0f, 0.0f, 0.0f, 1.0f);
+	Vec3 position(0.0f, 0.0f, 0.0f);
+	test_ = BulletPhysicsManager::getpInstance()
+		->getpObjectCapsule(mass, inertia, position, quaternion, 1.5f, 2.5f);
+	test_->setKinematic();
 }
 
 
@@ -55,7 +63,6 @@ void PlayerUpdate::Update()
 {
 	// •½sˆÚ“®
 	Vector3D temp_vector;
-
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_D))
 	{
 		temp_vector += *player_->getpTransform()->getpRight();
@@ -75,74 +82,40 @@ void PlayerUpdate::Update()
 
 	*player_->getpPhysics()->getpAcceleration() += *temp_vector.ChangeAnyLength(SPEED);
 
-	// ƒuƒŒ[ƒL
-	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_N))
-	{
-		//GameObjectManager::GetUpdateManager()
-			//->OverwriteArrayUpdateBase(player_, new PlayerUpdate_Special());
-		//return;
-		player_->getpPhysics()->AddFriction(0.5f);
-	}
-
+	// –€ŽC
 	player_->getpPhysics()->AddFriction(0.9f);
 
 	// ƒWƒƒƒ“ƒv
 	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_SPACE))
 	{
 		temp_vector = Vec3(0.0f, 1.0f, 0.0f);
-		temp_vector.ChangeAnyLength(MeterToFrame::MeterPerSecondToMeterPerFlame(30.0f));
+		temp_vector.ChangeAnyLength(MeterToFrame::MeterPerSecondToMeterPerFlame(70.0f));
 
 		*player_->getpPhysics()->getpVelocity() += temp_vector;
 	}
-
-	// Šgk
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_Z))
-	{
-		*player_->getpTransform()->getpScale() += Vec3(SPEED, SPEED, SPEED);
-	}
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_X))
-	{
-		*player_->getpTransform()->getpScale() += -Vec3(SPEED, SPEED, SPEED);
-	}
-
-	*player_->getpTransform()->getpLookAtSpeed() = 0.05f;
-
-	// ‰ñ“]
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_C))
-	{
-		player_->getpTransform()->setLookAtVector(Vec3(1.0f, 1.0f, 0.0f));
-	}
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_V))
-	{
-		player_->getpTransform()->setLookAtVector(Vec3(-1.0f, 0.0f, 0.0f));
-	}
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_B))
-	{
-		player_->getpTransform()->setLookAtVector(Vec3(0.0f, 0.0f, -1.0f));
-	}
-
-	//float temp_scale = 1.0f;
-
-	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_P))
-	{
-		EffekseerObject* temp_object = EffekseerManager::getpInstance()
-			->getpDisposableObject(&TEST_EFFEKSEER);
-		*temp_object->getpTransform()->getpPosition() = *player_->getpTransform()->getpPosition();
-		temp_object->getpTransform()->CreateWorldMatrix();
-		temp_object->Play();
-	}
-
-	//btTransform temp_transform;
-	//BulletPhysicsManager::getpInstance()->getpMotionState()->getWorldTransform(temp_transform);
-	//*player_->getpTransform()->getpPosition() = Vec3(temp_transform.getOrigin().getX(),
-	//												 temp_transform.getOrigin().getY(),
-	//												 temp_transform.getOrigin().getZ());
-	//player_->getpTransform()->ResetAddQuaternion();
-	//player_->getpTransform()->setAddQuaternion(Quaternion(temp_transform.getRotation().getX(),
-	//													  temp_transform.getRotation().getY(),
-	//													  temp_transform.getRotation().getZ(),
-	//													  temp_transform.getRotation().getW()));
 	player_->getpTransform()->CreateAxisAndWorldMatrix();
+
+	Vec test_pos = *player_->getpTransform()->getpPosition();
+	test_pos.y += 2.0f;
+	test_pos.z += 0.0f;
+	test_->setPosition(test_pos);
+
+	// •—‘DŒQ‚ÌÀ•WXV
+	if (player_->getpBalloonGroup() == nullptr) return;
+	Vec3 balloon_position = *player_->getpTransform()->getpPosition();
+	balloon_position.y += 2.0f;
+	balloon_position.z += -1.0f;
+	player_->getpBalloonGroup()->setPosition(balloon_position);
+	// Ø‚è—£‚µ
+	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_M))
+	{
+		player_->getpBalloonGroup()->ReleaseConstraint();
+	}
+
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_N))
+	{
+		player_->getpBalloonGroup()->AddAcceleration(Vec3(-100.0f, 0.0f, 0.0f));
+	}
 }
 
 

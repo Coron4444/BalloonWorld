@@ -166,9 +166,6 @@ void GameObjectManager::ReleaseGameObjectBaseFromArray(GameObjectBase* game_obje
 	// コンポーネントをマネージャから解放
 	ReleaseComponentFromManager(game_object);
 
-	// 参照データ解放
-	reference_manager_.Release(game_object);
-
 	// 解放待ち配列に追加
 	await_release_.AddToArray(game_object);
 }
@@ -260,9 +257,6 @@ void GameObjectManager::ReleaseComponentFromManager(GameObjectBase* game_object)
 
 void GameObjectManager::Release()
 {
-	// 参照データを全て消去
-	reference_manager_.AllRelease();
-
 	// 解放待ち配列の中身を解放
 	ReleaseContentsOfAwaitReleaseArray();
 

@@ -37,10 +37,9 @@ class GameObjectBase
 // 変数
 //====================
 private:
-	Transform transform_;		//!< 変形
-	Physics*  physics_;			//!< 物理
-
-	bool is_registration_;		//!< 登録フラグ
+	Transform transform_;								//!< 変形
+	Physics*  physics_;									//!< 物理
+	bool is_registration_;								//!< 登録フラグ
 
 	UpdateBase*    update_;		//!< 更新基底クラス
 	DrawBase*      draw_;		//!< 描画基底クラス

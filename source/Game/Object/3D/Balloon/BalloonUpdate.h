@@ -34,7 +34,7 @@ class BalloonUpdate : public UpdateNull
 // •Ï”
 //====================
 private:
-	static const float SPEED;		//!< ‘¬“x
+	static const float RISING_SPEED;		//!< ã¸‘¬“x
 
 
 //====================
@@ -42,7 +42,6 @@ private:
 //====================
 private:
 	Balloon* balloon_;	//!< •—‘D
-	float acc_z = 0.0f;
 
 
 //====================

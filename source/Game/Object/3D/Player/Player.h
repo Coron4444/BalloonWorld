@@ -18,6 +18,13 @@
 
 
 
+//****************************************
+// クラス宣言
+//****************************************
+class BalloonGroup;
+
+
+
 //************************************************************														   
 //! @brief   プレイヤーClass
 //!
@@ -30,6 +37,7 @@ class Player : public GameObjectNull
 //====================
 private:
 	GameScene* game_scene_ = nullptr;			//!< ゲームシーン
+	BalloonGroup* balloon_group_ = nullptr;		//!< 風船群
 
 
 //====================
@@ -43,6 +51,30 @@ public:
 	//! @retval GameScene* ゲームシーン
 	//----------------------------------------
 	GameScene* getpGameScene();
+
+	//----------------------------------------
+	//! @brief ゲームシーン設定関数
+	//! @details
+	//! @param *value ゲームシーン
+	//! @retval void なし
+	//----------------------------------------
+	void setGameScene(GameScene* value);
+
+	//----------------------------------------
+	//! @brief 風船群取得関数
+	//! @details
+	//! @param void なし
+	//! @retval BalloonGroup* 風船群
+	//----------------------------------------
+	BalloonGroup* getpBalloonGroup();
+
+	//----------------------------------------
+	//! @brief 風船群設定関数
+	//! @details
+	//! @param *value 風船群
+	//! @retval void なし
+	//----------------------------------------
+	void setBalloonGroup(BalloonGroup* value);
 
 
 //====================
@@ -60,6 +92,14 @@ public:
 	//----------------------------------------
 	void Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision, 
 			  GameScene* game_scene);
+
+	//----------------------------------------
+	//! @brief 終了関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Uninit() override;
 };
 
 

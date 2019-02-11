@@ -26,7 +26,7 @@
 #include <Object/3D/SkyDome/SkyDomeFactory.h>
 #include <Object/3D/Player/PlayerFactory.h>
 #include <Object/3D/StencilShadowTest/StencilShadowTestFactory.h>
-#include <Object/3D/Balloon/BalloonFactory.h>
+#include <Object/3D/Balloon/BalloonGroupFactory.h>
 
 #include <Scenes/ResultScene/ResultScene.h>
 #include <Scenes/ResultScene/ResultSceneState_Start.h>
@@ -68,8 +68,8 @@ void GameSceneState_Start::Init()
 	//temp->getpTransform()->CreateWorldMatrix();
 
 	// スカイドーム
-	//SkyDomeFactory sky_dome_factory;
-	//sky_dome_factory.Create();
+	SkyDomeFactory sky_dome_factory;
+	sky_dome_factory.Create();
 
 
 	// フィールド
@@ -83,7 +83,12 @@ void GameSceneState_Start::Init()
 
 	// プレイヤー
 	PlayerFactory player_factory;
-	/*Player* player = */player_factory.Create(game_scene_);
+	Player* player = player_factory.Create(game_scene_);
+	player = player;
+	// 風船群作成
+	BalloonGroupFactory balloon_group_factory;
+	BalloonGroup* balloon_group = balloon_group_factory.Create(5);
+	player->setBalloonGroup(balloon_group);
 
 	//((CameraState_HomingTarget*)GameObjectManager::GetDrawManager()->GetBackBuffer()
 	//	->GetCamera()->GetCameraState())->SetTarget(player);
@@ -94,21 +99,11 @@ void GameSceneState_Start::Init()
 	//*temp2->getpTransform()->getpPosition() = Vec3(-5.0f, 0.0f, 5.0f);
 	//temp2->getpTransform()->CreateWorldMatrix();
 	
-	// 風船作成
-	BalloonFactory balloon_factory;
-	balloon_factory.Create(20);
-	balloon_factory.Create(20);
-	balloon_factory.Create(20);
-	balloon_factory.Create(20);
-	balloon_factory.Create(20);
-
-
-
 	// ゴール
-	//GoalFactory goal_factory;
-	//Goal* temp3 = goal_factory.Create();
-	//*temp3->getpTransform()->getpPosition() = Vec3(10.0f, 0.0f, 20.0f);
-	//temp3->getpTransform()->CreateWorldMatrix();
+	GoalFactory goal_factory;
+	Goal* temp3 = goal_factory.Create();
+	*temp3->getpTransform()->getpPosition() = Vec3(10.0f, 0.0f, 20.0f);
+	temp3->getpTransform()->CreateWorldMatrix();
 	
 	// スコア
 	ScoreFactory score_factory;

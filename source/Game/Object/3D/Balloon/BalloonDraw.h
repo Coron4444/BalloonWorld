@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <string>
+#include <vector>
 
 #include <GameEngine/Draw/DrawNull.h>
 
@@ -38,8 +38,10 @@ class BalloonDraw : public DrawNull
 // 定数
 //====================
 private:
-	static const std::string BALLOON_MODEL_NAME;		//!< 風船モデル名
-	static const std::string BALLOON_LINE_MODEL_NAME;	//!< 風船の線モデル名
+	static const std::string BALLOON_MODEL_NAME;			//!< 風船モデル名
+	static const std::string BALLOON_LINE_MODEL_NAME;		//!< 風船の線モデル名
+	static const unsigned BALLOON_COLOR_NUM = 3;			//!< 風船色
+	static const XColor4 BALLOON_COLOR[BALLOON_COLOR_NUM];	//!< 風船色
 
 
 //====================
@@ -47,9 +49,10 @@ private:
 //====================
 private:
 	Balloon* balloon_;	//!< 風船
-	ModelXObject* balloon_object_;			//!< 風船オブジェクト
-	ModelXObject* balloon_line_object_;		//!< 風船の線オブジェクト
-	XColor4 color_;							//!< 色
+	ModelXObject* balloon_object_;				//!< 風船オブジェクト
+	ModelXObject* balloon_line_object_;			//!< 風船の線オブジェクト
+	std::vector<Transform> object_transform_;	//!< オブジェクト変形
+	XColor4 color_;								//!< 色
 
 
 //====================
@@ -108,6 +111,14 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void Uninit() override;
+
+	//----------------------------------------
+	//! @brief 更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Update() override;
 
 	//----------------------------------------
 	//! @brief 描画関数

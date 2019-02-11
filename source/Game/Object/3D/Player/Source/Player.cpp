@@ -12,6 +12,9 @@
 //****************************************
 #include "../Player.h"
 
+#include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
+#include <Object/3D/Balloon/BalloonGroup.h>
+
 
 
 //****************************************
@@ -20,6 +23,27 @@
 GameScene* Player::getpGameScene()
 {
 	return game_scene_;
+}
+
+
+
+void Player::setGameScene(GameScene* value)
+{
+	game_scene_ = value;
+}
+
+
+
+BalloonGroup* Player::getpBalloonGroup()
+{
+	return balloon_group_;
+}
+
+
+
+void Player::setBalloonGroup(BalloonGroup* value)
+{
+	value->getpReferenceList()->getpMyPointer(&balloon_group_);
 }
 
 
@@ -35,4 +59,14 @@ void Player::Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision,
 
 	// Šî’êƒNƒ‰ƒX‚Ì‰Šú‰»
 	GameObjectBase::Init(update, draw, collision);
+}
+
+
+
+void Player::Uninit()
+{
+	GameObjectBase::Uninit();
+
+	if (balloon_group_ == nullptr) return;
+	balloon_group_->getpReferenceList()->ReleaseReference(&balloon_group_);
 }

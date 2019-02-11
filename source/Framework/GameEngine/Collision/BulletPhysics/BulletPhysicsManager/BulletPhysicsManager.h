@@ -138,6 +138,20 @@ public:
 									   Quaternion quaternion, Vec3 edge_half_length);
 
 	//----------------------------------------
+	//! @brief カプセルオブジェクト取得関数
+	//! @details
+	//! @param mass       質量
+	//! @param inertia    慣性モーメント
+	//! @param position   座標
+	//! @param quaternion クォータニオン
+	//! @param radius     半径
+	//! @param height     高さ
+	//! @retval BulletPhysicsObject* 球オブジェクト
+	//----------------------------------------
+	BulletPhysicsObject* getpObjectCapsule(float mass, Vec3 inertia, Vec3 position,
+										   Quaternion quaternion, float radius, float height);
+
+	//----------------------------------------
 	//! @brief ポイントとポイントの拘束設定関数
 	//! @details
 	//! @param bullet_object0 オブジェクト0
@@ -149,6 +163,24 @@ public:
 	BulletPhysicsConstraint* setConstraintPointToPoint(BulletPhysicsObject* bullet_object0,
 													   BulletPhysicsObject* bullet_object1,
 													   Vec3 point0, Vec3 point1);
+
+	//----------------------------------------
+	//! @brief 1つの軸を回転する拘束初期化関数
+	//! @details
+	//! @param bullet_object0 オブジェクト0
+	//! @param bullet_object1 オブジェクト1
+	//! @param point0      ポイント0(ローカル座標)
+	//! @param point1      ポイント1(ローカル座標)
+	//! @param angle_min    最小角度1(1.0f~0.0fで1.0fに近いほど自由が利く)
+	//! @param angle_max    最大角度0(1.0f~0.0fで1.0fに近いほど自由が利く)
+	//! @param axis        回転軸
+	//! @retval void なし
+	//----------------------------------------
+	BulletPhysicsConstraint* setConstraintHinge(BulletPhysicsObject* bullet_object0,
+												BulletPhysicsObject* bullet_object1,
+												Vec3 point0, Vec3 point1,
+												float angle_min, float angle_max,
+												Vec3 axis = {0.0f, 1.0f, 0.0f});
 
 	//----------------------------------------
 	//! @brief 接続点とそれを中心とした2軸の拘束設定関数
@@ -166,7 +198,7 @@ public:
 	//----------------------------------------
 	BulletPhysicsConstraint* setConstraintUniversal(BulletPhysicsObject* bullet_object0,
 													BulletPhysicsObject* bullet_object1,
-													Vec3 anchor, 
+													Vec3 anchor,
 													float angle_min0, float angle_min1,
 													float angle_max0, float angle_max1,
 													Vec3 axis0 = {1.0f, 0.0f, 0.0f},

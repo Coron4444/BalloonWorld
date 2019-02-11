@@ -107,6 +107,20 @@ BulletPhysicsObject* BulletPhysicsManager::getpObjectOBB(float mass, Vec3 inerti
 
 
 
+BulletPhysicsObject* BulletPhysicsManager::getpObjectCapsule(float mass, Vec3 inertia, Vec3 position,
+															 Quaternion quaternion, float radius, float height)
+{
+	// V‹Kì¬
+	BulletPhysicsObject* object = new BulletPhysicsObject();
+	object->InitCapsule(mass, &inertia, &position, &quaternion, radius, height);
+	object->AddReferenceCounter();
+	object_.push_back(object);
+	dynamics_world_->addRigidBody(object->getpRigidBody());
+	return object;
+}
+
+
+
 BulletPhysicsConstraint* BulletPhysicsManager::setConstraintPointToPoint(BulletPhysicsObject* bullet_object0,
 																		 BulletPhysicsObject* bullet_object1,
 																		 Vec3 point0, Vec3 point1)
@@ -116,6 +130,26 @@ BulletPhysicsConstraint* BulletPhysicsManager::setConstraintPointToPoint(BulletP
 	constraint->InitPointToPoint(bullet_object0->getpRigidBody(),
 								 bullet_object1->getpRigidBody(),
 								 &point0, &point1);
+
+	constraint->AddReferenceCounter();
+	constraint_.push_back(constraint);
+	dynamics_world_->addConstraint(constraint->getpConstraint());
+	return constraint;
+}
+
+
+
+BulletPhysicsConstraint* BulletPhysicsManager::setConstraintHinge(BulletPhysicsObject* bullet_object0,
+																  BulletPhysicsObject* bullet_object1,
+																  Vec3 point0, Vec3 point1,
+																  float angle_min, float angle_max,
+																  Vec3 axis)
+{
+	// V‹Kì¬
+	BulletPhysicsConstraint* constraint = new BulletPhysicsConstraint();
+	constraint->InitHinge(bullet_object0->getpRigidBody(),
+						  bullet_object1->getpRigidBody(),
+						  &point0, &point1, angle_min, angle_max, &axis);
 
 	constraint->AddReferenceCounter();
 	constraint_.push_back(constraint);

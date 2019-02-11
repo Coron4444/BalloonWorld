@@ -12,7 +12,6 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "GameObjectReferenceManager.h"
 #include "../../Update/UpdateManager/UpdateManager.h"
 #include "../../Draw/DrawManager/DrawManager.h"
 #include "../../Collision/CollisionManager/CollisionManager.h"
@@ -83,7 +82,6 @@ private:
 	LimitedPointerArray<GameObjectBase*, ARRAY_NUM> await_add_;			//!< 追加待ち配列
 	LimitedPointerArray<GameObjectBase*, ARRAY_NUM> await_release_;		//!< 解放待ち配列
 
-	GameObjectReferenceManager reference_manager_;	//!< 参照マネージャ
 	UpdateManager update_manager_;					//!< 更新マネージャ
 	DrawManager draw_manager_;						//!< 描画マネージャ
 	CollisionManager collision_manager_;			//!< 衝突マネージャ
@@ -116,28 +114,6 @@ public:
 	//! @retval CollisionManager* 衝突マネージャ
 	//----------------------------------------
 	CollisionManager* getpCollisionManager();
-
-	//----------------------------------------
-	//! @brief ゲームオブジェクト参照取得関数
-	//! @details
-	//! @param reference_object      参照元オブジェクト
-	//! @param reference_destination 参照先オブジェクト
-	//! @param reference_pointer     参照ポインタ
-	//! @retval void なし
-	//----------------------------------------
-	template<class Type>
-	void getpRegistrationReference(GameObjectBase* reference_object,
-								   Type* reference_destination,
-								   Type* reference_pointer)
-	{
-		// 参照先の代入
-		*reference_pointer = reference_destination;
-
-		// 参照の登録
-		reference_manager_.AddReference(reference_object,
-			(void*)reference_pointer,
-										(GameObjectBase*)reference_destination);
-	}
 
 
 //====================

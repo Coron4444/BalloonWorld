@@ -39,6 +39,7 @@ private:
 		NONE = -1,
 		SPHERE,
 		OBB,
+		CAPSULE,
 		MAX
 	};
 
@@ -99,12 +100,28 @@ public:
 	Vec3 getPosition();
 
 	//----------------------------------------
+	//! @brief 座標設定関数
+	//! @details
+	//! @param value 座標
+	//! @retval void なし
+	//----------------------------------------
+	void setPosition(Vec3 value);
+
+	//----------------------------------------
 	//! @brief クォータニオン取得関数
 	//! @details
 	//! @param void なし
 	//! @retval Quaternion クォータニオン
 	//----------------------------------------
 	Quaternion getQuaternion();
+
+	//----------------------------------------
+	//! @brief Kinematic剛体設定関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void setKinematic();
 
 
 //====================
@@ -134,8 +151,22 @@ public:
 	//! @param *edge_half_length 辺の半分の長さ
 	//! @retval void なし
 	//----------------------------------------
-	void InitOBB(float mass, Vec3* inertia, Vec3* position, 
+	void InitOBB(float mass, Vec3* inertia, Vec3* position,
 				 Quaternion* quaternion, Vec3* edge_half_length);
+
+	//----------------------------------------
+	//! @brief 球初期化関数
+	//! @details
+	//! @param mass        質量
+	//! @param *inertia    慣性モーメント
+	//! @param *position   座標
+	//! @param *quaternion クォータニオン
+	//! @param radius      半径
+	//! @param height      高さ
+	//! @retval void なし
+	//----------------------------------------
+	void InitCapsule(float mass, Vec3* inertia, Vec3* position,
+					 Quaternion* quaternion, float radius, float height);
 
 	//----------------------------------------
 	//! @brief 解放関数

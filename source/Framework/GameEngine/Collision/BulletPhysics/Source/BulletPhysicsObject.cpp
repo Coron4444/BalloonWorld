@@ -58,12 +58,31 @@ Vec3 BulletPhysicsObject::getPosition()
 
 
 
+void BulletPhysicsObject::setPosition(Vec3 value)
+{
+	btTransform transform;
+	motion_state_->getWorldTransform(transform);
+	transform.setOrigin(btVector3(value.x, value.y, value.z));
+	motion_state_->setWorldTransform(transform);
+}
+
+
+
 Quaternion BulletPhysicsObject::getQuaternion()
 {
 	btTransform transform;
 	motion_state_->getWorldTransform(transform);
 	return Quaternion(transform.getRotation().getX(), transform.getRotation().getY(),
 					  transform.getRotation().getZ(), transform.getRotation().getW());
+}
+
+
+
+void BulletPhysicsObject::setKinematic()
+{
+	rigid_body_->setCollisionFlags(rigid_body_->getCollisionFlags()
+								   | btCollisionObject::CF_KINEMATIC_OBJECT);
+	rigid_body_->setActivationState(DISABLE_DEACTIVATION);
 }
 
 
@@ -90,6 +109,18 @@ void BulletPhysicsObject::InitOBB(float mass, Vec3* inertia, Vec3* position,
 	collision_shape_ = new btBoxShape(btVector3(edge_half_length->x,
 												edge_half_length->y,
 												edge_half_length->z));
+
+	// ‹¤’Ê‰Šú‰»
+	InitCommon(mass, inertia, position, quaternion);
+}
+
+
+
+void BulletPhysicsObject::InitCapsule(float mass, Vec3* inertia, Vec3* position,
+									  Quaternion* quaternion, float radius, float height)
+{
+	type_ = BulletPhysicsObject::Type::CAPSULE;
+	collision_shape_ = new btCapsuleShape(radius, height);
 
 	// ‹¤’Ê‰Šú‰»
 	InitCommon(mass, inertia, position, quaternion);

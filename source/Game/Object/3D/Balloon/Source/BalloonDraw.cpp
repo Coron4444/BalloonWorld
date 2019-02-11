@@ -13,6 +13,7 @@
 #include "../BalloonDraw.h"
 #include "../Balloon.h"
 
+#include <GameEngine/Collision/BulletPhysics/BulletPhysicsManager/BulletPhysicsManager.h>
 #include <Resource/ModelX/ModelXManager/ModelXManager.h>
 #include <Tool/SafeRelease.h>
 #include <Tool/Random.h>
@@ -24,6 +25,12 @@
 //****************************************
 const std::string BalloonDraw::BALLOON_MODEL_NAME = "Balloon/Balloon.x";
 const std::string BalloonDraw::BALLOON_LINE_MODEL_NAME = "Balloon/Line.x";
+const XColor4 BalloonDraw::BALLOON_COLOR[BalloonDraw::BALLOON_COLOR_NUM] =
+{
+	{0.3f, 1.0f, 1.0f, 1.0f},
+	{1.0f, 1.0f, 0.5f, 1.0f},
+	{1.0f, 0.3f, 0.5f, 1.0f}
+};
 
 
 
@@ -53,7 +60,7 @@ unsigned BalloonDraw::getMeshNum(unsigned object_index)
 
 MATRIX* BalloonDraw::getpMatrix(unsigned object_index)
 {
-	return balloon_->getpObjectTransform(object_index)->getpWorldMatrix();
+	return object_transform_[object_index].getpWorldMatrix();
 }
 
 
@@ -91,21 +98,25 @@ void BalloonDraw::Init()
 	balloon_object_ = ModelXManager::getpInstance()->getpObject(&BALLOON_MODEL_NAME);
 	balloon_line_object_ = ModelXManager::getpInstance()->getpObject(&BALLOON_LINE_MODEL_NAME);
 
-	int random = Random::getpInstance()->getInt(0, 2);
+	// オブジェクト変形初期化
+	object_transform_.resize(balloon_->getAllObjectNum());
+	for (int i = 0; i < balloon_->getAllObjectNum() - 1; i++)
+	{
+		*object_transform_[i].getpScale() = Balloon::OBB_EDGE_LENGTH_HALF * 2.5f;
+	}
+	float adjustment_balloon_scale = 0.9f;
+	object_transform_[balloon_->getAllObjectNum() - 1].getpScale()->x 
+		= Balloon::SPHERE_RADIUS * adjustment_balloon_scale;
+	object_transform_[balloon_->getAllObjectNum() - 1].getpScale()->y 
+		= Balloon::SPHERE_RADIUS;
+	object_transform_[balloon_->getAllObjectNum() - 1].getpScale()->z 
+		= Balloon::SPHERE_RADIUS * adjustment_balloon_scale;
+
+	// 色初期化
+	int color_index = Random::getpInstance()->getInt(0, BALLOON_COLOR_NUM - 1);
 	for (unsigned i = 0; i < balloon_object_->getMeshNum(); i++)
 	{
-		if (random == 0)
-		{
-			color_ = XColor4(0.3f, 1.0f, 1.0f, 1.0f);
-		}
-		else if (random == 1)
-		{
-			color_ = XColor4(1.0f, 1.0f, 0.5f, 1.0f);
-		}
-		else
-		{
-			color_ = XColor4(1.0f, 0.3f, 0.5f, 1.0f);
-		}
+		color_ = BALLOON_COLOR[color_index];
 	}
 }
 
@@ -119,9 +130,24 @@ void BalloonDraw::Uninit()
 
 
 
+void BalloonDraw::Update()
+{
+	// オブジェクト変形
+	for (int i = 0; i < balloon_->getAllObjectNum(); i++)
+	{
+		*object_transform_[i].getpPosition() = balloon_->getpObject(i)->getPosition();
+		object_transform_[i].ResetAddQuaternion();
+		object_transform_[i].setAddQuaternion(balloon_->getpObject(i)
+											  ->getQuaternion());
+		object_transform_[i].CreateAxisAndWorldMatrix();
+	}
+}
+
+
+
 void BalloonDraw::Draw(unsigned object_index, unsigned mesh_index)
 {
-	if (object_index <= 1) return;
+	if (object_index <= 0) return;
 
 	if (object_index == (unsigned)balloon_->getAllObjectNum() - 1)
 	{

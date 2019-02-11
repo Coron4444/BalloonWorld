@@ -81,12 +81,28 @@ public:
 	//! @details
 	//! @param *rigid_body0 剛体0
 	//! @param *rigid_body1 剛体1
-	//! @param *point0      ポイント0
-	//! @param *point1      ポイント1
+	//! @param *point0      ポイント0(ローカル座標)
+	//! @param *point1      ポイント1(ローカル座標)
 	//! @retval void なし
 	//----------------------------------------
 	void InitPointToPoint(btRigidBody* rigid_body0, btRigidBody* rigid_body1,
 						  Vec3* point0, Vec3* point1);
+
+	//----------------------------------------
+	//! @brief 1つの軸を回転する拘束初期化関数
+	//! @details
+	//! @param *rigid_body0 剛体0
+	//! @param *rigid_body1 剛体1
+	//! @param *point0      ポイント0(ローカル座標)
+	//! @param *point1      ポイント1(ローカル座標)
+	//! @param angle_min    最小角度1(1.0f~0.0fで1.0fに近いほど自由が利く)
+	//! @param angle_max    最大角度0(1.0f~0.0fで1.0fに近いほど自由が利く)
+	//! @param *axis        回転軸
+	//! @retval void なし
+	//----------------------------------------
+	void InitHinge(btRigidBody* rigid_body0, btRigidBody* rigid_body1,
+				   Vec3* point0, Vec3* point1, 
+				   float angle_min, float angle_max, Vec3* axis);
 
 	//----------------------------------------
 	//! @brief 接続点とそれを中心とした2軸の拘束初期化関数
@@ -102,8 +118,8 @@ public:
 	//! @param *axis1       回転軸1
 	//! @retval void なし
 	//----------------------------------------
-	void InitUniversal(btRigidBody* rigid_body0, btRigidBody* rigid_body1, 
-					   Vec3* anchor, float angle_min0, float angle_min1, 
+	void InitUniversal(btRigidBody* rigid_body0, btRigidBody* rigid_body1,
+					   Vec3* anchor, float angle_min0, float angle_min1,
 					   float angle_max0, float angle_max1,
 					   Vec3* axis0, Vec3* axis1);
 

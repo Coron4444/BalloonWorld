@@ -47,9 +47,8 @@ public:
 private:
 	std::vector<BulletPhysicsObject*> all_object_;				//!< 総オブジェクト
 	std::vector<BulletPhysicsConstraint*> object_constraint_;	//!< オブジェクトの拘束
-	std::vector<Transform> object_transform_;					//!< オブジェクト変形
-	
 
+	
 //====================
 // プロパティ
 //====================
@@ -87,13 +86,20 @@ public:
 	BulletPhysicsConstraint* getpObjectConstraint(unsigned index);
 
 	//----------------------------------------
-	//! @brief オブジェクトの変形取得関数
+	//! @brief 座標取得関数
 	//! @details
-	//! @param index インデックス
-	//! @retval Transform* オブジェクトの変形
+	//! @param void なし
+	//! @retval Vec3 座標
 	//----------------------------------------
-	Transform* getpObjectTransform(unsigned index);
+	Vec3 getPosition();
 
+	//----------------------------------------
+	//! @brief 座標設定関数
+	//! @details
+	//! @param value 座標
+	//! @retval void なし
+	//----------------------------------------
+	void setPosition(Vec3 value);
 
 //====================
 // 関数
@@ -117,6 +123,29 @@ public:
 	//----------------------------------------
 	void ReleaseConstraint(unsigned index);
 
+	//----------------------------------------
+	//! @brief 基点拘束解放関数
+	//! @details
+	//! @param index インデックス
+	//! @retval void なし
+	//----------------------------------------
+	void ReleaseBaseConstraint();
+
+	//----------------------------------------
+	//! @brief 速度追加関数
+	//! @details
+	//! @param velocity 速度
+	//! @retval void なし
+	//----------------------------------------
+	void AddVelocity(Vec3 velocity);
+
+	//----------------------------------------
+	//! @brief 加速度追加関数
+	//! @details
+	//! @param acceleration 加速度
+	//! @retval void なし
+	//----------------------------------------
+	void AddAcceleration(Vec3 acceleration);
 
 private:
 	//----------------------------------------

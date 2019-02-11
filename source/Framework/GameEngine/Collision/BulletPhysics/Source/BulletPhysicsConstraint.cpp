@@ -48,6 +48,21 @@ void BulletPhysicsConstraint::InitPointToPoint(btRigidBody* rigid_body0,
 
 
 
+void BulletPhysicsConstraint::InitHinge(btRigidBody* rigid_body0, btRigidBody* rigid_body1,
+										Vec3* point0, Vec3* point1,
+										float angle_min, float angle_max, Vec3* axis)
+{
+	constraint_ = new btHingeConstraint(*rigid_body0, *rigid_body1,
+										btVector3(point0->x, point0->y, point0->z),
+										btVector3(point1->x, point1->y, point1->z),
+										btVector3(axis->x, axis->y, axis->z),
+										btVector3(axis->x, axis->y, axis->z));
+	
+	((btHingeConstraint*)constraint_)->setLimit(angle_min, angle_max);
+}
+
+
+
 void BulletPhysicsConstraint::InitUniversal(btRigidBody* rigid_body0,
 											btRigidBody* rigid_body1, Vec3* anchor,
 											float angle_min0, float angle_min1,
@@ -58,9 +73,9 @@ void BulletPhysicsConstraint::InitUniversal(btRigidBody* rigid_body0,
 											btVector3(anchor->x, anchor->y, anchor->z),
 											btVector3(axis0->x, axis0->y, axis0->z),
 											btVector3(axis1->x, axis1->y, axis1->z));
-	
-	((btUniversalConstraint*)constraint_)->setLowerLimit(angle_min0, angle_max0);
-	((btUniversalConstraint*)constraint_)->setLowerLimit(angle_min1, angle_max1);
+
+	((btUniversalConstraint*)constraint_)->setLowerLimit(angle_min0, angle_min1);
+	((btUniversalConstraint*)constraint_)->setUpperLimit(angle_max0, angle_max1);
 }
 
 
