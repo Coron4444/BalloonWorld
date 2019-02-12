@@ -48,16 +48,30 @@ Vector3D* Physics::getpVelocity()
 
 
 
-float Physics::getMaxVelocity()
+float Physics::getMaxHorizontalVelocity()
 {
-	return max_velocity_;
+	return max_horizontal_velocity_;
 }
 
 
 
-void Physics::setMaxVelocity(float value)
+void Physics::setMaxHorizontalVelocity(float value)
 {
-	max_velocity_ = value;
+	max_horizontal_velocity_ = value;
+}
+
+
+
+float Physics::getMaxVerticalVelocity()
+{
+	return max_vertical_velocity_;
+}
+
+
+
+void Physics::setMaxVerticalVelocity(float value)
+{
+	max_vertical_velocity_ = value;
 }
 
 
@@ -144,7 +158,8 @@ void Physics::setOnTheGround()
 //****************************************
 Physics::Physics()
 	: game_object_(nullptr),
-	max_velocity_(100.0f),
+	max_horizontal_velocity_(MeterToFrame::MeterPerSecondToMeterPerFlame(1000.0f)),
+	max_vertical_velocity_(MeterToFrame::MeterPerSecondToMeterPerFlame(1000.0f)),
 	mass_(1.0f),
 	friction_(0.0f),
 	my_friction_(1.0f),
@@ -241,10 +256,8 @@ void Physics::AddGravity()
 	// 重力を作用させるかどうか
 	if (!is_gravity_) return;
 
-	// 重力の大きさ算出
+	// 重力を加速度へ追加
 	gravity_direction_.ChangeAnyLength(mass_ * gravity_acceleration_);
-
-	// オブジェクトの加速度に重力を追加
 	acceleration_ += gravity_direction_;
 }
 
@@ -284,9 +297,15 @@ void Physics::CheckVelocityMinMax()
 		velocity_.Reset();
 	}
 
-	// 最大値
-	if (velocity_.getLength() >= max_velocity_)
+	// 最大水平速度
+	if (velocity_.getLengthXZ() >= max_horizontal_velocity_)
 	{
-		velocity_.ChangeAnyLength(max_velocity_);
+		velocity_.ChangeAnyLengthXZ(max_horizontal_velocity_);
+	}
+
+	// 最大垂直速度
+	if (velocity_.getLengthY() >= max_vertical_velocity_)
+	{
+		velocity_.ChangeAnyLengthY(max_vertical_velocity_);
 	}
 }

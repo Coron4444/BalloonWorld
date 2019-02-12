@@ -126,7 +126,7 @@ public:
 //====================
 private:
 	Vector3D position_;					//!< 座標
-	Vector3D look_at_point_;			//!< 注視点
+	Vector3D gazing_point_;				//!< 注視点
 	Vector3D up_;						//!< 上方向
 	int angle_of_view_;					//!< 画角
 	Axis axis_;							//!< 軸
@@ -173,7 +173,7 @@ public:
 	//! @param void なし
 	//! @retval Vector3D* 注視点
 	//----------------------------------------
-	Vector3D* getpLookAtPoint();
+	Vector3D* getpGazingPoint();
 	
 	//----------------------------------------
 	//! @brief 上方向取得関数
@@ -206,14 +206,6 @@ public:
 	//! @retval Axis* 軸
 	//----------------------------------------
 	Axis* getpAxis();
-	
-	//----------------------------------------
-	//! @brief 前ベクトル取得関数
-	//! @details
-	//! @param void なし
-	//! @retval Vector3D* 前ベクトル
-	//----------------------------------------
-	Vector3D* getpForwardVector();
 	
 	//----------------------------------------
 	//! @brief ステート取得関数
@@ -255,14 +247,15 @@ public:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
-	//! @param state         ステート
-	//! @param position      座標
-	//! @param look_at_point 注視点
-	//! @param up            上ベクトル
+	//! @param state        ステート
+	//! @param position     座標
+	//! @param gazing_point 注視点
+	//! @param up           上ベクトル
 	//! @retval void なし
 	//----------------------------------------
 	void Init(State* state, Vec3 position = {0.0f, 0.0f, -10.0f},
-			  Vec3 look_at_point = {0.0f, 0.0f, 0.0f}, Vec3 up = {0.0f, 1.0f, 0.0f});
+			  Vec3 gazing_point = {0.0f, 0.0f, 0.0f}, 
+			  Vec3 up = {0.0f, 1.0f, 0.0f});
 
 	//----------------------------------------
 	//! @brief 初期化関数

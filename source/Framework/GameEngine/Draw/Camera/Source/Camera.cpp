@@ -67,9 +67,9 @@ Vector3D* Camera::getpPositon()
 
 
 
-Vector3D* Camera::getpLookAtPoint()
+Vector3D* Camera::getpGazingPoint()
 {
-	return &look_at_point_;
+	return &gazing_point_;
 }
 
 
@@ -100,13 +100,6 @@ void Camera::setAngleOfView(int value)
 Axis* Camera::getpAxis()
 {
 	return &axis_;
-}
-
-
-
-Vector3D* Camera::getpForwardVector()
-{
-	return axis_.getpForawrd();
 }
 
 
@@ -159,16 +152,16 @@ Camera::State::~State()
 
 
 
-void Camera::Init(State* state, Vec3 position, Vec3 look_at_point, Vec3 up)
+void Camera::Init(State* state, Vec3 position, Vec3 gazing_point, Vec3 up)
 {
 	// 各種代入
 	position_ = position;
-	look_at_point_ = look_at_point;
+	gazing_point_ = gazing_point;
 	up_ = up;
 	angle_of_view_ = DEFAULT_ANGLE_OF_VIEW;
 
 	// 軸ベクトルを作成
-	axis_.setForward(look_at_point_ - position_);
+	axis_.setForward(gazing_point_ - position_);
 
 	// ステートの初期化
 	setState(state);
@@ -195,7 +188,6 @@ void Camera::Uninit()
 void Camera::Update()
 {
 	if (state_ != nullptr) state_->Update();
-
 	CreateViewMatrix();
 }
 
@@ -207,7 +199,7 @@ void Camera::CreateViewMatrix()
 	D3DXMatrixIdentity(&view_);
 
 	// ビュー変換行列( LHは左手座標系の意味 )
-	D3DXMatrixLookAtLH(&view_, &position_, &look_at_point_, &up_);
+	D3DXMatrixLookAtLH(&view_, &position_, &gazing_point_, &up_);
 }
 
 

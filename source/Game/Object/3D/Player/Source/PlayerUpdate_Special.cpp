@@ -37,7 +37,8 @@ void PlayerUpdate_Special::Init()
 
 	// „‘ÌÝ’è
 	player_->CreatePhysics();
-	player_->getpPhysics()->setMaxVelocity(MeterToFrame::MeterPerSecondToMeterPerFlame(10.0f));
+	player_->getpPhysics()->setMaxHorizontalVelocity(MeterToFrame::MeterPerSecondToMeterPerFlame(10.0f));
+	player_->getpPhysics()->setMaxVerticalVelocity(MeterToFrame::MeterPerSecondToMeterPerFlame(10.0f));
 	player_->getpPhysics()->setMass(0.1f);
 	player_->getpPhysics()->setMyFriction(1.0f);
 	player_->getpPhysics()->setMyBounciness(1.0f);

@@ -29,19 +29,20 @@ class Transform
 // 変数
 //====================
 private:
-	Vector3D position_;						//!< 座標
-	Vector3D scale_;						//!< 拡縮
-	Quaternion init_quaternion_;			//!< 初期値クォータニオン
-	Quaternion now_quaternion_;				//!< 現在用クォータニオン
-	Quaternion add_quaternion_;				//!< 追加用クォータニオン
-	Quaternion yaw_pitch_roll_quaternion_;	//!< YawPitchRollクォータニオン
-	Quaternion target_quaternion_;			//!< ターゲットクォータニオン
-	Quaternion old_target_quaternion_;		//!< 古いターゲットクォータニオン
-	Vector3D yaw_pitch_roll_angle_;			//!< YawPitchRoll角度
-	float look_at_speed_;					//!< 向く速度
-	float look_at_change_amount_;			//!< 向く変化量
-	Axis axis_;								//!< 軸
-	MatrixGroup matrix_group_;				//!< 行列群
+	Vector3D position_;								//!< 座標
+	Vector3D scale_;								//!< 拡縮
+	Quaternion init_quaternion_;					//!< 初期値クォータニオン
+	Quaternion now_quaternion_;						//!< 現在用クォータニオン
+	Quaternion add_quaternion_;						//!< 追加用クォータニオン
+	Quaternion yaw_pitch_roll_quaternion_;			//!< YawPitchRollクォータニオン
+	Quaternion target_quaternion_;					//!< ターゲットクォータニオン
+	Quaternion old_target_quaternion_;				//!< 古いターゲットクォータニオン
+	Vector3D yaw_pitch_roll_angle_;					//!< YawPitchRoll角度
+	float look_at_speed_;							//!< 向く速度
+	float look_at_change_amount_;					//!< 向く変化量
+	Axis axis_;										//!< 軸
+	MatrixGroup matrix_group_;						//!< 行列群
+	MatrixGroup no_init_rotation_matrix_group_;		//!< 初期回転無し行列群
 
 
 //====================
@@ -194,6 +195,14 @@ public:
 	MATRIX* getpRotationMatrix();
 
 	//----------------------------------------
+	//! @brief 初期回転無し回転行列取得関数
+	//! @details
+	//! @param void
+	//! @retval MATRIX* 拡縮行列
+	//----------------------------------------
+	MATRIX* getpNoInitRotationMatrix();
+
+	//----------------------------------------
 	//! @brief 逆行列取得関数
 	//! @details
 	//! @param void
@@ -230,9 +239,17 @@ public:
 	//! @brief ワールド行列取得関数
 	//! @details
 	//! @param void
-	//! @retval MATRIX* 転置行列
+	//! @retval MATRIX* ワールド行列
 	//----------------------------------------
 	MATRIX* getpWorldMatrix();
+
+	//----------------------------------------
+	//! @brief 初期回転無しワールド行列取得関数
+	//! @details
+	//! @param void
+	//! @retval MATRIX* 初期回転無しワールド行列
+	//----------------------------------------
+	MATRIX* getpNoInitRotationWorldMatrix();
 
 	//----------------------------------------
 	//! @brief 行列群取得関数

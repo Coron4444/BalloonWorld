@@ -102,7 +102,7 @@ void Axis::RotationAxisX(float radian)
 void Axis::RotationAxisY(float radian)
 {
 	forward_.RotationAxisY(radian);
-	up_.RotationAxisX(radian);
+	up_.RotationAxisY(radian);
 	CalculationUpAndRightVector();
 	NormalizeAllVector();
 }

@@ -103,6 +103,7 @@ void ShaderManager::InitPixelShader(DrawCommonData* common_data)
 	// ‰Šú‰»
 	for (int i = 0; i < (int)PixelShaderType::MAX; i++)
 	{
+		if (pixel_shader_[i] == nullptr) continue;
 		pixel_shader_[i]->setDrawCommonData(common_data);
 		pixel_shader_[i]->Init();
 	}

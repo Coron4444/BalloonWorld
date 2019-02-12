@@ -20,6 +20,7 @@
 // クラス宣言
 //****************************************
 class Player;
+class BulletPhysicsObject;
 
 
 
@@ -34,7 +35,7 @@ class PlayerUpdate : public UpdateNull
 // 変数
 //====================
 private:
-	static const float SPEED;		//!< 速度
+	static const float ACCELERATION;	//!< 加速度
 
 
 //====================
@@ -42,7 +43,7 @@ private:
 //====================
 private:
 	Player* player_;	//!< プレイヤー
-
+	BulletPhysicsObject* bullet_object_;	//!< バレットオブジェクト
 
 //====================
 // 関数
@@ -71,6 +72,23 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void DebugDisplay() override;
+
+private:
+	//----------------------------------------
+	//! @brief 平行移動入力関数
+	//! @details 
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void InputTranslation();
+
+	//----------------------------------------
+	//! @brief カメラ無し平行移動入力関数
+	//! @details 
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void InputTranslationNotCamera();
 };
 
 

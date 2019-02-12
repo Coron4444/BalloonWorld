@@ -49,6 +49,8 @@ bool PixelShaderBase::PixelShaderCompile(const char* file_name,
 		->CreatePixelShader((DWORD*)compiled_code->GetBufferPointer(),
 							&pixel_shader_);
 
+	compiled_code->Release();
+
 	// ê¨å˜ÇµÇΩÇ©
 	if (SUCCEEDED(hr)) return true;
 
@@ -61,5 +63,6 @@ bool PixelShaderBase::PixelShaderCompile(const char* file_name,
 
 void PixelShaderBase::ReleasePixelShader()
 {
+	ReleaseConstantTable();
 	SafeRelease::PlusRelease(&pixel_shader_);
 }

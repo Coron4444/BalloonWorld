@@ -27,10 +27,10 @@ class CameraState_CrawlUp : public Camera::State
 // 定数
 //====================
 public:
-	static const float TRANSLATION_SPEED;		//!< 速度
-	static const float ROTATION_SPEED;			//!< 回転速度
-	static const float POSITION_Y;				//!< Y座標
-	static const float LOOK_AT_POSITION_Y;		//!< 注視点のY座標
+	static const float TRANSLATION_SPEED;	//!< 速度
+	static const float ROTATION_SPEED;		//!< 回転速度
+	static const float POSITION_Y;			//!< Y座標
+	static const float GAZING_POINT_Y;		//!< 注視点のY座標
 
 
 //====================
@@ -60,6 +60,39 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void Update() override;
+
+private:
+	//----------------------------------------
+	//! @brief 前ベクトル算出関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CalculationForward();
+
+	//----------------------------------------
+	//! @brief 平行移動入力関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void InputTranslation();
+
+	//----------------------------------------
+	//! @brief 回転入力関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void InputRotation();
+
+	//----------------------------------------
+	//! @brief 注視点軸関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void InputRotationAroundGazingPoint();
 };
 
 

@@ -25,7 +25,6 @@
 #include <Object/3D/Goal/GoalFactory.h>
 #include <Object/3D/SkyDome/SkyDomeFactory.h>
 #include <Object/3D/Player/PlayerFactory.h>
-#include <Object/3D/StencilShadowTest/StencilShadowTestFactory.h>
 #include <Object/3D/Balloon/BalloonGroupFactory.h>
 
 #include <Scenes/ResultScene/ResultScene.h>
@@ -48,10 +47,10 @@ void GameSceneState_Start::Init()
 	// デフォルトカメラの作成
 	Camera* camera = GameObjectManager::getpInstance()->getpDrawManager()
 		->getpCamera(DrawManager::RenderTargetType::MAIN);
-	camera->setState(new CameraState_CrawlUp());
-
-	//GameObjectManager::GetDrawManager()->GetBackBuffer()
-	//	->GetCamera()->ChangeState(new CameraState_HomingTarget());
+	//Camera::State* camera_state = new CameraState_CrawlUp();
+	Camera::State* camera_state = new CameraState_HomingTarget();
+	camera->setState(camera_state);
+	
 
 	// コインの作成
 	//CoinFactory coin_factory;
@@ -68,8 +67,8 @@ void GameSceneState_Start::Init()
 	//temp->getpTransform()->CreateWorldMatrix();
 
 	// スカイドーム
-	SkyDomeFactory sky_dome_factory;
-	sky_dome_factory.Create();
+	//SkyDomeFactory sky_dome_factory;
+	//sky_dome_factory.Create();
 
 
 	// フィールド
@@ -78,20 +77,16 @@ void GameSceneState_Start::Init()
 	GameObjectManager::getpInstance()->getpCollisionManager()
 		->setGround(field->getpMeshPlanePolygon());
 	
-	//StencilShadowTestFactory stencil_factory;
-	//stencil_factory.Create();
-
-	// プレイヤー
-	PlayerFactory player_factory;
-	Player* player = player_factory.Create(game_scene_);
-	player = player;
 	// 風船群作成
 	BalloonGroupFactory balloon_group_factory;
 	BalloonGroup* balloon_group = balloon_group_factory.Create(5);
+	
+	// プレイヤー
+	PlayerFactory player_factory;
+	Player* player = player_factory.Create(game_scene_);
 	player->setBalloonGroup(balloon_group);
-
-	//((CameraState_HomingTarget*)GameObjectManager::GetDrawManager()->GetBackBuffer()
-	//	->GetCamera()->GetCameraState())->SetTarget(player);
+	player->setCamera(camera);
+	((CameraState_HomingTarget*)camera_state)->setTargetObject(player);
 
 	// 敵
 	//EnemyFactory enemy_factory;
@@ -100,10 +95,10 @@ void GameSceneState_Start::Init()
 	//temp2->getpTransform()->CreateWorldMatrix();
 	
 	// ゴール
-	GoalFactory goal_factory;
-	Goal* temp3 = goal_factory.Create();
-	*temp3->getpTransform()->getpPosition() = Vec3(10.0f, 0.0f, 20.0f);
-	temp3->getpTransform()->CreateWorldMatrix();
+	//GoalFactory goal_factory;
+	//Goal* temp3 = goal_factory.Create();
+	//*temp3->getpTransform()->getpPosition() = Vec3(10.0f, 0.0f, 20.0f);
+	//temp3->getpTransform()->CreateWorldMatrix();
 	
 	// スコア
 	ScoreFactory score_factory;

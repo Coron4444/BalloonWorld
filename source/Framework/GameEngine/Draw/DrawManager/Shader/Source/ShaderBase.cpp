@@ -70,8 +70,14 @@ bool ShaderBase::ShaderCompile(const char* file_name, const char* entry_function
 										   compiled_code,		// コンパイル済みコード
 										   &compil_error,		// エラー情報
 										   &constant_table_);	// コンスタントテーブル
+																
 	// 成功したか
-	if (SUCCEEDED(hr)) return true;
+	if (SUCCEEDED(hr))
+	{
+		SafeRelease::PlusRelease(&compil_error);
+		return true;
+	}
+		
 
 	// エラーメッセージ
 	if (compil_error)
@@ -84,6 +90,8 @@ bool ShaderBase::ShaderCompile(const char* file_name, const char* entry_function
 		// その他のエラー
 		MessageBox(NULL, "シェーダーファイルが読み込めません", "Error", MB_OK);
 	}
+
+	SafeRelease::PlusRelease(&compil_error);
 	return false;
 }
 
@@ -98,4 +106,11 @@ void ShaderBase::InitDevice()
 		MessageBox(nullptr, "NotGetDevice!(VertexShaderBase.cpp)", "Error", MB_OK);
 		return;
 	}
+}
+
+
+
+void ShaderBase::ReleaseConstantTable()
+{
+	SafeRelease::PlusRelease(&constant_table_);
 }

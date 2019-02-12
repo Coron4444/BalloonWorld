@@ -34,16 +34,18 @@ class CameraState_HomingTarget : public Camera::State
 // 定数
 //====================
 public:
-	static const float HOMING_CAMERA_POSITION_Y;		//!< Y座標
-	static const float HOMING_CAMERA_POSITION_Z;		//!< Z座標
-	static const float HOMING_CAMERA_LOOK_AT_POINT_Y;	//!< 注視点のY座標
+	static const Vec3 DEFAULT_LENGHT;	//!< 既定距離
+	static const float GAZING_POINT_Y;	//!< 注視点のY座標
+	static const float ROTATION_SPEED;	//!< 回転速度
 
 
 //====================
 // 変数
 //====================
 private:
-	GameObjectBase* target_object_;		//!< ターゲットオブジェクト
+	GameObjectBase* target_object_ = nullptr;	//!< ターゲットオブジェクト
+	Vector3D lenght_;		//!< 距離
+
 
 //====================
 // プロパティ
@@ -53,9 +55,17 @@ public:
 	//! @brief ターゲットオブジェクト設定関数
 	//! @details
 	//! @param value ターゲットオブジェクト
-	//! @retval void シーンマネージャ
+	//! @retval void なし
 	//----------------------------------------
 	void setTargetObject(GameObjectBase* value);
+
+	//----------------------------------------
+	//! @brief 距離設定関数
+	//! @details
+	//! @param value 距離
+	//! @retval void なし
+	//----------------------------------------
+	void setLength(Vec3 value);
 
 
 //====================
@@ -85,6 +95,39 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void Update() override;
+
+private:
+	//----------------------------------------
+	//! @brief 座標算出関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CalculationPosition();
+
+	//----------------------------------------
+	//! @brief 注視点算出関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CalculationGazingPoint();
+
+	//----------------------------------------
+	//! @brief 前ベクトル算出関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CalculationForward();
+
+	//----------------------------------------
+	//! @brief 注視点軸関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void InputRotationAroundGazingPoint();
 };
 
 

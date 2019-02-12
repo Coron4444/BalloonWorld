@@ -49,6 +49,8 @@ bool VertexShaderBase::VertexShaderCompile(const char* file_name,
 		->CreateVertexShader((DWORD*)compiled_code->GetBufferPointer(),
 							 &vertex_shader_);
 
+	compiled_code->Release();
+
 	// ê¨å˜ÇµÇΩÇ©
 	if (SUCCEEDED(hr)) return true;
 
@@ -61,5 +63,6 @@ bool VertexShaderBase::VertexShaderCompile(const char* file_name,
 
 void VertexShaderBase::ReleaseVertexShader()
 {
+	ReleaseConstantTable();
 	SafeRelease::PlusRelease(&vertex_shader_);
 }

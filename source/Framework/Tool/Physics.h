@@ -44,7 +44,8 @@ private:
 	GameObjectBase* game_object_;		//!< ゲームオブジェクト
 	Vector3D acceleration_;				//!< 加速度
 	Vector3D velocity_;					//!< 速度
-	float max_velocity_;				//!< 最大速度
+	float max_horizontal_velocity_;		//!< 最大水平速度
+	float max_vertical_velocity_;		//!< 最大垂直速度
 	float mass_;						//!< 質量
 	float friction_;					//!< 摩擦
 	float my_friction_;					//!< 自分の摩擦
@@ -86,20 +87,36 @@ public:
 	Vector3D* getpVelocity();
 
 	//----------------------------------------
-	//! @brief 最大速度取得関数
+	//! @brief 最大水平速度取得関数
 	//! @details
 	//! @param void なし
-	//! @retval float 最大速度
+	//! @retval float 最大水平速度
 	//----------------------------------------
-	float getMaxVelocity();
+	float getMaxHorizontalVelocity();
 
 	//----------------------------------------
-	//! @brief 最大速度設定関数
+	//! @brief 最大水平速度設定関数
 	//! @details
-	//! @param value 最大速度
+	//! @param value 最大水平速度
 	//! @retval void なし
 	//----------------------------------------
-	void setMaxVelocity(float value);
+	void setMaxHorizontalVelocity(float value);
+
+	//----------------------------------------
+	//! @brief 最大垂直速度取得関数
+	//! @details
+	//! @param void なし
+	//! @retval float 最大垂直速度
+	//----------------------------------------
+	float getMaxVerticalVelocity();
+
+	//----------------------------------------
+	//! @brief 最大垂直速度設定関数
+	//! @details
+	//! @param value 最大垂直速度
+	//! @retval void なし
+	//----------------------------------------
+	void setMaxVerticalVelocity(float value);
 
 	//----------------------------------------
 	//! @brief 質量取得関数

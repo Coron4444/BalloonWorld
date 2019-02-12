@@ -81,7 +81,7 @@ void RenderTargetMain::Update()
 
 	// エフェクシアの更新
 	EffekseerManager::getpInstance()->CreateViewMatrix(*camera_->getpPositon(),
-													   *camera_->getpLookAtPoint(),
+													   *camera_->getpGazingPoint(),
 													   *camera_->getpUp());
 	EffekseerManager::getpInstance()->CreateProjectionMatrix(camera_->getAngleOfView());
 	EffekseerManager::getpInstance()->Update();

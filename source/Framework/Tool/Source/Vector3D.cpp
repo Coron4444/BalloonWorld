@@ -91,6 +91,27 @@ float Vector3D::getLengthSquare()
 
 
 
+float Vector3D::getLengthX()
+{
+	return fabsf(x);
+}
+
+
+
+float Vector3D::getLengthY()
+{
+	return fabsf(y);
+}
+
+
+
+float Vector3D::getLengthZ()
+{
+	return fabsf(z);
+}
+
+
+
 float Vector3D::getLengthXY()
 {
 	Vec3 temp_vector(x, y, 0.0f);
@@ -181,6 +202,75 @@ Vec3* Vector3D::ChangeAnyLength(float length)
 {
 	ChangeNormalize();
 	*this *= length;
+	return this;
+}
+
+
+
+Vec3* Vector3D::ChangeAnyLengthX(float length)
+{
+	Vec3 temp_vector(x, 0.0f, 0.0f);
+	D3DXVec3Normalize(&temp_vector, &temp_vector);
+	temp_vector *= length;
+	x = temp_vector.x;
+	return this;
+}
+
+
+
+Vec3* Vector3D::ChangeAnyLengthY(float length)
+{
+	Vec3 temp_vector(0.0f, y, 0.0f);
+	D3DXVec3Normalize(&temp_vector, &temp_vector);
+	temp_vector *= length;
+	y = temp_vector.y;
+	return this;
+}
+
+
+
+Vec3* Vector3D::ChangeAnyLengthZ(float length)
+{
+	Vec3 temp_vector(0.0f, 0.0f, z);
+	D3DXVec3Normalize(&temp_vector, &temp_vector);
+	temp_vector *= length;
+	z = temp_vector.z;
+	return this;
+}
+
+
+
+Vec3* Vector3D::ChangeAnyLengthXY(float length)
+{
+	Vec3 temp_vector(x, y, 0.0f);
+	D3DXVec3Normalize(&temp_vector, &temp_vector);
+	temp_vector *= length;
+	x = temp_vector.x;
+	y = temp_vector.y;
+	return this;
+}
+
+
+
+Vec3* Vector3D::ChangeAnyLengthXZ(float length)
+{
+	Vec3 temp_vector(x, 0.0f, z);
+	D3DXVec3Normalize(&temp_vector, &temp_vector);
+	temp_vector *= length;
+	x = temp_vector.x;
+	z = temp_vector.z;
+	return this;
+}
+
+
+
+Vec3* Vector3D::ChangeAnyLengthYZ(float length)
+{
+	Vec3 temp_vector(0.0f, y, z);
+	D3DXVec3Normalize(&temp_vector, &temp_vector);
+	temp_vector *= length;
+	y = temp_vector.y;
+	z = temp_vector.z;
 	return this;
 }
 

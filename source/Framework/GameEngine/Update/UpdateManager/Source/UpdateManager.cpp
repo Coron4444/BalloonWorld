@@ -63,6 +63,13 @@ void UpdateManager::Update()
 	// 解放待ち配列の中身を解放
 	ReleaseContentsOfAwaitReleaseArray();
 
+	// 物理更新
+	for (unsigned i = 0; i < all_update_.getEndIndex(); i++)
+	{
+		if (all_update_.getObject(i)->getpGameObject()->getpPhysics() == nullptr) continue;
+		all_update_.getObject(i)->getpGameObject()->getpPhysics()->Update();
+	}
+
 	// 更新
 	for (unsigned i = 0; i < all_update_.getEndIndex(); i++)
 	{
@@ -76,14 +83,6 @@ void UpdateManager::Update()
 		if (all_update_.getObject(i) == nullptr) continue;
 		all_update_.getObject(i)->LateUpdate();
 	}
-
-	// 物理更新
-	for (unsigned i = 0; i < all_update_.getEndIndex(); i++)
-	{
-		if (all_update_.getObject(i)->getpGameObject()->getpPhysics() == nullptr) continue;
-		all_update_.getObject(i)->getpGameObject()->getpPhysics()->Update();
-	}
-
 
 	// デバッグ
 #ifdef _DEBUG

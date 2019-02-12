@@ -125,26 +125,50 @@ public:
 	float getLengthSquare();
 
 	//----------------------------------------
-	//! @brief XYの長さの2乗取得関数
+	//! @brief Xの長さ取得関数
 	//! @details
 	//! @param void なし
-	//! @retval float XYの長さの2乗
+	//! @retval float Xの長さ
+	//----------------------------------------
+	float getLengthX();
+
+	//----------------------------------------
+	//! @brief Yの長さ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval float Yの長さ
+	//----------------------------------------
+	float getLengthY();
+
+	//----------------------------------------
+	//! @brief Zの長さ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval float Zの長さ
+	//----------------------------------------
+	float getLengthZ();
+
+	//----------------------------------------
+	//! @brief XYの長さ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval float XYの長さ
 	//----------------------------------------
 	float getLengthXY();
 
 	//----------------------------------------
-	//! @brief XZの長さの2乗取得関数
+	//! @brief XZの長さ取得関数
 	//! @details
 	//! @param void なし
-	//! @retval float XZの長さの2乗
+	//! @retval float XZの長さ
 	//----------------------------------------
 	float getLengthXZ();
 
 	//----------------------------------------
-	//! @brief YZの長さの2乗取得関数
+	//! @brief YZの長さ取得関数
 	//! @details
 	//! @param void なし
-	//! @retval float YZの長さの2乗
+	//! @retval float YZの長さ
 	//----------------------------------------
 	float getLengthYZ();
 
@@ -220,6 +244,54 @@ public:
 	//! @retval Vec3* 変更後ベクトル
 	//----------------------------------------
 	Vec3* ChangeAnyLength(float length);
+
+	//----------------------------------------
+	//! @brief Xを任意の長さに変更関数
+	//! @details
+	//! @param length 長さ
+	//! @retval Vec3* 変更後ベクトル
+	//----------------------------------------
+	Vec3* ChangeAnyLengthX(float length);
+
+	//----------------------------------------
+	//! @brief Yを任意の長さに変更関数
+	//! @details
+	//! @param length 長さ
+	//! @retval Vec3* 変更後ベクトル
+	//----------------------------------------
+	Vec3* ChangeAnyLengthY(float length);
+
+	//----------------------------------------
+	//! @brief Zを任意の長さに変更関数
+	//! @details
+	//! @param length 長さ
+	//! @retval Vec3* 変更後ベクトル
+	//----------------------------------------
+	Vec3* ChangeAnyLengthZ(float length);
+
+	//----------------------------------------
+	//! @brief XYを任意の長さに変更関数
+	//! @details
+	//! @param length 長さ
+	//! @retval Vec3* 変更後ベクトル
+	//----------------------------------------
+	Vec3* ChangeAnyLengthXY(float length);
+
+	//----------------------------------------
+	//! @brief XZを任意の長さに変更関数
+	//! @details
+	//! @param length 長さ
+	//! @retval Vec3* 変更後ベクトル
+	//----------------------------------------
+	Vec3* ChangeAnyLengthXZ(float length);
+
+	//----------------------------------------
+	//! @brief YZを任意の長さに変更関数
+	//! @details
+	//! @param length 長さ
+	//! @retval Vec3* 変更後ベクトル
+	//----------------------------------------
+	Vec3* ChangeAnyLengthYZ(float length);
 
 	//----------------------------------------
 	//! @brief X軸回転関数

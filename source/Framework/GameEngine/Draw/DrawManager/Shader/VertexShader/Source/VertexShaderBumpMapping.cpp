@@ -13,7 +13,7 @@
 #include "../VertexShaderBumpMapping.h"
 
 #include <Resource/ModelX/ModelXManager/ModelXManager.h>
-
+#include <Tool/SafeRelease.h>
 
 
 //****************************************
@@ -65,6 +65,8 @@ void VertexShaderBumpMapping::Uninit()
 {
 	// シェーダーの解放
 	ReleaseVertexShader();
+
+	SafeRelease::PlusRelease(&declaration_object_);
 }
 
 

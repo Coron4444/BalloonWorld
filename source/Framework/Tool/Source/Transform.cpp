@@ -98,13 +98,20 @@ void Transform::setLookAtVector(Vector3D look_at_vector)
 	float temp_dot = Vector3D::CreateDot(axis_.getpDefaultForawrd(), &look_at_vector);
 
 	// 外積に使用したベクトルが平行だった場合
-	if ((int)temp_vector.getLengthSquare() == 0)
+	if (temp_vector.getLengthSquare() <= 0.0f)
 	{
-		// 更にベクトルの向きが真逆だった場合
+		// ベクトルの向きが真逆だった場合
 		if (temp_dot < 0)
 		{
 			// 初期値のクォータニオンと真逆のターゲットクォータニオンの作成
 			setTargetQuaternion(*axis_.getpDefaultUp(), D3DXToRadian(180.0f));
+			D3DXQuaternionInverse(&target_quaternion_, &target_quaternion_);
+			return;
+		}
+		else
+		{
+			// 初期値のクォータニオンでターゲットクォータニオンの作成
+			setTargetQuaternion(*axis_.getpDefaultUp(), D3DXToRadian(0.0f));
 			D3DXQuaternionInverse(&target_quaternion_, &target_quaternion_);
 			return;
 		}
@@ -181,6 +188,13 @@ MATRIX* Transform::getpRotationMatrix()
 
 
 
+MATRIX* Transform::getpNoInitRotationMatrix()
+{
+	return no_init_rotation_matrix_group_.getpRotationMatrix();
+}
+
+
+
 MATRIX* Transform::getpInverseMatrix()
 {
 	return matrix_group_.getpInverseMatrix();
@@ -212,6 +226,13 @@ void Transform::setTransposeMatrix(MATRIX* value, bool is_position_off)
 MATRIX* Transform::getpWorldMatrix()
 {
 	return matrix_group_.getpWorldMatrix();
+}
+
+
+
+MATRIX* Transform::getpNoInitRotationWorldMatrix()
+{
+	return no_init_rotation_matrix_group_.getpWorldMatrix();
 }
 
 
@@ -278,6 +299,7 @@ void Transform::CreateWorldMatrix()
 	CreateQuaternion();
 	ReflectMatrix();
 	matrix_group_.CreateWorldMatrix();
+	no_init_rotation_matrix_group_.CreateWorldMatrix();
 }
 
 
@@ -287,6 +309,7 @@ void Transform::CreateWorldMatrixPlusInverse()
 	CreateQuaternion();
 	ReflectMatrix();
 	matrix_group_.CreateWorldMatrixPlusInverse();
+	no_init_rotation_matrix_group_.CreateWorldMatrixPlusInverse();
 }
 
 
@@ -296,6 +319,7 @@ void Transform::CreateWorldMatrixPlusTranspose()
 	CreateQuaternion();
 	ReflectMatrix();
 	matrix_group_.CreateWorldMatrixPlusTranspose();
+	no_init_rotation_matrix_group_.CreateWorldMatrixPlusTranspose();
 }
 
 
@@ -306,6 +330,7 @@ void Transform::CreateAxisAndWorldMatrix()
 	CreateAxis();
 	ReflectMatrix();
 	matrix_group_.CreateWorldMatrix();
+	no_init_rotation_matrix_group_.CreateWorldMatrix();
 }
 
 
@@ -316,6 +341,7 @@ void Transform::CreateAxisAndWorldMatrixPlusInverse()
 	CreateAxis();
 	ReflectMatrix();
 	matrix_group_.CreateWorldMatrixPlusInverse();
+	no_init_rotation_matrix_group_.CreateWorldMatrixPlusInverse();
 }
 
 
@@ -326,6 +352,7 @@ void Transform::CreateAxisAndWorldMatrixPlusTranspose()
 	CreateAxis();
 	ReflectMatrix();
 	matrix_group_.CreateWorldMatrixPlusTranspose();
+	no_init_rotation_matrix_group_.CreateWorldMatrixPlusTranspose();
 }
 
 
@@ -359,10 +386,20 @@ void Transform::CreateQuaternion()
 
 void Transform::ReflectMatrix()
 {
+	// 平行移動&拡縮行列算出
 	matrix_group_.setPositionMatrix(&position_);
 	matrix_group_.setScaleMatrix(&scale_);
-	// 初期用→YawPitchRoll→球面線形補完→追加の順で結合
-	D3DXQuaternionMultiply(&now_quaternion_, &init_quaternion_,
+	*no_init_rotation_matrix_group_.getpPositionMatrix() 
+		= *matrix_group_.getpPositionMatrix();
+	*no_init_rotation_matrix_group_.getpScaleMatrix()
+		= *matrix_group_.getpScaleMatrix();
+
+	// 初期回転無し回転行列算出
+	no_init_rotation_matrix_group_.setRotationMatrix(&now_quaternion_);
+
+	// 初期回転有り回転行列作成(初期用→YawPitchRoll→球面線形補完→追加の順で結合)
+	Quaternion rotation;
+	D3DXQuaternionMultiply(&rotation, &init_quaternion_,
 						   &now_quaternion_);
-	matrix_group_.setRotationMatrix(&now_quaternion_);
+	matrix_group_.setRotationMatrix(&rotation);
 }

@@ -22,6 +22,7 @@
 // クラス宣言
 //****************************************
 class BalloonGroup;
+class Camera;
 
 
 
@@ -38,7 +39,7 @@ class Player : public GameObjectNull
 private:
 	GameScene* game_scene_ = nullptr;			//!< ゲームシーン
 	BalloonGroup* balloon_group_ = nullptr;		//!< 風船群
-
+	Camera* camera_ = nullptr;					//!< カメラ
 
 //====================
 // プロパティ
@@ -76,6 +77,21 @@ public:
 	//----------------------------------------
 	void setBalloonGroup(BalloonGroup* value);
 
+	//----------------------------------------
+	//! @brief カメラ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Camera* カメラ
+	//----------------------------------------
+	Camera* getpCamera();
+
+	//----------------------------------------
+	//! @brief カメラ設定関数
+	//! @details
+	//! @param *value カメラ
+	//! @retval void なし
+	//----------------------------------------
+	void setCamera(Camera* value);
 
 //====================
 // 関数

@@ -101,6 +101,7 @@ void DrawManager::Uninit()
 	await_release_.Reset();
 	all_draw_.Reset();
 
+	SafeRelease::PlusRelease(&back_buffer_surface_);
 	SafeRelease::PlusUninit(&motion_blur_);
 	SafeRelease::PlusUninit(&render_target_main_);
 	SafeRelease::PlusUninit(&back_buffer_polygon_);

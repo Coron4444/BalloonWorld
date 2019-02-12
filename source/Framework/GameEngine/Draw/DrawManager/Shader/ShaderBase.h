@@ -150,6 +150,14 @@ protected:
 	//! @retval void ‚È‚µ
 	//----------------------------------------
 	void InitDevice();
+
+	//----------------------------------------
+	//! @brief ’è”ƒe[ƒuƒ‹‰ğ•úŠÖ”
+	//! @details
+	//! @param void ‚È‚µ
+	//! @retval void ‚È‚µ
+	//----------------------------------------
+	void ReleaseConstantTable();
 };
 
 #endif

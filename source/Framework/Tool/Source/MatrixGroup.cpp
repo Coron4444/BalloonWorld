@@ -98,6 +98,13 @@ MATRIX* MatrixGroup::getpWorldMatrix()
 
 
 
+Vec3 MatrixGroup::getPosition()
+{
+	return Vec3(world_._41, world_._42, world_._43);
+}
+
+
+
 //****************************************
 // ŠÖ”’è‹`
 //****************************************

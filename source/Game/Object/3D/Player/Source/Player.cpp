@@ -48,6 +48,20 @@ void Player::setBalloonGroup(BalloonGroup* value)
 
 
 
+Camera* Player::getpCamera()
+{
+	return camera_;
+}
+
+
+
+void Player::setCamera(Camera* value)
+{
+	camera_ = value;
+}
+
+
+
 //****************************************
 // ä÷êîíËã`
 //****************************************
