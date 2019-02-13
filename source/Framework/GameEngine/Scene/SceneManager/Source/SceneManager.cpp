@@ -64,8 +64,7 @@ void SceneManager::setNextScene(SceneBase* value)
 	// Šù‚É‚Ù‚©‚Ì—v‹‚ðŽó‚¯•t‚¯‚Ä‚¢‚éê‡
 	if (state_ != SceneManager::State::NONE)
 	{
-		value->ReleaseState();
-		SafeRelease::Normal(&value);
+		SafeRelease::PlusUninit(&value);
 		return;
 	}
 

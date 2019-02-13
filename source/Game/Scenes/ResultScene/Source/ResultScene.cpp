@@ -18,6 +18,6 @@
 // ŠÖ”’è‹`
 //****************************************
 ResultScene::ResultScene(StateBase* state)
-	: SceneBase(state)
+	: SceneNull(state)
 {
 }

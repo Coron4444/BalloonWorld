@@ -18,6 +18,6 @@
 // ŠÖ”’è‹`
 //****************************************
 TitleScene::TitleScene(StateBase* state)
-	: SceneBase(state)
+	: SceneNull(state)
 {
 }

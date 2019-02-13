@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <GameEngine/Scene/SceneStateNull.h>
+#include <GameEngine/Scene/SceneNull.h>
 
 
 
@@ -30,7 +30,7 @@ class TitleScene;
 //! @details タイトルシーンのステート(スタート)Class
 //! @details 最初の状態を表す
 //************************************************************
-class TitleSceneState_Start : public SceneStateNull
+class TitleSceneState_Start : public SceneNull::StateNull
 {
 //====================
 // 変数

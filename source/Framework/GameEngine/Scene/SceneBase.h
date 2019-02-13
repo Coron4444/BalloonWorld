@@ -176,7 +176,7 @@ public:
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void Init();
+	virtual void Init() = 0;
 
 	//----------------------------------------
 	//! @brief 終了関数
@@ -184,7 +184,7 @@ public:
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void Uninit();
+	virtual void Uninit() = 0;
 
 	//----------------------------------------
 	//! @brief 更新関数
@@ -192,7 +192,7 @@ public:
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void Update();
+	virtual void Update() = 0;
 
 	//----------------------------------------
 	//! @brief リセット関数
@@ -200,15 +200,40 @@ public:
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void Reset();
+	virtual void Reset() = 0;
 
+protected:
 	//----------------------------------------
-	//! @brief ステート解放関数
+	//! @brief 初期化関数
 	//! @details
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void ReleaseState();
+	void InitState();
+
+	//----------------------------------------
+	//! @brief 終了関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void UninitState();
+
+	//----------------------------------------
+	//! @brief 更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void UpdateState();
+
+	//----------------------------------------
+	//! @brief リセット関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void ResetState();
 };
 
 

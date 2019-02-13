@@ -33,6 +33,6 @@ void TutorialScene::setTutorialLogo(TutorialLogo* value)
 // ŠÖ”’è‹`
 //****************************************
 TutorialScene::TutorialScene(StateBase* state)
-	: SceneBase(state)
+	: SceneNull(state)
 {
 }

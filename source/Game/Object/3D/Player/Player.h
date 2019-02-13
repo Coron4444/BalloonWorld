@@ -41,26 +41,11 @@ private:
 	BalloonGroup* balloon_group_ = nullptr;		//!< 風船群
 	Camera* camera_ = nullptr;					//!< カメラ
 
+
 //====================
 // プロパティ
 //====================
 public:
-	//----------------------------------------
-	//! @brief ゲームシーン取得関数
-	//! @details
-	//! @param void なし
-	//! @retval GameScene* ゲームシーン
-	//----------------------------------------
-	GameScene* getpGameScene();
-
-	//----------------------------------------
-	//! @brief ゲームシーン設定関数
-	//! @details
-	//! @param *value ゲームシーン
-	//! @retval void なし
-	//----------------------------------------
-	void setGameScene(GameScene* value);
-
 	//----------------------------------------
 	//! @brief 風船群取得関数
 	//! @details
@@ -93,6 +78,7 @@ public:
 	//----------------------------------------
 	void setCamera(Camera* value);
 
+
 //====================
 // 関数
 //====================
@@ -103,11 +89,9 @@ public:
 	//! @param *update     更新基底クラス
 	//! @param *draw       描画基底クラス
 	//! @param *collision  衝突基底クラス
-	//! @param *game_scene ゲームシーン
 	//! @retval void なし
 	//----------------------------------------
-	void Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision, 
-			  GameScene* game_scene);
+	void Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision);
 
 	//----------------------------------------
 	//! @brief 終了関数

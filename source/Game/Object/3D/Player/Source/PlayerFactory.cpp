@@ -17,12 +17,11 @@
 //****************************************
 // ŠÖ”’è‹`
 //****************************************
-Player* PlayerFactory::Create(GameScene* game_scene)
+Player* PlayerFactory::Create()
 {
 	Player* temp = new Player();
 	temp->Init(new PlayerUpdate(),
 			   new PlayerDraw(),
-			   new PlayerCollision(),
-			   game_scene);
+			   new PlayerCollision());
 	return temp;
 }

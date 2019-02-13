@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <GameEngine/Scene/SceneBase.h>
+#include <GameEngine/Scene/SceneNull.h>
 
 
 
@@ -22,7 +22,7 @@
 //! @details タイトルシーンを管理するClass
 //! @details タイトルシーン特有の共有データを持っている
 //************************************************************
-class TitleScene : public SceneBase
+class TitleScene : public SceneNull
 {
 //====================
 // 関数

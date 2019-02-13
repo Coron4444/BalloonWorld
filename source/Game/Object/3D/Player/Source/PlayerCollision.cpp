@@ -207,15 +207,11 @@ void PlayerCollision::HitSubstance(CollisionBase* hit_collision,
 				case CoinCollision::ObjectTag::BOUNDING_OBB:
 				{
 					// ダウンキャスト
-					Player* player = (Player*)getpGameObject();
+					//Player* player = (Player*)getpGameObject();
 					Coin* coin = (Coin*)hit_collision->getpGameObject();
 					if (*coin->getpColorChangeCounter() <= 0)
 					{
 						*coin->getpColorChangeCounter() = 120;
-
-						// スコアアップ
-						player->getpGameScene()->setScore(player->getpGameScene()
-														  ->getScore() + 10);
 					}
 
 					// めり込み解消
@@ -243,9 +239,6 @@ void PlayerCollision::HitSubstance(CollisionBase* hit_collision,
 					EliminationOfNesting(player->getpTransform(), 
 										 hit_my_object->getpHitVector());
 
-					// スコアダウン
-					player->getpGameScene()->setGameOver(1);
-
 					// 相手のオブジェクトを消去
 					GameObjectManager::getpInstance()
 						->ReleaseGameObjectBaseFromArray(hit_collision->getpGameObject());
@@ -268,8 +261,6 @@ void PlayerCollision::HitSubstance(CollisionBase* hit_collision,
 					EliminationOfNesting(player->getpTransform(), 
 										 hit_my_object->getpHitVector());
 
-					// スコアダウン
-					player->getpGameScene()->setGameOver(0);
 
 					// 相手のオブジェクトを消去
 					GameObjectManager::getpInstance()

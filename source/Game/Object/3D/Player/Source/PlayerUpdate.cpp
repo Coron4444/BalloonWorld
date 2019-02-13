@@ -71,10 +71,10 @@ void PlayerUpdate::Update()
 {
 	// “ü—Í
 	player_->getpCamera() != nullptr ? InputTranslation() : InputTranslationNotCamera();
-	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_SPACE))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_SPACE))
 	{
 		Vector3D temp_vector = Vec3(0.0f, 1.0f, 0.0f);
-		temp_vector.ChangeAnyLength(MeterToFrame::MeterPerSecondToMeterPerFlame(70.0f));
+		temp_vector.ChangeAnyLength(MeterToFrame::MeterPerSecondToMeterPerFlame(150.0f));
 		*player_->getpPhysics()->getpVelocity() += temp_vector;
 	}
 
@@ -137,7 +137,7 @@ void PlayerUpdate::InputTranslation()
 		is_input = true;
 		look_at_vector += *camera_axis->getpRight();
 	}
-
+	
 	if (!is_input) return;
 	look_at_vector.y = 0.0f;
 	player_->getpTransform()->setLookAtVector(look_at_vector);

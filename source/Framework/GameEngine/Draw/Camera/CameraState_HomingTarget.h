@@ -34,9 +34,9 @@ class CameraState_HomingTarget : public Camera::State
 // 定数
 //====================
 public:
-	static const Vec3 DEFAULT_LENGHT;	//!< 既定距離
-	static const float GAZING_POINT_Y;	//!< 注視点のY座標
-	static const float ROTATION_SPEED;	//!< 回転速度
+	static const Vec3 DEFAULT_LENGHT;			//!< 既定距離
+	static const float GAZING_POINT_Y;			//!< 注視点のY座標
+	static const float DEFAULT_ROTATION_SPEED;	//!< 既定回転速度
 
 
 //====================
@@ -44,7 +44,8 @@ public:
 //====================
 private:
 	GameObjectBase* target_object_ = nullptr;	//!< ターゲットオブジェクト
-	Vector3D lenght_;		//!< 距離
+	Vector3D lenght_;							//!< 距離
+	float rotation_speed_;						//!< 回転速度
 
 
 //====================
@@ -66,6 +67,14 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void setLength(Vec3 value);
+
+	//----------------------------------------
+	//! @brief 回転速度設定関数
+	//! @details
+	//! @param value 回転速度
+	//! @retval void なし
+	//----------------------------------------
+	void setRotationSpeed(float value);
 
 
 //====================

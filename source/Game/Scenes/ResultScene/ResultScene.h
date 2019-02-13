@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <GameEngine/Scene/SceneBase.h>
+#include <GameEngine/Scene/SceneNull.h>
 
 
 
@@ -22,7 +22,7 @@
 //! @details リザルトシーンを管理するClass
 //! @details リザルトシーン特有の共有データを持っている
 //************************************************************
-class ResultScene : public SceneBase
+class ResultScene : public SceneNull
 {
 //====================
 // 関数

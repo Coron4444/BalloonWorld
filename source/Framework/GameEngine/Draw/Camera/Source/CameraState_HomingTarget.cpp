@@ -24,7 +24,7 @@
 //****************************************
 const Vec3 CameraState_HomingTarget::DEFAULT_LENGHT(0.0f, 13.0f, -15.0f);
 const float CameraState_HomingTarget::GAZING_POINT_Y = -1.0f;
-const float CameraState_HomingTarget::ROTATION_SPEED
+const float CameraState_HomingTarget::DEFAULT_ROTATION_SPEED
 = MeterToFrame::MeterPerSecondToMeterPerFlame(70.0f);
 
 
@@ -51,12 +51,20 @@ void CameraState_HomingTarget::setLength(Vec3 value)
 
 
 
+void CameraState_HomingTarget::setRotationSpeed(float value)
+{
+	rotation_speed_ = value;
+}
+
+
+
 //****************************************
 // 関数定義
 //****************************************
 void CameraState_HomingTarget::Init()
 {
 	lenght_ = DEFAULT_LENGHT;
+	rotation_speed_ = DEFAULT_ROTATION_SPEED;
 }
 
 
@@ -115,7 +123,7 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 		Vector3D position_to_gazing_point = *getpCamera()->getpPositon()
 			- *getpCamera()->getpGazingPoint();
 		getpCamera()->getpAxis()->setForward(position_to_gazing_point);
-		getpCamera()->getpAxis()->RotationAxisY(D3DXToRadian(-ROTATION_SPEED));
+		getpCamera()->getpAxis()->RotationAxisY(D3DXToRadian(-rotation_speed_));
 
 		// 座標の算出
 		float length = position_to_gazing_point.getLength();
@@ -135,7 +143,7 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 		Vector3D position_to_gazing_point = *getpCamera()->getpPositon()
 			- *getpCamera()->getpGazingPoint();
 		getpCamera()->getpAxis()->setForward(position_to_gazing_point);
-		getpCamera()->getpAxis()->RotationAxisY(D3DXToRadian(ROTATION_SPEED));
+		getpCamera()->getpAxis()->RotationAxisY(D3DXToRadian(rotation_speed_));
 
 		// 座標の算出
 		float length = position_to_gazing_point.getLength();
@@ -155,7 +163,7 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 		Vector3D position_to_gazing_point = *getpCamera()->getpPositon()
 			- *getpCamera()->getpGazingPoint();
 		getpCamera()->getpAxis()->setForward(position_to_gazing_point);
-		getpCamera()->getpAxis()->RotationAxisRight(D3DXToRadian(-ROTATION_SPEED));
+		getpCamera()->getpAxis()->RotationAxisRight(D3DXToRadian(-rotation_speed_));
 
 		// 座標の算出
 		float length = position_to_gazing_point.getLength();
@@ -175,7 +183,7 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 		Vector3D position_to_gazing_point = *getpCamera()->getpPositon()
 			- *getpCamera()->getpGazingPoint();
 		getpCamera()->getpAxis()->setForward(position_to_gazing_point);
-		getpCamera()->getpAxis()->RotationAxisRight(D3DXToRadian(ROTATION_SPEED));
+		getpCamera()->getpAxis()->RotationAxisRight(D3DXToRadian(rotation_speed_));
 
 		// 座標の算出
 		float length = position_to_gazing_point.getLength();

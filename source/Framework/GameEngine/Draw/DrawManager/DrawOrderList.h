@@ -44,7 +44,7 @@ public:
 // ’è”
 //====================
 public:
-	static const unsigned RENDER_TARGET_BACK_BUFFER = 1 << 0;
+	static const unsigned RENDER_TARGET_MAIN = 1 << 0;
 
 
 //====================

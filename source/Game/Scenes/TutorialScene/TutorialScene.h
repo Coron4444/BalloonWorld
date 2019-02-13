@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <GameEngine/Scene/SceneBase.h>
+#include <GameEngine/Scene/SceneNull.h>
 
 
 
@@ -29,7 +29,7 @@ class TutorialLogo;
 //! @details チュートリアルシーンを管理するClass
 //! @details チュートリアルシーン特有の共有データを持っている
 //************************************************************
-class TutorialScene : public SceneBase
+class TutorialScene : public SceneNull
 {
 //====================
 // 変数

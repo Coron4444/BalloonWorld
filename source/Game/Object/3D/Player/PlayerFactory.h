@@ -43,7 +43,7 @@ public:
 	//! @param void ‚È‚µ
 	//! @retval Player* ƒvƒŒƒCƒ„[
 	//----------------------------------------
-	Player* Create(GameScene* game_scene);
+	Player* Create();
 };
 
 

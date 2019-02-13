@@ -79,9 +79,11 @@ SceneBase::StateBase::~StateBase()
 {
 }
 
+
+
 SceneBase::SceneBase(StateBase* state)
+	: state_(state)
 {
-	state_ = state;
 	state_->setScene(this);
 }
 
@@ -93,7 +95,7 @@ SceneBase::~SceneBase()
 
 
 
-void SceneBase::Init()
+void SceneBase::InitState()
 {
 	if (state_ == nullptr) return;
 	state_->Init();
@@ -101,14 +103,14 @@ void SceneBase::Init()
 
 
 
-void SceneBase::Uninit()
+void SceneBase::UninitState()
 {
 	SafeRelease::PlusUninit(&state_);
 }
 
 
 
-void SceneBase::Update()
+void SceneBase::UpdateState()
 {
 	if (state_ == nullptr) return;
 	state_->Update();
@@ -116,15 +118,8 @@ void SceneBase::Update()
 
 
 
-void SceneBase::Reset()
+void SceneBase::ResetState()
 {
 	if (state_ == nullptr) return;
 	state_->Reset();
-}
-
-
-
-void SceneBase::ReleaseState()
-{
-	SafeRelease::Normal(&state_);
 }

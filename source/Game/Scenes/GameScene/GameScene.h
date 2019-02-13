@@ -12,7 +12,14 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <GameEngine/Scene/SceneBase.h>
+#include <GameEngine/Scene/SceneNull.h>
+
+
+
+//****************************************
+// クラス宣言
+//****************************************
+class StageManager;
 
 
 
@@ -22,15 +29,16 @@
 //! @details ゲームシーンを管理するClass
 //! @details ゲームシーン特有の共有データを持っている
 //************************************************************
-class GameScene : public SceneBase
+class GameScene : public SceneNull
 {
 //====================
 // 変数
 //====================
 private:
-	bool is_clear_ = false;		//!< クリアフラグ
-	int score_ = 0;				//!< スコア
-	int game_over_ = -1;		//!< ゲームオーバーフラグ
+	bool is_clear_ = false;			//!< クリアフラグ
+	int score_ = 0;					//!< スコア
+	int game_over_ = -1;			//!< ゲームオーバーフラグ
+	StageManager* stage_manager_;	//!< ステージマネージャ
 
 
 //====================
@@ -85,6 +93,14 @@ public:
 	//----------------------------------------
 	void setGameOver(int value);
 
+	//----------------------------------------
+	//! @brief ステージマネージャ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval StageManager* ステージマネージャ
+	//----------------------------------------
+	StageManager* getpStageManager();
+
 
 //====================
 // 関数
@@ -96,6 +112,14 @@ public:
 	//! @param *state 最初のステート
 	//----------------------------------------
 	GameScene(StateBase* state);
+
+	//----------------------------------------
+	//! @brief 初期化関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Init();
 };
 
 

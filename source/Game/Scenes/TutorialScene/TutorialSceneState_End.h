@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <GameEngine/Scene/SceneStateNull.h>
+#include <GameEngine/Scene/SceneNull.h>
 
 
 
@@ -29,7 +29,7 @@ class TutorialScene;
 //! @details チュートリアルシーンのステート(エンド)Class
 //! @details 最後の状態を表す
 //************************************************************
-class TutorialSceneState_End : public SceneStateNull
+class TutorialSceneState_End : public SceneNull::StateNull
 {
 //====================
 // 変数
