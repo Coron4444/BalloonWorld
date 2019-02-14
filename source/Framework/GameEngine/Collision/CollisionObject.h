@@ -2,7 +2,7 @@
 //!	@file	 CollisionObject.h
 //!	@brief	 衝突オブジェクトClass
 //! @details 
-//!	@author  Kai Araki									@date 2018/05/08
+//!	@author  Kai Araki									@date 2019/02/14
 //================================================================================
 #ifndef	_COLLISION_OBJECT_H_
 #define _COLLISION_OBJECT_H_
@@ -20,8 +20,17 @@
 #include "CollisionShape/LineSegment.h"
 #include "CollisionShape/Sphere.h"
 #include "CollisionShape/Triangle.h"
+#include "CollisionManager/ObjectOfTree.h"
 
+#include <Tool/LimitedPointerArray.h>
 #include <Tool/Vector3D.h>
+
+
+
+//****************************************
+// クラス宣言
+//****************************************
+class CollisionBase;
 
 
 
@@ -33,23 +42,100 @@
 class CollisionObject
 {
 //====================
+// クラス定義
+//====================
+public:
+	//****************************************											   
+	//! @brief   衝突形状Class
+	//!
+	//! @details 衝突の形状Class
+	//****************************************
+	class Shape
+	{
+	//====================
+	// 定数
+	//====================
+	private:
+		static const int TAG_NONE;		//!< タグなし時の値
+
+
+	//====================
+	// 変数
+	//====================
+	private:
+		int	tag_ = TAG_NONE;		//!< タグ
+		CollisionShapeBase* shape_;	//!< 形状
+
+
+	//====================
+	// プロパティ
+	//====================
+	public:
+		//----------------------------------------
+		//! @brief タグ取得関数
+		//! @details
+		//! @param void なし
+		//! @retval int タグ
+		//----------------------------------------
+		int	getTag();
+
+		//----------------------------------------
+		//! @brief 衝突形状取得関数
+		//! @details
+		//! @param void なし
+		//! @retval CollisionShapeBase* 衝突形状
+		//----------------------------------------
+		CollisionShapeBase* getpShape();
+
+		//----------------------------------------
+		//! @brief 衝突形状取得関数
+		//! @details
+		//! @param value 衝突形状
+		//! @retval void なし
+		//----------------------------------------
+		void setShape(CollisionShapeBase* value);
+
+
+	//====================
+	// 関数
+	//====================
+	public:
+		//----------------------------------------
+		//! @brief 初期化
+		//! @details
+		//! @param tag    タグ
+		//! @param *shape 衝突形状
+		//! @retval void なし
+		//----------------------------------------
+		void Init(int tag, CollisionShapeBase* shape);
+
+		//----------------------------------------
+		//! @brief デストラクタ
+		//! @details
+		//! @param void なし
+		//----------------------------------------
+		void Uninit();
+	};
+
+
+//====================
 // 定数
 //====================
 private:
-	static const int TAG_NONE = -1;			//!< タグなし時の値
+	static const unsigned ARRAY_NUM = 10000;	//!< 配列数
+	static const int TAG_NONE;					//!< タグなし時の値
 
 
 //====================
 // 変数
 //====================
 private:
-
-	CollisionShapeBase* collision_shape_;		//!< 形状
-	Vector3D hit_vector_;						//!< めり込みベクトル
-	int	tag_;					//!< タグ
-	bool is_judgment_ = true;	//!< 判定するかフラグ
-	bool is_trigger_ = true;	//!< 物理演算をするかのフラグ
-
+	int	tag_ = TAG_NONE;								//!< タグ
+	LimitedPointerArray<Shape*, ARRAY_NUM> all_shape_;	//!< 全衝突形状配列
+	CollisionBase* collision_base_ = nullptr;			//!< 衝突基底クラス
+	ObjectOfTree<CollisionObject*>* object_of_tree_;	//!< 分木オブジェクト
+	AABB octree_aabb_;									//!< 8分木用AABB
+	
 
 //====================
 // プロパティ
@@ -64,44 +150,60 @@ public:
 	int	getTag();
 
 	//----------------------------------------
+	//! @brief 配列の終端インデックス取得関数
+	//! @details
+	//! @param void なし
+	//! @retval unsigned 配列の終端インデックス
+	//----------------------------------------
+	unsigned getEndIndexOfArray();
+
+	//----------------------------------------
 	//! @brief 衝突形状取得関数
 	//! @details
-	//! @param void なし
-	//! @retval CollisionShapeBase* 衝突形状
+	//! @param index インデックス
+	//! @retval Shape* 衝突形状
 	//----------------------------------------
-	CollisionShapeBase* getpCollisionShape();
+	Shape* getpShape(unsigned index);
 
 	//----------------------------------------
-	//! @brief めり込みベクトル取得関数
+	//! @brief 衝突基底クラス取得関数
 	//! @details
 	//! @param void なし
-	//! @retval Vector3D* めり込みベクトル
+	//! @retval CollisionBase* 衝突基底クラス
 	//----------------------------------------
-	Vector3D* getpHitVector();
+	CollisionBase* getpCollisionBase();
 
 	//----------------------------------------
-	//! @brief めり込みベクトル設定関数
+	//! @brief 衝突基底クラス設定関数
 	//! @details
-	//! @param value めり込みベクトル
+	//! @param *value 衝突基底クラス
 	//! @retval void なし
 	//----------------------------------------
-	void setHitVector(Vector3D value);
+	void setCollisionBase(CollisionBase* value);
 
 	//----------------------------------------
-	//! @brief 判定するかフラグ取得関数
+	//! @brief 分木オブジェクト取得関数
 	//! @details
 	//! @param void なし
-	//! @retval bool 判定するかフラグ
+	//! @retval ObjectOfTree<CollisionObject*>* 分木オブジェクト
 	//----------------------------------------
-	bool getIsJudgment();
+	ObjectOfTree<CollisionObject*>* getpObjectOfTree();
 
 	//----------------------------------------
-	//! @brief 判定するかフラグ設定関数
+	//! @brief 分木オブジェクト設定関数
 	//! @details
-	//! @param value 判定するかフラグ
+	//! @param value 分木オブジェクト
 	//! @retval void なし
 	//----------------------------------------
-	void setIsJudgment(bool value);
+	void setObjectOfTree(ObjectOfTree<CollisionObject*>* value);
+
+	//----------------------------------------
+	//! @brief 8分木用AABBポインタ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval AABB* 8分木用AABBポインタ
+	//----------------------------------------
+	AABB* getOctreeAABB();
 
 
 //====================
@@ -109,27 +211,54 @@ public:
 //====================
 public:
 	//----------------------------------------
-	//! @brief コンストラクタ
+	//! @brief 初期化
 	//! @details
-	//! @param *collision_shape 衝突形状
-	//! @param collision_shape  タグ
+	//! @param tag タグ
+	//! @retval void なし
 	//----------------------------------------
-	CollisionObject(CollisionShapeBase* collision_shape, int tag);
+	void Init(int tag);
 
 	//----------------------------------------
-	//! @brief デストラクタ
-	//! @details
-	//! @param void なし
-	//----------------------------------------
-	~CollisionObject();
-
-	//----------------------------------------
-	//! @brief 衝突用データリセット関数
+	//! @brief 更新関数
 	//! @details
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void ResetHitData();
+	void Update();
+
+	//----------------------------------------
+	//! @brief 衝突形状追加関数
+	//! @details
+	//! @param tag   タグ
+	//! @param shape 形状
+	//! @retval void なし
+	//----------------------------------------
+	void AddShape(int tag, CollisionShapeBase* shape);
+
+	//----------------------------------------
+	//! @brief 衝突形状解放関数
+	//! @details
+	//! @param tag   タグ
+	//! @retval void なし
+	//----------------------------------------
+	void ReleaseShape(int tag);
+
+	//----------------------------------------
+	//! @brief 衝突オブジェクト全解放関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void ReleaseAllShape();
+
+private:
+	//----------------------------------------
+	//! @brief AABB更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void UpdateAABB();
 };
 
 

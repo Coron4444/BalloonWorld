@@ -24,16 +24,31 @@ CollisionShapeBase::Type CollisionShapeBase::getType()
 
 
 
-//****************************************
-// ä÷êîíËã`
-//****************************************
-CollisionShapeBase::CollisionShapeBase(Type type) 
-	: type_(type) 
+void CollisionShapeBase::setType(CollisionShapeBase::Type value)
 {
+	type_ = value;
 }
 
 
 
+Vector3D* CollisionShapeBase::getpMax()
+{
+	return &max_;
+}
+
+
+
+Vector3D* CollisionShapeBase::getpMin()
+{
+
+	return &min_;
+}
+
+
+
+//****************************************
+// ä÷êîíËã`
+//****************************************
 CollisionShapeBase::~CollisionShapeBase()
 {
 }

@@ -75,11 +75,11 @@ public:
 //====================
 public:
 	//----------------------------------------
-	//! @brief コンストラクタ
+	//! @brief デストラクタ
 	//! @details
 	//! @param void なし
 	//----------------------------------------
-	LineSegment();
+	~LineSegment();
 
 	//----------------------------------------
 	//! @brief 初期化関数
@@ -89,6 +89,22 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void Init(Vector3D position, Vector3D vector);
+
+	//----------------------------------------
+	//! @brief 更新関数
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Update() override;
+
+private:
+	//----------------------------------------
+	//! @brief 最小値と最大値算出関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CalculationMinAndMax() override;
 };
 
 

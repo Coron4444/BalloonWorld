@@ -18,7 +18,6 @@
 //****************************************
 CollisionNull::~CollisionNull()
 {
-	ReleaseAllCollisionObjectsFromArray();
 }
 
 
@@ -31,11 +30,7 @@ void CollisionNull::Init()
 
 void CollisionNull::Uninit()
 {
-	// 複数衝突オブジェクトの判定OFF
-	for (unsigned i = 0; i < getEndIndexOfArray(); i++)
-	{
-		getpCollisionObjects(i)->setIsJudgment(false);
-	}
+	CollisionBase::ReleaseAllCollisionObject();
 }
 
 
@@ -58,38 +53,15 @@ void CollisionNull::DebugDisplay()
 
 
 
-void CollisionNull::HitCollision(CollisionBase* hit_collision,
-								 CollisionObject*  hit_object,
-								 CollisionObject*  hit_my_object)
+void CollisionNull::HitCollision(CollisionInformation* information)
 {
 	// 使われていない引数の処理
-	hit_collision = hit_collision;
-	hit_object = hit_object;
-	hit_my_object = hit_my_object;
-}
-
-
-
-void CollisionNull::NotHitCollision(CollisionBase*	hit_collision,
-					 CollisionObject*  hit_object,
-					 CollisionObject*  hit_my_object)
-{
-	// 使われていない引数の処理
-	hit_collision = hit_collision;
-	hit_object = hit_object;
-	hit_my_object = hit_my_object;
+	information = information;
 }
 
 
 
 void CollisionNull::HitGround(float position_y) 
-{
-	position_y = position_y; 
-}
-
-
-
-void CollisionNull::NotHitGround(float position_y)
 {
 	position_y = position_y; 
 }

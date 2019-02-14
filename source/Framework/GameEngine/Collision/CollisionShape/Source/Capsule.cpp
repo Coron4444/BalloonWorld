@@ -83,8 +83,7 @@ void Capsule::setRadius(float value)
 //****************************************
 // 関数定義
 //****************************************
-Capsule::Capsule()
-	: CollisionShapeBase(CollisionShapeBase::Type::CAPSULE)
+Capsule::~Capsule()
 {
 }
 
@@ -92,21 +91,39 @@ Capsule::Capsule()
 
 void Capsule::Init(Vector3D position, Vector3D vector, float radius)
 {
+	CollisionShapeBase::setType(CollisionShapeBase::Type::CAPSULE);
+
 	// 円柱
 	cylinder_.Init(position, vector, radius);
 
 	// 球
 	sphere0_.Init(*cylinder_.getpPosition(), radius);
 	sphere1_.Init(cylinder_.getAddVectorToPosition(), radius);
+
+	CalculationMinAndMax();
 }
 
 
 
 void Capsule::Update()
 {
-	// 球
+	// 球の更新
 	*sphere0_.getpPosition() = *cylinder_.getpPosition();
 	sphere0_.setRadius(cylinder_.getRadius());
 	*sphere1_.getpPosition() = cylinder_.getAddVectorToPosition();
 	sphere1_.setRadius(cylinder_.getRadius());
+
+	// 最小最大更新
+	CalculationMinAndMax();
+}
+
+
+
+void Capsule::CalculationMinAndMax()
+{
+	Vector3D length(1.0f, 1.0f, 1.0f);
+	length.ChangeAnyLength(sphere0_.getRadius());
+
+	*getpMax() = *cylinder_.getpLineSegment()->getpMax() + length;
+	*getpMin() = *cylinder_.getpLineSegment()->getpMin() + -length;
 }

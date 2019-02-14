@@ -13,7 +13,9 @@
 // インクルード文
 //****************************************
 #include "../ComponentBase.h"
-#include "CollisionObjects.h"
+#include "CollisionObject.h"
+#include "CollisionManager/CollisionCalculation.h"
+#include "CollisionInformation.h"
 
 #include <Tool/LimitedPointerArray.h>
 #include <Tool/Transform.h>
@@ -55,8 +57,8 @@ private:
 // 変数
 //====================
 private:
-	LimitedPointerArray<CollisionObjects*, ARRAY_NUM> collision_objects_;	//!< 複数衝突オブジェクト配列
 	Type type_ = Type::NONE;			//!< タイプ
+	LimitedPointerArray<CollisionObject*, ARRAY_NUM> collision_object_;	//!< 衝突オブジェクト配列
 	bool is_judgment_ground_ = true;	//!< 地面との判定フラグ
 
 
@@ -65,29 +67,13 @@ private:
 //====================
 public:
 	//----------------------------------------
-	//! @brief 配列の最後の末尾のインデックス取得関数
-	//! @details
-	//! @param void なし
-	//! @retval unsigned 配列の最後の末尾のインデックス
-	//----------------------------------------
-	unsigned getEndIndexOfArray();
-	
-	//----------------------------------------
-	//! @brief 複数衝突オブジェクト取得関数
-	//! @details
-	//! @param index 複数衝突オブジェクトのインデックス
-	//! @retval CollisionObjects* 複数衝突オブジェクト
-	//----------------------------------------
-	CollisionObjects* getpCollisionObjects(unsigned index);
-	
-	//----------------------------------------
 	//! @brief タイプ取得関数
 	//! @details
 	//! @param void なし
 	//! @retval Type タイプ
 	//----------------------------------------
 	Type getType();
-	
+
 	//----------------------------------------
 	//! @brief タイプ設定関数
 	//! @details
@@ -95,7 +81,23 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void setType(Type value);
-	
+
+	//----------------------------------------
+	//! @brief 配列の最後の末尾のインデックス取得関数
+	//! @details
+	//! @param void なし
+	//! @retval unsigned 配列の最後の末尾のインデックス
+	//----------------------------------------
+	unsigned getEndIndexOfArray();
+
+	//----------------------------------------
+	//! @brief 衝突オブジェクト取得関数
+	//! @details
+	//! @param index インデックス
+	//! @retval CollisionObject* 衝突オブジェクト
+	//----------------------------------------
+	CollisionObject* getpCollisionObject(unsigned index);
+
 	//----------------------------------------
 	//! @brief 地面との判定フラグ取得関数
 	//! @details
@@ -103,7 +105,7 @@ public:
 	//! @retval bool 地面との判定フラグ
 	//----------------------------------------
 	bool getIsJudgmentGround();
-	
+
 	//----------------------------------------
 	//! @brief 地面との判定フラグ設定関数
 	//! @details
@@ -127,26 +129,10 @@ public:
 	//----------------------------------------
 	//! @brief 衝突時関数
 	//! @details
-	//! @param *hit_collision 相手の衝突基底クラス
-	//! @param *hit_object    相手の衝突オブジェクト
-	//! @param *hit_my_object 自分の衝突オブジェクト
+	//! @param *information 衝突情報
 	//! @retval void なし
 	//----------------------------------------
-	virtual void HitCollision(CollisionBase* hit_collision,
-							  CollisionObject* hit_object,
-							  CollisionObject* hit_my_object) = 0;
-
-	//----------------------------------------
-	//! @brief 非衝突時関数
-	//! @details
-	//! @param *hit_collision 相手の衝突基底クラス
-	//! @param *hit_object    相手の衝突オブジェクト
-	//! @param *hit_my_object 自分の衝突オブジェクト
-	//! @retval void なし
-	//----------------------------------------
-	virtual void NotHitCollision(CollisionBase*	hit_collision,
-								 CollisionObject* hit_object,
-								 CollisionObject* hit_my_object) = 0;
+	virtual void HitCollision(CollisionInformation* information) = 0;
 
 	//----------------------------------------
 	//! @brief フィールドとの衝突時関数
@@ -157,55 +143,46 @@ public:
 	virtual void HitGround(float position_y) = 0;
 
 	//----------------------------------------
-	//! @brief フィールドとの非衝突時関数
+	//! @brief 衝突オブジェクト追加関数
 	//! @details
-	//! @param position_y フィールドの高さ
+	//! @param *object 衝突オブジェクト
 	//! @retval void なし
 	//----------------------------------------
-	virtual void NotHitGround(float position_y) = 0;
+	void AddCollisionObject(CollisionObject* object);
 
 	//----------------------------------------
-	//! @brief 複数衝突オブジェクト追加関数
+	//! @brief 衝突オブジェクト上書き関数
 	//! @details
-	//! @param *object 追加したい複数衝突オブジェクト
+	//! @param *old_object 古い衝突オブジェクト
+	//! @param *new_object 新しい衝突オブジェクト
 	//! @retval void なし
 	//----------------------------------------
-	void AddCollisionObjectsToArray(CollisionObjects* object);
+	void OverwriteCollisionsObject(CollisionObject* old_object,
+								   CollisionObject* new_object);
 
 	//----------------------------------------
-	//! @brief 複数衝突オブジェクト上書き関数
+	//! @brief 衝突オブジェクト解放関数
 	//! @details
-	//! @param *object 古い複数衝突オブジェクト
-	//! @param *object 新しい複数衝突オブジェクト
+	//! @param *object 衝突オブジェクト
 	//! @retval void なし
 	//----------------------------------------
-	void OverwriteArrayCollisionsObject(CollisionObjects* old_object,
-										CollisionObjects* new_object);
+	void ReleaseCollisionObject(CollisionObject* object);
 
 	//----------------------------------------
-	//! @brief 複数衝突オブジェクト解放関数
-	//! @details
-	//! @param *object 消去したい複数衝突オブジェクト
-	//! @retval void なし
-	//----------------------------------------
-	void ReleaseCollisionObjectsFromArray(CollisionObjects* object);
-
-	//----------------------------------------
-	//! @brief 複数衝突オブジェクト全解放関数
+	//! @brief 衝突オブジェクト全解放関数
 	//! @details
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void ReleaseAllCollisionObjectsFromArray();
+	void ReleaseAllCollisionObject();
 
 	//----------------------------------------
-	//! @brief めり込み解消関数
+	//! @brief 衝突オブジェクト全更新関数
 	//! @details
-	//! @param *transform  めり込みを解消したい状態
-	//! @param *hit_vector めり込みベクトル
+	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void EliminationOfNesting(Transform* transform, const Vec3* hit_vector);
+	void UpdateAllCollisionObject();
 };
 
 

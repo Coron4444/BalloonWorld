@@ -16,6 +16,7 @@
 #include "LineSegment.h"
 
 #include <Tool/Vector3D.h>
+#include <Tool/Axis.h>
 
 
 
@@ -31,6 +32,7 @@ class Cylinder : public CollisionShapeBase
 //====================
 private:
 	LineSegment line_segment_;	//!< 線分
+	Axis axis_;					//!< 軸
 	float radius_;				//!< 半径
 
 
@@ -61,6 +63,14 @@ public:
 	//! @retval Vector3D* 方向
 	//----------------------------------------
 	Vector3D* getpVector();
+
+	//----------------------------------------
+	//! @brief 方向設定関数
+	//! @details
+	//! @param value 方向
+	//! @retval void なし
+	//----------------------------------------
+	void setVector(Vector3D value);
 	
 	//----------------------------------------
 	//! @brief 方向ベクトル加算済み座標取得関数
@@ -92,11 +102,11 @@ public:
 //====================
 public:
 	//----------------------------------------
-	//! @brief コンストラクタ
+	//! @brief デストラクタ
 	//! @details
 	//! @param void なし
 	//----------------------------------------
-	Cylinder();
+	~Cylinder();
 
 	//----------------------------------------
 	//! @brief 初期化関数
@@ -107,6 +117,22 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void Init(Vector3D position, Vector3D vector, float radius);
+
+	//----------------------------------------
+	//! @brief 更新関数
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Update() override;
+
+private:
+	//----------------------------------------
+	//! @brief 最小値と最大値算出関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CalculationMinAndMax() override;
 };
 
 

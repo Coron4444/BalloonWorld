@@ -6,6 +6,7 @@
 //================================================================================
 
 
+
 //****************************************
 // インクルード文
 //****************************************
@@ -16,46 +17,88 @@
 
 
 //****************************************
+// 定数定義
+//****************************************
+const int CollisionObject::Shape::TAG_NONE = -1;
+
+
+
+//****************************************
 // プロパティ定義
 //****************************************
-int	CollisionObject::getTag()
+int	CollisionObject::Shape::getTag()
 { 
 	return tag_; 
 }
 
 
 
-CollisionShapeBase* CollisionObject::getpCollisionShape()
+CollisionShapeBase* CollisionObject::Shape::getpShape()
 { 
-	return collision_shape_; 
+	return shape_; 
 }
 
 
 
-Vector3D* CollisionObject::getpHitVector()
-{ 
-	return &hit_vector_;
-}
-
-
-
-void CollisionObject::setHitVector(Vector3D value)
+void CollisionObject::Shape::setShape(CollisionShapeBase* value)
 {
-	hit_vector_ = value;
+	shape_ = value;
 }
 
 
 
-bool CollisionObject::getIsJudgment()
-{ 
-	return is_judgment_; 
+int	CollisionObject::getTag()
+{
+	return tag_;
 }
 
 
 
-void CollisionObject::setIsJudgment(bool value)
-{ 
-	is_judgment_ = value;
+unsigned CollisionObject::getEndIndexOfArray()
+{
+	return all_shape_.getEndIndex();
+}
+
+
+
+CollisionObject::Shape* CollisionObject::getpShape(unsigned index)
+{
+	return all_shape_.getObject(index);
+}
+
+
+
+CollisionBase* CollisionObject::getpCollisionBase()
+{
+	return collision_base_;
+}
+
+
+
+void CollisionObject::setCollisionBase(CollisionBase* value)
+{
+	collision_base_ = value;
+}
+
+
+
+ObjectOfTree<CollisionObject*>* CollisionObject::getpObjectOfTree()
+{
+	return object_of_tree_;
+}
+
+
+
+void CollisionObject::setObjectOfTree(ObjectOfTree<CollisionObject*>* value)
+{
+	object_of_tree_ = value;
+}
+
+
+
+AABB* CollisionObject::getOctreeAABB()
+{
+	return &octree_aabb_;
 }
 
 
@@ -63,80 +106,90 @@ void CollisionObject::setIsJudgment(bool value)
 //****************************************
 // 関数定義
 //****************************************
-CollisionObject::CollisionObject(CollisionShapeBase* collision_shape, int tag)
-	: collision_shape_(collision_shape),
-	tag_(tag),
-	is_judgment_(true)
+void CollisionObject::Shape::Init(int tag, CollisionShapeBase* shape)
 {
+	tag_ = tag;
+	shape_ = shape;
 }
 
 
 
-CollisionObject::~CollisionObject()
+void CollisionObject::Shape::Uninit()
 {
-	switch (collision_shape_->getType())
+	SafeRelease::Normal(&shape_);
+}
+
+
+
+void CollisionObject::Init(int tag)
+{
+	tag_ = tag;
+}
+
+
+
+void CollisionObject::Update()
+{
+	for (unsigned i = 0; i < all_shape_.getEndIndex(); i++)
 	{
-		case CollisionShapeBase::Type::AABB:
-		{
-			AABB* temp = (AABB*)collision_shape_;
-			SafeRelease::Normal(&temp);
-			break;
-		}
-		case CollisionShapeBase::Type::CAPSULE:
-		{
-			Capsule* temp = (Capsule*)collision_shape_;
-			SafeRelease::Normal(&temp);
-			break;
-		}
-		case CollisionShapeBase::Type::CYLINDER:
-		{
-			Cylinder* temp = (Cylinder*)collision_shape_;
-			SafeRelease::Normal(&temp);
+		all_shape_.getObject(i)->getpShape()->Update();
+	}
+	UpdateAABB();
+}
 
-			break;
-		}
-		case CollisionShapeBase::Type::OBB:
-		{
-			OBB* temp = (OBB*)collision_shape_;
-			SafeRelease::Normal(&temp);
 
-			break;
-		}
-		case CollisionShapeBase::Type::PLANE:
-		{
-			Plane* temp = (Plane*)collision_shape_;
-			SafeRelease::Normal(&temp);
 
-			break;
-		}
-		case CollisionShapeBase::Type::LINE_SEGMENT:
-		{
-			LineSegment* temp = (LineSegment*)collision_shape_;
-			SafeRelease::Normal(&temp);
+void CollisionObject::AddShape(int tag, CollisionShapeBase* shape)
+{
+	for (unsigned i = 0; i < all_shape_.getEndIndex(); i++)
+	{
+		if (all_shape_.getObject(i)->getTag() == tag) return;
+	}
+	CollisionObject::Shape* object_shape = new CollisionObject::Shape();
+	object_shape->Init(tag, shape);
+	all_shape_.AddToArray(object_shape);
+}
 
-			break;
-		}
-		case CollisionShapeBase::Type::SPHERE:
-		{
-			Sphere* temp = (Sphere*)collision_shape_;
-			SafeRelease::Normal(&temp);
 
-			break;
-		}
-		case CollisionShapeBase::Type::TRIANGLE:
-		{
-			Triangle* temp = (Triangle*)collision_shape_;
-			SafeRelease::Normal(&temp);
 
-			break;
-		}
+void CollisionObject::ReleaseShape(int tag)
+{
+	for (unsigned i = 0; i < all_shape_.getEndIndex(); i++)
+	{
+		if (all_shape_.getObject(i)->getTag() != tag) continue;
+		all_shape_.DeleteFromArrayAndSort(all_shape_.getObject(i));
+		return;
 	}
 }
 
 
 
-void CollisionObject::ResetHitData()
+void CollisionObject::ReleaseAllShape()
 {
-	hit_vector_.Reset();
-	is_judgment_ = true;
+	all_shape_.ReleaseObjectAndReset();
+}
+
+
+
+void CollisionObject::UpdateAABB()
+{
+	Vector3D min;
+	Vector3D max;
+	for (unsigned i = 0; i < all_shape_.getEndIndex(); i++)
+	{
+		Vec3 temp_min = *all_shape_.getObject(i)->getpShape()->getpMin();
+		Vec3 temp_max = *all_shape_.getObject(i)->getpShape()->getpMax();
+
+		// 最小が上、最大が下の場合
+		if (temp_min.y >= temp_max.y)
+		{
+			temp_min.y = -temp_min.y;
+			temp_max.y = -temp_max.y;
+		}
+		if (min < temp_min) min = temp_min;
+		if (max > temp_max) max = temp_max;
+	}
+
+	octree_aabb_.setLength(max - min);
+	octree_aabb_.Update();
 }

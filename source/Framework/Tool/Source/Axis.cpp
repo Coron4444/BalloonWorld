@@ -166,6 +166,13 @@ void Axis::RotationMatrix(MATRIX* rotation_matrix)
 
 
 
+void Axis::RotationQuaternion(Quaternion* quaternion)
+{
+	forward_.RotationQuaternion(quaternion);
+	up_.RotationQuaternion(quaternion);
+	CalculationUpAndRightVector();
+	NormalizeAllVector();
+}
 void Axis::CalculationUpAndRightVector()
 {
 	right_ = Vector3D::CreateCross(&up_, &forward_);

@@ -34,8 +34,7 @@ float Plane::getAdjustmetD()
 //****************************************
 // ä÷êîíËã`
 //****************************************
-Plane::Plane()
-	: CollisionShapeBase(CollisionShapeBase::Type::PLANE)
+Plane::~Plane()
 {
 }
 
@@ -43,6 +42,8 @@ Plane::Plane()
 
 void Plane::Init(Vector3D normal, Vector3D point)
 {
+	CollisionShapeBase::setType(CollisionShapeBase::Type::CAPSULE);
+
 	// ñ@ê¸
 	normal_ = normal;
 	normal_.ChangeNormalize();
@@ -61,4 +62,18 @@ void Plane::Init(Vec3 point0, Vec3 point1, Vec3 point2)
 
 	// èâä˙âª
 	Init(temp_normal_vector, point0);
+
+	CalculationMinAndMax();
+}
+
+
+
+void Plane::Update()
+{
+}
+
+
+
+void Plane::CalculationMinAndMax()
+{
 }

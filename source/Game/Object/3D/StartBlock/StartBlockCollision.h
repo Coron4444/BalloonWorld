@@ -22,7 +22,7 @@
 //!
 //! @details スタートブロックの衝突Class
 //************************************************************
-class GoalCollision : public CollisionNull
+class StartBlockCollision : public CollisionNull
 {
 //====================
 // 列挙型定義

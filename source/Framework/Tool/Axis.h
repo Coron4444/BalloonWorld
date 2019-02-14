@@ -181,6 +181,14 @@ public:
 	//----------------------------------------
 	void RotationMatrix(MATRIX* rotation_matrix);
 
+	//----------------------------------------
+	//! @brief クォータニオン回転回転関数
+	//! @details
+	//! @param quaternion クォータニオン
+	//! @retval void なし
+	//----------------------------------------
+	void RotationQuaternion(Quaternion* quaternion);
+
 private:
 	//----------------------------------------
 	//! @brief 上&右ベクトル算出関数

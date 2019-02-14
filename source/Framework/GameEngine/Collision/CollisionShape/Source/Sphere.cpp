@@ -41,8 +41,7 @@ void Sphere::setRadius(float value)
 //****************************************
 // ä÷êîíËã`
 //****************************************
-Sphere::Sphere()
-	: CollisionShapeBase(CollisionShapeBase::Type::SPHERE)
+Sphere::~Sphere()
 {
 }
 
@@ -50,9 +49,27 @@ Sphere::Sphere()
 
 void Sphere::Init(Vector3D position, float radius)
 {
-	// ç¿ïW
-	position_ = position;
+	CollisionShapeBase::setType(CollisionShapeBase::Type::CAPSULE);
 
-	// îºåa
+	position_ = position;
 	radius_ = radius;
+
+	CalculationMinAndMax();
+}
+
+
+
+void Sphere::Update()
+{
+	CalculationMinAndMax();
+}
+
+
+
+void Sphere::CalculationMinAndMax()
+{
+	Vector3D length(1.0f, 1.0f, 1.0f);
+	length.ChangeAnyLength(radius_);
+	*getpMax() = position_ + length;
+	*getpMin() = position_ + -length;
 }

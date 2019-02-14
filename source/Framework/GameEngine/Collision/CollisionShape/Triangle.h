@@ -27,13 +27,18 @@
 class Triangle : public CollisionShapeBase
 {
 //====================
+// 定数
+//====================
+private:	
+	static const int MAX_POINT_NUM = 3;		//!< 最大点数
+
+
+//====================
 // 変数
 //====================
 private:
-	Vector3D point0_;		//!< 点0
-	Vector3D point1_;		//!< 点1
-	Vector3D point2_;		//!< 点2
-	Plane plane_;			//!< 平面
+	Vector3D point_[MAX_POINT_NUM];		//!< 点0
+	Plane plane_;						//!< 平面
 
 
 //====================
@@ -41,28 +46,12 @@ private:
 //====================
 public:
 	//----------------------------------------
-	//! @brief 点0取得関数
+	//! @brief 点取得関数
 	//! @details
-	//! @param void なし
-	//! @retval Vector3D* 点0
+	//! @param index インデックス
+	//! @retval Vector3D* 点
 	//----------------------------------------
-	Vector3D* getpPoint0();
-
-	//----------------------------------------
-	//! @brief 点1取得関数
-	//! @details
-	//! @param void なし
-	//! @retval Vector3D* 点1
-	//----------------------------------------
-	Vector3D* getpPoint1();
-
-	//----------------------------------------
-	//! @brief 点2取得関数
-	//! @details
-	//! @param void なし
-	//! @retval Vector3D* 点2
-	//----------------------------------------
-	Vector3D* getpPoint2();
+	Vector3D* getpPoint(unsigned index);
 
 	//----------------------------------------
 	//! @brief 平面取得関数
@@ -78,11 +67,11 @@ public:
 //====================
 public:
 	//----------------------------------------
-	//! @brief コンストラクタ
+	//! @brief デストラクタ
 	//! @details
 	//! @param void なし
 	//----------------------------------------
-	Triangle();
+	~Triangle();
 	
 	//----------------------------------------
 	//! @brief 初期化関数
@@ -93,6 +82,22 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void Init(Vec3 point0, Vec3 point1, Vec3 point2);
+
+	//----------------------------------------
+	//! @brief 更新関数
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Update() override;
+
+private:
+	//----------------------------------------
+	//! @brief 最小値と最大値算出関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CalculationMinAndMax() override;
 };
 
 

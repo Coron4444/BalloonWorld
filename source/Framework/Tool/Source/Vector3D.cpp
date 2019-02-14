@@ -324,10 +324,10 @@ Vec3* Vector3D::RotationMatrix(MATRIX* rotation_matrix)
 
 
 
-Vec3* Vector3D::RotationQuaternion(Quaternion* Quaternion)
+Vec3* Vector3D::RotationQuaternion(Quaternion* quaternion)
 {
 	MATRIX rotation_matrix;
-	D3DXMatrixRotationQuaternion(&rotation_matrix, Quaternion);
+	D3DXMatrixRotationQuaternion(&rotation_matrix, quaternion);
 	D3DXVec3TransformNormal(this, this, &rotation_matrix);
 	return this;
 }

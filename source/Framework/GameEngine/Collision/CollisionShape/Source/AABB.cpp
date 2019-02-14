@@ -38,54 +38,30 @@ void AABB::setLength(Vector3D value)
 
 
 
-Vector3D* AABB::getpMin()
-{ 
-	return &min_; 
-}
-
-
-
-Vector3D* AABB::getpMax()
-{ 
-	return &max_; 
-}
-
-
-
 //****************************************
 // 関数定義
 //****************************************
-AABB::AABB() 
-	: CollisionShapeBase(CollisionShapeBase::Type::AABB) 
-{
-}
-
-
-
 void AABB::Init(Vector3D position, Vector3D length)
 {
-	// 座標を設定
-	position_ = position;
+	CollisionShapeBase::setType(CollisionShapeBase::Type::AABB);
 
-	// 長さを設定
+	position_ = position;
 	length_ = length;
 
-	// 最小値と最大値
-	UpdateMinAndMax();
+	CalculationMinAndMax();
 }
 
 
 
 void AABB::Update()
 {
-	// 最小値と最大値
-	UpdateMinAndMax();
+	CalculationMinAndMax();
 }
 
 
 
-void AABB::UpdateMinAndMax()
+void AABB::CalculationMinAndMax()
 {
-	min_ = position_ - length_;
-	max_ = position_ + length_;
+	*getpMax() = position_ + length_;
+	*getpMin() = position_ - length_;
 }

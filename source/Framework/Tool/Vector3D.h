@@ -336,10 +336,10 @@ public:
 	//----------------------------------------
 	//! @brief クォータニオン回転回転関数
 	//! @details
-	//! @param rotation_matrix 行列
+	//! @param quaternion クォータニオン
 	//! @retval Vec3* 変更後ベクトル
 	//----------------------------------------
-	Vec3* RotationQuaternion(Quaternion* Quaternion);
+	Vec3* RotationQuaternion(Quaternion* quaternion);
 };
 
 

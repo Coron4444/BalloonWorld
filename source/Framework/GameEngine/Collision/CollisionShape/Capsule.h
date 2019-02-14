@@ -118,10 +118,10 @@ public:
 //====================
 public:
 	//----------------------------------------
-	//! @brief コンストラクタ
+	//! @brief デストラクタ
 	//! @param void なし
 	//----------------------------------------
-	Capsule();
+	~Capsule();
 
 	//----------------------------------------
 	//! @brief 初期化関数
@@ -133,11 +133,20 @@ public:
 	void Init(Vector3D position, Vector3D vector, float radius);
 
 	//----------------------------------------
-	//! @brief 初期化関数
+	//! @brief 更新関数
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void Update();
+	void Update() override;
+
+private:
+	//----------------------------------------
+	//! @brief 最小値と最大値算出関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CalculationMinAndMax() override;
 };
 
 

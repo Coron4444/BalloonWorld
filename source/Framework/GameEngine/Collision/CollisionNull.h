@@ -77,26 +77,10 @@ public:
 	//----------------------------------------
 	//! @brief 衝突時関数
 	//! @details
-	//! @param *hit_collision 相手の衝突基底クラス
-	//! @param *hit_object    相手の衝突オブジェクト
-	//! @param *hit_my_object 自分の衝突オブジェクト
+	//! @param *information 衝突情報
 	//! @retval void なし
 	//----------------------------------------
-	virtual void HitCollision(CollisionBase* hit_collision,
-							  CollisionObject* hit_object,
-							  CollisionObject* hit_my_object) override;
-
-	//----------------------------------------
-	//! @brief 非衝突時関数
-	//! @details
-	//! @param *hit_collision 相手の衝突基底クラス
-	//! @param *hit_object    相手の衝突オブジェクト
-	//! @param *hit_my_object 自分の衝突オブジェクト
-	//! @retval void なし
-	//----------------------------------------
-	virtual void NotHitCollision(CollisionBase*	hit_collision,
-								 CollisionObject* hit_object,
-								 CollisionObject* hit_my_object) override;
+	virtual void HitCollision(CollisionInformation* information) override;
 
 	//----------------------------------------
 	//! @brief フィールドとの衝突時関数
@@ -105,14 +89,6 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	virtual void HitGround(float position_y) override;
-
-	//----------------------------------------
-	//! @brief フィールドとの非衝突時関数
-	//! @details
-	//! @param position_y フィールドの高さ
-	//! @retval void なし
-	//----------------------------------------
-	virtual void NotHitGround(float position_y) override;
 };
 
 

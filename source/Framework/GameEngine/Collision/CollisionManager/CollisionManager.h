@@ -15,6 +15,8 @@
 #include <vector>
 
 #include "LinerOctree.h"
+#include "../CollisionObject.h"
+#include "../CollisionInformation.h"
 
 #include <Tool/LimitedPointerArray.h>
 
@@ -24,8 +26,6 @@
 // クラス宣言
 //****************************************
 class CollisionBase;
-class CollisionObject;
-class CollisionObjects;
 class GameObjectBase;
 class MeshPlanePolygon;
 
@@ -52,14 +52,9 @@ private:
 	LimitedPointerArray<CollisionBase*, ARRAY_NUM> all_collision_;	//!< 全衝突配列
 	LimitedPointerArray<CollisionBase*, ARRAY_NUM> await_add_;		//!< 追加待ち配列
 	LimitedPointerArray<CollisionBase*, ARRAY_NUM> await_release_;	//!< 解放待ち配列
-	LinerOctree<CollisionObjects*>* liner_octree_ = nullptr;		//!< 8分木
-	std::vector<CollisionObjects*> collision_objects_list_;			//!< 衝突リスト
+	LinerOctree<CollisionObject*>* liner_octree_ = nullptr;			//!< 8分木
+	std::vector<CollisionObject*> collision_objects_list_;			//!< 衝突リスト
 	MeshPlanePolygon* ground_polygon_;								//!< 地面ポリゴン
-
-	// デバッグ用
-	DWORD time_;
-	bool is_octree_ = true;
-	bool is_pair_check_ = true;
 
 
 //====================
@@ -164,14 +159,6 @@ private:
 	void CollisionDetermination();
 
 	//----------------------------------------
-	//! @brief 古い衝突判定関数
-	//! @details
-	//! @param void なし
-	//! @retval void なし
-	//----------------------------------------
-	void OldCollisionDetermination();
-
-	//----------------------------------------
 	//! @brief 地面との衝突判定関数
 	//! @details
 	//! @param void なし
@@ -186,18 +173,22 @@ private:
 	//! @param *collision_object1 衝突オブジェクト1
 	//! @retval void なし
 	//----------------------------------------
-	void ActualCalculation(CollisionObjects* collision_objects0,
-						   CollisionObjects* collision_objects1);
+	void ActualCalculation(CollisionObject* collision_object0,
+						   CollisionObject* collision_object1);
 
 	//----------------------------------------
 	//! @brief 衝突計算振り分け関数
 	//! @details
-	//! @param *collision_object0 衝突オブジェクト0
-	//! @param *collision_object1 衝突オブジェクト1
+	//! @param *information0     衝突情報0
+	//! @param *information1     衝突情報1
+	//! @param *collision_shape0 衝突形状0
+	//! @param *collision_shape1 衝突形状1
 	//! @retval void なし
 	//----------------------------------------
-	bool SortCollisionCalculation(CollisionObject* collision_object0,
-								  CollisionObject* collision_object1);
+	bool SortCollisionCalculation(CollisionInformation* information0,
+								  CollisionInformation* information1,
+								  CollisionObject::Shape* collision_shape0,
+								  CollisionObject::Shape* collision_shape1);
 
 	//----------------------------------------
 	//! @brief Debug表示関数

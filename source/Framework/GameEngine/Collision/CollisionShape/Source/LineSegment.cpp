@@ -48,8 +48,7 @@ float LineSegment::getSlopeOf2DLineSegment()
 //****************************************
 // 関数定義
 //****************************************
-LineSegment::LineSegment() 
-	: CollisionShapeBase(CollisionShapeBase::Type::LINE_SEGMENT) 
+LineSegment::~LineSegment() 
 {
 }
 
@@ -57,6 +56,41 @@ LineSegment::LineSegment()
 
 void LineSegment::Init(Vector3D position, Vector3D vector)
 {
+	CollisionShapeBase::setType(CollisionShapeBase::Type::LINE_SEGMENT);
+
 	position_ = position;
 	vector_ = vector;
+
+	CalculationMinAndMax();
+}
+
+
+
+void LineSegment::Update()
+{
+	// 最小最大更新
+	CalculationMinAndMax();
+}
+
+
+
+void LineSegment::CalculationMinAndMax()
+{
+	Vec3 min_position;
+	Vec3 max_position;
+
+	// 座標が左、方向ベクトル加算済み座標が右の場合
+	if (position_ < getAddVectorToPosition())
+	{
+		min_position = getAddVectorToPosition();
+		max_position = position_;
+	}
+	else
+	{
+		min_position = position_;
+		max_position = getAddVectorToPosition();
+	}
+
+	*getpMax() = max_position;
+	*getpMin() = min_position;
 }

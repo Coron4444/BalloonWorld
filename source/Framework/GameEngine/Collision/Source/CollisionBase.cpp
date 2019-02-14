@@ -16,20 +16,6 @@
 //****************************************
 // プロパティ定義
 //****************************************
-unsigned CollisionBase::getEndIndexOfArray()
-{
-	return collision_objects_.getEndIndex();
-}
-
-
-
-CollisionObjects* CollisionBase::getpCollisionObjects(unsigned index)
-{
-	return collision_objects_.getObject(index);
-}
-
-
-
 CollisionBase::Type CollisionBase::getType()
 {
 	return type_;
@@ -40,6 +26,20 @@ CollisionBase::Type CollisionBase::getType()
 void CollisionBase::setType(CollisionBase::Type value)
 {
 	type_ = value;
+}
+
+
+
+unsigned CollisionBase::getEndIndexOfArray()
+{
+	return collision_object_.getEndIndex();
+}
+
+
+
+CollisionObject* CollisionBase::getpCollisionObject(unsigned index)
+{
+	return collision_object_.getObject(index);
 }
 
 
@@ -67,43 +67,44 @@ CollisionBase::~CollisionBase()
 
 
 
-void CollisionBase::AddCollisionObjectsToArray(CollisionObjects* object)
+void CollisionBase::AddCollisionObject(CollisionObject* object)
 {
-	collision_objects_.AddToArray(object);
+	collision_object_.AddToArray(object);
 }
 
 
 
-void CollisionBase::OverwriteArrayCollisionsObject(CollisionObjects* old_object,
-												   CollisionObjects* new_object)
+void CollisionBase::OverwriteCollisionsObject(CollisionObject* old_object,
+											  CollisionObject* new_object)
 {
-	old_object->ReleaseAllCollisionObjectFromArray();
-	collision_objects_.OverwriteArray(old_object, new_object);
+	old_object->ReleaseAllShape();
+	collision_object_.OverwriteArray(old_object, new_object);
 }
 
 
 
-void CollisionBase::ReleaseCollisionObjectsFromArray(CollisionObjects* object)
+void CollisionBase::ReleaseCollisionObject(CollisionObject* object)
 {
-	object->ReleaseAllCollisionObjectFromArray();
-	collision_objects_.DeleteFromArrayAndSort(object);
+	object->ReleaseAllShape();
+	collision_object_.DeleteFromArrayAndSort(object);
 }
 
 
 
-void CollisionBase::ReleaseAllCollisionObjectsFromArray()
+void CollisionBase::ReleaseAllCollisionObject()
 {
-	for (unsigned i = 0; i < collision_objects_.getEndIndex(); i++)
+	for (unsigned i = 0; i < collision_object_.getEndIndex(); i++)
 	{
-		collision_objects_.getObject(i)->ReleaseAllCollisionObjectFromArray();
+		collision_object_.getObject(i)->ReleaseAllShape();
 	}
-	collision_objects_.ReleaseObjectAndReset();
+	collision_object_.ReleaseObjectAndReset();
 }
 
 
-
-void CollisionBase::EliminationOfNesting(Transform* transform, const Vec3* hit_vector)
+void CollisionBase::UpdateAllCollisionObject()
 {
-	*transform->getpPosition() += *hit_vector;
-	transform->CreateWorldMatrixPlusTranspose();
+	for (unsigned i = 0; i < collision_object_.getEndIndex(); i++)
+	{
+		collision_object_.getObject(i)->Update();
+	}
 }

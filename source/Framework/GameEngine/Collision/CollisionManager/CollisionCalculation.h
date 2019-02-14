@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <Tool/Vector3D.h>
+#include <Tool/Transform.h>
 
 
 
@@ -28,6 +28,7 @@ class Plane;
 class Sphere;
 class Triangle;
 class QuadraticEquation;
+class CollisionInformation;
 
 
 
@@ -52,177 +53,211 @@ public:
 	//----------------------------------------
 	//! @brief 2D線分と2D線分の衝突判定関数
 	//! @details
-	//! @param *hit_point     衝突点
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
 	//! @param *line_segment0 線分
 	//! @param *line_segment1 線分
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOf2DLineSegmentAnd2DLineSegment(Vector3D* hit_point,
+	static bool CollisionJudgmentOf2DLineSegmentAnd2DLineSegment(CollisionInformation* information0,
+																 CollisionInformation* information1,
 																 LineSegment* line_segment0,
 																 LineSegment* line_segment1);
 
 	//----------------------------------------
 	//! @brief 線分と球の衝突判定関数
 	//! @details
-	//! @param *hit_point    衝突点
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
 	//! @param *line_segment 線分
 	//! @param *sphere       球
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfLineSegmentAndSphere(Vector3D* hit_point,
+	static bool CollisionJudgmentOfLineSegmentAndSphere(CollisionInformation* information0,
+														CollisionInformation* information1,
 														LineSegment* line_segment,
 														Sphere* sphere);
 
 	//----------------------------------------
 	//! @brief 線分と平面の衝突判定関数
 	//! @details
-	//! @param *hit_point    衝突点
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
 	//! @param *line_segment 線分
 	//! @param *plane        平面
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfLineSegmentAndPlane(Vector3D* hit_point,
+	static bool CollisionJudgmentOfLineSegmentAndPlane(CollisionInformation* information0,
+													   CollisionInformation* information1,
 													   LineSegment* line_segment,
 													   Plane* plane);
 
 	//----------------------------------------
 	//! @brief 線分と三角形平面の衝突判定関数
 	//! @details
-	//! @param *hit_point    衝突点
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
 	//! @param *line_segment 線分
 	//! @param *triangle     三角形平面
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfLineSegmentAndTriangle(Vector3D* hit_point,
+	static bool CollisionJudgmentOfLineSegmentAndTriangle(CollisionInformation* information0,
+														  CollisionInformation* information1,
 														  LineSegment* line_segment,
 														  Triangle* triangle);
 
 	//----------------------------------------
 	//! @brief 線分と円柱の衝突判定関数
 	//! @details
-	//! @param *hit_point    衝突点
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
 	//! @param *line_segment 線分
 	//! @param *cylinder     円柱
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfLineSegmentAndCylinder(Vector3D* hit_point,
+	static bool CollisionJudgmentOfLineSegmentAndCylinder(CollisionInformation* information0,
+														  CollisionInformation* information1,
 														  LineSegment* line_segment,
 														  Cylinder* cylinder);
 
 	//----------------------------------------
 	//! @brief 線分とカプセルの衝突判定関数
 	//! @details
-	//! @param *hit_point    衝突点
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
 	//! @param *line_segment 線分
 	//! @param *capsule      カプセル
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfLineSegmentAndCapsule(Vector3D* hit_point,
+	static bool CollisionJudgmentOfLineSegmentAndCapsule(CollisionInformation* information0,
+														 CollisionInformation* information1,
 														 LineSegment* line_segment,
 														 Capsule* capsule);
 
 	//----------------------------------------
 	//! @brief 球と球の衝突判定関数
 	//! @details
-	//! @param *hit_vector 衝突ベクトル
-	//! @param *sphere0    球
-	//! @param *sphere1    球
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
+	//! @param *sphere0      球
+	//! @param *sphere1      球
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfSphereAndSphere(Vector3D* hit_vector,
+	static bool CollisionJudgmentOfSphereAndSphere(CollisionInformation* information0,
+												   CollisionInformation* information1,
 												   Sphere* sphere0,
 												   Sphere* sphere1);
 
 	//----------------------------------------
 	//! @brief 球と平面の衝突判定関数
 	//! @details
-	//! @param *hit_vector 衝突ベクトル
-	//! @param *sphere     球
-	//! @param *plane      球
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
+	//! @param *sphere       球
+	//! @param *plane        平面
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfSphereAndPlane(Vector3D* hit_vector,
+	static bool CollisionJudgmentOfSphereAndPlane(CollisionInformation* information0,
+												  CollisionInformation* information1,
 												  Sphere* sphere,
 												  Plane* plane);
 
 	//----------------------------------------
 	//! @brief 球と三角形平面の衝突判定関数
 	//! @details
-	//! @param *hit_vector 衝突ベクトル
-	//! @param *sphere     球
-	//! @param *triangle   三角形平面
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
+	//! @param *sphere       球
+	//! @param *triangle     三角形平面
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfSphereAndTriangle(Vector3D* hit_vector,
+	static bool CollisionJudgmentOfSphereAndTriangle(CollisionInformation* information0,
+													 CollisionInformation* information1,
 													 Sphere* sphere,
 													 Triangle* triangle);
 
 	//----------------------------------------
 	//! @brief 球とカプセルの衝突判定関数
 	//! @details
-	//! @param *hit_vector 衝突ベクトル
-	//! @param *sphere     球
-	//! @param *capsule    カプセル
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
+	//! @param *sphere       球
+	//! @param *capsule      カプセル
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfSphereAndCapsule(Vector3D* hit_vector,
+	static bool CollisionJudgmentOfSphereAndCapsule(CollisionInformation* information0,
+													CollisionInformation* information1,
 													Sphere* sphere,
 													Capsule* capsule);
 
 	//----------------------------------------
 	//! @brief 球とOBBの衝突判定関数
 	//! @details
-	//! @param *hit_vector 衝突ベクトル
-	//! @param *sphere     球
-	//! @param *obb        OBB
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
+	//! @param *sphere       球
+	//! @param *obb          OBB
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfSphereAndOBB(Vector3D* hit_vector,
+	static bool CollisionJudgmentOfSphereAndOBB(CollisionInformation* information0,
+												CollisionInformation* information1,
 												Sphere* sphere,
 												OBB* obb);
 
 	//----------------------------------------
 	//! @brief 平面と平面の衝突判定関数
 	//! @details
-	//! @param *hit_line_segment 衝突線分
-	//! @param *plane0           平面
-	//! @param *plane1           平面
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
+	//! @param *plane0       平面
+	//! @param *plane1       平面
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfPlaneAndPlane(LineSegment* hit_line_segment,
+	static bool CollisionJudgmentOfPlaneAndPlane(CollisionInformation* information0,
+												 CollisionInformation* information1,
 												 Plane* plane0,
 												 Plane* plane1);
 
 	//----------------------------------------
 	//! @brief 平面と三角形平面の衝突判定関数
 	//! @details
-	//! @param *plane    平面
-	//! @param *triangle 三角形平面
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
+	//! @param *plane        平面
+	//! @param *triangle     三角形平面
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfPlaneAndTriangle(Plane* plane,
+	static bool CollisionJudgmentOfPlaneAndTriangle(CollisionInformation* information0,
+													CollisionInformation* information1,
+													Plane* plane,
 													Triangle* triangle);
 
 	//----------------------------------------
 	//! @brief 三角形平面と三角形平面の衝突判定関数
 	//! @details
-	//! @param *triangle0 三角形平面
-	//! @param *triangle0 三角形平面
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
+	//! @param *triangle0    三角形平面
+	//! @param *triangle0    三角形平面
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfTriangleAndTriangle(Triangle* triangle0,
+	static bool CollisionJudgmentOfTriangleAndTriangle(CollisionInformation* information0,
+													   CollisionInformation* information1,
+													   Triangle* triangle0,
 													   Triangle* triangle1);
 
 	//----------------------------------------
 	//! @brief カプセルとカプセルの衝突判定関数
 	//! @details
-	//! @param *hit_vector    衝突ベクトル
-	//! @param *capsule0      カプセル
-	//! @param *capsule1      カプセル
-	//! @param active_vector  補正用ベクトル
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
+	//! @param *capsule0     カプセル
+	//! @param *capsule1     カプセル
+	//! @param active_vector 補正用ベクトル
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfCapsuleAndCapsule(Vector3D* hit_vector,
+	static bool CollisionJudgmentOfCapsuleAndCapsule(CollisionInformation* information0,
+													 CollisionInformation* information1,
 													 Capsule* capsule0,
 													 Capsule* capsule1,
 													 Vector3D active_vector = {0.0f, 0.0f, 0.0f});
@@ -230,14 +265,25 @@ public:
 	//----------------------------------------
 	//! @brief OBBとOBBの衝突判定関数
 	//! @details
-	//! @param *hit_vector 衝突ベクトル
-	//! @param *obb0       OBB
-	//! @param *obb1       OBB
+	//! @param *information0 衝突情報0
+	//! @param *information1 衝突情報1
+	//! @param *obb0         OBB
+	//! @param *obb1         OBB
 	//! @retval bool 衝突している場合true
 	//----------------------------------------
-	static bool CollisionJudgmentOfOBBAndOBB(Vector3D* hit_vector,
+	static bool CollisionJudgmentOfOBBAndOBB(CollisionInformation* information0,
+											 CollisionInformation* information1,
 											 OBB* obb0,
 											 OBB* obb1);
+
+	//----------------------------------------
+	//! @brief めり込み解消関数
+	//! @details
+	//! @param *information 衝突情報
+	//! @param *transform   めり込みを解消したい状態
+	//! @retval void なし
+	//----------------------------------------
+	void EliminationOfNesting(CollisionInformation* information, Transform* transform);
 
 private:
 	//----------------------------------------
@@ -618,6 +664,15 @@ private:
 	//! @retval Vector3D 最短距離ベクトル
 	//----------------------------------------
 	static Vector3D CalculateTheShortestDistanceVectorBetweenOBBAndPoint(OBB* obb, Vector3D* point);
+
+	//----------------------------------------
+	//! @brief OBBの衝突点から法線ベクトルの算出関数
+	//! @details
+	//! @param *obb             OBB
+	//! @param *collision_point 衝突点
+	//! @retval Vector3D 法線ベクトル
+	//----------------------------------------
+	static Vector3D CalculateOfNormalFromCollisionPointOfOBB(OBB* obb, Vector3D* collision_point);
 
 	//----------------------------------------
 	//! @brief 平面と点の最短距離の算出関数
