@@ -62,12 +62,36 @@ public:
 	Vector3D* getpPosition();
 
 	//----------------------------------------
+	//! @brief 軸取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Axis* 軸
+	//----------------------------------------
+	Axis* getpAxis();
+
+	//----------------------------------------
+	//! @brief 軸設定関数
+	//! @details
+	//! @param value 軸
+	//! @retval void なし
+	//----------------------------------------
+	void setAxis(Axis* value);
+
+	//----------------------------------------
 	//! @brief 前ベクトル取得関数
 	//! @details
 	//! @param void なし
 	//! @retval Vector3D* 前ベクトル
 	//----------------------------------------
-	Vector3D* getpForawrd();
+	Vector3D* getpForward();
+
+	//----------------------------------------
+	//! @brief 前ベクトル設定関数
+	//! @details
+	//! @param value 前ベクトル
+	//! @retval void なし
+	//----------------------------------------
+	void setForward(Vector3D value);
 
 	//----------------------------------------
 	//! @brief 上ベクトル取得関数

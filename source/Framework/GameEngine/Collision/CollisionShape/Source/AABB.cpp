@@ -17,7 +17,7 @@
 //****************************************
 // プロパティ定義
 //****************************************
-Vector3D* AABB::getpPositon()
+Vector3D* AABB::getpPosition()
 { 
 	return &position_; 
 }
@@ -41,6 +41,13 @@ void AABB::setLength(Vector3D value)
 //****************************************
 // 関数定義
 //****************************************
+AABB::~AABB()
+{
+
+}
+
+
+
 void AABB::Init(Vector3D position, Vector3D length)
 {
 	CollisionShapeBase::setType(CollisionShapeBase::Type::AABB);

@@ -26,7 +26,7 @@ const Vector3D Axis::DEFAULT_RIGHT(1.0f, 0.0f, 0.0f);
 //****************************************
 // プロパティ定義
 //****************************************
-Vector3D* Axis::getpForawrd()
+Vector3D* Axis::getpForward()
 {
 	return &forward_; 
 }
@@ -42,7 +42,7 @@ void Axis::setForward(Vec3 value)
 
 
 
-Vector3D* Axis::getpDefaultForawrd()
+Vector3D* Axis::getpDefaultForward()
 {
 	return &default_forward_;
 }

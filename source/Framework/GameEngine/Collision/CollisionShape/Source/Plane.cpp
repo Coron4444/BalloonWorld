@@ -42,7 +42,7 @@ Plane::~Plane()
 
 void Plane::Init(Vector3D normal, Vector3D point)
 {
-	CollisionShapeBase::setType(CollisionShapeBase::Type::CAPSULE);
+	CollisionShapeBase::setType(CollisionShapeBase::Type::PLANE);
 
 	// ñ@ê¸
 	normal_ = normal;

@@ -91,16 +91,16 @@ void CameraState_HomingTarget::Update()
 void CameraState_HomingTarget::CalculationPosition()
 {
 	*getpCamera()->getpPositon() = *target_object_->getpTransform()->getpPosition();
-	Vector3D forawrd = -(*getpCamera()->getpAxis()->getpForawrd());
-	*getpCamera()->getpPositon() += *forawrd.ChangeAnyLength(lenght_.getLength());
+	Vector3D Forward = -(*getpCamera()->getpAxis()->getpForward());
+	*getpCamera()->getpPositon() += *Forward.ChangeAnyLength(lenght_.getLength());
 }
 
 
 
 void CameraState_HomingTarget::CalculationGazingPoint()
 {
-	Vector3D forawrd = *getpCamera()->getpAxis()->getpForawrd();
-	*getpCamera()->getpGazingPoint() = *getpCamera()->getpPositon() + *forawrd.ChangeAnyLength(lenght_.getLength());
+	Vector3D Forward = *getpCamera()->getpAxis()->getpForward();
+	*getpCamera()->getpGazingPoint() = *getpCamera()->getpPositon() + *Forward.ChangeAnyLength(lenght_.getLength());
 }
 
 
@@ -127,7 +127,7 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 
 		// À•W‚ÌŽZo
 		float length = position_to_gazing_point.getLength();
-		position_to_gazing_point = *getpCamera()->getpAxis()->getpForawrd();
+		position_to_gazing_point = *getpCamera()->getpAxis()->getpForward();
 		position_to_gazing_point.ChangeAnyLength(length);
 		*getpCamera()->getpPositon() = *getpCamera()->getpGazingPoint()
 			+ position_to_gazing_point;
@@ -147,7 +147,7 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 
 		// À•W‚ÌŽZo
 		float length = position_to_gazing_point.getLength();
-		position_to_gazing_point = *getpCamera()->getpAxis()->getpForawrd();
+		position_to_gazing_point = *getpCamera()->getpAxis()->getpForward();
 		position_to_gazing_point.ChangeAnyLength(length);
 		*getpCamera()->getpPositon() = *getpCamera()->getpGazingPoint()
 			+ position_to_gazing_point;
@@ -167,7 +167,7 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 
 		// À•W‚ÌŽZo
 		float length = position_to_gazing_point.getLength();
-		position_to_gazing_point = *getpCamera()->getpAxis()->getpForawrd();
+		position_to_gazing_point = *getpCamera()->getpAxis()->getpForward();
 		position_to_gazing_point.ChangeAnyLength(length);
 		*getpCamera()->getpPositon() = *getpCamera()->getpGazingPoint()
 			+ position_to_gazing_point;
@@ -187,7 +187,7 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 
 		// À•W‚ÌŽZo
 		float length = position_to_gazing_point.getLength();
-		position_to_gazing_point = *getpCamera()->getpAxis()->getpForawrd();
+		position_to_gazing_point = *getpCamera()->getpAxis()->getpForward();
 		position_to_gazing_point.ChangeAnyLength(length);
 		*getpCamera()->getpPositon() = *getpCamera()->getpGazingPoint()
 			+ position_to_gazing_point;

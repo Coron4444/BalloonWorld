@@ -283,7 +283,7 @@ public:
 	//! @param *transform   ‚ß‚è‚İ‚ğ‰ğÁ‚µ‚½‚¢ó‘Ô
 	//! @retval void ‚È‚µ
 	//----------------------------------------
-	void EliminationOfNesting(CollisionInformation* information, Transform* transform);
+	static void EliminationOfNesting(CollisionInformation* information, Transform* transform);
 
 private:
 	//----------------------------------------

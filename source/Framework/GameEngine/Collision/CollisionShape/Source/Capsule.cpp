@@ -12,6 +12,8 @@
 //****************************************
 #include "../Capsule.h"
 
+#include <Tool/Axis.h>
+
 
 
 //****************************************
@@ -121,9 +123,42 @@ void Capsule::Update()
 
 void Capsule::CalculationMinAndMax()
 {
-	Vector3D length(1.0f, 1.0f, 1.0f);
-	length.ChangeAnyLength(sphere0_.getRadius());
+	Vec3 max;
+	Vec3 min;
 
-	*getpMax() = *cylinder_.getpLineSegment()->getpMax() + length;
-	*getpMin() = *cylinder_.getpLineSegment()->getpMin() + -length;
+	// XÀ•W
+	Axis axis;
+	axis.RotationAxisZ(D3DXToRadian(-45.0f));
+	Vector3D up = *axis.getpUp();
+	Vector3D right = Vector3D(1.0f, 0.0f, 0.0f);
+	up.ChangeAnyLength(getpVector()->getLength());
+	right.ChangeAnyLength(getRadius());
+
+	Vector3D temp_max = *getpPosition() + up + right;
+	max.x = temp_max.x;
+	Vector3D temp_min = *getpPosition() + -right;
+	min.x = temp_min.x;
+
+	// YÀ•W
+	right = Vector3D(0.0f, 1.0f, 0.0f);
+	right.ChangeAnyLength(getRadius());
+	temp_max = *getpPosition() + up + right;
+	max.y = temp_max.y;
+	temp_min = *getpPosition() + -right;
+	min.y = temp_min.y;
+
+	// ZÀ•W
+	axis.Reset();
+	axis.RotationAxisX(D3DXToRadian(45.0f));
+	up = *axis.getpUp();
+	Vector3D forward = Vector3D(0.0f, 0.0f, 1.0f);
+	up.ChangeAnyLength(getpVector()->getLength());
+	forward.ChangeAnyLength(getRadius());
+	temp_max = *getpPosition() + up + forward;
+	max.z = temp_max.z;
+	temp_min = *getpPosition() + -forward;
+	min.z = temp_min.z;
+
+	*getpMax() = max;
+	*getpMin() = min;
 }

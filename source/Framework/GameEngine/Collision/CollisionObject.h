@@ -101,7 +101,7 @@ public:
 	//====================
 	public:
 		//----------------------------------------
-		//! @brief 初期化
+		//! @brief 初期化関数
 		//! @details
 		//! @param tag    タグ
 		//! @param *shape 衝突形状
@@ -110,9 +110,10 @@ public:
 		void Init(int tag, CollisionShapeBase* shape);
 
 		//----------------------------------------
-		//! @brief デストラクタ
+		//! @brief 終了関数
 		//! @details
 		//! @param void なし
+		//! @retval void なし
 		//----------------------------------------
 		void Uninit();
 	};
@@ -213,10 +214,11 @@ public:
 	//----------------------------------------
 	//! @brief 初期化
 	//! @details
-	//! @param tag タグ
+	//! @param tag        タグ
+	//! @param *collision 衝突基底クラス
 	//! @retval void なし
 	//----------------------------------------
-	void Init(int tag);
+	void Init(int tag, CollisionBase* collision);
 
 	//----------------------------------------
 	//! @brief 更新関数

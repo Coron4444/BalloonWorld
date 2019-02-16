@@ -91,11 +91,11 @@ void Transform::setLookAtVector(Vector3D look_at_vector)
 	look_at_vector.ChangeNormalize();
 
 	// 初期状態の前ベクトルと向く方向との外積を算出
-	Vector3D temp_vector = Vector3D::CreateCross(axis_.getpDefaultForawrd(),
+	Vector3D temp_vector = Vector3D::CreateCross(axis_.getpDefaultForward(),
 												 &look_at_vector);
 
 	// ターゲットクォータニオンの回転角度の算出
-	float temp_dot = Vector3D::CreateDot(axis_.getpDefaultForawrd(), &look_at_vector);
+	float temp_dot = Vector3D::CreateDot(axis_.getpDefaultForward(), &look_at_vector);
 
 	// 外積に使用したベクトルが平行だった場合
 	if (temp_vector.getLengthSquare() <= 0.0f)
@@ -139,9 +139,9 @@ void Transform::setTargetQuaternion(Vector3D axis, float angle)
 
 
 
-Vector3D* Transform::getpForawrd()
+Vector3D* Transform::getpForward()
 {
-	return axis_.getpForawrd();
+	return axis_.getpForward();
 }
 
 

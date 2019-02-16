@@ -54,7 +54,7 @@ public:
 	//! @param void なし
 	//! @retval Vector3D* 前ベクトル
 	//----------------------------------------
-	Vector3D* getpForawrd();
+	Vector3D* getpForward();
 
 	//----------------------------------------
 	//! @brief 既定前ベクトル取得関数
@@ -62,7 +62,7 @@ public:
 	//! @param void なし
 	//! @retval Vector3D* 既定前ベクトル
 	//----------------------------------------
-	Vector3D* getpDefaultForawrd();
+	Vector3D* getpDefaultForward();
 
 	//----------------------------------------
 	//! @brief 前ベクトル設定関数

@@ -20,6 +20,7 @@
 // 定数定義
 //****************************************
 const int CollisionObject::Shape::TAG_NONE = -1;
+const int CollisionObject::TAG_NONE = -1;
 
 
 
@@ -121,9 +122,10 @@ void CollisionObject::Shape::Uninit()
 
 
 
-void CollisionObject::Init(int tag)
+void CollisionObject::Init(int tag, CollisionBase* collision)
 {
 	tag_ = tag;
+	collision_base_ = collision;
 }
 
 
@@ -157,7 +159,9 @@ void CollisionObject::ReleaseShape(int tag)
 	for (unsigned i = 0; i < all_shape_.getEndIndex(); i++)
 	{
 		if (all_shape_.getObject(i)->getTag() != tag) continue;
-		all_shape_.DeleteFromArrayAndSort(all_shape_.getObject(i));
+		Shape* shape = all_shape_.getObject(i);
+		all_shape_.DeleteFromArrayAndSort(shape);
+		SafeRelease::PlusUninit(&shape);
 		return;
 	}
 }
@@ -166,30 +170,47 @@ void CollisionObject::ReleaseShape(int tag)
 
 void CollisionObject::ReleaseAllShape()
 {
-	all_shape_.ReleaseObjectAndReset();
+	for (unsigned i = 0; i < all_shape_.getEndIndex(); i++)
+	{
+		Shape* shape = all_shape_.getObject(i);
+		SafeRelease::PlusUninit(&shape);
+	}
+	all_shape_.Reset();
 }
 
 
 
 void CollisionObject::UpdateAABB()
 {
-	Vector3D min;
 	Vector3D max;
+	Vector3D min;
 	for (unsigned i = 0; i < all_shape_.getEndIndex(); i++)
 	{
-		Vec3 temp_min = *all_shape_.getObject(i)->getpShape()->getpMin();
-		Vec3 temp_max = *all_shape_.getObject(i)->getpShape()->getpMax();
+		Vector3D temp_max = *all_shape_.getObject(i)->getpShape()->getpMax();
+		Vector3D temp_min = *all_shape_.getObject(i)->getpShape()->getpMin();
 
 		// 最小が上、最大が下の場合
 		if (temp_min.y >= temp_max.y)
 		{
-			temp_min.y = -temp_min.y;
 			temp_max.y = -temp_max.y;
+			temp_min.y = -temp_min.y;
 		}
-		if (min < temp_min) min = temp_min;
-		if (max > temp_max) max = temp_max;
+		// 最小が奥、最大が手前の場合
+		if (temp_min.z >= temp_max.z)
+		{
+			temp_max.z = -temp_max.z;
+			temp_min.z = -temp_min.z;
+		}
+		
+		if (max.x < temp_max.x) max.x = temp_max.x;
+		if (max.y < temp_max.y) max.y = temp_max.y;
+		if (max.z < temp_max.z) max.z = temp_max.z;
+		
+		if (min.x > temp_min.x) min.x = temp_min.x;
+		if (min.y > temp_min.y) min.y = temp_min.y;
+		if (min.z > temp_min.z) min.z = temp_min.z;
 	}
 
-	octree_aabb_.setLength(max - min);
-	octree_aabb_.Update();
+	*octree_aabb_.getpMax() = max;
+	*octree_aabb_.getpMin() = min;
 }

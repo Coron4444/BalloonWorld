@@ -37,8 +37,15 @@ public:
 	enum class ObjectTag
 	{
 		NONE = -1,
-		BOUNDING_SPHERE,
-		SUBSTANCE_SPHERE,
+		MAIN,
+		MAX
+	};
+
+	enum class ShapeTag
+	{
+		NONE = -1,
+		MAIN,
+		TEST,
 		MAX
 	};
 
@@ -47,19 +54,17 @@ public:
 // 定数
 //====================
 private:
-	static const float BOUNDING_SPHERE_RADIUS;		//!< バウンディング球の半径
-	static const float SUBSTANCE_SPHERE_RADIUS;		//!< 実体球の半径
+	static const float MAIN_SPHERE_RADIUS;		//!< メイン球半径
 
 
 //====================
 // 変数
 //====================
 private:
-	CollisionObjects* collision_objects_;	//!< 衝突オブジェクト群
-	CollisionObject* bounding_sphere_;		//!< バウンディング球
-	CollisionObject* substance_sphere_;		//!< 実体球
+	CollisionObject* collision_object_;		//!< 衝突オブジェクト
+	Sphere* main_sphere_;					//!< メイン球
 	Player* player_;						//!< プレイヤー
-
+	Vec3 normal_;
 
 //====================
 // 関数
@@ -84,26 +89,10 @@ public:
 	//----------------------------------------
 	//! @brief 衝突時関数
 	//! @details
-	//! @param *hit_collision 相手の衝突基底クラス
-	//! @param *hit_object    相手の衝突オブジェクト
-	//! @param *hit_my_object 自分の衝突オブジェクト
+	//! @param *information 衝突情報
 	//! @retval void なし
 	//----------------------------------------
-	void HitCollision(CollisionBase* hit_collision,
-					  CollisionObject* hit_object,
-					  CollisionObject* hit_my_object) override;
-
-	//----------------------------------------
-	//! @brief 非衝突時関数
-	//! @details
-	//! @param *hit_collision 相手の衝突基底クラス
-	//! @param *hit_object    相手の衝突オブジェクト
-	//! @param *hit_my_object 自分の衝突オブジェクト
-	//! @retval void なし
-	//----------------------------------------
-	void NotHitCollision(CollisionBase*	hit_collision,
-						 CollisionObject* hit_object,
-						 CollisionObject* hit_my_object) override;
+	void HitCollision(CollisionInformation* information) override;
 
 	//----------------------------------------
 	//! @brief フィールドとの衝突時関数
@@ -113,43 +102,22 @@ public:
 	//----------------------------------------
 	void HitGround(float position_y) override;
 
+	//----------------------------------------
+	//! @brief デバッグ表示関数
+	//! @details 
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void DebugDisplay() override;
 
 private:
 	//----------------------------------------
-	//! @brief バウンディング球衝突時関数
+	//! @brief メイン球衝突時関数
 	//! @details
-	//! @param *hit_collision 相手の衝突基底クラス
-	//! @param *hit_object    相手の衝突オブジェクト
-	//! @param *hit_my_object 自分の衝突オブジェクト
+	//! @param *information 衝突情報
 	//! @retval void なし
 	//----------------------------------------
-	void HitBoundingSphere(CollisionBase* hit_collision,
-						   CollisionObject* hit_object,
-						   CollisionObject* hit_my_object);
-
-	//----------------------------------------
-	//! @brief バウンディング球非衝突時関数
-	//! @details
-	//! @param *hit_collision 相手の衝突基底クラス
-	//! @param *hit_object    相手の衝突オブジェクト
-	//! @param *hit_my_object 自分の衝突オブジェクト
-	//! @retval void なし
-	//----------------------------------------
-	void NotHitBoundingSphere(CollisionBase* hit_collision,
-							  CollisionObject* hit_object,
-							  CollisionObject* hit_my_object);
-
-	//----------------------------------------
-	//! @brief 実体球衝突時関数
-	//! @details
-	//! @param *hit_collision 相手の衝突基底クラス
-	//! @param *hit_object    相手の衝突オブジェクト
-	//! @param *hit_my_object 自分の衝突オブジェクト
-	//! @retval void なし
-	//----------------------------------------
-	void HitSubstance(CollisionBase* hit_collision,
-					  CollisionObject* hit_object,
-					  CollisionObject* hit_my_object);
+	void HitMainSphere(CollisionInformation* information);
 };
 
 

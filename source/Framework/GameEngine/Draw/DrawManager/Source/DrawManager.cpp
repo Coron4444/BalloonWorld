@@ -331,7 +331,7 @@ void DrawManager::DistributeDrawBase()
 	{
 		// レンダーターゲットメイン
 		if (all_draw_.getObject(i)->getpDrawOrderList()->getpRenderTargetFlag()
-			->CheckAny(DrawOrderList::RENDER_TARGET_BACK_BUFFER))
+			->CheckAny(DrawOrderList::RENDER_TARGET_MAIN))
 		{
 			render_target_main_->AddDrawBaseToArray(all_draw_.getObject(i));
 		}

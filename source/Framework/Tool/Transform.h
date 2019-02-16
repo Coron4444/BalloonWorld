@@ -144,7 +144,7 @@ public:
 	//! @param void なし
 	//! @retval Vector3D* 前ベクトル
 	//----------------------------------------
-	Vector3D* getpForawrd();
+	Vector3D* getpForward();
 
 	//----------------------------------------
 	//! @brief 上ベクトル取得関数

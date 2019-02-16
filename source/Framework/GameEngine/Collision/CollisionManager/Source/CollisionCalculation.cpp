@@ -195,7 +195,7 @@ bool CollisionCalculation::CollisionJudgmentOfLineSegmentAndCapsule(CollisionInf
 
 	// 前半球と衝突しているか？
 	if (CollisionJudgmentOfLineSegmentAndSphere(&temp_information0,
-												&temp_information1, 
+												&temp_information1,
 												line_segment,
 												capsule->getpSphere0()))
 	{
@@ -212,7 +212,7 @@ bool CollisionCalculation::CollisionJudgmentOfLineSegmentAndCapsule(CollisionInf
 	}
 
 	// 後半球と衝突しているか？
-	if (CollisionJudgmentOfLineSegmentAndSphere(&temp_information0, &temp_information1, 
+	if (CollisionJudgmentOfLineSegmentAndSphere(&temp_information0, &temp_information1,
 												line_segment, capsule->getpSphere1()))
 	{
 		// 鈍角かどうか
@@ -229,7 +229,7 @@ bool CollisionCalculation::CollisionJudgmentOfLineSegmentAndCapsule(CollisionInf
 
 	// 円柱と衝突しているか？
 	if (CollisionJudgmentOfLineSegmentAndCylinder(&temp_information0,
-												  &temp_information1, 
+												  &temp_information1,
 												  line_segment,
 												  capsule->getpCylinder()))
 	{
@@ -301,7 +301,7 @@ bool CollisionCalculation::CollisionJudgmentOfSphereAndTriangle(CollisionInforma
 	CollisionInformation temp_information0;
 	CollisionInformation temp_information1;
 	if (!CollisionJudgmentOfSphereAndPlane(&temp_information0,
-										   &temp_information1, 
+										   &temp_information1,
 										   sphere, triangle->getpPlane())) return false;
 
 	// 三角形の各辺が衝突しているか
@@ -365,7 +365,7 @@ bool CollisionCalculation::CollisionJudgmentOfSphereAndOBB(CollisionInformation*
 	if (FroatTruncation(shortest_distance.getLength()) > sphere->getRadius()) return false;
 
 	// 衝突点から法線を算出
-	*information0->getpCollisionPoint() = *sphere->getpPosition() + shortest_distance;
+	*information0->getpCollisionPoint() = *sphere->getpPosition() + -shortest_distance;
 	*information1->getpCollisionPoint() = *information0->getpCollisionPoint();
 	*information0->getpCollisionPointNormal() =
 		CalculateOfNormalFromCollisionPointOfOBB(obb, information0->getpCollisionPoint());
@@ -504,11 +504,11 @@ bool CollisionCalculation::CollisionJudgmentOfOBBAndOBB(CollisionInformation* in
 	Vector3D obb1_separation_axis2 = obb1->getUpLengthVectorHalf();
 
 	// 分離軸単位ベクトルの確保(軸ベクトル)
-	Vector3D obb0_normal_separation_axis0 = *obb0->getpForawrd();
+	Vector3D obb0_normal_separation_axis0 = *obb0->getpForward();
 	Vector3D obb0_normal_separation_axis1 = *obb0->getpRight();
 	Vector3D obb0_normal_separation_axis2 = *obb0->getpUp();
 
-	Vector3D obb1_normal_separation_axis0 = *obb1->getpForawrd();
+	Vector3D obb1_normal_separation_axis0 = *obb1->getpForward();
 	Vector3D obb1_normal_separation_axis1 = *obb1->getpRight();
 	Vector3D obb1_normal_separation_axis2 = *obb1->getpUp();
 
@@ -633,13 +633,23 @@ void CollisionCalculation::EliminationOfNesting(CollisionInformation* informatio
 
 float CollisionCalculation::FroatTruncation(float num)
 {
-	float SHIFT_NUM = 10000.0f;
+	//float SHIFT_NUM = 10000.0f;
+	//// 左にシフト
+	//num *= SHIFT_NUM;
+	//// 小数点切り捨て
+	//num = floorf(num);
+	//// 右にシフト
+	//num /= SHIFT_NUM;
+
+	double SHIFT_NUM = 10000.0f;
 	// 左にシフト
-	num *= SHIFT_NUM;
+	double temp = num;
+	temp *= SHIFT_NUM;
 	// 小数点切り捨て
-	num = floorf(num);
+	temp = floor(temp);
 	// 右にシフト
-	num /= SHIFT_NUM;
+	temp /= SHIFT_NUM;
+	num = (float)temp;
 
 	return num;
 }
@@ -786,10 +796,10 @@ bool CollisionCalculation::DetermineIfATrianglePenetrates(bool* is_hit_segment_o
 															 &temp_information1,
 															 &temp_line_segment0, triangle1);
 	bool is_hit1 = CollisionJudgmentOfLineSegmentAndTriangle(&temp_information0,
-															 &temp_information1, 
+															 &temp_information1,
 															 &temp_line_segment1, triangle1);
 	bool is_hit2 = CollisionJudgmentOfLineSegmentAndTriangle(&temp_information0,
-															 &temp_information1, 
+															 &temp_information1,
 															 &temp_line_segment2, triangle1);
 
 	if (is_hit0 || is_hit1 || is_hit2)
@@ -1403,10 +1413,13 @@ void CollisionCalculation::CalculationOfProtrudingVector(Vector3D* overhang_vect
 	float ratio = Vector3D::CreateDot(&temp_vector, &obb_axis) / length_half;
 
 	// はみ出した部分のベクトルを算出
-	ratio = fabsf(ratio);
-	if (ratio > 1.0f)
+	if (ratio < -1.0f)
 	{
-		*overhang_vector += (1.0f - ratio) * (obb_vector_half);
+		*overhang_vector += (ratio + 1.0f) * (obb_vector_half);
+	}
+	else if (ratio > 1.0f)
+	{
+		*overhang_vector += (ratio - 1.0f) * (obb_vector_half);
 	}
 }
 
@@ -1421,7 +1434,7 @@ Vector3D CollisionCalculation::CalculateTheShortestDistanceVectorBetweenOBBAndPo
 	CalculationOfProtrudingVector(&shortest_distance,
 								  obb->getpPosition(),
 								  obb->getForwardLengthVectorHalf(),
-								  *obb->getpForawrd(),
+								  *obb->getpForward(),
 								  point);
 
 	CalculationOfProtrudingVector(&shortest_distance,
@@ -1440,11 +1453,15 @@ Vector3D CollisionCalculation::CalculateTheShortestDistanceVectorBetweenOBBAndPo
 
 
 
-Vector3D CollisionCalculation::CalculateOfNormalFromCollisionPointOfOBB(OBB* obb, 
+Vector3D CollisionCalculation::CalculateOfNormalFromCollisionPointOfOBB(OBB* obb,
 																		Vector3D* collision_point)
 {
+	collision_point->x = FroatTruncation(collision_point->x);
+	collision_point->y = FroatTruncation(collision_point->y);
+	collision_point->x = FroatTruncation(collision_point->z);
+
 	// 上方向平面
-	if (IsThePointOnTheFrontSideOfThePlane(obb->getpPlaneUp(), 
+	if (IsThePointOnTheFrontSideOfThePlane(obb->getpPlaneUp(),
 										   collision_point)) return *obb->getpUp();
 	// 逆上方向平面
 	if (IsThePointOnTheFrontSideOfThePlane(obb->getpPlaneInverseUp(),
@@ -1457,10 +1474,10 @@ Vector3D CollisionCalculation::CalculateOfNormalFromCollisionPointOfOBB(OBB* obb
 										   collision_point)) return -(*obb->getpRight());
 	// 前方向平面
 	if (IsThePointOnTheFrontSideOfThePlane(obb->getpPlaneForward(),
-										   collision_point)) return *obb->getpForawrd();
+										   collision_point)) return *obb->getpForward();
 	// 逆前方向平面
 	if (IsThePointOnTheFrontSideOfThePlane(obb->getpPlaneInverseForward(),
-										   collision_point)) return -(*obb->getpForawrd());
+										   collision_point)) return -(*obb->getpForward());
 
 	return Vec3(0.0f, 0.0f, 0.0f);
 }
@@ -1469,8 +1486,7 @@ Vector3D CollisionCalculation::CalculateOfNormalFromCollisionPointOfOBB(OBB* obb
 
 float CollisionCalculation::CalculateTheShortestDistanceBetweenPlaneAndPoint(Plane* plane, Vec3* point)
 {
-	return (plane->getpNormal()->x * point->x)
-		+ (plane->getpNormal()->y * point->y)
+	return (plane->getpNormal()->x * point->x) + (plane->getpNormal()->y * point->y)
 		+ (plane->getpNormal()->z * point->z) + plane->getAdjustmetD();
 }
 

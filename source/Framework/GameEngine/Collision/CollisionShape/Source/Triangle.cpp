@@ -72,8 +72,12 @@ void Triangle::CalculationMinAndMax()
 
 	for (int i = 0; i < MAX_POINT_NUM; i++)
 	{
-		if (max < point_[i]) max = point_[i];
-		if (min > point_[i]) min = point_[i];
+		if (max.x < point_[i].x) max.x = point_[i].x;
+		if (max.y < point_[i].y) max.y = point_[i].y;
+		if (max.z < point_[i].z) max.z = point_[i].z;
+		if (min.x > point_[i].x) min.x = point_[i].x;
+		if (min.y > point_[i].y) min.y = point_[i].y;
+		if (min.z > point_[i].z) min.z = point_[i].z;
 	}
 
 	*getpMax() = max;

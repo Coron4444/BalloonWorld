@@ -153,9 +153,6 @@ void CollisionManager::Update()
 	// 地面との衝突判定
 	CollisionGround();
 
-	// デバッグ表示
-	DebugDisplay();
-
 	// デバッグ
 #ifdef _DEBUG
 	for (unsigned i = 0; i < all_collision_.getEndIndex(); i++)
@@ -386,8 +383,8 @@ bool CollisionManager::SortCollisionCalculation(CollisionInformation* informatio
 				case CollisionShapeBase::Type::LINE_SEGMENT:
 				{
 					is_hit = CollisionCalculation
-						::CollisionJudgmentOfLineSegmentAndCapsule(information0,
-																   information1,
+						::CollisionJudgmentOfLineSegmentAndCapsule(information1,
+																   information0,
 																   (LineSegment*)collision_shape1->getpShape(),
 																   (Capsule*)collision_shape0->getpShape());
 					break;
@@ -395,8 +392,8 @@ bool CollisionManager::SortCollisionCalculation(CollisionInformation* informatio
 				case CollisionShapeBase::Type::SPHERE:
 				{
 					is_hit = CollisionCalculation
-						::CollisionJudgmentOfSphereAndCapsule(information0,
-															  information1,
+						::CollisionJudgmentOfSphereAndCapsule(information1,
+															  information0,
 															  (Sphere*)collision_shape1->getpShape(),
 															  (Capsule*)collision_shape0->getpShape());
 					break;
@@ -411,8 +408,8 @@ bool CollisionManager::SortCollisionCalculation(CollisionInformation* informatio
 				case CollisionShapeBase::Type::LINE_SEGMENT:
 				{
 					is_hit = CollisionCalculation
-						::CollisionJudgmentOfLineSegmentAndCylinder(information0,
-																	information1,
+						::CollisionJudgmentOfLineSegmentAndCylinder(information1,
+																	information0,
 																	(LineSegment*)collision_shape1->getpShape(),
 																	(Cylinder*)collision_shape0->getpShape());
 					break;
@@ -436,8 +433,8 @@ bool CollisionManager::SortCollisionCalculation(CollisionInformation* informatio
 				case CollisionShapeBase::Type::SPHERE:
 				{
 					is_hit = CollisionCalculation
-						::CollisionJudgmentOfSphereAndOBB(information0,
-														  information1,
+						::CollisionJudgmentOfSphereAndOBB(information1,
+														  information0,
 														  (Sphere*)collision_shape1->getpShape(),
 														  (OBB*)collision_shape0->getpShape());
 					break;
@@ -461,8 +458,8 @@ bool CollisionManager::SortCollisionCalculation(CollisionInformation* informatio
 				case CollisionShapeBase::Type::LINE_SEGMENT:
 				{
 					is_hit = CollisionCalculation
-						::CollisionJudgmentOfLineSegmentAndPlane(information0,
-																 information1,
+						::CollisionJudgmentOfLineSegmentAndPlane(information1,
+																 information0,
 																 (LineSegment*)collision_shape1->getpShape(),
 																 (Plane*)collision_shape0->getpShape());
 					break;
@@ -470,8 +467,8 @@ bool CollisionManager::SortCollisionCalculation(CollisionInformation* informatio
 				case CollisionShapeBase::Type::SPHERE:
 				{
 					is_hit = CollisionCalculation
-						::CollisionJudgmentOfSphereAndPlane(information0,
-															information1,
+						::CollisionJudgmentOfSphereAndPlane(information1,
+															information0,
 															(Sphere*)collision_shape1->getpShape(),
 															(Plane*)collision_shape0->getpShape());
 					break;
@@ -621,8 +618,8 @@ bool CollisionManager::SortCollisionCalculation(CollisionInformation* informatio
 				case CollisionShapeBase::Type::PLANE:
 				{
 					is_hit = CollisionCalculation
-						::CollisionJudgmentOfPlaneAndTriangle(information0,
-															  information1,
+						::CollisionJudgmentOfPlaneAndTriangle(information1,
+															  information0,
 															  (Plane*)collision_shape1->getpShape(),
 															  (Triangle*)collision_shape0->getpShape());
 					break;
@@ -630,8 +627,8 @@ bool CollisionManager::SortCollisionCalculation(CollisionInformation* informatio
 				case CollisionShapeBase::Type::LINE_SEGMENT:
 				{
 					is_hit = CollisionCalculation
-						::CollisionJudgmentOfLineSegmentAndTriangle(information0,
-																	information1,
+						::CollisionJudgmentOfLineSegmentAndTriangle(information1,
+																	information0,
 																	(LineSegment*)collision_shape1->getpShape(),
 																	(Triangle*)collision_shape0->getpShape());
 					break;
@@ -639,8 +636,8 @@ bool CollisionManager::SortCollisionCalculation(CollisionInformation* informatio
 				case CollisionShapeBase::Type::SPHERE:
 				{
 					is_hit = CollisionCalculation
-						::CollisionJudgmentOfSphereAndTriangle(information0,
-															   information1,
+						::CollisionJudgmentOfSphereAndTriangle(information1,
+															   information0,
 															   (Sphere*)collision_shape1->getpShape(),
 															   (Triangle*)collision_shape0->getpShape());
 					break;

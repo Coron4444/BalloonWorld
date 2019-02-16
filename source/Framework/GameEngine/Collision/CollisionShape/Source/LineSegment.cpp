@@ -76,21 +76,42 @@ void LineSegment::Update()
 
 void LineSegment::CalculationMinAndMax()
 {
-	Vec3 min_position;
-	Vec3 max_position;
+	Vec3 max;
+	Vec3 min;
 
-	// 座標が左、方向ベクトル加算済み座標が右の場合
-	if (position_ < getAddVectorToPosition())
+	if (position_.x > getAddVectorToPosition().x)
 	{
-		min_position = getAddVectorToPosition();
-		max_position = position_;
+		max.x = position_.x;
+		min.x = getAddVectorToPosition().x;
 	}
 	else
 	{
-		min_position = position_;
-		max_position = getAddVectorToPosition();
+		max.x = getAddVectorToPosition().x;
+		min.x = position_.x;
 	}
 
-	*getpMax() = max_position;
-	*getpMin() = min_position;
+	if (position_.y > getAddVectorToPosition().y)
+	{
+		max.y = position_.y;
+		min.y = getAddVectorToPosition().y;
+	}
+	else
+	{
+		max.y = getAddVectorToPosition().y;
+		min.y = position_.y;
+	}
+
+	if (position_.z > getAddVectorToPosition().z)
+	{
+		max.z = position_.z;
+		min.z = getAddVectorToPosition().z;
+	}
+	else
+	{
+		max.z = getAddVectorToPosition().z;
+		min.z = position_.z;
+	}
+
+	*getpMax() = max;
+	*getpMin() = min;
 }

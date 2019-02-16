@@ -61,11 +61,11 @@ void PlayerUpdate_Special::Update()
 	}
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_UP))
 	{
-		temp_vector += *player_->getpTransform()->getpForawrd();
+		temp_vector += *player_->getpTransform()->getpForward();
 	}
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_DOWN))
 	{
-		temp_vector += -*player_->getpTransform()->getpForawrd();
+		temp_vector += -*player_->getpTransform()->getpForward();
 	}
 
 	*player_->getpPhysics()->getpAcceleration() += *temp_vector.ChangeAnyLength(SPEED);
@@ -152,11 +152,11 @@ void PlayerUpdate_Special::DebugDisplay()
 		}
 
 		ImGui::SetNextTreeNodeOpen(true, ImGuiSetCond_Once);
-		if (ImGui::TreeNode("Forawrd"))
+		if (ImGui::TreeNode("Forward"))
 		{
-			ImGui::Text("X : %f", player_->getpTransform()->getpForawrd()->x);
-			ImGui::Text("Y : %f", player_->getpTransform()->getpForawrd()->y);
-			ImGui::Text("Z : %f", player_->getpTransform()->getpForawrd()->z);
+			ImGui::Text("X : %f", player_->getpTransform()->getpForward()->x);
+			ImGui::Text("Y : %f", player_->getpTransform()->getpForward()->y);
+			ImGui::Text("Z : %f", player_->getpTransform()->getpForward()->z);
 
 			ImGui::TreePop();
 		}

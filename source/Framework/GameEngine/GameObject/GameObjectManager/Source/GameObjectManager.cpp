@@ -160,11 +160,11 @@ void GameObjectManager::AddGameObjectBaseToArray(GameObjectBase* game_object)
 
 void GameObjectManager::ReleaseGameObjectBaseFromArray(GameObjectBase* game_object)
 {
-	// ゲームオブジェクト終了処理
-	game_object->Uninit();
-
 	// コンポーネントをマネージャから解放
 	ReleaseComponentFromManager(game_object);
+
+	// ゲームオブジェクト終了処理
+	game_object->Uninit();
 
 	// 解放待ち配列に追加
 	await_release_.AddToArray(game_object);

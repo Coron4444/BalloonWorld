@@ -49,7 +49,7 @@ Sphere::~Sphere()
 
 void Sphere::Init(Vector3D position, float radius)
 {
-	CollisionShapeBase::setType(CollisionShapeBase::Type::CAPSULE);
+	CollisionShapeBase::setType(CollisionShapeBase::Type::SPHERE);
 
 	position_ = position;
 	radius_ = radius;

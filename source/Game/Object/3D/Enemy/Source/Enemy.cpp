@@ -21,4 +21,6 @@ void Enemy::Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision)
 {
 	// Šî’êƒNƒ‰ƒX‚Ì‰Šú‰»
 	GameObjectBase::Init(update, draw, collision);
+
+	*getpTransform()->getpScale() = Vec3(3.0f, 3.0f, 3.0f);
 }

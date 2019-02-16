@@ -16,7 +16,6 @@
 #include "LineSegment.h"
 
 #include <Tool/Vector3D.h>
-#include <Tool/Axis.h>
 
 
 
@@ -32,7 +31,6 @@ class Cylinder : public CollisionShapeBase
 //====================
 private:
 	LineSegment line_segment_;	//!< ü•ª
-	Axis axis_;					//!< Ž²
 	float radius_;				//!< ”¼Œa
 
 

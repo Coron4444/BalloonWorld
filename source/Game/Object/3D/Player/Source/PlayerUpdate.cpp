@@ -120,12 +120,12 @@ void PlayerUpdate::InputTranslation()
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_W))
 	{
 		is_input = true;
-		look_at_vector += *camera_axis->getpForawrd();
+		look_at_vector += *camera_axis->getpForward();
 	}
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_S))
 	{
 		is_input = true;
-		look_at_vector += -(*camera_axis->getpForawrd());
+		look_at_vector += -(*camera_axis->getpForward());
 	}
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_A))
 	{
@@ -141,7 +141,7 @@ void PlayerUpdate::InputTranslation()
 	if (!is_input) return;
 	look_at_vector.y = 0.0f;
 	player_->getpTransform()->setLookAtVector(look_at_vector);
-	Vector3D acceleration = *player_->getpTransform()->getpForawrd();
+	Vector3D acceleration = *player_->getpTransform()->getpForward();
 	*player_->getpPhysics()->getpAcceleration()
 		+= *acceleration.ChangeAnyLength(ACCELERATION);
 }
@@ -175,7 +175,7 @@ void PlayerUpdate::InputTranslationNotCamera()
 
 	if (!is_input) return;	
 	player_->getpTransform()->setLookAtVector(look_at_vector);
-	Vector3D acceleration = *player_->getpTransform()->getpForawrd();
+	Vector3D acceleration = *player_->getpTransform()->getpForward();
 	*player_->getpPhysics()->getpAcceleration() 
 		+= *acceleration.ChangeAnyLength(ACCELERATION);
 }
@@ -250,11 +250,11 @@ void PlayerUpdate::DebugDisplay()
 		}
 
 		ImGui::SetNextTreeNodeOpen(true, ImGuiSetCond_Once);
-		if (ImGui::TreeNode("Forawrd"))
+		if (ImGui::TreeNode("Forward"))
 		{
-			ImGui::Text("X : %f", player_->getpTransform()->getpForawrd()->x);
-			ImGui::Text("Y : %f", player_->getpTransform()->getpForawrd()->y);
-			ImGui::Text("Z : %f", player_->getpTransform()->getpForawrd()->z);
+			ImGui::Text("X : %f", player_->getpTransform()->getpForward()->x);
+			ImGui::Text("Y : %f", player_->getpTransform()->getpForward()->y);
+			ImGui::Text("Z : %f", player_->getpTransform()->getpForward()->z);
 
 			ImGui::TreePop();
 		}

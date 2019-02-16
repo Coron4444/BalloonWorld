@@ -18,8 +18,7 @@
 //****************************************
 // 定数定義
 //****************************************
-const float EnemyCollision::BOUNDING_SPHERE_RADIUS = 3.0f;
-const float EnemyCollision::SUBSTANCE_SPHERE_RADIUS = 1.0f;
+const Vec3 EnemyCollision::MAIN_OBB_LENGTH(1.0f, 1.0f, 1.0f);
 
 
 
@@ -31,43 +30,26 @@ void EnemyCollision::Init()
 	// タイプ
 	CollisionBase::setType(CollisionBase::Type::ENEMY);
 
-	// 衝突オブジェクト群作成
-	collision_objects_ = new CollisionObjects();
-	collision_objects_->setCollisionBase(this);
-	collision_objects_->getOctreeAABB()->Init(*getpGameObject()->getpTransform()
-											  ->getpPosition(),
-											  Vec3(1.0f, 1.0f, 1.0f));
-	CollisionBase::AddCollisionObjectsToArray(collision_objects_);
+	// 衝突オブジェクト作成
+	collision_object_ = new CollisionObject();
+	collision_object_->Init((int)ObjectTag::MAIN, this);
+	CollisionBase::AddCollisionObject(collision_object_);
 
-	// バウンディング球の作成
-	Sphere* temp_sphere = new Sphere();
-	temp_sphere->Init(*getpGameObject()->getpTransform()->getpPosition(),
-					  BOUNDING_SPHERE_RADIUS);
-	bounding_sphere_ = new CollisionObject(temp_sphere, (int)ObjectTag::BOUNDING_SPHERE);
-	collision_objects_->AddCollisionObjectToArray(bounding_sphere_);
-
-	// 本体球の作成
-	temp_sphere = new Sphere();
-	temp_sphere->Init(*getpGameObject()->getpTransform()->getpPosition(),
-					  SUBSTANCE_SPHERE_RADIUS);
-	substance_sphere_ = new CollisionObject(temp_sphere, (int)ObjectTag::SUBSTANCE_SPHERE);
-	collision_objects_->AddCollisionObjectToArray(substance_sphere_);
+	// メインOBBの作成
+	main_obb_ = new OBB();
+	main_obb_->Init(*getpGameObject()->getpTransform()->getpPosition(),
+					Vector3D(MAIN_OBB_LENGTH));
+	collision_object_->AddShape((int)ShapeTag::MAIN, main_obb_);
 }
 
 
 
 void EnemyCollision::Update()
 {
-	// 衝突オブジェクト群更新
-	*collision_objects_->getOctreeAABB()->getpPositon() = *getpGameObject()
-		->getpTransform()->getpPosition();
-	collision_objects_->getOctreeAABB()->Update();
-
-	// バウンディング球の更新
-	Sphere* temp_sphere = (Sphere*)bounding_sphere_->getpCollisionShape();
-	*temp_sphere->getpPosition() = *getpGameObject()->getpTransform()->getpPosition();
-
-	// 本体球の更新
-	temp_sphere = (Sphere*)substance_sphere_->getpCollisionShape();
-	*temp_sphere->getpPosition() = *getpGameObject()->getpTransform()->getpPosition();
+	// メインOBBの更新
+	*main_obb_->getpPosition() = *getpGameObject()->getpTransform()->getpPosition();
+	main_obb_->RotationMatrix(getpGameObject()->getpTransform()->getpNoInitRotationMatrix());
+	main_obb_->getpLength()->x = getpGameObject()->getpTransform()->getpScale()->x * MAIN_OBB_LENGTH.x;
+	main_obb_->getpLength()->y = getpGameObject()->getpTransform()->getpScale()->y * MAIN_OBB_LENGTH.y;
+	main_obb_->getpLength()->z = getpGameObject()->getpTransform()->getpScale()->z * MAIN_OBB_LENGTH.z;
 }

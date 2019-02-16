@@ -89,18 +89,18 @@ GameScene::GameScene(StateBase* state)
 void GameScene::Init()
 {
 	// コインの作成
-	//CoinFactory coin_factory;
-	//Coin* temp = coin_factory.Create();
-	//*temp->getpTransform()->getpPosition() = Vec3(5.0f, 0.0f, 0.0f);
-	//temp->getpTransform()->CreateWorldMatrix();
-	//
-	//temp = coin_factory.Create();
-	//*temp->getpTransform()->getpPosition() = Vec3(5.0f, 0.0f, 5.0f);
-	//temp->getpTransform()->CreateWorldMatrix();
-	//
-	//temp = coin_factory.Create();
-	//*temp->getpTransform()->getpPosition() = Vec3(-5.0f, 0.0f, -5.0f);
-	//temp->getpTransform()->CreateWorldMatrix();
+	CoinFactory coin_factory;
+	Coin* temp = coin_factory.Create();
+	*temp->getpTransform()->getpPosition() = Vec3(5.0f, 1.0f, 0.0f);
+	temp->getpTransform()->CreateWorldMatrix();
+	
+	temp = coin_factory.Create();
+	*temp->getpTransform()->getpPosition() = Vec3(5.0f, 1.0f, 5.0f);
+	temp->getpTransform()->CreateWorldMatrix();
+	
+	temp = coin_factory.Create();
+	*temp->getpTransform()->getpPosition() = Vec3(-5.0f, 1.0f, -5.0f);
+	temp->getpTransform()->CreateWorldMatrix();
 
 	// スカイドーム
 	SkyDomeFactory sky_dome_factory;
@@ -115,19 +115,22 @@ void GameScene::Init()
 
 	// ステージ
 	stage_manager_ = new StageManager();
+	stage_manager_->Init();
 	stage_manager_->CreateStage();
 	
 	// 敵
-	//EnemyFactory enemy_factory;
-	//Enemy* temp2 = enemy_factory.Create();
-	//*temp2->getpTransform()->getpPosition() = Vec3(-5.0f, 0.0f, 5.0f);
-	//temp2->getpTransform()->CreateWorldMatrix();
+	EnemyFactory enemy_factory;
+	Enemy* temp2 = enemy_factory.Create();
+	*temp2->getpTransform()->getpPosition() = Vec3(-3.0f, 6.0f, 5.0f);
+	*temp2->getpTransform()->getpScale() = Vec3(3.0f, 3.0f, 3.0f);
+	*temp2->getpTransform()->getpAngleYaw() += 3.0f;
+	temp2->getpTransform()->CreateWorldMatrix();
 
 	// ゴール
-	//GoalFactory goal_factory;
-	//Goal* temp3 = goal_factory.Create();
-	//*temp3->getpTransform()->getpPosition() = Vec3(10.0f, 0.0f, 20.0f);
-	//temp3->getpTransform()->CreateWorldMatrix();
+	GoalFactory goal_factory;
+	Goal* temp3 = goal_factory.Create();
+	*temp3->getpTransform()->getpPosition() = Vec3(10.0f, 0.0f, 20.0f);
+	temp3->getpTransform()->CreateWorldMatrix();
 
 	// スコア
 	ScoreFactory score_factory;

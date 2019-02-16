@@ -24,9 +24,30 @@ Vector3D* OBB::getpPosition()
 
 
 
-Vector3D* OBB::getpForawrd()
+Axis* OBB::getpAxis()
 {
-	return axis_.getpForawrd();
+	return &axis_;
+}
+
+
+
+void OBB::setAxis(Axis* value)
+{
+	axis_ = *value;
+}
+
+
+
+Vector3D* OBB::getpForward()
+{
+	return axis_.getpForward();
+}
+
+
+
+void OBB::setForward(Vector3D value)
+{
+	return axis_.setForward(value);
 }
 
 
@@ -72,7 +93,7 @@ Vector3D OBB::getUpLengthVector()
 
 Vector3D OBB::getForwardLengthVector()
 {
-	Vector3D forward_length_vector_(*axis_.getpForawrd());
+	Vector3D forward_length_vector_(*axis_.getpForward());
 	forward_length_vector_.ChangeAnyLength(length_.z);
 	return forward_length_vector_;
 }
@@ -226,6 +247,7 @@ void OBB::RotationAxisAny(Vec3 axis, float radian)
 
 void OBB::RotationMatrix(MATRIX* rotation_matrix)
 {
+	axis_.Reset();
 	axis_.RotationMatrix(rotation_matrix);
 }
 
@@ -250,12 +272,16 @@ void OBB::CalculationMinAndMax()
 	point[6] = position_ + -getRightLengthVectorHalf() + -getUpLengthVectorHalf() + getForwardLengthVectorHalf();
 	point[7] = position_ + -getRightLengthVectorHalf() + -getUpLengthVectorHalf() + -getForwardLengthVectorHalf();
 
-	Vec3 max;
-	Vec3 min;
+	Vec3 max = point[0];
+	Vec3 min = point[0];
 	for (int i = 0; i < MAX_POINT_NUM; i++)
 	{
-		if (max < point[i]) max = point[i];
-		if (min > point[i]) min = point[i];
+		if (max.x < point[i].x) max.x = point[i].x;
+		if (max.y < point[i].y) max.y = point[i].y;
+		if (max.z < point[i].z) max.z = point[i].z;
+		if (min.x > point[i].x) min.x = point[i].x;
+		if (min.y > point[i].y) min.y = point[i].y;
+		if (min.z > point[i].z) min.z = point[i].z;
 	}
 
 	*getpMax() = max;
@@ -271,22 +297,22 @@ void OBB::CalculationPlane()
 	plane_right_.Init(*axis_.getpRight(), plane_point);
 
 	// è„ï˚å¸
-	Vector3D plane_point = position_ + getUpLengthVectorHalf();
+	plane_point = position_ + getUpLengthVectorHalf();
 	plane_up_.Init(*axis_.getpUp(), plane_point);
 
 	// ëOï˚å¸
-	Vector3D plane_point = position_ + getForwardLengthVectorHalf();
-	plane_forward_.Init(*axis_.getpForawrd(), plane_point);
+	plane_point = position_ + getForwardLengthVectorHalf();
+	plane_forward_.Init(*axis_.getpForward(), plane_point);
 
 	// ãtâEï˚å¸
-	Vector3D plane_point = position_ + -getRightLengthVectorHalf();
+	plane_point = position_ + -getRightLengthVectorHalf();
 	plane_inverse_right_.Init(-(*axis_.getpRight()), plane_point);
 
 	// ãtè„ï˚å¸
-	Vector3D plane_point = position_ + -getUpLengthVectorHalf();
+	plane_point = position_ + -getUpLengthVectorHalf();
 	plane_inverse_up_.Init(-(*axis_.getpUp()), plane_point);
 
 	// ãtëOï˚å¸
-	Vector3D plane_point = position_ + -getForwardLengthVectorHalf();
-	plane_inverse_forward_.Init(-(*axis_.getpForawrd()), plane_point);
+	plane_point = position_ + -getForwardLengthVectorHalf();
+	plane_inverse_forward_.Init(-(*axis_.getpForward()), plane_point);
 }

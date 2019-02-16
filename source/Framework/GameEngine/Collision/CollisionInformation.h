@@ -23,6 +23,7 @@
 // クラス宣言
 //****************************************
 class CollisionBase;
+class GameObjectBase;
 
 
 
@@ -131,6 +132,14 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void setOpponentCollisionBase(CollisionBase* value);
+
+	//----------------------------------------
+	//! @brief 相手のゲームオブジェクト取得関数
+	//! @details
+	//! @param void なし
+	//! @retval CollisionBase* 相手のゲームオブジェクト
+	//----------------------------------------
+	GameObjectBase* getpOpponentGameObject();
 
 	//----------------------------------------
 	//! @brief 自分の衝突オブジェクト取得関数

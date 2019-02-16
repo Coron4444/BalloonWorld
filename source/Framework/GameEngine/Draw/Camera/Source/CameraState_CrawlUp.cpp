@@ -70,13 +70,13 @@ void CameraState_CrawlUp::InputTranslation()
 	// 前
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_I))
 	{
-		velocity += *getpCamera()->getpAxis()->getpForawrd();
+		velocity += *getpCamera()->getpAxis()->getpForward();
 	}
 
 	// 後ろ
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_K))
 	{
-		velocity += -(*getpCamera()->getpAxis()->getpForawrd());
+		velocity += -(*getpCamera()->getpAxis()->getpForward());
 	}
 
 	// 右
@@ -113,7 +113,7 @@ void CameraState_CrawlUp::InputRotation()
 
 		// 注視点の算出
 		float length = gazing_point_to_position.getLength();
-		gazing_point_to_position = *getpCamera()->getpAxis()->getpForawrd();
+		gazing_point_to_position = *getpCamera()->getpAxis()->getpForward();
 		gazing_point_to_position.ChangeAnyLength(length);
 		*getpCamera()->getpGazingPoint() = *getpCamera()->getpPositon()
 			+ gazing_point_to_position;
@@ -133,7 +133,7 @@ void CameraState_CrawlUp::InputRotation()
 
 		// 注視点の算出
 		float length = gazing_point_to_position.getLength();
-		gazing_point_to_position = *getpCamera()->getpAxis()->getpForawrd();
+		gazing_point_to_position = *getpCamera()->getpAxis()->getpForward();
 		gazing_point_to_position.ChangeAnyLength(length);
 		*getpCamera()->getpGazingPoint() = *getpCamera()->getpPositon()
 			+ gazing_point_to_position;
@@ -153,7 +153,7 @@ void CameraState_CrawlUp::InputRotation()
 
 		// 注視点の算出
 		float length = gazing_point_to_position.getLength();
-		gazing_point_to_position = *getpCamera()->getpAxis()->getpForawrd();
+		gazing_point_to_position = *getpCamera()->getpAxis()->getpForward();
 		gazing_point_to_position.ChangeAnyLength(length);
 		*getpCamera()->getpGazingPoint() = *getpCamera()->getpPositon()
 			+ gazing_point_to_position;
@@ -173,7 +173,7 @@ void CameraState_CrawlUp::InputRotation()
 
 		// 注視点の算出
 		float length = gazing_point_to_position.getLength();
-		gazing_point_to_position = *getpCamera()->getpAxis()->getpForawrd();
+		gazing_point_to_position = *getpCamera()->getpAxis()->getpForward();
 		gazing_point_to_position.ChangeAnyLength(length);
 		*getpCamera()->getpGazingPoint() = *getpCamera()->getpPositon()
 			+ gazing_point_to_position;
@@ -198,7 +198,7 @@ void CameraState_CrawlUp::InputRotationAroundGazingPoint()
 
 		// 座標の算出
 		float length = position_to_gazing_point.getLength();
-		position_to_gazing_point = *getpCamera()->getpAxis()->getpForawrd();
+		position_to_gazing_point = *getpCamera()->getpAxis()->getpForward();
 		position_to_gazing_point.ChangeAnyLength(length);
 		*getpCamera()->getpPositon() = *getpCamera()->getpGazingPoint()
 			+ position_to_gazing_point;
@@ -218,7 +218,7 @@ void CameraState_CrawlUp::InputRotationAroundGazingPoint()
 
 		// 座標の算出
 		float length = position_to_gazing_point.getLength();
-		position_to_gazing_point = *getpCamera()->getpAxis()->getpForawrd();
+		position_to_gazing_point = *getpCamera()->getpAxis()->getpForward();
 		position_to_gazing_point.ChangeAnyLength(length);
 		*getpCamera()->getpPositon() = *getpCamera()->getpGazingPoint()
 			+ position_to_gazing_point;

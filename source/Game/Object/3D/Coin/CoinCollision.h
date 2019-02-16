@@ -30,26 +30,31 @@ public:
 	enum class ObjectTag
 	{
 		NONE = -1,
-		BOUNDING_OBB,
-		SUBSTANCE_OBB,
+		MAIN,
 		MAX
 	};
+
+	enum class ShapeTag
+	{
+		NONE = -1,
+		MAIN,
+		MAX
+	};
+
 
 //====================
 // 定数
 //====================
 private:
-	static const Vec3 BOUNDING_OBB_LENGTH;		//!< バウンディングOBB長さ
-	static const Vec3 SUBSTANCE_OBB_LENGTH;		//!< 実体OBB長さ
+	static const Vec3 MAIN_OBB_LENGTH;		//!< メインOBB長さ
 
 
 //====================
 // 変数
 //====================
 private:
-	CollisionObjects* collision_objects_;		//!< 衝突オブジェクト群
-	CollisionObject* bounding_obb_;				//!< バウンディングOBB
-	CollisionObject* substance_obb_;			//!< 実体OBB
+	CollisionObject* collision_object_;		//!< 衝突オブジェクト
+	OBB* main_obb_;							//!< メインOBB
 
 
 //====================

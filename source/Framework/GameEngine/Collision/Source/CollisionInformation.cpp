@@ -10,6 +10,7 @@
 // インクルード文
 //****************************************
 #include "../CollisionInformation.h"
+#include "../CollisionBase.h"
 
 
 
@@ -82,6 +83,14 @@ CollisionBase* CollisionInformation::getpOpponentCollisionBase()
 void CollisionInformation::setOpponentCollisionBase(CollisionBase* value)
 {
 	opponent_base_ = value;
+}
+
+
+
+GameObjectBase* CollisionInformation::getpOpponentGameObject()
+{
+	if (opponent_base_ == nullptr) return nullptr;
+	return opponent_base_->getpGameObject();
 }
 
 

@@ -140,6 +140,49 @@ float Vector3D::getLengthYZ()
 
 
 //****************************************
+// ‰‰ŽZŽq’è‹`
+//****************************************
+bool Vector3D::operator < (Vector3D& vector)
+{
+	if (x >= vector.x) return false;
+	if (y >= vector.y) return false;
+	if (z >= vector.z) return false;
+	return true;
+}
+
+
+
+bool Vector3D::operator > (Vector3D& vector)
+{
+	if (x <= vector.x) return false;
+	if (y <= vector.y) return false;
+	if (z <= vector.z) return false;
+	return true;
+}
+
+
+
+bool Vector3D::operator <= (Vector3D& vector)
+{
+	if (x > vector.x) return false;
+	if (y > vector.y) return false;
+	if (z > vector.z) return false;
+	return true;
+}
+
+
+
+bool Vector3D::operator >= (Vector3D& vector)
+{
+	if (x < vector.x) return false;
+	if (y < vector.y) return false;
+	if (z < vector.z) return false;
+	return true;
+}
+
+
+
+//****************************************
 // ŠÖ”’è‹`
 //****************************************
 Vector3D::Vector3D()
