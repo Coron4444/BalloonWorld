@@ -36,7 +36,9 @@ public:
 		NONE = -1,
 		FIXED,
 		ANIMATED_DEFAULT,
+		BLINN_PHONG,
 		BUMP_MAPPING,
+		COOK_TORRANCE,
 		MAX
 	};
 
@@ -45,7 +47,9 @@ public:
 		NONE = -1,
 		FIXED,
 		DEFAULT,
+		BLINN_PHONG,
 		BUMP_MAPPING,
+		COOK_TORRANCE,
 		MAX
 	};
 

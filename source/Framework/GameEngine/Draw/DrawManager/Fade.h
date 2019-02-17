@@ -62,6 +62,7 @@ public:
 // 定数
 //====================
 public:
+	static const std::string TEXTURE_NAME_LOAD;				//!< Loadテクスチャ名
 	static const std::string TEXTURE_NAME_TRANSITION_01;	//!< テクスチャ名
 
 
@@ -73,6 +74,7 @@ private:
 	State state_;									//!< ステート
 	PlanePolygon* plane_polygon_ = nullptr;			//!< 板ポリゴン
 	Transform* transform_ = nullptr;				//!< 状態
+	TextureObject* load_texture_ = nullptr;			//!< Loadテクスチャオブジェクト
 	TextureObject* transition01_texture_ = nullptr;	//!< テクスチャオブジェクト
 	XColor4 color_;									//!< 色
 	float speed_;									//!< フェード速度
@@ -109,7 +111,7 @@ public:
 	//! @retval Type* タイプ
 	//----------------------------------------
 	Type* getpType();
-	
+
 	//----------------------------------------
 	//! @brief ステート取得関数
 	//! @details
@@ -117,7 +119,7 @@ public:
 	//! @retval State* ステート
 	//----------------------------------------
 	State* getpState();
-	
+
 	//----------------------------------------
 	//! @brief 終了フラグ取得関数
 	//! @details
@@ -125,7 +127,7 @@ public:
 	//! @retval bool 終了フラグ
 	//----------------------------------------
 	bool getpEndFlag();
-	
+
 	//----------------------------------------
 	//! @brief 状態取得関数
 	//! @details
@@ -133,14 +135,16 @@ public:
 	//! @retval Transform* 状態
 	//----------------------------------------
 	Transform* getpTransform();
-	
+
 	//----------------------------------------
-	//! @brief テクスチャオブジェクト取得関数
+	//! @brief ディヒューズテクスチャ取得関数
 	//! @details
-	//! @param void なし
-	//! @retval TextureObject* テクスチャオブジェクト
+	//! @param object_index オブジェクトインデックス
+	//! @param mesh_index   メッシュインデックス
+	//! @retval LPDIRECT3DTEXTURE9 ディヒューズテクスチャ
 	//----------------------------------------
-	TextureObject* getpTransition01Object();
+	LPDIRECT3DTEXTURE9 getpDiffuseTexture(unsigned object_index,
+										  unsigned mesh_index) override;
 
 
 //====================

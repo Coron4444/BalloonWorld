@@ -20,6 +20,7 @@
 void PixelShaderNull::Init()
 {
 	InitDevice();
+	InitDefaultTexture();
 }
 
 

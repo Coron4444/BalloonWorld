@@ -108,10 +108,10 @@ void PlayerDraw::Init()
 	// オーダーリスト設定
 	getpDrawOrderList()->setDrawType(DrawOrderList::DrawType::OPACITY);
 	getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_MAIN);
-	//getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::VERTEX_BUMP_MAPPING);
-	//getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::PIXEL_BUMP_MAPPING);
-	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::ANIMATED_DEFAULT);
-	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::DEFAULT);
+	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::BLINN_PHONG);
+	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::BLINN_PHONG);
+	//getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::ANIMATED_DEFAULT);
+	//getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::DEFAULT);
 
 	// Xモデル登録
 	player_model_ = ModelXManager::getpInstance()->getpObject(&MODEL_NAME);

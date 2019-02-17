@@ -91,6 +91,14 @@ void DrawManager::Init()
 	motion_blur_->setDrawCommonData(common_data_);
 	motion_blur_->setShaderManager(shader_manager_);
 	motion_blur_->Init();
+
+	// ƒtƒHƒO
+	device_->SetRenderState(D3DRS_FOGENABLE, TRUE);
+	device_->SetRenderState(D3DRS_FOGCOLOR, D3DCOLOR_RGBA(255, 255, 255, 255));
+	device_->SetRenderState(D3DRS_FOGVERTEXMODE, D3DFOG_NONE);
+	device_->SetRenderState(D3DRS_FOGTABLEMODE, D3DFOG_EXP);
+	float density = 0.001f;
+	device_->SetRenderState(D3DRS_FOGDENSITY, *((DWORD*)&density));
 }
 
 

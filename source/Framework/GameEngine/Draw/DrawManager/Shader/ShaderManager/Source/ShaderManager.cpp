@@ -11,13 +11,17 @@
 // インクルード文
 //****************************************
 #include "../ShaderManager.h"
-#include "../../VertexShader/VertexShaderNull.h"
-#include "../../VertexShader/VertexShaderFixed.h"
 #include "../../VertexShader/VertexShaderAnimatedDefault.h"
+#include "../../VertexShader/VertexShaderBlinnPhong.h"
 #include "../../VertexShader/VertexShaderBumpMapping.h"
-#include "../../PixelShader/PixelShaderNull.h"
-#include "../../PixelShader/PixelShaderDefault.h"
+#include "../../VertexShader/VertexShaderCookTorrance.h"
+#include "../../VertexShader/VertexShaderFixed.h"
+#include "../../VertexShader/VertexShaderNull.h"
+#include "../../PixelShader/PixelShaderBlinnPhong.h"
 #include "../../PixelShader/PixelShaderBumpMapping.h"
+#include "../../PixelShader/PixelShaderCookTorrance.h"
+#include "../../PixelShader/PixelShaderDefault.h"
+#include "../../PixelShader/PixelShaderNull.h"
 #include "../../../../DrawBase.h"
 
 #include <Tool/SafeRelease.h>
@@ -81,7 +85,9 @@ void ShaderManager::InitVertexShader(DrawCommonData* common_data)
 	// 生成
 	vertex_shader_[(int)VertexShaderType::FIXED] = new VertexShaderFixed();
 	vertex_shader_[(int)VertexShaderType::ANIMATED_DEFAULT] = new VertexShaderAnimatedDefault();
+	vertex_shader_[(int)VertexShaderType::BLINN_PHONG] = new VertexShaderBlinnPhong();
 	vertex_shader_[(int)VertexShaderType::BUMP_MAPPING] = new VertexShaderBumpMapping();
+	vertex_shader_[(int)VertexShaderType::COOK_TORRANCE] = new VertexShaderCookTorrance();
 
 	// 初期化
 	for (int i = 0; i < (int)VertexShaderType::MAX; i++)
@@ -98,7 +104,9 @@ void ShaderManager::InitPixelShader(DrawCommonData* common_data)
 	// 生成
 	pixel_shader_[(int)PixelShaderType::FIXED] = new PixelShaderNull();
 	pixel_shader_[(int)PixelShaderType::DEFAULT] = new PixelShaderDefault();
+	pixel_shader_[(int)PixelShaderType::BLINN_PHONG] = new PixelShaderBlinnPhong();
 	pixel_shader_[(int)PixelShaderType::BUMP_MAPPING] = new PixelShaderBumpMapping();
+	pixel_shader_[(int)PixelShaderType::COOK_TORRANCE] = new PixelShaderCookTorrance();
 
 	// 初期化
 	for (int i = 0; i < (int)PixelShaderType::MAX; i++)

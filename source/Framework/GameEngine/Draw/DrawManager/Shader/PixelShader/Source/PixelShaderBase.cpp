@@ -12,7 +12,15 @@
 //****************************************
 #include "../PixelShaderBase.h"
 
+#include <Resource/Texture/TextureManager/TextureManager.h>
 #include <Tool/SafeRelease.h>
+
+
+
+//****************************************
+// ’è”’è‹`
+//****************************************
+const std::string PixelShaderBase::DEFAULT_TEXTURE_NAME = "Shader/DefaultTexture.png";
 
 
 
@@ -26,9 +34,27 @@ LPDIRECT3DPIXELSHADER9 PixelShaderBase::getpPixelShader()
 
 
 
+LPDIRECT3DTEXTURE9 PixelShaderBase::getpDefaultTexture()
+{
+	
+	return default_texture_->getpHandler();
+}
+
+
+
 //****************************************
 // ŠÖ”’è‹`
 //****************************************
+void PixelShaderBase::InitDefaultTexture()
+{
+	if (default_texture_ != nullptr) return;
+	
+	default_texture_ = TextureManager::getpInstance()
+		->getpObject(&DEFAULT_TEXTURE_NAME);
+}
+
+
+
 void PixelShaderBase::ShaderSetToDevice()
 {
 	getpDevice()->SetPixelShader(pixel_shader_);
@@ -65,4 +91,5 @@ void PixelShaderBase::ReleasePixelShader()
 {
 	ReleaseConstantTable();
 	SafeRelease::PlusRelease(&pixel_shader_);
+	SafeRelease::PlusRelease(&default_texture_);
 }

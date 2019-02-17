@@ -91,8 +91,8 @@ void BalloonDraw::Init()
 	// オーダーリスト設定
 	getpDrawOrderList()->setDrawType(DrawOrderList::DrawType::TRANSPARENCY);
 	getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_MAIN);
-	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::FIXED);
-	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::FIXED);
+	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::COOK_TORRANCE);
+	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::COOK_TORRANCE);
 
 	// オブジェクト取得
 	balloon_object_ = ModelXManager::getpInstance()->getpObject(&BALLOON_MODEL_NAME);

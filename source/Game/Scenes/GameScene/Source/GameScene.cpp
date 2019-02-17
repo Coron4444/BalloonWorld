@@ -106,7 +106,6 @@ void GameScene::Init()
 	SkyDomeFactory sky_dome_factory;
 	sky_dome_factory.Create();
 
-
 	// フィールド
 	FieldFactory field_factory;
 	Field* field = field_factory.Create();
@@ -121,9 +120,9 @@ void GameScene::Init()
 	// 敵
 	EnemyFactory enemy_factory;
 	Enemy* temp2 = enemy_factory.Create();
-	*temp2->getpTransform()->getpPosition() = Vec3(-3.0f, 6.0f, 5.0f);
+	*temp2->getpTransform()->getpPosition() = Vec3(-5.0f, 6.0f, 5.0f);
 	*temp2->getpTransform()->getpScale() = Vec3(3.0f, 3.0f, 3.0f);
-	*temp2->getpTransform()->getpAngleYaw() += 3.0f;
+	//*temp2->getpTransform()->getpAngleYaw() += 3.0f;
 	temp2->getpTransform()->CreateWorldMatrix();
 
 	// ゴール
@@ -133,8 +132,8 @@ void GameScene::Init()
 	temp3->getpTransform()->CreateWorldMatrix();
 
 	// スコア
-	ScoreFactory score_factory;
-	score_factory.Create(this);
+	//ScoreFactory score_factory;
+	//score_factory.Create(this);
 
 	// ステート初期化
 	SceneNull::Init();

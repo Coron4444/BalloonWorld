@@ -24,6 +24,7 @@
 //****************************************
 // 定数定義
 //****************************************
+const std::string Fade::TEXTURE_NAME_LOAD = "Fade/NowLoading.png";
 const std::string Fade::TEXTURE_NAME_TRANSITION_01 = "Fade/Transition_01.png";
 
 
@@ -50,35 +51,51 @@ D3DMATERIAL9* Fade::getpMaterial(unsigned object_index, unsigned mesh_index)
 
 Fade::Type* Fade::getpType()
 {
-	return &type_; 
+	return &type_;
 }
 
 
 
 Fade::State* Fade::getpState()
 {
-	return &state_; 
+	return &state_;
 }
 
 
 
 bool Fade::getpEndFlag()
 {
-	return end_flag_; 
+	return end_flag_;
 }
 
 
 
-Transform* Fade::getpTransform() 
+Transform* Fade::getpTransform()
 {
 	return transform_;
 }
 
 
 
-TextureObject* Fade::getpTransition01Object()
+LPDIRECT3DTEXTURE9 Fade::getpDiffuseTexture(unsigned object_index,
+											unsigned mesh_index)
 {
-	return transition01_texture_; 
+	object_index = object_index;
+	mesh_index = mesh_index;
+
+	switch (type_)
+	{
+		case Type::NORMAL:
+		{
+			return load_texture_->getpHandler();
+		}
+		case Type::TRANSITION_01:
+		{
+			return transition01_texture_->getpHandler();
+		}
+	}
+
+	return nullptr;
 }
 
 
@@ -89,6 +106,8 @@ TextureObject* Fade::getpTransition01Object()
 void Fade::Init()
 {
 	// テクスチャの登録
+	load_texture_ = TextureManager::getpInstance()
+		->getpObject(&TEXTURE_NAME_LOAD);
 	transition01_texture_ = TextureManager::getpInstance()
 		->getpObject(&TEXTURE_NAME_TRANSITION_01);
 
@@ -109,6 +128,7 @@ void Fade::Init()
 void Fade::Uninit()
 {
 	SafeRelease::PlusUninit(&plane_polygon_);
+	SafeRelease::PlusRelease(&load_texture_);
 	SafeRelease::PlusRelease(&transition01_texture_);
 	SafeRelease::Normal(&transform_);
 }
@@ -168,7 +188,7 @@ void Fade::Start(Type type, State state, Vec2 size, XColor4 color, float speed)
 		// 補間設定
 		inter_container_.clear();
 		inter_container_.push_back(alpha, distance);
-		
+
 		alpha = 0.0f;
 		distance = (double)TimeToFrame::SecondToFrame(speed);
 		inter_container_.push_back(alpha, distance);

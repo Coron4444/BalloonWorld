@@ -633,24 +633,10 @@ void CollisionCalculation::EliminationOfNesting(CollisionInformation* informatio
 
 float CollisionCalculation::FroatTruncation(float num)
 {
-	//float SHIFT_NUM = 10000.0f;
-	//// 左にシフト
-	//num *= SHIFT_NUM;
-	//// 小数点切り捨て
-	//num = floorf(num);
-	//// 右にシフト
-	//num /= SHIFT_NUM;
-
-	double SHIFT_NUM = 10000.0f;
-	// 左にシフト
-	double temp = num;
-	temp *= SHIFT_NUM;
-	// 小数点切り捨て
-	temp = floor(temp);
-	// 右にシフト
-	temp /= SHIFT_NUM;
-	num = (float)temp;
-
+	float shift_num = 10000.0f;
+	num *= shift_num;			// 左にシフト
+	num = floorf(num);			// 小数点切り捨て
+	num /= shift_num;			// 右にシフト
 	return num;
 }
 
@@ -1456,10 +1442,6 @@ Vector3D CollisionCalculation::CalculateTheShortestDistanceVectorBetweenOBBAndPo
 Vector3D CollisionCalculation::CalculateOfNormalFromCollisionPointOfOBB(OBB* obb,
 																		Vector3D* collision_point)
 {
-	collision_point->x = FroatTruncation(collision_point->x);
-	collision_point->y = FroatTruncation(collision_point->y);
-	collision_point->x = FroatTruncation(collision_point->z);
-
 	// 上方向平面
 	if (IsThePointOnTheFrontSideOfThePlane(obb->getpPlaneUp(),
 										   collision_point)) return *obb->getpUp();
@@ -1486,8 +1468,12 @@ Vector3D CollisionCalculation::CalculateOfNormalFromCollisionPointOfOBB(OBB* obb
 
 float CollisionCalculation::CalculateTheShortestDistanceBetweenPlaneAndPoint(Plane* plane, Vec3* point)
 {
-	return (plane->getpNormal()->x * point->x) + (plane->getpNormal()->y * point->y)
+	float shortest_distance = (plane->getpNormal()->x * point->x) 
+		+ (plane->getpNormal()->y * point->y)
 		+ (plane->getpNormal()->z * point->z) + plane->getAdjustmetD();
+
+	if (fabsf(shortest_distance) <= 0.0001f) shortest_distance = 0.0f;
+	return shortest_distance;
 }
 
 

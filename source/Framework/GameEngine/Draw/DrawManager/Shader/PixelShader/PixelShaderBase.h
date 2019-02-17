@@ -12,7 +12,16 @@
 //****************************************
 // インクルード文
 //****************************************
+#include <string>
+
 #include "../ShaderBase.h"
+
+
+
+//****************************************
+// クラス宣言
+//****************************************
+class TextureObject;
 
 
 
@@ -24,10 +33,18 @@
 class PixelShaderBase : public ShaderBase
 {
 //====================
+// 定数
+//====================
+private:
+	static const std::string DEFAULT_TEXTURE_NAME;		//!< デフォルトテクスチャ名
+
+
+//====================
 // 変数
 //====================
 private:
 	LPDIRECT3DPIXELSHADER9 pixel_shader_ = nullptr;		//!< ピクセルシェーダー
+	TextureObject* default_texture_ = nullptr;			//!< デフォルトテクスチャオブジェクト
 
 
 //====================
@@ -42,11 +59,27 @@ public:
 	//----------------------------------------
 	LPDIRECT3DPIXELSHADER9 getpPixelShader();
 
+	//----------------------------------------
+	//! @brief デフォルトテクスチャハンドラ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval LPDIRECT3DTEXTURE9 デフォルトテクスチャハンドラ
+	//----------------------------------------
+	LPDIRECT3DTEXTURE9 getpDefaultTexture();
+
 
 //====================
 // 関数
 //====================
 public:
+	//----------------------------------------
+	//! @brief デフォルトテクスチャハンドラ初期化関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void InitDefaultTexture();
+
 	//----------------------------------------
 	//! @brief デバイスにシェーダー設定関数
 	//! @details
@@ -75,5 +108,7 @@ public:
 	//----------------------------------------
 	void ReleasePixelShader();
 };
+
+
 
 #endif
