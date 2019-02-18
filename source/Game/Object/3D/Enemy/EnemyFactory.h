@@ -13,7 +13,6 @@
 // インクルード文
 //****************************************
 #include "Enemy.h"
-#include "EnemyUpdate.h"
 #include "EnemyDraw.h"
 #include "EnemyCollision.h"
 

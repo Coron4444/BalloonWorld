@@ -83,6 +83,14 @@ public:
 	void Uninit() override;
 
 	//----------------------------------------
+	//! @brief 更新関数
+	//! @details 
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Update() override;
+
+	//----------------------------------------
 	//! @brief ステージ作成関数
 	//! @details
 	//! @param void なし

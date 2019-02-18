@@ -24,11 +24,19 @@
 class PushSpaceLogo : public GameObjectNull
 {
 //====================
+// 定数
+//====================
+private:
+	static const int COLOR_CHANGE_SPEED;		//!< 色変更速度
+
+
+//====================
 // 変数
 //====================
 private:
-	XColor4 color_ = {1.0f, 1.0f, 1.0f, 1.0f};		//!< 色
-	bool is_color_change_ = false;					//!< 色変更フラグ
+	XColor4 color_ = {1.0f, 1.0f, 1.0f, 1.0f};	//!< 色
+	bool is_color_change_ = false;				//!< 色変更フラグ
+	int color_change_counter_;					//!< 色変更カウンタ
 
 
 //====================
@@ -59,11 +67,18 @@ public:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
-	//! @param *update 更新基底クラス
-	//! @param *draw   描画基底クラス
+	//! @param *draw 描画基底クラス
 	//! @retval void なし
 	//----------------------------------------
-	void Init(UpdateBase* update, DrawBase* draw);
+	void Init(DrawBase* draw);
+
+	//----------------------------------------
+	//! @brief 更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Update() override;
 
 	//----------------------------------------
 	//! @brief リセット関数

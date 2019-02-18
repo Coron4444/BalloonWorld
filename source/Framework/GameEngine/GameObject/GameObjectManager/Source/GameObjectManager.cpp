@@ -151,17 +151,17 @@ void GameObjectManager::Reset()
 
 
 
-void GameObjectManager::AddGameObjectBaseToArray(GameObjectBase* game_object)
+void GameObjectManager::AddGameObjectBase(GameObjectBase* game_object)
 {
 	await_add_.AddToArray(game_object);
 }
 
 
 
-void GameObjectManager::ReleaseGameObjectBaseFromArray(GameObjectBase* game_object)
+void GameObjectManager::ReleaseGameObjectBase(GameObjectBase* game_object)
 {
-	// コンポーネントをマネージャから解放
-	ReleaseComponentFromManager(game_object);
+	// コンポーネントとゲームオブジェクト基底クラスをマネージャから解放
+	ReleaseComponentAndGameObjectBaseFromManager(game_object);
 
 	// ゲームオブジェクト終了処理
 	game_object->Uninit();
@@ -183,8 +183,8 @@ void GameObjectManager::AddContentsOfAwaitAddArray()
 		// 全体配列へ追加
 		all_game_object_.AddToArray(await_add_.getObject(i));
 
-		// コンポーネントをマネージャにセット
-		AddComponentToManager(await_add_.getObject(i));
+		// コンポーネントとゲームオブジェクト基底クラスをマネージャにセット
+		AddComponentAndGameObjectBaseToManager(await_add_.getObject(i));
 	}
 
 	// 追加待ち配列をリセット
@@ -215,11 +215,11 @@ void GameObjectManager::ReleaseContentsOfAwaitReleaseArray()
 
 
 
-void GameObjectManager::AddComponentToManager(GameObjectBase* game_object)
+void GameObjectManager::AddComponentAndGameObjectBaseToManager(GameObjectBase* game_object)
 {
-	if (game_object->getpUpdate() != nullptr)
+	if (game_object->getIsUpdate())
 	{
-		update_manager_.AddUpdateBaseToArray(game_object->getpUpdate());
+		update_manager_.AddGameObjectBase(game_object);
 	}
 
 	if (game_object->getpDraw() != nullptr)
@@ -235,11 +235,11 @@ void GameObjectManager::AddComponentToManager(GameObjectBase* game_object)
 
 
 
-void GameObjectManager::ReleaseComponentFromManager(GameObjectBase* game_object)
+void GameObjectManager::ReleaseComponentAndGameObjectBaseFromManager(GameObjectBase* game_object)
 {
-	if (game_object->getpUpdate() != nullptr)
+	if (game_object->getIsUpdate())
 	{
-		update_manager_.ReleaseUpdateBaseFromArray(game_object->getpUpdate());
+		update_manager_.ReleaseGameObjectBase(game_object);
 	}
 
 	if (game_object->getpDraw() != nullptr)
@@ -263,12 +263,12 @@ void GameObjectManager::Release()
 	// 残りのオブジェクトを全て解放待ちに登録
 	for (unsigned i = 0; i < await_add_.getEndIndex(); i++)
 	{
-		ReleaseGameObjectBaseFromArray(await_add_.getObject(i));
+		ReleaseGameObjectBase(await_add_.getObject(i));
 	}
 
 	for (unsigned i = 0; i < all_game_object_.getEndIndex(); i++)
 	{
-		ReleaseGameObjectBaseFromArray(all_game_object_.getObject(i));
+		ReleaseGameObjectBase(all_game_object_.getObject(i));
 	}
 
 	// 解放待ち配列の中身を解放

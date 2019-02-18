@@ -12,6 +12,15 @@
 //****************************************
 #include "../PushSpaceLogo.h"
 
+#include <Tool/TimeToFrame.h>
+
+
+
+//****************************************
+// 定数定義
+//****************************************
+const int PushSpaceLogo::COLOR_CHANGE_SPEED = TimeToFrame::SecondToFrame(1.0f);
+
 
 
 //****************************************
@@ -34,14 +43,29 @@ bool* PushSpaceLogo::getpIsColorChange()
 //****************************************
 // 関数定義
 //****************************************
-void PushSpaceLogo::Init(UpdateBase* update, DrawBase* draw)
+void PushSpaceLogo::Init(DrawBase* draw)
 {
 	// 色初期化
 	color_ = {1.0f, 1.0f, 1.0f, 1.0f};
 	is_color_change_ = false;
+	color_change_counter_ = 0;
 
 	// 基底クラスの初期化
-	GameObjectBase::Init(update, draw, nullptr);
+	GameObjectBase::Init(draw, nullptr);
+}
+
+
+
+void PushSpaceLogo::Update()
+{
+	color_change_counter_++;
+
+	if (color_change_counter_ >= COLOR_CHANGE_SPEED)
+	{
+		is_color_change_ = true;
+		color_.a = color_.a == 1.0f	? 0.0f : 1.0f;
+		color_change_counter_ = 0;
+	}
 }
 
 
@@ -51,6 +75,7 @@ void PushSpaceLogo::Reset()
 	// 色リセット
 	color_ = {1.0f, 1.0f, 1.0f, 1.0f};
 	is_color_change_ = false;
+	color_change_counter_ = 0;
 	
-	GameObjectBase::Reset();
+	ResetComponent();
 }

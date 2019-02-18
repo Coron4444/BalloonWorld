@@ -20,5 +20,6 @@
 void Goal::Init(DrawBase* draw, CollisionBase* collision)
 {
 	// Šî’êƒNƒ‰ƒX‚Ì‰Šú‰»
-	GameObjectBase::Init(nullptr, draw, collision);
+	setIsUpdate(false);
+	GameObjectBase::Init(draw, collision);
 }

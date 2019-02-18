@@ -24,18 +24,32 @@
 class Enemy : public GameObjectNull
 {
 //====================
+// 定数
+//====================
+private:
+	static const float SPEED;		//!< 速度
+
+
+//====================
 // 関数
 //====================
 public:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
-	//! @param *update    更新基底クラス
 	//! @param *draw      描画基底クラス
 	//! @param *collision 衝突基底クラス
 	//! @retval void なし
 	//----------------------------------------
-	void Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision);
+	void Init(DrawBase* draw, CollisionBase* collision);
+
+	//----------------------------------------
+	//! @brief 更新関数
+	//! @details 
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Update() override;
 };
 
 

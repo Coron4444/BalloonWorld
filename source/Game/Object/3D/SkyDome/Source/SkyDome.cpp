@@ -20,5 +20,6 @@
 void SkyDome::Init(DrawBase* draw)
 {
 	// Šî’êƒNƒ‰ƒX‚Ì‰Šú‰»
-	GameObjectBase::Init(nullptr, draw, nullptr);
+	setIsUpdate(false);
+	GameObjectBase::Init(draw, nullptr);
 }

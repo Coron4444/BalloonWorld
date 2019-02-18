@@ -32,14 +32,30 @@ GameObjectNull::~GameObjectNull()
 
 void GameObjectNull::Uninit()
 {
-	// 基底クラスの終了処理
-	GameObjectBase::Uninit();
+	UninitComponent();
+}
+
+
+
+void GameObjectNull::Update()
+{
+}
+
+
+
+void GameObjectNull::LateUpdate()
+{
 }
 
 
 
 void GameObjectNull::Reset()
 {
-	// 基底クラスのリセット処理
-	GameObjectBase::Reset();
+	ResetComponent();
+}
+
+
+
+void GameObjectNull::DebugDisplay()
+{
 }

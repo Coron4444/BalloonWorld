@@ -13,6 +13,7 @@
 #include "../Balloon.h"
 
 #include <GameEngine/Collision/BulletPhysics/BulletPhysicsManager/BulletPhysicsManager.h>
+#include <Tool/MeterToFrame.h>
 
 
 
@@ -21,6 +22,8 @@
 //****************************************
 const Vec3 Balloon::OBB_EDGE_LENGTH_HALF(0.02f, 0.1f, 0.02f);
 const float Balloon::SPHERE_RADIUS = 1.0f;
+const float Balloon::RISING_SPEED
+= MeterToFrame::MeterPerSecondSquaredToMeterPerFrameSquared(1000000.0f);
 
 
 
@@ -73,13 +76,23 @@ void Balloon::setPosition(Vec3 value)
 //****************************************
 // 関数定義
 //****************************************
-void Balloon::Init(UpdateBase* update, DrawBase* draw, unsigned balloon_line_num)
+void Balloon::Init(DrawBase* draw, unsigned balloon_line_num)
 {
 	// バレットオブジェクト初期化
 	InitBulletPhysicsObject(balloon_line_num);
 
 	// 基底クラスの初期化
-	GameObjectBase::Init(update, draw, nullptr);
+	GameObjectBase::Init(draw, nullptr);
+}
+
+
+
+void Balloon::Update()
+{
+	// 上昇
+	getpObject(getAllObjectNum() - 1)->getpRigidBody()->activate();
+	getpObject(getAllObjectNum() - 1)->AddAcceleration(Vec3(0.0f, RISING_SPEED, 0.0f),
+													   Vec3(0.0f, 1.0f, 0.0f));
 }
 
 

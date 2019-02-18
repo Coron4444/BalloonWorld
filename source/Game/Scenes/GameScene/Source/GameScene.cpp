@@ -27,44 +27,16 @@
 //****************************************
 // プロパティ定義
 //****************************************
-bool GameScene::getIsClear() 
+int GameScene::getTime()
 { 
-	return is_clear_; 
+	return time_;
 }
 
 
 
-void GameScene::setIsClear(bool value) 
+void GameScene::setTime(int value)
 { 
-	is_clear_ = value; 
-}
-
-
-
-int GameScene::getScore() 
-{ 
-	return score_; 
-}
-
-
-
-void GameScene::setScore(int value) 
-{ 
-	score_ = value; 
-}
-
-
-
-int GameScene::getGameOver() 
-{ 
-	return game_over_; 
-}
-
-
-
-void GameScene::setGameOver(int value) 
-{
-	game_over_ = value; 
+	time_ = value;
 }
 
 
@@ -72,6 +44,13 @@ void GameScene::setGameOver(int value)
 StageManager* GameScene::getpStageManager()
 {
 	return stage_manager_;
+}
+
+
+
+void GameScene::setStageManager(StageManager* value)
+{
+	stage_manager_ = value;
 }
 
 

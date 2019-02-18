@@ -39,7 +39,8 @@ void TutorialLogo::Init(DrawBase* draw)
 	logo_num_ = 0;
 
 	// Šî’êƒNƒ‰ƒX‚Ì‰Šú‰»
-	GameObjectBase::Init(nullptr, draw, nullptr);
+	setIsUpdate(false);
+	GameObjectBase::Init(draw, nullptr);
 }
 
 

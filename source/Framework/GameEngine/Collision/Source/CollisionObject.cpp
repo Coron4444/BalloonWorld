@@ -83,6 +83,20 @@ void CollisionObject::setCollisionBase(CollisionBase* value)
 
 
 
+bool CollisionObject::getIsJudgement()
+{
+	return is_judgement_;
+}
+
+
+
+void CollisionObject::setIsJudgement(bool value)
+{
+	is_judgement_ = value;
+}
+
+
+
 ObjectOfTree<CollisionObject*>* CollisionObject::getpObjectOfTree()
 {
 	return object_of_tree_;

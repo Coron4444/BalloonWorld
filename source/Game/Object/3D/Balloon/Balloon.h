@@ -37,8 +37,9 @@ class Balloon : public GameObjectNull
 // 定数
 //====================
 public:
-	static const Vec3 OBB_EDGE_LENGTH_HALF;
-	static const float SPHERE_RADIUS;
+	static const float RISING_SPEED;			//!< 上昇速度
+	static const Vec3 OBB_EDGE_LENGTH_HALF;		//!< OBBの辺の長さの半分
+	static const float SPHERE_RADIUS;			//!< 球の半径
 
 
 //====================
@@ -108,12 +109,19 @@ public:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
-	//! @param *update           更新基底クラス
-	//! @param *draw             描画基底クラス
-	//! @param balloon_line_num  風船の線の数
+	//! @param *draw            描画基底クラス
+	//! @param balloon_line_num 風船の線の数
 	//! @retval void なし
 	//----------------------------------------
-	void Init(UpdateBase* update, DrawBase* draw, unsigned balloon_line_num);
+	void Init(DrawBase* draw, unsigned balloon_line_num);
+
+	//----------------------------------------
+	//! @brief 更新関数
+	//! @details 
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Update() override;
 
 	//----------------------------------------
 	//! @brief 拘束解放関数

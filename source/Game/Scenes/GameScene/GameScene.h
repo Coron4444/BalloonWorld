@@ -35,9 +35,7 @@ class GameScene : public SceneNull
 // 変数
 //====================
 private:
-	bool is_clear_ = false;			//!< クリアフラグ
-	int score_ = 0;					//!< スコア
-	int game_over_ = -1;			//!< ゲームオーバーフラグ
+	int time_;						//!< 時間
 	StageManager* stage_manager_;	//!< ステージマネージャ
 
 
@@ -46,52 +44,20 @@ private:
 //====================
 public:
 	//----------------------------------------
-	//! @brief クリアフラグ取得関数
+	//! @brief 時間取得関数
 	//! @details
 	//! @param void なし
-	//! @retval bool クリアの有無
+	//! @retval int 時間
 	//----------------------------------------
-	bool getIsClear();
+	int getTime();
 
 	//----------------------------------------
-	//! @brief クリアフラグ設定関数
+	//! @brief 時間設定関数
 	//! @details
-	//! @param value クリアフラグ
+	//! @param value 時間
 	//! @retval void なし
 	//----------------------------------------
-	void setIsClear(bool value);
-	
-	//----------------------------------------
-	//! @brief スコア取得関数
-	//! @details
-	//! @param void なし
-	//! @retval int スコア値
-	//----------------------------------------
-	int getScore();
-
-	//----------------------------------------
-	//! @brief スコア設定関数
-	//! @details
-	//! @param value スコア値
-	//! @retval void なし
-	//----------------------------------------
-	void setScore(int value);
-
-	//----------------------------------------
-	//! @brief ゲームオーバーフラグ取得関数
-	//! @details
-	//! @param void なし
-	//! @retval bool ゲームオーバーの有無
-	//----------------------------------------
-	int getGameOver();
-
-	//----------------------------------------
-	//! @brief ゲームオーバーフラグ設定関数
-	//! @details
-	//! @param value ゲームオーバーフラグ
-	//! @retval void なし
-	//----------------------------------------
-	void setGameOver(int value);
+	void setTime(int value);
 
 	//----------------------------------------
 	//! @brief ステージマネージャ取得関数
@@ -100,6 +66,14 @@ public:
 	//! @retval StageManager* ステージマネージャ
 	//----------------------------------------
 	StageManager* getpStageManager();
+
+	//----------------------------------------
+	//! @brief ステージマネージャ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval StageManager* ステージマネージャ
+	//----------------------------------------
+	void setStageManager(StageManager* value);
 
 
 //====================

@@ -13,7 +13,6 @@
 // インクルード文
 //****************************************
 #include "PushSpaceLogo.h"
-#include "PushSpaceLogoUpdate.h"
 #include "PushSpaceLogoDraw.h"
 
 

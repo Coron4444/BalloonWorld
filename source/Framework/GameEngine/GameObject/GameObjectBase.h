@@ -12,6 +12,11 @@
 //****************************************
 // インクルード文
 //****************************************
+#ifdef _DEBUG
+#include <Tool/Debug/ImGUI/imgui.h>
+#include <Tool/Debug/ImGUI/imgui_impl_dx9.h>
+#endif
+
 #include <Tool/Transform.h>
 #include <Tool/Physics.h>
 
@@ -37,11 +42,12 @@ class GameObjectBase
 // 変数
 //====================
 private:
-	Transform transform_;								//!< 変形
-	Physics*  physics_;									//!< 物理
-	bool is_registration_;								//!< 登録フラグ
+	Transform transform_;		//!< 変形
+	Physics*  physics_;			//!< 物理
+	bool is_registration_;		//!< 登録フラグ
+	bool is_input_ = true;		//!< 入力フラグ
+	bool is_update_ = true;		//!< 更新フラグ
 
-	UpdateBase*    update_;		//!< 更新基底クラス
 	DrawBase*      draw_;		//!< 描画基底クラス
 	CollisionBase* collision_;	//!< 衝突基底クラス
 
@@ -67,30 +73,45 @@ public:
 	Physics* getpPhysics();
 
 	//----------------------------------------
+	//! @brief 入力フラグ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval bool 入力フラグ
+	//----------------------------------------
+	bool getIsInput();
+
+	//----------------------------------------
+	//! @brief 入力フラグ取得関数
+	//! @details
+	//! @param value 入力フラグ
+	//! @retval void なし
+	//----------------------------------------
+	void setIsInput(bool value);
+
+	//----------------------------------------
+	//! @brief 更新フラグ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval bool 更新フラグ
+	//----------------------------------------
+	bool getIsUpdate();
+
+	//----------------------------------------
+	//! @brief 更新フラグ取得関数
+	//! @details
+	//! @param value 更新フラグ
+	//! @retval void なし
+	//----------------------------------------
+	void setIsUpdate(bool value);
+
+	//----------------------------------------
 	//! @brief 全基底クラス設定関数
 	//! @details
-	//! @param update    更新基底クラス
 	//! @param draw      描画基底クラス
 	//! @param collision 衝突基底クラス
 	//! @retval void なし
 	//----------------------------------------
-	void setAllComponent(UpdateBase* update, DrawBase* draw, CollisionBase* collision);
-
-	//----------------------------------------
-	//! @brief 更新基底クラス取得関数
-	//! @details
-	//! @param void なし
-	//! @retval UpdateBase* 更新基底クラス
-	//----------------------------------------
-	UpdateBase* getpUpdate();
-
-	//----------------------------------------
-	//! @brief 更新基底クラス設定関数
-	//! @details
-	//! @param value 更新基底クラス
-	//! @retval void なし
-	//----------------------------------------
-	void setUpdate(UpdateBase* value);
+	void setAllComponent(DrawBase* draw, CollisionBase* collision);
 
 	//----------------------------------------
 	//! @brief 描画基底クラス取得関数
@@ -146,12 +167,11 @@ public:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
-	//! @param update    更新基底クラス
 	//! @param draw      描画基底クラス
 	//! @param collision 衝突基底クラス
 	//! @retval void なし
 	//----------------------------------------
-	void Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision);
+	void Init(DrawBase* draw, CollisionBase* collision);
 
 	//----------------------------------------
 	//! @brief 終了関数
@@ -159,7 +179,23 @@ public:
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	virtual void Uninit();
+	virtual void Uninit() = 0;
+
+	//----------------------------------------
+	//! @brief 更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	virtual void Update() = 0;
+
+	//----------------------------------------
+	//! @brief 後更新関数
+	//! @details 
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	virtual void LateUpdate() = 0;
 
 	//----------------------------------------
 	//! @brief リセット関数
@@ -167,7 +203,15 @@ public:
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	virtual void Reset();
+	virtual void Reset() = 0;
+
+	//----------------------------------------
+	//! @brief デバッグ表示関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	virtual void DebugDisplay() = 0;
 
 	//----------------------------------------
 	//! @brief 物理生成関数
@@ -177,15 +221,8 @@ public:
 	//----------------------------------------
 	void CreatePhysics();
 
-private:
-	//----------------------------------------
-	//! @brief コンポーネント初期化関数
-	//! @details
-	//! @param void なし
-	//! @retval void なし
-	//----------------------------------------
-	void InitComponent();
-
+	
+protected:
 	//----------------------------------------
 	//! @brief コンポーネント終了関数
 	//! @details
@@ -201,6 +238,15 @@ private:
 	//! @retval void なし
 	//----------------------------------------
 	void ResetComponent();
+
+private:
+	//----------------------------------------
+	//! @brief コンポーネント初期化関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void InitComponent();
 
 	//----------------------------------------
 	//! @brief 描画共通データ追加関数

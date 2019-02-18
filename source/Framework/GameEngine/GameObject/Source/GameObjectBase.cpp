@@ -12,8 +12,7 @@
 //****************************************
 #include "../GameObjectBase.h"
 #include "../GameObjectManager/GameObjectManager.h"
-#include "../../Update/UpdateBase.h"
-#include "../../Update/UpdateManager/UpdateManager.h"
+#include "../GameObjectManager/UpdateManager.h"
 #include "../../Draw/DrawBase.h"
 #include "../../Draw/DrawManager/DrawManager.h"
 #include "../../Collision/CollisionBase.h"
@@ -40,26 +39,49 @@ Physics* GameObjectBase::getpPhysics()
 
 
 
-void GameObjectBase::setAllComponent(UpdateBase* update, DrawBase* draw,
-									 CollisionBase* collision)
+bool GameObjectBase::getIsInput()
 {
-	setUpdate(update);
+	return is_input_;
+}
+
+
+
+void GameObjectBase::setIsInput(bool value)
+{
+	is_input_ = value;
+}
+
+
+
+bool GameObjectBase::getIsUpdate()
+{
+	return is_update_;
+}
+
+
+
+void GameObjectBase::setIsUpdate(bool value)
+{
+	if (is_update_ == value) return;
+	is_update_ = value;
+	if (is_update_)
+	{
+		GameObjectManager::getpInstance()
+			->getpUpdateManager()->AddGameObjectBase(this);
+	}
+	else
+	{
+		GameObjectManager::getpInstance()
+			->getpUpdateManager()->ReleaseGameObjectBase(this);
+	}
+}
+
+
+
+void GameObjectBase::setAllComponent(DrawBase* draw, CollisionBase* collision)
+{
 	setDraw(draw);
 	setCollision(collision);
-}
-
-
-
-UpdateBase* GameObjectBase::getpUpdate()
-{
-	return update_;
-}
-
-
-
-void GameObjectBase::setUpdate(UpdateBase* value)
-{
-	update_ = value;
 }
 
 
@@ -98,7 +120,6 @@ void GameObjectBase::setCollision(CollisionBase* value)
 GameObjectBase::GameObjectBase(bool is_registration)
 	: is_registration_(is_registration),
 	physics_(nullptr),
-	update_(nullptr),
 	draw_(nullptr),
 	collision_(nullptr)
 {
@@ -108,7 +129,6 @@ GameObjectBase::GameObjectBase(bool is_registration)
 
 GameObjectBase::~GameObjectBase()
 {
-	SafeRelease::Normal(&update_);
 	SafeRelease::Normal(&draw_);
 	SafeRelease::Normal(&collision_);
 	SafeRelease::Normal(&physics_);
@@ -116,32 +136,18 @@ GameObjectBase::~GameObjectBase()
 
 
 
-void GameObjectBase::Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision)
+void GameObjectBase::Init(DrawBase* draw, CollisionBase* collision)
 {
 	// 描画共通データ設定
 	AddDrawCommonData(draw);
 
 	// コンポーネント初期化
-	setAllComponent(update, draw, collision);
+	setAllComponent(draw, collision);
 	InitComponent();
 
 	// オブジェクトマネージャーに登録
 	if (!is_registration_) return;
-	GameObjectManager::getpInstance()->AddGameObjectBaseToArray(this);
-}
-
-
-
-void GameObjectBase::Uninit()
-{
-	UninitComponent();
-}
-
-
-
-void GameObjectBase::Reset()
-{
-	ResetComponent();
+	GameObjectManager::getpInstance()->AddGameObjectBase(this);
 }
 
 
@@ -155,36 +161,8 @@ void GameObjectBase::CreatePhysics()
 
 
 
-void GameObjectBase::InitComponent()
-{
-	if (update_ != nullptr)
-	{
-		update_->setGameObject(this);
-		update_->Init();
-	}
-
-	if (draw_ != nullptr)
-	{
-		draw_->setGameObject(this);
-		draw_->Init();
-	}
-
-	if (collision_ != nullptr)
-	{
-		collision_->setGameObject(this);
-		collision_->Init();
-	}
-}
-
-
-
 void GameObjectBase::UninitComponent()
 {
-	if (update_ != nullptr)
-	{
-		update_->Uninit();
-	}
-
 	if (draw_ != nullptr)
 	{
 		draw_->Uninit();
@@ -200,11 +178,6 @@ void GameObjectBase::UninitComponent()
 
 void GameObjectBase::ResetComponent()
 {
-	if (update_ != nullptr)
-	{
-		update_->Reset();
-	}
-
 	if (draw_ != nullptr)
 	{
 		draw_->Reset();
@@ -213,6 +186,23 @@ void GameObjectBase::ResetComponent()
 	if (collision_ != nullptr)
 	{
 		collision_->Reset();
+	}
+}
+
+
+
+void GameObjectBase::InitComponent()
+{
+	if (draw_ != nullptr)
+	{
+		draw_->setGameObject(this);
+		draw_->Init();
+	}
+
+	if (collision_ != nullptr)
+	{
+		collision_->setGameObject(this);
+		collision_->Init();
 	}
 }
 

@@ -20,8 +20,6 @@
 Player* PlayerFactory::Create()
 {
 	Player* temp = new Player();
-	temp->Init(new PlayerUpdate(),
-			   new PlayerDraw(),
-			   new PlayerCollision());
+	temp->Init(new PlayerDraw(), new PlayerCollision());
 	return temp;
 }

@@ -15,12 +15,25 @@
 
 
 //****************************************
+// 定数定義
+//****************************************
+const float Enemy::SPEED = 0.1f;
+
+
+
+//****************************************
 // 関数定義
 //****************************************
-void Enemy::Init(UpdateBase* update, DrawBase* draw, CollisionBase* collision)
+void Enemy::Init(DrawBase* draw, CollisionBase* collision)
 {
-	// 基底クラスの初期化
-	GameObjectBase::Init(update, draw, collision);
-
 	*getpTransform()->getpScale() = Vec3(3.0f, 3.0f, 3.0f);
+	
+	// 基底クラスの初期化
+	GameObjectBase::Init(draw, collision);
+}
+
+
+
+void Enemy::Update()
+{
 }

@@ -20,7 +20,6 @@
 PushSpaceLogo* PushSpaceLogoFactory::Create()
 {
 	PushSpaceLogo* temp = new PushSpaceLogo();
-	temp->Init(new PushSpaceLogoUpdate(),
-			   new PushSpaceLogoDraw());
+	temp->Init(new PushSpaceLogoDraw());
 	return temp;
 }

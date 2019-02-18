@@ -141,7 +141,7 @@ void SceneManager::Uninit()
 	if (next_scene_ != nullptr)  next_scene_->Uninit();
 
 	//ゲームオブジェクトマネージャの終了処理
-	GameObjectManager::getpInstance()->getpInstance()->Uninit();
+	GameObjectManager::getpInstance()->Uninit();
 	GameObjectManager::ReleaseInstance();
 
 	// 各種開放

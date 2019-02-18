@@ -20,8 +20,6 @@
 Enemy* EnemyFactory::Create()
 {
 	Enemy* temp = new Enemy();
-	temp->Init(new EnemyUpdate(),
-			   new EnemyDraw(),
-			   new EnemyCollision());
+	temp->Init(new EnemyDraw(), new EnemyCollision());
 	return temp;
 }

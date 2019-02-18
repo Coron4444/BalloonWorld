@@ -20,8 +20,6 @@
 Balloon* BalloonFactory::Create(unsigned balloon_line_num)
 {
 	Balloon* temp = new Balloon();
-	temp->Init(new BalloonUpdate(),
-			   new BalloonDraw(),
-			   balloon_line_num);
+	temp->Init(new BalloonDraw(), balloon_line_num);
 	return temp;
 }

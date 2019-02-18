@@ -36,9 +36,9 @@ void GameSceneState_End::Init()
 void GameSceneState_End::Update()
 {
 	// ƒNƒŠƒA
-	if (game_scene_->getGameOver() == 0)
-	{
-		game_scene_->getpSceneManager()->getpCommonData()->setIsClear(true);
-		game_scene_->getpSceneManager()->setNextScene(new ResultScene(new ResultSceneState_Start()));
-	}
+	//if (game_scene_->getGameOver() == 0)
+	//{
+	//	game_scene_->getpSceneManager()->getpCommonData()->setIsClear(true);
+	//	game_scene_->getpSceneManager()->setNextScene(new ResultScene(new ResultSceneState_Start()));
+	//}
 }

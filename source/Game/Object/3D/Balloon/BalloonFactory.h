@@ -13,7 +13,6 @@
 // インクルード文
 //****************************************
 #include "Balloon.h"
-#include "BalloonUpdate.h"
 #include "BalloonDraw.h"
 
 

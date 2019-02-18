@@ -12,6 +12,7 @@
 //****************************************
 #include "../StageManager.h"
 
+#include <GameEngine/Input/InputManager/InputManager.h>
 #include <Object/3D/Player/PlayerFactory.h>
 #include <Object/3D/Balloon/BalloonGroupFactory.h>
 
@@ -40,14 +41,27 @@ Player* StageManager::getpPlayer()
 void StageManager::Init()
 {
 	// Šî’êƒNƒ‰ƒX‚Ì‰Šú‰»
-	GameObjectBase::Init(nullptr, nullptr, nullptr);
+	//setIsUpdate(false);
+	GameObjectBase::Init(nullptr, nullptr);
 }
 
 
 
 void StageManager::Uninit()
 {
-	GameObjectBase::Uninit();
+	UninitComponent();
+}
+
+void StageManager::Update()
+{
+	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_SPACE))
+	{
+		player_->setIsUpdate(false);
+	}
+	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_B))
+	{
+		player_->setIsUpdate(true);
+	}
 }
 
 

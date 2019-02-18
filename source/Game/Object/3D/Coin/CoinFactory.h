@@ -13,7 +13,6 @@
 // インクルード文
 //****************************************
 #include "Coin.h"
-#include "CoinUpdate.h"
 #include "CoinDraw.h"
 #include "CoinCollision.h"
 

@@ -34,8 +34,8 @@ void GameSceneState_Start::Init()
 	game_scene_ = (GameScene*)getpScene();
 
 	// ゲームシーン共通データーの初期化
-	game_scene_->setIsClear(false);
-	game_scene_->setScore(0);
+	//game_scene_->setIsClear(false);
+	//game_scene_->setScore(0);
 
 	// デフォルトカメラの作成
 	Camera* camera = GameObjectManager::getpInstance()->getpDrawManager()
@@ -55,16 +55,16 @@ void GameSceneState_Start::Init()
 void GameSceneState_Start::Update()
 {
 	// クリア
-	if (game_scene_->getGameOver() == 0)
-	{
-		game_scene_->getpSceneManager()->getpCommonData()->setIsClear(true);
-		game_scene_->getpSceneManager()->setNextScene(new ResultScene(new ResultSceneState_Start()));
-	}
-
-	// 失敗
-	if (game_scene_->getGameOver() == 1)
-	{
-		game_scene_->getpSceneManager()->getpCommonData()->setIsClear(false);
-		game_scene_->getpSceneManager()->setNextScene(new ResultScene(new ResultSceneState_Start()));
-	}
+	//if (game_scene_->getGameOver() == 0)
+	//{
+	//	game_scene_->getpSceneManager()->getpCommonData()->setIsClear(true);
+	//	game_scene_->getpSceneManager()->setNextScene(new ResultScene(new ResultSceneState_Start()));
+	//}
+	//
+	//// 失敗
+	//if (game_scene_->getGameOver() == 1)
+	//{
+	//	game_scene_->getpSceneManager()->getpCommonData()->setIsClear(false);
+	//	game_scene_->getpSceneManager()->setNextScene(new ResultScene(new ResultSceneState_Start()));
+	//}
 }

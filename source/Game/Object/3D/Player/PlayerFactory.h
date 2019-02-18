@@ -13,7 +13,6 @@
 // インクルード文
 //****************************************
 #include "Player.h"
-#include "PlayerUpdate.h"
 #include "PlayerDraw.h"
 #include "PlayerCollision.h"
 

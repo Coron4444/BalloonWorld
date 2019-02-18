@@ -50,12 +50,36 @@ public:
 	virtual void Uninit() override;
 
 	//----------------------------------------
+	//! @brief 更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	virtual void Update() override;
+
+	//----------------------------------------
+	//! @brief 後更新関数
+	//! @details 
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	virtual void LateUpdate() override;
+
+	//----------------------------------------
 	//! @brief リセット関数
 	//! @details
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
 	virtual void Reset() override;
+
+	//----------------------------------------
+	//! @brief デバッグ表示関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	virtual void DebugDisplay() override;
 };
 
 

@@ -20,8 +20,6 @@
 Coin* CoinFactory::Create()
 {
 	Coin* temp = new Coin();
-	temp->Init(new CoinUpdate(), 
-			   new CoinDraw(),
-			   new CoinCollision());
+	temp->Init(new CoinDraw(), new CoinCollision());
 	return temp;
 }

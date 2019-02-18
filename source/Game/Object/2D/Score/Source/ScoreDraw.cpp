@@ -84,7 +84,7 @@ void ScoreDraw::Init()
 
 	// ”šŒQƒ|ƒŠƒSƒ“ì¬
 	numbers_polygon_ = new NumbersPolygon();
-	numbers_polygon_->Init(score_->getpGameScene()->getScore(),SCORE_DIGITS_NUM, true,
+	numbers_polygon_->Init(100,SCORE_DIGITS_NUM, true,
 						   SCORE_POSITION, SCORE_SCALE, SCORE_COLOR, diffuse_texture_);
 }
 
@@ -100,7 +100,7 @@ void ScoreDraw::Uninit()
 
 void ScoreDraw::Update()
 {
-	numbers_polygon_->setNumber(score_->getpGameScene()->getScore());
+	numbers_polygon_->setNumber(100);
 }
 
 

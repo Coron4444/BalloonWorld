@@ -12,7 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../../Update/UpdateManager/UpdateManager.h"
+#include "UpdateManager.h"
 #include "../../Draw/DrawManager/DrawManager.h"
 #include "../../Collision/CollisionManager/CollisionManager.h"
 
@@ -181,7 +181,7 @@ public:
 	//! @param *game_object ゲームオブジェクト基底クラス
 	//! @retval void なし
 	//----------------------------------------
-	void AddGameObjectBaseToArray(GameObjectBase* game_object);
+	void AddGameObjectBase(GameObjectBase* game_object);
 
 	//----------------------------------------
 	//! @brief ゲームオブジェクト基底クラス解放関数
@@ -189,7 +189,7 @@ public:
 	//! @param *game_object ゲームオブジェクト基底クラス
 	//! @retval void なし
 	//----------------------------------------
-	void ReleaseGameObjectBaseFromArray(GameObjectBase* game_object);
+	void ReleaseGameObjectBase(GameObjectBase* game_object);
 
 private:
 	//----------------------------------------
@@ -209,20 +209,20 @@ private:
 	void ReleaseContentsOfAwaitReleaseArray();
 
 	//----------------------------------------
-	//! @brief コンポーネントをマネージャーへ追加関数
+	//! @brief コンポーネントとゲームオブジェクト基底クラスをマネージャーへ追加関数
 	//! @details
 	//! @param *game_object ゲームオブジェクト基底クラス
 	//! @retval void なし
 	//----------------------------------------
-	void AddComponentToManager(GameObjectBase* game_object);
+	void AddComponentAndGameObjectBaseToManager(GameObjectBase* game_object);
 
 	//----------------------------------------
-	//! @brief コンポーネントをマネージャーから解放関数
+	//! @brief コンポーネントとゲームオブジェクト基底クラスをマネージャーから解放関数
 	//! @details
 	//! @param *game_object ゲームオブジェクト基底クラス
 	//! @retval void なし
 	//----------------------------------------
-	void ReleaseComponentFromManager(GameObjectBase* game_object);
+	void ReleaseComponentAndGameObjectBaseFromManager(GameObjectBase* game_object);
 
 	//----------------------------------------
 	//! @brief 解放関数

@@ -76,14 +76,15 @@ void BalloonGroup::Init(unsigned balloon_num)
 	}
 
 	// Šî’êƒNƒ‰ƒX‚Ì‰Šú‰»
-	GameObjectBase::Init(nullptr, nullptr, nullptr);
+	setIsUpdate(false);
+	GameObjectBase::Init(nullptr, nullptr);
 }
 
 
 
 void BalloonGroup::Uninit()
 {
-	GameObjectBase::Uninit();
+	UninitComponent();
 	reference_list_.Uninit();
 }
 

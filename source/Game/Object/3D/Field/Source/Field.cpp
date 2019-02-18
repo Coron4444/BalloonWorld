@@ -37,7 +37,8 @@ void Field::Init(DrawBase* draw)
 							  Vec2(1.0f, 1.0f),
 							  XColor4(1.0f, 1.0f, 1.0f, 1.0f));
 	// 基底クラスの初期化
-	GameObjectBase::Init(nullptr, draw, nullptr);
+	setIsUpdate(false);
+	GameObjectBase::Init(draw, nullptr);
 }
 
 
@@ -46,6 +47,5 @@ void Field::Uninit()
 {
 	SafeRelease::PlusUninit(&mesh_plane_polygon_);
 
-	// 基底クラスの終了処理
-	GameObjectBase::Uninit();
+	UninitComponent();
 }

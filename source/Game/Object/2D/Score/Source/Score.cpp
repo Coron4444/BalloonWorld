@@ -34,5 +34,6 @@ void Score::Init(DrawBase* draw,
 	game_scene_ = game_scene;
 
 	// Šî’êƒNƒ‰ƒX‚Ì‰Šú‰»
-	GameObjectBase::Init(nullptr, draw, nullptr);
+	setIsUpdate(false);
+	GameObjectBase::Init(draw, nullptr);
 }
