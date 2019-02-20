@@ -38,7 +38,8 @@ public:
 	// 変数
 	//====================
 	private:
-		SceneBase* scene_ = nullptr;		//!< シーン
+		SceneBase* scene_ = nullptr;	//!< シーン
+		int id_ = -1;					//!< ID
 
 
 	//====================
@@ -60,6 +61,22 @@ public:
 		//! @retval void なし
 		//----------------------------------------
 		void setScene(SceneBase* value);
+
+		//----------------------------------------
+		//! @brief ID取得関数
+		//! @details
+		//! @param void なし
+		//! @retval int ID
+		//----------------------------------------
+		int getID();
+
+		//----------------------------------------
+		//! @brief ID設定関数
+		//! @details
+		//! @param *value ID
+		//! @retval void なし
+		//----------------------------------------
+		void setID(int value);
 
 
 	//====================
@@ -98,12 +115,20 @@ public:
 		virtual void Update() = 0;
 
 		//----------------------------------------
-		//! @brief リセット関数
+		//! @brief ポーズ入口関数
 		//! @details
 		//! @param void なし
 		//! @retval void なし
 		//----------------------------------------
-		virtual void Reset() = 0;
+		virtual void PauseEntrance() = 0;
+
+		//----------------------------------------
+		//! @brief ポーズ出口関数
+		//! @details
+		//! @param void なし
+		//! @retval void なし
+		//----------------------------------------
+		virtual void PauseExit() = 0;
 	};
 
 
@@ -113,6 +138,8 @@ public:
 private:
 	SceneManager* scene_manager_ = nullptr;		//!< シーンマネージャ
 	StateBase* state_ = nullptr;				//!< ステート
+	int current_state_id_ = -1;					//!< 現在のステートID
+	bool is_pause_ = false;						//!< ポーズフラグ
 
 
 //====================
@@ -151,6 +178,38 @@ public:
 	//----------------------------------------
 	void setState(StateBase* value);
 
+	//----------------------------------------
+	//! @brief リセット用ステート設定関数
+	//! @details
+	//! @param *value ステート
+	//! @retval void なし
+	//----------------------------------------
+	void setResetState(StateBase* value);
+
+	//----------------------------------------
+	//! @brief ポーズフラグ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	bool getIsPause();
+
+	//----------------------------------------
+	//! @brief ポーズフラグ設定関数
+	//! @details
+	//! @param value ポーズフラグ
+	//! @retval void なし
+	//----------------------------------------
+	void setIsPause(bool value);
+
+	//----------------------------------------
+	//! @brief 現在のステートID取得関数
+	//! @details
+	//! @param void なし
+	//! @retval int 現在のステートID
+	//----------------------------------------
+	int getCurrentStateID();
+
 
 //====================
 // 関数
@@ -159,7 +218,7 @@ public:
 	//----------------------------------------
 	//! @brief コンストラクタ
 	//! @details
-	//! @param *state 最初のステート
+	//! @param *value ステート
 	//----------------------------------------
 	SceneBase(StateBase* state);
 
@@ -202,7 +261,6 @@ public:
 	//----------------------------------------
 	virtual void Reset() = 0;
 
-protected:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
@@ -211,6 +269,7 @@ protected:
 	//----------------------------------------
 	void InitState();
 
+protected:
 	//----------------------------------------
 	//! @brief 終了関数
 	//! @details
@@ -226,14 +285,6 @@ protected:
 	//! @retval void なし
 	//----------------------------------------
 	void UpdateState();
-
-	//----------------------------------------
-	//! @brief リセット関数
-	//! @details
-	//! @param void なし
-	//! @retval void なし
-	//----------------------------------------
-	void ResetState();
 };
 
 

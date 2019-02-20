@@ -102,6 +102,7 @@ public:
 	//----------------------------------------
 	void setPosition(Vec3 value);
 
+
 //====================
 // 関数
 //====================
@@ -111,9 +112,10 @@ public:
 	//! @details
 	//! @param *draw            描画基底クラス
 	//! @param balloon_line_num 風船の線の数
+	//! @param position			座標
 	//! @retval void なし
 	//----------------------------------------
-	void Init(DrawBase* draw, unsigned balloon_line_num);
+	void Init(DrawBase* draw, unsigned balloon_line_num, Vec3 position);
 
 	//----------------------------------------
 	//! @brief 更新関数
@@ -160,9 +162,10 @@ private:
 	//! @brief バレットオブジェクト初期化関数
 	//! @details
 	//! @param balloon_line_num 風船の線の数
+	//! @param position			座標
 	//! @retval void なし
 	//----------------------------------------
-	void InitBulletPhysicsObject(unsigned balloon_line_num);
+	void InitBulletPhysicsObject(unsigned balloon_line_num, Vec3 position);
 };
 
 

@@ -1,8 +1,8 @@
 //================================================================================
-//!	@file	 GoalFactory.cpp
-//!	@brief	 ゴール生成Class
+//!	@file	 StartBlockFactory.cpp
+//!	@brief	 スタートブロック生成Class
 //! @details 
-//!	@author  Kai Araki									@date 2018/11/28
+//!	@author  Kai Araki									@date 2019/02/20
 //================================================================================
 
 
@@ -10,17 +10,17 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../GoalFactory.h"
+#include "../StartBlockFactory.h"
 
 
 
 //****************************************
 // 関数定義
 //****************************************
-Goal* GoalFactory::Create()
+StartBlock* StartBlockFactory::Create()
 {
-	Goal* temp = new Goal();
-	temp->Init(new GoalDraw(),
-			   new GoalCollision());
+	StartBlock* temp = new StartBlock();
+	temp->Init(new StartBlockDraw(),
+			   new StartBlockCollision());
 	return temp;
 }

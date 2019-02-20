@@ -1,8 +1,8 @@
 //================================================================================
-//!	@file	 ClearLogoDraw.cpp
-//!	@brief	 クリアロゴ描画Class
+//!	@file	 PauseDraw.cpp
+//!	@brief	 ポーズ描画Class
 //! @details 
-//!	@author  Kai Araki									@date 2018/06/19
+//!	@author  Kai Araki									@date 2019/02/19
 //================================================================================
 
 
@@ -10,7 +10,8 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../ClearLogoDraw.h"
+#include "../PauseDraw.h"
+#include "../Pause.h"
 
 #include <Resource/Polygon/PlanePolygon.h>
 #include <Tool/SafeRelease.h>
@@ -20,15 +21,29 @@
 //****************************************
 // 定数定義
 //****************************************
-const std::string ClearLogoDraw::TEXTURE_NAME = "UI/Clear.png";
-const float ClearLogoDraw::SCALE = 1.25f;
+const std::string PauseDraw::TEXTURE_NAME[PauseDraw::OBJECT_NUM] =
+{
+	"Pause/Back.png",
+	"Pause/Tuzukeru.png",
+	"Pause/Hazimekara.png",
+	"Pause/Yameru.png",
+	"Pause/Icon.png"
+};
+
 
 
 
 //****************************************
 // プロパティ定義
 //****************************************
-unsigned ClearLogoDraw::getMeshNum(unsigned object_index)
+unsigned PauseDraw::getObjectNum()
+{
+	return OBJECT_NUM;
+}
+
+
+
+unsigned PauseDraw::getMeshNum(unsigned object_index)
 {
 	object_index = object_index;
 
@@ -37,32 +52,41 @@ unsigned ClearLogoDraw::getMeshNum(unsigned object_index)
 
 
 
-MATRIX* ClearLogoDraw::getpMatrix(unsigned object_index)
+MATRIX* PauseDraw::getpMatrix(unsigned object_index)
 {
-	object_index = object_index;
+	if (object_index == OBJECT_NUM - 1)
+	{
+		return pause_->getpIconTransform()->getpWorldMatrix();
+	}
 
 	return getpGameObject()->getpTransform()->getpWorldMatrix();
 }
 
 
 
-D3DMATERIAL9* ClearLogoDraw::getpMaterial(unsigned object_index, unsigned mesh_index)
+D3DMATERIAL9* PauseDraw::getpMaterial(unsigned object_index, unsigned mesh_index)
 {
-	object_index = object_index;
 	mesh_index = mesh_index;
 
+	if (object_index == 0 || object_index == 4)
+	{
+		plane_polygon_->setColor(Pause::CHARACTER_COLOR0);
+	}
+	else
+	{
+		plane_polygon_->setColor(pause_->getCharacterColor(object_index - 1));
+	}
 	return plane_polygon_->getpMaterial();
 }
 
 
 
-LPDIRECT3DTEXTURE9 ClearLogoDraw::getpDiffuseTexture(unsigned object_index,
-													 unsigned mesh_index)
+LPDIRECT3DTEXTURE9 PauseDraw::getpDiffuseTexture(unsigned object_index,
+												 unsigned mesh_index)
 {
-	object_index = object_index;
 	mesh_index = mesh_index;
 
-	return diffuse_texture_->getpHandler();
+	return texture_[object_index]->getpHandler();
 }
 
 
@@ -70,7 +94,7 @@ LPDIRECT3DTEXTURE9 ClearLogoDraw::getpDiffuseTexture(unsigned object_index,
 //****************************************
 // 関数定義
 //****************************************
-void ClearLogoDraw::Init()
+void PauseDraw::Init()
 {
 	// オーダーリスト設定
 	getpDrawOrderList()->setDrawType(DrawOrderList::DrawType::TWO_DIMENSIONAL);
@@ -79,30 +103,43 @@ void ClearLogoDraw::Init()
 	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::FIXED);
 
 	// テクスチャの登録
-	diffuse_texture_ = TextureManager::getpInstance()->getpObject(&TEXTURE_NAME);
+	for (unsigned i = 0; i < OBJECT_NUM; i++)
+	{
+		texture_[i] = TextureManager::getpInstance()->getpObject(&TEXTURE_NAME[i]);
+	}
 
 	// 平面ポリゴン作成
 	plane_polygon_ = new PlanePolygon();
 	plane_polygon_->Init();
 
-	// 拡縮&移動
-	getpGameObject()->getpTransform()->getpScale()->x = diffuse_texture_->getWidth() * SCALE;
-	getpGameObject()->getpTransform()->getpScale()->y = diffuse_texture_->getHeight() * (SCALE + 0.2f);
-	*getpGameObject()->getpTransform()->getpPosition() = Vec3(0.0f, 0.0f, 0.0f);
-	getpGameObject()->getpTransform()->CreateWorldMatrix();
+	// ダウンキャスト
+	pause_ = (Pause*)getpGameObject();
+
+	// 背景拡縮
+	pause_->getpTransform()->getpScale()->x *= (float)texture_[0]->getWidth();
+	pause_->getpTransform()->getpScale()->y *= (float)texture_[0]->getHeight();
+	pause_->getpTransform()->CreateAxisAndWorldMatrix();
+
+	// アイコン拡縮
+	pause_->getpIconTransform()->getpScale()->x *= (float)texture_[4]->getWidth();
+	pause_->getpIconTransform()->getpScale()->y *= (float)texture_[4]->getHeight();
+	pause_->getpIconTransform()->CreateAxisAndWorldMatrix();
 }
 
 
 
-void ClearLogoDraw::Uninit()
+void PauseDraw::Uninit()
 {
 	SafeRelease::PlusUninit(&plane_polygon_);
-	SafeRelease::PlusRelease(&diffuse_texture_);
+	for (unsigned i = 0; i < OBJECT_NUM; i++)
+	{
+		SafeRelease::PlusRelease(&texture_[i]);
+	}
 }
 
 
 
-void ClearLogoDraw::Draw(unsigned object_index, unsigned mesh_index)
+void PauseDraw::Draw(unsigned object_index, unsigned mesh_index)
 {
 	object_index = object_index;
 	mesh_index = mesh_index;

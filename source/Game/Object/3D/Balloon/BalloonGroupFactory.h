@@ -31,9 +31,10 @@ public:
 	//! @brief 風船群生成関数
 	//! @details
 	//! @param balloon_num 風船数
+	//! @param position    座標
 	//! @retval BalloonGroup* 風船群
 	//----------------------------------------
-	BalloonGroup* Create(unsigned balloon_num);
+	BalloonGroup* Create(unsigned balloon_num, Vec3 position);
 };
 
 

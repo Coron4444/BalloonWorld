@@ -95,9 +95,10 @@ public:
 	//! @brief ‰Šú‰»ŠÖ”
 	//! @details
 	//! @param balloon_num •—‘D”
+	//! @param position    À•W
 	//! @retval void ‚È‚µ
 	//----------------------------------------
-	void Init(unsigned balloon_num);
+	void Init(unsigned balloon_num, Vec3 position);
 
 	//----------------------------------------
 	//! @brief I—¹ŠÖ”

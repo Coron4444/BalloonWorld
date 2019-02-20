@@ -134,7 +134,6 @@ private:
 	int	tag_ = TAG_NONE;								//!< タグ
 	LimitedPointerArray<Shape*, ARRAY_NUM> all_shape_;	//!< 全衝突形状配列
 	CollisionBase* collision_base_ = nullptr;			//!< 衝突基底クラス
-	bool is_judgement_ = true;							//!< 判定フラグ
 	ObjectOfTree<CollisionObject*>* object_of_tree_;	//!< 分木オブジェクト
 	AABB octree_aabb_;									//!< 8分木用AABB
 	
@@ -182,22 +181,6 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void setCollisionBase(CollisionBase* value);
-
-	//----------------------------------------
-	//! @brief 判定フラグ取得関数
-	//! @details
-	//! @param void なし
-	//! @retval bool 判定フラグ
-	//----------------------------------------
-	bool getIsJudgement();
-
-	//----------------------------------------
-	//! @brief 判定フラグ取得関数
-	//! @details
-	//! @param value 判定フラグ
-	//! @retval void なし
-	//----------------------------------------
-	void setIsJudgement(bool value);
 
 	//----------------------------------------
 	//! @brief 分木オブジェクト取得関数

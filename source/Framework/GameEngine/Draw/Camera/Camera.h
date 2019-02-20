@@ -165,7 +165,7 @@ public:
 	//! @param void ‚È‚µ
 	//! @retval Vector3D* À•W
 	//----------------------------------------
-	Vector3D* getpPositon();
+	Vector3D* getpPosition();
 	
 	//----------------------------------------
 	//! @brief ’‹“_æ“¾ŠÖ”

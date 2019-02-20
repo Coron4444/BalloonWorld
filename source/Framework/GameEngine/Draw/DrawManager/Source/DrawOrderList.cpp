@@ -107,6 +107,20 @@ void DrawOrderList::setIsLighting(bool value)
 
 
 
+bool DrawOrderList::getIsAnimation()
+{
+	return is_animation_;
+}
+
+
+
+void DrawOrderList::setIsAnimation(bool value)
+{
+	is_animation_ = value;
+}
+
+
+
 int DrawOrderList::getLayerNum()
 { 
 	return layer_num_;

@@ -206,7 +206,7 @@ void MeshPlanePolygon::CreateVertex(Vec2 mesh_num, Vec2 mesh_scale, Color4 color
 
 	for (std::vector<RendererDirectX9::VERTEX_3D>::size_type i = 0; i < vertex_.size(); i++)
 	{
-		vertex_[i].posisiont_ = Vec3(coordinate_x, field_height[i], coordinate_z);
+		vertex_[i].posisiont_ = Vec3(coordinate_x, 0.0f,/*field_height[i],*/ coordinate_z);
 		vertex_[i].color_ = color;
 		vertex_[i].texcoord_ = Vec2(tex_widht, tex_heihgt);
 		coordinate_x += mesh_scale.x;

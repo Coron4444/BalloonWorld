@@ -20,6 +20,7 @@
 // クラス宣言
 //****************************************
 class StageManager;
+class Pause;
 
 
 
@@ -34,9 +35,25 @@ class GameScene : public SceneNull
 //====================
 // 変数
 //====================
+public:
+	enum class State
+	{
+		NONE = -1,
+		START,
+		GAME,
+		PAUSE,
+		END,
+		MAX
+	};
+
+
+//====================
+// 変数
+//====================
 private:
-	int time_;						//!< 時間
-	StageManager* stage_manager_;	//!< ステージマネージャ
+	int time_;							//!< 時間
+	StageManager* stage_manager_;		//!< ステージマネージャ
+	Pause* pause_;						//!< ポーズ
 
 
 //====================
@@ -76,6 +93,14 @@ public:
 	void setStageManager(StageManager* value);
 
 
+	//----------------------------------------
+	//! @brief ポーズ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Pause* ポーズ
+	//----------------------------------------
+	Pause* getpPause();
+
 //====================
 // 関数
 //====================
@@ -83,7 +108,7 @@ public:
 	//----------------------------------------
 	//! @brief コンストラクタ
 	//! @details
-	//! @param *state 最初のステート
+	//! @param *value ステート
 	//----------------------------------------
 	GameScene(StateBase* state);
 
@@ -94,6 +119,14 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void Init();
+
+	//----------------------------------------
+	//! @brief 更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Update();
 };
 
 

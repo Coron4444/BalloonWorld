@@ -21,7 +21,8 @@
 // ’è”’è‹`
 //****************************************
 const std::string SkyDomeDraw::MODEL_NAME = "SkyDome/SkyDome.x";
-const float SkyDomeDraw::SCALE = 100.0f;
+const float SkyDomeDraw::SCALE = 130.0f;
+
 
 
 //****************************************

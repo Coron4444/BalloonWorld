@@ -70,12 +70,20 @@ public:
 		virtual void Update();
 
 		//----------------------------------------
-		//! @brief リセット関数
+		//! @brief ポーズ入口関数
 		//! @details
 		//! @param void なし
 		//! @retval void なし
 		//----------------------------------------
-		virtual void Reset();
+		virtual void PauseEntrance();
+
+		//----------------------------------------
+		//! @brief ポーズ出口関数
+		//! @details
+		//! @param void なし
+		//! @retval void なし
+		//----------------------------------------
+		virtual void PauseExit();
 	};
 
 

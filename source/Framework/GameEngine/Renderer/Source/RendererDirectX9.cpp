@@ -105,13 +105,13 @@ void RendererDirectX9::Uninit()
 
 
 
-bool RendererDirectX9::DrawBegin()
+bool RendererDirectX9::DrawBegin(XColor4 clear_color)
 {
 	// 画面クリア
 	direct3d_device_->Clear(0,										// RECT構造体配列の矩形の数
 							NULL,									// RECT構造体の先頭アドレス(画面全体はNULL)
-							(D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER | D3DCLEAR_STENCIL),	// TARGETは色のクリア、ZBUFFERはZバッファのクリア
-							D3DCOLOR_RGBA(32, 64, 192, 255),		// クリアカラ―(TARGETがあるとき)
+							(D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER), //| D3DCLEAR_STENCIL),	// TARGETは色のクリア、ZBUFFERはZバッファのクリア
+							(Color4)clear_color,					// クリアカラ―(TARGETがあるとき)
 							1.0f,									// Zバッファのクリア値
 							0);										// ステンシル値のクリア値
 

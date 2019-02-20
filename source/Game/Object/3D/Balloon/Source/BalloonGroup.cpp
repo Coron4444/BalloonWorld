@@ -60,7 +60,7 @@ void BalloonGroup::setPosition(Vec3 value)
 //****************************************
 // 関数定義
 //****************************************
-void BalloonGroup::Init(unsigned balloon_num)
+void BalloonGroup::Init(unsigned balloon_num, Vec3 position)
 {
 	// 参照リストへ自分を登録
 	reference_list_.setObject(this);
@@ -70,9 +70,9 @@ void BalloonGroup::Init(unsigned balloon_num)
 	end_index_ = balloon_num - 1;
 	for (unsigned i = 0; i < balloon_num; i++)
 	{
-		Balloon* balloon = factory.Create(BALLOON_LINE_NUM);
+		Balloon* balloon = factory.Create(BALLOON_LINE_NUM, position);
 		balloons_.push_back(balloon);
-		balloons_[i]->setPosition(*getpTransform()->getpPosition());
+		balloons_[i]->setPosition(position);
 	}
 
 	// 基底クラスの初期化

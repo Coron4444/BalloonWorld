@@ -10,16 +10,15 @@
 //****************************************
 // グローバル変数
 //****************************************
-bool IS_TEXTURE;    //!< テクスチャフラグ
-texture DIFFUSE_TEXTURE;    //!< ディヒューズテクスチャ
+// ディヒューズテクスチャ
+texture DIFFUSE_TEXTURE;
 
 
 
 //****************************************
 // サンプラ
 //****************************************
-sampler DIFFUSE_SAMPLER = 
-sampler_state
+sampler DIFFUSE_SAMPLER = sampler_state
 {
     Texture = <DIFFUSE_TEXTURE>;
     MinFilter = LINEAR;
@@ -41,8 +40,8 @@ sampler_state
 //************************************************************
 struct Input
 {
-    float4 color_    : COLOR0;      //!< 色
-    float2 uv_       : TEXCOORD0;   //!< UV
+    float4 color_ : COLOR0;    //!< 色
+    float2 ps_uv_ : TEXCOORD0; //!< PS用UV
 };
 
 
@@ -62,13 +61,6 @@ void MainPixelShader(Input input, out float4 out_color : COLOR0)
     // 出力データ初期化
     out_color = (float4)0.0f;
 
-    // ディヒューズテクスチャ色取得
-    float4 texture_color = (float4)1.0f;
-    if (IS_TEXTURE == true)
-    {
-        texture_color = tex2D(DIFFUSE_SAMPLER, input.uv_);
-    }
-
-    // 頂点色とテクスチャ色のブレンド
-    out_color = input.color_ * texture_color;
+    // 色算出
+    out_color = input.color_ * tex2D(DIFFUSE_SAMPLER, input.ps_uv_);
 }

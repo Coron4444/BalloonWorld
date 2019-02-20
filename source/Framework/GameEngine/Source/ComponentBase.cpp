@@ -31,6 +31,20 @@ void ComponentBase::setGameObject(GameObjectBase* value)
 
 
 
+bool ComponentBase::getIsEnable()
+{
+	return is_enable_;
+}
+
+
+
+void ComponentBase::setIsEnable(bool value)
+{
+	is_enable_ = value;
+}
+
+
+
 //****************************************
 // ŠÖ”’è‹`
 //****************************************

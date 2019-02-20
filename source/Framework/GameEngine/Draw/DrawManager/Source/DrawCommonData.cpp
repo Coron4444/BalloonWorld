@@ -30,9 +30,30 @@ RenderTexture* DrawCommonData::getpRenderTextureMain()
 
 
 
+RenderTexture* DrawCommonData::getpRenderTextureShadowMap()
+{
+	return &shadow_map_;
+}
+
+
+
 RenderTexture* DrawCommonData::getpRenderTextureMotionBlur()
 {
 	return &motion_blur_;
+}
+
+
+
+Camera* DrawCommonData::getpCameraShadowMap()
+{
+	return camera_shadow_map_;
+}
+
+
+
+void DrawCommonData::setCameraShadowMap(Camera* value)
+{
+	camera_shadow_map_ = value;
 }
 
 
@@ -43,6 +64,8 @@ RenderTexture* DrawCommonData::getpRenderTextureMotionBlur()
 void DrawCommonData::Init()
 {
 	main_.Init(GameEngine::SCREEN_WIDTH, GameEngine::SCREEN_HEIGHT);
+	shadow_map_.Init(GameEngine::SCREEN_WIDTH, GameEngine::SCREEN_HEIGHT);
+	shadow_map_.Init(GameEngine::SCREEN_WIDTH, GameEngine::SCREEN_HEIGHT);
 	motion_blur_.Init(GameEngine::SCREEN_WIDTH, GameEngine::SCREEN_HEIGHT);
 }
 
@@ -51,5 +74,6 @@ void DrawCommonData::Init()
 void DrawCommonData::Uninit()
 {
 	main_.Uninit();
+	shadow_map_.Uninit();
 	motion_blur_.Uninit();
 }

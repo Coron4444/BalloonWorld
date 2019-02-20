@@ -34,9 +34,11 @@ class CameraState_HomingTarget : public Camera::State
 // 定数
 //====================
 public:
-	static const Vec3 DEFAULT_LENGHT;			//!< 既定距離
-	static const float GAZING_POINT_Y;			//!< 注視点のY座標
-	static const float DEFAULT_ROTATION_SPEED;	//!< 既定回転速度
+	static const Vec3 DEFAULT_LENGHT;				//!< 既定距離
+	static const float GAZING_POINT_Y;				//!< 注視点のY座標
+	static const float DEFAULT_ROTATION_SPEED;		//!< 既定回転速度
+	static const float MAX_ANGLE_OF_AXIS_RIGHT;		//!< 右軸最大角度
+	static const float MIN_ANGLE_OF_AXIS_RIGHT;		//!< 右軸最小角度
 
 
 //====================

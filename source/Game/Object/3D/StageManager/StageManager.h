@@ -19,10 +19,12 @@
 //****************************************
 // クラス宣言
 //****************************************
-class Camera;
 class BalloonGroup;
+class Camera;
 class Player;
-
+class StartBlock;
+class Scaffold;
+class Needle;
 
 
 //************************************************************														   
@@ -39,6 +41,9 @@ private:
 	Camera* camera_ = nullptr;					//!< カメラ
 	BalloonGroup* balloon_group_ = nullptr;		//!< 風船群
 	Player* player_ = nullptr;					//!< プレイヤー
+	StartBlock* start_block_ = nullptr;			//!< スタートブロック
+	Scaffold* scaffold_ = nullptr;				//!< 足場
+	Needle* needle_ = nullptr;					//!< 棘
 
 
 //====================

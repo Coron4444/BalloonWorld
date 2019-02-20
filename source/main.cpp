@@ -22,7 +22,7 @@
 // 定数定義
 //****************************************
 static const char* CLASS_NAME = "DirectXProject";
-static const char* WINDOW_NAME = "DirectXゲーム";
+static const char* WINDOW_NAME = "BalloonWorld";
 static const DWORD WINDOW_STYLE = WS_OVERLAPPEDWINDOW & ~(WS_THICKFRAME | WS_MAXIMIZEBOX);
 
 
@@ -56,7 +56,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevinstance, LPSTR lpCmdLi
 
 	// メモリリーク検出
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF | _CRTDBG_CHECK_ALWAYS_DF);
-	//_CrtSetBreakAlloc(545);
+	//_CrtSetBreakAlloc(523);
 
 	// ウィンドウの作成
 	HWND window_handle = Create_Window(hInstance, nCmdShow);

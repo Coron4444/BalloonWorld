@@ -18,6 +18,8 @@
 #include <Object/3D/Coin/Coin.h>
 #include <Object/3D/Coin/CoinCollision.h>
 #include <Object/3D/Enemy/EnemyCollision.h>
+#include <Object/3D/Scaffold/ScaffoldCollision.h>
+#include <Object/3D/StartBlock/StartBlockCollision.h>
 #include <Resource/Polygon/MeshPlanePolygon.h>
 
 
@@ -127,43 +129,35 @@ void PlayerCollision::HitMainSphere(CollisionInformation* information)
 			}
 			break;
 		}
-		case CollisionBase::Type::ENEMY:
+		case CollisionBase::Type::START:
 		{
 			// 相手の衝突形状で振り分け
-			switch ((EnemyCollision::ShapeTag)information->getpOpponentShape()
+			switch ((StartBlockCollision::ShapeTag)information->getpOpponentShape()
 					->getTag())
 			{
-				case EnemyCollision::ShapeTag::MAIN:
+				case StartBlockCollision::ShapeTag::MAIN:
 				{
 					// めり込み解消
 					CollisionCalculation
 						::EliminationOfNesting(information,
 											   player_->getpTransform());
-
-					//// 相手のオブジェクトを消去
-					//GameObjectManager::getpInstance()
-					//	->ReleaseGameObjectBaseFromArray(hit_collision->getpGameObject());
 					break;
 				}
 			}
 			break;
 		}
-		case CollisionBase::Type::GOAL:
+		case CollisionBase::Type::SCAFFOLD:
 		{
 			// 相手の衝突形状で振り分け
-			switch ((EnemyCollision::ShapeTag)information->getpOpponentShape()
+			switch ((ScaffoldCollision::ShapeTag)information->getpOpponentShape()
 					->getTag())
 			{
-				case EnemyCollision::ShapeTag::MAIN:
+				case ScaffoldCollision::ShapeTag::MAIN:
 				{
 					// めり込み解消
 					CollisionCalculation
 						::EliminationOfNesting(information,
 											   player_->getpTransform());
-
-					//// 相手のオブジェクトを消去
-					//GameObjectManager::getpInstance()
-					//	->ReleaseGameObjectBaseFromArray(hit_collision->getpGameObject());
 					break;
 				}
 			}

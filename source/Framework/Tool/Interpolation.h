@@ -390,7 +390,7 @@ public:
 			max_index_(0),
 			target_index_(0),
 			target_element_(END_POINTER),
-			is_finished_(true)
+			is_finished_(false)
 		{
 			if (element_array == nullptr) return;
 
@@ -410,9 +410,6 @@ public:
 			// 目標要素を設定
 			target_index_ = 1;
 			target_element_ = first_pointer_[target_index_];
-
-			// 終端フラグOFF
-			is_finished_ = false;
 		}
 
 	private:
@@ -529,9 +526,9 @@ public:
 // 変数
 //====================
 private:
-	size_t size_;				//!< 配列数
-	Element** element_;			//!< 要素配列
-	Element** end_pointer_;		//!< 終端ポインタ
+	size_t size_;			//!< 配列数
+	Element** element_;		//!< 要素配列
+	Element** end_pointer_;	//!< 終端ポインタ
 
 
 //====================
@@ -539,10 +536,10 @@ private:
 //====================
 public:
 	//----------------------------------------
-	//! @brief 最初のポインタ取得取得関数
+	//! @brief 最初のポインタ取得関数
 	//! @details
 	//! @param void なし
-	//! @retval Vector3D* 前ベクトル
+	//! @retval Element** 最初のポインタ
 	//----------------------------------------
 	Element** getp2FirstPointer()
 	{

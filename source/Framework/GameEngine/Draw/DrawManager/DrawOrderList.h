@@ -45,6 +45,7 @@ public:
 //====================
 public:
 	static const unsigned RENDER_TARGET_MAIN = 1 << 0;
+	static const unsigned RENDER_TARGET_SHADOW_MAP = 1 << 1;
 
 
 //====================
@@ -58,6 +59,7 @@ private:
 	BitFlag render_target_flag_;		//!< レンダーターゲットフラグ
 	bool is_billboard_ = false;			//!< ビルボードフラグ
 	bool is_lighting_ = true;			//!< ラインティングフラグ
+	bool is_animation_ = false;			//!< アニメーションフラグ
 	int layer_num_ = 0;					//!< レイヤー数
 
 
@@ -169,6 +171,22 @@ public:
 	//----------------------------------------
 	void setIsLighting(bool value);
 	
+	//----------------------------------------
+	//! @brief アニメーションフラグ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval bool アニメーションフラグ
+	//----------------------------------------
+	bool getIsAnimation();
+
+	//----------------------------------------
+	//! @brief アニメーションフラグ設定関数
+	//! @details
+	//! @param value アニメーションフラグ
+	//! @retval void なし
+	//----------------------------------------
+	void setIsAnimation(bool value);
+
 	//----------------------------------------
 	//! @brief レイヤー数取得関数
 	//! @details

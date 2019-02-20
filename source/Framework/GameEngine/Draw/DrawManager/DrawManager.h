@@ -16,6 +16,7 @@
 #include "../Camera/Camera.h"
 #include "../Camera/CameraState_CrawlUp.h"
 #include "../Camera/CameraState_HomingTarget.h"
+#include "../Camera/CameraState_Normal.h"
 #include "../../Renderer/Renderer.h"
 
 #include <Tool/LimitedPointerArray.h>
@@ -29,6 +30,7 @@ class DrawBase;
 class DrawCommonData;
 class ShaderManager;
 class RenderTargetMain;
+class RenderTargetShadowMap;
 class MotionBlur;
 class RenderTexturePolygon;
 class GameObjectBase;
@@ -50,16 +52,9 @@ public:
 	{
 		NONE = -1,
 		MAIN,
-		DEPTH_SHADOW,
+		SHADOW_MAP,
 		MAX
 	};
-
-
-//====================
-// 定数
-//====================
-public:
-	static const unsigned RENDER_TARGET_BACK_BUFFER = 1 << 0;
 
 
 //====================
@@ -77,15 +72,18 @@ private:
 	LimitedPointerArray<DrawBase*, DRAW_ARRAY_NUM> await_add_;		//!< 追加待ち配列
 	LimitedPointerArray<DrawBase*, DRAW_ARRAY_NUM> await_release_;	//!< 解放待ち配列
 
-	Camera* camera_[(int)RenderTargetType::MAX];			//!< カメラ群
-	Fade* fade_;											//!< フェード
-	DrawCommonData* common_data_ = nullptr;					//!< 共通データ
-	ShaderManager* shader_manager_ = nullptr;				//!< シェーダーマネージャ
-	RenderTargetMain* render_target_main_ = nullptr;		//!< レンダーターゲットメイン
-	MotionBlur* motion_blur_ = nullptr;						//!< モーションブラー
-	LPDIRECT3DSURFACE9 back_buffer_surface_ = nullptr;		//!< BackBufferサーフェス
-	RenderTexturePolygon* back_buffer_polygon_ = nullptr;	//!< BackBuffer用ポリゴン
-	LPDIRECT3DDEVICE9 device_ = nullptr;					//!< デバイス
+	Camera* camera_[(int)RenderTargetType::MAX];				//!< カメラ群
+	Fade* fade_;												//!< フェード
+	DrawCommonData* common_data_ = nullptr;						//!< 共通データ
+	ShaderManager* shader_manager_ = nullptr;					//!< シェーダーマネージャ
+	RenderTargetMain* render_target_main_ = nullptr;			//!< レンダーターゲットメイン
+	RenderTargetShadowMap* render_target_shadow_map_ = nullptr;	//!< レンダーターゲットシャドウマップ
+	MotionBlur* motion_blur_ = nullptr;							//!< モーションブラー
+	LPDIRECT3DSURFACE9 back_buffer_surface_ = nullptr;			//!< BackBufferサーフェス
+	LPDIRECT3DSURFACE9 back_buffer_stencil_surface_ = nullptr;	//!< BackBufferステンシルサーフェス
+	D3DVIEWPORT9 back_buffer_view_port_;						//!< BackBufferビューポート
+	RenderTexturePolygon* back_buffer_polygon_ = nullptr;		//!< BackBuffer用ポリゴン
+	LPDIRECT3DDEVICE9 device_ = nullptr;						//!< デバイス
 
 
 //====================

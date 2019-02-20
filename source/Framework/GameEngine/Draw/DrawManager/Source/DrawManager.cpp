@@ -14,6 +14,7 @@
 #include "../DrawManager.h"
 #include "../Fade.h"
 #include "../RenderTarget/RenderTargetMain.h"
+#include "../RenderTarget/RenderTargetShadowMap.h"
 #include "../RenderTexturePolygon.h"
 #include "../Shader/ShaderManager/ShaderManager.h"
 #include "../../DrawBase.h"
@@ -57,6 +58,7 @@ void DrawManager::Init()
 	// 共通データ初期化
 	common_data_ = new DrawCommonData();
 	common_data_->Init();
+	common_data_->setCameraShadowMap(camera_[(int)RenderTargetType::SHADOW_MAP]);
 
 	// フェード作成
 	fade_ = new Fade();
@@ -66,9 +68,11 @@ void DrawManager::Init()
 	shader_manager_ = new ShaderManager();
 	shader_manager_->Init(common_data_);
 
-	// バックバッファサーフェスの保存
+	// BackBuffer用データの保存
 	Renderer::getpInstance()->getDevice(&device_);
 	device_->GetRenderTarget(0, &back_buffer_surface_);
+	device_->GetDepthStencilSurface(&back_buffer_stencil_surface_);
+	device_->GetViewport(&back_buffer_view_port_);
 
 	// BackBuffer用ポリゴン作成
 	back_buffer_polygon_ = new RenderTexturePolygon();
@@ -85,6 +89,13 @@ void DrawManager::Init()
 	render_target_main_->setShaderManager(shader_manager_);
 	render_target_main_->Init();
 
+	// レンダーターゲットシャドウマップ初期化
+	//render_target_shadow_map_ = new RenderTargetShadowMap();
+	//render_target_shadow_map_->setCamera(camera_[(int)RenderTargetType::SHADOW_MAP]);
+	//render_target_shadow_map_->setDrawCommonData(common_data_);
+	//render_target_shadow_map_->setShaderManager(shader_manager_);
+	//render_target_shadow_map_->Init();
+
 	// モーションブラー初期化
 	motion_blur_ = new MotionBlur();
 	motion_blur_->setCamera(camera_[(int)RenderTargetType::MAIN]);
@@ -93,12 +104,12 @@ void DrawManager::Init()
 	motion_blur_->Init();
 
 	// フォグ
-	device_->SetRenderState(D3DRS_FOGENABLE, TRUE);
-	device_->SetRenderState(D3DRS_FOGCOLOR, D3DCOLOR_RGBA(255, 255, 255, 255));
-	device_->SetRenderState(D3DRS_FOGVERTEXMODE, D3DFOG_NONE);
-	device_->SetRenderState(D3DRS_FOGTABLEMODE, D3DFOG_EXP);
-	float density = 0.001f;
-	device_->SetRenderState(D3DRS_FOGDENSITY, *((DWORD*)&density));
+	//device_->SetRenderState(D3DRS_FOGENABLE, TRUE);
+	//device_->SetRenderState(D3DRS_FOGCOLOR, D3DCOLOR_RGBA(255, 255, 255, 255));
+	//device_->SetRenderState(D3DRS_FOGVERTEXMODE, D3DFOG_NONE);
+	//device_->SetRenderState(D3DRS_FOGTABLEMODE, D3DFOG_EXP);
+	//float density = 0.001f;
+	//device_->SetRenderState(D3DRS_FOGDENSITY, *((DWORD*)&density));
 }
 
 
@@ -110,7 +121,9 @@ void DrawManager::Uninit()
 	all_draw_.Reset();
 
 	SafeRelease::PlusRelease(&back_buffer_surface_);
+	SafeRelease::PlusRelease(&back_buffer_stencil_surface_);
 	SafeRelease::PlusUninit(&motion_blur_);
+	//SafeRelease::PlusUninit(&render_target_shadow_map_);
 	SafeRelease::PlusUninit(&render_target_main_);
 	SafeRelease::PlusUninit(&back_buffer_polygon_);
 	SafeRelease::PlusUninit(&shader_manager_);
@@ -131,6 +144,7 @@ void DrawManager::UninitWhenChangeScene()
 	all_draw_.Reset();
 
 	render_target_main_->UninitWhenChangeScene();
+	render_target_shadow_map_->UninitWhenChangeScene();
 	motion_blur_->UninitWhenChangeScene();
 
 	for (auto& contents : camera_)
@@ -184,7 +198,12 @@ void DrawManager::Update()
 
 void DrawManager::Draw()
 {
-	// レンダーターゲット描画
+	// レンダーターゲットシャドウマップ描画
+	//render_target_shadow_map_->Draw();
+
+	// レンダーターゲットメイン描画
+	device_->SetDepthStencilSurface(back_buffer_stencil_surface_);
+	device_->SetViewport(&back_buffer_view_port_);
 	render_target_main_->Draw();
 
 	// ポストエフェクト描画
@@ -329,6 +348,7 @@ void DrawManager::UpdateAllDrawBase()
 void DrawManager::ResetAllRenderTarget()
 {
 	render_target_main_->Reset();
+	//render_target_shadow_map_->Reset();
 }
 
 
@@ -337,12 +357,22 @@ void DrawManager::DistributeDrawBase()
 {
 	for (unsigned i = 0; i < all_draw_.getEndIndex(); i++)
 	{
+		// 有効フラグがONか
+		if (!all_draw_.getObject(i)->getIsEnable()) continue;
+
 		// レンダーターゲットメイン
 		if (all_draw_.getObject(i)->getpDrawOrderList()->getpRenderTargetFlag()
 			->CheckAny(DrawOrderList::RENDER_TARGET_MAIN))
 		{
 			render_target_main_->AddDrawBaseToArray(all_draw_.getObject(i));
 		}
+
+		// レンダーターゲットシャドウマップ
+		//if (all_draw_.getObject(i)->getpDrawOrderList()->getpRenderTargetFlag()
+		//	->CheckAny(DrawOrderList::RENDER_TARGET_SHADOW_MAP))
+		//{
+		//	render_target_shadow_map_->AddDrawBaseToArray(all_draw_.getObject(i));
+		//}
 	}
 }
 
@@ -351,6 +381,7 @@ void DrawManager::DistributeDrawBase()
 void DrawManager::UpdateAllRenderTarget()
 {
 	render_target_main_->Update();
+	//render_target_shadow_map_->Update();
 }
 
 
@@ -359,6 +390,7 @@ void DrawManager::DrawBackBuffer()
 {
 	// レンダーターゲットの切り替え
 	device_->SetRenderTarget(0, back_buffer_surface_);
+	
 	bool is_begin = Renderer::getpInstance()->DrawBegin();
 
 	// カメラ切り替え

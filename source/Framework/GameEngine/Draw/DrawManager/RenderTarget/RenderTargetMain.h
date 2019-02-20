@@ -24,13 +24,14 @@
 class DrawBase;
 class DrawCommonData;
 class ShaderManager;
+class RenderTexturePolygon;
 
 
 
 //************************************************************														   
-//! @brief   バックバッファーClass
+//! @brief   レンダーターゲットメインClass
 //!
-//! @details バックバッファーへ描画する描画基底クラスを管理するClass
+//! @details レンダーターゲットメインのClass
 //************************************************************
 class RenderTargetMain
 {
@@ -53,7 +54,7 @@ private:
 	Camera::Type save_camera_type_;				//!< 保存用カメラタイプ
 	DrawCommonData* common_data_ = nullptr;		//!< 描画共通データ
 	ShaderManager* shader_manager_ = nullptr;	//!< シェーダーマネージャ
-
+	RenderTexturePolygon* shadow_map_polygon_ = nullptr;	//!< シャドウマップ用ポリゴン
 
 //====================
 // プロパティ
@@ -218,7 +219,7 @@ private:
 	void DrawTransparent();
 
 	//----------------------------------------
-	//! @brief 不透明オブジェクト描画関数
+	//! @brief 2Dオブジェクト描画関数
 	//! @details
 	//! @param void なし
 	//! @retval void なし

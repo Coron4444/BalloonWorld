@@ -278,9 +278,9 @@ void CollisionManager::CollisionDetermination()
 
 	for (unsigned i = 0; i < max_index; i++)
 	{
-		// 判定フラグがONか
-		if (!collision_objects_list_[i * 2]->getpCollisionBase()->getIsJudgement()) continue;
-		if (!collision_objects_list_[i * 2 + 1]->getpCollisionBase()->getIsJudgement()) continue;
+		// 有効フラグがONか
+		if (!collision_objects_list_[i * 2]->getpCollisionBase()->getIsEnable()) continue;
+		if (!collision_objects_list_[i * 2 + 1]->getpCollisionBase()->getIsEnable()) continue;
 
 		// 判定をする組み合わせか
 		if (!CollisionPairCheck::IsCheck(collision_objects_list_[i * 2]->getpCollisionBase(),

@@ -25,28 +25,30 @@ SceneNull::StateNull::~StateNull()
 
 void SceneNull::StateNull::Init()
 {
-
 }
 
 
 
 void SceneNull::StateNull::Uninit()
 {
-
 }
 
 
 
 void SceneNull::StateNull::Update()
 {
-
 }
 
 
 
-void SceneNull::StateNull::Reset()
+void SceneNull::StateNull::PauseEntrance()
 {
+}
 
+
+
+void SceneNull::StateNull::PauseExit()
+{
 }
 
 
@@ -87,5 +89,4 @@ void SceneNull::Update()
 
 void SceneNull::Reset()
 {
-	ResetState();
 }

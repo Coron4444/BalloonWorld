@@ -4,8 +4,8 @@
 //! @details 
 //!	@author  Kai Araki									@date 2019/02/13
 //================================================================================
-#ifndef	_GOAL_COLLISION_H_
-#define _GOAL_COLLISION_H_
+#ifndef	_START_BLOCK_COLLISION_H_
+#define _START_BLOCK_COLLISION_H_
 
 
 
@@ -31,26 +31,31 @@ public:
 	enum class ObjectTag
 	{
 		NONE = -1,
-		BOUNDING_SPHERE,
-		SUBSTANCE_SPHERE,
+		MAIN,
 		MAX
 	};
+
+	enum class ShapeTag
+	{
+		NONE = -1,
+		MAIN,
+		MAX
+	};
+
 
 //====================
 // 定数
 //====================
 private:
-	static const float BOUNDING_SPHERE_RADIUS;		//!< バウンディング球半径
-	static const float SUBSTANCE_SPHERE_RADIUS;		//!< 実体球半径
+	static const Vec3 MAIN_OBB_LENGTH;		//!< メインOBB長さ
 
 
 //====================
 // 変数
 //====================
 private:
-	CollisionObjects* collision_objects_;		//!< 衝突オブジェクト群
-	CollisionObject* bounding_sphere_;			//!< バウンディング球
-	CollisionObject* substance_sphere_;			//!< 実体球
+	CollisionObject* collision_object_;		//!< 衝突オブジェクト
+	OBB* main_obb_;							//!< メインOBB
 
 
 //====================

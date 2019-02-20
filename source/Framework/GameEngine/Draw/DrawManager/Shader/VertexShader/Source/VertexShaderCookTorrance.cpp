@@ -64,7 +64,7 @@ void VertexShaderCookTorrance::ObjectSetting(DrawBase* draw, Camera* camera,
 	D3DXMatrixInverse(&math_matrix_, nullptr, draw->getpMatrix(object_index));
 	D3DXVec4Transform(&light_vector, &light_vector, &math_matrix_);
 	D3DXVec3Normalize((Vec3*)&light_vector, (Vec3*)&light_vector);
-	light_vector.w = 0.7f;	// ŠÂ‹«Œõ‚Ì”ä—¦
+	light_vector.w = 0.3f;	// ŠÂ‹«Œõ‚Ì”ä—¦
 	getpConstantTable()->SetVector(getpDevice(), "DIRECTIONAL_LIGHT_VECTOR", 
 								   &light_vector);
 }

@@ -18,6 +18,12 @@
 
 
 
+//****************************************
+// クラス宣言
+//****************************************
+class Camera;
+
+
 //************************************************************														   
 //! @brief   描画共通データClass
 //!
@@ -31,7 +37,10 @@ class DrawCommonData
 private:
 	Vector3D directional_light_vector_ = {0.5f, -1.0f, 0.8f};	//!< 拡散反射照明ベクトル
 	RenderTexture main_;			//!< メイン用レンダーテクスチャ
+	RenderTexture shadow_map_;		//!< シャドウマップ用レンダーテクスチャ
 	RenderTexture motion_blur_;		//!< モーションブラー用レンダーテクスチャ
+	Camera* camera_shadow_map_;		//!< シャドウマップ用カメラ
+
 
 
 //====================
@@ -55,12 +64,37 @@ public:
 	RenderTexture* getpRenderTextureMain();
 
 	//----------------------------------------
+	//! @brief シャドウマップ用レンダーテクスチャ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval RenderTexture* シャドウマップ用レンダーテクスチャ
+	//----------------------------------------
+	RenderTexture* getpRenderTextureShadowMap();
+
+	//----------------------------------------
 	//! @brief モーションブラー用レンダーテクスチャ取得関数
 	//! @details
 	//! @param void なし
 	//! @retval RenderTexture* モーションブラー用レンダーテクスチャ
 	//----------------------------------------
 	RenderTexture* getpRenderTextureMotionBlur();
+
+	//----------------------------------------
+	//! @brief シャドウマップ用カメラ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Camera* シャドウマップ用カメラ
+	//----------------------------------------
+	Camera* getpCameraShadowMap();
+
+	//----------------------------------------
+	//! @brief シャドウマップ用カメラ取得関数
+	//! @details
+	//! @param value シャドウマップ用カメラ
+	//! @retval void なし 
+	//----------------------------------------
+	void setCameraShadowMap(Camera* value);
+
 
 //====================
 // 関数定義

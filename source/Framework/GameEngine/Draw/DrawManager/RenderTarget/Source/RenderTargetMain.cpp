@@ -12,11 +12,13 @@
 //****************************************
 #include "../RenderTargetMain.h"
 #include "../../Shader/ShaderManager/ShaderManager.h"
+#include "../../RenderTexturePolygon.h"
 #include "../../../DrawBase.h"
 #include "../../../Camera/Camera.h"
 #include "../../../../GameObject/GameObjectBase.h"
 #include "../../../../Collision/BulletPhysics/BulletPhysicsManager/BulletPhysicsManager.h"
 
+#include <GameEngine/Renderer/Renderer.h>
 #include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>
 #include <Tool/SafeRelease.h>
 
@@ -52,6 +54,12 @@ void RenderTargetMain::setShaderManager(ShaderManager* value)
 void RenderTargetMain::Init()
 {
 	Reset();
+	//shadow_map_polygon_ = new RenderTexturePolygon();
+	//shadow_map_polygon_->Init();
+	//shadow_map_polygon_->Update(-200.0f, -200.0f,
+	//	(float)100.0f,
+	//							 (float)100.0f,
+	//							 XColor4(1.0f, 1.0f, 1.0f, 1.0f));
 }
 
 
@@ -59,6 +67,7 @@ void RenderTargetMain::Init()
 void RenderTargetMain::Uninit()
 {
 	Reset();
+	//SafeRelease::PlusUninit(&shadow_map_polygon_);
 }
 
 
@@ -80,7 +89,7 @@ void RenderTargetMain::Update()
 	AllBillboardUpdate();
 
 	// エフェクシアの更新
-	EffekseerManager::getpInstance()->CreateViewMatrix(*camera_->getpPositon(),
+	EffekseerManager::getpInstance()->CreateViewMatrix(*camera_->getpPosition(),
 													   *camera_->getpGazingPoint(),
 													   *camera_->getpUp());
 	EffekseerManager::getpInstance()->CreateProjectionMatrix(camera_->getAngleOfView());
@@ -104,6 +113,23 @@ void RenderTargetMain::Draw()
 #endif
 	Draw2D();
 
+	// カメラ設定
+	//ChangeCameraType(Camera::Type::TWO_DIMENSIONAL);
+	//
+	//// シェーダーセット
+	//shader_manager_->ShaderSetToDevice(shadow_map_polygon_,
+	//								   ShaderManager::VertexShaderType::FIXED,
+	//								   ShaderManager::PixelShaderType::FIXED);
+	//
+	//// オブジェクト設定
+	//shader_manager_->ObjectSetting(shadow_map_polygon_, camera_, 0);
+	//
+	//// 描画
+	//LPDIRECT3DDEVICE9 device;
+	//Renderer::getpInstance()->getDevice(&device);
+	//device->SetTexture(0, common_data_->getpRenderTextureShadowMap()->getpTexture());
+	//shadow_map_polygon_->Draw(0, 0);
+	//
 	Renderer::getpInstance()->DrawEnd(is_begin);
 }
 
@@ -151,7 +177,7 @@ void RenderTargetMain::SortTransparent()
 	{
 		// 深度値を算出
 		Vector3D temp_vector0 = *draw_transparent_.getObject(i)->getpGameObject()
-			->getpTransform()->getpPosition() - *camera_->getpPositon();
+			->getpTransform()->getpPosition() - *camera_->getpPosition();
 
 		float depth_value0 = temp_vector0.getLengthSquare();
 
@@ -159,7 +185,7 @@ void RenderTargetMain::SortTransparent()
 		{
 			// 深度値を算出
 			Vector3D temp_vector1 = *draw_transparent_.getObject(j)->getpGameObject()
-				->getpTransform()->getpPosition() - *camera_->getpPositon();
+				->getpTransform()->getpPosition() - *camera_->getpPosition();
 
 			float depth_value1 = temp_vector1.getLengthSquare();
 

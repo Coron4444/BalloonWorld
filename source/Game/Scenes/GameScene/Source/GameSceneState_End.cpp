@@ -29,6 +29,7 @@ void GameSceneState_End::Init()
 {
 	// ƒQ[ƒ€ƒV[ƒ“‚Ìæ“¾
 	game_scene_ = (GameScene*)getpScene();
+	setID((int)GameScene::State::END);
 }
 
 

@@ -38,8 +38,9 @@ class Player : public GameObjectNull
 // 変数
 //====================
 private:
-	static const float ACCELERATION;	//!< 加速度
-
+	static const float ACCELERATION;			//!< 加速度
+	static const float MAX_VERTICAL_VELOCITY;	//!< 最大垂直方向速度
+	static const float MAX_MASS;				//!< 最大質量
 
 //====================
 // 変数
@@ -55,6 +56,14 @@ private:
 // プロパティ
 //====================
 public:
+	//----------------------------------------
+	//! @brief 座標設定関数
+	//! @details
+	//! @param value 座標
+	//! @retval void なし
+	//----------------------------------------
+	void setPosition(Vec3 value);
+
 	//----------------------------------------
 	//! @brief 風船群取得関数
 	//! @details

@@ -37,7 +37,7 @@ struct Input
 struct Output
 {
     float4 position_     : POSITION;    //!< 変換済み座標
-    float4 depth_        : TEXCOORD0;   //!< 深度値
+    float4 ps_depth_     : TEXCOORD0;   //!< 深度値
 };
 
 
@@ -67,7 +67,7 @@ Output MainVertexShader(Input input)
     CalculateWorldPosition(input, output);
 
     // 変換済み頂点を深度値とする
-    output.depth_ = output.position_;
+    output.ps_depth_ = output.position_;
     
     return output;
 }

@@ -1,41 +1,41 @@
 //================================================================================
-//!	@file	 GoalFactory.h
-//!	@brief	 ゴール生成Class
+//!	@file	 StartBlockFactory.h
+//!	@brief	 スタートブロック生成Class
 //! @details 
-//!	@author  Kai Araki									@date 2018/11/28
+//!	@author  Kai Araki									@date 2019/02/20
 //================================================================================
-#ifndef	_GOAL_FACTORY_H_
-#define _GOAL_FACTORY_H_
+#ifndef	_START_BLOCK_FACTORY_H_
+#define _START_BLOCK_FACTORY_H_
 
 
 
 //****************************************
 // インクルード文
 //****************************************
-#include "Goal.h"
-#include "GoalDraw.h"
-#include "GoalCollision.h"
+#include "StartBlock.h"
+#include "StartBlockDraw.h"
+#include "StartBlockCollision.h"
 
 
 
 //************************************************************														   
-//! @brief   ゴール生成Class
+//! @brief   スタートブロック生成Class
 //!
-//! @details ゴールの生成Class
+//! @details スタートブロックの生成Class
 //************************************************************
-class GoalFactory
+class StartBlockFactory
 {
 //====================
 // 関数
 //====================
 public:
 	//----------------------------------------
-	//! @brief ゴール生成関数
+	//! @brief スタートブロック生成関数
 	//! @details
 	//! @param void なし
-	//! @retval Goal* ゴール
+	//! @retval StartBlock* スタートブロック
 	//----------------------------------------
-	Goal* Create();
+	StartBlock* Create();
 };
 
 

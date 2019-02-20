@@ -38,10 +38,13 @@ public:
 	enum class Type
 	{
 		NONE = -1,
-		PLAYER,
 		COIN,
 		ENEMY,
 		GOAL,
+		NEEDLE,
+		PLAYER,
+		SCAFFOLD,
+		START,
 		MAX
 	};
 
@@ -97,22 +100,6 @@ public:
 	//! @retval CollisionObject* 衝突オブジェクト
 	//----------------------------------------
 	CollisionObject* getpCollisionObject(unsigned index);
-
-	//----------------------------------------
-	//! @brief 判定フラグ取得関数
-	//! @details
-	//! @param void なし
-	//! @retval bool 判定フラグ
-	//----------------------------------------
-	bool getIsJudgement();
-
-	//----------------------------------------
-	//! @brief 判定フラグ取得関数
-	//! @details
-	//! @param value 判定フラグ
-	//! @retval void なし
-	//----------------------------------------
-	void setIsJudgement(bool value);
 
 	//----------------------------------------
 	//! @brief 地面との判定フラグ取得関数

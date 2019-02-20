@@ -73,9 +73,12 @@ void FieldDraw::Init()
 {
 	// オーダーリスト設定
 	getpDrawOrderList()->setDrawType(DrawOrderList::DrawType::OPACITY);
+	//getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_MAIN | DrawOrderList::RENDER_TARGET_SHADOW_MAP);
 	getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_MAIN);
-	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::FIXED);
-	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::FIXED);
+	//getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::DEFAULT_SHADOW);
+	//getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::DEFAULT_SHADOW);
+	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::DEFAULT);
+	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::DEFAULT);
 
 	// ダウンキャスト
 	field_ = (Field*)getpGameObject();

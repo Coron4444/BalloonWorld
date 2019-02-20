@@ -26,7 +26,7 @@
 //************************************************************
 struct Input
 {
-    float4 depth_    : TEXCOORD0;   //!< 深度値
+    float4 ps_depth_ : TEXCOORD0; //!< 深度値
 };
 
 
@@ -44,5 +44,5 @@ void MainPixelShader(Input input, out float4 out_color : COLOR0)
     out_color = (float4)0.0f;
 
     // Zバッファの値を出力色に変換
-    out_color = input.depth_.z / input.depth_.w;
+    out_color = input.ps_depth_.z / input.ps_depth_.w;
 }

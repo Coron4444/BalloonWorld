@@ -60,7 +60,7 @@ MATRIX* Camera::getpProjectionMatrix()
 
 
 
-Vector3D* Camera::getpPositon()
+Vector3D* Camera::getpPosition()
 {
 	return &position_;
 }

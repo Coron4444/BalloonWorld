@@ -34,7 +34,7 @@ void Field::Init(DrawBase* draw)
 	// メッシュプレーンポリゴンの作成
 	mesh_plane_polygon_ = new MeshPlanePolygon();
 	mesh_plane_polygon_->Init(Vec2(100.0f, 100.0f),
-							  Vec2(1.0f, 1.0f),
+							  Vec2(30.0f, 30.0f),
 							  XColor4(1.0f, 1.0f, 1.0f, 1.0f));
 	// 基底クラスの初期化
 	setIsUpdate(false);

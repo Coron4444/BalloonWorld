@@ -11,16 +11,23 @@
 // インクルード文
 //****************************************
 #include "../GameScene.h"
+#include "../GameSceneState_Start.h"
 
 #include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
+#include <GameEngine/Scene/SceneManager/SceneManager.h>
+#include <GameEngine/Input/InputManager/InputManager.h>
 
 #include <Object/2D/Score/ScoreFactory.h>
+#include <Object/2D/Pause/PauseFactory.h>
 #include <Object/3D/Coin/CoinFactory.h>
 #include <Object/3D/Enemy/EnemyFactory.h>
 #include <Object/3D/Field/FieldFactory.h>
 #include <Object/3D/Goal/GoalFactory.h>
 #include <Object/3D/SkyDome/SkyDomeFactory.h>
 #include <Object/3D/StageManager/StageManager.h>
+
+#include <Scenes/TitleScene/TitleScene.h>
+#include <Scenes/TitleScene/TitleSceneState_Start.h>
 
 
 
@@ -55,6 +62,13 @@ void GameScene::setStageManager(StageManager* value)
 
 
 
+Pause* GameScene::getpPause()
+{
+	return pause_;
+}
+
+
+
 //****************************************
 // 関数定義
 //****************************************
@@ -67,6 +81,11 @@ GameScene::GameScene(StateBase* state)
 
 void GameScene::Init()
 {
+	// ポーズ作成
+	PauseFactory pause_factory_;
+	pause_ = pause_factory_.Create();
+	pause_->setIsEnable(false);
+
 	// コインの作成
 	CoinFactory coin_factory;
 	Coin* temp = coin_factory.Create();
@@ -116,4 +135,57 @@ void GameScene::Init()
 
 	// ステート初期化
 	SceneNull::Init();
+}
+
+
+
+void GameScene::Update()
+{
+	UpdateState();
+
+	// ポーズ
+	if (getCurrentStateID() == (int)State::END) return;
+	if (pause_->getIsDecision())
+	{
+		switch (pause_->getSelectType())
+		{
+			case Pause::SelectType::CONTINUE:
+			{
+				setIsPause(false);
+				pause_->setIsEnable(false);
+				break;
+			}
+			case Pause::SelectType::RESTART:
+			{
+				getpSceneManager()->setResetScene(new GameSceneState_Start());
+				pause_->setIsEnable(false);
+				break;
+			}
+			case Pause::SelectType::QUIT:
+			{
+				getpSceneManager()->setNextScene(new TitleScene(new TitleSceneState_Start()));
+				pause_->setIsEnable(false);
+				break;
+			}
+		}
+	}
+	else
+	{
+		if (!pause_->getIsInput()) return;
+		if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_P) ||
+			InputManager::getpInstance()->getpController()
+			->getRelease(0, XINPUT_GAMEPAD_START))
+		{
+			if (getIsPause())
+			{
+				setIsPause(false);
+				pause_->setIsEnable(false);
+			}
+			else
+			{
+				setIsPause(true);
+				pause_->setIsEnable(true);
+			}
+		}
+	}
 }

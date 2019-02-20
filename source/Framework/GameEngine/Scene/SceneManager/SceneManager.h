@@ -13,15 +13,9 @@
 // インクルード文
 //****************************************
 #include "../../Draw/DrawManager/Fade.h"
+#include "../SceneBase.h"
 
 #include <Tool/Vector3D.h>
-
-
-
-//****************************************
-// クラス宣言
-//****************************************
-class SceneBase;
 
 
 
@@ -155,6 +149,14 @@ public:
 	void setNextScene(SceneBase* value);
 
 	//----------------------------------------
+	//! @brief リセット設定関数
+	//! @details
+	//! @param *value シーンステート
+	//! @retval void なし
+	//----------------------------------------
+	void setResetScene(SceneBase::StateBase* value);
+
+	//----------------------------------------
 	//! @brief 共通データポインタ取得関数
 	//! @details
 	//! @param void なし
@@ -231,13 +233,7 @@ public:
 	//----------------------------------------
 	void DrawScene();
 
-	//----------------------------------------
-	//! @brief シーンリセット関数
-	//! @details
-	//! @param void なし
-	//! @retval void なし
-	//----------------------------------------
-	void ResetScene();
+	
 
 private:
 	//----------------------------------------

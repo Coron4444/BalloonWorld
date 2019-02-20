@@ -1,40 +1,40 @@
 //================================================================================
-//!	@file	 ClearLogoFactory.h
-//!	@brief	 クリアロゴ生成Class
+//!	@file	 PauseFactory.h
+//!	@brief	 ポーズ生成Class
 //! @details 
-//!	@author  Kai Araki									@date 2018/06/19
+//!	@author  Kai Araki									@date 2019/02/19
 //================================================================================
-#ifndef	_CLEAR_LOGO_FACTORY_H_
-#define _CLEAR_LOGO_FACTORY_H_
+#ifndef	_PAUSE_FACTORY_H_
+#define _PAUSE_FACTORY_H_
 
 
 
 //****************************************
 // インクルード文
 //****************************************
-#include "ClearLogo.h"
-#include "ClearLogoDraw.h"
+#include "Pause.h"
+#include "PauseDraw.h"
 
 
 
 //************************************************************														   
-//! @brief   クリアロゴ生成Class
+//! @brief   ポーズ生成Class
 //!
-//! @details クリアロゴの生成Class
+//! @details ポーズの生成Class
 //************************************************************
-class ClearLogoFactory
+class PauseFactory
 {
 //====================
 // 関数
 //====================
 public:
 	//----------------------------------------
-	//! @brief クリアロゴ生成関数
+	//! @brief ポーズ生成関数
 	//! @details
 	//! @param void なし
-	//! @retval ClearLogo* クリアロゴ
+	//! @retval Pause* ポーズ
 	//----------------------------------------
-	ClearLogo* Create();
+	Pause* Create();
 };
 
 

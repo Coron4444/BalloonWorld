@@ -1,11 +1,11 @@
 //================================================================================
-//!	@file	 ClearLogoDraw.h
-//!	@brief	 クリアロゴ描画Class
+//!	@file	 PauseDraw.h
+//!	@brief	 ポーズ描画Class
 //! @details 
-//!	@author  Kai Araki									@date 2018/06/19
+//!	@author  Kai Araki									@date 2019/02/19
 //================================================================================
-#ifndef	_CLEAR_LOGO_DRAW_H_
-#define _CLEAR_LOGO_DRAW_H_
+#ifndef	_PAUSE_DRAW_H_
+#define _PAUSE_DRAW_H_
 
 
 
@@ -23,36 +23,46 @@
 // クラス宣言
 //****************************************
 class PlanePolygon;
+class Pause;
 
 
 
 //************************************************************														   
-//! @brief   クリアロゴ描画Class
+//! @brief   ポーズ描画Class
 //!
-//! @details クリアロゴの描画Class
+//! @details ポーズの描画Class
 //************************************************************
-class ClearLogoDraw : public DrawNull
+class PauseDraw : public DrawNull
 {
 //====================
 // 定数
 //====================
 private:
-	static const std::string TEXTURE_NAME;	//!< テクスチャ名
-	static const float SCALE;				//!< 拡縮
-
+	static const unsigned OBJECT_NUM = 5;				//!< オブジェクト数
+	static const std::string TEXTURE_NAME[OBJECT_NUM];	//!< テクスチャ名
+	
 
 //====================
 // 変数
 //====================
 private:
-	PlanePolygon* plane_polygon_ = nullptr;		//!< 平面ポリゴン
-	TextureObject* diffuse_texture_ = nullptr;	//!< ディヒューズテクスチャ
+	PlanePolygon* plane_polygon_ = nullptr;				//!< 平面ポリゴン
+	TextureObject* texture_[OBJECT_NUM] = {nullptr};	//!< テクスチャ
+	Pause* pause_;										//!< ポーズ
 
 
 //====================
 // プロパティ
 //====================
 public:
+	//----------------------------------------
+	//! @brief オブジェクト数取得関数
+	//! @details
+	//! @param void なし
+	//! @retval unsigned オブジェクト数
+	//----------------------------------------
+	unsigned getObjectNum() override;
+
 	//----------------------------------------
 	//! @brief メッシュ数取得関数
 	//! @details

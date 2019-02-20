@@ -11,7 +11,6 @@
 // インクルード文
 //****************************************
 #include "../SceneManager.h"
-#include "../../SceneBase.h"
 #include "../../../GameEngine.h"
 #include "../../../GameObject/GameObjectManager/GameObjectManager.h"
 
@@ -23,8 +22,8 @@
 // 定数定義
 //****************************************
 const Fade::Type SceneManager::DEFAULT_FADE_TYPE = Fade::Type::NORMAL;
-const float      SceneManager::DEFAULT_FADE_SPEED = 1.0f;
-const XColor4    SceneManager::DEFAULT_FADE_COLOR(0.0f, 0.0f, 0.0f, 1.0f);
+const float      SceneManager::DEFAULT_FADE_SPEED = 0.3f;
+const XColor4    SceneManager::DEFAULT_FADE_COLOR(1.0f, 1.0f, 1.0f, 1.0f);
 
 
 
@@ -82,6 +81,26 @@ void SceneManager::setNextScene(SceneBase* value)
 		->StartFadeOut(fade_type_,
 					  Vec2((float)GameEngine::SCREEN_WIDTH, (float)GameEngine::SCREEN_HEIGHT),
 					  fade_color_, fade_speed_);
+}
+
+
+
+void SceneManager::setResetScene(SceneBase::StateBase* value)
+{
+	// 既にほかの要求を受け付けている場合
+	if (state_ != SceneManager::State::NONE) return;
+
+	// ステートの変更
+	state_ = SceneManager::State::RESET_SCENE;
+
+	// 現在のシーンにリセット用ステート設定
+	current_scene_->setResetState(value);
+
+	// フェードアウト初期化
+	GameObjectManager::getpInstance()->getpDrawManager()
+		->StartFadeOut(fade_type_,
+					   Vec2((float)GameEngine::SCREEN_WIDTH, (float)GameEngine::SCREEN_HEIGHT),
+					   fade_color_, fade_speed_);
 }
 
 
@@ -196,23 +215,6 @@ void SceneManager::DrawScene()
 
 
 
-void SceneManager::ResetScene()
-{
-	// 既にほかの要求を受け付けている場合
-	if (state_ != SceneManager::State::NONE) return;
-
-	// ステートの変更
-	state_ = SceneManager::State::RESET_SCENE;
-
-	// フェードアウト初期化
-	GameObjectManager::getpInstance()->getpDrawManager()
-		->StartFadeOut(fade_type_,
-					  Vec2((float)GameEngine::SCREEN_WIDTH, (float)GameEngine::SCREEN_HEIGHT),
-					  fade_color_, fade_speed_);
-}
-
-
-
 void SceneManager::SceneChange()
 {
 	// フェード処理が終わっているかどうか
@@ -263,6 +265,7 @@ void SceneManager::SceneReset()
 		// 現在のメインシーンのリセット
 		GameObjectManager::getpInstance()->Reset();
 		current_scene_->Reset();
+		current_scene_->InitState();
 
 		// フェードイン初期化
 		GameObjectManager::getpInstance()->getpDrawManager()

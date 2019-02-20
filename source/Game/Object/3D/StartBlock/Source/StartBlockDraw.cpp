@@ -12,7 +12,6 @@
 //****************************************
 #include "../StartBlockDraw.h"
 
-#include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>
 #include <Resource/Polygon/CubePolygon.h>
 #include <Tool/SafeRelease.h>
 
@@ -21,7 +20,6 @@
 //****************************************
 // 定数定義
 //****************************************
-const std::string StartBlockDraw::EFFECT_NAME = "CoinEffect/CoinEffect.efk";
 
 
 
@@ -64,21 +62,13 @@ void StartBlockDraw::Init()
 	// オーダーリスト設定
 	getpDrawOrderList()->setDrawType(DrawOrderList::DrawType::OPACITY);
 	getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_MAIN);
-	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::FIXED);
-	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::FIXED);
+	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::COOK_TORRANCE);
+	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::COOK_TORRANCE);
 
 	// キューブポリゴンの生成
 	cube_polygon_ = new CubePolygon();
-	cube_polygon_->Init(XColor4(0.5f, 1.0f, 1.0f, 1.0f));
-
-	// エフェクトの読み込み
-	effekseer_object_ = EffekseerManager::getpInstance()->getpObject(&EFFECT_NAME);
-	effekseer_object_->ChangeColor(255, 255, 255, 255);
-	*effekseer_object_->getpTransform()->getpPosition() = *getpGameObject()->getpTransform()->getpPosition();
-	*effekseer_object_->getpTransform()->getpPosition() = *getpGameObject()->getpTransform()->getpScale();
-	effekseer_object_->getpTransform()->CreateWorldMatrix();
-	effekseer_object_->setIsRepeat(true);
-	effekseer_object_->Play();
+	cube_polygon_->Init();
+	cube_polygon_->setColor(XColor4(1.0f, 1.0f, 0.0f, 1.0f));
 }
 
 
@@ -86,17 +76,12 @@ void StartBlockDraw::Init()
 void StartBlockDraw::Uninit()
 {
 	SafeRelease::PlusUninit(&cube_polygon_);
-	SafeRelease::PlusRelease(&effekseer_object_);
 }
 
 
 
 void StartBlockDraw::Update()
 {
-	// エフェクト更新
-	*effekseer_object_->getpTransform()->getpPosition() = *getpGameObject()->getpTransform()->getpPosition();
-	*effekseer_object_->getpTransform()->getpPosition() = *getpGameObject()->getpTransform()->getpScale();
-	effekseer_object_->getpTransform()->CreateWorldMatrix();
 }
 
 

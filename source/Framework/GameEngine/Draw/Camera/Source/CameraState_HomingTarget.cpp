@@ -22,10 +22,12 @@
 //****************************************
 // 定数定義
 //****************************************
-const Vec3 CameraState_HomingTarget::DEFAULT_LENGHT(0.0f, 13.0f, -15.0f);
-const float CameraState_HomingTarget::GAZING_POINT_Y = -1.0f;
+const Vec3 CameraState_HomingTarget::DEFAULT_LENGHT(0.0f, 20.0f, -10.0f);
+const float CameraState_HomingTarget::GAZING_POINT_Y = -5.0f;
 const float CameraState_HomingTarget::DEFAULT_ROTATION_SPEED
-= MeterToFrame::MeterPerSecondToMeterPerFlame(70.0f);
+= MeterToFrame::MeterPerSecondToMeterPerFlame(90.0f);
+const float CameraState_HomingTarget::MAX_ANGLE_OF_AXIS_RIGHT = 70.0f;
+const float CameraState_HomingTarget::MIN_ANGLE_OF_AXIS_RIGHT = 20.0f;
 
 
 
@@ -35,10 +37,10 @@ const float CameraState_HomingTarget::DEFAULT_ROTATION_SPEED
 void CameraState_HomingTarget::setTargetObject(GameObjectBase* value)
 {
 	target_object_ = value;
-	*getpCamera()->getpPositon() = *target_object_->getpTransform()->getpPosition();
-	*getpCamera()->getpPositon() += lenght_;
+	*getpCamera()->getpPosition() = *target_object_->getpTransform()->getpPosition();
+	*getpCamera()->getpPosition() += lenght_;
 	*getpCamera()->getpGazingPoint() = *target_object_->getpTransform()->getpPosition();
-	getpCamera()->getpGazingPoint()->y += GAZING_POINT_Y;
+	getpCamera()->getpGazingPoint()->y += DEFAULT_LENGHT.y + GAZING_POINT_Y;
 	CalculationForward();
 }
 
@@ -90,9 +92,9 @@ void CameraState_HomingTarget::Update()
 
 void CameraState_HomingTarget::CalculationPosition()
 {
-	*getpCamera()->getpPositon() = *target_object_->getpTransform()->getpPosition();
+	*getpCamera()->getpPosition() = *target_object_->getpTransform()->getpPosition();
 	Vector3D Forward = -(*getpCamera()->getpAxis()->getpForward());
-	*getpCamera()->getpPositon() += *Forward.ChangeAnyLength(lenght_.getLength());
+	*getpCamera()->getpPosition() += *Forward.ChangeAnyLength(lenght_.getLength());
 }
 
 
@@ -100,7 +102,7 @@ void CameraState_HomingTarget::CalculationPosition()
 void CameraState_HomingTarget::CalculationGazingPoint()
 {
 	Vector3D Forward = *getpCamera()->getpAxis()->getpForward();
-	*getpCamera()->getpGazingPoint() = *getpCamera()->getpPositon() + *Forward.ChangeAnyLength(lenght_.getLength());
+	*getpCamera()->getpGazingPoint() = *getpCamera()->getpPosition() + *Forward.ChangeAnyLength(lenght_.getLength());
 }
 
 
@@ -108,7 +110,7 @@ void CameraState_HomingTarget::CalculationGazingPoint()
 void CameraState_HomingTarget::CalculationForward()
 {
 	Vector3D gazing_point_to_position = *getpCamera()->getpGazingPoint()
-		- *getpCamera()->getpPositon();
+		- *getpCamera()->getpPosition();
 	getpCamera()->getpAxis()->setForward(gazing_point_to_position);
 }
 
@@ -120,7 +122,7 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_L))
 	{
 		// 逆前ベクトルを算出し回転
-		Vector3D position_to_gazing_point = *getpCamera()->getpPositon()
+		Vector3D position_to_gazing_point = *getpCamera()->getpPosition()
 			- *getpCamera()->getpGazingPoint();
 		getpCamera()->getpAxis()->setForward(position_to_gazing_point);
 		getpCamera()->getpAxis()->RotationAxisY(D3DXToRadian(-rotation_speed_));
@@ -129,7 +131,7 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 		float length = position_to_gazing_point.getLength();
 		position_to_gazing_point = *getpCamera()->getpAxis()->getpForward();
 		position_to_gazing_point.ChangeAnyLength(length);
-		*getpCamera()->getpPositon() = *getpCamera()->getpGazingPoint()
+		*getpCamera()->getpPosition() = *getpCamera()->getpGazingPoint()
 			+ position_to_gazing_point;
 
 		// 前ベクトルを算出
@@ -140,7 +142,7 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_J))
 	{
 		// 逆前ベクトルを算出し回転
-		Vector3D position_to_gazing_point = *getpCamera()->getpPositon()
+		Vector3D position_to_gazing_point = *getpCamera()->getpPosition()
 			- *getpCamera()->getpGazingPoint();
 		getpCamera()->getpAxis()->setForward(position_to_gazing_point);
 		getpCamera()->getpAxis()->RotationAxisY(D3DXToRadian(rotation_speed_));
@@ -149,7 +151,7 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 		float length = position_to_gazing_point.getLength();
 		position_to_gazing_point = *getpCamera()->getpAxis()->getpForward();
 		position_to_gazing_point.ChangeAnyLength(length);
-		*getpCamera()->getpPositon() = *getpCamera()->getpGazingPoint()
+		*getpCamera()->getpPosition() = *getpCamera()->getpGazingPoint()
 			+ position_to_gazing_point;
 
 		// 前ベクトルを算出
@@ -160,16 +162,27 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_I))
 	{
 		// 逆前ベクトルを算出し回転
-		Vector3D position_to_gazing_point = *getpCamera()->getpPositon()
+		Vector3D position_to_gazing_point = *getpCamera()->getpPosition()
 			- *getpCamera()->getpGazingPoint();
 		getpCamera()->getpAxis()->setForward(position_to_gazing_point);
 		getpCamera()->getpAxis()->RotationAxisRight(D3DXToRadian(-rotation_speed_));
+
+		// 最大の確認
+		Vector3D standard_vector = *getpCamera()->getpAxis()->getpForward();
+		standard_vector.y = 0.0f;
+		standard_vector.ChangeNormalize();
+		float angle = Vector3D::CreateAngleDegree(&standard_vector, getpCamera()->getpAxis()->getpForward());
+		if (angle >= MAX_ANGLE_OF_AXIS_RIGHT)
+		{
+			angle += -MAX_ANGLE_OF_AXIS_RIGHT;
+			getpCamera()->getpAxis()->RotationAxisRight(D3DXToRadian(angle));
+		}
 
 		// 座標の算出
 		float length = position_to_gazing_point.getLength();
 		position_to_gazing_point = *getpCamera()->getpAxis()->getpForward();
 		position_to_gazing_point.ChangeAnyLength(length);
-		*getpCamera()->getpPositon() = *getpCamera()->getpGazingPoint()
+		*getpCamera()->getpPosition() = *getpCamera()->getpGazingPoint()
 			+ position_to_gazing_point;
 
 		// 前ベクトルを算出
@@ -180,16 +193,27 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_K))
 	{
 		// 逆前ベクトルを算出し回転
-		Vector3D position_to_gazing_point = *getpCamera()->getpPositon()
+		Vector3D position_to_gazing_point = *getpCamera()->getpPosition()
 			- *getpCamera()->getpGazingPoint();
 		getpCamera()->getpAxis()->setForward(position_to_gazing_point);
 		getpCamera()->getpAxis()->RotationAxisRight(D3DXToRadian(rotation_speed_));
+
+		// 最小の確認
+		Vector3D standard_vector = *getpCamera()->getpAxis()->getpForward();
+		standard_vector.y = 0.0f;
+		standard_vector.ChangeNormalize();
+		float angle = Vector3D::CreateAngleDegree(&standard_vector, getpCamera()->getpAxis()->getpForward());
+		if (angle <= MIN_ANGLE_OF_AXIS_RIGHT)
+		{
+			angle = MIN_ANGLE_OF_AXIS_RIGHT - angle;
+			getpCamera()->getpAxis()->RotationAxisRight(D3DXToRadian(-angle));
+		}
 
 		// 座標の算出
 		float length = position_to_gazing_point.getLength();
 		position_to_gazing_point = *getpCamera()->getpAxis()->getpForward();
 		position_to_gazing_point.ChangeAnyLength(length);
-		*getpCamera()->getpPositon() = *getpCamera()->getpGazingPoint()
+		*getpCamera()->getpPosition() = *getpCamera()->getpGazingPoint()
 			+ position_to_gazing_point;
 
 		// 前ベクトルを算出

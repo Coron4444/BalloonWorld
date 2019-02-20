@@ -80,6 +80,25 @@ public:
 	//----------------------------------------
 	static Vec3 CreateCrossPoint3(Vec3* point0, Vec3* point1, Vec3* point2);
 
+	//----------------------------------------
+	//! @brief ラジアン角度生成関数
+	//! @details
+	//! @param *vector0 ベクトル0
+	//! @param *vector1 ベクトル1
+	//! @retval float ラジアン角度
+	//----------------------------------------
+	static float CreateAngleRadian(Vec3* vector0, Vec3* vector1);
+
+	//----------------------------------------
+	//! @brief デグリー角度生成関数
+	//! @details
+	//! @param *vector0 ベクトル0
+	//! @param *vector1 ベクトル1
+	//! @retval float デグリー角度
+	//----------------------------------------
+	static float CreateAngleDegree(Vec3* vector0, Vec3* vector1);
+
+
 //====================
 // プロパティ
 //====================

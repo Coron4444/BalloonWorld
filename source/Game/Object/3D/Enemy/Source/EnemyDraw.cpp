@@ -59,13 +59,16 @@ void EnemyDraw::Init()
 	getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_MAIN);
 	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::FIXED);
 	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::FIXED);
+	//getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::DEFAULT_SHADOW);
+	//getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::DEFAULT_SHADOW);
 
 	// ダウンキャスト
 	enemy_ = (Enemy*)getpGameObject();
 
 	// 四角形ポリゴン作成
 	cube_polygon_ = new CubePolygon();
-	cube_polygon_->Init(XColor4(1.0f, 0.0f, 0.0f, 1.0f));
+	cube_polygon_->Init();
+	cube_polygon_->setColor(XColor4(1.0f, 0.0f, 0.0f, 1.0f));
 }
 
 

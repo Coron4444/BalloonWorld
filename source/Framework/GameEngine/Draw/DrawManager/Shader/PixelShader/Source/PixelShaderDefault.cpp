@@ -29,6 +29,9 @@ void PixelShaderDefault::Init()
 	// デバイス初期化
 	InitDevice();
 
+	// デフォルトテクスチャ初期化
+	InitDefaultTexture();
+
 	// シェーダーのコンパイル
 	PixelShaderCompile(PATH, "MainPixelShader", "ps_3_0");
 }
@@ -58,13 +61,16 @@ void PixelShaderDefault::MeshSetting(DrawBase* draw, Camera* camera,
 									 unsigned mesh_index)
 {
 	camera = camera;
-	draw = draw;
-	object_index = object_index;
-	mesh_index = mesh_index;
-	// ディヒューズテクスチャの設定
-	int diffuse_sampler_ = getpConstantTable()->GetSamplerIndex("DIFFUSE_SAMPLER");
-	LPDIRECT3DTEXTURE9 diffuse_texture = draw->getpDiffuseTexture(object_index, mesh_index);
-	bool is_texture = diffuse_texture != nullptr;
-	getpConstantTable()->SetBool(getpDevice(), "IS_TEXTURE", is_texture);
-	getpDevice()->SetTexture(diffuse_sampler_, diffuse_texture);
+
+	// ディフーズテクスチャ
+	int sampler_index = getpConstantTable()->GetSamplerIndex("DIFFUSE_SAMPLER");
+	if (draw->getpDiffuseTexture(object_index, mesh_index) == nullptr)
+	{
+		getpDevice()->SetTexture(sampler_index, getpDefaultTexture());
+	}
+	else
+	{
+		getpDevice()->SetTexture(sampler_index,
+								 draw->getpDiffuseTexture(object_index, mesh_index));
+	}
 }

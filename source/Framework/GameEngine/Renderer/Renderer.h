@@ -207,10 +207,10 @@ public:
 	//----------------------------------------
 	//! @brief 描画開始関数
 	//! @details
-	//! @param void なし
+	//! @param clear_color クリア色
 	//! @retval bool 描画開始成功の有無
 	//----------------------------------------
-	bool DrawBegin();
+	bool DrawBegin(XColor4 clear_color = {0.123f, 0.25f, 0.75f, 1.0f});
 
 	//----------------------------------------
 	//! @brief クリア無描画開始関数

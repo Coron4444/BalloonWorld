@@ -1,8 +1,8 @@
 //================================================================================
-//!	@file	 ClearLogoFactory.cpp
-//!	@brief	 クリアロゴ生成Class
+//!	@file	 PauseFactory.h
+//!	@brief	 ポーズ生成Class
 //! @details 
-//!	@author  Kai Araki									@date 2018/06/19
+//!	@author  Kai Araki									@date 2019/02/19
 //================================================================================
 
 
@@ -10,16 +10,16 @@
 //****************************************
 // インクルード文
 //****************************************
-#include "../ClearLogoFactory.h"
+#include "../PauseFactory.h"
 
 
 
 //****************************************
 // 関数定義
 //****************************************
-ClearLogo* ClearLogoFactory::Create()
+Pause* PauseFactory::Create()
 {
-	ClearLogo* temp = new ClearLogo();
-	temp->Init(new ClearLogoDraw());
+	Pause* temp = new Pause();
+	temp->Init(new PauseDraw());
 	return temp;
 }

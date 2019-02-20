@@ -27,10 +27,11 @@ class RenderTexture
 // 変数
 //====================
 private:
-	LPDIRECT3DTEXTURE9 texture_ = nullptr;		//!< テクスチャ
-	LPDIRECT3DSURFACE9 surface_ = nullptr;		//!< サーフェス
-	LPDIRECT3DDEVICE9 device_ = nullptr;		//!< デバイス
-
+	LPDIRECT3DTEXTURE9 texture_ = nullptr;			//!< テクスチャ
+	LPDIRECT3DSURFACE9 surface_ = nullptr;			//!< サーフェス
+	LPDIRECT3DSURFACE9 stencil_surface_ = nullptr;	//!< ステンシルサーフェス
+	D3DVIEWPORT9 view_port_;						//!< ビューポート
+	LPDIRECT3DDEVICE9 device_ = nullptr;			//!< デバイス
 
 //====================
 // プロパティ
@@ -69,12 +70,52 @@ public:
 	void setSurface(LPDIRECT3DSURFACE9 value);
 
 	//----------------------------------------
+	//! @brief ステンシルサーフェス取得関数
+	//! @details
+	//! @param void なし
+	//! @retval LPDIRECT3DSURFACE9 ステンシルサーフェス
+	//----------------------------------------
+	LPDIRECT3DSURFACE9 getpStencilSurface();
+
+	//----------------------------------------
+	//! @brief ステンシルサーフェス設定関数
+	//! @details
+	//! @param value ステンシルサーフェス
+	//! @retval void なし
+	//----------------------------------------
+	void setStencilSurface(LPDIRECT3DSURFACE9 value);
+
+	//----------------------------------------
+	//! @brief ビューポート取得関数
+	//! @details
+	//! @param void なし
+	//! @retval D3DVIEWPORT9 ビューポート
+	//----------------------------------------
+	D3DVIEWPORT9* getpViewPort();
+
+	//----------------------------------------
+	//! @brief ビューポート設定関数
+	//! @details
+	//! @param value ビューポート
+	//! @retval void なし
+	//----------------------------------------
+	void setViewPort(D3DVIEWPORT9 value);
+
+	//----------------------------------------
 	//! @brief レンダーターゲット設定関数
 	//! @details
 	//! @param render_target_index レンダーターゲットインデックス
 	//! @retval void なし
 	//----------------------------------------
 	void setRenderTarget(int render_target_index);
+
+	//----------------------------------------
+	//! @brief ステンシルサーフェス&ビューポート設定関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void setStencilSurfaceAndViewPort();
 
 
 //====================

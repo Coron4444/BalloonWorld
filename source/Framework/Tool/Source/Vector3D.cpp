@@ -53,6 +53,20 @@ Vec3 Vector3D::CreateCrossPoint3(Vec3* point0, Vec3* point1, Vec3* point2)
 
 
 
+float Vector3D::CreateAngleRadian(Vec3* vector0, Vec3* vector1)
+{
+	return acosf(D3DXVec3Dot(vector0, vector1));
+}
+
+
+
+float Vector3D::CreateAngleDegree(Vec3* vector0, Vec3* vector1)
+{
+	return D3DXToDegree(CreateAngleRadian(vector0, vector1));
+}
+
+
+
 //****************************************
 // プロパティ定義
 //****************************************

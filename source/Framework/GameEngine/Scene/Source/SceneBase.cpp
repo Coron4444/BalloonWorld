@@ -33,6 +33,20 @@ void SceneBase::StateBase::setScene(SceneBase* value)
 
 
 
+int SceneBase::StateBase::getID()
+{
+	return id_;
+}
+
+
+
+void SceneBase::StateBase::setID(int value)
+{
+	id_ = value;
+}
+
+
+
 SceneManager* SceneBase::getpSceneManager()
 { 
 	return scene_manager_; 
@@ -63,11 +77,48 @@ void SceneBase::setState(StateBase* value)
 
 	state_ = value;
 
+	InitState();
+}
+
+
+
+void SceneBase::setResetState(StateBase* value)
+{
 	if (state_ != nullptr)
 	{
-		state_->setScene(this);
-		state_->Init();
+		SafeRelease::PlusUninit(&state_);
 	}
+	state_ = value;
+}
+
+
+
+bool SceneBase::getIsPause()
+{
+	return is_pause_;
+}
+
+
+
+void SceneBase::setIsPause(bool value)
+{
+	if (is_pause_ == value) return;
+	is_pause_ = value;
+	if (is_pause_)
+	{
+		state_->PauseEntrance();
+	}
+	else
+	{
+		state_->PauseExit();
+	}
+}
+
+
+
+int SceneBase::getCurrentStateID()
+{
+	return current_state_id_;
 }
 
 
@@ -84,7 +135,6 @@ SceneBase::StateBase::~StateBase()
 SceneBase::SceneBase(StateBase* state)
 	: state_(state)
 {
-	state_->setScene(this);
 }
 
 
@@ -98,7 +148,9 @@ SceneBase::~SceneBase()
 void SceneBase::InitState()
 {
 	if (state_ == nullptr) return;
+	state_->setScene(this);
 	state_->Init();
+	current_state_id_ = state_->getID();
 }
 
 
@@ -114,12 +166,4 @@ void SceneBase::UpdateState()
 {
 	if (state_ == nullptr) return;
 	state_->Update();
-}
-
-
-
-void SceneBase::ResetState()
-{
-	if (state_ == nullptr) return;
-	state_->Reset();
 }

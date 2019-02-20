@@ -31,10 +31,11 @@ public:
 	//----------------------------------------
 	//! @brief 風船生成関数
 	//! @details
-	//! @param balloon_line_num  風船の線の数
+	//! @param balloon_line_num 風船の線の数
+	//! @param position         座標
 	//! @retval Balloon* 風船
 	//----------------------------------------
-	Balloon* Create(unsigned balloon_line_num);
+	Balloon* Create(unsigned balloon_line_num, Vec3 position);
 };
 
 

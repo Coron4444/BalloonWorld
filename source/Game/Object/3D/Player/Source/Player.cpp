@@ -25,13 +25,22 @@
 // 定数定義
 //****************************************
 const float Player::ACCELERATION
-= MeterToFrame::MeterPerSecondSquaredToMeterPerFrameSquared(100.0f);
+= MeterToFrame::MeterPerSecondSquaredToMeterPerFrameSquared(200.0f);
+const float Player::MAX_VERTICAL_VELOCITY
+= MeterToFrame::MeterPerSecondToMeterPerFlame(500.0f);
+const float Player::MAX_MASS = 80.0f;
 
 
 
 //****************************************
 // プロパティ定義
 //****************************************
+void Player::setPosition(Vec3 value)
+{
+	*getpTransform()->getpPosition() = value;
+	getpTransform()->CreateWorldMatrix();
+}
+
 BalloonGroup* Player::getpBalloonGroup()
 {
 	return balloon_group_;
@@ -42,6 +51,8 @@ BalloonGroup* Player::getpBalloonGroup()
 void Player::setBalloonGroup(BalloonGroup* value)
 {
 	value->getpReferenceList()->getpMyPointer(&balloon_group_);
+	getpPhysics()->setMaxVerticalVelocity(MAX_VERTICAL_VELOCITY / balloon_group_->getBalloonNum());
+	getpPhysics()->setMass(MAX_MASS / balloon_group_->getBalloonNum());
 }
 
 
@@ -72,11 +83,10 @@ void Player::Init(DrawBase* draw, CollisionBase* collision)
 	// 剛体設定
 	CreatePhysics();
 	getpPhysics()->setMaxHorizontalVelocity(MeterToFrame::MeterPerSecondToMeterPerFlame(10000.0f));
-	getpPhysics()->setMaxVerticalVelocity(MeterToFrame::MeterPerSecondToMeterPerFlame(10.0f));
-	getpPhysics()->setMass(3.0f);
+	getpPhysics()->setMaxVerticalVelocity(MAX_VERTICAL_VELOCITY);
+	getpPhysics()->setMass(MAX_MASS);
 	getpPhysics()->setMyFriction(1.0f);
 	getpPhysics()->setMyBounciness(1.0f);
-
 
 	// バレットオブジェクト
 	float mass = 0.0f;
@@ -140,6 +150,8 @@ void Player::Update()
 	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_M))
 	{
 		getpBalloonGroup()->ReleaseConstraint();
+		getpPhysics()->setMaxVerticalVelocity(MAX_VERTICAL_VELOCITY / balloon_group_->getBalloonNum());
+		getpPhysics()->setMass(MAX_MASS / balloon_group_->getBalloonNum());
 	}
 
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_N))

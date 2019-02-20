@@ -33,6 +33,7 @@ class ComponentBase
 //====================
 private:
 	GameObjectBase* game_object_;	//!< ゲームオブジェクト
+	bool is_enable_ = true;			//!< 有効フラグ
 
 
 //====================
@@ -54,6 +55,22 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void setGameObject(GameObjectBase* value);
+
+	//----------------------------------------
+	//! @brief 有効フラグ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval bool 有効フラグ
+	//----------------------------------------
+	bool getIsEnable();
+
+	//----------------------------------------
+	//! @brief 有効フラグ取得関数
+	//! @details
+	//! @param value 有効フラグ
+	//! @retval void なし
+	//----------------------------------------
+	void setIsEnable(bool value);
 
 
 //====================

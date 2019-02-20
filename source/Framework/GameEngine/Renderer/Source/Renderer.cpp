@@ -99,10 +99,10 @@ void Renderer::Uninit()
 
 
 
-bool Renderer::DrawBegin()
+bool Renderer::DrawBegin(XColor4 clear_color)
 {
 	if (renderer_ == nullptr) return false;
-	return renderer_->DrawBegin();
+	return renderer_->DrawBegin(clear_color);
 }
 
 

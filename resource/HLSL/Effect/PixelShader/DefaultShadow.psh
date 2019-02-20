@@ -1,0 +1,87 @@
+//================================================================================
+//!	@file	 DefaultShadow.psh
+//!	@brief	 デフォルト影PixelShader
+//! @details 
+//!	@author  Kai Araki									@date 2019/02/19
+//================================================================================
+
+
+
+//****************************************
+// グローバル変数
+//****************************************
+// テクスチャ
+texture DIFFUSE_TEXTURE;
+texture SHADOW_MAP_TEXTURE;
+
+
+
+//****************************************
+// サンプラ
+//****************************************
+sampler DIFFUSE_SAMPLER = sampler_state
+{
+    Texture = <DIFFUSE_TEXTURE>;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+    MipFilter = NONE;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
+
+sampler SHADOW_MAP_SAMPLER = sampler_state
+{
+    Texture = <SHADOW_MAP_TEXTURE>;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+    MipFilter = NONE;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
+
+
+
+//****************************************
+// 構造体定義
+//****************************************
+//************************************************************														   
+//! @brief   インプットStruct
+//!
+//! @details インプットのStruct
+//************************************************************
+struct Input
+{
+    float4 color_            : COLOR0;      //!< 色
+    float2 ps_uv_            : TEXCOORD0;   //!< PS用UV
+    float4 ps_diffuse_       : TEXCOORD1;   //!< PS用ディヒューズ
+    float4 ps_ambient_       : TEXCOORD2;   //!< PS用アンビエント
+    float4 ps_shadow_map_uv_ : TEXCOORD3;   //!< PS用シャドウマップUV
+    float4 ps_depth_         : TEXCOORD4;   //!< PS用深度値
+};
+
+
+
+//****************************************
+// 関数定義
+//****************************************
+//--------------------------------------------------
+//! @brief エントリー関数
+//! @details
+//! @param input  入力データ 
+//! @param out_color 出力色
+//! @retval void なし
+//--------------------------------------------------
+void MainPixelShader(Input input, out float4 out_color : COLOR0)
+{
+    // 影の縞模様を緩和するバイアス値
+    const float bias = 1.0f;
+
+    // 出力データ初期化
+    out_color = (float4)0.0f;
+
+    // 色算出
+    float shadow = tex2Dproj(SHADOW_MAP_SAMPLER, input.ps_shadow_map_uv_).x;
+    float4 diffuse = shadow * input.ps_depth_.w < input.ps_depth_.z - bias ? 0 : input.ps_diffuse_;
+    out_color = input.ps_ambient_ + diffuse;
+    out_color *= tex2D(DIFFUSE_SAMPLER, input.ps_uv_);
+}

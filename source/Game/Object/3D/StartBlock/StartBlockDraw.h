@@ -22,7 +22,6 @@
 // クラス宣言
 //****************************************
 class CubePolygon;
-class EffekseerObject;
 
 
 
@@ -34,18 +33,10 @@ class EffekseerObject;
 class StartBlockDraw : public DrawNull
 {
 //====================
-// 定数
-//====================
-private:
-	static const std::string EFFECT_NAME;		//!< エフェクト名
-
-
-//====================
 // 変数
 //====================
 private:
 	CubePolygon* cube_polygon_;				//!< 四角形ポリゴン
-	EffekseerObject* effekseer_object_;		//!< エフェクシアオブジェクト
 
 
 //====================

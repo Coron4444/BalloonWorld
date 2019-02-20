@@ -44,28 +44,6 @@ CollisionObject* CollisionBase::getpCollisionObject(unsigned index)
 
 
 
-bool CollisionBase::getIsJudgement()
-{
-	bool is_judgement = false;
-	for (unsigned i = 0; i < collision_object_.getEndIndex(); i++)
-	{
-		is_judgement = collision_object_.getObject(i)->getIsJudgement();
-	}
-	return is_judgement;
-}
-
-
-
-void CollisionBase::setIsJudgement(bool value)
-{
-	for (unsigned i = 0; i < collision_object_.getEndIndex(); i++)
-	{
-		collision_object_.getObject(i)->setIsJudgement(value);
-	}
-}
-
-
-
 bool CollisionBase::getIsJudgmentGround()
 {
 	return is_judgment_ground_;

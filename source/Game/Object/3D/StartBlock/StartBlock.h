@@ -24,6 +24,14 @@
 class StartBlock : public GameObjectNull
 {
 //====================
+// 定数
+//====================
+private:
+	static const Vec3 SCALE;				//!< 拡縮
+	static const float ROTATION_SPEED;		//!< 回転
+
+
+//====================
 // プロパティ
 //====================
 public:
@@ -47,6 +55,14 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void Init(DrawBase* draw, CollisionBase* collision);
+
+	//----------------------------------------
+	//! @brief 更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Update() override;
 };
 
 

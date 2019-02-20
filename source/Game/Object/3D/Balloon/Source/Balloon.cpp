@@ -76,10 +76,10 @@ void Balloon::setPosition(Vec3 value)
 //****************************************
 // 関数定義
 //****************************************
-void Balloon::Init(DrawBase* draw, unsigned balloon_line_num)
+void Balloon::Init(DrawBase* draw, unsigned balloon_line_num, Vec3 position)
 {
 	// バレットオブジェクト初期化
-	InitBulletPhysicsObject(balloon_line_num);
+	InitBulletPhysicsObject(balloon_line_num, position);
 
 	// 基底クラスの初期化
 	GameObjectBase::Init(draw, nullptr);
@@ -128,7 +128,7 @@ void Balloon::AddAcceleration(Vec3 acceleration)
 
 
 
-void Balloon::InitBulletPhysicsObject(unsigned balloon_line_num)
+void Balloon::InitBulletPhysicsObject(unsigned balloon_line_num, Vec3 position)
 {
 	// バレットオブジェクト数確定
 	all_object_.resize(balloon_line_num);
@@ -138,15 +138,15 @@ void Balloon::InitBulletPhysicsObject(unsigned balloon_line_num)
 	float mass = 1.0f;
 	Vec3 inertia(0.0f, 0.0f, 0.0f);
 	Quaternion quaternion(0.0f, 0.0f, 0.0f, 1.0f);
-	Vec3 position(0.0f, 0.0f, 0.0f);
+	Vec3 temp_position = position;
 	for (int i = 0; i < getAllObjectNum() - 1; i++)
 	{
-		position = Vec3(0.0f, OBB_EDGE_LENGTH_HALF.y * 2 * i, 0.0f);
+		temp_position.y = position.y + OBB_EDGE_LENGTH_HALF.y * 2 * i;
 		if (i == 0)
 		{
 			mass = 0.0f;
 			all_object_[i] = BulletPhysicsManager::getpInstance()
-				->getpObjectOBB(mass, inertia, position,
+				->getpObjectOBB(mass, inertia, temp_position,
 								quaternion, OBB_EDGE_LENGTH_HALF);
 			all_object_[i]->setKinematic();
 		}
@@ -154,7 +154,7 @@ void Balloon::InitBulletPhysicsObject(unsigned balloon_line_num)
 		{
 			mass = 1.0f;
 			all_object_[i] = BulletPhysicsManager::getpInstance()
-				->getpObjectOBB(mass, inertia, position,
+				->getpObjectOBB(mass, inertia, temp_position,
 								quaternion, OBB_EDGE_LENGTH_HALF);
 		}
 		all_object_[i]->getpRigidBody()->setRestitution(1.0f);
@@ -164,9 +164,11 @@ void Balloon::InitBulletPhysicsObject(unsigned balloon_line_num)
 	}
 
 	// 風船の生成
-	position = Vec3(0.0f, OBB_EDGE_LENGTH_HALF.y * 2 * (getAllObjectNum() - 2) + OBB_EDGE_LENGTH_HALF.y + SPHERE_RADIUS, 0.0f);
+	temp_position = position;
+	temp_position.y = position.y + OBB_EDGE_LENGTH_HALF.y * 2 * (getAllObjectNum() - 2)
+		+ OBB_EDGE_LENGTH_HALF.y + SPHERE_RADIUS;
 	all_object_[getAllObjectNum() - 1] = BulletPhysicsManager::getpInstance()
-		->getpObjectSphere(mass, inertia, position, quaternion, SPHERE_RADIUS);
+		->getpObjectSphere(mass, inertia, temp_position, quaternion, SPHERE_RADIUS);
 	all_object_[getAllObjectNum() - 1]->getpRigidBody()->setRestitution(1.0f);
 	all_object_[getAllObjectNum() - 1]->getpRigidBody()->setRollingFriction(0.1f);
 	all_object_[getAllObjectNum() - 1]->getpRigidBody()->setSpinningFriction(0.1f);
@@ -177,7 +179,6 @@ void Balloon::InitBulletPhysicsObject(unsigned balloon_line_num)
 	float min_max2 = 0.0f;
 	for (int i = 0; i < getObjectConstraintNum(); i++)
 	{
-		Vec3 temp_position = all_object_[i]->getPosition();
 		if (i == (getObjectConstraintNum() - 1))
 		{
 			object_constraint_[i] = BulletPhysicsManager::getpInstance()
