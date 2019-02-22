@@ -17,7 +17,7 @@
 // プロパティ定義
 //****************************************
 const Vec3 StartBlock::SCALE(15.0f, 5.0f, 15.0f);
-const float StartBlock::ROTATION_SPEED = 0.1f;
+const float StartBlock::ROTATION_SPEED = 0.01f;
 
 
 

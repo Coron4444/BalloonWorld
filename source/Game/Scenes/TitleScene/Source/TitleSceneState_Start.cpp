@@ -15,10 +15,12 @@
 
 #include <GameEngine/Scene/SceneManager/SceneManager.h>
 #include <GameEngine/Input/InputManager/InputManager.h>
+#include <Resource/Sound/SoundManager.h>
 #include <Tool/SafeRelease.h>
 
 #include <Object/2D/TitleLogo/TitleLogoFactory.h>
 #include <Object/2D/PushSpaceLogo/PushSpaceLogoFactory.h>
+#include <Object/3D/SkyDome/SkyDomeFactory.h>
 
 #include <Scenes/TutorialScene/TutorialScene.h>
 #include <Scenes/TutorialScene/TutorialSceneState_Start.h>
@@ -40,14 +42,20 @@ void TitleSceneState_Start::Init()
 	// プッシュスペースロゴ
 	PushSpaceLogoFactory push_space_logo_factory;
 	push_space_logo_factory.Create();
+
+	// スカイドーム
+	SkyDomeFactory sky_dome_factory;
+	sky_dome_factory.Create();
 }
 
 
 
 void TitleSceneState_Start::Update()
 {
-	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_SPACE))
+	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_SPACE) ||
+		InputManager::getpInstance()->getpController()->getTrigger(0, XINPUT_GAMEPAD_X))
 	{
+		SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::SE_KETEI);
 		title_scene_->getpSceneManager()
 			->setNextScene(new TutorialScene(new TutorialSceneState_Start()));
 	}

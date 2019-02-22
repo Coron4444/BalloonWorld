@@ -24,7 +24,7 @@
 class ModelXObject;
 class MdBinObject;
 class TextureObject;
-
+class Player;
 
 
 //************************************************************														   
@@ -48,10 +48,11 @@ private:
 // 変数
 //====================
 private:
-	ModelXObject* player_model_;			//!< モデルオブジェクト
-	TextureObject* normal_texture_[2];		//!< テクスチャオブジェクト
-	MdBinObject* test_object_;				//!< テスト用オブジェクト
-
+	ModelXObject* player_model_ = nullptr;			//!< モデルオブジェクト
+	TextureObject* normal_texture_[2];				//!< テクスチャオブジェクト
+	MdBinObject* test_object_ = nullptr;			//!< テスト用オブジェクト
+	int pattern_num_ = 0;
+	Player* player_ = nullptr;
 
 //====================
 // プロパティ
@@ -143,6 +144,14 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void Uninit() override;
+
+	//----------------------------------------
+	//! @brief 更新関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Update() override;
 
 	//----------------------------------------
 	//! @brief 描画関数

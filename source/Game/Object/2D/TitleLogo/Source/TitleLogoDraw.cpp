@@ -21,7 +21,7 @@
 // ’è”’è‹`
 //****************************************
 const std::string TitleLogoDraw::TEXTURE_NAME = "UI/Title.png";
-const float TitleLogoDraw::SCALE = 1.25f;
+const float TitleLogoDraw::SCALE = 0.4f;
 
 
 
@@ -87,8 +87,8 @@ void TitleLogoDraw::Init()
 
 	// Šgk&ˆÚ“®
 	getpGameObject()->getpTransform()->getpScale()->x = diffuse_texture_->getWidth() * SCALE;
-	getpGameObject()->getpTransform()->getpScale()->y = diffuse_texture_->getHeight() * (SCALE + 0.2f);
-	*getpGameObject()->getpTransform()->getpPosition() = Vec3(0.0f, 0.0f, 0.0f);
+	getpGameObject()->getpTransform()->getpScale()->y = diffuse_texture_->getHeight() * SCALE;
+	*getpGameObject()->getpTransform()->getpPosition() = Vec3(0.0f, 50.0f, 0.0f);
 	getpGameObject()->getpTransform()->CreateWorldMatrix();
 }
 

@@ -368,6 +368,10 @@ public:
 	//----------------------------------------
 	LPDIRECT3DTEXTURE9 getpDiffuseTextureHandler(unsigned mesh_index);
 
+	int getAnimationFrameNum()
+	{
+		return animation_frame_num_;
+	}
 
 //====================
 // ä÷êî

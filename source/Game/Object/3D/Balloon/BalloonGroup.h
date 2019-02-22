@@ -66,9 +66,17 @@ public:
 	//! @brief 風船数取得関数
 	//! @details
 	//! @param void なし
-	//! @retval unsigned 風船数
+	//! @retval int 風船数
 	//----------------------------------------
-	unsigned getBalloonNum();
+	int getBalloonNum();
+
+	//----------------------------------------
+	//! @brief 風船の残り数取得関数
+	//! @details
+	//! @param void なし
+	//! @retval int 風船数
+	//----------------------------------------
+	int getRemainingBalloonNum();
 
 	//----------------------------------------
 	//! @brief 座標取得関数

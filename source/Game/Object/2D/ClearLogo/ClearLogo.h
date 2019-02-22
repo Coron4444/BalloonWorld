@@ -23,6 +23,13 @@
 //************************************************************
 class ClearLogo : public GameObjectNull
 {
+private:
+	int score_ = 0;
+
+public:
+	int getScore();
+	void setScore(int value);
+
 //====================
 // ä÷êî
 //====================

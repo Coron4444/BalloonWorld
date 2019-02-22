@@ -12,7 +12,15 @@
 //****************************************
 #include "../ClearLogo.h"
 
+int ClearLogo::getScore()
+{
+	return score_;
+}
 
+void ClearLogo::setScore(int value)
+{
+	score_ = value;
+}
 
 //****************************************
 // ä÷êîíËã`

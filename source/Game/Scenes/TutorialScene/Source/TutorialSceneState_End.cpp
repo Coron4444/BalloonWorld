@@ -15,6 +15,7 @@
 
 #include <GameEngine/Scene/SceneManager/SceneManager.h>
 #include <GameEngine/Input/InputManager/InputManager.h>
+#include <Resource/Sound/SoundManager.h>
 
 #include <Object/2D/TutorialLogo/TutorialLogoFactory.h>
 
@@ -39,8 +40,10 @@ void TutorialSceneState_End::Init()
 
 void TutorialSceneState_End::Update()
 {
-	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_SPACE))
+	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_SPACE) ||
+		InputManager::getpInstance()->getpController()->getTrigger(0, XINPUT_GAMEPAD_X))
 	{
+		SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::SE_KETEI);
 		tutorial_scene_->getpSceneManager()
 			->setNextScene(new GameScene(new GameSceneState_Start()));
 	}

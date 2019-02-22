@@ -103,6 +103,36 @@ bool Controller::getHoldLStick(int controller_index, Controller::Direction value
 
 
 
+bool Controller::getHoldRStick(int controller_index, Controller::Direction value)
+{
+	switch (value)
+	{
+		case Controller::Direction::UP:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.sThumbRY < STICK_HOLD_SENSITIVITY) return false;
+			return true;
+		}
+		case Controller::Direction::DOWN:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.sThumbRY > -STICK_HOLD_SENSITIVITY) return false;
+			return true;
+		}
+		case Controller::Direction::LEFT:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.sThumbRX > -STICK_HOLD_SENSITIVITY) return false;
+			return true;
+		}
+		case Controller::Direction::RIGHT:
+		{
+			if (controller_[controller_index].getpState()->Gamepad.sThumbRX < STICK_HOLD_SENSITIVITY) return false;
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
 bool Controller::getTriggerLStick(int controller_index, Controller::Direction value)
 {
 	switch (value)

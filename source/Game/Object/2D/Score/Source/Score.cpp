@@ -17,9 +17,16 @@
 //****************************************
 // プロパティ定義
 //****************************************
-GameScene* Score::getpGameScene()
+int Score::getScore()
 {
-	return game_scene_;
+	return score_;
+}
+
+
+
+void Score::setScore(int value)
+{
+	score_ = value;
 }
 
 
@@ -27,11 +34,9 @@ GameScene* Score::getpGameScene()
 //****************************************
 // 関数定義
 //****************************************
-void Score::Init(DrawBase* draw,
-				 GameScene* game_scene)
+void Score::Init(DrawBase* draw)
 {
-	// 各種代入
-	game_scene_ = game_scene;
+	score_ = 0;
 
 	// 基底クラスの初期化
 	setIsUpdate(false);

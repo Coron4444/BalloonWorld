@@ -41,6 +41,7 @@ private:
 // 変数
 //====================
 private:
+	bool is_enable_ = true;				//!< 有効フラグ
 	GameObjectBase* game_object_;		//!< ゲームオブジェクト
 	Vector3D acceleration_;				//!< 加速度
 	Vector3D velocity_;					//!< 速度
@@ -62,6 +63,22 @@ private:
 // プロパティ
 //====================
 public:
+	//----------------------------------------
+	//! @brief 有効フラグ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval value 有効フラグ
+	//----------------------------------------
+	bool getIsEnable();
+
+	//----------------------------------------
+	//! @brief 有効フラグ設定関数
+	//! @details
+	//! @param value 有効フラグ
+	//! @retval void なし
+	//----------------------------------------
+	void setIsEnable(bool value);
+
 	//----------------------------------------
 	//! @brief ゲームオブジェクト設定関数
 	//! @details

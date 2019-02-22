@@ -24,6 +24,7 @@
 //****************************************
 class Score;
 class NumbersPolygon;
+class PlanePolygon;
 
 
 
@@ -39,6 +40,7 @@ class ScoreDraw : public DrawNull
 //====================
 private:
 	static const std::string TEXTURE_NAME;	//!< テクスチャ名
+	static const std::string TEXTURE_NAME2;	//!< テクスチャ名
 	static const int SCORE_DIGITS_NUM;		//!< スコア桁数
 	static const Vec2 SCORE_POSITION;		//!< スコア座標
 	static const Vec2 SCORE_SCALE;			//!< スコア拡縮
@@ -51,7 +53,9 @@ private:
 private:
 	Score* score_;						//!< スコア
 	NumbersPolygon* numbers_polygon_;	//!< 数字群ポリゴン
-	TextureObject* diffuse_texture_;	//!< ディヒューズテクスチャ
+	PlanePolygon* plane_polygon_;		//!< 平面ポリゴン
+	TextureObject* texture_;			//!< テクスチャオブジェクト
+	TextureObject* texture_2;			//!< テクスチャオブジェクト
 
 
 //====================

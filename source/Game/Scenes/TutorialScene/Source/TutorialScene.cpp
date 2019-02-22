@@ -12,6 +12,8 @@
 //****************************************
 #include "../TutorialScene.h"
 
+#include <Resource/Sound/SoundManager.h>
+
 
 
 //****************************************
@@ -35,4 +37,24 @@ void TutorialScene::setTutorialLogo(TutorialLogo* value)
 TutorialScene::TutorialScene(StateBase* state)
 	: SceneNull(state)
 {
+}
+
+
+
+void TutorialScene::Init()
+{
+	SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::BGM_TUTORIAL);
+
+	// ステート初期化
+	SceneNull::Init();
+}
+
+
+
+void TutorialScene::Uninit()
+{
+	SoundManager::getpInstance()->Stop(SoundManager::Type::BGM_TUTORIAL);
+
+	// ステート終了
+	SceneNull::Uninit();
 }

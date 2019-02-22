@@ -29,6 +29,34 @@ const int   Camera::DEFAULT_ANGLE_OF_VIEW = 60;
 //****************************************
 // プロパティ定義
 //****************************************
+bool Camera::State::getIsInput()
+{
+	return is_input_;
+}
+
+
+
+void Camera::State::setIsInput(bool value)
+{
+	is_input_ = value;
+}
+
+
+
+bool Camera::State::getIsUpdate()
+{
+	return is_update_;
+}
+
+
+
+void Camera::State::setIsUpdate(bool value)
+{
+	is_update_ = value;
+}
+
+
+
 Camera* Camera::State::getpCamera()
 {
 	return camera_;
@@ -187,7 +215,13 @@ void Camera::Uninit()
 
 void Camera::Update()
 {
-	if (state_ != nullptr) state_->Update();
+	if (state_ != nullptr)
+	{
+		if (state_->getIsUpdate())
+		{
+			state_->Update();
+		}
+	}
 	CreateViewMatrix();
 }
 

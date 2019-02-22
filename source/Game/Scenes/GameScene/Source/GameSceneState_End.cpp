@@ -20,16 +20,17 @@
 #include <Scenes/ResultScene/ResultScene.h>
 #include <Scenes/ResultScene/ResultSceneState_Start.h>
 
-
+#include <Object/3D/StageManager/StageManager.h>
 
 //****************************************
 // 関数定義
 //****************************************
 void GameSceneState_End::Init()
 {
+	setID((int)GameScene::State::END);
+
 	// ゲームシーンの取得
 	game_scene_ = (GameScene*)getpScene();
-	setID((int)GameScene::State::END);
 }
 
 
@@ -37,9 +38,6 @@ void GameSceneState_End::Init()
 void GameSceneState_End::Update()
 {
 	// クリア
-	//if (game_scene_->getGameOver() == 0)
-	//{
-	//	game_scene_->getpSceneManager()->getpCommonData()->setIsClear(true);
-	//	game_scene_->getpSceneManager()->setNextScene(new ResultScene(new ResultSceneState_Start()));
-	//}
+	game_scene_->getpSceneManager()->getpCommonData()->setScore(game_scene_->getpStageManager()->getScore());
+	game_scene_->getpSceneManager()->setNextScene(new ResultScene(new ResultSceneState_Start()));
 }

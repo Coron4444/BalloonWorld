@@ -34,6 +34,14 @@ public:
 	//! @retval void Ç»Çµ
 	//----------------------------------------
 	void Init(DrawBase* draw);
+
+	//----------------------------------------
+	//! @brief çXêVä÷êî
+	//! @details
+	//! @param void Ç»Çµ
+	//! @retval void Ç»Çµ
+	//----------------------------------------
+	void Update() override;
 };
 
 

@@ -19,8 +19,11 @@
 //****************************************
 // クラス宣言
 //****************************************
-class StageManager;
 class Pause;
+class StageManager;
+class Score;
+class Time;
+class BalloonNum;
 
 
 
@@ -51,31 +54,17 @@ public:
 // 変数
 //====================
 private:
-	int time_;							//!< 時間
-	StageManager* stage_manager_;		//!< ステージマネージャ
-	Pause* pause_;						//!< ポーズ
+	Pause* pause_ = nullptr;					//!< ポーズ
+	StageManager* stage_manager_ = nullptr;		//!< ステージマネージャ
+	Score* score_ = nullptr;					//!< スコア					
+	Time* time_ = nullptr;						//!< 時間
+	BalloonNum* balloon_num_ = nullptr;			//!< 風船数
 
 
 //====================
 // プロパティ
 //====================
 public:
-	//----------------------------------------
-	//! @brief 時間取得関数
-	//! @details
-	//! @param void なし
-	//! @retval int 時間
-	//----------------------------------------
-	int getTime();
-
-	//----------------------------------------
-	//! @brief 時間設定関数
-	//! @details
-	//! @param value 時間
-	//! @retval void なし
-	//----------------------------------------
-	void setTime(int value);
-
 	//----------------------------------------
 	//! @brief ステージマネージャ取得関数
 	//! @details
@@ -85,21 +74,44 @@ public:
 	StageManager* getpStageManager();
 
 	//----------------------------------------
-	//! @brief ステージマネージャ取得関数
+	//! @brief ステージマネージャ設定関数
 	//! @details
 	//! @param void なし
 	//! @retval StageManager* ステージマネージャ
 	//----------------------------------------
 	void setStageManager(StageManager* value);
 
-
 	//----------------------------------------
-	//! @brief ポーズ取得関数
+	//! @brief スコア取得関数
 	//! @details
 	//! @param void なし
-	//! @retval Pause* ポーズ
+	//! @retval Score* スコア
 	//----------------------------------------
-	Pause* getpPause();
+	Score* getpScore();
+
+	//----------------------------------------
+	//! @brief 時間取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Time* 時間
+	//----------------------------------------
+	Time* getpTime();
+
+	//----------------------------------------
+	//! @brief 風船数取得関数
+	//! @details
+	//! @param void なし
+	//! @retval BalloonNum* 風船数
+	//----------------------------------------
+	BalloonNum* getpBalloonNum();
+
+	//----------------------------------------
+	//! @brief 全UI設定関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void setAllUI();
 
 //====================
 // 関数
@@ -119,6 +131,14 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void Init();
+
+	//----------------------------------------
+	//! @brief 終了関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	virtual void Uninit();
 
 	//----------------------------------------
 	//! @brief 更新関数

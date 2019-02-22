@@ -12,6 +12,8 @@
 //****************************************
 #include "../ResultScene.h"
 
+#include <Resource/Sound/SoundManager.h>
+
 
 
 //****************************************
@@ -20,4 +22,24 @@
 ResultScene::ResultScene(StateBase* state)
 	: SceneNull(state)
 {
+}
+
+
+
+void ResultScene::Init()
+{
+	SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::BGM_RESULT);
+
+	// ステート初期化
+	SceneNull::Init();
+}
+
+
+
+void ResultScene::Uninit()
+{
+	SoundManager::getpInstance()->Stop(SoundManager::Type::BGM_RESULT);
+
+	// ステート終了
+	SceneNull::Uninit();
 }

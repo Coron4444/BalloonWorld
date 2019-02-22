@@ -14,6 +14,7 @@
 #include "../Score.h"
 
 #include <Resource/Polygon/NumbersPolygon.h>
+#include <Resource/Polygon/PlanePolygon.h>
 #include <Tool/SafeRelease.h>
 
 
@@ -22,9 +23,10 @@
 // ’è”’è‹`
 //****************************************
 const std::string ScoreDraw::TEXTURE_NAME = "UI/Num.png";
+const std::string ScoreDraw::TEXTURE_NAME2 = "UI/Score.png";
 const int ScoreDraw::SCORE_DIGITS_NUM = 4;
-const Vec2 ScoreDraw::SCORE_POSITION(-100.0f, 300.0f);
-const Vec2 ScoreDraw::SCORE_SCALE(80.0f, 50.0f);
+const Vec2 ScoreDraw::SCORE_POSITION(70.0f, 300.0f);
+const Vec2 ScoreDraw::SCORE_SCALE(50.0f, 40.0f);
 const XColor4 ScoreDraw::SCORE_COLOR(0.0f, 0.0f, 0.0f, 1.0f);
 
 
@@ -34,14 +36,18 @@ const XColor4 ScoreDraw::SCORE_COLOR(0.0f, 0.0f, 0.0f, 1.0f);
 //****************************************
 unsigned ScoreDraw::getObjectNum()
 {
-	return numbers_polygon_->getObjectNum();
+	return numbers_polygon_->getObjectNum() + 1;
 }
 
 
 
 MATRIX* ScoreDraw::getpMatrix(unsigned object_index)
 {
-	return numbers_polygon_->getpMatrix(object_index);
+	if (object_index == 0)
+	{
+		return score_->getpTransform()->getpWorldMatrix();
+	}
+	return numbers_polygon_->getpMatrix(object_index - 1);
 }
 
 
@@ -49,7 +55,11 @@ MATRIX* ScoreDraw::getpMatrix(unsigned object_index)
 D3DMATERIAL9* ScoreDraw::getpMaterial(unsigned object_index, unsigned mesh_index)
 {
 	mesh_index = mesh_index;
-	return numbers_polygon_->getpMaterial(object_index);
+	if (object_index == 0)
+	{
+		return plane_polygon_->getpMaterial();
+	}
+	return numbers_polygon_->getpMaterial(object_index - 1);
 }
 
 
@@ -57,10 +67,12 @@ D3DMATERIAL9* ScoreDraw::getpMaterial(unsigned object_index, unsigned mesh_index
 LPDIRECT3DTEXTURE9 ScoreDraw::getpDiffuseTexture(unsigned object_index,
 														 unsigned mesh_index)
 {
-	object_index = object_index;
 	mesh_index = mesh_index;
-
-	return diffuse_texture_->getpHandler();
+	if (object_index == 0)
+	{
+		return texture_2->getpHandler();
+	}
+	return texture_->getpHandler();
 }
 
 
@@ -80,27 +92,39 @@ void ScoreDraw::Init()
 	score_ = (Score*)getpGameObject();
 
 	// ƒeƒNƒXƒ`ƒƒ‚Ì“o˜^
-	diffuse_texture_ = TextureManager::getpInstance()->getpObject(&TEXTURE_NAME);
+	texture_ = TextureManager::getpInstance()->getpObject(&TEXTURE_NAME);
+	texture_2 = TextureManager::getpInstance()->getpObject(&TEXTURE_NAME2);
 
 	// ”ŽšŒQƒ|ƒŠƒSƒ“ì¬
 	numbers_polygon_ = new NumbersPolygon();
-	numbers_polygon_->Init(100,SCORE_DIGITS_NUM, true,
-						   SCORE_POSITION, SCORE_SCALE, SCORE_COLOR, diffuse_texture_);
+	numbers_polygon_->Init(score_->getScore(), SCORE_DIGITS_NUM, true, SCORE_POSITION,
+						   SCORE_SCALE, SCORE_COLOR, texture_);
+
+	plane_polygon_ = new PlanePolygon();
+	plane_polygon_->Init();
+	score_->getpTransform()->getpPosition()->x = 0.0f;
+	score_->getpTransform()->getpPosition()->y = 300.0f;
+	float scale = 0.7f;
+	score_->getpTransform()->getpScale()->x = texture_2->getWidth() * scale;
+	score_->getpTransform()->getpScale()->y = texture_2->getHeight() * scale;
+	score_->getpTransform()->CreateAxisAndWorldMatrix();
 }
 
 
 
 void ScoreDraw::Uninit()
 {
-	SafeRelease::PlusRelease(&diffuse_texture_);
+	SafeRelease::PlusRelease(&texture_);
+	SafeRelease::PlusRelease(&texture_2);
 	SafeRelease::PlusUninit(&numbers_polygon_);
+	SafeRelease::PlusUninit(&plane_polygon_);
 }
 
 
 
 void ScoreDraw::Update()
 {
-	numbers_polygon_->setNumber(100);
+	numbers_polygon_->setNumber(score_->getScore());
 }
 
 
@@ -108,5 +132,9 @@ void ScoreDraw::Update()
 void ScoreDraw::Draw(unsigned object_index, unsigned mesh_index)
 {
 	mesh_index = mesh_index;
-	numbers_polygon_->Draw(object_index);
+	if (object_index == 0)
+	{
+		return plane_polygon_->Draw();
+	}
+	return numbers_polygon_->Draw(object_index - 1);
 }

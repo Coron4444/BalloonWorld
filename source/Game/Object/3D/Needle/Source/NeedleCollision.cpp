@@ -27,7 +27,7 @@ const float NeedleCollision::MAIN_SPHERE_RADIUS = 1.0f;
 void NeedleCollision::Init()
 {
 	// タイプ
-	CollisionBase::setType(CollisionBase::Type::PLAYER);
+	CollisionBase::setType(CollisionBase::Type::NEEDLE);
 
 	// 衝突オブジェクト作成
 	collision_object_ = new CollisionObject();

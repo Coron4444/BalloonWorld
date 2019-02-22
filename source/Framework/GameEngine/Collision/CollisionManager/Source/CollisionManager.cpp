@@ -45,7 +45,7 @@ void CollisionManager::Init()
 	if (liner_octree_ == nullptr)
 	{
 		liner_octree_ = new LinerOctree<CollisionObject*>();
-		liner_octree_->Init(7, Vec3(-50.0f, -10.0f, -50.0f), Vec3(50.0f, 90.0f, 50.0f));
+		liner_octree_->Init(7, Vec3(-500.0f, -500.0f, -500.0f), Vec3(500.0f, 500.0f, 500.0f));
 	}
 }
 

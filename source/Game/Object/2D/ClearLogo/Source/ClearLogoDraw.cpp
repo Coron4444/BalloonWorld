@@ -11,7 +11,8 @@
 // インクルード文
 //****************************************
 #include "../ClearLogoDraw.h"
-
+#include "../ClearLogo.h"
+#include <Resource/Polygon/NumbersPolygon.h>
 #include <Resource/Polygon/PlanePolygon.h>
 #include <Tool/SafeRelease.h>
 
@@ -20,38 +21,45 @@
 //****************************************
 // 定数定義
 //****************************************
-const std::string ClearLogoDraw::TEXTURE_NAME = "UI/Clear.png";
-const float ClearLogoDraw::SCALE = 1.25f;
+const std::string ClearLogoDraw::TEXTURE_NAME = "UI/Num.png";
+const std::string ClearLogoDraw::TEXTURE_NAME2 = "UI/Result.png";
+const int ClearLogoDraw::SCORE_DIGITS_NUM = 0;
+const Vec2 ClearLogoDraw::SCORE_POSITION(-60.0f, -150.0f);
+const Vec2 ClearLogoDraw::SCORE_SCALE(290.0f, 240.0f);
+const XColor4 ClearLogoDraw::SCORE_COLOR(0.0f, 0.0f, 0.0f, 1.0f);
+const float ClearLogoDraw::SCALE = 1.41f;
 
 
 
 //****************************************
 // プロパティ定義
 //****************************************
-unsigned ClearLogoDraw::getMeshNum(unsigned object_index)
+unsigned ClearLogoDraw::getObjectNum()
 {
-	object_index = object_index;
-
-	return plane_polygon_->getMeshNum();
+	return numbers_polygon_->getObjectNum() + 1;
 }
 
 
 
 MATRIX* ClearLogoDraw::getpMatrix(unsigned object_index)
 {
-	object_index = object_index;
-
-	return getpGameObject()->getpTransform()->getpWorldMatrix();
+	if (object_index == 0)
+	{
+		return clear_logo_->getpTransform()->getpWorldMatrix();
+	}
+	return numbers_polygon_->getpMatrix(object_index - 1);
 }
 
 
 
 D3DMATERIAL9* ClearLogoDraw::getpMaterial(unsigned object_index, unsigned mesh_index)
 {
-	object_index = object_index;
 	mesh_index = mesh_index;
-
-	return plane_polygon_->getpMaterial();
+	if (object_index == 0)
+	{
+		return plane_polygon_->getpMaterial();
+	}
+	return numbers_polygon_->getpMaterial(object_index - 1);
 }
 
 
@@ -59,10 +67,12 @@ D3DMATERIAL9* ClearLogoDraw::getpMaterial(unsigned object_index, unsigned mesh_i
 LPDIRECT3DTEXTURE9 ClearLogoDraw::getpDiffuseTexture(unsigned object_index,
 													 unsigned mesh_index)
 {
-	object_index = object_index;
 	mesh_index = mesh_index;
-
-	return diffuse_texture_->getpHandler();
+	if (object_index == 0)
+	{
+		return texture_2->getpHandler();
+	}
+	return texture_->getpHandler();
 }
 
 
@@ -78,34 +88,52 @@ void ClearLogoDraw::Init()
 	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::FIXED);
 	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::FIXED);
 
-	// テクスチャの登録
-	diffuse_texture_ = TextureManager::getpInstance()->getpObject(&TEXTURE_NAME);
+	// ダウンキャスト
+	clear_logo_ = (ClearLogo*)getpGameObject();
 
-	// 平面ポリゴン作成
+	// テクスチャの登録
+	texture_ = TextureManager::getpInstance()->getpObject(&TEXTURE_NAME);
+	texture_2 = TextureManager::getpInstance()->getpObject(&TEXTURE_NAME2);
+
+	// 数字群ポリゴン作成
+	numbers_polygon_ = new NumbersPolygon();
+	numbers_polygon_->Init(clear_logo_->getScore(), SCORE_DIGITS_NUM, true, SCORE_POSITION,
+						   SCORE_SCALE, SCORE_COLOR, texture_);
+
 	plane_polygon_ = new PlanePolygon();
 	plane_polygon_->Init();
-
-	// 拡縮&移動
-	getpGameObject()->getpTransform()->getpScale()->x = diffuse_texture_->getWidth() * SCALE;
-	getpGameObject()->getpTransform()->getpScale()->y = diffuse_texture_->getHeight() * (SCALE + 0.2f);
-	*getpGameObject()->getpTransform()->getpPosition() = Vec3(0.0f, 0.0f, 0.0f);
-	getpGameObject()->getpTransform()->CreateWorldMatrix();
+	clear_logo_->getpTransform()->getpPosition()->x = 0.0f;
+	clear_logo_->getpTransform()->getpPosition()->y = 0.0f;
+	clear_logo_->getpTransform()->getpScale()->x = texture_2->getWidth() * SCALE;
+	clear_logo_->getpTransform()->getpScale()->y = texture_2->getHeight() * SCALE;
+	clear_logo_->getpTransform()->CreateAxisAndWorldMatrix();
 }
 
 
 
 void ClearLogoDraw::Uninit()
 {
+	SafeRelease::PlusRelease(&texture_);
+	SafeRelease::PlusRelease(&texture_2);
+	SafeRelease::PlusUninit(&numbers_polygon_);
 	SafeRelease::PlusUninit(&plane_polygon_);
-	SafeRelease::PlusRelease(&diffuse_texture_);
+}
+
+
+
+void ClearLogoDraw::Update()
+{
+	numbers_polygon_->setNumber(clear_logo_->getScore());
 }
 
 
 
 void ClearLogoDraw::Draw(unsigned object_index, unsigned mesh_index)
 {
-	object_index = object_index;
 	mesh_index = mesh_index;
-
-	plane_polygon_->Draw();
+	if (object_index == 0)
+	{
+		return plane_polygon_->Draw();
+	}
+	return numbers_polygon_->Draw(object_index - 1);
 }

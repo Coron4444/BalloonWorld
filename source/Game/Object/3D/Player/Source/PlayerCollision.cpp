@@ -15,10 +15,16 @@
 
 #include <GameEngine/Renderer/Renderer.h>
 #include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
+#include <Resource/Sound/SoundManager.h>
+
 #include <Object/3D/Coin/Coin.h>
 #include <Object/3D/Coin/CoinCollision.h>
 #include <Object/3D/Enemy/EnemyCollision.h>
+#include <Object/3D/Needle/NeedleCollision.h>
+#include <Object/3D/Needle/Needle.h>
 #include <Object/3D/Scaffold/ScaffoldCollision.h>
+#include <Object/3D/Scaffold/Scaffold.h>
+#include <Object/3D/Balloon/BalloonGroup.h>
 #include <Object/3D/StartBlock/StartBlockCollision.h>
 #include <Resource/Polygon/MeshPlanePolygon.h>
 
@@ -85,15 +91,16 @@ void PlayerCollision::HitCollision(CollisionInformation* information)
 
 void PlayerCollision::HitGround(float position_y)
 {
-	// ダウンキャスト
-	Player* player = (Player*)getpGameObject();
+	// 着地フラグON
+	player_->setIsOnTheGround(true);
 
 	// 地面の上に立つ
-	player->getpTransform()->getpPosition()->y = position_y;
-	player->getpTransform()->CreateWorldMatrix();
+	player_->getpTransform()->getpPosition()->y = position_y;
+	player_->getpTransform()->CreateWorldMatrix();
 
-	if (player->getpPhysics() == nullptr) return;
-	player->getpPhysics()->setOnTheGround();
+	if (player_->getpPhysics() == nullptr) return;
+	player_->getpPhysics()->setOnTheGround();
+	SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::SE_CLEAR);
 }
 
 
@@ -141,6 +148,15 @@ void PlayerCollision::HitMainSphere(CollisionInformation* information)
 					CollisionCalculation
 						::EliminationOfNesting(information,
 											   player_->getpTransform());
+					Vec3 temp_vector(0.0f, 1.0f, 0.0f);
+					float deg = Vector3D::CreateAngleDegree(information->getpCollisionPointNormal(),
+															&temp_vector);
+					if (deg < 10.0f)
+					{
+						if (player_->getpPhysics() == nullptr) return;
+						player_->getpPhysics()->setOnTheGround();
+					}
+
 					break;
 				}
 			}
@@ -158,6 +174,36 @@ void PlayerCollision::HitMainSphere(CollisionInformation* information)
 					CollisionCalculation
 						::EliminationOfNesting(information,
 											   player_->getpTransform());
+					Vec3 temp_vector(0.0f, 1.0f, 0.0f);
+					float deg = Vector3D::CreateAngleDegree(information->getpCollisionPointNormal(),
+															&temp_vector);
+					if (deg < 10.0f)
+					{
+						if (player_->getpPhysics() == nullptr) return;
+						player_->getpPhysics()->setOnTheGround();
+						Scaffold* scaffold = (Scaffold*)information->getpOpponentGameObject();
+						player_->AddScore(scaffold->getScore());
+						SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::SE_SCORE_UP);
+					}
+					break;
+				}
+			}
+			break;
+		}
+		case CollisionBase::Type::NEEDLE:
+		{
+			// 相手の衝突形状で振り分け
+			switch ((NeedleCollision::ShapeTag)information->getpOpponentShape()
+					->getTag())
+			{
+				case NeedleCollision::ShapeTag::MAIN:
+				{
+					Needle* temp_needle = (Needle*)information->getpOpponentGameObject();
+					if (temp_needle->getIsDamage())
+					{
+						player_->getpBalloonGroup()->ReleaseConstraint();
+						SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::SE_DAMAGE);
+					}
 					break;
 				}
 			}
@@ -167,7 +213,7 @@ void PlayerCollision::HitMainSphere(CollisionInformation* information)
 }
 
 
-
+/*
 void PlayerCollision::DebugDisplay()
 {
 #ifdef _DEBUG
@@ -196,3 +242,4 @@ void PlayerCollision::DebugDisplay()
 	ImGui::PopStyleColor();
 #endif
 }
+*/

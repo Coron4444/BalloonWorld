@@ -54,16 +54,17 @@ void UpdateManager::UninitWhenChangeScene()
 
 void UpdateManager::Update()
 {
-	// 追加待ち配列の中身を追加
-	AddContentsOfAwaitAddArray();
-
 	// 解放待ち配列の中身を解放
 	ReleaseContentsOfAwaitReleaseArray();
+
+	// 追加待ち配列の中身を追加
+	AddContentsOfAwaitAddArray();
 
 	// 物理更新
 	for (unsigned i = 0; i < all_object_.getEndIndex(); i++)
 	{
 		if (all_object_.getObject(i)->getpPhysics() == nullptr) continue;
+		if (!all_object_.getObject(i)->getpPhysics()->getIsEnable()) continue;
 		all_object_.getObject(i)->getpPhysics()->Update();
 	}
 

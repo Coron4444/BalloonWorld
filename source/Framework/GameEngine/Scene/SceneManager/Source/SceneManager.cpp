@@ -131,6 +131,18 @@ void SceneManager::setFadeColor(XColor4 value)
 	fade_color_ = value;
 }
 
+void SceneManager::CommonData::setScore(int value)
+{
+	score_ = value;
+}
+
+
+
+int SceneManager::CommonData::getScore()
+{
+	return score_;
+}
+
 
 
 //****************************************

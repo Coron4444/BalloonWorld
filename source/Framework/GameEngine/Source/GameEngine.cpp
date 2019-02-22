@@ -94,8 +94,8 @@ bool GameEngine::Init(HINSTANCE hInstance, HWND hWnd, BOOL is_full_screen,
 
 	// シーンマネージャーの生成
 	scene_manager_ = new SceneManager();
-	//scene_manager_->Init(new TitleScene(new TitleSceneState_Start()));
-	scene_manager_->Init(new GameScene(new GameSceneState_Start()));
+	scene_manager_->Init(new TitleScene(new TitleSceneState_Start()));
+	//scene_manager_->Init(new GameScene(new GameSceneState_Start()));
 
 	return true;
 }

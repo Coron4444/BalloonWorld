@@ -35,10 +35,22 @@ class Needle;
 class StageManager : public GameObjectNull
 {
 //====================
+// 定数
+//====================
+private:
+	static const int MAX_TIME;		//!< 最大時間
+	static const int BONUS_SCORE;		//!< ボーナススコア
+	static const int BONUS_SCORE_RAITO;	//!< ボーナススコア比率
+
+
+//====================
 // 変数
 //====================
 private:
-	Camera* camera_ = nullptr;					//!< カメラ
+	bool is_enable_ = false;					//!< 有効フラグ
+	bool is_ground_ = false;					//!< 着地フラグ
+	int score_ = 0;								//!< スコア
+	int time_ = 0;								//!< 時間
 	BalloonGroup* balloon_group_ = nullptr;		//!< 風船群
 	Player* player_ = nullptr;					//!< プレイヤー
 	StartBlock* start_block_ = nullptr;			//!< スタートブロック
@@ -51,6 +63,46 @@ private:
 //====================
 public:
 	//----------------------------------------
+	//! @brief 有効フラグ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval value 有効フラグ
+	//----------------------------------------
+	bool getIsEnable();
+
+	//----------------------------------------
+	//! @brief 有効フラグ設定関数
+	//! @details
+	//! @param value 有効フラグ
+	//! @retval void なし
+	//----------------------------------------
+	void setIsEnable(bool value);
+
+	//----------------------------------------
+	//! @brief スコア取得関数
+	//! @details
+	//! @param void なし
+	//! @retval int スコア
+	//----------------------------------------
+	int getScore();
+
+	//----------------------------------------
+	//! @brief 時間取得関数
+	//! @details
+	//! @param void なし
+	//! @retval int 時間
+	//----------------------------------------
+	int getTime();
+
+	//----------------------------------------
+	//! @brief 風船数取得関数
+	//! @details
+	//! @param void なし
+	//! @retval int 風船数
+	//----------------------------------------
+	int getBalloonNum();
+
+	//----------------------------------------
 	//! @brief プレイヤーカメラ設定関数
 	//! @details
 	//! @param *value カメラ
@@ -61,10 +113,18 @@ public:
 	//----------------------------------------
 	//! @brief プレイヤー取得関数
 	//! @details
-	//! @param 
+	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
 	Player* getpPlayer();
+
+	//----------------------------------------
+	//! @brief 地面着地フラグ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	bool getIsOnTheGround();
 
 
 //====================

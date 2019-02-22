@@ -47,38 +47,22 @@ public:
 //====================
 // —ñ‹“Œ^’è‹`
 //====================
-private:
+public:
 	enum class Type
 	{
 		NONE = -1,
 		BGM_TITLE,
-		BGM_STAGE_1,
-		BGM_STAGE_2,
-		BGM_STAGE_3,
-		BGM_CLEAR,
+		BGM_TUTORIAL,
+		BGM_STAGE,
+		BGM_RESULT,
 		SE_KETEI,
 		SE_CURSOR,
+		SE_SCORE_UP,
+		SE_DAMAGE,
 		SE_OPEN,
 		SE_CLOSE,
-		SE_TOBIRA_ON,
-		SE_JUMP,
-		SE_DAMAGE,
-		SE_DETH,
-		SE_CHARGE,
-		SE_SHOT,
-		SE_KOTEI,
-		SE_RELEASE,
 		SE_CLEAR,
-		SE_SWITCH,
-		SE_BREAK,
-		SE_RECOVERY,
-		SE_HANSYA,
-		SE_CHECK_POINT,
-		SE_DOG_DAMAGE,
-		SE_DOG_YARARE,
-		SE_MONKEY_DAMAGE,
-		SE_MONKEY_NAGE,
-		SE_MONKEY_YARARE,
+		SE_PURGE,
 		MAX
 	};
 

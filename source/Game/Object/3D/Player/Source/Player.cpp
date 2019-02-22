@@ -15,6 +15,8 @@
 #include <GameEngine/Draw/Camera/Camera.h>
 #include <GameEngine/Input/InputManager/InputManager.h>
 #include <GameEngine/Collision/BulletPhysics/BulletPhysicsManager/BulletPhysicsManager.h>
+#include <Resource/Sound/SoundManager.h>
+
 #include <Tool/MeterToFrame.h>
 #include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>
 #include <Object/3D/Balloon/BalloonGroup.h>
@@ -41,6 +43,8 @@ void Player::setPosition(Vec3 value)
 	getpTransform()->CreateWorldMatrix();
 }
 
+
+
 BalloonGroup* Player::getpBalloonGroup()
 {
 	return balloon_group_;
@@ -51,8 +55,8 @@ BalloonGroup* Player::getpBalloonGroup()
 void Player::setBalloonGroup(BalloonGroup* value)
 {
 	value->getpReferenceList()->getpMyPointer(&balloon_group_);
-	getpPhysics()->setMaxVerticalVelocity(MAX_VERTICAL_VELOCITY / balloon_group_->getBalloonNum());
-	getpPhysics()->setMass(MAX_MASS / balloon_group_->getBalloonNum());
+	getpPhysics()->setMaxVerticalVelocity(MAX_VERTICAL_VELOCITY / (balloon_group_->getRemainingBalloonNum() + 1));
+	getpPhysics()->setMass(MAX_MASS / (balloon_group_->getRemainingBalloonNum() + 1));
 }
 
 
@@ -67,6 +71,49 @@ Camera* Player::getpCamera()
 void Player::setCamera(Camera* value)
 {
 	camera_ = value;
+}
+
+
+
+bool Player::getIsOnTheGround()
+{
+	return is_on_the_ground_;
+}
+
+
+
+void Player::setIsOnTheGround(bool value)
+{
+	is_on_the_ground_ = value;
+}
+
+
+int Player::getScore()
+{
+	int temp = score_;
+	score_ = 0;
+	return temp;
+}
+
+
+
+void Player::AddScore(int value)
+{
+	score_ += value;
+}
+
+
+
+int Player::getAnimCount()
+{
+	return anim_counter_;
+}
+
+
+
+void Player::setAnimCount(int value)
+{
+	anim_counter_ = value;
 }
 
 
@@ -118,17 +165,10 @@ void Player::Uninit()
 void Player::Update()
 {
 	// 入力
-	camera_ != nullptr ? InputTranslation() : InputTranslationNotCamera();
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_SPACE))
-	{
-		Vector3D temp_vector = Vec3(0.0f, 1.0f, 0.0f);
-		temp_vector.ChangeAnyLength(MeterToFrame::MeterPerSecondToMeterPerFlame(150.0f));
-		*getpPhysics()->getpVelocity() += temp_vector;
-	}
+	Input();
 
-	// 摩擦
+	// 摩擦追加
 	getpPhysics()->AddFriction(0.85f);
-
 	getpTransform()->CreateAxisAndWorldMatrix();
 
 	// バレットオブジェクト
@@ -146,17 +186,21 @@ void Player::Update()
 												->getpNoInitRotationWorldMatrix());
 	getpBalloonGroup()->setPosition(balloon_matrix.getPosition());
 
-	// 切り離し
-	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_M))
-	{
-		getpBalloonGroup()->ReleaseConstraint();
-		getpPhysics()->setMaxVerticalVelocity(MAX_VERTICAL_VELOCITY / balloon_group_->getBalloonNum());
-		getpPhysics()->setMass(MAX_MASS / balloon_group_->getBalloonNum());
-	}
+	anim_counter_++;
+}
 
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_N))
+
+
+void Player::Input()
+{
+	if (getIsInput())
 	{
-		getpBalloonGroup()->AddAcceleration(Vec3(-100.0f, 0.0f, 0.0f));
+		camera_ != nullptr ? InputTranslation() : InputTranslationNotCamera();
+		InputBalloon();
+	}
+	else
+	{
+		anim_counter_ = 0;
 	}
 }
 
@@ -167,33 +211,43 @@ void Player::InputTranslation()
 	Axis* camera_axis = camera_->getpAxis();
 	bool is_input = false;
 	Vector3D look_at_vector;
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_W))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_W) ||
+		InputManager::getpInstance()->getpController()->getHoldLStick(0, Controller::Direction::UP))
 	{
 		is_input = true;
 		look_at_vector += *camera_axis->getpForward();
 	}
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_S))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_S) ||
+		InputManager::getpInstance()->getpController()->getHoldLStick(0, Controller::Direction::DOWN))
 	{
 		is_input = true;
 		look_at_vector += -(*camera_axis->getpForward());
 	}
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_A))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_A) ||
+		InputManager::getpInstance()->getpController()->getHoldLStick(0, Controller::Direction::LEFT))
 	{
 		is_input = true;
 		look_at_vector += -(*camera_axis->getpRight());
 	}
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_D))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_D) ||
+		InputManager::getpInstance()->getpController()->getHoldLStick(0, Controller::Direction::RIGHT))
 	{
 		is_input = true;
 		look_at_vector += *camera_axis->getpRight();
 	}
 
-	if (!is_input) return;
-	look_at_vector.y = 0.0f;
-	getpTransform()->setLookAtVector(look_at_vector);
-	Vector3D acceleration = *getpTransform()->getpForward();
-	*getpPhysics()->getpAcceleration()
-		+= *acceleration.ChangeAnyLength(ACCELERATION);
+	if (is_input)
+	{
+		look_at_vector.y = 0.0f;
+		getpTransform()->setLookAtVector(look_at_vector);
+		Vector3D acceleration = *getpTransform()->getpForward();
+		*getpPhysics()->getpAcceleration()
+			+= *acceleration.ChangeAnyLength(ACCELERATION);
+	}
+	else
+	{
+		anim_counter_ = 0;
+	}
 }
 
 
@@ -223,15 +277,41 @@ void Player::InputTranslationNotCamera()
 		look_at_vector += Vector3D(1.0f, 0.0f, 0.0f);
 	}
 
-	if (!is_input) return;
-	getpTransform()->setLookAtVector(look_at_vector);
-	Vector3D acceleration = *getpTransform()->getpForward();
-	*getpPhysics()->getpAcceleration()
-		+= *acceleration.ChangeAnyLength(ACCELERATION);
+	if (is_input)
+	{
+		getpTransform()->setLookAtVector(look_at_vector);
+		Vector3D acceleration = *getpTransform()->getpForward();
+		*getpPhysics()->getpAcceleration()
+			+= *acceleration.ChangeAnyLength(ACCELERATION);
+	}
+	else
+	{
+		anim_counter_ = 0;
+	}
 }
 
 
 
+void Player::InputBalloon()
+{
+	// 切り離し
+	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_SPACE) ||
+		InputManager::getpInstance()->getpController()->getTrigger(0, XINPUT_GAMEPAD_X))
+	{
+		getpBalloonGroup()->ReleaseConstraint();
+		getpPhysics()->setMaxVerticalVelocity(MAX_VERTICAL_VELOCITY / (balloon_group_->getRemainingBalloonNum() + 1));
+		getpPhysics()->setMass(MAX_MASS / (balloon_group_->getRemainingBalloonNum() + 1));
+
+		if (balloon_group_->getRemainingBalloonNum() >= 0)
+		{
+			SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::SE_PURGE);
+		}
+	}
+}
+
+
+
+/*
 void Player::DebugDisplay()
 {
 #ifdef _DEBUG
@@ -353,3 +433,4 @@ void Player::DebugDisplay()
 	ImGui::PopStyleColor();
 #endif
 }
+*/

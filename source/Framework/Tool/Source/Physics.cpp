@@ -27,6 +27,20 @@ const float Physics::VELOCITY_MIN = 0.0001f;
 //****************************************
 // プロパティ定義
 //****************************************
+bool Physics::getIsEnable()
+{
+	return is_enable_;
+}
+
+
+
+void Physics::setIsEnable(bool value)
+{
+	is_enable_ = value;
+}
+
+
+
 void Physics::setGameObject(GameObjectBase* value)
 {
 	game_object_ = value;

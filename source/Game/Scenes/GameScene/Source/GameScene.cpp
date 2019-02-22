@@ -13,18 +13,17 @@
 #include "../GameScene.h"
 #include "../GameSceneState_Start.h"
 
-#include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
 #include <GameEngine/Scene/SceneManager/SceneManager.h>
 #include <GameEngine/Input/InputManager/InputManager.h>
+#include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
+#include <Resource/Sound/SoundManager.h>
 
 #include <Object/2D/Score/ScoreFactory.h>
 #include <Object/2D/Pause/PauseFactory.h>
-#include <Object/3D/Coin/CoinFactory.h>
-#include <Object/3D/Enemy/EnemyFactory.h>
-#include <Object/3D/Field/FieldFactory.h>
-#include <Object/3D/Goal/GoalFactory.h>
-#include <Object/3D/SkyDome/SkyDomeFactory.h>
+#include <Object/2D/Time/TimeFactory.h>
+#include <Object/2D/BalloonNum/BalloonNumFactory.h>
 #include <Object/3D/StageManager/StageManager.h>
+#include <Object/3D/Player/Player.h>
 
 #include <Scenes/TitleScene/TitleScene.h>
 #include <Scenes/TitleScene/TitleSceneState_Start.h>
@@ -34,20 +33,6 @@
 //****************************************
 // プロパティ定義
 //****************************************
-int GameScene::getTime()
-{ 
-	return time_;
-}
-
-
-
-void GameScene::setTime(int value)
-{ 
-	time_ = value;
-}
-
-
-
 StageManager* GameScene::getpStageManager()
 {
 	return stage_manager_;
@@ -62,9 +47,32 @@ void GameScene::setStageManager(StageManager* value)
 
 
 
-Pause* GameScene::getpPause()
+Score* GameScene::getpScore()
 {
-	return pause_;
+	return score_;
+}
+
+
+
+Time* GameScene::getpTime()
+{
+	return time_;
+}
+
+
+
+BalloonNum* GameScene::getpBalloonNum()
+{
+	return balloon_num_;
+}
+
+
+
+void GameScene::setAllUI()
+{
+	score_->setScore(stage_manager_->getScore());
+	time_->setTime(stage_manager_->getTime());
+	balloon_num_->setBalloonNum(stage_manager_->getBalloonNum());
 }
 
 
@@ -81,57 +89,43 @@ GameScene::GameScene(StateBase* state)
 
 void GameScene::Init()
 {
+	SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::BGM_STAGE);
+
 	// ポーズ作成
 	PauseFactory pause_factory_;
 	pause_ = pause_factory_.Create();
 	pause_->setIsEnable(false);
 
-	// コインの作成
-	CoinFactory coin_factory;
-	Coin* temp = coin_factory.Create();
-	*temp->getpTransform()->getpPosition() = Vec3(5.0f, 1.0f, 0.0f);
-	temp->getpTransform()->CreateWorldMatrix();
-	
-	temp = coin_factory.Create();
-	*temp->getpTransform()->getpPosition() = Vec3(5.0f, 1.0f, 5.0f);
-	temp->getpTransform()->CreateWorldMatrix();
-	
-	temp = coin_factory.Create();
-	*temp->getpTransform()->getpPosition() = Vec3(-5.0f, 1.0f, -5.0f);
-	temp->getpTransform()->CreateWorldMatrix();
-
-	// スカイドーム
-	SkyDomeFactory sky_dome_factory;
-	sky_dome_factory.Create();
-
-	// フィールド
-	FieldFactory field_factory;
-	Field* field = field_factory.Create();
-	GameObjectManager::getpInstance()->getpCollisionManager()
-		->setGround(field->getpMeshPlanePolygon());
-
 	// ステージ
 	stage_manager_ = new StageManager();
 	stage_manager_->Init();
 	stage_manager_->CreateStage();
-	
-	// 敵
-	EnemyFactory enemy_factory;
-	Enemy* temp2 = enemy_factory.Create();
-	*temp2->getpTransform()->getpPosition() = Vec3(-5.0f, 6.0f, 5.0f);
-	*temp2->getpTransform()->getpScale() = Vec3(3.0f, 3.0f, 3.0f);
-	//*temp2->getpTransform()->getpAngleYaw() += 3.0f;
-	temp2->getpTransform()->CreateWorldMatrix();
-
-	// ゴール
-	GoalFactory goal_factory;
-	Goal* temp3 = goal_factory.Create();
-	*temp3->getpTransform()->getpPosition() = Vec3(10.0f, 0.0f, 20.0f);
-	temp3->getpTransform()->CreateWorldMatrix();
 
 	// スコア
-	//ScoreFactory score_factory;
-	//score_factory.Create(this);
+	ScoreFactory score_factory;
+	score_ = score_factory.Create();
+	
+	// 時間
+	TimeFactory time_factory;
+	time_ = time_factory.Create();
+	
+	// 風船数
+	BalloonNumFactory balloon_num_factory;
+	balloon_num_ = balloon_num_factory.Create();
+	
+
+	// カメラステート変更
+	Camera* camera = GameObjectManager::getpInstance()->getpDrawManager()
+		->getpCamera(DrawManager::RenderTargetType::MAIN);
+	Camera::State* camera_state = new CameraState_HomingTarget();
+	camera->setState(camera_state);
+
+	// プレイヤーにカメラセット
+	stage_manager_->setPlayerCamera(camera);
+	((CameraState_HomingTarget*)camera_state)->setTargetObject(stage_manager_->getpPlayer());
+
+	// UI設定
+	setAllUI();
 
 	// ステート初期化
 	SceneNull::Init();
@@ -157,7 +151,7 @@ void GameScene::Update()
 			}
 			case Pause::SelectType::RESTART:
 			{
-				getpSceneManager()->setResetScene(new GameSceneState_Start());
+				getpSceneManager()->setNextScene(new GameScene(new GameSceneState_Start()));
 				pause_->setIsEnable(false);
 				break;
 			}
@@ -180,12 +174,24 @@ void GameScene::Update()
 			{
 				setIsPause(false);
 				pause_->setIsEnable(false);
+				SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::SE_OPEN);
 			}
 			else
 			{
 				setIsPause(true);
 				pause_->setIsEnable(true);
+				SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::SE_CLOSE);
 			}
 		}
 	}
+}
+
+
+
+void GameScene::Uninit()
+{
+	SoundManager::getpInstance()->Stop(SoundManager::Type::BGM_STAGE);
+
+	// ステート終了
+	SceneNull::Uninit();
 }

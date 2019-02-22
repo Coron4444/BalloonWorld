@@ -11,15 +11,15 @@
 // インクルード文
 //****************************************
 #include "../GameSceneState_Start.h"
+#include "../GameSceneState_Play.h"
 #include "../GameScene.h"
 
 #include <GameEngine/Draw/DrawManager/DrawManager.h>
 #include <GameEngine/Scene/SceneManager/SceneManager.h>
-#include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
 #include <Tool/SafeRelease.h>
 
 #include <Object/3D/StageManager/StageManager.h>
-#include <Object/3D/Player/Player.h>
+
 #include <Scenes/ResultScene/ResultScene.h>
 #include <Scenes/ResultScene/ResultSceneState_Start.h>
 
@@ -30,49 +30,37 @@
 //****************************************
 void GameSceneState_Start::Init()
 {
+	// ステートID登録
+	setID((int)GameScene::State::START);
+	
 	// ゲームシーンの取得
 	game_scene_ = (GameScene*)getpScene();
-	setID((int)GameScene::State::START);
 
-	// ゲームシーン共通データーの初期化
-	//game_scene_->setIsClear(false);
-	//game_scene_->setScore(0);
-
-	// デフォルトカメラの作成
-	Camera* camera = GameObjectManager::getpInstance()->getpDrawManager()
-		->getpCamera(DrawManager::RenderTargetType::MAIN);
-	//Camera::State* camera_state = new CameraState_CrawlUp();
-	Camera::State* camera_state = new CameraState_HomingTarget();
-	camera->setState(camera_state);
-	// プレイヤーにカメラを設定
-	game_scene_->getpStageManager()->setPlayerCamera(camera);
-	((CameraState_HomingTarget*)camera_state)->setTargetObject(game_scene_->getpStageManager()
-															   ->getpPlayer());
-
-	camera = GameObjectManager::getpInstance()->getpDrawManager()
-		->getpCamera(DrawManager::RenderTargetType::SHADOW_MAP);
-	//camera_state = new CameraState_Normal();
-	//camera->setState(camera_state);
-	*camera->getpPosition() = Vec3(33.0544128f, 52.7752686f, -76.8992844f);
-	*camera->getpGazingPoint() = Vec3(29.2177696f, 47.4293556f, -67.8606339f);
-	camera->Update();
+	// ステージ更新OFF
+	game_scene_->getpStageManager()->setIsEnable(false);
 }
 
 
 
 void GameSceneState_Start::Update()
 {
-	// クリア
-	//if (game_scene_->getGameOver() == 0)
-	//{
-	//	game_scene_->getpSceneManager()->getpCommonData()->setIsClear(true);
-	//	game_scene_->getpSceneManager()->setNextScene(new ResultScene(new ResultSceneState_Start()));
-	//}
-	//
-	//// 失敗
-	//if (game_scene_->getGameOver() == 1)
-	//{
-	//	game_scene_->getpSceneManager()->getpCommonData()->setIsClear(false);
-	//	game_scene_->getpSceneManager()->setNextScene(new ResultScene(new ResultSceneState_Start()));
-	//}
+	// フェードイン中は排除
+	if (!game_scene_->getpSceneManager()->getpCommonData()->getIsUpdate()) return;
+
+	// スタートロゴアニメーション終了時
+	game_scene_->setState(new GameSceneState_Play());
+}
+
+
+
+void GameSceneState_Start::PauseEntrance()
+{
+	
+}
+
+
+
+void GameSceneState_Start::PauseExit()
+{
+	
 }

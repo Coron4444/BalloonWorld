@@ -108,7 +108,7 @@ public:
 	//! @param void ‚È‚µ
 	//! @retval void ‚È‚µ
 	//----------------------------------------
-	void DebugDisplay() override;
+	//void DebugDisplay() override;
 
 private:
 	//----------------------------------------

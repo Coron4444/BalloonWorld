@@ -17,6 +17,7 @@
 #include <GameEngine/Scene/SceneManager/SceneManager.h>
 #include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
 #include <GameEngine/Input/InputManager/InputManager.h>
+#include <Resource/Sound/SoundManager.h>
 
 #include <Object/2D/TutorialLogo/TutorialLogoFactory.h>
 #include <Object/2D/PushSpaceLogo/PushSpaceLogoFactory.h>
@@ -44,8 +45,10 @@ void TutorialSceneState_Start::Init()
 
 void TutorialSceneState_Start::Update()
 {
-	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_SPACE))
+	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_SPACE) ||
+		InputManager::getpInstance()->getpController()->getTrigger(0, XINPUT_GAMEPAD_X))
 	{
+		SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::SE_KETEI);
 		tutorial_scene_->setState(new TutorialSceneState_End());
 	}
 }

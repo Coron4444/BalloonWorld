@@ -12,6 +12,8 @@
 //****************************************
 #include "../TitleScene.h"
 
+#include <Resource/Sound/SoundManager.h>
+
 
 
 //****************************************
@@ -20,4 +22,24 @@
 TitleScene::TitleScene(StateBase* state)
 	: SceneNull(state)
 {
+}
+
+
+
+void TitleScene::Init()
+{
+	SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::BGM_TITLE);
+
+	// ステート初期化
+	SceneNull::Init();
+}
+
+
+
+void TitleScene::Uninit()
+{
+	SoundManager::getpInstance()->Stop(SoundManager::Type::BGM_TITLE);
+
+	// ステート終了
+	SceneNull::Uninit();
 }

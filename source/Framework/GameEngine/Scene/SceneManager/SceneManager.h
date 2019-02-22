@@ -43,7 +43,7 @@ public:
 	private:
 		bool is_update_;		//!< 全体を更新するかフラグ
 		bool is_clear_;			//!< ゲームをクリアしたかフラグ
-
+		int score_ = 0;
 
 	//====================
 	// プロパティ
@@ -81,7 +81,9 @@ public:
 		//----------------------------------------
 		void setIsClear(bool value);
 
-
+		void setScore(int value);
+		int getScore();
+		
 	//====================
 	// 関数
 	//====================
@@ -94,8 +96,9 @@ public:
 		//----------------------------------------
 		void Reset()
 		{
-			is_update_ = false;
+			is_update_ = true;
 			is_clear_ = false;
+			score_ = 0;
 		}
 	};
 

@@ -17,10 +17,9 @@
 //****************************************
 // ŠÖ”’è‹`
 //****************************************
-Score* ScoreFactory::Create(GameScene* game_scene)
+Score* ScoreFactory::Create()
 {
 	Score* temp = new Score();
-	temp->Init(new ScoreDraw(),
-			   game_scene);
+	temp->Init(new ScoreDraw());
 	return temp;
 }

@@ -1,5 +1,5 @@
 //================================================================================
-//!	@file	 Score.cpp
+//!	@file	 Score.h
 //!	@brief	 スコアClass
 //! @details 
 //!	@author  Kai Araki									@date 2018/06/19
@@ -14,8 +14,6 @@
 //****************************************
 #include <GameEngine/GameObject/GameObjectNull.h>
 
-#include <Scenes/GameScene/GameScene.h>
-
 
 
 //************************************************************														   
@@ -29,7 +27,7 @@ class Score : public GameObjectNull
 // 変数
 //====================
 private:
-	GameScene* game_scene_;		//!< ゲームシーン
+	int score_ = 0;		//!< スコア
 
 
 //====================
@@ -37,12 +35,20 @@ private:
 //====================
 public:
 	//----------------------------------------
-	//! @brief ゲームシーン取得関数
+	//! @brief スコア取得関数
 	//! @details
 	//! @param void なし
-	//! @retval GameScene* ゲームシーン
+	//! @retval int スコア
 	//----------------------------------------
-	GameScene* getpGameScene();
+	int getScore();
+
+	//----------------------------------------
+	//! @brief スコア設定関数
+	//! @details
+	//! @param value スコア
+	//! @retval void なし
+	//----------------------------------------
+	void setScore(int value);
 
 
 //====================
@@ -52,12 +58,10 @@ public:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
-	//! @param *draw       描画基底クラス
-	//! @param *game_scene ゲームシーン
+	//! @param *draw 描画基底クラス
 	//! @retval void なし
 	//----------------------------------------
-	void Init(DrawBase* draw,
-			  GameScene* game_scene);
+	void Init(DrawBase* draw);
 };
 
 

@@ -144,12 +144,13 @@ void DrawManager::UninitWhenChangeScene()
 	all_draw_.Reset();
 
 	render_target_main_->UninitWhenChangeScene();
-	render_target_shadow_map_->UninitWhenChangeScene();
+	//render_target_shadow_map_->UninitWhenChangeScene();
 	motion_blur_->UninitWhenChangeScene();
 
 	for (auto& contents : camera_)
 	{
 		contents->setState(nullptr);
+		contents->Init(nullptr);
 	}
 }
 

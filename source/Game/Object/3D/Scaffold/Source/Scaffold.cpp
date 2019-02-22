@@ -52,6 +52,22 @@ void Scaffold::setColor(XColor4 value)
 
 
 
+int Scaffold::getScore()
+{
+	int temp = score_;
+	score_ = 0;
+	return temp;
+}
+
+
+
+void Scaffold::setScore(int value)
+{
+	score_ = value;
+}
+
+
+
 //****************************************
 // ä÷êîíËã`
 //****************************************

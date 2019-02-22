@@ -162,6 +162,8 @@ public:
 	//----------------------------------------
 	bool getHoldLStick(int controller_index, Direction value);
 
+	bool getHoldRStick(int controller_index, Direction value);
+
 	//----------------------------------------
 	//! @brief Lスティックのトリガー状態取得関数
 	//! @details

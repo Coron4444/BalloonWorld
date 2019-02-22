@@ -20,6 +20,13 @@
 void SkyDome::Init(DrawBase* draw)
 {
 	// Šî’êƒNƒ‰ƒX‚Ì‰Šú‰»
-	setIsUpdate(false);
 	GameObjectBase::Init(draw, nullptr);
+}
+
+
+
+void SkyDome::Update()
+{
+	*getpTransform()->getpAngleYaw() += 0.0005f;
+	getpTransform()->CreateAxisAndWorldMatrix();
 }

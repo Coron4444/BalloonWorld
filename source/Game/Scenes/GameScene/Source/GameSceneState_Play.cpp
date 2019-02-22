@@ -18,6 +18,8 @@
 #include <GameEngine/Scene/SceneManager/SceneManager.h>
 #include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
 
+#include <Object/3D/StageManager/StageManager.h>
+
 
 
 //****************************************
@@ -27,12 +29,37 @@ void GameSceneState_Play::Init()
 {
 	// ゲームシーンの取得
 	game_scene_ = (GameScene*)getpScene();
+
+	// ステージ更新ON
+	game_scene_->getpStageManager()->setIsEnable(true);
 }
 
 
 
 void GameSceneState_Play::Update()
 {
-	if ()
-	game_scene_->setState(new GameSceneState_End());
+	// UI設定
+	game_scene_->setAllUI();
+
+	// プレイヤーが地面に着いたら
+	if (game_scene_->getpStageManager()->getIsOnTheGround())
+	{
+		game_scene_->setState(new GameSceneState_End());
+	}
+}
+
+
+
+void GameSceneState_Play::PauseEntrance()
+{
+	// ステージ更新OFF
+	game_scene_->getpStageManager()->setIsEnable(false);
+}
+
+
+
+void GameSceneState_Play::PauseExit()
+{
+	// ステージ更新ON
+	game_scene_->getpStageManager()->setIsEnable(true);
 }

@@ -40,7 +40,7 @@ public :
 	// 変数
 	//====================
 	private:
-		Needle* needle_;	//!<  棘
+		Needle* needle_ = nullptr;	//!<  棘
 
 	//====================
 	// プロパティ
@@ -104,7 +104,7 @@ public :
 //====================
 private:
 	State* state_;	//!< ステート
-	
+	bool is_damage_ = true;
 
 //====================
 // プロパティ
@@ -134,6 +134,13 @@ public:
 	//----------------------------------------
 	void setState(State* value);
 	
+
+	bool getIsDamage()
+	{
+		bool temp = is_damage_;
+		is_damage_ = false;
+		return temp;
+	}
 
 //====================
 // 関数

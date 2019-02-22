@@ -14,8 +14,6 @@
 //****************************************
 #include <GameEngine/GameObject/GameObjectNull.h>
 
-#include <Scenes/GameScene/GameScene.h>
-
 
 
 //****************************************
@@ -46,10 +44,12 @@ private:
 // 変数
 //====================
 private:
-	GameScene* game_scene_ = nullptr;				//!< ゲームシーン
 	BalloonGroup* balloon_group_ = nullptr;			//!< 風船群
 	Camera* camera_ = nullptr;						//!< カメラ
 	BulletPhysicsObject* bullet_object_ = nullptr;	//!< バレットオブジェクト
+	bool is_on_the_ground_ = false;					//!< 地面着地フラグ
+	int score_ = 0;	
+	int anim_counter_ = 0;
 
 
 //====================
@@ -96,6 +96,28 @@ public:
 	//----------------------------------------
 	void setCamera(Camera* value);
 
+	//----------------------------------------
+	//! @brief 地面着地フラグ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval bool 地面着地フラグ
+	//----------------------------------------
+	bool getIsOnTheGround();
+
+	//----------------------------------------
+	//! @brief 地面着地フラグ設定関数
+	//! @details
+	//! @param value 地面着地フラグ
+	//! @retval void なし
+	//----------------------------------------
+	void setIsOnTheGround(bool value);
+
+	int getScore();
+	void AddScore(int value);
+
+	int getAnimCount();
+	void setAnimCount(int value);
+
 
 //====================
 // 関数
@@ -132,9 +154,17 @@ public:
 	//! @param void なし
 	//! @retval void なし
 	//----------------------------------------
-	void DebugDisplay() override;
+	//void DebugDisplay() override;
 
 private:
+	//----------------------------------------
+	//! @brief 入力関数
+	//! @details 
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void Input();
+
 	//----------------------------------------
 	//! @brief 平行移動入力関数
 	//! @details 
@@ -150,6 +180,14 @@ private:
 	//! @retval void なし
 	//----------------------------------------
 	void InputTranslationNotCamera();
+
+	//----------------------------------------
+	//! @brief 風船入力関数
+	//! @details 
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void InputBalloon();
 };
 
 

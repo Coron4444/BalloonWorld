@@ -32,9 +32,16 @@ ReferenceList<BalloonGroup>* BalloonGroup::getpReferenceList()
 
 
 
-unsigned BalloonGroup::getBalloonNum()
+int BalloonGroup::getBalloonNum()
 {
-	return balloons_.size();
+	return (int)balloons_.size();
+}
+
+
+
+int BalloonGroup::getRemainingBalloonNum()
+{
+	return end_index_ + 1;
 }
 
 

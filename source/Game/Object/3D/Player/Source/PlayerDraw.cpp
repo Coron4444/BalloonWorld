@@ -11,6 +11,7 @@
 // インクルード文
 //****************************************
 #include "../PlayerDraw.h"
+#include "../Player.h"
 
 #include <GameEngine/Draw/DrawManager/Shader/VertexShader/VertexShaderBumpMapping.h>
 #include <Resource/ModelX/ModelXManager/ModelXManager.h>
@@ -66,7 +67,7 @@ MATRIX* PlayerDraw::getpBoneMatrix(unsigned object_index, unsigned mesh_index,
 	object_index = object_index;
 
 	return test_object_->getpMesh(mesh_index)->getpBone(bone_index)
-		->getpAnimationMatrix(0);
+		->getpAnimationMatrix(pattern_num_);
 }
 
 
@@ -108,10 +109,10 @@ void PlayerDraw::Init()
 	// オーダーリスト設定
 	getpDrawOrderList()->setDrawType(DrawOrderList::DrawType::OPACITY);
 	getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_MAIN);
-	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::BLINN_PHONG);
-	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::BLINN_PHONG);
-	//getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::ANIMATED_DEFAULT);
-	//getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::DEFAULT);
+	//getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::BLINN_PHONG);
+	//getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::BLINN_PHONG);
+	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::ANIMATED_DEFAULT);
+	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::DEFAULT);
 
 	// Xモデル登録
 	player_model_ = ModelXManager::getpInstance()->getpObject(&MODEL_NAME);
@@ -124,8 +125,10 @@ void PlayerDraw::Init()
 	normal_texture_[1] = TextureManager::getpInstance()->getpObject(&NORMAL_TEXTURE_SWORD, &TEXTURE_PATH);
 
 	// テスト用オブジェクト
-	std::string test = "neko_anime_tat2i/neko_anime_tat2i.mdbin_l";
+	std::string test = "neko_anime_hasiru3/neko_anime_hasiru3.mdbin_l";
 	test_object_ = MdBinManager::getpInstance()->getpObject(&test);
+
+	player_ = (Player*)getpGameObject();
 }
 
 
@@ -142,6 +145,14 @@ void PlayerDraw::Uninit()
 
 	//テスト用
 	SafeRelease::PlusRelease(&test_object_);
+}
+
+
+
+void PlayerDraw::Update()
+{
+	int animation_speed = 1;
+	pattern_num_ = player_->getAnimCount() / animation_speed % test_object_->getAnimationFrameNum();
 }
 
 

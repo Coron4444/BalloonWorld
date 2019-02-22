@@ -57,6 +57,22 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void Update() override;
+
+	//----------------------------------------
+	//! @brief ポーズ入口関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void PauseEntrance() override;
+
+	//----------------------------------------
+	//! @brief ポーズ出口関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void PauseExit() override;
 };
 
 

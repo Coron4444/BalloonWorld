@@ -14,6 +14,8 @@
 
 #include <GameEngine/Input/InputManager/InputManager.h>
 #include <GameEngine/Draw/DrawBase.h>
+#include <Resource/Sound/SoundManager.h>
+
 #include <Tool/TimeToFrame.h>
 
 
@@ -190,6 +192,8 @@ void Pause::Input()
 		{
 			icon_transform_.getpPosition()->y = BOTTOM_ICON_POSITION_Y;
 		}
+
+		SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::SE_CLEAR);
 	}
 
 	// 下
@@ -204,6 +208,7 @@ void Pause::Input()
 		{
 			icon_transform_.getpPosition()->y = TOP_ICON_POSITION_Y;
 		}
+		SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::SE_CLEAR);
 	}
 
 	// 選択タイプ変更
@@ -223,7 +228,7 @@ void Pause::Input()
 	// 決定
 	if (InputManager::getpInstance()->getpKeyboard()->getTrigger(DIK_SPACE) ||
 		InputManager::getpInstance()->getpController()
-		->getTrigger(0, XINPUT_GAMEPAD_B))
+		->getTrigger(0, XINPUT_GAMEPAD_X))
 	{
 		// カラーアニメーションセット
 		float pattern_second = BLINKING_SECOND / BLINKING_NUM;	// 1パターンの秒数
@@ -243,5 +248,7 @@ void Pause::Input()
 
 		// 入力OFF
 		setIsInput(false);
+
+		SoundManager::getpInstance()->PlayOrStop(SoundManager::Type::SE_KETEI);
 	}
 }

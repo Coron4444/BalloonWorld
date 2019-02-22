@@ -42,6 +42,7 @@ void CameraState_HomingTarget::setTargetObject(GameObjectBase* value)
 	*getpCamera()->getpGazingPoint() = *target_object_->getpTransform()->getpPosition();
 	getpCamera()->getpGazingPoint()->y += DEFAULT_LENGHT.y + GAZING_POINT_Y;
 	CalculationForward();
+	Update();
 }
 
 
@@ -118,8 +119,9 @@ void CameraState_HomingTarget::CalculationForward()
 
 void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 {
-	// ‰E
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_L))
+	// ¶
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_J) ||
+		InputManager::getpInstance()->getpController()->getHoldRStick(0, Controller::Direction::LEFT))
 	{
 		// ‹t‘OƒxƒNƒgƒ‹‚ðŽZo‚µ‰ñ“]
 		Vector3D position_to_gazing_point = *getpCamera()->getpPosition()
@@ -138,8 +140,9 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 		CalculationForward();
 	}
 
-	// ¶
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_J))
+	// ‰E
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_L) ||
+		InputManager::getpInstance()->getpController()->getHoldRStick(0, Controller::Direction::RIGHT))
 	{
 		// ‹t‘OƒxƒNƒgƒ‹‚ðŽZo‚µ‰ñ“]
 		Vector3D position_to_gazing_point = *getpCamera()->getpPosition()
@@ -159,7 +162,8 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 	}
 
 	// ã
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_I))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_I) ||
+		InputManager::getpInstance()->getpController()->getHoldRStick(0, Controller::Direction::UP))
 	{
 		// ‹t‘OƒxƒNƒgƒ‹‚ðŽZo‚µ‰ñ“]
 		Vector3D position_to_gazing_point = *getpCamera()->getpPosition()
@@ -190,7 +194,8 @@ void CameraState_HomingTarget::InputRotationAroundGazingPoint()
 	}
 
 	// ‰º
-	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_K))
+	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_K) ||
+		InputManager::getpInstance()->getpController()->getHoldRStick(0, Controller::Direction::DOWN))
 	{
 		// ‹t‘OƒxƒNƒgƒ‹‚ðŽZo‚µ‰ñ“]
 		Vector3D position_to_gazing_point = *getpCamera()->getpPosition()
