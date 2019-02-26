@@ -13,6 +13,8 @@
 // インクルード文
 //****************************************
 #include <Tool/Axis.h>
+#include <Tool/Vector3D.h>
+#include <Tool/Matrix.h>
 
 
 
@@ -153,7 +155,7 @@ public:
 public:
 	static const float NEAR_CLIPPING_PLANE;		//!< 近面クリップ
 	static const float FAR_CLIPPING_PLANE;		//!< 遠面クリップ
-	static const int   DEFAULT_ANGLE_OF_VIEW;	//!< 画角
+	static const float DEFAULT_ANGLE_OF_VIEW;	//!< 画角
 
 
 //====================
@@ -163,15 +165,15 @@ private:
 	Vector3D position_;					//!< 座標
 	Vector3D gazing_point_;				//!< 注視点
 	Vector3D up_;						//!< 上方向
-	int angle_of_view_;					//!< 画角
+	float angle_of_view_;				//!< 画角
 	Axis axis_;							//!< 軸
-	MATRIX view_;						//!< ビュー行列
-	MATRIX view_2D_;					//!< ビュー行列(2D)
-	MATRIX projection_perspective_;		//!< プロジェクション行列(透視投影)
-	MATRIX projection_ortho_;			//!< プロジェクション行列(正射影)
-	MATRIX projection_2D_;				//!< プロジェクション行列(2D)
-	State* state_ = nullptr;			//!< ステート
-	Type type_ = Type::PERSPECTIVE;		//!< タイプ
+	Matrix view_;						//!< ビュー行列
+	Matrix view_2D_;					//!< ビュー行列(2D)
+	Matrix projection_perspective_;		//!< プロジェクション行列(透視投影)
+	Matrix projection_ortho_;			//!< プロジェクション行列(正射影)
+	Matrix projection_2D_;				//!< プロジェクション行列(2D)
+	State* state_;						//!< ステート
+	Type type_;							//!< タイプ
 
 
 //====================
@@ -182,17 +184,17 @@ public:
 	//! @brief ビュー行列取得関数
 	//! @details
 	//! @param void なし
-	//! @retval MATRIX* ビュー行列
+	//! @retval Matrix* ビュー行列
 	//----------------------------------------
-	MATRIX* getpViewMatrix();
+	Matrix* getpViewMatrix();
 
 	//----------------------------------------
 	//! @brief プロジェクション行列取得関数
 	//! @details
 	//! @param void なし
-	//! @retval MATRIX* プロジェクション行列
+	//! @retval Matrix* プロジェクション行列
 	//----------------------------------------
-	MATRIX* getpProjectionMatrix();
+	Matrix* getpProjectionMatrix();
 
 	//----------------------------------------
 	//! @brief 座標取得関数
@@ -222,9 +224,9 @@ public:
 	//! @brief 画角取得関数
 	//! @details
 	//! @param void なし
-	//! @retval int 画角
+	//! @retval float 画角
 	//----------------------------------------
-	int getAngleOfView();
+	float getAngleOfView();
 	
 	//----------------------------------------
 	//! @brief 画角設定関数
@@ -232,7 +234,7 @@ public:
 	//! @param value 画角
 	//! @retval void なし
 	//----------------------------------------
-	void setAngleOfView(int value);
+	void setAngleOfView(float value);
 	
 	//----------------------------------------
 	//! @brief 軸取得関数
@@ -280,6 +282,21 @@ public:
 //====================
 public:
 	//----------------------------------------
+	//! @brief コンストラクタ
+	//! @details
+	//! @param void なし
+	//----------------------------------------
+	Camera();
+
+	//----------------------------------------
+	//! @brief デストラクタ
+	//! @details
+	//! @param void なし
+	//----------------------------------------
+	~Camera();
+
+
+	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
 	//! @param state        ステート
@@ -288,9 +305,9 @@ public:
 	//! @param up           上ベクトル
 	//! @retval void なし
 	//----------------------------------------
-	void Init(State* state, Vec3 position = {0.0f, 0.0f, -10.0f},
-			  Vec3 gazing_point = {0.0f, 0.0f, 0.0f}, 
-			  Vec3 up = {0.0f, 1.0f, 0.0f});
+	void Init(State* state, Vector3D position = {0.0f, 0.0f, -10.0f},
+			  Vector3D gazing_point = {0.0f, 0.0f, 0.0f}, 
+			  Vector3D up = {0.0f, 1.0f, 0.0f});
 
 	//----------------------------------------
 	//! @brief 初期化関数

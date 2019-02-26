@@ -218,7 +218,7 @@ void Physics::Reset()
 	friction_ = 0.0f;
 	bounciness_ = 0.0f;
 	is_on_tha_ground_ = false;
-	acceleration_.Reset();
+	acceleration_.Init();
 }
 
 
@@ -308,7 +308,7 @@ void Physics::CheckVelocityMinMax()
 	// ç≈è¨íl
 	if (velocity_.getLength() <= VELOCITY_MIN)
 	{
-		velocity_.Reset();
+		velocity_.Init();
 	}
 
 	// ç≈ëÂêÖïΩë¨ìx

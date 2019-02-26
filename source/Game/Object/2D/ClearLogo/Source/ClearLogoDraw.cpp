@@ -106,7 +106,7 @@ void ClearLogoDraw::Init()
 	clear_logo_->getpTransform()->getpPosition()->y = 0.0f;
 	clear_logo_->getpTransform()->getpScale()->x = texture_2->getWidth() * SCALE;
 	clear_logo_->getpTransform()->getpScale()->y = texture_2->getHeight() * SCALE;
-	clear_logo_->getpTransform()->CreateAxisAndWorldMatrix();
+	clear_logo_->getpTransform()->CreateWorldMatrix();
 }
 
 

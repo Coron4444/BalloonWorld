@@ -267,7 +267,7 @@ void NumbersPolygon::UpdateEachDigit(int number, int digits_num)
 
 		number_[i]->setNumber(temp_number);
 		number_[i]->setColor(color_);
-		*number_[i]->getpTransform()->getpPosition() = Vec3(position_.x + AmountOfShift, 
+		*number_[i]->getpTransform()->getpPosition() = Vec3(position_.x + AmountOfShift,
 															position_.y, 0.0f);
 		*number_[i]->getpTransform()->getpScale() = Vec3(scale_.x, scale_.y, 1.0f);
 		number_[i]->getpTransform()->CreateWorldMatrix();

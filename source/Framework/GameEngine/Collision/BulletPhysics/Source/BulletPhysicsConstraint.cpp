@@ -39,7 +39,7 @@ BulletPhysicsConstraint::Type BulletPhysicsConstraint::getType()
 //****************************************
 void BulletPhysicsConstraint::InitPointToPoint(btRigidBody* rigid_body0,
 											   btRigidBody* rigid_body1,
-											   Vec3* point0, Vec3* point1)
+											   Vector3D* point0, Vector3D* point1)
 {
 	constraint_ = new btPoint2PointConstraint(*rigid_body0, *rigid_body1,
 											  btVector3(point0->x, point0->y, point0->z),
@@ -49,8 +49,8 @@ void BulletPhysicsConstraint::InitPointToPoint(btRigidBody* rigid_body0,
 
 
 void BulletPhysicsConstraint::InitHinge(btRigidBody* rigid_body0, btRigidBody* rigid_body1,
-										Vec3* point0, Vec3* point1,
-										float angle_min, float angle_max, Vec3* axis)
+										Vector3D* point0, Vector3D* point1,
+										float angle_min, float angle_max, Vector3D* axis)
 {
 	constraint_ = new btHingeConstraint(*rigid_body0, *rigid_body1,
 										btVector3(point0->x, point0->y, point0->z),
@@ -64,10 +64,10 @@ void BulletPhysicsConstraint::InitHinge(btRigidBody* rigid_body0, btRigidBody* r
 
 
 void BulletPhysicsConstraint::InitUniversal(btRigidBody* rigid_body0,
-											btRigidBody* rigid_body1, Vec3* anchor,
+											btRigidBody* rigid_body1, Vector3D* anchor,
 											float angle_min0, float angle_min1,
 											float angle_max0, float angle_max1,
-											Vec3* axis0, Vec3* axis1)
+											Vector3D* axis0, Vector3D* axis1)
 {
 	constraint_ = new btUniversalConstraint(*rigid_body0, *rigid_body1,
 											btVector3(anchor->x, anchor->y, anchor->z),

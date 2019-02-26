@@ -101,8 +101,8 @@ void Cylinder::Update()
 
 void Cylinder::CalculationMinAndMax()
 {
-	Vec3 max;
-	Vec3 min;
+	Vector3D max;
+	Vector3D min;
 
 	// XYç¿ïW
 	Axis axis;

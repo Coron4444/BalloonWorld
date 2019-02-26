@@ -62,7 +62,7 @@ public:
 	//! @param value À•W
 	//! @retval void ‚È‚µ
 	//----------------------------------------
-	void setPosition(Vec3 value);
+	void setPosition(Vector3D value);
 
 	//----------------------------------------
 	//! @brief •—‘DŒQæ“¾ŠÖ”

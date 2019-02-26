@@ -238,17 +238,17 @@ void OBB::RotationAxisRight(float radian)
 
 
 
-void OBB::RotationAxisAny(Vec3 axis, float radian)
+void OBB::RotationAxisAny(Vector3D axis, float radian)
 {
 	axis_.RotationAxisAny(axis, radian);
 }
 
 
 
-void OBB::RotationMatrix(MATRIX* rotation_matrix)
+void OBB::RotationMatrix(Matrix* matrix)
 {
 	axis_.Reset();
-	axis_.RotationMatrix(rotation_matrix);
+	axis_.RotationMatrix(matrix);
 }
 
 
@@ -262,7 +262,7 @@ void OBB::RotationQuaternion(Quaternion* quaternion)
 
 void OBB::CalculationMinAndMax()
 {
-	Vec3 point[MAX_POINT_NUM];
+	Vector3D point[MAX_POINT_NUM];
 	point[0] = position_ + getRightLengthVectorHalf() + getUpLengthVectorHalf() + getForwardLengthVectorHalf();
 	point[1] = position_ + getRightLengthVectorHalf() + getUpLengthVectorHalf() + -getForwardLengthVectorHalf();
 	point[2] = position_ + -getRightLengthVectorHalf() + getUpLengthVectorHalf() + getForwardLengthVectorHalf();
@@ -272,8 +272,8 @@ void OBB::CalculationMinAndMax()
 	point[6] = position_ + -getRightLengthVectorHalf() + -getUpLengthVectorHalf() + getForwardLengthVectorHalf();
 	point[7] = position_ + -getRightLengthVectorHalf() + -getUpLengthVectorHalf() + -getForwardLengthVectorHalf();
 
-	Vec3 max = point[0];
-	Vec3 min = point[0];
+	Vector3D max = point[0];
+	Vector3D min = point[0];
 	for (int i = 0; i < MAX_POINT_NUM; i++)
 	{
 		if (max.x < point[i].x) max.x = point[i].x;

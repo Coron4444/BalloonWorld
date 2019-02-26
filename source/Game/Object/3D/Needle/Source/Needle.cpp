@@ -39,7 +39,7 @@ void Needle::State::setNeedle(Needle* value)
 
 
 
-void Needle::setPosition(Vec3 value)
+void Needle::setPosition(Vector3D value)
 {
 	*getpTransform()->getpPosition() = value;
 	getpTransform()->CreateWorldMatrix();

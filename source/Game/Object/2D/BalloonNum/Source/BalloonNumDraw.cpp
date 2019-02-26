@@ -108,7 +108,7 @@ void BalloonNumDraw::Init()
 	float scale = 0.7f;
 	balloon_num_->getpTransform()->getpScale()->x = texture_2->getWidth() * scale;
 	balloon_num_->getpTransform()->getpScale()->y = texture_2->getHeight() * scale;
-	balloon_num_->getpTransform()->CreateAxisAndWorldMatrix();
+	balloon_num_->getpTransform()->CreateWorldMatrix();
 }
 
 

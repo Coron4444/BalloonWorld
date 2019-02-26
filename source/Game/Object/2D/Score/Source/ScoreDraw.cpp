@@ -107,7 +107,7 @@ void ScoreDraw::Init()
 	float scale = 0.7f;
 	score_->getpTransform()->getpScale()->x = texture_2->getWidth() * scale;
 	score_->getpTransform()->getpScale()->y = texture_2->getHeight() * scale;
-	score_->getpTransform()->CreateAxisAndWorldMatrix();
+	score_->getpTransform()->CreateWorldMatrix();
 }
 
 

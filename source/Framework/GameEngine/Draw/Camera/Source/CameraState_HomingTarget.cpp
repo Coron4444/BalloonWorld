@@ -22,7 +22,7 @@
 //****************************************
 // íËêîíËã`
 //****************************************
-const Vec3 CameraState_HomingTarget::DEFAULT_LENGHT(0.0f, 20.0f, -10.0f);
+const Vector3D CameraState_HomingTarget::DEFAULT_LENGHT(0.0f, 20.0f, -10.0f);
 const float CameraState_HomingTarget::GAZING_POINT_Y = -5.0f;
 const float CameraState_HomingTarget::DEFAULT_ROTATION_SPEED
 = MeterToFrame::MeterPerSecondToMeterPerFlame(90.0f);
@@ -47,7 +47,7 @@ void CameraState_HomingTarget::setTargetObject(GameObjectBase* value)
 
 
 
-void CameraState_HomingTarget::setLength(Vec3 value)
+void CameraState_HomingTarget::setLength(Vector3D value)
 {
 	lenght_ = value;
 }

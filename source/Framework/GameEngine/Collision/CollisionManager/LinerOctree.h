@@ -45,10 +45,10 @@ public:
 private:
 	unsigned power_of_eight_array_[MAX_LEVEL + 1] = {0};	//!< ８のべき乗数値配列
 	SpaceOfTree<Type>** space_pointer_array_ = nullptr;		//!< 各空間ポインタ配列
-	Vec3 octree_width_ = {1.0f, 1.0f, 1.0f};				//!< 8分木の幅
-	Vec3 octree_width_min_ = {0.0f, 0.0f, 0.0f};			//!< 8分木の幅の最小値
-	Vec3 octree_width_max_ = {1.0f, 1.0f, 1.0f};			//!< 8分木の幅の最大値
-	Vec3 octree_unit_length_ = {1.0f, 1.0f, 1.0f};			//!< 8分木の単位長さ
+	Vector3D octree_width_ = {1.0f, 1.0f, 1.0f};				//!< 8分木の幅
+	Vector3D octree_width_min_ = {0.0f, 0.0f, 0.0f};			//!< 8分木の幅の最小値
+	Vector3D octree_width_max_ = {1.0f, 1.0f, 1.0f};			//!< 8分木の幅の最大値
+	Vector3D octree_unit_length_ = {1.0f, 1.0f, 1.0f};			//!< 8分木の単位長さ
 	DWORD all_space_num_ = 0;								//!< 空間数
 	unsigned  lowest_level_ = 0;							//!< 最下位レベル(一番末端のLevel数)
 
@@ -65,7 +65,7 @@ public:
 	//! @param octree_width_max 8分木の幅の最大値
 	//! @retval void なし
 	//----------------------------------------
-	void Init(unsigned lowest_level, Vec3 octree_width_min, Vec3 octree_width_max)
+	void Init(unsigned lowest_level, Vector3D octree_width_min, Vector3D octree_width_max)
 	{
 		// 最下位レベルの確認
 		if (lowest_level > MAX_LEVEL)
@@ -144,7 +144,7 @@ public:
 	//! @param object_max 追加したいオブジェクトの最大値
 	//! @retval void なし
 	//----------------------------------------
-	void Add(ObjectOfTree<Type>* object, const Vec3* object_min, const Vec3* object_max)
+	void Add(ObjectOfTree<Type>* object, const Vector3D* object_min, const Vector3D* object_max)
 	{
 		// オブジェクトの所属空間の配列インデックスの取得
 		DWORD array_index = GetArrayIndexOfBelonginSpace(object_min, object_max);
@@ -184,7 +184,7 @@ private:
 	//! @param *position モートン番号を取得したい座標
 	//! @retval DWORD 算出した3Dモートン空間番号
 	//----------------------------------------
-	DWORD GetMortonNumber(const Vec3* position)
+	DWORD GetMortonNumber(const Vector3D* position)
 	{
 		// 最下位レベル空間での座標へ変換
 		DWORD temp_x = (DWORD)((position->x - octree_width_min_.x) / octree_unit_length_.x);
@@ -207,7 +207,7 @@ private:
 	//! @param *object_max 所属空間の配列インデックスを取得したいオブジェクトの最大値
 	//! @retval DWORD 所属空間の配列番号
 	//----------------------------------------
-	DWORD GetArrayIndexOfBelonginSpace(const Vec3* object_min, const Vec3* object_max)
+	DWORD GetArrayIndexOfBelonginSpace(const Vector3D* object_min, const Vector3D* object_max)
 	{
 		// 最小値と最大値のモートン番号のXORを算出
 		DWORD converted_min = GetMortonNumber(object_min);

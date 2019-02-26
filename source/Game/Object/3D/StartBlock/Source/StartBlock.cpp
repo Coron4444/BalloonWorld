@@ -16,7 +16,7 @@
 //****************************************
 // プロパティ定義
 //****************************************
-const Vec3 StartBlock::SCALE(15.0f, 5.0f, 15.0f);
+const Vector3D StartBlock::SCALE(15.0f, 5.0f, 15.0f);
 const float StartBlock::ROTATION_SPEED = 0.01f;
 
 
@@ -24,7 +24,7 @@ const float StartBlock::ROTATION_SPEED = 0.01f;
 //****************************************
 // プロパティ定義
 //****************************************
-void StartBlock::setPosition(Vec3 value)
+void StartBlock::setPosition(Vector3D value)
 {
 	*getpTransform()->getpPosition() = value;
 	getpTransform()->CreateWorldMatrix();
@@ -39,7 +39,7 @@ void StartBlock::Init(DrawBase* draw, CollisionBase* collision)
 {
 	// 変形
 	*getpTransform()->getpScale() = SCALE;
-	getpTransform()->CreateAxisAndWorldMatrix();
+	getpTransform()->CreateWorldMatrix();
 
 	// 基底クラスの初期化
 	GameObjectBase::Init(draw, collision);
@@ -51,5 +51,5 @@ void StartBlock::Update()
 {
 	// 変形
 	*getpTransform()->getpAngleYaw() += ROTATION_SPEED;
-	getpTransform()->CreateAxisAndWorldMatrix();
+	getpTransform()->CreateWorldMatrix();
 }

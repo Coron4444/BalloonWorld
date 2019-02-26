@@ -34,7 +34,7 @@ public:
 	//! @param position    À•W
 	//! @retval BalloonGroup* •—‘DŒQ
 	//----------------------------------------
-	BalloonGroup* Create(unsigned balloon_num, Vec3 position);
+	BalloonGroup* Create(unsigned balloon_num, Vector3D position);
 };
 
 

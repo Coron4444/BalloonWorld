@@ -91,7 +91,7 @@ void VertexShaderBumpMapping::ObjectSetting(DrawBase* draw, Camera* camera,
 	D3DXMatrixIdentity(&math_matrix_);
 	D3DXMatrixInverse(&math_matrix_, nullptr, draw->getpMatrix(object_index));
 	D3DXVec4Transform(&light_position, &light_position, &math_matrix_);
-	D3DXVec3Normalize((Vec3*)&light_position, (Vec3*)&light_position);
+	D3DXVec3Normalize((Vector3D*)&light_position, (Vector3D*)&light_position);
 	light_position.w = -0.7f;		// ŠÂ‹«Œõ‚Ì”ä—¦
 	getpConstantTable()->SetVector(getpDevice(),
 								   "LAMBERT_DIFFUSE_LIGHT_VECTOR",

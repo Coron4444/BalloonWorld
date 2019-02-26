@@ -18,7 +18,7 @@
 //****************************************
 // íËêîíËã`
 //****************************************
-const Vec3 EnemyCollision::MAIN_OBB_LENGTH(1.0f, 1.0f, 1.0f);
+const Vector3D EnemyCollision::MAIN_OBB_LENGTH(1.0f, 1.0f, 1.0f);
 
 
 

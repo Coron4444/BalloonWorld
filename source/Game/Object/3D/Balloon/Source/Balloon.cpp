@@ -20,7 +20,7 @@
 //****************************************
 // 定数定義
 //****************************************
-const Vec3 Balloon::OBB_EDGE_LENGTH_HALF(0.02f, 0.1f, 0.02f);
+const Vector3D Balloon::OBB_EDGE_LENGTH_HALF(0.02f, 0.1f, 0.02f);
 const float Balloon::SPHERE_RADIUS = 1.0f;
 const float Balloon::RISING_SPEED
 = MeterToFrame::MeterPerSecondSquaredToMeterPerFrameSquared(1000000.0f);
@@ -59,14 +59,14 @@ BulletPhysicsConstraint* Balloon::getpObjectConstraint(unsigned index)
 
 
 
-Vec3 Balloon::getPosition()
+Vector3D Balloon::getPosition()
 {
 	return all_object_[0]->getPosition();
 }
 
 
 
-void Balloon::setPosition(Vec3 value)
+void Balloon::setPosition(Vector3D value)
 {
 	all_object_[0]->setPosition(value);
 }
@@ -76,7 +76,7 @@ void Balloon::setPosition(Vec3 value)
 //****************************************
 // 関数定義
 //****************************************
-void Balloon::Init(DrawBase* draw, unsigned balloon_line_num, Vec3 position)
+void Balloon::Init(DrawBase* draw, unsigned balloon_line_num, Vector3D position)
 {
 	// バレットオブジェクト初期化
 	InitBulletPhysicsObject(balloon_line_num, position);
@@ -91,8 +91,8 @@ void Balloon::Update()
 {
 	// 上昇
 	getpObject(getAllObjectNum() - 1)->getpRigidBody()->activate();
-	getpObject(getAllObjectNum() - 1)->AddAcceleration(Vec3(0.0f, RISING_SPEED, 0.0f),
-													   Vec3(0.0f, 1.0f, 0.0f));
+	getpObject(getAllObjectNum() - 1)->AddAcceleration(Vector3D(0.0f, RISING_SPEED, 0.0f),
+													   Vector3D(0.0f, 1.0f, 0.0f));
 }
 
 
@@ -112,7 +112,7 @@ void Balloon::ReleaseBaseConstraint()
 
 
 
-void Balloon::AddVelocity(Vec3 velocity)
+void Balloon::AddVelocity(Vector3D velocity)
 {
 	all_object_[getAllObjectNum() - 1]->getpRigidBody()->activate();
 	all_object_[getAllObjectNum() - 1]->AddVelocity(velocity);
@@ -120,7 +120,7 @@ void Balloon::AddVelocity(Vec3 velocity)
 
 
 
-void Balloon::AddAcceleration(Vec3 acceleration)
+void Balloon::AddAcceleration(Vector3D acceleration)
 {
 	all_object_[getAllObjectNum() - 1]->getpRigidBody()->activate();
 	all_object_[getAllObjectNum() - 1]->AddAcceleration(acceleration);
@@ -128,7 +128,7 @@ void Balloon::AddAcceleration(Vec3 acceleration)
 
 
 
-void Balloon::InitBulletPhysicsObject(unsigned balloon_line_num, Vec3 position)
+void Balloon::InitBulletPhysicsObject(unsigned balloon_line_num, Vector3D position)
 {
 	// バレットオブジェクト数確定
 	all_object_.resize(balloon_line_num);
@@ -136,9 +136,9 @@ void Balloon::InitBulletPhysicsObject(unsigned balloon_line_num, Vec3 position)
 
 	// 紐の生成
 	float mass = 1.0f;
-	Vec3 inertia(0.0f, 0.0f, 0.0f);
+	Vector3D inertia(0.0f, 0.0f, 0.0f);
 	Quaternion quaternion(0.0f, 0.0f, 0.0f, 1.0f);
-	Vec3 temp_position = position;
+	Vector3D temp_position = position;
 	for (int i = 0; i < getAllObjectNum() - 1; i++)
 	{
 		temp_position.y = position.y + OBB_EDGE_LENGTH_HALF.y * 2 * i;
@@ -183,16 +183,16 @@ void Balloon::InitBulletPhysicsObject(unsigned balloon_line_num, Vec3 position)
 		{
 			object_constraint_[i] = BulletPhysicsManager::getpInstance()
 				->setConstraintHinge(all_object_[i], all_object_[i + 1],
-									 Vec3(0.0f, OBB_EDGE_LENGTH_HALF.y, 0.0f),
-									 Vec3(0.0f, -SPHERE_RADIUS, 0.0f),
+									 Vector3D(0.0f, OBB_EDGE_LENGTH_HALF.y, 0.0f),
+									 Vector3D(0.0f, -SPHERE_RADIUS, 0.0f),
 									 -min_max, min_max);
 		}
 		else
 		{
 			object_constraint_[i] = BulletPhysicsManager::getpInstance()
 				->setConstraintHinge(all_object_[i], all_object_[i + 1],
-									 Vec3(0.0f, OBB_EDGE_LENGTH_HALF.y, 0.0f),
-									 Vec3(0.0f, -OBB_EDGE_LENGTH_HALF.y, 0.0f),
+									 Vector3D(0.0f, OBB_EDGE_LENGTH_HALF.y, 0.0f),
+									 Vector3D(0.0f, -OBB_EDGE_LENGTH_HALF.y, 0.0f),
 									 -min_max2, min_max2);
 		}
 	}

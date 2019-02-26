@@ -17,7 +17,7 @@
 //****************************************
 // ŠÖ”’è‹`
 //****************************************
-Balloon* BalloonFactory::Create(unsigned balloon_line_num, Vec3 position)
+Balloon* BalloonFactory::Create(unsigned balloon_line_num, Vector3D position)
 {
 	Balloon* temp = new Balloon();
 	temp->Init(new BalloonDraw(), balloon_line_num, position);

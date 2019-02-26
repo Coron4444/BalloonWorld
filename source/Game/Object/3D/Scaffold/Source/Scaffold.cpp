@@ -22,7 +22,7 @@
 //****************************************
 // プロパティ定義
 //****************************************
-void Scaffold::setPosition(Vec3 value)
+void Scaffold::setPosition(Vector3D value)
 {
 	*getpTransform()->getpPosition() = value;
 	getpTransform()->CreateWorldMatrix();
@@ -30,7 +30,7 @@ void Scaffold::setPosition(Vec3 value)
 
 
 
-void Scaffold::setScale(Vec3 value)
+void Scaffold::setScale(Vector3D value)
 {
 	*getpTransform()->getpScale() = value;
 	getpTransform()->CreateWorldMatrix();

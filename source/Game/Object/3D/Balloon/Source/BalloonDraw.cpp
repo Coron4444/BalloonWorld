@@ -141,7 +141,7 @@ void BalloonDraw::Update()
 		object_transform_[i].ResetAddQuaternion();
 		object_transform_[i].setAddQuaternion(balloon_->getpObject(i)
 											  ->getQuaternion());
-		object_transform_[i].CreateAxisAndWorldMatrix();
+		object_transform_[i].CreateWorldMatrix();
 	}
 }
 

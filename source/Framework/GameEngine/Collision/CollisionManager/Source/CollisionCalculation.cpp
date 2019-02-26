@@ -332,7 +332,7 @@ bool CollisionCalculation::CollisionJudgmentOfSphereAndCapsule(CollisionInformat
 															   Capsule* capsule)
 {
 	// 球の中心とカプセルとの距離を算出
-	Vec3  intersection_point;
+	Vector3D  intersection_point;
 	float ratio;
 	float length = CalculateTheShortestDistanceBetweenPointsAndLineSegments(&intersection_point,
 																			&ratio,
@@ -705,7 +705,7 @@ bool CollisionCalculation::DetermineWhetherASphereCollidesAgainstEachSide(Sphere
 																		  Triangle* triangle)
 {
 	// 1つめの辺
-	Vec3 temp_vector = *triangle->getpPoint(1) - *triangle->getpPoint(0);
+	Vector3D temp_vector = *triangle->getpPoint(1) - *triangle->getpPoint(0);
 	LineSegment temp_line_segment;
 	temp_line_segment.Init(*triangle->getpPoint(0), temp_vector);
 
@@ -740,7 +740,7 @@ bool CollisionCalculation::DetermineWhetherASphereCollidesAgainstEachSide(Sphere
 bool CollisionCalculation::DetermineWhetherTheSphereIsSinkingInside(Sphere* sphere,
 																	Triangle* triangle)
 {
-	Vec3 temp_vector = *triangle->getpPlane()->getpNormal() * -1;
+	Vector3D temp_vector = *triangle->getpPlane()->getpNormal() * -1;
 	LineSegment temp_line_segment;
 	temp_line_segment.Init(*sphere->getpPosition(), temp_vector);
 
@@ -1167,7 +1167,7 @@ void CollisionCalculation::Clamp0_1(float* ratio)
 
 
 
-float CollisionCalculation::CalculateTheShortestDistanceBetweenPointsAndLine(Vec3* intersection_point,
+float CollisionCalculation::CalculateTheShortestDistanceBetweenPointsAndLine(Vector3D* intersection_point,
 																			 float* ratio,
 																			 Vector3D* point,
 																			 LineSegment* line)
@@ -1198,13 +1198,13 @@ float CollisionCalculation::CalculateTheShortestDistanceBetweenPointsAndLine(Vec
 
 
 
-float CollisionCalculation::CalculateTheShortestDistanceBetweenPointsAndLineSegments(Vec3* intersection_point,
+float CollisionCalculation::CalculateTheShortestDistanceBetweenPointsAndLineSegments(Vector3D* intersection_point,
 																					 float* ratio,
 																					 Vector3D* point,
 																					 LineSegment* line_segment)
 {
 	// 線分の末端を保存
-	Vec3 segment_position1 = line_segment->getAddVectorToPosition();
+	Vector3D segment_position1 = line_segment->getAddVectorToPosition();
 
 	// 直線と点の最短距離を算出
 	float length = CalculateTheShortestDistanceBetweenPointsAndLine(intersection_point, ratio, point, line_segment);
@@ -1236,8 +1236,8 @@ float CollisionCalculation::CalculateTheShortestDistanceBetweenPointsAndLineSegm
 
 
 
-float CollisionCalculation::CalculateTheShortestDistanceBetweenLineAndLine(Vec3* intersection_point0,
-																		   Vec3* intersection_point1,
+float CollisionCalculation::CalculateTheShortestDistanceBetweenLineAndLine(Vector3D* intersection_point0,
+																		   Vector3D* intersection_point1,
 																		   float* ratio0,
 																		   float* ratio1,
 																		   LineSegment* line0,
@@ -1285,8 +1285,8 @@ float CollisionCalculation::CalculateTheShortestDistanceBetweenLineAndLine(Vec3*
 
 
 
-float CollisionCalculation::CalculateTheShortestDistanceBetweenLineSegmentAndLineSegment(Vec3* intersection_point0,
-																						 Vec3* intersection_point1,
+float CollisionCalculation::CalculateTheShortestDistanceBetweenLineSegmentAndLineSegment(Vector3D* intersection_point0,
+																						 Vector3D* intersection_point1,
 																						 float* ratio0,
 																						 float* ratio1,
 																						 LineSegment* line_segment0,
@@ -1461,12 +1461,12 @@ Vector3D CollisionCalculation::CalculateOfNormalFromCollisionPointOfOBB(OBB* obb
 	if (IsThePointOnTheFrontSideOfThePlane(obb->getpPlaneInverseForward(),
 										   collision_point)) return -(*obb->getpForward());
 
-	return Vec3(0.0f, 0.0f, 0.0f);
+	return Vector3D(0.0f, 0.0f, 0.0f);
 }
 
 
 
-float CollisionCalculation::CalculateTheShortestDistanceBetweenPlaneAndPoint(Plane* plane, Vec3* point)
+float CollisionCalculation::CalculateTheShortestDistanceBetweenPlaneAndPoint(Plane* plane, Vector3D* point)
 {
 	float shortest_distance = (plane->getpNormal()->x * point->x) 
 		+ (plane->getpNormal()->y * point->y)
@@ -1478,7 +1478,7 @@ float CollisionCalculation::CalculateTheShortestDistanceBetweenPlaneAndPoint(Pla
 
 
 
-bool CollisionCalculation::IsThePointOnTheFrontSideOfThePlane(Plane* plane, Vec3* point)
+bool CollisionCalculation::IsThePointOnTheFrontSideOfThePlane(Plane* plane, Vector3D* point)
 {
 	if (CalculateTheShortestDistanceBetweenPlaneAndPoint(plane, point) < 0.0f) return false;
 	return true;
@@ -1486,7 +1486,7 @@ bool CollisionCalculation::IsThePointOnTheFrontSideOfThePlane(Plane* plane, Vec3
 
 
 
-bool CollisionCalculation::IsPointsAreIncludedInThePlane(Triangle* triangle, Vec3* point)
+bool CollisionCalculation::IsPointsAreIncludedInThePlane(Triangle* triangle, Vector3D* point)
 {
 	// 任意の点から各頂点へのベクトルを算出
 	Vector3D vector0 = *triangle->getpPoint(0) - *point;
@@ -1574,7 +1574,8 @@ bool CollisionCalculation::IsPointsAreIncludedInThePlane(Triangle* triangle, Vec
 
 
 
-bool CollisionCalculation::IsObtuseAnglePoint3(Vec3* point0, Vec3* point1, Vec3* point2)
+bool CollisionCalculation::IsObtuseAnglePoint3(Vector3D* point0, Vector3D* point1, 
+											   Vector3D* point2)
 {
 	return Vector3D::CreateDotPoint3(point0, point1, point2) <= 0.0f;
 }

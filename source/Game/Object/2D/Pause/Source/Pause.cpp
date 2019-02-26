@@ -28,7 +28,7 @@ const float Pause::ICON_SCALE = 0.3f;
 const float Pause::TOP_ICON_POSITION_Y = 40.0f;
 const float Pause::BOTTOM_ICON_POSITION_Y = -200.0f;
 const float Pause::ADD_ICON_POSITION_Y = 120.0f;
-const Vec3 Pause::DEFAULT_ICON_POSITION(-150.0f, TOP_ICON_POSITION_Y, 0.0f);
+const Vector3D Pause::DEFAULT_ICON_POSITION(-150.0f, TOP_ICON_POSITION_Y, 0.0f);
 const float Pause::BLINKING_SECOND = 0.3f;
 const int Pause::BLINKING_NUM = 8;
 const XColor4 Pause::CHARACTER_COLOR0(1.0f, 1.0f, 1.0f, 1.0f);
@@ -56,7 +56,7 @@ void Pause::setIsEnable(bool value)
 		getpDraw()->setIsEnable(true);
 		select_type_ = SelectType::NONE;
 		*icon_transform_.getpPosition() = DEFAULT_ICON_POSITION;
-		icon_transform_.CreateAxisAndWorldMatrix();
+		icon_transform_.CreateWorldMatrix();
 		inter_container_[0].clear();
 		inter_container_[1].clear();
 		inter_container_[2].clear();
@@ -118,13 +118,13 @@ XColor4 Pause::getCharacterColor(int index)
 void Pause::Init(DrawBase* draw)
 {
 	// 変形
-	*getpTransform()->getpScale() = Vec3(FRAME_SCALE, FRAME_SCALE, 1.0f);
-	getpTransform()->CreateAxisAndWorldMatrix();
+	*getpTransform()->getpScale() = Vector3D(FRAME_SCALE, FRAME_SCALE, 1.0f);
+	getpTransform()->CreateWorldMatrix();
 
 	// アイコン変形
-	*icon_transform_.getpScale() = Vec3(ICON_SCALE, ICON_SCALE, 1.0f);
+	*icon_transform_.getpScale() = Vector3D(ICON_SCALE, ICON_SCALE, 1.0f);
 	*icon_transform_.getpPosition() = DEFAULT_ICON_POSITION;
-	icon_transform_.CreateAxisAndWorldMatrix();
+	icon_transform_.CreateWorldMatrix();
 
 	// 基底クラスの初期化
 	GameObjectBase::Init(draw, nullptr);
@@ -135,7 +135,7 @@ void Pause::Init(DrawBase* draw)
 void Pause::Update()
 {
 	Input();
-	icon_transform_.CreateAxisAndWorldMatrix();
+	icon_transform_.CreateWorldMatrix();
 	//icon_transform_.AddParentMatrixToWorldMatrix(getpTransform()->getpWorldMatrix());
 
 	switch (select_type_)

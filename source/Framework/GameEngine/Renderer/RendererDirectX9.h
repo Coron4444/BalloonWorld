@@ -43,10 +43,10 @@ public:
 	// 変数
 	//====================
 	public:
-		Vec3   posisiont_;	//!< 座標
-		Vec3   normal_;		//!< 法線
+		Vec3 posisiont_;	//!< 座標
+		Vec3 normal_;		//!< 法線
 		Color4 color_;		//!< カラー
-		Vec2   texcoord_;	//!< テクスチャ座標
+		Vec2 texcoord_;		//!< テクスチャ座標
 	};
 
 

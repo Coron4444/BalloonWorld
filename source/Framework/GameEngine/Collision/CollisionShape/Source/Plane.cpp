@@ -55,10 +55,10 @@ void Plane::Init(Vector3D normal, Vector3D point)
 
 
 
-void Plane::Init(Vec3 point0, Vec3 point1, Vec3 point2)
+void Plane::Init(Vector3D point0, Vector3D point1, Vector3D point2)
 {
 	// ñ@ê¸ÇÃçÏê¨
-	Vec3 temp_normal_vector = Vector3D::CreateCrossPoint3(&point0, &point1, &point2);
+	Vector3D temp_normal_vector = Vector3D::CreateCrossPoint3(&point0, &point1, &point2);
 
 	// èâä˙âª
 	Init(temp_normal_vector, point0);

@@ -46,14 +46,14 @@ int BalloonGroup::getRemainingBalloonNum()
 
 
 
-Vec3 BalloonGroup::getPosition()
+Vector3D BalloonGroup::getPosition()
 {
 	return *getpTransform()->getpPosition();
 }
 
 
 
-void BalloonGroup::setPosition(Vec3 value)
+void BalloonGroup::setPosition(Vector3D value)
 {
 	*getpTransform()->getpPosition() = value;
 	for (int i = 0; i < end_index_ + 1; i++)
@@ -67,7 +67,7 @@ void BalloonGroup::setPosition(Vec3 value)
 //****************************************
 // ŠÖ”’è‹`
 //****************************************
-void BalloonGroup::Init(unsigned balloon_num, Vec3 position)
+void BalloonGroup::Init(unsigned balloon_num, Vector3D position)
 {
 	// ŽQÆƒŠƒXƒg‚ÖŽ©•ª‚ð“o˜^
 	reference_list_.setObject(this);
@@ -106,7 +106,7 @@ void BalloonGroup::ReleaseConstraint()
 
 
 
-void BalloonGroup::AddVelocity(Vec3 velocity)
+void BalloonGroup::AddVelocity(Vector3D velocity)
 {
 	for (int i = 0; i < end_index_ + 1; i++)
 	{
@@ -116,7 +116,7 @@ void BalloonGroup::AddVelocity(Vec3 velocity)
 
 
 
-void BalloonGroup::AddAcceleration(Vec3 acceleration)
+void BalloonGroup::AddAcceleration(Vector3D acceleration)
 {
 	for (int i = 0; i < end_index_ + 1; i++)
 	{

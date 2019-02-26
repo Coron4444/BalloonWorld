@@ -46,7 +46,7 @@ public:
 // ’è”
 //====================
 private:
-	static const Vec3 MAIN_OBB_LENGTH;		//!< ƒƒCƒ“OBB’·‚³
+	static const Vector3D MAIN_OBB_LENGTH;		//!< ƒƒCƒ“OBB’·‚³
 
 
 //====================

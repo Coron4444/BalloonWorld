@@ -95,9 +95,9 @@ public:
 	//! @brief 座標取得関数
 	//! @details
 	//! @param void なし
-	//! @retval Vec3 座標
+	//! @retval Vector3D 座標
 	//----------------------------------------
-	Vec3 getPosition();
+	Vector3D getPosition();
 
 	//----------------------------------------
 	//! @brief 座標設定関数
@@ -105,7 +105,7 @@ public:
 	//! @param value 座標
 	//! @retval void なし
 	//----------------------------------------
-	void setPosition(Vec3 value);
+	void setPosition(Vector3D value);
 
 	//----------------------------------------
 	//! @brief クォータニオン取得関数
@@ -138,7 +138,7 @@ public:
 	//! @param radius      半径
 	//! @retval void なし
 	//----------------------------------------
-	void InitSphere(float mass, Vec3* inertia, Vec3* position,
+	void InitSphere(float mass, Vector3D* inertia, Vector3D* position,
 					Quaternion* quaternion, float radius);
 
 	//----------------------------------------
@@ -151,8 +151,8 @@ public:
 	//! @param *edge_half_length 辺の半分の長さ
 	//! @retval void なし
 	//----------------------------------------
-	void InitOBB(float mass, Vec3* inertia, Vec3* position,
-				 Quaternion* quaternion, Vec3* edge_half_length);
+	void InitOBB(float mass, Vector3D* inertia, Vector3D* position,
+				 Quaternion* quaternion, Vector3D* edge_half_length);
 
 	//----------------------------------------
 	//! @brief 球初期化関数
@@ -165,7 +165,7 @@ public:
 	//! @param height      高さ
 	//! @retval void なし
 	//----------------------------------------
-	void InitCapsule(float mass, Vec3* inertia, Vec3* position,
+	void InitCapsule(float mass, Vector3D* inertia, Vector3D* position,
 					 Quaternion* quaternion, float radius, float height);
 
 	//----------------------------------------
@@ -199,7 +199,7 @@ public:
 	//! @param power_point 力点
 	//! @retval void なし
 	//----------------------------------------
-	void AddVelocity(Vec3 velocity, Vec3 power_point = {0.0f, 0.0f, 0.0f});
+	void AddVelocity(Vector3D velocity, Vector3D power_point = {0.0f, 0.0f, 0.0f});
 
 	//----------------------------------------
 	//! @brief 加速度追加関数
@@ -208,7 +208,7 @@ public:
 	//! @param power_point  力点
 	//! @retval void なし
 	//----------------------------------------
-	void AddAcceleration(Vec3 acceleration, Vec3 power_point = {0.0f, 0.0f, 0.0f});
+	void AddAcceleration(Vector3D acceleration, Vector3D power_point = {0.0f, 0.0f, 0.0f});
 
 private:
 	//----------------------------------------
@@ -220,8 +220,8 @@ private:
 	//! @param *quaternion クォータニオン
 	//! @retval void なし
 	//----------------------------------------
-	void InitCommon(float mass, Vec3* inertia,
-					Vec3* position, Quaternion* quaternion);
+	void InitCommon(float mass, Vector3D* inertia,
+					Vector3D* position, Quaternion* quaternion);
 };
 
 

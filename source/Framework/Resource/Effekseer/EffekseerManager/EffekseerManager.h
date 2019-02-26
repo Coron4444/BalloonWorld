@@ -161,7 +161,8 @@ public:
 	//! @param camera_up       カメラの上ベクトル
 	//! @retval void なし
 	//----------------------------------------
-	void CreateViewMatrix(Vec3 camera_position, Vec3 look_at_point, Vec3 camera_up);
+	void CreateViewMatrix(Vector3D camera_position,
+						  Vector3D look_at_point, Vector3D camera_up);
 
 	//----------------------------------------
 	//! @brief プロジェクション行列生成関数
@@ -169,7 +170,7 @@ public:
 	//! @param angle_of_view_ 画角
 	//! @retval void なし
 	//----------------------------------------
-	void CreateProjectionMatrix(int angle_of_view_);
+	void CreateProjectionMatrix(float angle_of_view_);
 
 private:
 	//----------------------------------------

@@ -17,7 +17,7 @@
 //****************************************
 // íËêîíËã`
 //****************************************
-const Vec3 ScaffoldCollision::MAIN_OBB_LENGTH(1.0f, 1.0f, 1.0f);
+const Vector3D ScaffoldCollision::MAIN_OBB_LENGTH(1.0f, 1.0f, 1.0f);
 
 
 

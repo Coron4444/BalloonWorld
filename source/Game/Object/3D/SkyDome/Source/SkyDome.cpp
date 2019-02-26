@@ -28,5 +28,5 @@ void SkyDome::Init(DrawBase* draw)
 void SkyDome::Update()
 {
 	*getpTransform()->getpAngleYaw() += 0.0005f;
-	getpTransform()->CreateAxisAndWorldMatrix();
+	getpTransform()->CreateWorldMatrix();
 }

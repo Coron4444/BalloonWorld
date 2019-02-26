@@ -75,8 +75,8 @@ void BulletPhysicsManager::setDebug(bool value)
 
 
 
-BulletPhysicsObject* BulletPhysicsManager::getpObjectSphere(float mass, Vec3 inertia,
-															Vec3 position,
+BulletPhysicsObject* BulletPhysicsManager::getpObjectSphere(float mass, Vector3D inertia,
+															Vector3D position,
 															Quaternion quaternion,
 															float radius)
 {
@@ -91,10 +91,10 @@ BulletPhysicsObject* BulletPhysicsManager::getpObjectSphere(float mass, Vec3 ine
 
 
 
-BulletPhysicsObject* BulletPhysicsManager::getpObjectOBB(float mass, Vec3 inertia,
-														 Vec3 position,
+BulletPhysicsObject* BulletPhysicsManager::getpObjectOBB(float mass, Vector3D inertia,
+														 Vector3D position,
 														 Quaternion quaternion,
-														 Vec3 edge_half_length)
+														 Vector3D edge_half_length)
 {
 	// êVãKçÏê¨
 	BulletPhysicsObject* object = new BulletPhysicsObject();
@@ -107,7 +107,7 @@ BulletPhysicsObject* BulletPhysicsManager::getpObjectOBB(float mass, Vec3 inerti
 
 
 
-BulletPhysicsObject* BulletPhysicsManager::getpObjectCapsule(float mass, Vec3 inertia, Vec3 position,
+BulletPhysicsObject* BulletPhysicsManager::getpObjectCapsule(float mass, Vector3D inertia, Vector3D position,
 															 Quaternion quaternion, float radius, float height)
 {
 	// êVãKçÏê¨
@@ -123,7 +123,7 @@ BulletPhysicsObject* BulletPhysicsManager::getpObjectCapsule(float mass, Vec3 in
 
 BulletPhysicsConstraint* BulletPhysicsManager::setConstraintPointToPoint(BulletPhysicsObject* bullet_object0,
 																		 BulletPhysicsObject* bullet_object1,
-																		 Vec3 point0, Vec3 point1)
+																		 Vector3D point0, Vector3D point1)
 {
 	// êVãKçÏê¨
 	BulletPhysicsConstraint* constraint = new BulletPhysicsConstraint();
@@ -141,9 +141,9 @@ BulletPhysicsConstraint* BulletPhysicsManager::setConstraintPointToPoint(BulletP
 
 BulletPhysicsConstraint* BulletPhysicsManager::setConstraintHinge(BulletPhysicsObject* bullet_object0,
 																  BulletPhysicsObject* bullet_object1,
-																  Vec3 point0, Vec3 point1,
+																  Vector3D point0, Vector3D point1,
 																  float angle_min, float angle_max,
-																  Vec3 axis)
+																  Vector3D axis)
 {
 	// êVãKçÏê¨
 	BulletPhysicsConstraint* constraint = new BulletPhysicsConstraint();
@@ -161,10 +161,10 @@ BulletPhysicsConstraint* BulletPhysicsManager::setConstraintHinge(BulletPhysicsO
 
 BulletPhysicsConstraint* BulletPhysicsManager::setConstraintUniversal(BulletPhysicsObject* bullet_object0,
 																	  BulletPhysicsObject* bullet_object1,
-																	  Vec3 anchor,
+																	  Vector3D anchor,
 																	  float angle_min0, float angle_min1,
 																	  float angle_max0, float angle_max1,
-																	  Vec3 axis0, Vec3 axis1)
+																	  Vector3D axis0, Vector3D axis1)
 {
 	// êVãKçÏê¨
 	BulletPhysicsConstraint* constraint = new BulletPhysicsConstraint();

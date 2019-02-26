@@ -48,17 +48,17 @@ btRigidBody* BulletPhysicsObject::getpRigidBody()
 
 
 
-Vec3 BulletPhysicsObject::getPosition()
+Vector3D BulletPhysicsObject::getPosition()
 {
 	btTransform transform;
 	motion_state_->getWorldTransform(transform);
-	return Vec3(transform.getOrigin().getX(), transform.getOrigin().getY(),
+	return Vector3D(transform.getOrigin().getX(), transform.getOrigin().getY(),
 				transform.getOrigin().getZ());
 }
 
 
 
-void BulletPhysicsObject::setPosition(Vec3 value)
+void BulletPhysicsObject::setPosition(Vector3D value)
 {
 	btTransform transform;
 	motion_state_->getWorldTransform(transform);
@@ -90,7 +90,7 @@ void BulletPhysicsObject::setKinematic()
 //****************************************
 // 関数定義
 //****************************************
-void BulletPhysicsObject::InitSphere(float mass, Vec3* inertia, Vec3* position,
+void BulletPhysicsObject::InitSphere(float mass, Vector3D* inertia, Vector3D* position,
 									 Quaternion* quaternion, float radius)
 {
 	type_ = BulletPhysicsObject::Type::SPHERE;
@@ -102,8 +102,8 @@ void BulletPhysicsObject::InitSphere(float mass, Vec3* inertia, Vec3* position,
 
 
 
-void BulletPhysicsObject::InitOBB(float mass, Vec3* inertia, Vec3* position,
-								  Quaternion* quaternion, Vec3* edge_half_length)
+void BulletPhysicsObject::InitOBB(float mass, Vector3D* inertia, Vector3D* position,
+								  Quaternion* quaternion, Vector3D* edge_half_length)
 {
 	type_ = BulletPhysicsObject::Type::OBB;
 	collision_shape_ = new btBoxShape(btVector3(edge_half_length->x,
@@ -116,7 +116,7 @@ void BulletPhysicsObject::InitOBB(float mass, Vec3* inertia, Vec3* position,
 
 
 
-void BulletPhysicsObject::InitCapsule(float mass, Vec3* inertia, Vec3* position,
+void BulletPhysicsObject::InitCapsule(float mass, Vector3D* inertia, Vector3D* position,
 									  Quaternion* quaternion, float radius, float height)
 {
 	type_ = BulletPhysicsObject::Type::CAPSULE;
@@ -157,7 +157,7 @@ void BulletPhysicsObject::AddReferenceCounter()
 
 
 
-void BulletPhysicsObject::AddVelocity(Vec3 velocity, Vec3 power_point)
+void BulletPhysicsObject::AddVelocity(Vector3D velocity, Vector3D power_point)
 {
 	rigid_body_->applyImpulse(btVector3(velocity.x, velocity.y, velocity.z),
 							  btVector3(power_point.x, power_point.y, power_point.z));
@@ -165,7 +165,7 @@ void BulletPhysicsObject::AddVelocity(Vec3 velocity, Vec3 power_point)
 
 
 
-void BulletPhysicsObject::AddAcceleration(Vec3 acceleration, Vec3 power_point)
+void BulletPhysicsObject::AddAcceleration(Vector3D acceleration, Vector3D power_point)
 {
 	rigid_body_->applyForce(btVector3(acceleration.x, acceleration.y, acceleration.z),
 							btVector3(power_point.x, power_point.y, power_point.z));
@@ -173,8 +173,8 @@ void BulletPhysicsObject::AddAcceleration(Vec3 acceleration, Vec3 power_point)
 
 
 
-void BulletPhysicsObject::InitCommon(float mass, Vec3* inertia,
-									 Vec3* position, Quaternion* quaternion)
+void BulletPhysicsObject::InitCommon(float mass, Vector3D* inertia,
+									 Vector3D* position, Quaternion* quaternion)
 {
 	// 慣性モーメント算出
 	btVector3 temp_inertia = btVector3(inertia->x, inertia->y, inertia->z);

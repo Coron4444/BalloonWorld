@@ -88,7 +88,7 @@ void TitleLogoDraw::Init()
 	// Šgk&ˆÚ“®
 	getpGameObject()->getpTransform()->getpScale()->x = diffuse_texture_->getWidth() * SCALE;
 	getpGameObject()->getpTransform()->getpScale()->y = diffuse_texture_->getHeight() * SCALE;
-	*getpGameObject()->getpTransform()->getpPosition() = Vec3(0.0f, 50.0f, 0.0f);
+	*getpGameObject()->getpTransform()->getpPosition() = Vector3D(0.0f, 50.0f, 0.0f);
 	getpGameObject()->getpTransform()->CreateWorldMatrix();
 }
 

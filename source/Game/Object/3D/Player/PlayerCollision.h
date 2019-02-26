@@ -64,7 +64,7 @@ private:
 	CollisionObject* collision_object_;		//!< 衝突オブジェクト
 	Sphere* main_sphere_;					//!< メイン球
 	Player* player_;						//!< プレイヤー
-	Vec3 normal_;
+	Vector3D normal_;
 
 //====================
 // 関数

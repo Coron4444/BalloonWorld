@@ -17,6 +17,7 @@
 
 #include <Tool/Axis.h>
 #include <Tool/Vector3D.h>
+#include <Tool/Matrix.h>
 
 
 
@@ -295,15 +296,15 @@ public:
 	//! @param radian 角度
 	//! @retval void なし
 	//----------------------------------------
-	void RotationAxisAny(Vec3 axis, float radian);
+	void RotationAxisAny(Vector3D axis, float radian);
 
 	//----------------------------------------
 	//! @brief 行列回転関数
 	//! @details
-	//! @param rotation_matrix 行列
+	//! @param matrix 行列
 	//! @retval void なし
 	//----------------------------------------
-	void RotationMatrix(MATRIX* rotation_matrix);
+	void RotationMatrix(Matrix* matrix);
 
 	//----------------------------------------
 	//! @brief クォータニオン回転回転関数

@@ -17,7 +17,7 @@
 //****************************************
 // ŠÖ”’è‹`
 //****************************************
-BalloonGroup* BalloonGroupFactory::Create(unsigned balloon_num, Vec3 position)
+BalloonGroup* BalloonGroupFactory::Create(unsigned balloon_num, Vector3D position)
 {
 	BalloonGroup* temp = new BalloonGroup();
 	temp->Init(balloon_num, position);

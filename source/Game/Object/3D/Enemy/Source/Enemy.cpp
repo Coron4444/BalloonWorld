@@ -26,7 +26,7 @@ const float Enemy::SPEED = 0.1f;
 //****************************************
 void Enemy::Init(DrawBase* draw, CollisionBase* collision)
 {
-	*getpTransform()->getpScale() = Vec3(3.0f, 3.0f, 3.0f);
+	*getpTransform()->getpScale() = Vector3D(3.0f, 3.0f, 3.0f);
 	
 	// Šî’êƒNƒ‰ƒX‚Ì‰Šú‰»
 	GameObjectBase::Init(draw, collision);

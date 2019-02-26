@@ -37,7 +37,7 @@ const float Player::MAX_MASS = 80.0f;
 //****************************************
 // プロパティ定義
 //****************************************
-void Player::setPosition(Vec3 value)
+void Player::setPosition(Vector3D value)
 {
 	*getpTransform()->getpPosition() = value;
 	getpTransform()->CreateWorldMatrix();
@@ -137,9 +137,9 @@ void Player::Init(DrawBase* draw, CollisionBase* collision)
 
 	// バレットオブジェクト
 	float mass = 0.0f;
-	Vec3 inertia(0.0f, 0.0f, 0.0f);
+	Vector3D inertia(0.0f, 0.0f, 0.0f);
 	Quaternion quaternion(0.0f, 0.0f, 0.0f, 1.0f);
-	Vec3 position(0.0f, 0.0f, 0.0f);
+	Vector3D position(0.0f, 0.0f, 0.0f);
 	float radius = 1.5f;
 	float height = 2.5f;
 	bullet_object_ = BulletPhysicsManager::getpInstance()
@@ -169,7 +169,7 @@ void Player::Update()
 
 	// 摩擦追加
 	getpPhysics()->AddFriction(0.85f);
-	getpTransform()->CreateAxisAndWorldMatrix();
+	getpTransform()->CreateWorldMatrix();
 
 	// バレットオブジェクト
 	Vec bullet_position = *getpTransform()->getpPosition();
@@ -179,12 +179,12 @@ void Player::Update()
 	// 風船群の座標更新
 	if (getpBalloonGroup() == nullptr) return;
 	Vector3D balloon_position(0.0f, 2.0f, -1.0f);
-	MatrixGroup balloon_matrix;
-	balloon_matrix.setPositionMatrix(&balloon_position);
-	balloon_matrix.CreateWorldMatrix();
-	balloon_matrix.AddParentMatrixToWorldMatrix(getpTransform()
-												->getpNoInitRotationWorldMatrix());
-	getpBalloonGroup()->setPosition(balloon_matrix.getPosition());
+	Matrix balloon_position_matrix;
+	balloon_position_matrix.Init();
+	balloon_position_matrix.CreatePosition(&balloon_position);
+	balloon_position_matrix.AddParentMatrix(getpTransform()
+											->getpNoInitRotationWorldMatrix());
+	getpBalloonGroup()->setPosition(balloon_position_matrix.getPosition());
 
 	anim_counter_++;
 }

@@ -18,6 +18,7 @@
 
 #include "MdBinData.h"
 #include <Tool/Vector3D.h>
+#include <Tool/Matrix.h>
 
 
 
@@ -71,8 +72,8 @@ public:
 	//====================
 	private:
 		std::string name_;						//!< ボーン名
-		MATRIX offset_matrix_;					//!< オフセット行列
-		std::vector<MATRIX> animation_matrix_;	//!< アニメーション行列
+		Matrix offset_matrix_;					//!< オフセット行列
+		std::vector<Matrix> animation_matrix_;	//!< アニメーション行列
 
 
 	//====================
@@ -91,9 +92,9 @@ public:
 		//! @brief オフセット行列取得関数
 		//! @details
 		//! @param void なし
-		//! @retval MATRIX* オフセット配列
+		//! @retval Matrix* オフセット配列
 		//----------------------------------------
-		MATRIX* getpOffsetMatrix();
+		Matrix* getpOffsetMatrix();
 
 		//----------------------------------------
 		//! @brief アニメーション行列配列サイズ取得関数
@@ -115,9 +116,9 @@ public:
 		//! @brief アニメーション行列取得関数
 		//! @details
 		//! @param index インデックス
-		//! @retval MATRIX* アニメーション行列
+		//! @retval Matrix* アニメーション行列
 		//----------------------------------------
-		MATRIX* getpAnimationMatrix(int index);
+		Matrix* getpAnimationMatrix(int index);
 	};
 
 

@@ -81,7 +81,7 @@ public:
 	//! @param point2 ì_2
 	//! @retval void Ç»Çµ
 	//----------------------------------------
-	void Init(Vec3 point0, Vec3 point1, Vec3 point2);
+	void Init(Vector3D point0, Vector3D point1, Vector3D point2);
 
 	//----------------------------------------
 	//! @brief çXêVä÷êî

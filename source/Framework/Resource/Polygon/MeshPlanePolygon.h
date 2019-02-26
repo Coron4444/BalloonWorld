@@ -84,7 +84,7 @@ public:
 	//! @param position 座標
 	//! @retval float 高さ
 	//----------------------------------------
-	float getHeight(Vec3 position);
+	float getHeight(Vector3D position);
 
 
 //====================
@@ -195,7 +195,7 @@ private:
 	//! @param index2	 インデックス2
 	//! @retval bool 座標がポリゴン内ならtrue
 	//----------------------------------------
-	bool CalculationHeight(Vec3* position, int index0, int index1, int index2);
+	bool CalculationHeight(Vector3D* position, int index0, int index1, int index2);
 };
 
 

@@ -13,54 +13,55 @@
 #include <math.h>
 
 #include "../Vector3D.h"
+#include "../Matrix.h"
 
 
 
 //****************************************
 // static関数定義
 //****************************************
-float Vector3D::CreateDot(Vec3* vector0, Vec3* vector1)
+float Vector3D::CreateDot(Vector3D* vector0, Vector3D* vector1)
 {
 	return D3DXVec3Dot(vector0, vector1);
 }
 
 
 
-float Vector3D::CreateDotPoint3(Vec3* point0, Vec3* point1, Vec3* point2)
+float Vector3D::CreateDotPoint3(Vector3D* point0, Vector3D* point1, Vector3D* point2)
 {
-	Vec3 vector0(*point0 - *point1);
-	Vec3 vector1(*point2 - *point1);
+	Vector3D vector0(*point0 - *point1);
+	Vector3D vector1(*point2 - *point1);
 	return CreateDot(&vector0, &vector1);
 }
 
 
 
-Vec3 Vector3D::CreateCross(Vec3* vector0, Vec3* vector1)
+Vector3D Vector3D::CreateCross(Vector3D* vector0, Vector3D* vector1)
 {
-	Vec3 temp_vector;
+	Vector3D temp_vector;
 	D3DXVec3Cross(&temp_vector, vector0, vector1);
 	return temp_vector;
 }
 
 
 
-Vec3 Vector3D::CreateCrossPoint3(Vec3* point0, Vec3* point1, Vec3* point2)
+Vector3D Vector3D::CreateCrossPoint3(Vector3D* point0, Vector3D* point1, Vector3D* point2)
 {
-	Vec3 vector0(*point1 - *point0);
-	Vec3 vector1(*point2 - *point1);
+	Vector3D vector0(*point1 - *point0);
+	Vector3D vector1(*point2 - *point1);
 	return CreateCross(&vector0, &vector1);
 }
 
 
 
-float Vector3D::CreateAngleRadian(Vec3* vector0, Vec3* vector1)
+float Vector3D::CreateAngleRadian(Vector3D* vector0, Vector3D* vector1)
 {
 	return acosf(D3DXVec3Dot(vector0, vector1));
 }
 
 
 
-float Vector3D::CreateAngleDegree(Vec3* vector0, Vec3* vector1)
+float Vector3D::CreateAngleDegree(Vector3D* vector0, Vector3D* vector1)
 {
 	return D3DXToDegree(CreateAngleRadian(vector0, vector1));
 }
@@ -70,83 +71,125 @@ float Vector3D::CreateAngleDegree(Vec3* vector0, Vec3* vector1)
 //****************************************
 // プロパティ定義
 //****************************************
-float Vector3D::getSquareX()
+float Vector3D::getX() const
+{
+	return x;
+}
+
+
+
+void Vector3D::setX(float value)
+{
+	x = value;
+}
+
+
+
+float Vector3D::getY() const
+{
+	return y;
+}
+
+
+
+void Vector3D::setY(float value)
+{
+	z = value;
+}
+
+
+
+float Vector3D::getZ() const
+{
+	return z;
+}
+
+
+
+void Vector3D::setZ(float value)
+{
+	z = value;
+}
+
+
+
+float Vector3D::getSquareX() const
 {
 	return x * x;
 }
 
 
 
-float Vector3D::getSquareY()
+float Vector3D::getSquareY() const
 {
 	return y * y;
 }
 
 
 
-float Vector3D::getSquareZ()
+float Vector3D::getSquareZ() const
 {
 	return z * z;
 }
 
 
 
-float Vector3D::getLength()
+float Vector3D::getLength() const
 {
 	return D3DXVec3Length(this);
 }
 
 
 
-float Vector3D::getLengthSquare()
+float Vector3D::getLengthSquare() const
 {
 	return getSquareX() + getSquareY() + getSquareZ();
 }
 
 
 
-float Vector3D::getLengthX()
+float Vector3D::getLengthX() const
 {
 	return fabsf(x);
 }
 
 
 
-float Vector3D::getLengthY()
+float Vector3D::getLengthY() const
 {
 	return fabsf(y);
 }
 
 
 
-float Vector3D::getLengthZ()
+float Vector3D::getLengthZ() const
 {
 	return fabsf(z);
 }
 
 
 
-float Vector3D::getLengthXY()
+float Vector3D::getLengthXY() const
 {
-	Vec3 temp_vector(x, y, 0.0f);
+	Vector3D temp_vector(x, y, 0.0f);
 
 	return D3DXVec3Length(&temp_vector);
 }
 
 
 
-float Vector3D::getLengthXZ()
+float Vector3D::getLengthXZ() const
 {
-	Vec3 temp_vector(x, 0.0f, z);
+	Vector3D temp_vector(x, 0.0f, z);
 
 	return D3DXVec3Length(&temp_vector);
 }
 
 
 
-float Vector3D::getLengthYZ()
+float Vector3D::getLengthYZ() const
 {
-	Vec3 temp_vector(0.0f, y, z);
+	Vector3D temp_vector(0.0f, y, z);
 
 	return D3DXVec3Length(&temp_vector);
 }
@@ -156,7 +199,7 @@ float Vector3D::getLengthYZ()
 //****************************************
 // 演算子定義
 //****************************************
-bool Vector3D::operator < (Vector3D& vector)
+bool Vector3D::operator < (const Vector3D& vector) const
 {
 	if (x >= vector.x) return false;
 	if (y >= vector.y) return false;
@@ -166,7 +209,7 @@ bool Vector3D::operator < (Vector3D& vector)
 
 
 
-bool Vector3D::operator > (Vector3D& vector)
+bool Vector3D::operator > (const Vector3D& vector) const
 {
 	if (x <= vector.x) return false;
 	if (y <= vector.y) return false;
@@ -176,7 +219,7 @@ bool Vector3D::operator > (Vector3D& vector)
 
 
 
-bool Vector3D::operator <= (Vector3D& vector)
+bool Vector3D::operator <= (const Vector3D& vector) const
 {
 	if (x > vector.x) return false;
 	if (y > vector.y) return false;
@@ -186,7 +229,7 @@ bool Vector3D::operator <= (Vector3D& vector)
 
 
 
-bool Vector3D::operator >= (Vector3D& vector)
+bool Vector3D::operator >= (const Vector3D& vector) const
 {
 	if (x < vector.x) return false;
 	if (y < vector.y) return false;
@@ -206,22 +249,22 @@ Vector3D::Vector3D()
 
 
 
-Vector3D::Vector3D(const float* num)
-	: Vec3(num)
+Vector3D::Vector3D(const float* value)
+	: Vec3(value)
 {
 }
 
 
 
-Vector3D::Vector3D(const Float16* num)
-	: Vec3(num)
+Vector3D::Vector3D(const Float16* value)
+	: Vec3(value)
 {
 }
 
 
 
-Vector3D::Vector3D(float num_x, float num_y, float num_z)
-	: Vec3(num_x, num_y, num_z)
+Vector3D::Vector3D(float value_x, float value_y, float value_z)
+	: Vec3(value_x, value_y, value_z)
 {
 }
 
@@ -240,14 +283,16 @@ Vector3D::~Vector3D()
 
 
 
-void Vector3D::Reset()
+void Vector3D::Init()
 {
-	*this = Vec3(0.0f, 0.0f, 0.0f);
+	x = 0.0f;
+	y = 0.0f;
+	z = 0.0f;
 }
 
 
 
-Vec3* Vector3D::ChangeNormalize()
+Vector3D* Vector3D::ChangeNormalize()
 {
 	D3DXVec3Normalize(this, this);
 	return this;
@@ -255,7 +300,7 @@ Vec3* Vector3D::ChangeNormalize()
 
 
 
-Vec3* Vector3D::ChangeAnyLength(float length)
+Vector3D* Vector3D::ChangeAnyLength(float length)
 {
 	ChangeNormalize();
 	*this *= length;
@@ -264,9 +309,9 @@ Vec3* Vector3D::ChangeAnyLength(float length)
 
 
 
-Vec3* Vector3D::ChangeAnyLengthX(float length)
+Vector3D* Vector3D::ChangeAnyLengthX(float length)
 {
-	Vec3 temp_vector(x, 0.0f, 0.0f);
+	Vector3D temp_vector(x, 0.0f, 0.0f);
 	D3DXVec3Normalize(&temp_vector, &temp_vector);
 	temp_vector *= length;
 	x = temp_vector.x;
@@ -275,9 +320,9 @@ Vec3* Vector3D::ChangeAnyLengthX(float length)
 
 
 
-Vec3* Vector3D::ChangeAnyLengthY(float length)
+Vector3D* Vector3D::ChangeAnyLengthY(float length)
 {
-	Vec3 temp_vector(0.0f, y, 0.0f);
+	Vector3D temp_vector(0.0f, y, 0.0f);
 	D3DXVec3Normalize(&temp_vector, &temp_vector);
 	temp_vector *= length;
 	y = temp_vector.y;
@@ -286,9 +331,9 @@ Vec3* Vector3D::ChangeAnyLengthY(float length)
 
 
 
-Vec3* Vector3D::ChangeAnyLengthZ(float length)
+Vector3D* Vector3D::ChangeAnyLengthZ(float length)
 {
-	Vec3 temp_vector(0.0f, 0.0f, z);
+	Vector3D temp_vector(0.0f, 0.0f, z);
 	D3DXVec3Normalize(&temp_vector, &temp_vector);
 	temp_vector *= length;
 	z = temp_vector.z;
@@ -297,9 +342,9 @@ Vec3* Vector3D::ChangeAnyLengthZ(float length)
 
 
 
-Vec3* Vector3D::ChangeAnyLengthXY(float length)
+Vector3D* Vector3D::ChangeAnyLengthXY(float length)
 {
-	Vec3 temp_vector(x, y, 0.0f);
+	Vector3D temp_vector(x, y, 0.0f);
 	D3DXVec3Normalize(&temp_vector, &temp_vector);
 	temp_vector *= length;
 	x = temp_vector.x;
@@ -309,9 +354,9 @@ Vec3* Vector3D::ChangeAnyLengthXY(float length)
 
 
 
-Vec3* Vector3D::ChangeAnyLengthXZ(float length)
+Vector3D* Vector3D::ChangeAnyLengthXZ(float length)
 {
-	Vec3 temp_vector(x, 0.0f, z);
+	Vector3D temp_vector(x, 0.0f, z);
 	D3DXVec3Normalize(&temp_vector, &temp_vector);
 	temp_vector *= length;
 	x = temp_vector.x;
@@ -321,9 +366,9 @@ Vec3* Vector3D::ChangeAnyLengthXZ(float length)
 
 
 
-Vec3* Vector3D::ChangeAnyLengthYZ(float length)
+Vector3D* Vector3D::ChangeAnyLengthYZ(float length)
 {
-	Vec3 temp_vector(0.0f, y, z);
+	Vector3D temp_vector(0.0f, y, z);
 	D3DXVec3Normalize(&temp_vector, &temp_vector);
 	temp_vector *= length;
 	y = temp_vector.y;
@@ -333,58 +378,58 @@ Vec3* Vector3D::ChangeAnyLengthYZ(float length)
 
 
 
-Vec3* Vector3D::RotationAxisX(float radian)
+Vector3D* Vector3D::RotationAxisX(float radian)
 {
-	MATRIX rotation_matrix;
-	D3DXMatrixRotationX(&rotation_matrix, radian);
-	D3DXVec3TransformNormal(this, this, &rotation_matrix);
+	Matrix matrix;
+	matrix.CreateRotationAxisX(radian);
+	D3DXVec3TransformNormal(this, this, &matrix);
 	return this;
 }
 
 
 
-Vec3* Vector3D::RotationAxisY(float radian)
+Vector3D* Vector3D::RotationAxisY(float radian)
 {
-	MATRIX rotation_matrix;
-	D3DXMatrixRotationY(&rotation_matrix, radian);
-	D3DXVec3TransformNormal(this, this, &rotation_matrix);
+	Matrix matrix;
+	matrix.CreateRotationAxisY(radian);
+	D3DXVec3TransformNormal(this, this, &matrix);
 	return this;
 }
 
 
 
-Vec3* Vector3D::RotationAxisZ(float radian)
+Vector3D* Vector3D::RotationAxisZ(float radian)
 {
-	MATRIX rotation_matrix;
-	D3DXMatrixRotationZ(&rotation_matrix, radian);
-	D3DXVec3TransformNormal(this, this, &rotation_matrix);
+	Matrix matrix;
+	matrix.CreateRotationAxisZ(radian);
+	D3DXVec3TransformNormal(this, this, &matrix);
 	return this;
 }
 
 
 
-Vec3* Vector3D::RotationAxisAny(Vec3 axis, float radian)
+Vector3D* Vector3D::RotationAxisAny(Vector3D axis, float radian)
 {
-	MATRIX rotation_matrix;
-	D3DXMatrixRotationAxis(&rotation_matrix, &axis, radian);
-	D3DXVec3TransformNormal(this, this, &rotation_matrix);
+	Matrix matrix;
+	matrix.CreateRotationAxisAny(axis, radian);
+	D3DXVec3TransformNormal(this, this, &matrix);
 	return this;
 }
 
 
 
-Vec3* Vector3D::RotationMatrix(MATRIX* rotation_matrix)
+Vector3D* Vector3D::RotationMatrix(Matrix* matrix)
 {
-	D3DXVec3TransformNormal(this, this, rotation_matrix);
+	D3DXVec3TransformNormal(this, this, matrix);
 	return this;
 }
 
 
 
-Vec3* Vector3D::RotationQuaternion(Quaternion* quaternion)
+Vector3D* Vector3D::RotationQuaternion(Quaternion* quaternion)
 {
-	MATRIX rotation_matrix;
-	D3DXMatrixRotationQuaternion(&rotation_matrix, quaternion);
-	D3DXVec3TransformNormal(this, this, &rotation_matrix);
+	Matrix matrix;
+	matrix.CreateRotationQuaternion(quaternion);
+	D3DXVec3TransformNormal(this, this, &matrix);
 	return this;
 }

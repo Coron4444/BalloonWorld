@@ -82,9 +82,9 @@ public:
 	//! @brief 座標取得関数
 	//! @details
 	//! @param void なし
-	//! @retval Vec3 座標
+	//! @retval Vector3D 座標
 	//----------------------------------------
-	Vec3 getPosition();
+	Vector3D getPosition();
 
 	//----------------------------------------
 	//! @brief 座標設定関数
@@ -92,7 +92,7 @@ public:
 	//! @param value 座標
 	//! @retval void なし
 	//----------------------------------------
-	void setPosition(Vec3 value);
+	void setPosition(Vector3D value);
 
 
 //====================
@@ -106,7 +106,7 @@ public:
 	//! @param position    座標
 	//! @retval void なし
 	//----------------------------------------
-	void Init(unsigned balloon_num, Vec3 position);
+	void Init(unsigned balloon_num, Vector3D position);
 
 	//----------------------------------------
 	//! @brief 終了関数
@@ -130,7 +130,7 @@ public:
 	//! @param velocity 速度
 	//! @retval void なし
 	//----------------------------------------
-	void AddVelocity(Vec3 velocity);
+	void AddVelocity(Vector3D velocity);
 
 	//----------------------------------------
 	//! @brief 加速度追加関数
@@ -138,7 +138,7 @@ public:
 	//! @param acceleration 加速度
 	//! @retval void なし
 	//----------------------------------------
-	void AddAcceleration(Vec3 acceleration);
+	void AddAcceleration(Vector3D acceleration);
 
 	//----------------------------------------
 	//! @brief 破裂関数

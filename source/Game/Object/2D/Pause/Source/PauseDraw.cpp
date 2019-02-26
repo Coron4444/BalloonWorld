@@ -118,12 +118,12 @@ void PauseDraw::Init()
 	// ”wŒiŠgk
 	pause_->getpTransform()->getpScale()->x *= (float)texture_[0]->getWidth();
 	pause_->getpTransform()->getpScale()->y *= (float)texture_[0]->getHeight();
-	pause_->getpTransform()->CreateAxisAndWorldMatrix();
+	pause_->getpTransform()->CreateWorldMatrix();
 
 	// ƒAƒCƒRƒ“Šgk
 	pause_->getpIconTransform()->getpScale()->x *= (float)texture_[4]->getWidth();
 	pause_->getpIconTransform()->getpScale()->y *= (float)texture_[4]->getHeight();
-	pause_->getpIconTransform()->CreateAxisAndWorldMatrix();
+	pause_->getpIconTransform()->CreateWorldMatrix();
 }
 
 

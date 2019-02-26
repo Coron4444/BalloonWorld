@@ -228,7 +228,7 @@ void RenderTargetMain::ChangeBillboardMatrix(DrawBase* draw)
 	draw->getpGameObject()->getpTransform()->setTransposeMatrix(camera_->getpViewMatrix(),
 																true);
 	// ワールド行列の更新
-	draw->getpGameObject()->getpTransform()->CreateAxisAndWorldMatrixPlusTranspose();
+	draw->getpGameObject()->getpTransform()->CreateWorldMatrixPlusTranspose();
 }
 
 

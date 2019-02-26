@@ -84,7 +84,7 @@ D3DMATERIAL9* MeshPlanePolygon::getpMaterial()
 
 
 
-float MeshPlanePolygon::getHeight(Vec3 position)
+float MeshPlanePolygon::getHeight(Vector3D position)
 {
 	// 座標からエリアを算出し計算
 	int left_up_index = 0;
@@ -429,7 +429,7 @@ void MeshPlanePolygon::RegistrationIndex()
 
 
 
-bool MeshPlanePolygon::CalculationHeight(Vec3* position, int index0, 
+bool MeshPlanePolygon::CalculationHeight(Vector3D* position, int index0, 
 										 int index1, int index2)
 {
 	// 三角形の各辺に沿うベクトルを算出
@@ -452,8 +452,8 @@ bool MeshPlanePolygon::CalculationHeight(Vec3* position, int index0,
 	{
 		// y座標を求める
 		
-		Vec3 temp_normal = Vector3D::CreateCross(&v01, &v12);
-		Vec3 p0 = vertex_[index0].posisiont_;
+		Vector3D temp_normal = Vector3D::CreateCross(&v01, &v12);
+		Vector3D p0 = vertex_[index0].posisiont_;
 		position->y = p0.y - ((temp_normal.x * (position->x - p0.x) +
 							   temp_normal.z * (position->z - p0.z)) / temp_normal.y);
 		return true;

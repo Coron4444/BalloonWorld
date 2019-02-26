@@ -33,7 +33,7 @@ Vector3D* Axis::getpForward()
 
 
 
-void Axis::setForward(Vec3 value)
+void Axis::setForward(Vector3D value)
 {
 	forward_ = value;
 	CalculationUpAndRightVector();
@@ -146,7 +146,7 @@ void Axis::RotationAxisRight(float radian)
 
 
 
-void Axis::RotationAxisAny(Vec3 axis, float radian)
+void Axis::RotationAxisAny(Vector3D axis, float radian)
 {
 	forward_.RotationAxisAny(axis, radian);
 	up_.RotationAxisAny(axis, radian);
@@ -156,10 +156,10 @@ void Axis::RotationAxisAny(Vec3 axis, float radian)
 
 
 
-void Axis::RotationMatrix(MATRIX* rotation_matrix)
+void Axis::RotationMatrix(Matrix* matrix)
 {
-	forward_.RotationMatrix(rotation_matrix);
-	up_.RotationMatrix(rotation_matrix);
+	forward_.RotationMatrix(matrix);
+	up_.RotationMatrix(matrix);
 	CalculationUpAndRightVector();
 	NormalizeAllVector();
 }
@@ -173,6 +173,9 @@ void Axis::RotationQuaternion(Quaternion* quaternion)
 	CalculationUpAndRightVector();
 	NormalizeAllVector();
 }
+
+
+
 void Axis::CalculationUpAndRightVector()
 {
 	right_ = Vector3D::CreateCross(&up_, &forward_);

@@ -48,7 +48,7 @@ private:
 	static const float TOP_ICON_POSITION_Y;			//!< アイコンのY上座標
 	static const float BOTTOM_ICON_POSITION_Y;		//!< アイコンのY下座標
 	static const float ADD_ICON_POSITION_Y;			//!< アイコンのY座標の変化量
-	static const Vec3 DEFAULT_ICON_POSITION;		//!< 既定アイコン座標
+	static const Vector3D DEFAULT_ICON_POSITION;		//!< 既定アイコン座標
 	static const float BLINKING_SECOND;				//!< 点滅秒数
 	static const int BLINKING_NUM;					//!< 点滅数
 	static const unsigned CHARACTER_COLOR_NUM = 3;	//!< 文字色数

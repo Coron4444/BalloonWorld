@@ -121,7 +121,7 @@ public:
 	//! @param radius     半径
 	//! @retval BulletPhysicsObject* 球オブジェクト
 	//----------------------------------------
-	BulletPhysicsObject* getpObjectSphere(float mass, Vec3 inertia, Vec3 position,
+	BulletPhysicsObject* getpObjectSphere(float mass, Vector3D inertia, Vector3D position,
 										  Quaternion quaternion, float radius);
 
 	//----------------------------------------
@@ -134,8 +134,8 @@ public:
 	//! @param edge_half_length 辺の半分の長さ
 	//! @retval BulletPhysicsObject* OBBオブジェクト
 	//----------------------------------------
-	BulletPhysicsObject* getpObjectOBB(float mass, Vec3 inertia, Vec3 position,
-									   Quaternion quaternion, Vec3 edge_half_length);
+	BulletPhysicsObject* getpObjectOBB(float mass, Vector3D inertia, Vector3D position,
+									   Quaternion quaternion, Vector3D edge_half_length);
 
 	//----------------------------------------
 	//! @brief カプセルオブジェクト取得関数
@@ -148,7 +148,7 @@ public:
 	//! @param height     高さ
 	//! @retval BulletPhysicsObject* 球オブジェクト
 	//----------------------------------------
-	BulletPhysicsObject* getpObjectCapsule(float mass, Vec3 inertia, Vec3 position,
+	BulletPhysicsObject* getpObjectCapsule(float mass, Vector3D inertia, Vector3D position,
 										   Quaternion quaternion, float radius, float height);
 
 	//----------------------------------------
@@ -162,7 +162,7 @@ public:
 	//----------------------------------------
 	BulletPhysicsConstraint* setConstraintPointToPoint(BulletPhysicsObject* bullet_object0,
 													   BulletPhysicsObject* bullet_object1,
-													   Vec3 point0, Vec3 point1);
+													   Vector3D point0, Vector3D point1);
 
 	//----------------------------------------
 	//! @brief 1つの軸を回転する拘束初期化関数
@@ -178,9 +178,9 @@ public:
 	//----------------------------------------
 	BulletPhysicsConstraint* setConstraintHinge(BulletPhysicsObject* bullet_object0,
 												BulletPhysicsObject* bullet_object1,
-												Vec3 point0, Vec3 point1,
+												Vector3D point0, Vector3D point1,
 												float angle_min, float angle_max,
-												Vec3 axis = {0.0f, 1.0f, 0.0f});
+												Vector3D axis = {0.0f, 1.0f, 0.0f});
 
 	//----------------------------------------
 	//! @brief 接続点とそれを中心とした2軸の拘束設定関数
@@ -198,11 +198,11 @@ public:
 	//----------------------------------------
 	BulletPhysicsConstraint* setConstraintUniversal(BulletPhysicsObject* bullet_object0,
 													BulletPhysicsObject* bullet_object1,
-													Vec3 anchor,
+													Vector3D anchor,
 													float angle_min0, float angle_min1,
 													float angle_max0, float angle_max1,
-													Vec3 axis0 = {1.0f, 0.0f, 0.0f},
-													Vec3 axis1 = {0.0f, 0.0f, 1.0f});
+													Vector3D axis0 = {1.0f, 0.0f, 0.0f},
+													Vector3D axis1 = {0.0f, 0.0f, 1.0f});
 
 
 //====================

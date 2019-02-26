@@ -27,7 +27,7 @@ class StartBlock : public GameObjectNull
 // ’è”
 //====================
 private:
-	static const Vec3 SCALE;				//!< Šgk
+	static const Vector3D SCALE;				//!< Šgk
 	static const float ROTATION_SPEED;		//!< ‰ñ“]
 
 
@@ -41,7 +41,7 @@ public:
 	//! @param value À•W
 	//! @retval void ‚È‚µ
 	//----------------------------------------
-	void setPosition(Vec3 value);
+	void setPosition(Vector3D value);
 
 //====================
 // ŠÖ”

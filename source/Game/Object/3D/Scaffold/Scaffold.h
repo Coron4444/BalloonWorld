@@ -27,7 +27,7 @@ class Scaffold : public GameObjectNull
 // ’è”
 //====================
 private:
-	static const Vec3 SCALE;				//!< Šgk
+	static const Vector3D SCALE;				//!< Šgk
 
 
 //====================
@@ -48,7 +48,7 @@ public:
 	//! @param value À•W
 	//! @retval void ‚È‚µ
 	//----------------------------------------
-	void setPosition(Vec3 value);
+	void setPosition(Vector3D value);
 
 	//----------------------------------------
 	//! @brief Šgkİ’èŠÖ”
@@ -56,7 +56,7 @@ public:
 	//! @param value Šgk
 	//! @retval void ‚È‚µ
 	//----------------------------------------
-	void setScale(Vec3 value);
+	void setScale(Vector3D value);
 
 	//----------------------------------------
 	//! @brief Fæ“¾ŠÖ”

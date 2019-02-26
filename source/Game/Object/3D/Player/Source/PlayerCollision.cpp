@@ -148,7 +148,7 @@ void PlayerCollision::HitMainSphere(CollisionInformation* information)
 					CollisionCalculation
 						::EliminationOfNesting(information,
 											   player_->getpTransform());
-					Vec3 temp_vector(0.0f, 1.0f, 0.0f);
+					Vector3D temp_vector(0.0f, 1.0f, 0.0f);
 					float deg = Vector3D::CreateAngleDegree(information->getpCollisionPointNormal(),
 															&temp_vector);
 					if (deg < 10.0f)
@@ -174,7 +174,7 @@ void PlayerCollision::HitMainSphere(CollisionInformation* information)
 					CollisionCalculation
 						::EliminationOfNesting(information,
 											   player_->getpTransform());
-					Vec3 temp_vector(0.0f, 1.0f, 0.0f);
+					Vector3D temp_vector(0.0f, 1.0f, 0.0f);
 					float deg = Vector3D::CreateAngleDegree(information->getpCollisionPointNormal(),
 															&temp_vector);
 					if (deg < 10.0f)

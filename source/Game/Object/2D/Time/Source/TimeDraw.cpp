@@ -107,7 +107,7 @@ void TimeDraw::Init()
 	float scale = 0.4f;
 	time_->getpTransform()->getpScale()->x = texture_2->getWidth() * scale;
 	time_->getpTransform()->getpScale()->y = texture_2->getHeight() * scale;
-	time_->getpTransform()->CreateAxisAndWorldMatrix();
+	time_->getpTransform()->CreateWorldMatrix();
 }
 
 

@@ -99,7 +99,7 @@ void TutorialLogoDraw::Init()
 	// Šgk
 	getpGameObject()->getpTransform()->getpScale()->x = diffuse_texture_[0]->getWidth() * SCALE;
 	getpGameObject()->getpTransform()->getpScale()->y = diffuse_texture_[0]->getHeight() * (SCALE + 0.2f);
-	*getpGameObject()->getpTransform()->getpPosition() = Vec3(0.0f, 0.0f, 0.0f);
+	*getpGameObject()->getpTransform()->getpPosition() = Vector3D(0.0f, 0.0f, 0.0f);
 	getpGameObject()->getpTransform()->CreateWorldMatrix();
 }
 

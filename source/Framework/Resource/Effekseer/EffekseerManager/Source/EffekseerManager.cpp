@@ -232,7 +232,8 @@ std::string EffekseerManager::CreateFilePath(const std::string* key_name,
 
 
 
-void EffekseerManager::CreateViewMatrix(Vec3 camera_position, Vec3 look_at_point, Vec3 camera_up)
+void EffekseerManager::CreateViewMatrix(Vector3D camera_position, 
+										Vector3D look_at_point, Vector3D camera_up)
 {
 	view_matrix_ = Effekseer::Matrix44().LookAtLH(Effekseer::Vector3D(camera_position.x, camera_position.y, camera_position.z),
 												  Effekseer::Vector3D(look_at_point.x, look_at_point.y, look_at_point.z),
@@ -241,7 +242,7 @@ void EffekseerManager::CreateViewMatrix(Vec3 camera_position, Vec3 look_at_point
 
 
 
-void EffekseerManager::CreateProjectionMatrix(int angle_of_view_)
+void EffekseerManager::CreateProjectionMatrix(float angle_of_view_)
 {
 	projection_matrix_ = Effekseer::Matrix44().PerspectiveFovLH(D3DXToRadian(angle_of_view_),
 		(float)GameEngine::SCREEN_WIDTH / GameEngine::SCREEN_HEIGHT,

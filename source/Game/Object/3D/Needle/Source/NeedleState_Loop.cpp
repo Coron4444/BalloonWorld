@@ -17,7 +17,7 @@
 //****************************************
 // ’è”’è‹`
 //****************************************
-const Vec3 NeedleState_Loop::CENTER_POSITION(0.0f, 3.0f, 0.0f);
+const Vector3D NeedleState_Loop::CENTER_POSITION(0.0f, 3.0f, 0.0f);
 const float NeedleState_Loop::ROTATION_CENTER_SPEED = 0.0f;
 const float NeedleState_Loop::ROTATION_SPEED = 2.0f;
 
@@ -30,7 +30,7 @@ void NeedleState_Loop::Init()
 {
 	// À•WÝ’è
 	*getpNeedle()->getpTransform()->getpPosition() = CENTER_POSITION;
-	getpNeedle()->getpTransform()->CreateAxisAndWorldMatrix();
+	getpNeedle()->getpTransform()->CreateWorldMatrix();
 	getpNeedle()->getpTransform()
 		->AddParentMatrixToWorldMatrix(rotation_transform_.getpWorldMatrix());
 }
@@ -48,8 +48,8 @@ void NeedleState_Loop::Update()
 	// ‰ñ“]
 	*rotation_transform_.getpAnglePitch() += ROTATION_CENTER_SPEED;
 	*getpNeedle()->getpTransform()->getpAnglePitch() += ROTATION_SPEED;
-	rotation_transform_.CreateAxisAndWorldMatrix();
-	getpNeedle()->getpTransform()->CreateAxisAndWorldMatrix();
+	rotation_transform_.CreateWorldMatrix();
+	getpNeedle()->getpTransform()->CreateWorldMatrix();
 	getpNeedle()->getpTransform()
 		->AddParentMatrixToWorldMatrix(rotation_transform_.getpWorldMatrix());
 }

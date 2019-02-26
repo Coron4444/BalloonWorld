@@ -123,8 +123,8 @@ void Capsule::Update()
 
 void Capsule::CalculationMinAndMax()
 {
-	Vec3 max;
-	Vec3 min;
+	Vector3D max;
+	Vector3D min;
 
 	// Xç¿ïW
 	Axis axis;

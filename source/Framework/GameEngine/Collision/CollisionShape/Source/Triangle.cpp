@@ -40,7 +40,7 @@ Triangle::~Triangle()
 
 
 
-void Triangle::Init(Vec3 point0, Vec3 point1, Vec3 point2)
+void Triangle::Init(Vector3D point0, Vector3D point1, Vector3D point2)
 {
 	CollisionShapeBase::setType(CollisionShapeBase::Type::TRIANGLE);
 

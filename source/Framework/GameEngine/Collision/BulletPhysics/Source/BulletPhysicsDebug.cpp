@@ -43,9 +43,9 @@ void BulletPhysicsDebug::Init()
 	// 頂点初期化
 	for (int i = 0; i < 2; i++)
 	{
-		vertex_[i].posisiont_ = Vec3(0.0f, 0.0f, 0.0f);
+		vertex_[i].posisiont_ = Vector3D(0.0f, 0.0f, 0.0f);
 		vertex_[i].color_ = 0xffffffff;
-		vertex_[i].normal_ = Vec3(0.0f, 0.0f, 0.0f);
+		vertex_[i].normal_ = Vector3D(0.0f, 0.0f, 0.0f);
 		vertex_[i].texcoord_ = Vec2(0.0f, 0.0f);
 	}
 }
@@ -56,9 +56,9 @@ void BulletPhysicsDebug::drawLine(const btVector3& from, const btVector3& to,
 								  const btVector3& color)
 {
 	// 頂点更新
-	vertex_[0].posisiont_ = Vec3((float)from.getX(), (float)from.getY(), (float)from.getZ());
+	vertex_[0].posisiont_ = Vector3D((float)from.getX(), (float)from.getY(), (float)from.getZ());
 	vertex_[0].color_ = (Color4)XColor4((float)color.getX(), (float)color.getY(), (float)color.getZ(), 1.0f);
-	vertex_[1].posisiont_ = Vec3((float)to.getX(), (float)to.getY(), (float)to.getZ());
+	vertex_[1].posisiont_ = Vector3D((float)to.getX(), (float)to.getY(), (float)to.getZ());
 	vertex_[1].color_ = (Color4)XColor4((float)color.getX(), (float)color.getY(), (float)color.getZ(), 1.0f);
 
 	// 線

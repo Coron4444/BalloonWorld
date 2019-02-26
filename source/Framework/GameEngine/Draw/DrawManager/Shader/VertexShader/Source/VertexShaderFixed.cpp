@@ -102,7 +102,7 @@ void VertexShaderFixed::UpdateDirectionalLignt()
 	directional_light_.Type = D3DLIGHT_DIRECTIONAL;
 
 	// ライト方向を単位ベクトルで代入
-	Vec3 directional_light_vector = *getpDrawCommonData()->getpDirectionalLightVector();
+	Vector3D directional_light_vector = *getpDrawCommonData()->getpDirectionalLightVector();
 	D3DXVec3Normalize((D3DXVECTOR3*)&directional_light_.Direction, &directional_light_vector);
 
 	// ライトカラー

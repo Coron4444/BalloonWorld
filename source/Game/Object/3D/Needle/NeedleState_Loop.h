@@ -27,7 +27,7 @@ class NeedleState_Loop : public Needle::State
 // 定数
 //====================
 private:
-	static const Vec3 CENTER_POSITION;			//!< 中心からの座標
+	static const Vector3D CENTER_POSITION;			//!< 中心からの座標
 	static const float ROTATION_CENTER_SPEED;	//!< 中心の回転速度
 	static const float ROTATION_SPEED;			//!< 回転速度
 

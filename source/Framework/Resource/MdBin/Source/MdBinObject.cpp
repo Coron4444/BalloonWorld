@@ -30,7 +30,7 @@ std::string* MdBinObject::Bone::getpName()
 
 
 
-MATRIX* MdBinObject::Bone::getpOffsetMatrix()
+Matrix* MdBinObject::Bone::getpOffsetMatrix()
 {
 	return &offset_matrix_;
 }
@@ -51,7 +51,7 @@ void MdBinObject::Bone::setAnimationMatrixArraySize(int value)
 
 
 
-MATRIX* MdBinObject::Bone::getpAnimationMatrix(int index)
+Matrix* MdBinObject::Bone::getpAnimationMatrix(int index)
 {
 	return &animation_matrix_[index];
 }
@@ -559,7 +559,7 @@ void MdBinObject::CreateBone(int mesh_index,
 			ChangeMatrix(mesh_[mesh_index].getpBone(i)->getpOffsetMatrix(),
 						 md_bin_data->getpMesh(mesh_index)->getpBone(i)->getpOffsetMatrix());
 
-			MATRIX offset_matrix;
+			Matrix offset_matrix;
 			D3DXMatrixInverse(&offset_matrix, NULL, mesh_[mesh_index].getpBone(i)->getpOffsetMatrix());
 
 			// アニメーション行列
@@ -567,7 +567,7 @@ void MdBinObject::CreateBone(int mesh_index,
 			mesh_[mesh_index].getpBone(i)->setAnimationMatrixArraySize(animation_fram_num);
 			for (int j = 0; j < animation_fram_num; j++)
 			{
-				MATRIX frame_matrix;
+				Matrix frame_matrix;
 				ChangeMatrix(&frame_matrix,
 							 md_bin_data->getpMesh(mesh_index)->getpBone(i)->getpAnimationMatrix(j));
 
@@ -586,7 +586,7 @@ void MdBinObject::CreateBone(int mesh_index,
 		*mesh_[mesh_index].getpBone(0)->getpName() = "DefaultBone";
 
 		// オフセット行列
-		MATRIX default_matrix;
+		Matrix default_matrix;
 		D3DXMatrixIdentity(&default_matrix);
 		*mesh_[mesh_index].getpBone(0)->getpOffsetMatrix() = default_matrix;
 

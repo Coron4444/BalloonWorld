@@ -585,7 +585,7 @@ private:
 	//! @param *line			   直線
 	//! @retval float 点と直線の最短距離
 	//----------------------------------------
-	static float CalculateTheShortestDistanceBetweenPointsAndLine(Vec3* intersection_point,
+	static float CalculateTheShortestDistanceBetweenPointsAndLine(Vector3D* intersection_point,
 																  float* ratio,
 																  Vector3D* point,
 																  LineSegment* line);
@@ -599,7 +599,7 @@ private:
 	//! @param *line_segment	   線分
 	//! @retval float 点と線分の最短距離
 	//----------------------------------------
-	static float CalculateTheShortestDistanceBetweenPointsAndLineSegments(Vec3* intersection_point,
+	static float CalculateTheShortestDistanceBetweenPointsAndLineSegments(Vector3D* intersection_point,
 																		  float* ratio,
 																		  Vector3D* point,
 																		  LineSegment* line_segment);
@@ -615,8 +615,8 @@ private:
 	//! @param *line1				直線1
 	//! @retval float 直線と直線の最短距離
 	//----------------------------------------
-	static float CalculateTheShortestDistanceBetweenLineAndLine(Vec3* intersection_point0,
-																Vec3* intersection_point1,
+	static float CalculateTheShortestDistanceBetweenLineAndLine(Vector3D* intersection_point0,
+																Vector3D* intersection_point1,
 																float* ratio0,
 																float* ratio1,
 																LineSegment* line0,
@@ -633,8 +633,8 @@ private:
 	//! @param *line_segment1		線分1
 	//! @retval float 線分と線分の最短距離
 	//----------------------------------------
-	static float CalculateTheShortestDistanceBetweenLineSegmentAndLineSegment(Vec3* intersection_point0,
-																			  Vec3* intersection_point1,
+	static float CalculateTheShortestDistanceBetweenLineSegmentAndLineSegment(Vector3D* intersection_point0,
+																			  Vector3D* intersection_point1,
 																			  float* ratio0,
 																			  float* ratio1,
 																			  LineSegment* line_segment0,
@@ -681,7 +681,7 @@ private:
 	//! @param *point 点
 	//! @retval float 平面と点の最短距離
 	//----------------------------------------
-	static float CalculateTheShortestDistanceBetweenPlaneAndPoint(Plane* plane, Vec3* point);
+	static float CalculateTheShortestDistanceBetweenPlaneAndPoint(Plane* plane, Vector3D* point);
 
 	//----------------------------------------
 	//! @brief 点が平面の表側にあるか判定関数
@@ -690,7 +690,7 @@ private:
 	//! @param *point 点
 	//! @retval bool 表面にあればtrue
 	//----------------------------------------
-	static bool IsThePointOnTheFrontSideOfThePlane(Plane* plane, Vec3* point);
+	static bool IsThePointOnTheFrontSideOfThePlane(Plane* plane, Vector3D* point);
 
 	//----------------------------------------
 	//! @brief 点が三角形平面に含まれているか判定関数
@@ -699,7 +699,7 @@ private:
 	//! @param *point    点
 	//! @retval bool 表面にあればtrue
 	//----------------------------------------
-	static bool IsPointsAreIncludedInThePlane(Triangle* triangle, Vec3* point);
+	static bool IsPointsAreIncludedInThePlane(Triangle* triangle, Vector3D* point);
 
 	//----------------------------------------
 	//! @brief 3点のなす角が鈍角か判定関数
@@ -709,7 +709,8 @@ private:
 	//! @param *point2 点2
 	//! @retval bool 鈍角の有無
 	//----------------------------------------
-	static bool IsObtuseAnglePoint3(Vec3* point0, Vec3* point1, Vec3* point2);
+	static bool IsObtuseAnglePoint3(Vector3D* point0, Vector3D* point1, 
+									Vector3D* point2);
 
 //====================
 // 消去済み関数

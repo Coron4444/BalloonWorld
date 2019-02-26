@@ -86,7 +86,7 @@ public:
 	//! @retval void ‚È‚µ
 	//----------------------------------------
 	void InitPointToPoint(btRigidBody* rigid_body0, btRigidBody* rigid_body1,
-						  Vec3* point0, Vec3* point1);
+						  Vector3D* point0, Vector3D* point1);
 
 	//----------------------------------------
 	//! @brief 1‚Â‚Ì²‚ğ‰ñ“]‚·‚éS‘©‰Šú‰»ŠÖ”
@@ -101,8 +101,8 @@ public:
 	//! @retval void ‚È‚µ
 	//----------------------------------------
 	void InitHinge(btRigidBody* rigid_body0, btRigidBody* rigid_body1,
-				   Vec3* point0, Vec3* point1, 
-				   float angle_min, float angle_max, Vec3* axis);
+				   Vector3D* point0, Vector3D* point1, 
+				   float angle_min, float angle_max, Vector3D* axis);
 
 	//----------------------------------------
 	//! @brief Ú‘±“_‚Æ‚»‚ê‚ğ’†S‚Æ‚µ‚½2²‚ÌS‘©‰Šú‰»ŠÖ”
@@ -119,9 +119,9 @@ public:
 	//! @retval void ‚È‚µ
 	//----------------------------------------
 	void InitUniversal(btRigidBody* rigid_body0, btRigidBody* rigid_body1,
-					   Vec3* anchor, float angle_min0, float angle_min1,
+					   Vector3D* anchor, float angle_min0, float angle_min1,
 					   float angle_max0, float angle_max1,
-					   Vec3* axis0, Vec3* axis1);
+					   Vector3D* axis0, Vector3D* axis1);
 
 	//----------------------------------------
 	//! @brief ‰ğ•úŠÖ”
