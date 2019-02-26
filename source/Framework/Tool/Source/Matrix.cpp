@@ -440,6 +440,7 @@ void Matrix::CreateWorld(Matrix* scale, Matrix* rotation, Matrix* position)
 void Matrix::CreateView(Vector3D* position, Vector3D* gazing_point, Vector3D* up)
 {
 	D3DXMatrixLookAtLH(this, position, gazing_point, up);
+	CreateViewAxis();
 }
 
 
@@ -519,6 +520,19 @@ void Matrix::CreateAxis()
 	right_ = {_11, _12, _13};
 	up_ = {_21, _22, _23};
 	forward_ = {_31, _32, _33};
+
+	right_.ChangeNormalize();
+	up_.ChangeNormalize();
+	forward_.ChangeNormalize();
+}
+
+
+
+void Matrix::CreateViewAxis()
+{
+	right_ = {_11, _21, _31};
+	up_ = {_12, _22, _32};
+	forward_ = {_13, _23, _33};
 
 	right_.ChangeNormalize();
 	up_.ChangeNormalize();

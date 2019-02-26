@@ -102,13 +102,6 @@ Vector3D* Camera::getpGazingPoint()
 
 
 
-Vector3D* Camera::getpUp()
-{
-	return &up_;
-}
-
-
-
 float Camera::getAngleOfView()
 {
 	return angle_of_view_;
@@ -121,13 +114,6 @@ void Camera::setAngleOfView(float value)
 	angle_of_view_ = value;
 	CreateProjectionMatrixPerspectiveFov();
 	CreateProjectionMatrixOrtho();
-}
-
-
-
-Axis* Camera::getpAxis()
-{
-	return &axis_;
 }
 
 
@@ -171,6 +157,48 @@ void Camera::setType(Camera::Type value)
 
 
 
+Vector3D* Camera::getpRight()
+{
+	return view_.getpRight();
+}
+
+
+
+Vector3D* Camera::getpUp()
+{
+	return view_.getpUp();
+}
+
+
+
+Vector3D* Camera::getpForward()
+{
+	return view_.getpForward();
+}
+
+
+
+Vector3D* Camera::getpDefaultRight()
+{
+	return view_.getpDefaultRight();
+}
+
+
+
+Vector3D* Camera::getpDefaultUp()
+{
+	return view_.getpDefaultUp();
+}
+
+
+
+Vector3D* Camera::getpDefaultForward()
+{
+	return view_.getpDefaultForward();
+}
+
+
+
 //****************************************
 // 関数定義
 //****************************************
@@ -189,7 +217,6 @@ Camera::Camera() :
 	position_.Init();
 	gazing_point_.Init();
 	up_.Init();
-	axis_.Reset();
 	view_.Init();
 	view_2D_.Init();
 	projection_perspective_.Init();
@@ -213,9 +240,6 @@ void Camera::Init(State* state, Vector3D position, Vector3D gazing_point, Vector
 	gazing_point_ = gazing_point;
 	up_ = up;
 	angle_of_view_ = DEFAULT_ANGLE_OF_VIEW;
-
-	// 軸ベクトルを作成
-	axis_.setForward(gazing_point_ - position_);
 
 	// ステートの初期化
 	setState(state);
@@ -255,7 +279,6 @@ void Camera::Update()
 
 void Camera::CreateViewMatrix()
 {
-	view_.Init();
 	view_.CreateView(&position_, &gazing_point_, &up_);
 }
 

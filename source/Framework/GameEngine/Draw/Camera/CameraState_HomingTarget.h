@@ -125,14 +125,6 @@ private:
 	void CalculationGazingPoint();
 
 	//----------------------------------------
-	//! @brief 前ベクトル算出関数
-	//! @details
-	//! @param void なし
-	//! @retval void なし
-	//----------------------------------------
-	void CalculationForward();
-
-	//----------------------------------------
 	//! @brief 注視点軸関数
 	//! @details
 	//! @param void なし

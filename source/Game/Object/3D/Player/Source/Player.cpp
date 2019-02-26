@@ -208,32 +208,31 @@ void Player::Input()
 
 void Player::InputTranslation()
 {
-	Axis* camera_axis = camera_->getpAxis();
 	bool is_input = false;
 	Vector3D look_at_vector;
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_W) ||
 		InputManager::getpInstance()->getpController()->getHoldLStick(0, Controller::Direction::UP))
 	{
 		is_input = true;
-		look_at_vector += *camera_axis->getpForward();
+		look_at_vector += *camera_->getpForward();
 	}
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_S) ||
 		InputManager::getpInstance()->getpController()->getHoldLStick(0, Controller::Direction::DOWN))
 	{
 		is_input = true;
-		look_at_vector += -(*camera_axis->getpForward());
+		look_at_vector += -(*camera_->getpForward());
 	}
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_A) ||
 		InputManager::getpInstance()->getpController()->getHoldLStick(0, Controller::Direction::LEFT))
 	{
 		is_input = true;
-		look_at_vector += -(*camera_axis->getpRight());
+		look_at_vector += -(*camera_->getpRight());
 	}
 	if (InputManager::getpInstance()->getpKeyboard()->getHold(DIK_D) ||
 		InputManager::getpInstance()->getpController()->getHoldLStick(0, Controller::Direction::RIGHT))
 	{
 		is_input = true;
-		look_at_vector += *camera_axis->getpRight();
+		look_at_vector += *camera_->getpRight();
 	}
 
 	if (is_input)

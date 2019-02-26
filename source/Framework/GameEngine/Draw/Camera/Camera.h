@@ -166,7 +166,6 @@ private:
 	Vector3D gazing_point_;				//!< 注視点
 	Vector3D up_;						//!< 上方向
 	float angle_of_view_;				//!< 画角
-	Axis axis_;							//!< 軸
 	Matrix view_;						//!< ビュー行列
 	Matrix view_2D_;					//!< ビュー行列(2D)
 	Matrix projection_perspective_;		//!< プロジェクション行列(透視投影)
@@ -213,14 +212,6 @@ public:
 	Vector3D* getpGazingPoint();
 	
 	//----------------------------------------
-	//! @brief 上方向取得関数
-	//! @details
-	//! @param void なし
-	//! @retval Vector3D* 上方向
-	//----------------------------------------
-	Vector3D* getpUp();
-	
-	//----------------------------------------
 	//! @brief 画角取得関数
 	//! @details
 	//! @param void なし
@@ -235,14 +226,6 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void setAngleOfView(float value);
-	
-	//----------------------------------------
-	//! @brief 軸取得関数
-	//! @details
-	//! @param void なし
-	//! @retval Axis* 軸
-	//----------------------------------------
-	Axis* getpAxis();
 	
 	//----------------------------------------
 	//! @brief ステート取得関数
@@ -275,6 +258,54 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void setType(Type value);
+
+	//----------------------------------------
+	//! @brief 右ベクトル取得関数
+	//! @details
+	//! @param void
+	//! @retval Vector3D* 右ベクトル
+	//----------------------------------------
+	Vector3D* getpRight();
+
+	//----------------------------------------
+	//! @brief 上ベクトル取得関数
+	//! @details
+	//! @param void
+	//! @retval Vector3D* 上ベクトル
+	//----------------------------------------
+	Vector3D* getpUp();
+
+	//----------------------------------------
+	//! @brief 前ベクトル取得関数
+	//! @details
+	//! @param void
+	//! @retval Vector3D* 前ベクトル
+	//----------------------------------------
+	Vector3D* getpForward();
+
+	//----------------------------------------
+	//! @brief 既定前ベクトル取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Vector3D* 既定前ベクトル
+	//----------------------------------------
+	Vector3D* getpDefaultForward();
+
+	//----------------------------------------
+	//! @brief 既定上ベクトル取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Vector3D* 既定上ベクトル
+	//----------------------------------------
+	Vector3D* getpDefaultUp();
+
+	//----------------------------------------
+	//! @brief 既定右ベクトル取得関数
+	//! @details
+	//! @param void なし
+	//! @retval Vector3D* 既定右ベクトル
+	//----------------------------------------
+	Vector3D* getpDefaultRight();
 
 
 //====================

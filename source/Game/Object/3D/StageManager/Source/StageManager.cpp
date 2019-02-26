@@ -55,7 +55,7 @@ void StageManager::setIsEnable(bool value)
 		setIsUpdate(true);
 		setIsInput(true);
 		player_->setIsUpdate(true);
-		player_->getpCamera()->getpState()->setIsUpdate(true);
+		//player_->getpCamera()->getpState()->setIsUpdate(true);
 		player_->getpCollision()->setIsEnable(true);
 	}
 	else
@@ -64,7 +64,7 @@ void StageManager::setIsEnable(bool value)
 		setIsUpdate(false);
 		setIsInput(false);
 		player_->setIsUpdate(false);
-		player_->getpCamera()->getpState()->setIsUpdate(false);
+		//player_->getpCamera()->getpState()->setIsUpdate(false);
 		player_->getpCollision()->setIsEnable(false);
 	}
 }
@@ -181,6 +181,14 @@ void StageManager::CreateStage()
 	StartBlockFactory start_block_factory;
 	start_block_ = start_block_factory.Create();
 	start_block_->setPosition(Vector3D(0.0f, 300.0f, 0.0f));
+
+	ScaffoldFactory scaffold_factory;
+	scaffold_ = scaffold_factory.Create();
+	scaffold_->setPosition(Vector3D(00.0f, 00.0f, 0.0f));
+	scaffold_->setScale(Vector3D(3.0f, 50.0f, 3.0f));
+	scaffold_->setColor(XColor4(1.0f, 0.0f, 1.0f, 1.0f));
+	scaffold_->setScore(50);
+
 	/*
 	// ‘«ê
 	ScaffoldFactory scaffold_factory;

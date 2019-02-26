@@ -33,7 +33,7 @@ class Matrix : public MATRIX
 //====================
 // 定数
 //====================
-public:
+private:
 	static const Vector3D DEFAULT_RIGHT;	//!< 既定右ベクトル
 	static const Vector3D DEFAULT_UP;		//!< 既定上ベクトル
 	static const Vector3D DEFAULT_FORWARD;	//!< 既定前ベクトル
@@ -581,7 +581,7 @@ public:
 	//! @param is_position_off 平行移動OFFフラグ
 	//! @retval void なし
 	//----------------------------------------
-	void ChangeTranspose(bool is_position_off);
+	void ChangeTranspose(bool is_position_off = false);
 
 	//----------------------------------------
 	//! @brief 親行列追加関数
@@ -607,6 +607,14 @@ private:
 	//! @retval void なし
 	//----------------------------------------
 	void CreateAxis();
+
+	//----------------------------------------
+	//! @brief ビュー軸作成関数
+	//! @details
+	//! @param void なし
+	//! @retval void なし
+	//----------------------------------------
+	void CreateViewAxis();
 };
 
 
