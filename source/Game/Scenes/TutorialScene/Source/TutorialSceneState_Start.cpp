@@ -14,9 +14,6 @@
 #include "../TutorialScene.h"
 #include "../TutorialSceneState_End.h"
 
-#include <GameEngine/Scene/SceneManager/SceneManager.h>
-#include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
-
 #include <Object/2D/TutorialLogo/TutorialLogoFactory.h>
 #include <Object/2D/PushSpaceLogo/PushSpaceLogoFactory.h>
 

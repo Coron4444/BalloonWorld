@@ -12,7 +12,6 @@
 //****************************************
 #include "../GameEngine.h"
 #include "../Renderer/RendererFactoryDirectX9.h"
-#include "../Scene/SceneManager/SceneManager.h"
 #include "../Collision/BulletPhysics/BulletPhysicsManager/BulletPhysicsManager.h"
 
 #include <Scenes/TitleScene/TitleScene.h>

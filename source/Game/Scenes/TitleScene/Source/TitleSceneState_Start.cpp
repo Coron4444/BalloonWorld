@@ -13,8 +13,6 @@
 #include "../TitleSceneState_Start.h"
 #include "../TitleScene.h"
 
-#include <GameEngine/Scene/SceneManager/SceneManager.h>
-
 #include <Object/2D/TitleLogo/TitleLogoFactory.h>
 #include <Object/2D/PushSpaceLogo/PushSpaceLogoFactory.h>
 #include <Object/3D/SkyDome/SkyDomeFactory.h>

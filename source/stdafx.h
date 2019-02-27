@@ -46,6 +46,8 @@
 
 #include <GameEngine/GameEngine.h>
 #include <GameEngine/Renderer/Renderer.h>
+#include <GameEngine/Scene/SceneManager/SceneManager.h>
+#include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
 #include <GameEngine/Input/InputManager/InputManager.h>
 
 #include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>

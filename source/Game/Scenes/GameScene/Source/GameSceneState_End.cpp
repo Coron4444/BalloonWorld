@@ -13,9 +13,6 @@
 #include "../GameSceneState_End.h"
 #include "../GameScene.h"
 
-#include <GameEngine/Scene/SceneManager/SceneManager.h>
-#include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
-
 #include <Scenes/ResultScene/ResultScene.h>
 #include <Scenes/ResultScene/ResultSceneState_Start.h>
 

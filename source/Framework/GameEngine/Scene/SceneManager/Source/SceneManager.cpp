@@ -11,7 +11,6 @@
 // インクルード文
 //****************************************
 #include "../SceneManager.h"
-#include "../../../GameObject/GameObjectManager/GameObjectManager.h"
 
 
 
@@ -27,20 +26,6 @@ const XColor4    SceneManager::DEFAULT_FADE_COLOR(1.0f, 1.0f, 1.0f, 1.0f);
 //****************************************
 // プロパティ定義
 //****************************************
-bool SceneManager::CommonData::getIsUpdate()
-{
-	return is_update_;
-}
-
-
-
-void SceneManager::CommonData::setIsUpdate(bool value)
-{
-	is_update_ = value;
-}
-
-
-
 bool SceneManager::CommonData::getIsClear()
 {
 	return is_clear_;
@@ -70,14 +55,15 @@ void SceneManager::setNextScene(SceneBase* value)
 	// ステートの変更
 	state_ = SceneManager::State::CHANGE_SCENE;
 
-	// UpdateフラグOFF
-	common_data_->setIsUpdate(false);
-
+	
 	// フェードアウト初期化
 	GameObjectManager::getpInstance()->getpDrawManager()
 		->StartFadeOut(fade_type_,
 					  Vec2((float)GameEngine::SCREEN_WIDTH, (float)GameEngine::SCREEN_HEIGHT),
 					  fade_color_, fade_speed_);
+	
+	// フェード中フラグOFF
+	is_fade_ = true;
 }
 
 
@@ -98,6 +84,9 @@ void SceneManager::setResetScene(SceneBase::StateBase* value)
 		->StartFadeOut(fade_type_,
 					   Vec2((float)GameEngine::SCREEN_WIDTH, (float)GameEngine::SCREEN_HEIGHT),
 					   fade_color_, fade_speed_);
+
+	// フェード中フラグOFF
+	is_fade_ = true;
 }
 
 
@@ -105,6 +94,13 @@ void SceneManager::setResetScene(SceneBase::StateBase* value)
 SceneManager::CommonData* SceneManager::getpCommonData()
 {
 	return common_data_;
+}
+
+
+
+bool SceneManager::getIsFade()
+{
+	return is_fade_;
 }
 
 
@@ -145,11 +141,53 @@ int SceneManager::CommonData::getScore()
 //****************************************
 // 関数定義
 //****************************************
+SceneManager::CommonData::CommonData()
+{
+
+}
+
+
+
+SceneManager::CommonData::~CommonData()
+{
+
+}
+
+
+
+void SceneManager::CommonData::Init()
+{
+	is_clear_ = false;
+	score_ = 0;
+}
+
+
+
+SceneManager::SceneManager() :
+	state_(State::NONE),
+	common_data_(nullptr),
+	current_scene_(nullptr),
+	next_scene_(nullptr),
+	is_fade_(false),
+	fade_type_(DEFAULT_FADE_TYPE),
+	fade_speed_(DEFAULT_FADE_SPEED),
+	fade_color_(DEFAULT_FADE_COLOR)
+{
+}
+
+
+
+SceneManager::~SceneManager()
+{
+}
+
+
+
 void SceneManager::Init(SceneBase* scene)
 {
 	// 共有データーの初期化
 	common_data_ = new CommonData();
-	common_data_->Reset();
+	common_data_->Init();
 
 	// ゲームオブジェクトマネージャの初期化
 	GameObjectManager::getpInstance()->Init();
@@ -256,7 +294,9 @@ void SceneManager::SceneChange()
 	{
 		// フェード終了処理
 		state_ = SceneManager::State::NONE;
-		common_data_->setIsUpdate(true);
+	
+		// フェード中フラグOFF
+		is_fade_ = false;
 	}
 }
 
@@ -287,6 +327,8 @@ void SceneManager::SceneReset()
 	{
 		// フェード終了処理
 		state_ = SceneManager::State::NONE;
-		common_data_->setIsUpdate(true);
+		
+		// フェード中フラグOFF
+		is_fade_ = false;
 	}
 }

@@ -13,8 +13,6 @@
 #include "../ResultSceneState_Start.h"
 #include "../ResultScene.h"
 
-#include <GameEngine/Scene/SceneManager/SceneManager.h>
-
 #include <Object/2D/ClearLogo/ClearLogoFactory.h>
 #include <Object/2D/FailureLogo/FailureLogoFactory.h>
 #include <Object/2D/PushSpaceLogo/PushSpaceLogoFactory.h>

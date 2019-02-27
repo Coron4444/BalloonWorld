@@ -11,7 +11,6 @@
 // インクルード文
 //****************************************
 #include "../GameObjectBase.h"
-#include "../GameObjectManager/GameObjectManager.h"
 #include "../GameObjectManager/UpdateManager.h"
 #include "../../Draw/DrawBase.h"
 #include "../../Draw/DrawManager/DrawManager.h"

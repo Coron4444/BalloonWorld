@@ -13,8 +13,6 @@
 #include "../PlayerCollision.h"
 #include "../Player.h"
 
-#include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
-
 #include <Object/3D/Coin/Coin.h>
 #include <Object/3D/Coin/CoinCollision.h>
 #include <Object/3D/Enemy/EnemyCollision.h>

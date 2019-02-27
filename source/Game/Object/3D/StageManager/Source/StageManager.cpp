@@ -12,8 +12,6 @@
 //****************************************
 #include "../StageManager.h"
 
-#include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
-
 #include <Object/3D/Balloon/BalloonGroupFactory.h>
 #include <Object/3D/Player/PlayerFactory.h>
 #include <Object/3D/Needle/NeedleFactory.h>

@@ -13,8 +13,6 @@
 #include "../TutorialSceneState_End.h"
 #include "../TutorialScene.h"
 
-#include <GameEngine/Scene/SceneManager/SceneManager.h>
-
 #include <Object/2D/TutorialLogo/TutorialLogoFactory.h>
 
 #include <Scenes/GameScene/GameScene.h>

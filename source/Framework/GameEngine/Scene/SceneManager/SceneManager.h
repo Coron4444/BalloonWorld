@@ -15,8 +15,6 @@
 #include "../../Draw/DrawManager/Fade.h"
 #include "../SceneBase.h"
 
-#include <Tool/Vector3D.h>
-
 
 
 //************************************************************														   
@@ -41,30 +39,14 @@ public:
 	// 変数
 	//====================
 	private:
-		bool is_update_;		//!< 全体を更新するかフラグ
-		bool is_clear_;			//!< ゲームをクリアしたかフラグ
-		int score_ = 0;
+		
+		bool is_clear_;		//!< ゲームをクリアしたかフラグ
+		int score_;			//!< スコア
 
 	//====================
 	// プロパティ
 	//====================
 	public:
-		//----------------------------------------
-		//! @brief 更新フラグ取得関数
-		//! @details
-		//! @param void なし
-		//! @retval bool 更新の有無
-		//----------------------------------------
-		bool getIsUpdate();
-		
-		//----------------------------------------
-		//! @brief 更新フラグ設定関数
-		//! @details
-		//! @param value 更新フラグ
-		//! @retval void なし
-		//----------------------------------------
-		void setIsUpdate(bool value);
-		
 		//----------------------------------------
 		//! @brief クリアフラグ取得関数
 		//! @details
@@ -81,25 +63,47 @@ public:
 		//----------------------------------------
 		void setIsClear(bool value);
 
-		void setScore(int value);
+		//----------------------------------------
+		//! @brief スコア取得関数
+		//! @details
+		//! @param void なし
+		//! @retval int スコア
+		//----------------------------------------
 		int getScore();
+
+		//----------------------------------------
+		//! @brief スコア設定関数
+		//! @details
+		//! @param value スコア
+		//! @retval void なし
+		//----------------------------------------
+		void setScore(int value);
 		
 	//====================
 	// 関数
 	//====================
 	public:
 		//----------------------------------------
-		//! @brief リセット関数
+		//! @brief コンストラクタ
+		//! @details
+		//! @param void なし
+		//----------------------------------------
+		CommonData();
+
+		//----------------------------------------
+		//! @brief デストラクタ
+		//! @details
+		//! @param void なし
+		//----------------------------------------
+		~CommonData();
+
+		//----------------------------------------
+		//! @brief 初期化関数
 		//! @details
 		//! @param void なし
 		//! @retval void なし
 		//----------------------------------------
-		void Reset()
-		{
-			is_update_ = true;
-			is_clear_ = false;
-			score_ = 0;
-		}
+		void Init();
 	};
 
 
@@ -130,13 +134,14 @@ private:
 // 変数
 //====================
 private:
-	State state_ = State::NONE;						//!< シーンマネージャステート
-	CommonData* common_data_ = nullptr;				//!< シーン間共通データ
-	SceneBase* current_scene_ = nullptr;			//!< 現在のシーン
-	SceneBase* next_scene_ = nullptr;				//!< 次のシーン
-	Fade::Type fade_type_ = DEFAULT_FADE_TYPE;		//!< フェードタイプ
-	float fade_speed_ = DEFAULT_FADE_SPEED;			//!< フェード速度
-	XColor4 fade_color_ = DEFAULT_FADE_COLOR;		//!< フェード色
+	State state_;					//!< シーンマネージャステート
+	CommonData* common_data_;		//!< シーン間共通データ
+	SceneBase* current_scene_;		//!< 現在のシーン
+	SceneBase* next_scene_;			//!< 次のシーン
+	bool is_fade_;					//!< フェード中フラグ
+	Fade::Type fade_type_;			//!< フェードタイプ
+	float fade_speed_;				//!< フェード速度
+	XColor4 fade_color_;			//!< フェード色
 
 
 //====================
@@ -168,6 +173,14 @@ public:
 	CommonData* getpCommonData();
 	
 	//----------------------------------------
+	//! @brief フェード中フラグ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval bool フェード中の有無
+	//----------------------------------------
+	bool getIsFade();
+
+	//----------------------------------------
 	//! @brief フェードタイプ設定関数
 	//! @details
 	//! @param value フェードタイプ
@@ -196,6 +209,20 @@ public:
 // 関数
 //====================
 public:
+	//----------------------------------------
+	//! @brief コンストラクタ
+	//! @details
+	//! @param void なし
+	//----------------------------------------
+	SceneManager();
+
+	//----------------------------------------
+	//! @brief デストラクタ
+	//! @details
+	//! @param void なし
+	//----------------------------------------
+	~SceneManager();
+
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details

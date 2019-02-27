@@ -14,9 +14,6 @@
 #include "../GameSceneState_Play.h"
 #include "../GameScene.h"
 
-#include <GameEngine/Draw/DrawManager/DrawManager.h>
-#include <GameEngine/Scene/SceneManager/SceneManager.h>
-
 #include <Object/3D/StageManager/StageManager.h>
 
 #include <Scenes/ResultScene/ResultScene.h>
@@ -44,7 +41,7 @@ void GameSceneState_Start::Init()
 void GameSceneState_Start::Update()
 {
 	// フェードイン中は排除
-	if (!game_scene_->getpSceneManager()->getpCommonData()->getIsUpdate()) return;
+	if (game_scene_->getpSceneManager()->getIsFade()) return;
 
 	// スタートロゴアニメーション終了時
 	game_scene_->setState(new GameSceneState_Play());
