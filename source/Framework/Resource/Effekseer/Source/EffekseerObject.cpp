@@ -13,10 +13,6 @@
 #include <codecvt>
 
 #include "../EffekseerObject.h"
-#include "../EffekseerManager/EffekseerManager.h"
-
-#include <GameEngine/Renderer/Renderer.h>
-#include <Tool/SafeRelease.h>
 
 
 

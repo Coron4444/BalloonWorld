@@ -18,10 +18,6 @@
 #include "../../../../GameObject/GameObjectBase.h"
 #include "../../../../Collision/BulletPhysics/BulletPhysicsManager/BulletPhysicsManager.h"
 
-#include <GameEngine/Renderer/Renderer.h>
-#include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

@@ -12,13 +12,12 @@
 //****************************************
 #include "../Keyboard.h"
 
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************
 // 定数定義
 //****************************************
+const DWORD Keyboard::INPUT_VERSION = 0x0800;
 const int Keyboard::LIMIT_COUNT_REPEAT = 20;
 
 
@@ -170,7 +169,7 @@ HRESULT Keyboard::InitDirectInput(HINSTANCE hInstance, HWND hWnd)
 	if (direct_input_ == NULL)
 	{
 		// DirectInputオブジェクトの作成
-		if (FAILED(DirectInput8Create(hInstance, DIRECTINPUT_VERSION,
+		if (FAILED(DirectInput8Create(hInstance, Keyboard::INPUT_VERSION,
 									  IID_IDirectInput8, (void**)&direct_input_, NULL)))
 		{
 			return E_FAIL;

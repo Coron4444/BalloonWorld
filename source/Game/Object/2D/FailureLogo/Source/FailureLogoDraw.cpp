@@ -12,9 +12,6 @@
 //****************************************
 #include "../FailureLogoDraw.h"
 
-#include <Resource/Polygon/PlanePolygon.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

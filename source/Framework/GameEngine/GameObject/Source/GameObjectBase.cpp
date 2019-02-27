@@ -18,8 +18,6 @@
 #include "../../Collision/CollisionBase.h"
 #include "../../Collision/CollisionManager/CollisionManager.h"
 
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

@@ -19,8 +19,6 @@
 #include <btBulletDynamicsCommon.h>
 #pragma warning(pop)
 
-#include <Tool/Vector3D.h>
-
 
 
 //************************************************************														   

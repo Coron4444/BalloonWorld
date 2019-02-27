@@ -11,10 +11,6 @@
 // インクルード文
 //****************************************
 #include "../CameraState_Normal.h"
-#include "../../../Input/InputManager/InputManager.h"
-
-#include <Tool/Vector3D.h>
-#include <Tool/MeterToFrame.h>
 
 
 

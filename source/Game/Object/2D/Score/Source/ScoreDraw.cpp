@@ -13,10 +13,6 @@
 #include "../ScoreDraw.h"
 #include "../Score.h"
 
-#include <Resource/Polygon/NumbersPolygon.h>
-#include <Resource/Polygon/PlanePolygon.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

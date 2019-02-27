@@ -13,10 +13,6 @@
 #include "../TimeDraw.h"
 #include "../Time.h"
 
-#include <Resource/Polygon/NumbersPolygon.h>
-#include <Resource/Polygon/PlanePolygon.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

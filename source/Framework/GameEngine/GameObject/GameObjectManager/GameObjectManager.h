@@ -16,8 +16,6 @@
 #include "../../Draw/DrawManager/DrawManager.h"
 #include "../../Collision/CollisionManager/CollisionManager.h"
 
-#include <Tool/LimitedPointerArray.h>
-
 
 
 //****************************************

@@ -15,10 +15,6 @@
 #include "CollisionShapeBase.h"
 #include "Plane.h"
 
-#include <Tool/Axis.h>
-#include <Tool/Vector3D.h>
-#include <Tool/Matrix.h>
-
 
 
 //************************************************************														   

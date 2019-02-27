@@ -12,13 +12,9 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <vector>
-
 #include "LinerOctree.h"
 #include "../CollisionObject.h"
 #include "../CollisionInformation.h"
-
-#include <Tool/LimitedPointerArray.h>
 
 
 

@@ -12,8 +12,6 @@
 //****************************************
 #include "../VertexShaderCookTorrance.h"
 
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

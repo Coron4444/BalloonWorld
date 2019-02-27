@@ -12,16 +12,12 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <string>
-#include <vector>
 #pragma warning(push)
 #pragma warning(disable: 4100)
 #pragma warning(disable: 4099)
 #include "Effekseer.h"
 #include "EffekseerRendererDX9.h"
 #pragma warning(pop)
-
-#include <Tool/Transform.h>
 
 
 

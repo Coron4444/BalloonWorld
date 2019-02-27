@@ -12,8 +12,6 @@
 //****************************************
 #include "../VertexShaderBlinnPhong.h"
 
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

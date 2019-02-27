@@ -11,10 +11,6 @@
 // インクルード文
 //****************************************
 #include "../ModelXObject.h"
-#include "../ModelXManager/ModelXManager.h"
-#include "../../Texture/TextureManager/TextureManager.h"
-
-#include <Tool/SafeRelease.h>
 
 
 

@@ -11,12 +11,6 @@
 // インクルード文
 //****************************************
 #include "../MdBinObject.h"
-#include "../MdbinManager/MdBinManager.h"
-#include "../../Texture/TextureManager/TextureManager.h"
-
-#include <GameEngine/Renderer/Renderer.h>
-#include <Tool/SafeRelease.h>
-#include <Tool/Vector3D.h>
 
 
 

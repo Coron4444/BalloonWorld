@@ -14,8 +14,6 @@
 //****************************************
 #include "Shader/ShaderManager/ShaderManager.h"
 
-#include <Tool/BitFlag.h>
-
 
 
 //************************************************************														   

@@ -12,9 +12,6 @@
 //****************************************
 #include "../ClearLogoDraw.h"
 #include "../ClearLogo.h"
-#include <Resource/Polygon/NumbersPolygon.h>
-#include <Resource/Polygon/PlanePolygon.h>
-#include <Tool/SafeRelease.h>
 
 
 

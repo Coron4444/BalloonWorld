@@ -15,10 +15,6 @@
 #include "../../RenderTexturePolygon.h"
 #include "../../Shader/ShaderManager/ShaderManager.h"
 #include "../../../Camera/Camera.h"
-#include "../../../../Renderer/Renderer.h"
-#include "../../../../GameEngine.h"
-
-#include <Tool/SafeRelease.h>
 
 
 

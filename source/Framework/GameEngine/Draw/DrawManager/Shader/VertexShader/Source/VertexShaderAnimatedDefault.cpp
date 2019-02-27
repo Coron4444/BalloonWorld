@@ -12,8 +12,6 @@
 //****************************************
 #include "../VertexShaderAnimatedDefault.h"
 
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

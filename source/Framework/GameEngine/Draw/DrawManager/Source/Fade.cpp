@@ -11,13 +11,6 @@
 // インクルード文
 //****************************************
 #include "../Fade.h"
-#include "../../../Renderer/Renderer.h"
-
-#include <Resource/Texture/TextureManager/TextureManager.h>
-#include <Resource/Polygon/PlanePolygon.h>
-#include <Tool/SafeRelease.h>
-#include <Tool/TimeToFrame.h>
-#include <Tool/Transform.h>
 
 
 

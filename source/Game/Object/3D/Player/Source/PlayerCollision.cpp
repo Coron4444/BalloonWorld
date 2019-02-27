@@ -13,9 +13,7 @@
 #include "../PlayerCollision.h"
 #include "../Player.h"
 
-#include <GameEngine/Renderer/Renderer.h>
 #include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
-#include <Resource/Sound/SoundManager.h>
 
 #include <Object/3D/Coin/Coin.h>
 #include <Object/3D/Coin/CoinCollision.h>
@@ -26,7 +24,6 @@
 #include <Object/3D/Scaffold/Scaffold.h>
 #include <Object/3D/Balloon/BalloonGroup.h>
 #include <Object/3D/StartBlock/StartBlockCollision.h>
-#include <Resource/Polygon/MeshPlanePolygon.h>
 
 
 

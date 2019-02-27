@@ -13,8 +13,6 @@
 #include "../BulletPhysicsObject.h"
 #include "../BulletPhysicsManager/BulletPhysicsManager.h"
 
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

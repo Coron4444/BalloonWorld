@@ -13,8 +13,6 @@
 #include "../Renderer.h"
 #include "../RendererFactoryInterface.h"
 
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

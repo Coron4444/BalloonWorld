@@ -13,8 +13,6 @@
 #include "../GameObjectManager.h"
 #include "../../GameObjectBase.h"
 
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

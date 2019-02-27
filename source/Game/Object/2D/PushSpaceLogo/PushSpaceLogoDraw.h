@@ -12,10 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <string>
-
 #include <GameEngine/Draw/DrawNull.h>
-#include <Resource/Texture/TextureManager/TextureManager.h>
 
 
 

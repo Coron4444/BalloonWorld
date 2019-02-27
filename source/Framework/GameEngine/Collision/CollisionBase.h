@@ -17,10 +17,6 @@
 #include "CollisionManager/CollisionCalculation.h"
 #include "CollisionInformation.h"
 
-#include <Tool/LimitedPointerArray.h>
-#include <Tool/Transform.h>
-#include <Tool/Vector3D.h>
-
 
 
 //************************************************************														   

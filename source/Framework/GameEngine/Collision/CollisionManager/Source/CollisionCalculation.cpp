@@ -21,8 +21,6 @@
 #include "../../CollisionShape/Triangle.h"
 #include "../../CollisionInformation.h"
 
-#include <Tool/QuadraticEquation.h>
-
 
 
 //****************************************

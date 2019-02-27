@@ -13,9 +13,6 @@
 #include "../PushSpaceLogoDraw.h"
 #include "../PushSpaceLogo.h"
 
-#include <Resource/Polygon/PlanePolygon.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

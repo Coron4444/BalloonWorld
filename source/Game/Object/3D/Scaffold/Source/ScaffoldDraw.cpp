@@ -13,15 +13,6 @@
 #include "../ScaffoldDraw.h"
 #include "../Scaffold.h"
 
-#include <Resource/Polygon/CubePolygon.h>
-#include <Tool/SafeRelease.h>
-
-
-
-//****************************************
-// ’è”’è‹`
-//****************************************
-
 
 
 //****************************************

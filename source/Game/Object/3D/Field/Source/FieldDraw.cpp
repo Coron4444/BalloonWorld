@@ -13,8 +13,6 @@
 #include "../FieldDraw.h"
 #include "../Field.h"
 
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

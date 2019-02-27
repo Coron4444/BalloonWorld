@@ -12,10 +12,6 @@
 //****************************************
 #include "../CameraState_HomingTarget.h"
 #include "../../../GameObject/GameObjectBase.h"
-#include "../../../Input/InputManager/InputManager.h"
-
-#include <Tool/Vector3D.h>
-#include <Tool/MeterToFrame.h>
 
 
 

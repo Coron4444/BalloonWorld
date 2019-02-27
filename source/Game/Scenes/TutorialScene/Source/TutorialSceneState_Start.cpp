@@ -16,8 +16,6 @@
 
 #include <GameEngine/Scene/SceneManager/SceneManager.h>
 #include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
-#include <GameEngine/Input/InputManager/InputManager.h>
-#include <Resource/Sound/SoundManager.h>
 
 #include <Object/2D/TutorialLogo/TutorialLogoFactory.h>
 #include <Object/2D/PushSpaceLogo/PushSpaceLogoFactory.h>

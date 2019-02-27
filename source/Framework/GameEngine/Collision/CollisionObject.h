@@ -22,9 +22,6 @@
 #include "CollisionShape/Triangle.h"
 #include "CollisionManager/ObjectOfTree.h"
 
-#include <Tool/LimitedPointerArray.h>
-#include <Tool/Vector3D.h>
-
 
 
 //****************************************

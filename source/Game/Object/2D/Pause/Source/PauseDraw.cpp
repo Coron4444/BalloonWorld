@@ -13,9 +13,6 @@
 #include "../PauseDraw.h"
 #include "../Pause.h"
 
-#include <Resource/Polygon/PlanePolygon.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

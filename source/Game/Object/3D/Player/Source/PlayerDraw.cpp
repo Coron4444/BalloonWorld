@@ -14,10 +14,6 @@
 #include "../Player.h"
 
 #include <GameEngine/Draw/DrawManager/Shader/VertexShader/VertexShaderBumpMapping.h>
-#include <Resource/ModelX/ModelXManager/ModelXManager.h>
-#include <Resource/MdBin/MdBinManager/MdBinManager.h>
-#include <Resource/Texture/TextureManager/TextureManager.h>
-#include <Tool/SafeRelease.h>
 
 
 

@@ -13,12 +13,8 @@
 #include "../Player.h"
 
 #include <GameEngine/Draw/Camera/Camera.h>
-#include <GameEngine/Input/InputManager/InputManager.h>
 #include <GameEngine/Collision/BulletPhysics/BulletPhysicsManager/BulletPhysicsManager.h>
-#include <Resource/Sound/SoundManager.h>
 
-#include <Tool/MeterToFrame.h>
-#include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>
 #include <Object/3D/Balloon/BalloonGroup.h>
 
 

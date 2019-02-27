@@ -12,11 +12,7 @@
 //****************************************
 #include "../Pause.h"
 
-#include <GameEngine/Input/InputManager/InputManager.h>
 #include <GameEngine/Draw/DrawBase.h>
-#include <Resource/Sound/SoundManager.h>
-
-#include <Tool/TimeToFrame.h>
 
 
 

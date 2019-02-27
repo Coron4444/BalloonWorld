@@ -12,8 +12,6 @@
 //****************************************
 // インクルード文
 //****************************************
-#include < Windows.h >
-#define DIRECTINPUT_VERSION	(0x0800)
 #include < dinput.h >
 
 
@@ -29,8 +27,9 @@ class Keyboard
 // 定数
 //====================
 private:
+	static const DWORD INPUT_VERSION;			//!< ダイレクトインプットバージョン
 	static const int MAX_KEY_NUM = 256;			//!< キーの最大数
-	static const int LIMIT_COUNT_REPEAT;	//!< リピートカウントリミット
+	static const int LIMIT_COUNT_REPEAT;		//!< リピートカウントリミット
 
 
 //====================

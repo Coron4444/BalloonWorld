@@ -20,9 +20,6 @@
 #include <LinearMath/btIDebugDraw.h>
 #pragma warning(pop)
 
-#include <GameEngine/Renderer/Renderer.h>
-#include <Tool/Transform.h>
-
 
 
 //****************************************

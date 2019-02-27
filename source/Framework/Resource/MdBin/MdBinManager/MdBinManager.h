@@ -12,12 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <string>
-#include <vector>
-#include <unordered_map>
-
 #include "../MdBinObject.h"
-#include "../../Texture/TextureManager/TextureManager.h"
 
 
 

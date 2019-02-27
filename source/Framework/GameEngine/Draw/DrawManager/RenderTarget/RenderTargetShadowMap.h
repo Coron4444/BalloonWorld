@@ -14,8 +14,6 @@
 //****************************************
 #include "../../Camera/Camera.h"
 
-#include <Tool/LimitedPointerArray.h>
-
 
 
 //****************************************

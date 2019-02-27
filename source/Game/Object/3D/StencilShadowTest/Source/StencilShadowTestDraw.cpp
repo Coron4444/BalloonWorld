@@ -12,12 +12,6 @@
 //****************************************
 #include "../StencilShadowTestDraw.h"
 
-#include <GameEngine/GameEngine.h>
-#include <Resource/Polygon/PlanePolygon.h>
-#include <Resource/ModelX/ModelXManager/ModelXManager.h>
-#include <Resource/Texture/TextureManager/TextureManager.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

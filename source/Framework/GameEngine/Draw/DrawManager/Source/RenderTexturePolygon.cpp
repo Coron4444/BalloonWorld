@@ -11,11 +11,6 @@
 // インクルード文
 //****************************************
 #include "../RenderTexturePolygon.h"
-#include "../../../Renderer/Renderer.h"
-
-#include <Resource/Polygon/PlanePolygon.h>
-#include <Tool/SafeRelease.h>
-#include <Tool/Transform.h>
 
 
 

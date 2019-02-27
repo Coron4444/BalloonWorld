@@ -11,9 +11,7 @@
 // インクルード文
 //****************************************
 #include "../CameraState_CrawlUp.h"
-#include "../../../Input/InputManager/InputManager.h"
 
-#include <Tool/MeterToFrame.h>
 
 
 //****************************************

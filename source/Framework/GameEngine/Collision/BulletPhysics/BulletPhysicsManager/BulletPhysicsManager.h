@@ -18,13 +18,9 @@
 #pragma warning(disable: 4127)
 #include <btBulletDynamicsCommon.h>
 #pragma warning(pop)
-#include <vector>
-#include <list>
 
 #include "../BulletPhysicsObject.h"
 #include "../BulletPhysicsConstraint.h"
-
-#include <Tool/Vector3D.h>
 
 
 

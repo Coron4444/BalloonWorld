@@ -14,9 +14,6 @@
 #include "../ResultScene.h"
 
 #include <GameEngine/Scene/SceneManager/SceneManager.h>
-#include <GameEngine/Input/InputManager/InputManager.h>
-#include <Resource/Sound/SoundManager.h>
-#include <Tool/SafeRelease.h>
 
 #include <Object/2D/ClearLogo/ClearLogoFactory.h>
 #include <Object/2D/FailureLogo/FailureLogoFactory.h>

@@ -12,12 +12,7 @@
 //****************************************
 #include <algorithm>
 
-#include "../EffekseerManager.h"
-
-#include <GameEngine/GameEngine.h>
-#include <GameEngine/Renderer/Renderer.h>
 #include <GameEngine/Draw/Camera/Camera.h>
-#include <Tool/SafeRelease.h>
 
 
 

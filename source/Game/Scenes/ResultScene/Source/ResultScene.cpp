@@ -12,8 +12,6 @@
 //****************************************
 #include "../ResultScene.h"
 
-#include <Resource/Sound/SoundManager.h>
-
 
 
 //****************************************

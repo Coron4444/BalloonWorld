@@ -12,8 +12,6 @@
 //****************************************
 #include "../VertexShaderDefault.h"
 
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

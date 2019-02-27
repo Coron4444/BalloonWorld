@@ -12,8 +12,6 @@
 //****************************************
 #include "../TutorialScene.h"
 
-#include <Resource/Sound/SoundManager.h>
-
 
 
 //****************************************

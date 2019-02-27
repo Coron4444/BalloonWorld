@@ -12,9 +12,6 @@
 #include "../TutorialLogoDraw.h"
 #include "../TutorialLogo.h"
 
-#include <Resource/Polygon/PlanePolygon.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

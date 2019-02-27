@@ -12,10 +12,6 @@
 //****************************************
 #include "../PlanePolygon.h"
 
-#include <GameEngine/GameEngine.h>
-#include <Resource/Texture/TextureObject.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

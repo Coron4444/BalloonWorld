@@ -12,12 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <string>
-
 #include "../DrawNull.h"
-
-#include <Tool/Vector3D.h>
-#include <Tool/Interpolation.h>
 
 
 

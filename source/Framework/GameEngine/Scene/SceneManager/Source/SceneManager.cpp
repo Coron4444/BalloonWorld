@@ -11,10 +11,7 @@
 // インクルード文
 //****************************************
 #include "../SceneManager.h"
-#include "../../../GameEngine.h"
 #include "../../../GameObject/GameObjectManager/GameObjectManager.h"
-
-#include <Tool/SafeRelease.h>
 
 
 

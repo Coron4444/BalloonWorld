@@ -15,7 +15,6 @@
 #include "../DrawCommonData.h"
 #include "../../DrawBase.h"
 #include "../../Camera/Camera.h"
-#include "../../../Renderer/Renderer.h"
 
 
 

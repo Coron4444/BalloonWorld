@@ -12,13 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <windows.h>
-#include <string>
-#include <vector>
-
 #include "MdBinData.h"
-#include <Tool/Vector3D.h>
-#include <Tool/Matrix.h>
 
 
 

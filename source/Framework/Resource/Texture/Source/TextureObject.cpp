@@ -11,9 +11,6 @@
 // インクルード文
 //****************************************
 #include "../TextureObject.h"
-#include "../TextureManager/TextureManager.h"
-
-#include <Tool/SafeRelease.h>
 
 
 

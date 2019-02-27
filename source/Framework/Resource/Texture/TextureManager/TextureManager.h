@@ -12,10 +12,6 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <string>
-#include <vector>
-#include <unordered_map>
-
 #include "../TextureObject.h"
 
 

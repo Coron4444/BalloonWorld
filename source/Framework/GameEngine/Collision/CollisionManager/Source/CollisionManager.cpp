@@ -16,11 +16,6 @@
 #include "../../CollisionBase.h"
 #include "../../../GameObject/GameObjectBase.h"
 
-#include <Resource/Polygon/MeshPlanePolygon.h>
-#include <Tool/SafeRelease.h>
-#include <Tool/Debug/ImGUI/imgui.h>
-#include <Tool/Debug/ImGUI/imgui_impl_dx9.h>
-
 
 
 //****************************************

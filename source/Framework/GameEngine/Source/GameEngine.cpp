@@ -11,30 +11,14 @@
 // インクルード文
 //****************************************
 #include "../GameEngine.h"
-#include "../Renderer/Renderer.h"
 #include "../Renderer/RendererFactoryDirectX9.h"
 #include "../Scene/SceneManager/SceneManager.h"
-#include "../Input/InputManager/InputManager.h"
 #include "../Collision/BulletPhysics/BulletPhysicsManager/BulletPhysicsManager.h"
-
-#include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>
-#include <Resource/Texture/TextureManager/TextureManager.h>
-#include <Resource/ModelX/ModelXManager/ModelXManager.h>
-#include <Resource/MdBin/MdBinManager/MdBinManager.h>
-#include <Resource/Sound/SoundManager.h>
-#include <Tool/SafeRelease.h>
-#include <Tool/Random.h>
 
 #include <Scenes/TitleScene/TitleScene.h>
 #include <Scenes/TitleScene/TitleSceneState_Start.h>
 #include <Scenes/GameScene/GameScene.h>
 #include <Scenes/GameScene/GameSceneState_Start.h>
-
-
-//#ifdef _DEBUG
-#include <Tool/Debug/ImGUI/imgui.h>
-#include <Tool/Debug/ImGUI/imgui_impl_dx9.h>
-//#endif
 
 
 

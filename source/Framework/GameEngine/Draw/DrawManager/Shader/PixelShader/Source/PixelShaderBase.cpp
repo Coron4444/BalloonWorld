@@ -12,9 +12,6 @@
 //****************************************
 #include "../PixelShaderBase.h"
 
-#include <Resource/Texture/TextureManager/TextureManager.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

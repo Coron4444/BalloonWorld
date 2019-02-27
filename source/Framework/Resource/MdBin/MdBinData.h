@@ -9,18 +9,6 @@
 
 
 
-//****************************************
-// インクルード文
-//****************************************
-#include <stdio.h>
-#include <vector>
-#include <string>
-#include <boost/serialization/serialization.hpp>
-#include <boost/serialization/string.hpp>
-#include <boost/serialization/vector.hpp>
-
-
-
 //************************************************************														   
 //! @brief   バイナリーモデルデータClass
 //!

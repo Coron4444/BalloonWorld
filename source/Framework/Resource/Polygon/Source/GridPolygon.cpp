@@ -12,9 +12,6 @@
 //****************************************
 #include "../GridPolygon.h"
 
-#include <Tool/SafeRelease.h>
-#include <Tool/Vector3D.h>
-
 
 
 //****************************************

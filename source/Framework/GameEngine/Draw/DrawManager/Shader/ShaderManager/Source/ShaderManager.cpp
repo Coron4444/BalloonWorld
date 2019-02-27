@@ -29,8 +29,6 @@
 #include "../../PixelShader/PixelShaderNull.h"
 #include "../../../../DrawBase.h"
 
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

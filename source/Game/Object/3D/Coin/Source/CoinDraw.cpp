@@ -13,9 +13,6 @@
 #include "../CoinDraw.h"
 #include "../Coin.h"
 
-#include <Resource/Polygon/PlanePolygon.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

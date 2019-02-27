@@ -19,10 +19,7 @@
 #include "../Shader/ShaderManager/ShaderManager.h"
 #include "../../DrawBase.h"
 #include "../../../GameObject/GameObjectBase.h"
-#include "../../../GameEngine.h"
 #include "../PostEffect/MotionBlur.h"
-
-#include <Tool/SafeRelease.h>
 
 
 

@@ -12,11 +12,6 @@
 //****************************************
 // インクルード文
 //****************************************
-#ifdef _DEBUG
-#include <Tool/Debug/ImGUI/imgui.h>
-#include <Tool/Debug/ImGUI/imgui_impl_dx9.h>
-#endif
-
 #include "GameObject/GameObjectBase.h"
 
 

@@ -12,10 +12,6 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <string>
-#include <list>
-#include <unordered_map>
-
 #include "../EffekseerObject.h"
 
 

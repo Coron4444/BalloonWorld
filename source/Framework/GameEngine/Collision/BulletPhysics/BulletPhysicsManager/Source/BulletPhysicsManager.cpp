@@ -14,9 +14,6 @@
 #include "../../BulletPhysicsDebug.h"
 
 
-#include <Tool/SafeRelease.h>
-#include <GameEngine/Input/InputManager/InputManager.h>
-
 
 //****************************************
 // ’è”’è‹`

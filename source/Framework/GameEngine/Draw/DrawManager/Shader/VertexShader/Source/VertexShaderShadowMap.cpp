@@ -12,8 +12,6 @@
 //****************************************
 #include "../VertexShaderShadowMap.h"
 
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

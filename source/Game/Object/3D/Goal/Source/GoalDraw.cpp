@@ -12,10 +12,6 @@
 //****************************************
 #include "../GoalDraw.h"
 
-#include <Resource/Effekseer/EffekseerManager/EffekseerManager.h>
-#include <Resource/Polygon/CubePolygon.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

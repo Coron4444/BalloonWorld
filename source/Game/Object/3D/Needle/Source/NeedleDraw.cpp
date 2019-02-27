@@ -12,9 +12,6 @@
 //****************************************
 #include "../NeedleDraw.h"
 
-#include <Resource/ModelX/ModelXManager/ModelXManager.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

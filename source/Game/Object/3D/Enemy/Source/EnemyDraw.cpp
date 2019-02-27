@@ -13,9 +13,6 @@
 #include "../EnemyDraw.h"
 #include "../Enemy.h"
 
-#include <Resource/Polygon/CubePolygon.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

@@ -11,9 +11,6 @@
 // インクルード文
 //****************************************
 #include "../Camera.h"
-#include "../../../GameEngine.h"
-
-#include <Tool/SafeRelease.h>
 
 
 

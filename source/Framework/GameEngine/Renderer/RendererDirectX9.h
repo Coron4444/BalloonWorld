@@ -12,12 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <d3d9.h>
-#include <d3dx9.h>
-
 #include "RendererInterface.h"
-
-#include <Tool/Vector3D.h>
 
 
 

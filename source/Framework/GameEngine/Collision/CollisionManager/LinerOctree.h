@@ -12,15 +12,8 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <windows.h>
-#include <vector>
-#include <list>
-
 #include "ObjectOfTree.h"
 #include "SpaceOfTree.h"
-
-#include <Tool/Vector3D.h>
-#include <Tool/SafeRelease.h>
 
 
 

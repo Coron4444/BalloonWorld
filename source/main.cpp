@@ -10,11 +10,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <windows.h>
 #include <crtdbg.h>
-
-#include <GameEngine/GameEngine.h>
-#include <Tool/SafeRelease.h>
 
 
 

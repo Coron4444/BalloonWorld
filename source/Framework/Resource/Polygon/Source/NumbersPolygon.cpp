@@ -11,11 +11,7 @@
 // インクルード文
 //****************************************
 #include "../NumbersPolygon.h"
-#include "../PlanePolygon.h"
 #include "../../Texture/TextureObject.h"
-
-#include <GameEngine/Renderer/Renderer.h>
-#include <Tool/SafeRelease.h>
 
 
 

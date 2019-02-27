@@ -12,12 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <string>
-#include <vector>
-#include <unordered_map>
-
 #include "../ModelXObject.h"
-#include "../../Texture/TextureManager/TextureManager.h"
 
 
 

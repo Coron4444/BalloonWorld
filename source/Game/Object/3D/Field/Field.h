@@ -13,7 +13,6 @@
 // インクルード文
 //****************************************
 #include <GameEngine/GameObject/GameObjectNull.h>
-#include <Resource/Polygon/MeshPlanePolygon.h>
 
 
 

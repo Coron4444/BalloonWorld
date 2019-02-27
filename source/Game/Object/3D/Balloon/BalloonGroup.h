@@ -12,10 +12,7 @@
 //****************************************
 // インクルード文
 //****************************************
-#include <vector>
-
 #include <GameEngine/GameObject/GameObjectNull.h>
-#include <Tool/ReferenceList.h>
 
 
 

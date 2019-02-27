@@ -12,9 +12,6 @@
 //****************************************
 #include "../VertexShaderDefaultShadow.h"
 
-#include <GameEngine/GameEngine.h>
-#include <Tool/SafeRelease.h>
-
 
 
 //****************************************

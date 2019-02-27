@@ -15,12 +15,13 @@
 
 #include <GameEngine/Scene/SceneManager/SceneManager.h>
 #include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
-#include <Tool/SafeRelease.h>
 
 #include <Scenes/ResultScene/ResultScene.h>
 #include <Scenes/ResultScene/ResultSceneState_Start.h>
 
 #include <Object/3D/StageManager/StageManager.h>
+
+
 
 //****************************************
 // ŠÖ”’è‹`

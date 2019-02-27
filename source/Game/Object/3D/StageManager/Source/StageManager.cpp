@@ -12,10 +12,7 @@
 //****************************************
 #include "../StageManager.h"
 
-#include <GameEngine/Input/InputManager/InputManager.h>
 #include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
-#include <Tool/TimeToFrame.h>
-#include <Tool/Random.h>
 
 #include <Object/3D/Balloon/BalloonGroupFactory.h>
 #include <Object/3D/Player/PlayerFactory.h>

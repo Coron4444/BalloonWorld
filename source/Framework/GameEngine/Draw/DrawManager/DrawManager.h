@@ -17,9 +17,6 @@
 #include "../Camera/CameraState_CrawlUp.h"
 #include "../Camera/CameraState_HomingTarget.h"
 #include "../Camera/CameraState_Normal.h"
-#include "../../Renderer/Renderer.h"
-
-#include <Tool/LimitedPointerArray.h>
 
 
 

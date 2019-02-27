@@ -14,9 +14,7 @@
 #include "../GameSceneState_Start.h"
 
 #include <GameEngine/Scene/SceneManager/SceneManager.h>
-#include <GameEngine/Input/InputManager/InputManager.h>
 #include <GameEngine/GameObject/GameObjectManager/GameObjectManager.h>
-#include <Resource/Sound/SoundManager.h>
 
 #include <Object/2D/Score/ScoreFactory.h>
 #include <Object/2D/Pause/PauseFactory.h>
