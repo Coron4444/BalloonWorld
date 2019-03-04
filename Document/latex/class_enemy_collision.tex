@@ -2,24 +2,33 @@
 \label{class_enemy_collision}\index{Enemy\+Collision@{Enemy\+Collision}}
 
 
+敵衝突\+Class  
+
+
+
+
 {\ttfamily \#include $<$Enemy\+Collision.\+h$>$}
 
 
 
-Enemy\+Collision の継承関係図\nopagebreak
+Enemy\+Collision 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=169pt]{class_enemy_collision__inherit__graph}
+\includegraphics[width=350pt]{class_enemy_collision__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開型}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843}{Object\+Tag}} \{ \mbox{\hyperlink{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a54855bb90bae23d3697d74e0b20462a2}{N\+O\+NE}} = -\/1, 
-\mbox{\hyperlink{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a327f14f5b5cd28a3e605ff4f7066e8ce}{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+S\+P\+H\+E\+RE}}, 
-\mbox{\hyperlink{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a8c9cd2ea0a1628d412fc501c91541ab0}{S\+U\+B\+S\+T\+A\+N\+CE}}, 
-\mbox{\hyperlink{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a4283c301ae1d9317453c36d5923f7136}{M\+AX}}
+enum \mbox{\hyperlink{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843}{Object\+Tag}} \{ \mbox{\hyperlink{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843ab50339a10e1de285ac99d4c3990b8693}{Object\+Tag\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a186495f7da296bf880df3a22a492b378}{Object\+Tag\+::\+M\+A\+IN}}, 
+\mbox{\hyperlink{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a26a4b44a837bf97b972628509912b4a5}{Object\+Tag\+::\+M\+AX}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_enemy_collision_a9aaccd825f08eb5db07e51feaf609e35}{Shape\+Tag}} \{ \mbox{\hyperlink{class_enemy_collision_a9aaccd825f08eb5db07e51feaf609e35ab50339a10e1de285ac99d4c3990b8693}{Shape\+Tag\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_enemy_collision_a9aaccd825f08eb5db07e51feaf609e35a186495f7da296bf880df3a22a492b378}{Shape\+Tag\+::\+M\+A\+IN}}, 
+\mbox{\hyperlink{class_enemy_collision_a9aaccd825f08eb5db07e51feaf609e35a26a4b44a837bf97b972628509912b4a5}{Shape\+Tag\+::\+M\+AX}}
  \}
 \end{DoxyCompactItemize}
 \subsection*{公開メンバ関数}
@@ -27,32 +36,28 @@ enum \mbox{\hyperlink{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843}{O
 \item 
 void \mbox{\hyperlink{class_enemy_collision_ae5c000a30c8c4a023dd0c8e658def772}{Init}} () override
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_enemy_collision_a2a194c606fd162db803c70c6fed9b9e4}{Uninit}} () override
-\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_enemy_collision_ab54133504d867c6d2070d2f3854a0aaf}{Update}} () override
 \begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_collision_objects}{Collision\+Objects}} $\ast$ \mbox{\hyperlink{class_enemy_collision_a8d3eac14a182985164d52a8fb385bd78}{collision\+\_\+objects\+\_\+}}
-\item 
-\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$ \mbox{\hyperlink{class_enemy_collision_a065309bed90f1b2e3539cb9859bc06ef}{bounding\+\_\+sphere\+\_\+}}
-\item 
-\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$ \mbox{\hyperlink{class_enemy_collision_aa772f240ff6bb9d9cb4c6c2095b79b32}{substance\+\_\+}}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$ \mbox{\hyperlink{class_enemy_collision_a7005c91add858ed6a8b3128967ce1361}{collision\+\_\+object\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 衝突オブジェクト \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_b_b}{O\+BB}} $\ast$ \mbox{\hyperlink{class_enemy_collision_a06734d96eccaa76a7216741e4cd3ec66}{main\+\_\+obb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em メイン\+O\+BB \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-static const float \mbox{\hyperlink{class_enemy_collision_abb5e13f2f882e313baf784f04f5b465d}{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US}} = 3.\+0f
-\item 
-static const float \mbox{\hyperlink{class_enemy_collision_ab794511516a743fdd9d8f7b00ab6a967}{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+A\+D\+I\+US}} = 1.\+0f
-\end{DoxyCompactItemize}
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_enemy_collision_a2985124078e996accbfb0ecb2f553178}{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}}
+\begin{DoxyCompactList}\small\item\em メイン\+O\+B\+B長さ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
+敵衝突\+Class 
 
+敵の衝突\+Class 
 
- Enemy\+Collision.\+h の 32 行目に定義があります。
+ Enemy\+Collision.\+h の 24 行目に定義があります。
 
 
 
@@ -61,29 +66,49 @@ static const float \mbox{\hyperlink{class_enemy_collision_ab794511516a743fdd9d8f
 \index{Enemy\+Collision@{Enemy\+Collision}!Object\+Tag@{Object\+Tag}}
 \index{Object\+Tag@{Object\+Tag}!Enemy\+Collision@{Enemy\+Collision}}
 \subsubsection{\texorpdfstring{Object\+Tag}{ObjectTag}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843}{Enemy\+Collision\+::\+Object\+Tag}}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843}{Enemy\+Collision\+::\+Object\+Tag}}\hspace{0.3cm}{\ttfamily [strong]}}
 
 \begin{DoxyEnumFields}{列挙値}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Enemy\+Collision@{Enemy\+Collision}}\index{Enemy\+Collision@{Enemy\+Collision}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a54855bb90bae23d3697d74e0b20462a2}\label{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a54855bb90bae23d3697d74e0b20462a2}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Enemy\+Collision@{Enemy\+Collision}}\index{Enemy\+Collision@{Enemy\+Collision}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843ab50339a10e1de285ac99d4c3990b8693}\label{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843ab50339a10e1de285ac99d4c3990b8693}} 
 N\+O\+NE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+S\+P\+H\+E\+RE@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+S\+P\+H\+E\+RE}!Enemy\+Collision@{Enemy\+Collision}}\index{Enemy\+Collision@{Enemy\+Collision}!B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+S\+P\+H\+E\+RE@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+S\+P\+H\+E\+RE}}}\mbox{\Hypertarget{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a327f14f5b5cd28a3e605ff4f7066e8ce}\label{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a327f14f5b5cd28a3e605ff4f7066e8ce}} 
-B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+S\+P\+H\+E\+RE&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+IN@{M\+A\+IN}!Enemy\+Collision@{Enemy\+Collision}}\index{Enemy\+Collision@{Enemy\+Collision}!M\+A\+IN@{M\+A\+IN}}}\mbox{\Hypertarget{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a186495f7da296bf880df3a22a492b378}\label{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a186495f7da296bf880df3a22a492b378}} 
+M\+A\+IN&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+U\+B\+S\+T\+A\+N\+CE@{S\+U\+B\+S\+T\+A\+N\+CE}!Enemy\+Collision@{Enemy\+Collision}}\index{Enemy\+Collision@{Enemy\+Collision}!S\+U\+B\+S\+T\+A\+N\+CE@{S\+U\+B\+S\+T\+A\+N\+CE}}}\mbox{\Hypertarget{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a8c9cd2ea0a1628d412fc501c91541ab0}\label{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a8c9cd2ea0a1628d412fc501c91541ab0}} 
-S\+U\+B\+S\+T\+A\+N\+CE&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Enemy\+Collision@{Enemy\+Collision}}\index{Enemy\+Collision@{Enemy\+Collision}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a4283c301ae1d9317453c36d5923f7136}\label{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a4283c301ae1d9317453c36d5923f7136}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Enemy\+Collision@{Enemy\+Collision}}\index{Enemy\+Collision@{Enemy\+Collision}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a26a4b44a837bf97b972628509912b4a5}\label{class_enemy_collision_a8423c2c1dce9ba8ab2ba9bed82ee4843a26a4b44a837bf97b972628509912b4a5}} 
 M\+AX&\\
 \hline
 
 \end{DoxyEnumFields}
 
 
- Enemy\+Collision.\+h の 43 行目に定義があります。
+ Enemy\+Collision.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_enemy_collision_a9aaccd825f08eb5db07e51feaf609e35}\label{class_enemy_collision_a9aaccd825f08eb5db07e51feaf609e35}} 
+\index{Enemy\+Collision@{Enemy\+Collision}!Shape\+Tag@{Shape\+Tag}}
+\index{Shape\+Tag@{Shape\+Tag}!Enemy\+Collision@{Enemy\+Collision}}
+\subsubsection{\texorpdfstring{Shape\+Tag}{ShapeTag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_enemy_collision_a9aaccd825f08eb5db07e51feaf609e35}{Enemy\+Collision\+::\+Shape\+Tag}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Enemy\+Collision@{Enemy\+Collision}}\index{Enemy\+Collision@{Enemy\+Collision}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_enemy_collision_a9aaccd825f08eb5db07e51feaf609e35ab50339a10e1de285ac99d4c3990b8693}\label{class_enemy_collision_a9aaccd825f08eb5db07e51feaf609e35ab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+IN@{M\+A\+IN}!Enemy\+Collision@{Enemy\+Collision}}\index{Enemy\+Collision@{Enemy\+Collision}!M\+A\+IN@{M\+A\+IN}}}\mbox{\Hypertarget{class_enemy_collision_a9aaccd825f08eb5db07e51feaf609e35a186495f7da296bf880df3a22a492b378}\label{class_enemy_collision_a9aaccd825f08eb5db07e51feaf609e35a186495f7da296bf880df3a22a492b378}} 
+M\+A\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Enemy\+Collision@{Enemy\+Collision}}\index{Enemy\+Collision@{Enemy\+Collision}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_enemy_collision_a9aaccd825f08eb5db07e51feaf609e35a26a4b44a837bf97b972628509912b4a5}\label{class_enemy_collision_a9aaccd825f08eb5db07e51feaf609e35a26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Enemy\+Collision.\+h の 37 行目に定義があります。
 
 
 
@@ -114,35 +139,7 @@ M\+AX&\\
 
 
 
- Enemy\+Collision.\+cpp の 47 行目に定義があります。
-
-\mbox{\Hypertarget{class_enemy_collision_a2a194c606fd162db803c70c6fed9b9e4}\label{class_enemy_collision_a2a194c606fd162db803c70c6fed9b9e4}} 
-\index{Enemy\+Collision@{Enemy\+Collision}!Uninit@{Uninit}}
-\index{Uninit@{Uninit}!Enemy\+Collision@{Enemy\+Collision}}
-\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
-{\footnotesize\ttfamily void Enemy\+Collision\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-終了関数 
-
-
-\begin{DoxyParams}{引数}
-{\em void} & なし \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyRetVals}{戻り値}
-{\em void} & なし \\
-\hline
-\end{DoxyRetVals}
-
-
-\mbox{\hyperlink{class_collision_null_aafac3fdab43845465fd1e0198c423ccf}{Collision\+Null}}を再実装しています。
-
-
-
- Enemy\+Collision.\+cpp の 90 行目に定義があります。
+ Enemy\+Collision.\+cpp の 28 行目に定義があります。
 
 \mbox{\Hypertarget{class_enemy_collision_ab54133504d867c6d2070d2f3854a0aaf}\label{class_enemy_collision_ab54133504d867c6d2070d2f3854a0aaf}} 
 \index{Enemy\+Collision@{Enemy\+Collision}!Update@{Update}}
@@ -170,64 +167,56 @@ M\+AX&\\
 
 
 
- Enemy\+Collision.\+cpp の 104 行目に定義があります。
+ Enemy\+Collision.\+cpp の 47 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
-\mbox{\Hypertarget{class_enemy_collision_a065309bed90f1b2e3539cb9859bc06ef}\label{class_enemy_collision_a065309bed90f1b2e3539cb9859bc06ef}} 
-\index{Enemy\+Collision@{Enemy\+Collision}!bounding\+\_\+sphere\+\_\+@{bounding\+\_\+sphere\+\_\+}}
-\index{bounding\+\_\+sphere\+\_\+@{bounding\+\_\+sphere\+\_\+}!Enemy\+Collision@{Enemy\+Collision}}
-\subsubsection{\texorpdfstring{bounding\+\_\+sphere\+\_\+}{bounding\_sphere\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_object}{Collision\+Object}}$\ast$ Enemy\+Collision\+::bounding\+\_\+sphere\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_enemy_collision_a7005c91add858ed6a8b3128967ce1361}\label{class_enemy_collision_a7005c91add858ed6a8b3128967ce1361}} 
+\index{Enemy\+Collision@{Enemy\+Collision}!collision\+\_\+object\+\_\+@{collision\+\_\+object\+\_\+}}
+\index{collision\+\_\+object\+\_\+@{collision\+\_\+object\+\_\+}!Enemy\+Collision@{Enemy\+Collision}}
+\subsubsection{\texorpdfstring{collision\+\_\+object\+\_\+}{collision\_object\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_object}{Collision\+Object}}$\ast$ Enemy\+Collision\+::collision\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Enemy\+Collision.\+h の 64 行目に定義があります。
-
-\mbox{\Hypertarget{class_enemy_collision_abb5e13f2f882e313baf784f04f5b465d}\label{class_enemy_collision_abb5e13f2f882e313baf784f04f5b465d}} 
-\index{Enemy\+Collision@{Enemy\+Collision}!B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US}}
-\index{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US}!Enemy\+Collision@{Enemy\+Collision}}
-\subsubsection{\texorpdfstring{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US}{BOUNDING\_SPHERE\_RADIUS}}
-{\footnotesize\ttfamily const float Enemy\+Collision\+::\+B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US = 3.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+衝突オブジェクト 
 
 
 
- Enemy\+Collision.\+h の 37 行目に定義があります。
+ Enemy\+Collision.\+h の 56 行目に定義があります。
 
-\mbox{\Hypertarget{class_enemy_collision_a8d3eac14a182985164d52a8fb385bd78}\label{class_enemy_collision_a8d3eac14a182985164d52a8fb385bd78}} 
-\index{Enemy\+Collision@{Enemy\+Collision}!collision\+\_\+objects\+\_\+@{collision\+\_\+objects\+\_\+}}
-\index{collision\+\_\+objects\+\_\+@{collision\+\_\+objects\+\_\+}!Enemy\+Collision@{Enemy\+Collision}}
-\subsubsection{\texorpdfstring{collision\+\_\+objects\+\_\+}{collision\_objects\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_objects}{Collision\+Objects}}$\ast$ Enemy\+Collision\+::collision\+\_\+objects\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Enemy\+Collision.\+h の 63 行目に定義があります。
-
-\mbox{\Hypertarget{class_enemy_collision_aa772f240ff6bb9d9cb4c6c2095b79b32}\label{class_enemy_collision_aa772f240ff6bb9d9cb4c6c2095b79b32}} 
-\index{Enemy\+Collision@{Enemy\+Collision}!substance\+\_\+@{substance\+\_\+}}
-\index{substance\+\_\+@{substance\+\_\+}!Enemy\+Collision@{Enemy\+Collision}}
-\subsubsection{\texorpdfstring{substance\+\_\+}{substance\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_object}{Collision\+Object}}$\ast$ Enemy\+Collision\+::substance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_enemy_collision_a06734d96eccaa76a7216741e4cd3ec66}\label{class_enemy_collision_a06734d96eccaa76a7216741e4cd3ec66}} 
+\index{Enemy\+Collision@{Enemy\+Collision}!main\+\_\+obb\+\_\+@{main\+\_\+obb\+\_\+}}
+\index{main\+\_\+obb\+\_\+@{main\+\_\+obb\+\_\+}!Enemy\+Collision@{Enemy\+Collision}}
+\subsubsection{\texorpdfstring{main\+\_\+obb\+\_\+}{main\_obb\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_b_b}{O\+BB}}$\ast$ Enemy\+Collision\+::main\+\_\+obb\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Enemy\+Collision.\+h の 65 行目に定義があります。
-
-\mbox{\Hypertarget{class_enemy_collision_ab794511516a743fdd9d8f7b00ab6a967}\label{class_enemy_collision_ab794511516a743fdd9d8f7b00ab6a967}} 
-\index{Enemy\+Collision@{Enemy\+Collision}!S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+A\+D\+I\+US@{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+A\+D\+I\+US}}
-\index{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+A\+D\+I\+US@{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+A\+D\+I\+US}!Enemy\+Collision@{Enemy\+Collision}}
-\subsubsection{\texorpdfstring{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+A\+D\+I\+US}{SUBSTANCE\_RADIUS}}
-{\footnotesize\ttfamily const float Enemy\+Collision\+::\+S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+A\+D\+I\+US = 1.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+メイン\+O\+BB 
 
 
 
- Enemy\+Collision.\+h の 38 行目に定義があります。
+ Enemy\+Collision.\+h の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_enemy_collision_a2985124078e996accbfb0ecb2f553178}\label{class_enemy_collision_a2985124078e996accbfb0ecb2f553178}} 
+\index{Enemy\+Collision@{Enemy\+Collision}!M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}}
+\index{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}!Enemy\+Collision@{Enemy\+Collision}}
+\subsubsection{\texorpdfstring{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}{MAIN\_OBB\_LENGTH}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Enemy\+Collision\+::\+M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+メイン\+O\+B\+B長さ 
+
+
+
+ Enemy\+Collision.\+h の 49 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Enemy/\+Enemy\+Collision/\mbox{\hyperlink{_enemy_collision_8h}{Enemy\+Collision.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Enemy/\+Enemy\+Collision/\mbox{\hyperlink{_enemy_collision_8cpp}{Enemy\+Collision.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Enemy/\mbox{\hyperlink{_enemy_collision_8h}{Enemy\+Collision.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Enemy/\+Source/\mbox{\hyperlink{_enemy_collision_8cpp}{Enemy\+Collision.\+cpp}}\end{DoxyCompactItemize}

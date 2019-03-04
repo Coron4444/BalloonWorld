@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/Source/DrawCommonData.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_draw_common_data_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">DrawCommonData.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_draw_common_data_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span><span class="comment">//================================================================================</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// インクルード文</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../DrawCommonData.h&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// プロパティ定義</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_draw_common_data.html#a114bdbc03af787ffb0860e1ae9ec6ef9">   19</a></span>&#160;<a class="code" href="class_vector3_d.html">Vector3D</a>* <a class="code" href="class_draw_common_data.html#a114bdbc03af787ffb0860e1ae9ec6ef9">DrawCommonData::getpDirectionalLightVector</a>()</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> &amp;<a class="code" href="class_draw_common_data.html#ad08d5a1d1a3de33977a1b4a2d7776343">directional_light_vector_</a>;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_draw_common_data.html#ac61796a143057a2d0ab729be59287e7c">   26</a></span>&#160;<a class="code" href="class_render_texture.html">RenderTexture</a>* <a class="code" href="class_draw_common_data.html#ac61796a143057a2d0ab729be59287e7c">DrawCommonData::getpRenderTextureMain</a>()</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">return</span> &amp;<a class="code" href="class_draw_common_data.html#a8fb17a79685424132ee5da7093de352d">main_</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_draw_common_data.html#a085ce497bd36164c253b1c3200287180">   33</a></span>&#160;<a class="code" href="class_render_texture.html">RenderTexture</a>* <a class="code" href="class_draw_common_data.html#a085ce497bd36164c253b1c3200287180">DrawCommonData::getpRenderTextureShadowMap</a>()</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> &amp;<a class="code" href="class_draw_common_data.html#a6cd0f6dae97b2058c9fff40b6a7cfc17">shadow_map_</a>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_draw_common_data.html#a2b356433718b5027d3f50d8860a9d6ff">   40</a></span>&#160;<a class="code" href="class_render_texture.html">RenderTexture</a>* <a class="code" href="class_draw_common_data.html#a2b356433718b5027d3f50d8860a9d6ff">DrawCommonData::getpRenderTextureMotionBlur</a>()</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> &amp;<a class="code" href="class_draw_common_data.html#a5f035e541464571beb8d2e2350981aab">motion_blur_</a>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_draw_common_data.html#a08fceba2155d3a45a3004b0aba97ea2a">   47</a></span>&#160;<a class="code" href="class_camera.html">Camera</a>* <a class="code" href="class_draw_common_data.html#a08fceba2155d3a45a3004b0aba97ea2a">DrawCommonData::getpCameraShadowMap</a>()</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_draw_common_data.html#a368fe7654d88cd5123429bd6a3f88d09">camera_shadow_map_</a>;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_draw_common_data.html#adc69a051e339523a6f0c5e1826694458">   54</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_draw_common_data.html#adc69a051e339523a6f0c5e1826694458">DrawCommonData::setCameraShadowMap</a>(<a class="code" href="class_camera.html">Camera</a>* value)</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_draw_common_data.html#a368fe7654d88cd5123429bd6a3f88d09">camera_shadow_map_</a> = value;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">// 関数定義</span></div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_draw_common_data.html#ac111688b8426f23dd97b3fd31284fcb3">   64</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_draw_common_data.html#ac111688b8426f23dd97b3fd31284fcb3">DrawCommonData::Init</a>()</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="class_draw_common_data.html#a8fb17a79685424132ee5da7093de352d">main_</a>.<a class="code" href="class_render_texture.html#a4f9b6c0ff0a336387d6a453206b04a9c">Init</a>(<a class="code" href="class_game_engine.html#a6883e12a8088b16c8cbd348d25c5811a">GameEngine::SCREEN_WIDTH</a>, <a class="code" href="class_game_engine.html#af7eb97ab8c2a0c69db805d7750abef98">GameEngine::SCREEN_HEIGHT</a>);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="class_draw_common_data.html#a6cd0f6dae97b2058c9fff40b6a7cfc17">shadow_map_</a>.<a class="code" href="class_render_texture.html#a4f9b6c0ff0a336387d6a453206b04a9c">Init</a>(1024* 10, 1024*10, D3DFMT_R32F);<span class="comment">// GameEngine::SCREEN_WIDTH, GameEngine::SCREEN_HEIGHT);// , D3DFMT_R32F);</span></div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="class_draw_common_data.html#a5f035e541464571beb8d2e2350981aab">motion_blur_</a>.<a class="code" href="class_render_texture.html#a4f9b6c0ff0a336387d6a453206b04a9c">Init</a>(<a class="code" href="class_game_engine.html#a6883e12a8088b16c8cbd348d25c5811a">GameEngine::SCREEN_WIDTH</a>, <a class="code" href="class_game_engine.html#af7eb97ab8c2a0c69db805d7750abef98">GameEngine::SCREEN_HEIGHT</a>);</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_draw_common_data.html#af19ce43b8e3eb24da78a8fa7d98d4315">   73</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_draw_common_data.html#af19ce43b8e3eb24da78a8fa7d98d4315">DrawCommonData::Uninit</a>()</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="class_draw_common_data.html#a8fb17a79685424132ee5da7093de352d">main_</a>.<a class="code" href="class_render_texture.html#a667858837eaff299a71c184ba4a7e358">Uninit</a>();</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="class_draw_common_data.html#a6cd0f6dae97b2058c9fff40b6a7cfc17">shadow_map_</a>.<a class="code" href="class_render_texture.html#a667858837eaff299a71c184ba4a7e358">Uninit</a>();</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="class_draw_common_data.html#a5f035e541464571beb8d2e2350981aab">motion_blur_</a>.<a class="code" href="class_render_texture.html#a667858837eaff299a71c184ba4a7e358">Uninit</a>();</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div><div class="ttc" id="class_draw_common_data_html_a2b356433718b5027d3f50d8860a9d6ff"><div class="ttname"><a href="class_draw_common_data.html#a2b356433718b5027d3f50d8860a9d6ff">DrawCommonData::getpRenderTextureMotionBlur</a></div><div class="ttdeci">RenderTexture * getpRenderTextureMotionBlur()</div><div class="ttdoc">モーションブラー用レンダーテクスチャ取得関数 </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8cpp_source.html#l00040">DrawCommonData.cpp:40</a></div></div>
+<div class="ttc" id="class_draw_common_data_html_a08fceba2155d3a45a3004b0aba97ea2a"><div class="ttname"><a href="class_draw_common_data.html#a08fceba2155d3a45a3004b0aba97ea2a">DrawCommonData::getpCameraShadowMap</a></div><div class="ttdeci">Camera * getpCameraShadowMap()</div><div class="ttdoc">シャドウマップ用カメラ取得関数 </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8cpp_source.html#l00047">DrawCommonData.cpp:47</a></div></div>
+<div class="ttc" id="class_render_texture_html"><div class="ttname"><a href="class_render_texture.html">RenderTexture</a></div><div class="ttdoc">レンダーテクスチャClass </div><div class="ttdef"><b>Definition:</b> <a href="_render_texture_8h_source.html#l00017">RenderTexture.h:17</a></div></div>
+<div class="ttc" id="class_draw_common_data_html_a368fe7654d88cd5123429bd6a3f88d09"><div class="ttname"><a href="class_draw_common_data.html#a368fe7654d88cd5123429bd6a3f88d09">DrawCommonData::camera_shadow_map_</a></div><div class="ttdeci">Camera * camera_shadow_map_</div><div class="ttdoc">シャドウマップ用カメラ </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8h_source.html#l00042">DrawCommonData.h:42</a></div></div>
+<div class="ttc" id="class_draw_common_data_html_af19ce43b8e3eb24da78a8fa7d98d4315"><div class="ttname"><a href="class_draw_common_data.html#af19ce43b8e3eb24da78a8fa7d98d4315">DrawCommonData::Uninit</a></div><div class="ttdeci">void Uninit()</div><div class="ttdoc">終了関数 </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8cpp_source.html#l00073">DrawCommonData.cpp:73</a></div></div>
+<div class="ttc" id="class_draw_common_data_html_ad08d5a1d1a3de33977a1b4a2d7776343"><div class="ttname"><a href="class_draw_common_data.html#ad08d5a1d1a3de33977a1b4a2d7776343">DrawCommonData::directional_light_vector_</a></div><div class="ttdeci">Vector3D directional_light_vector_</div><div class="ttdoc">拡散反射照明ベクトル </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8h_source.html#l00038">DrawCommonData.h:38</a></div></div>
+<div class="ttc" id="class_game_engine_html_af7eb97ab8c2a0c69db805d7750abef98"><div class="ttname"><a href="class_game_engine.html#af7eb97ab8c2a0c69db805d7750abef98">GameEngine::SCREEN_HEIGHT</a></div><div class="ttdeci">static const unsigned SCREEN_HEIGHT</div><div class="ttdef"><b>Definition:</b> <a href="_game_engine_8h_source.html#l00033">GameEngine.h:33</a></div></div>
+<div class="ttc" id="class_draw_common_data_html_a114bdbc03af787ffb0860e1ae9ec6ef9"><div class="ttname"><a href="class_draw_common_data.html#a114bdbc03af787ffb0860e1ae9ec6ef9">DrawCommonData::getpDirectionalLightVector</a></div><div class="ttdeci">Vector3D * getpDirectionalLightVector()</div><div class="ttdoc">拡散反射照明ベクトル取得関数 </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8cpp_source.html#l00019">DrawCommonData.cpp:19</a></div></div>
+<div class="ttc" id="class_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdoc">カメラClass </div><div class="ttdef"><b>Definition:</b> <a href="_camera_8h_source.html#l00017">Camera.h:17</a></div></div>
+<div class="ttc" id="class_draw_common_data_html_ac111688b8426f23dd97b3fd31284fcb3"><div class="ttname"><a href="class_draw_common_data.html#ac111688b8426f23dd97b3fd31284fcb3">DrawCommonData::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">初期化関数 </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8cpp_source.html#l00064">DrawCommonData.cpp:64</a></div></div>
+<div class="ttc" id="class_draw_common_data_html_ac61796a143057a2d0ab729be59287e7c"><div class="ttname"><a href="class_draw_common_data.html#ac61796a143057a2d0ab729be59287e7c">DrawCommonData::getpRenderTextureMain</a></div><div class="ttdeci">RenderTexture * getpRenderTextureMain()</div><div class="ttdoc">メイン用レンダーテクスチャ取得関数 </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8cpp_source.html#l00026">DrawCommonData.cpp:26</a></div></div>
+<div class="ttc" id="class_render_texture_html_a4f9b6c0ff0a336387d6a453206b04a9c"><div class="ttname"><a href="class_render_texture.html#a4f9b6c0ff0a336387d6a453206b04a9c">RenderTexture::Init</a></div><div class="ttdeci">void Init(int texture_width, int texture_height, _D3DFORMAT format=D3DFMT_A8R8G8B8)</div><div class="ttdoc">初期化関数 </div><div class="ttdef"><b>Definition:</b> <a href="_render_texture_8cpp_source.html#l00095">RenderTexture.cpp:95</a></div></div>
+<div class="ttc" id="class_vector3_d_html"><div class="ttname"><a href="class_vector3_d.html">Vector3D</a></div><div class="ttdoc">3DベクトルClass </div><div class="ttdef"><b>Definition:</b> <a href="_vector3_d_8h_source.html#l00038">Vector3D.h:38</a></div></div>
+<div class="ttc" id="class_render_texture_html_a667858837eaff299a71c184ba4a7e358"><div class="ttname"><a href="class_render_texture.html#a667858837eaff299a71c184ba4a7e358">RenderTexture::Uninit</a></div><div class="ttdeci">void Uninit()</div><div class="ttdoc">終了関数 </div><div class="ttdef"><b>Definition:</b> <a href="_render_texture_8cpp_source.html#l00111">RenderTexture.cpp:111</a></div></div>
+<div class="ttc" id="class_draw_common_data_html_a085ce497bd36164c253b1c3200287180"><div class="ttname"><a href="class_draw_common_data.html#a085ce497bd36164c253b1c3200287180">DrawCommonData::getpRenderTextureShadowMap</a></div><div class="ttdeci">RenderTexture * getpRenderTextureShadowMap()</div><div class="ttdoc">シャドウマップ用レンダーテクスチャ取得関数 </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8cpp_source.html#l00033">DrawCommonData.cpp:33</a></div></div>
+<div class="ttc" id="class_draw_common_data_html_adc69a051e339523a6f0c5e1826694458"><div class="ttname"><a href="class_draw_common_data.html#adc69a051e339523a6f0c5e1826694458">DrawCommonData::setCameraShadowMap</a></div><div class="ttdeci">void setCameraShadowMap(Camera *value)</div><div class="ttdoc">シャドウマップ用カメラ取得関数 </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8cpp_source.html#l00054">DrawCommonData.cpp:54</a></div></div>
+<div class="ttc" id="class_draw_common_data_html_a5f035e541464571beb8d2e2350981aab"><div class="ttname"><a href="class_draw_common_data.html#a5f035e541464571beb8d2e2350981aab">DrawCommonData::motion_blur_</a></div><div class="ttdeci">RenderTexture motion_blur_</div><div class="ttdoc">モーションブラー用レンダーテクスチャ </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8h_source.html#l00041">DrawCommonData.h:41</a></div></div>
+<div class="ttc" id="class_draw_common_data_html_a8fb17a79685424132ee5da7093de352d"><div class="ttname"><a href="class_draw_common_data.html#a8fb17a79685424132ee5da7093de352d">DrawCommonData::main_</a></div><div class="ttdeci">RenderTexture main_</div><div class="ttdoc">メイン用レンダーテクスチャ </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8h_source.html#l00039">DrawCommonData.h:39</a></div></div>
+<div class="ttc" id="class_game_engine_html_a6883e12a8088b16c8cbd348d25c5811a"><div class="ttname"><a href="class_game_engine.html#a6883e12a8088b16c8cbd348d25c5811a">GameEngine::SCREEN_WIDTH</a></div><div class="ttdeci">static const unsigned SCREEN_WIDTH</div><div class="ttdef"><b>Definition:</b> <a href="_game_engine_8h_source.html#l00032">GameEngine.h:32</a></div></div>
+<div class="ttc" id="class_draw_common_data_html_a6cd0f6dae97b2058c9fff40b6a7cfc17"><div class="ttname"><a href="class_draw_common_data.html#a6cd0f6dae97b2058c9fff40b6a7cfc17">DrawCommonData::shadow_map_</a></div><div class="ttdeci">RenderTexture shadow_map_</div><div class="ttdoc">シャドウマップ用レンダーテクスチャ </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8h_source.html#l00040">DrawCommonData.h:40</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_b45bb414237523d3953b384861a4c0d0.html">Framework</a></li><li class="navelem"><a class="el" href="dir_7bdbca00cdc73946cd7159151ed3a63d.html">GameEngine</a></li><li class="navelem"><a class="el" href="dir_52ab0f1b347112aed62424c3b4c19724.html">Draw</a></li><li class="navelem"><a class="el" href="dir_f5145951cd4a50d05b932b948ae6b018.html">DrawManager</a></li><li class="navelem"><a class="el" href="dir_947a2f0a9ecb52dd161c9491eee24de4.html">Source</a></li><li class="navelem"><a class="el" href="_draw_common_data_8cpp.html">DrawCommonData.cpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,12 +1,15 @@
-\hypertarget{_vector3_d_8h}{}\section{C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Vector/\+Vector3D.h ファイル}
-\label{_vector3_d_8h}\index{C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Vector/\+Vector3\+D.\+h@{C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Vector/\+Vector3\+D.\+h}}
-{\ttfamily \#include $<$math.\+h$>$}\newline
-{\ttfamily \#include $<$d3dx9.\+h$>$}\newline
+\hypertarget{_vector3_d_8h}{}\section{C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\+Vector3D.h ファイル}
+\label{_vector3_d_8h}\index{C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\+Vector3\+D.\+h@{C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\+Vector3\+D.\+h}}
+
+
+3\+Dベクトル\+Class  
+
+
 \subsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_vector3_d}{Vector3D}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 3\+Dベクトル\+Class \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{型定義}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,21 +25,21 @@ using \mbox{\hyperlink{_vector3_d_8h_afe61185afc2bf3856c12613d99eede01}{Float16}
 \item 
 using \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} = D3\+D\+X\+Q\+U\+A\+T\+E\+R\+N\+I\+ON
 \item 
-using \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} = D3\+D\+X\+M\+A\+T\+R\+IX
-\item 
 using \mbox{\hyperlink{_vector3_d_8h_a9c2339f516cf07ce4753b8a99fab3791}{Color4}} = D3\+D\+C\+O\+L\+OR
 \item 
 using \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} = D3\+D\+X\+C\+O\+L\+OR
 \end{DoxyCompactItemize}
-\subsection*{関数}
-\begin{DoxyCompactItemize}
-\item 
-float \mbox{\hyperlink{_vector3_d_8h_a8b0cdafb4964973d6daa41a3058d1ff1}{Point3\+\_\+\+Dot}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} vector1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} vector2, \mbox{\hyperlink{class_vector3_d}{Vector3D}} vector3)
-\item 
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{_vector3_d_8h_aaadf214b288ef79251c169437abacabd}{Point3\+\_\+\+Cross}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} vector1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} vector2, \mbox{\hyperlink{class_vector3_d}{Vector3D}} vector3)
-\item 
-bool \mbox{\hyperlink{_vector3_d_8h_ab7b2c371eae601b49a78b23e68ffc0a2}{Is\+Obtuse\+Angle}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} point0, \mbox{\hyperlink{class_vector3_d}{Vector3D}} point1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} point2)
-\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+3\+Dベクトル\+Class 
+
+\begin{DoxyAuthor}{著者}
+Kai Araki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2017/11/21 
+\end{DoxyDate}
 
 
 \subsection{型定義詳解}
@@ -48,7 +51,7 @@ bool \mbox{\hyperlink{_vector3_d_8h_ab7b2c371eae601b49a78b23e68ffc0a2}{Is\+Obtus
 
 
 
- Vector3\+D.\+h の 38 行目に定義があります。
+ Vector3\+D.\+h の 21 行目に定義があります。
 
 \mbox{\Hypertarget{_vector3_d_8h_afe61185afc2bf3856c12613d99eede01}\label{_vector3_d_8h_afe61185afc2bf3856c12613d99eede01}} 
 \index{Vector3\+D.\+h@{Vector3\+D.\+h}!Float16@{Float16}}
@@ -58,17 +61,7 @@ bool \mbox{\hyperlink{_vector3_d_8h_ab7b2c371eae601b49a78b23e68ffc0a2}{Is\+Obtus
 
 
 
- Vector3\+D.\+h の 35 行目に定義があります。
-
-\mbox{\Hypertarget{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}\label{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}} 
-\index{Vector3\+D.\+h@{Vector3\+D.\+h}!M\+A\+T\+R\+IX@{M\+A\+T\+R\+IX}}
-\index{M\+A\+T\+R\+IX@{M\+A\+T\+R\+IX}!Vector3\+D.\+h@{Vector3\+D.\+h}}
-\subsubsection{\texorpdfstring{M\+A\+T\+R\+IX}{MATRIX}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} =  D3\+D\+X\+M\+A\+T\+R\+IX}
-
-
-
- Vector3\+D.\+h の 37 行目に定義があります。
+ Vector3\+D.\+h の 19 行目に定義があります。
 
 \mbox{\Hypertarget{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}\label{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}} 
 \index{Vector3\+D.\+h@{Vector3\+D.\+h}!Quaternion@{Quaternion}}
@@ -78,7 +71,7 @@ bool \mbox{\hyperlink{_vector3_d_8h_ab7b2c371eae601b49a78b23e68ffc0a2}{Is\+Obtus
 
 
 
- Vector3\+D.\+h の 36 行目に定義があります。
+ Vector3\+D.\+h の 20 行目に定義があります。
 
 \mbox{\Hypertarget{_vector3_d_8h_a1f0b707f0d418d6cc74484019e41e55d}\label{_vector3_d_8h_a1f0b707f0d418d6cc74484019e41e55d}} 
 \index{Vector3\+D.\+h@{Vector3\+D.\+h}!Vec@{Vec}}
@@ -88,7 +81,7 @@ bool \mbox{\hyperlink{_vector3_d_8h_ab7b2c371eae601b49a78b23e68ffc0a2}{Is\+Obtus
 
 
 
- Vector3\+D.\+h の 31 行目に定義があります。
+ Vector3\+D.\+h の 15 行目に定義があります。
 
 \mbox{\Hypertarget{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}\label{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}} 
 \index{Vector3\+D.\+h@{Vector3\+D.\+h}!Vec2@{Vec2}}
@@ -98,7 +91,7 @@ bool \mbox{\hyperlink{_vector3_d_8h_ab7b2c371eae601b49a78b23e68ffc0a2}{Is\+Obtus
 
 
 
- Vector3\+D.\+h の 32 行目に定義があります。
+ Vector3\+D.\+h の 16 行目に定義があります。
 
 \mbox{\Hypertarget{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}\label{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}} 
 \index{Vector3\+D.\+h@{Vector3\+D.\+h}!Vec3@{Vec3}}
@@ -108,7 +101,7 @@ bool \mbox{\hyperlink{_vector3_d_8h_ab7b2c371eae601b49a78b23e68ffc0a2}{Is\+Obtus
 
 
 
- Vector3\+D.\+h の 33 行目に定義があります。
+ Vector3\+D.\+h の 17 行目に定義があります。
 
 \mbox{\Hypertarget{_vector3_d_8h_a9881f34a3b8187558f0f3ad87bed1b1a}\label{_vector3_d_8h_a9881f34a3b8187558f0f3ad87bed1b1a}} 
 \index{Vector3\+D.\+h@{Vector3\+D.\+h}!Vec4@{Vec4}}
@@ -118,7 +111,7 @@ bool \mbox{\hyperlink{_vector3_d_8h_ab7b2c371eae601b49a78b23e68ffc0a2}{Is\+Obtus
 
 
 
- Vector3\+D.\+h の 34 行目に定義があります。
+ Vector3\+D.\+h の 18 行目に定義があります。
 
 \mbox{\Hypertarget{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}\label{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}} 
 \index{Vector3\+D.\+h@{Vector3\+D.\+h}!X\+Color4@{X\+Color4}}
@@ -128,38 +121,5 @@ bool \mbox{\hyperlink{_vector3_d_8h_ab7b2c371eae601b49a78b23e68ffc0a2}{Is\+Obtus
 
 
 
- Vector3\+D.\+h の 39 行目に定義があります。
-
-
-
-\subsection{関数詳解}
-\mbox{\Hypertarget{_vector3_d_8h_ab7b2c371eae601b49a78b23e68ffc0a2}\label{_vector3_d_8h_ab7b2c371eae601b49a78b23e68ffc0a2}} 
-\index{Vector3\+D.\+h@{Vector3\+D.\+h}!Is\+Obtuse\+Angle@{Is\+Obtuse\+Angle}}
-\index{Is\+Obtuse\+Angle@{Is\+Obtuse\+Angle}!Vector3\+D.\+h@{Vector3\+D.\+h}}
-\subsubsection{\texorpdfstring{Is\+Obtuse\+Angle()}{IsObtuseAngle()}}
-{\footnotesize\ttfamily bool Is\+Obtuse\+Angle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{point0,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{point1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{point2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- Vector3\+D.\+h の 486 行目に定義があります。
-
-\mbox{\Hypertarget{_vector3_d_8h_aaadf214b288ef79251c169437abacabd}\label{_vector3_d_8h_aaadf214b288ef79251c169437abacabd}} 
-\index{Vector3\+D.\+h@{Vector3\+D.\+h}!Point3\+\_\+\+Cross@{Point3\+\_\+\+Cross}}
-\index{Point3\+\_\+\+Cross@{Point3\+\_\+\+Cross}!Vector3\+D.\+h@{Vector3\+D.\+h}}
-\subsubsection{\texorpdfstring{Point3\+\_\+\+Cross()}{Point3\_Cross()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} Point3\+\_\+\+Cross (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{vector1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{vector2,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{vector3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- Vector3\+D.\+h の 466 行目に定義があります。
-
-\mbox{\Hypertarget{_vector3_d_8h_a8b0cdafb4964973d6daa41a3058d1ff1}\label{_vector3_d_8h_a8b0cdafb4964973d6daa41a3058d1ff1}} 
-\index{Vector3\+D.\+h@{Vector3\+D.\+h}!Point3\+\_\+\+Dot@{Point3\+\_\+\+Dot}}
-\index{Point3\+\_\+\+Dot@{Point3\+\_\+\+Dot}!Vector3\+D.\+h@{Vector3\+D.\+h}}
-\subsubsection{\texorpdfstring{Point3\+\_\+\+Dot()}{Point3\_Dot()}}
-{\footnotesize\ttfamily float Point3\+\_\+\+Dot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{vector1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{vector2,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{vector3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- Vector3\+D.\+h の 446 行目に定義があります。
+ Vector3\+D.\+h の 22 行目に定義があります。
 

@@ -2,62 +2,46 @@
 \label{class_grid_polygon}\index{Grid\+Polygon@{Grid\+Polygon}}
 
 
+グリッドポリゴン\+Class  
+
+
+
+
 {\ttfamily \#include $<$Grid\+Polygon.\+h$>$}
 
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_grid_polygon_a4fdbbc978d24c751b07c6803eb53075e}{Grid\+Polygon}} ()
-\item 
-\mbox{\hyperlink{class_grid_polygon_a25fbe0d5c2682a1174dda7d29f6ddf74}{$\sim$\+Grid\+Polygon}} ()
-\item 
+void \mbox{\hyperlink{class_grid_polygon_a6184f3ce67a389e61ab111c5504d79a0}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_grid_polygon_a85a4aa71aba9297e3bf90bd6f409b6f6}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_grid_polygon_a93a672fb9d5b6757c132fba8792f5459}{Draw}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_grid_polygon_a07b1e9c012d36086569860a30deb85d5}{Create\+Vertex}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点作成関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_grid_polygon_a6e9fc436896409cc4bfbf3a44d338d9b}{Create\+Material}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em マテリアル作成関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 std\+::vector$<$ \mbox{\hyperlink{class_renderer_direct_x9_1_1_v_e_r_t_e_x__3_d}{Renderer\+Direct\+X9\+::\+V\+E\+R\+T\+E\+X\+\_\+3D}} $>$ \mbox{\hyperlink{class_grid_polygon_a71923f80b111b2868553f9f3600fa192}{vertex\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点 \end{DoxyCompactList}\item 
 D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 \mbox{\hyperlink{class_grid_polygon_a5aabcb6eed028eb7b093ce8f4e6936a8}{material\+\_\+}}
-\item 
-L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_grid_polygon_a23d509ae7ad001e003897527380a8ca8}{device\+\_\+}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em マテリアル \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_grid_polygon_a23d509ae7ad001e003897527380a8ca8}{device\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em デバイス \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
+グリッドポリゴン\+Class 
 
+グリッドのポリゴン\+Class 
 
- Grid\+Polygon.\+h の 32 行目に定義があります。
-
-
-
-\subsection{構築子と解体子}
-\mbox{\Hypertarget{class_grid_polygon_a4fdbbc978d24c751b07c6803eb53075e}\label{class_grid_polygon_a4fdbbc978d24c751b07c6803eb53075e}} 
-\index{Grid\+Polygon@{Grid\+Polygon}!Grid\+Polygon@{Grid\+Polygon}}
-\index{Grid\+Polygon@{Grid\+Polygon}!Grid\+Polygon@{Grid\+Polygon}}
-\subsubsection{\texorpdfstring{Grid\+Polygon()}{GridPolygon()}}
-{\footnotesize\ttfamily Grid\+Polygon\+::\+Grid\+Polygon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
- Grid\+Polygon.\+cpp の 35 行目に定義があります。
-
-\mbox{\Hypertarget{class_grid_polygon_a25fbe0d5c2682a1174dda7d29f6ddf74}\label{class_grid_polygon_a25fbe0d5c2682a1174dda7d29f6ddf74}} 
-\index{Grid\+Polygon@{Grid\+Polygon}!````~Grid\+Polygon@{$\sim$\+Grid\+Polygon}}
-\index{````~Grid\+Polygon@{$\sim$\+Grid\+Polygon}!Grid\+Polygon@{Grid\+Polygon}}
-\subsubsection{\texorpdfstring{$\sim$\+Grid\+Polygon()}{~GridPolygon()}}
-{\footnotesize\ttfamily Grid\+Polygon\+::$\sim$\+Grid\+Polygon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
- Grid\+Polygon.\+cpp の 57 行目に定義があります。
+ Grid\+Polygon.\+h の 17 行目に定義があります。
 
 
 
@@ -70,7 +54,21 @@ L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_grid_polygo
 
 
 
- Grid\+Polygon.\+cpp の 146 行目に定義があります。
+マテリアル作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Grid\+Polygon.\+cpp の 110 行目に定義があります。
 
 \mbox{\Hypertarget{class_grid_polygon_a07b1e9c012d36086569860a30deb85d5}\label{class_grid_polygon_a07b1e9c012d36086569860a30deb85d5}} 
 \index{Grid\+Polygon@{Grid\+Polygon}!Create\+Vertex@{Create\+Vertex}}
@@ -80,7 +78,21 @@ L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_grid_polygo
 
 
 
- Grid\+Polygon.\+cpp の 98 行目に定義があります。
+頂点作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Grid\+Polygon.\+cpp の 67 行目に定義があります。
 
 \mbox{\Hypertarget{class_grid_polygon_a93a672fb9d5b6757c132fba8792f5459}\label{class_grid_polygon_a93a672fb9d5b6757c132fba8792f5459}} 
 \index{Grid\+Polygon@{Grid\+Polygon}!Draw@{Draw}}
@@ -90,7 +102,69 @@ L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_grid_polygo
 
 
 
- Grid\+Polygon.\+cpp の 69 行目に定義があります。
+描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Grid\+Polygon.\+cpp の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_grid_polygon_a6184f3ce67a389e61ab111c5504d79a0}\label{class_grid_polygon_a6184f3ce67a389e61ab111c5504d79a0}} 
+\index{Grid\+Polygon@{Grid\+Polygon}!Init@{Init}}
+\index{Init@{Init}!Grid\+Polygon@{Grid\+Polygon}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Grid\+Polygon\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Grid\+Polygon.\+cpp の 20 行目に定義があります。
+
+\mbox{\Hypertarget{class_grid_polygon_a85a4aa71aba9297e3bf90bd6f409b6f6}\label{class_grid_polygon_a85a4aa71aba9297e3bf90bd6f409b6f6}} 
+\index{Grid\+Polygon@{Grid\+Polygon}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Grid\+Polygon@{Grid\+Polygon}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Grid\+Polygon\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Grid\+Polygon.\+cpp の 35 行目に定義があります。
 
 
 
@@ -99,11 +173,15 @@ L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_grid_polygo
 \index{Grid\+Polygon@{Grid\+Polygon}!device\+\_\+@{device\+\_\+}}
 \index{device\+\_\+@{device\+\_\+}!Grid\+Polygon@{Grid\+Polygon}}
 \subsubsection{\texorpdfstring{device\+\_\+}{device\_}}
-{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 Grid\+Polygon\+::device\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 Grid\+Polygon\+::device\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Grid\+Polygon.\+h の 64 行目に定義があります。
+デバイス 
+
+
+
+ Grid\+Polygon.\+h の 25 行目に定義があります。
 
 \mbox{\Hypertarget{class_grid_polygon_a5aabcb6eed028eb7b093ce8f4e6936a8}\label{class_grid_polygon_a5aabcb6eed028eb7b093ce8f4e6936a8}} 
 \index{Grid\+Polygon@{Grid\+Polygon}!material\+\_\+@{material\+\_\+}}
@@ -113,7 +191,11 @@ L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_grid_polygo
 
 
 
- Grid\+Polygon.\+h の 63 行目に定義があります。
+マテリアル 
+
+
+
+ Grid\+Polygon.\+h の 24 行目に定義があります。
 
 \mbox{\Hypertarget{class_grid_polygon_a71923f80b111b2868553f9f3600fa192}\label{class_grid_polygon_a71923f80b111b2868553f9f3600fa192}} 
 \index{Grid\+Polygon@{Grid\+Polygon}!vertex\+\_\+@{vertex\+\_\+}}
@@ -123,11 +205,15 @@ L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_grid_polygo
 
 
 
- Grid\+Polygon.\+h の 61 行目に定義があります。
+頂点 
+
+
+
+ Grid\+Polygon.\+h の 23 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Polygon/\+Grid\+Polygon/\mbox{\hyperlink{_grid_polygon_8h}{Grid\+Polygon.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Polygon/\+Grid\+Polygon/\mbox{\hyperlink{_grid_polygon_8cpp}{Grid\+Polygon.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Polygon/\mbox{\hyperlink{_grid_polygon_8h}{Grid\+Polygon.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Polygon/\+Source/\mbox{\hyperlink{_grid_polygon_8cpp}{Grid\+Polygon.\+cpp}}\end{DoxyCompactItemize}

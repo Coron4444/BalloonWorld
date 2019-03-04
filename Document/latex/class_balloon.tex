@@ -1,0 +1,482 @@
+\hypertarget{class_balloon}{}\section{Balloon クラス}
+\label{class_balloon}\index{Balloon@{Balloon}}
+
+
+風船\+Class  
+
+
+
+
+{\ttfamily \#include $<$Balloon.\+h$>$}
+
+
+
+Balloon 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_balloon__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_balloon_afff1be260962ed6e938601a7c08a17eb}{get\+All\+Object\+Num}} ()
+\begin{DoxyCompactList}\small\item\em 総オブジェクト数取得関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_balloon_ae36b5f71bde6e84037f200443774bd3a}{get\+Object\+Constraint\+Num}} ()
+\begin{DoxyCompactList}\small\item\em オブジェクトの拘束数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$ \mbox{\hyperlink{class_balloon_a24f6da4e76b5f174e3bf7598d832ffc0}{getp\+Object}} (unsigned index)
+\begin{DoxyCompactList}\small\item\em オブジェクト取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}} $\ast$ \mbox{\hyperlink{class_balloon_afe165a4c82a8d5797bd21762ffbb2c64}{getp\+Object\+Constraint}} (unsigned index)
+\begin{DoxyCompactList}\small\item\em オブジェクトの拘束取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_balloon_a1e262c3e11e1bf76e86d5e7c57bb4438}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em 座標取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_a49a709cca0e96d1f00c8f88cd0d98d2f}{set\+Position}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} value)
+\begin{DoxyCompactList}\small\item\em 座標設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_aa108fd9e0a2b09c9b729a49d6c170c05}{Init}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, unsigned balloon\+\_\+line\+\_\+num, \mbox{\hyperlink{class_vector3_d}{Vector3D}} position)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_ac924b8fb0e2ba4a2a3bae0b7fed6ad13}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_ab7ec0e99baf0b4184b398e98a41d9f48}{Release\+Constraint}} (unsigned index)
+\begin{DoxyCompactList}\small\item\em 拘束解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_a01a2400bc5bbe5a58e8605c1a21af2d5}{Release\+Base\+Constraint}} ()
+\begin{DoxyCompactList}\small\item\em 基点拘束解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_a503ae04cd30e57b0073c829d68f844dd}{Add\+Velocity}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} velocity)
+\begin{DoxyCompactList}\small\item\em 速度追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_ab29a0490f62947c1cd0e61efb9dc1c1c}{Add\+Acceleration}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} acceleration)
+\begin{DoxyCompactList}\small\item\em 加速度追加関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const float \mbox{\hyperlink{class_balloon_a206b548c1ee7cf44616dbd2a0d7cc758}{R\+I\+S\+I\+N\+G\+\_\+\+S\+P\+E\+ED}} = \mbox{\hyperlink{class_meter_to_frame_ac3292be31b35e97027a65b4c74763ebe}{Meter\+To\+Frame\+::\+Meter\+Per\+Second\+Squared\+To\+Meter\+Per\+Frame\+Squared}}(1000000.\+0f)
+\begin{DoxyCompactList}\small\item\em 上昇速度 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_balloon_a72e9f550154e31339200686a7b9dcdc2}{O\+B\+B\+\_\+\+E\+D\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+A\+LF}}
+\begin{DoxyCompactList}\small\item\em O\+B\+Bの辺の長さの半分 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_balloon_ae8db75393edbab7355e4d4df08a56e45}{S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US}} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em 球の半径 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_balloon_aa7f08fc99964ad4db7cbe2292de279bc}{Init\+Bullet\+Physics\+Object}} (unsigned balloon\+\_\+line\+\_\+num, \mbox{\hyperlink{class_vector3_d}{Vector3D}} position)
+\begin{DoxyCompactList}\small\item\em バレットオブジェクト初期化関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$ $>$ \mbox{\hyperlink{class_balloon_afd563b3d30d5095afe3879fe6e609023}{all\+\_\+object\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 総オブジェクト \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}} $\ast$ $>$ \mbox{\hyperlink{class_balloon_a18e7a10f252ab3075c3c58640425bd8c}{object\+\_\+constraint\+\_\+}}
+\begin{DoxyCompactList}\small\item\em オブジェクトの拘束 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+風船\+Class 
+
+風船の\+Class 
+
+ Balloon.\+h の 32 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_balloon_ab29a0490f62947c1cd0e61efb9dc1c1c}\label{class_balloon_ab29a0490f62947c1cd0e61efb9dc1c1c}} 
+\index{Balloon@{Balloon}!Add\+Acceleration@{Add\+Acceleration}}
+\index{Add\+Acceleration@{Add\+Acceleration}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{Add\+Acceleration()}{AddAcceleration()}}
+{\footnotesize\ttfamily void Balloon\+::\+Add\+Acceleration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{acceleration }\end{DoxyParamCaption})}
+
+
+
+加速度追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em acceleration} & 加速度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon.\+cpp の 122 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_a503ae04cd30e57b0073c829d68f844dd}\label{class_balloon_a503ae04cd30e57b0073c829d68f844dd}} 
+\index{Balloon@{Balloon}!Add\+Velocity@{Add\+Velocity}}
+\index{Add\+Velocity@{Add\+Velocity}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{Add\+Velocity()}{AddVelocity()}}
+{\footnotesize\ttfamily void Balloon\+::\+Add\+Velocity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{velocity }\end{DoxyParamCaption})}
+
+
+
+速度追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em velocity} & 速度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon.\+cpp の 114 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_afff1be260962ed6e938601a7c08a17eb}\label{class_balloon_afff1be260962ed6e938601a7c08a17eb}} 
+\index{Balloon@{Balloon}!get\+All\+Object\+Num@{get\+All\+Object\+Num}}
+\index{get\+All\+Object\+Num@{get\+All\+Object\+Num}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{get\+All\+Object\+Num()}{getAllObjectNum()}}
+{\footnotesize\ttfamily int Balloon\+::get\+All\+Object\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+総オブジェクト数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & 総オブジェクト数 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon.\+cpp の 32 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_ae36b5f71bde6e84037f200443774bd3a}\label{class_balloon_ae36b5f71bde6e84037f200443774bd3a}} 
+\index{Balloon@{Balloon}!get\+Object\+Constraint\+Num@{get\+Object\+Constraint\+Num}}
+\index{get\+Object\+Constraint\+Num@{get\+Object\+Constraint\+Num}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{get\+Object\+Constraint\+Num()}{getObjectConstraintNum()}}
+{\footnotesize\ttfamily int Balloon\+::get\+Object\+Constraint\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+オブジェクトの拘束数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & 総オブジェクト数 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon.\+cpp の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_a24f6da4e76b5f174e3bf7598d832ffc0}\label{class_balloon_a24f6da4e76b5f174e3bf7598d832ffc0}} 
+\index{Balloon@{Balloon}!getp\+Object@{getp\+Object}}
+\index{getp\+Object@{getp\+Object}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{getp\+Object()}{getpObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$ Balloon\+::getp\+Object (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})}
+
+
+
+オブジェクト取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Bullet\+Physics\+Object$\ast$} & オブジェクト \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon.\+cpp の 47 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_afe165a4c82a8d5797bd21762ffbb2c64}\label{class_balloon_afe165a4c82a8d5797bd21762ffbb2c64}} 
+\index{Balloon@{Balloon}!getp\+Object\+Constraint@{getp\+Object\+Constraint}}
+\index{getp\+Object\+Constraint@{getp\+Object\+Constraint}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{getp\+Object\+Constraint()}{getpObjectConstraint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}} $\ast$ Balloon\+::getp\+Object\+Constraint (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})}
+
+
+
+オブジェクトの拘束取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Bullet\+Physics\+Constraint$\ast$} & オブジェクトの拘束 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon.\+cpp の 54 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_a1e262c3e11e1bf76e86d5e7c57bb4438}\label{class_balloon_a1e262c3e11e1bf76e86d5e7c57bb4438}} 
+\index{Balloon@{Balloon}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Balloon\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+座標取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 座標 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon.\+cpp の 61 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_aa108fd9e0a2b09c9b729a49d6c170c05}\label{class_balloon_aa108fd9e0a2b09c9b729a49d6c170c05}} 
+\index{Balloon@{Balloon}!Init@{Init}}
+\index{Init@{Init}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Balloon\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{unsigned}]{balloon\+\_\+line\+\_\+num,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{position }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em balloon\+\_\+line\+\_\+num} & 風船の線の数 \\
+\hline
+{\em position} & 座標 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon.\+cpp の 78 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_aa7f08fc99964ad4db7cbe2292de279bc}\label{class_balloon_aa7f08fc99964ad4db7cbe2292de279bc}} 
+\index{Balloon@{Balloon}!Init\+Bullet\+Physics\+Object@{Init\+Bullet\+Physics\+Object}}
+\index{Init\+Bullet\+Physics\+Object@{Init\+Bullet\+Physics\+Object}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{Init\+Bullet\+Physics\+Object()}{InitBulletPhysicsObject()}}
+{\footnotesize\ttfamily void Balloon\+::\+Init\+Bullet\+Physics\+Object (\begin{DoxyParamCaption}\item[{unsigned}]{balloon\+\_\+line\+\_\+num,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+バレットオブジェクト初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em balloon\+\_\+line\+\_\+num} & 風船の線の数 \\
+\hline
+{\em position} & 座標 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon.\+cpp の 130 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_a01a2400bc5bbe5a58e8605c1a21af2d5}\label{class_balloon_a01a2400bc5bbe5a58e8605c1a21af2d5}} 
+\index{Balloon@{Balloon}!Release\+Base\+Constraint@{Release\+Base\+Constraint}}
+\index{Release\+Base\+Constraint@{Release\+Base\+Constraint}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{Release\+Base\+Constraint()}{ReleaseBaseConstraint()}}
+{\footnotesize\ttfamily void Balloon\+::\+Release\+Base\+Constraint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+基点拘束解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon.\+cpp の 107 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_ab7ec0e99baf0b4184b398e98a41d9f48}\label{class_balloon_ab7ec0e99baf0b4184b398e98a41d9f48}} 
+\index{Balloon@{Balloon}!Release\+Constraint@{Release\+Constraint}}
+\index{Release\+Constraint@{Release\+Constraint}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{Release\+Constraint()}{ReleaseConstraint()}}
+{\footnotesize\ttfamily void Balloon\+::\+Release\+Constraint (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})}
+
+
+
+拘束解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon.\+cpp の 99 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_a49a709cca0e96d1f00c8f88cd0d98d2f}\label{class_balloon_a49a709cca0e96d1f00c8f88cd0d98d2f}} 
+\index{Balloon@{Balloon}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Balloon\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{value }\end{DoxyParamCaption})}
+
+
+
+座標設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 座標 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon.\+cpp の 68 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_ac924b8fb0e2ba4a2a3bae0b7fed6ad13}\label{class_balloon_ac924b8fb0e2ba4a2a3bae0b7fed6ad13}} 
+\index{Balloon@{Balloon}!Update@{Update}}
+\index{Update@{Update}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Balloon\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_aeeb51b7e7aa41fd0b16f8f7c016bdb55}{Game\+Object\+Null}}を再実装しています。
+
+
+
+ Balloon.\+cpp の 89 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_balloon_afd563b3d30d5095afe3879fe6e609023}\label{class_balloon_afd563b3d30d5095afe3879fe6e609023}} 
+\index{Balloon@{Balloon}!all\+\_\+object\+\_\+@{all\+\_\+object\+\_\+}}
+\index{all\+\_\+object\+\_\+@{all\+\_\+object\+\_\+}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{all\+\_\+object\+\_\+}{all\_object\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}}$\ast$$>$ Balloon\+::all\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+総オブジェクト 
+
+
+
+ Balloon.\+h の 47 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_a72e9f550154e31339200686a7b9dcdc2}\label{class_balloon_a72e9f550154e31339200686a7b9dcdc2}} 
+\index{Balloon@{Balloon}!O\+B\+B\+\_\+\+E\+D\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+A\+LF@{O\+B\+B\+\_\+\+E\+D\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+A\+LF}}
+\index{O\+B\+B\+\_\+\+E\+D\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+A\+LF@{O\+B\+B\+\_\+\+E\+D\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+A\+LF}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{O\+B\+B\+\_\+\+E\+D\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+A\+LF}{OBB\_EDGE\_LENGTH\_HALF}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Balloon\+::\+O\+B\+B\+\_\+\+E\+D\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+A\+LF\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+O\+B\+Bの辺の長さの半分 
+
+
+
+ Balloon.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_a18e7a10f252ab3075c3c58640425bd8c}\label{class_balloon_a18e7a10f252ab3075c3c58640425bd8c}} 
+\index{Balloon@{Balloon}!object\+\_\+constraint\+\_\+@{object\+\_\+constraint\+\_\+}}
+\index{object\+\_\+constraint\+\_\+@{object\+\_\+constraint\+\_\+}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{object\+\_\+constraint\+\_\+}{object\_constraint\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}}$\ast$$>$ Balloon\+::object\+\_\+constraint\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+オブジェクトの拘束 
+
+
+
+ Balloon.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_a206b548c1ee7cf44616dbd2a0d7cc758}\label{class_balloon_a206b548c1ee7cf44616dbd2a0d7cc758}} 
+\index{Balloon@{Balloon}!R\+I\+S\+I\+N\+G\+\_\+\+S\+P\+E\+ED@{R\+I\+S\+I\+N\+G\+\_\+\+S\+P\+E\+ED}}
+\index{R\+I\+S\+I\+N\+G\+\_\+\+S\+P\+E\+ED@{R\+I\+S\+I\+N\+G\+\_\+\+S\+P\+E\+ED}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{R\+I\+S\+I\+N\+G\+\_\+\+S\+P\+E\+ED}{RISING\_SPEED}}
+{\footnotesize\ttfamily const float Balloon\+::\+R\+I\+S\+I\+N\+G\+\_\+\+S\+P\+E\+ED = \mbox{\hyperlink{class_meter_to_frame_ac3292be31b35e97027a65b4c74763ebe}{Meter\+To\+Frame\+::\+Meter\+Per\+Second\+Squared\+To\+Meter\+Per\+Frame\+Squared}}(1000000.\+0f)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+上昇速度 
+
+
+
+ Balloon.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_ae8db75393edbab7355e4d4df08a56e45}\label{class_balloon_ae8db75393edbab7355e4d4df08a56e45}} 
+\index{Balloon@{Balloon}!S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US@{S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US}}
+\index{S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US@{S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US}!Balloon@{Balloon}}
+\subsubsection{\texorpdfstring{S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US}{SPHERE\_RADIUS}}
+{\footnotesize\ttfamily const float Balloon\+::\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US = 1.\+0f\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+球の半径 
+
+
+
+ Balloon.\+h の 40 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Balloon/\mbox{\hyperlink{_balloon_8h}{Balloon.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Balloon/\+Source/\mbox{\hyperlink{_balloon_8cpp}{Balloon.\+cpp}}\end{DoxyCompactItemize}

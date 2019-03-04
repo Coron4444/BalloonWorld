@@ -1,0 +1,330 @@
+\hypertarget{class_md_bin_manager}{}\section{Md\+Bin\+Manager クラス}
+\label{class_md_bin_manager}\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+
+
+バイナリーモデルマネージャ\+Class(\+Singleton)  
+
+
+
+
+{\ttfamily \#include $<$Md\+Bin\+Manager.\+h$>$}
+
+
+
+Md\+Bin\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_md_bin_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_md_bin_object}{Md\+Bin\+Object}} $\ast$ \mbox{\hyperlink{class_md_bin_manager_abfdfbf033bef1ff3fe51a0b610e51bc6}{getp\+Object}} (const std\+::string $\ast$key\+\_\+name, const std\+::string $\ast$file\+\_\+path=nullptr)
+\begin{DoxyCompactList}\small\item\em オブジェクト取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_manager_a650a250f797759d90708241b5718fe49}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_manager_a50f380e661e5a00e14f7d72ed6ffe6e3}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_manager_a25cec221e76357ed3f0243a614fd1b0e}{Release\+From\+The\+Map}} (std\+::string $\ast$key\+\_\+name)
+\begin{DoxyCompactList}\small\item\em マップから解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_md_bin_manager}{Md\+Bin\+Manager}} $\ast$ \mbox{\hyperlink{class_md_bin_manager_a2e26bac953ea00748662887e58447f02}{getp\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス取得関数 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_md_bin_manager_a2ac79acba875d5812356b377d2c7d165}{Release\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_md_bin_manager_a9badcf5942fc3c2610392df35184d73d}{Md\+Bin\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_md_bin_manager_a435f89bb7839d6eb67c7b24f3190d76c}{Create\+File\+Path}} (const std\+::string $\ast$key\+\_\+name, const std\+::string $\ast$file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em フルパス生成関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_manager_a95626ea9eb89f46cd069a3edf03b0885}{Md\+Bin\+Manager}} (const \mbox{\hyperlink{class_md_bin_manager}{Md\+Bin\+Manager}} \&class\+\_\+name)=delete
+\item 
+\mbox{\hyperlink{class_md_bin_manager}{Md\+Bin\+Manager}} \& \mbox{\hyperlink{class_md_bin_manager_a17b8525afa9637fb07506178f1b01d9c}{operator=}} (const \mbox{\hyperlink{class_md_bin_manager}{Md\+Bin\+Manager}} \&class\+\_\+name)=delete
+\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_md_bin_object}{Md\+Bin\+Object}} $\ast$ $>$ \mbox{\hyperlink{class_md_bin_manager_a595804fccdd750e02df524bb75cec65b}{object\+\_\+map\+\_\+}}
+\begin{DoxyCompactList}\small\item\em オブジェクトマップ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{class_md_bin_manager_a904425a5d0777470e0723d54fb36a54a}{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH}} = \char`\"{}Resource/Md\+Bin/\char`\"{}
+\begin{DoxyCompactList}\small\item\em 既定パス \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_md_bin_manager}{Md\+Bin\+Manager}} $\ast$ \mbox{\hyperlink{class_md_bin_manager_a119c1fd5422e8106a9fc4ee361ad2ea0}{instance\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em インスタンス \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+バイナリーモデルマネージャ\+Class(\+Singleton) 
+
+バイナリーモデルのマネージャ\+Class(\+Singleton) 
+
+ Md\+Bin\+Manager.\+h の 24 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_md_bin_manager_a9badcf5942fc3c2610392df35184d73d}\label{class_md_bin_manager_a9badcf5942fc3c2610392df35184d73d}} 
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\subsubsection{\texorpdfstring{Md\+Bin\+Manager()}{MdBinManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Md\+Bin\+Manager\+::\+Md\+Bin\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Md\+Bin\+Manager.\+cpp の 85 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_manager_a95626ea9eb89f46cd069a3edf03b0885}\label{class_md_bin_manager_a95626ea9eb89f46cd069a3edf03b0885}} 
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\subsubsection{\texorpdfstring{Md\+Bin\+Manager()}{MdBinManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Md\+Bin\+Manager\+::\+Md\+Bin\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_md_bin_manager}{Md\+Bin\+Manager}} \&}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_md_bin_manager_a435f89bb7839d6eb67c7b24f3190d76c}\label{class_md_bin_manager_a435f89bb7839d6eb67c7b24f3190d76c}} 
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!Create\+File\+Path@{Create\+File\+Path}}
+\index{Create\+File\+Path@{Create\+File\+Path}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\subsubsection{\texorpdfstring{Create\+File\+Path()}{CreateFilePath()}}
+{\footnotesize\ttfamily std\+::string Md\+Bin\+Manager\+::\+Create\+File\+Path (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{key\+\_\+name,  }\item[{const std\+::string $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+フルパス生成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$key\+\_\+name} & キー名 \\
+\hline
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em std\+::string} & フルパス \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Manager.\+cpp の 125 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_manager_a2e26bac953ea00748662887e58447f02}\label{class_md_bin_manager_a2e26bac953ea00748662887e58447f02}} 
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!getp\+Instance@{getp\+Instance}}
+\index{getp\+Instance@{getp\+Instance}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Instance()}{getpInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_manager}{Md\+Bin\+Manager}} $\ast$ Md\+Bin\+Manager\+::getp\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+インスタンス取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Md\+Bin\+Manager$\ast$} & インスタンス \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Manager.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_manager_abfdfbf033bef1ff3fe51a0b610e51bc6}\label{class_md_bin_manager_abfdfbf033bef1ff3fe51a0b610e51bc6}} 
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!getp\+Object@{getp\+Object}}
+\index{getp\+Object@{getp\+Object}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Object()}{getpObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_object}{Md\+Bin\+Object}} $\ast$ Md\+Bin\+Manager\+::getp\+Object (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{key\+\_\+name,  }\item[{const std\+::string $\ast$}]{file\+\_\+path = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+オブジェクト取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Md\+Bin\+Object$\ast$} & オブジェクト \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Manager.\+cpp の 58 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_manager_a650a250f797759d90708241b5718fe49}\label{class_md_bin_manager_a650a250f797759d90708241b5718fe49}} 
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!Init@{Init}}
+\index{Init@{Init}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Md\+Bin\+Manager\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Manager.\+cpp の 91 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_manager_a17b8525afa9637fb07506178f1b01d9c}\label{class_md_bin_manager_a17b8525afa9637fb07506178f1b01d9c}} 
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!operator=@{operator=}}
+\index{operator=@{operator=}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_manager}{Md\+Bin\+Manager}}\& Md\+Bin\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_md_bin_manager}{Md\+Bin\+Manager}} \&}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_md_bin_manager_a25cec221e76357ed3f0243a614fd1b0e}\label{class_md_bin_manager_a25cec221e76357ed3f0243a614fd1b0e}} 
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!Release\+From\+The\+Map@{Release\+From\+The\+Map}}
+\index{Release\+From\+The\+Map@{Release\+From\+The\+Map}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\subsubsection{\texorpdfstring{Release\+From\+The\+Map()}{ReleaseFromTheMap()}}
+{\footnotesize\ttfamily void Md\+Bin\+Manager\+::\+Release\+From\+The\+Map (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{key\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+マップから解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$key\+\_\+name} & キー名 \\
+\hline
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Manager.\+cpp の 113 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_manager_a2ac79acba875d5812356b377d2c7d165}\label{class_md_bin_manager_a2ac79acba875d5812356b377d2c7d165}} 
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!Release\+Instance@{Release\+Instance}}
+\index{Release\+Instance@{Release\+Instance}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\subsubsection{\texorpdfstring{Release\+Instance()}{ReleaseInstance()}}
+{\footnotesize\ttfamily void Md\+Bin\+Manager\+::\+Release\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+インスタンス解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Manager.\+cpp の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_manager_a50f380e661e5a00e14f7d72ed6ffe6e3}\label{class_md_bin_manager_a50f380e661e5a00e14f7d72ed6ffe6e3}} 
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Md\+Bin\+Manager\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Manager.\+cpp の 99 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_md_bin_manager_a904425a5d0777470e0723d54fb36a54a}\label{class_md_bin_manager_a904425a5d0777470e0723d54fb36a54a}} 
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH@{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH@{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH}{DEFAULT\_PATH}}
+{\footnotesize\ttfamily const std\+::string Md\+Bin\+Manager\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH = \char`\"{}Resource/Md\+Bin/\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+既定パス 
+
+
+
+ Md\+Bin\+Manager.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_manager_a119c1fd5422e8106a9fc4ee361ad2ea0}\label{class_md_bin_manager_a119c1fd5422e8106a9fc4ee361ad2ea0}} 
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!instance\+\_\+@{instance\+\_\+}}
+\index{instance\+\_\+@{instance\+\_\+}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\subsubsection{\texorpdfstring{instance\+\_\+}{instance\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_manager}{Md\+Bin\+Manager}} $\ast$ Md\+Bin\+Manager\+::instance\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+インスタンス 
+
+
+
+ Md\+Bin\+Manager.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_manager_a595804fccdd750e02df524bb75cec65b}\label{class_md_bin_manager_a595804fccdd750e02df524bb75cec65b}} 
+\index{Md\+Bin\+Manager@{Md\+Bin\+Manager}!object\+\_\+map\+\_\+@{object\+\_\+map\+\_\+}}
+\index{object\+\_\+map\+\_\+@{object\+\_\+map\+\_\+}!Md\+Bin\+Manager@{Md\+Bin\+Manager}}
+\subsubsection{\texorpdfstring{object\+\_\+map\+\_\+}{object\_map\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{class_md_bin_object}{Md\+Bin\+Object}}$\ast$$>$ Md\+Bin\+Manager\+::object\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+オブジェクトマップ 
+
+
+
+ Md\+Bin\+Manager.\+h の 70 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Md\+Bin/\+Md\+Bin\+Manager/\mbox{\hyperlink{_md_bin_manager_8h}{Md\+Bin\+Manager.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Md\+Bin/\+Md\+Bin\+Manager/\+Source/\mbox{\hyperlink{_md_bin_manager_8cpp}{Md\+Bin\+Manager.\+cpp}}\end{DoxyCompactItemize}

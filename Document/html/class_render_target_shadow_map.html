@@ -1,0 +1,848 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: RenderTargetShadowMap クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_render_target_shadow_map.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="class_render_target_shadow_map-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">RenderTargetShadowMap クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>レンダーターゲットシャドウマップClass  
+ <a href="class_render_target_shadow_map.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_render_target_shadow_map_8h_source.html">RenderTargetShadowMap.h</a>&gt;</code></p>
+<div class="dynheader">
+RenderTargetShadowMap 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_render_target_shadow_map__coll__graph.png" border="0" usemap="#_render_target_shadow_map_coll__map" alt="Collaboration graph"/></div>
+<map name="_render_target_shadow_map_coll__map" id="_render_target_shadow_map_coll__map">
+<area shape="rect" id="node2" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; DrawBase *, ARRAY_NUM \&gt;" alt="" coords="1781,410,1984,451"/>
+<area shape="rect" id="node3" href="class_draw_base.html" title="描画BaseClass " alt="" coords="1389,477,1471,504"/>
+<area shape="rect" id="node5" href="class_game_object_base.html" title="ゲームオブジェクトBaseClass " alt="" coords="1629,507,1755,533"/>
+<area shape="rect" id="node4" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="2008,576,2127,603"/>
+<area shape="rect" id="node6" href="class_collision_base.html" title="衝突BaseClass " alt="" coords="2317,623,2419,649"/>
+<area shape="rect" id="node17" href="class_physics.html" title="物理Class " alt="" coords="2033,505,2102,532"/>
+<area shape="rect" id="node8" href="class_collision_object.html" title="衝突オブジェクトClass " alt="" coords="2595,697,2704,724"/>
+<area shape="rect" id="node7" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject *,\l ARRAY_NUM \&gt;" alt="" coords="2885,605,3021,661"/>
+<area shape="rect" id="node13" href="class_object_of_tree.html" title="ObjectOfTree\&lt; CollisionObject *\&gt;" alt="" coords="2845,740,3060,767"/>
+<area shape="rect" id="node9" href="class_a_a_b_b.html" title="AABBClass " alt="" coords="741,748,800,775"/>
+<area shape="rect" id="node10" href="class_collision_shape_base.html" title="衝突形状BaseClass " alt="" coords="364,673,503,700"/>
+<area shape="rect" id="node16" href="class_collision_object_1_1_shape.html" title="衝突形状Class " alt="" coords="693,679,848,705"/>
+<area shape="rect" id="node11" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="107,551,183,577"/>
+<area shape="rect" id="node18" href="class_transform.html" title="変形Class " alt="" coords="731,551,810,577"/>
+<area shape="rect" id="node19" href="class_matrix.html" title="行列Class " alt="" coords="404,195,463,221"/>
+<area shape="rect" id="node23" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="1033,392,1164,419"/>
+<area shape="rect" id="node24" href="class_camera.html" title="カメラClass " alt="" coords="737,173,804,200"/>
+<area shape="rect" id="node14" href="class_space_of_tree.html" title="SpaceOfTree\&lt; CollisionObject *\&gt;" alt="" coords="3217,740,3431,767"/>
+<area shape="rect" id="node15" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject::Shape\l *, ARRAY_NUM \&gt;" alt="" coords="1188,676,1355,732"/>
+<area shape="rect" id="node21" href="class_draw_order_list.html" title="描画注文リストClass " alt="" coords="1047,484,1151,511"/>
+<area shape="rect" id="node22" href="class_bit_flag.html" title="ビットフラグClass " alt="" coords="739,500,802,527"/>
+<area shape="rect" id="node29" href="class_shader_base.html" title="シェーダーBaseClass " alt="" coords="1383,392,1477,419"/>
+<area shape="rect" id="node25" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="1045,148,1152,175"/>
+<area shape="rect" id="node26" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="717,392,824,419"/>
+<area shape="rect" id="node27" href="class_shader_manager.html" title="シェーダーマネージャClass " alt="" coords="2011,320,2124,347"/>
+<area shape="rect" id="node28" href="class_vertex_shader_base.html" title="頂点シェーダーBassClass " alt="" coords="1627,381,1757,408"/>
+<area shape="rect" id="node30" href="class_pixel_shader_base.html" title="ピクセルシェーダーBassClass " alt="" coords="1631,331,1753,357"/>
+<area shape="rect" id="node31" href="class_texture_object.html" title="テクスチャオブジェクトClass " alt="" coords="1379,320,1481,347"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aaf7522ca239bc07bd78a6e431a28be09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#aaf7522ca239bc07bd78a6e431a28be09">setCamera</a> (<a class="el" href="class_camera.html">Camera</a> *value)</td></tr>
+<tr class="memdesc:aaf7522ca239bc07bd78a6e431a28be09"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラ設定関数  <a href="#aaf7522ca239bc07bd78a6e431a28be09">[詳解]</a><br /></td></tr>
+<tr class="separator:aaf7522ca239bc07bd78a6e431a28be09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a684f715afcbec6138c71f2a6021b89d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#a684f715afcbec6138c71f2a6021b89d1">setDrawCommonData</a> (<a class="el" href="class_draw_common_data.html">DrawCommonData</a> *value)</td></tr>
+<tr class="memdesc:a684f715afcbec6138c71f2a6021b89d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ設定関数  <a href="#a684f715afcbec6138c71f2a6021b89d1">[詳解]</a><br /></td></tr>
+<tr class="separator:a684f715afcbec6138c71f2a6021b89d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25dfdffef70779c1a2eaaa6f2ebbf2d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#a25dfdffef70779c1a2eaaa6f2ebbf2d4">setShaderManager</a> (<a class="el" href="class_shader_manager.html">ShaderManager</a> *value)</td></tr>
+<tr class="memdesc:a25dfdffef70779c1a2eaaa6f2ebbf2d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダーマネージャ設定関数  <a href="#a25dfdffef70779c1a2eaaa6f2ebbf2d4">[詳解]</a><br /></td></tr>
+<tr class="separator:a25dfdffef70779c1a2eaaa6f2ebbf2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ef385cc7898df1912bb158b21a97fc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#a4ef385cc7898df1912bb158b21a97fc2">Init</a> ()</td></tr>
+<tr class="memdesc:a4ef385cc7898df1912bb158b21a97fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a4ef385cc7898df1912bb158b21a97fc2">[詳解]</a><br /></td></tr>
+<tr class="separator:a4ef385cc7898df1912bb158b21a97fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad81761c98d1ce21e104d28cf7b472199"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#ad81761c98d1ce21e104d28cf7b472199">UninitWhenChangeScene</a> ()</td></tr>
+<tr class="memdesc:ad81761c98d1ce21e104d28cf7b472199"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン変更時の終了関数  <a href="#ad81761c98d1ce21e104d28cf7b472199">[詳解]</a><br /></td></tr>
+<tr class="separator:ad81761c98d1ce21e104d28cf7b472199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51ad9a4afe326c1bf93e342cb0b0847b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#a51ad9a4afe326c1bf93e342cb0b0847b">Uninit</a> ()</td></tr>
+<tr class="memdesc:a51ad9a4afe326c1bf93e342cb0b0847b"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#a51ad9a4afe326c1bf93e342cb0b0847b">[詳解]</a><br /></td></tr>
+<tr class="separator:a51ad9a4afe326c1bf93e342cb0b0847b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba65fc4188bb72dd840f775900d0391"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#aeba65fc4188bb72dd840f775900d0391">Update</a> ()</td></tr>
+<tr class="memdesc:aeba65fc4188bb72dd840f775900d0391"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#aeba65fc4188bb72dd840f775900d0391">[詳解]</a><br /></td></tr>
+<tr class="separator:aeba65fc4188bb72dd840f775900d0391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc267e5e736c1bbeb2290663df2a4b01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#afc267e5e736c1bbeb2290663df2a4b01">Draw</a> ()</td></tr>
+<tr class="memdesc:afc267e5e736c1bbeb2290663df2a4b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画関数  <a href="#afc267e5e736c1bbeb2290663df2a4b01">[詳解]</a><br /></td></tr>
+<tr class="separator:afc267e5e736c1bbeb2290663df2a4b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad48ed36a4d46cdc06c1f4a0d95ee6e99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#ad48ed36a4d46cdc06c1f4a0d95ee6e99">AddDrawBaseToArray</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw)</td></tr>
+<tr class="memdesc:ad48ed36a4d46cdc06c1f4a0d95ee6e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画基底クラスの追加関数  <a href="#ad48ed36a4d46cdc06c1f4a0d95ee6e99">[詳解]</a><br /></td></tr>
+<tr class="separator:ad48ed36a4d46cdc06c1f4a0d95ee6e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bc527acde727f9005f056fc36f941be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#a6bc527acde727f9005f056fc36f941be">Reset</a> ()</td></tr>
+<tr class="memdesc:a6bc527acde727f9005f056fc36f941be"><td class="mdescLeft">&#160;</td><td class="mdescRight">リセット関数  <a href="#a6bc527acde727f9005f056fc36f941be">[詳解]</a><br /></td></tr>
+<tr class="separator:a6bc527acde727f9005f056fc36f941be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:a25b5fd61eef50d76b69314102ccc51fe"><td class="memItemLeft" align="right" valign="top">static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#a25b5fd61eef50d76b69314102ccc51fe">ARRAY_NUM</a> = 10000</td></tr>
+<tr class="memdesc:a25b5fd61eef50d76b69314102ccc51fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列数  <a href="#a25b5fd61eef50d76b69314102ccc51fe">[詳解]</a><br /></td></tr>
+<tr class="separator:a25b5fd61eef50d76b69314102ccc51fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:aad78575f0b78dad8e3bacc00d43cce8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#aad78575f0b78dad8e3bacc00d43cce8f">ChangeBillboardMatrix</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw)</td></tr>
+<tr class="memdesc:aad78575f0b78dad8e3bacc00d43cce8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビルボード用行列変更関数  <a href="#aad78575f0b78dad8e3bacc00d43cce8f">[詳解]</a><br /></td></tr>
+<tr class="separator:aad78575f0b78dad8e3bacc00d43cce8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a695f696fd3fed4991b79c49c082dbc3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#a695f696fd3fed4991b79c49c082dbc3e">AllBillboardUpdate</a> ()</td></tr>
+<tr class="memdesc:a695f696fd3fed4991b79c49c082dbc3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ビルボード更新関数  <a href="#a695f696fd3fed4991b79c49c082dbc3e">[詳解]</a><br /></td></tr>
+<tr class="separator:a695f696fd3fed4991b79c49c082dbc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a669ba6344e84fba605983c827fb1dc69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#a669ba6344e84fba605983c827fb1dc69">ChangeCameraType</a> (<a class="el" href="class_camera.html#a3b0a1f58deca679ac665f61c480d1dcb">Camera::Type</a> camera_type)</td></tr>
+<tr class="memdesc:a669ba6344e84fba605983c827fb1dc69"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラタイプ変更関数  <a href="#a669ba6344e84fba605983c827fb1dc69">[詳解]</a><br /></td></tr>
+<tr class="separator:a669ba6344e84fba605983c827fb1dc69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a8c16acb949d466197d47c4d57484eb7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_draw_base.html">DrawBase</a> *, <a class="el" href="class_render_target_shadow_map.html#a25b5fd61eef50d76b69314102ccc51fe">ARRAY_NUM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#a8c16acb949d466197d47c4d57484eb7e">draw_</a></td></tr>
+<tr class="memdesc:a8c16acb949d466197d47c4d57484eb7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画基底クラス配列  <a href="#a8c16acb949d466197d47c4d57484eb7e">[詳解]</a><br /></td></tr>
+<tr class="separator:a8c16acb949d466197d47c4d57484eb7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5af1571a13426a6ebd49f96d9070223"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#ac5af1571a13426a6ebd49f96d9070223">camera_</a> = nullptr</td></tr>
+<tr class="memdesc:ac5af1571a13426a6ebd49f96d9070223"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラ  <a href="#ac5af1571a13426a6ebd49f96d9070223">[詳解]</a><br /></td></tr>
+<tr class="separator:ac5af1571a13426a6ebd49f96d9070223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f64742fbf9926ef3ab06eca311c9e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera.html#a3b0a1f58deca679ac665f61c480d1dcb">Camera::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#a57f64742fbf9926ef3ab06eca311c9e7">save_camera_type_</a></td></tr>
+<tr class="memdesc:a57f64742fbf9926ef3ab06eca311c9e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">保存用カメラタイプ  <a href="#a57f64742fbf9926ef3ab06eca311c9e7">[詳解]</a><br /></td></tr>
+<tr class="separator:a57f64742fbf9926ef3ab06eca311c9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95f2c6ef14bc3875893b229f9d8362bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#a95f2c6ef14bc3875893b229f9d8362bf">common_data_</a> = nullptr</td></tr>
+<tr class="memdesc:a95f2c6ef14bc3875893b229f9d8362bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ  <a href="#a95f2c6ef14bc3875893b229f9d8362bf">[詳解]</a><br /></td></tr>
+<tr class="separator:a95f2c6ef14bc3875893b229f9d8362bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ee7ec6d95ec144cca0847bb880c9cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shader_manager.html">ShaderManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_target_shadow_map.html#a05ee7ec6d95ec144cca0847bb880c9cb">shader_manager_</a> = nullptr</td></tr>
+<tr class="memdesc:a05ee7ec6d95ec144cca0847bb880c9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダーマネージャ  <a href="#a05ee7ec6d95ec144cca0847bb880c9cb">[詳解]</a><br /></td></tr>
+<tr class="separator:a05ee7ec6d95ec144cca0847bb880c9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>レンダーターゲットシャドウマップClass </p>
+<p>レンダーターゲットシャドウマップのClass </p>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8h_source.html">RenderTargetShadowMap.h</a> の <a class="el" href="_render_target_shadow_map_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ad48ed36a4d46cdc06c1f4a0d95ee6e99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad48ed36a4d46cdc06c1f4a0d95ee6e99">&#9670;&nbsp;</a></span>AddDrawBaseToArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderTargetShadowMap::AddDrawBaseToArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画基底クラスの追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">draw</td><td>描画基底クラス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a> の <a class="el" href="_render_target_shadow_map_8cpp_source.html#l00132">132</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a695f696fd3fed4991b79c49c082dbc3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a695f696fd3fed4991b79c49c082dbc3e">&#9670;&nbsp;</a></span>AllBillboardUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderTargetShadowMap::AllBillboardUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全ビルボード更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a> の <a class="el" href="_render_target_shadow_map_8cpp_source.html#l00165">165</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aad78575f0b78dad8e3bacc00d43cce8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad78575f0b78dad8e3bacc00d43cce8f">&#9670;&nbsp;</a></span>ChangeBillboardMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderTargetShadowMap::ChangeBillboardMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ビルボード用行列変更関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">draw</td><td>描画基底クラス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a> の <a class="el" href="_render_target_shadow_map_8cpp_source.html#l00154">154</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a669ba6344e84fba605983c827fb1dc69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a669ba6344e84fba605983c827fb1dc69">&#9670;&nbsp;</a></span>ChangeCameraType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderTargetShadowMap::ChangeCameraType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_camera.html#a3b0a1f58deca679ac665f61c480d1dcb">Camera::Type</a>&#160;</td>
+          <td class="paramname"><em>camera_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>カメラタイプ変更関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera_type</td><td>カメラタイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a> の <a class="el" href="_render_target_shadow_map_8cpp_source.html#l00178">178</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afc267e5e736c1bbeb2290663df2a4b01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc267e5e736c1bbeb2290663df2a4b01">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderTargetShadowMap::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a> の <a class="el" href="_render_target_shadow_map_8cpp_source.html#l00077">77</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4ef385cc7898df1912bb158b21a97fc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ef385cc7898df1912bb158b21a97fc2">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderTargetShadowMap::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a> の <a class="el" href="_render_target_shadow_map_8cpp_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6bc527acde727f9005f056fc36f941be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bc527acde727f9005f056fc36f941be">&#9670;&nbsp;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderTargetShadowMap::Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>リセット関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a> の <a class="el" href="_render_target_shadow_map_8cpp_source.html#l00147">147</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aaf7522ca239bc07bd78a6e431a28be09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf7522ca239bc07bd78a6e431a28be09">&#9670;&nbsp;</a></span>setCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderTargetShadowMap::setCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>カメラ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*value</td><td>カメラ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a> の <a class="el" href="_render_target_shadow_map_8cpp_source.html#l00024">24</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a684f715afcbec6138c71f2a6021b89d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a684f715afcbec6138c71f2a6021b89d1">&#9670;&nbsp;</a></span>setDrawCommonData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderTargetShadowMap::setDrawCommonData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画共通データ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*value</td><td>描画共通データ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a> の <a class="el" href="_render_target_shadow_map_8cpp_source.html#l00031">31</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a25dfdffef70779c1a2eaaa6f2ebbf2d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25dfdffef70779c1a2eaaa6f2ebbf2d4">&#9670;&nbsp;</a></span>setShaderManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderTargetShadowMap::setShaderManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shader_manager.html">ShaderManager</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>シェーダーマネージャ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>シェーダーマネージャ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a> の <a class="el" href="_render_target_shadow_map_8cpp_source.html#l00038">38</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a51ad9a4afe326c1bf93e342cb0b0847b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51ad9a4afe326c1bf93e342cb0b0847b">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderTargetShadowMap::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a> の <a class="el" href="_render_target_shadow_map_8cpp_source.html#l00055">55</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad81761c98d1ce21e104d28cf7b472199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad81761c98d1ce21e104d28cf7b472199">&#9670;&nbsp;</a></span>UninitWhenChangeScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderTargetShadowMap::UninitWhenChangeScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>シーン変更時の終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a> の <a class="el" href="_render_target_shadow_map_8cpp_source.html#l00062">62</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aeba65fc4188bb72dd840f775900d0391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba65fc4188bb72dd840f775900d0391">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderTargetShadowMap::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a> の <a class="el" href="_render_target_shadow_map_8cpp_source.html#l00069">69</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a25b5fd61eef50d76b69314102ccc51fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25b5fd61eef50d76b69314102ccc51fe">&#9670;&nbsp;</a></span>ARRAY_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned RenderTargetShadowMap::ARRAY_NUM = 10000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>配列数 </p>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8h_source.html">RenderTargetShadowMap.h</a> の <a class="el" href="_render_target_shadow_map_8h_source.html#l00039">39</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac5af1571a13426a6ebd49f96d9070223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5af1571a13426a6ebd49f96d9070223">&#9670;&nbsp;</a></span>camera_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_camera.html">Camera</a>* RenderTargetShadowMap::camera_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>カメラ </p>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8h_source.html">RenderTargetShadowMap.h</a> の <a class="el" href="_render_target_shadow_map_8h_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a95f2c6ef14bc3875893b229f9d8362bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f2c6ef14bc3875893b229f9d8362bf">&#9670;&nbsp;</a></span>common_data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_draw_common_data.html">DrawCommonData</a>* RenderTargetShadowMap::common_data_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画共通データ </p>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8h_source.html">RenderTargetShadowMap.h</a> の <a class="el" href="_render_target_shadow_map_8h_source.html#l00050">50</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8c16acb949d466197d47c4d57484eb7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c16acb949d466197d47c4d57484eb7e">&#9670;&nbsp;</a></span>draw_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt;<a class="el" href="class_draw_base.html">DrawBase</a>*, <a class="el" href="class_render_target_shadow_map.html#a25b5fd61eef50d76b69314102ccc51fe">ARRAY_NUM</a>&gt; RenderTargetShadowMap::draw_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画基底クラス配列 </p>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8h_source.html">RenderTargetShadowMap.h</a> の <a class="el" href="_render_target_shadow_map_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a57f64742fbf9926ef3ab06eca311c9e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57f64742fbf9926ef3ab06eca311c9e7">&#9670;&nbsp;</a></span>save_camera_type_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_camera.html#a3b0a1f58deca679ac665f61c480d1dcb">Camera::Type</a> RenderTargetShadowMap::save_camera_type_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>保存用カメラタイプ </p>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8h_source.html">RenderTargetShadowMap.h</a> の <a class="el" href="_render_target_shadow_map_8h_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a05ee7ec6d95ec144cca0847bb880c9cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05ee7ec6d95ec144cca0847bb880c9cb">&#9670;&nbsp;</a></span>shader_manager_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shader_manager.html">ShaderManager</a>* RenderTargetShadowMap::shader_manager_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シェーダーマネージャ </p>
+
+<p class="definition"> <a class="el" href="_render_target_shadow_map_8h_source.html">RenderTargetShadowMap.h</a> の <a class="el" href="_render_target_shadow_map_8h_source.html#l00051">51</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/RenderTarget/<a class="el" href="_render_target_shadow_map_8h_source.html">RenderTargetShadowMap.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/RenderTarget/Source/<a class="el" href="_render_target_shadow_map_8cpp_source.html">RenderTargetShadowMap.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_render_target_shadow_map.html">RenderTargetShadowMap</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

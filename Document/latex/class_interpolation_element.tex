@@ -1,0 +1,201 @@
+\hypertarget{class_interpolation_element}{}\section{Interpolation\+Element$<$ Value, Distance, Add\+Info $>$ クラステンプレート}
+\label{class_interpolation_element}\index{Interpolation\+Element$<$ Value, Distance, Add\+Info $>$@{Interpolation\+Element$<$ Value, Distance, Add\+Info $>$}}
+
+
+補間要素\+Class(\+Template)  
+
+
+
+
+{\ttfamily \#include $<$Interpolation.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+Value $\ast$ \mbox{\hyperlink{class_interpolation_element_afd5a4d717599f5bd681eb72365af9b39}{getp\+Value}} ()
+\begin{DoxyCompactList}\small\item\em キー値取得関数 \end{DoxyCompactList}\item 
+Distance $\ast$ \mbox{\hyperlink{class_interpolation_element_a7f203d40a738a537582e6996c8ee8dda}{getp\+Distance}} ()
+\begin{DoxyCompactList}\small\item\em 補間距離取得関数 \end{DoxyCompactList}\item 
+Add\+Info $\ast$ \mbox{\hyperlink{class_interpolation_element_ac55b56fb903541d4284f743985dfeaec}{getp\+Add\+Info}} ()
+\begin{DoxyCompactList}\small\item\em 付加情報取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_interpolation_element_a727cf8064628102adb1b0b61caeaa347}{Interpolation\+Element}} (Value \&value, Distance \&distance, Add\+Info \&add\+\_\+info)
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+Value \mbox{\hyperlink{class_interpolation_element_ab032d3e1d0cfaa9d2fe6560a1633b7e0}{value\+\_\+}}
+\begin{DoxyCompactList}\small\item\em キー値 \end{DoxyCompactList}\item 
+Distance \mbox{\hyperlink{class_interpolation_element_a8c7cba752cfa48df627b64f7924a7edf}{distance\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 補間距離(前の要素からの相対距離) \end{DoxyCompactList}\item 
+Add\+Info \mbox{\hyperlink{class_interpolation_element_ad167e0db48484051ee336f45e010b536}{add\+\_\+info\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 付加情報 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Value, class Distance = double, class Add\+Info = double$>$\newline
+class Interpolation\+Element$<$ Value, Distance, Add\+Info $>$}
+
+補間要素\+Class(\+Template) 
+
+補間用の\+Class(\+Template) 
+
+ Interpolation.\+h の 18 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_interpolation_element_a727cf8064628102adb1b0b61caeaa347}\label{class_interpolation_element_a727cf8064628102adb1b0b61caeaa347}} 
+\index{Interpolation\+Element@{Interpolation\+Element}!Interpolation\+Element@{Interpolation\+Element}}
+\index{Interpolation\+Element@{Interpolation\+Element}!Interpolation\+Element@{Interpolation\+Element}}
+\subsubsection{\texorpdfstring{Interpolation\+Element()}{InterpolationElement()}}
+{\footnotesize\ttfamily template$<$class Value , class Distance  = double, class Add\+Info  = double$>$ \\
+\mbox{\hyperlink{class_interpolation_element}{Interpolation\+Element}}$<$ Value, Distance, Add\+Info $>$\+::\mbox{\hyperlink{class_interpolation_element}{Interpolation\+Element}} (\begin{DoxyParamCaption}\item[{Value \&}]{value,  }\item[{Distance \&}]{distance,  }\item[{Add\+Info \&}]{add\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em \&value} & キー値 \\
+\hline
+{\em \&distance} & 補間距離 \\
+\hline
+{\em \&add\+\_\+info} & 付加情報 \\
+\hline
+\end{DoxyParams}
+
+
+ Interpolation.\+h の 78 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_interpolation_element_ac55b56fb903541d4284f743985dfeaec}\label{class_interpolation_element_ac55b56fb903541d4284f743985dfeaec}} 
+\index{Interpolation\+Element@{Interpolation\+Element}!getp\+Add\+Info@{getp\+Add\+Info}}
+\index{getp\+Add\+Info@{getp\+Add\+Info}!Interpolation\+Element@{Interpolation\+Element}}
+\subsubsection{\texorpdfstring{getp\+Add\+Info()}{getpAddInfo()}}
+{\footnotesize\ttfamily template$<$class Value , class Distance  = double, class Add\+Info  = double$>$ \\
+Add\+Info$\ast$ \mbox{\hyperlink{class_interpolation_element}{Interpolation\+Element}}$<$ Value, Distance, Add\+Info $>$\+::getp\+Add\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+付加情報取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Add\+Info$\ast$} & 付加情報 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 61 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_element_a7f203d40a738a537582e6996c8ee8dda}\label{class_interpolation_element_a7f203d40a738a537582e6996c8ee8dda}} 
+\index{Interpolation\+Element@{Interpolation\+Element}!getp\+Distance@{getp\+Distance}}
+\index{getp\+Distance@{getp\+Distance}!Interpolation\+Element@{Interpolation\+Element}}
+\subsubsection{\texorpdfstring{getp\+Distance()}{getpDistance()}}
+{\footnotesize\ttfamily template$<$class Value , class Distance  = double, class Add\+Info  = double$>$ \\
+Distance$\ast$ \mbox{\hyperlink{class_interpolation_element}{Interpolation\+Element}}$<$ Value, Distance, Add\+Info $>$\+::getp\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+補間距離取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Distance$\ast$} & 補間距離 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_element_afd5a4d717599f5bd681eb72365af9b39}\label{class_interpolation_element_afd5a4d717599f5bd681eb72365af9b39}} 
+\index{Interpolation\+Element@{Interpolation\+Element}!getp\+Value@{getp\+Value}}
+\index{getp\+Value@{getp\+Value}!Interpolation\+Element@{Interpolation\+Element}}
+\subsubsection{\texorpdfstring{getp\+Value()}{getpValue()}}
+{\footnotesize\ttfamily template$<$class Value , class Distance  = double, class Add\+Info  = double$>$ \\
+Value$\ast$ \mbox{\hyperlink{class_interpolation_element}{Interpolation\+Element}}$<$ Value, Distance, Add\+Info $>$\+::getp\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+キー値取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Value$\ast$} & キー値 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 39 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_interpolation_element_ad167e0db48484051ee336f45e010b536}\label{class_interpolation_element_ad167e0db48484051ee336f45e010b536}} 
+\index{Interpolation\+Element@{Interpolation\+Element}!add\+\_\+info\+\_\+@{add\+\_\+info\+\_\+}}
+\index{add\+\_\+info\+\_\+@{add\+\_\+info\+\_\+}!Interpolation\+Element@{Interpolation\+Element}}
+\subsubsection{\texorpdfstring{add\+\_\+info\+\_\+}{add\_info\_}}
+{\footnotesize\ttfamily template$<$class Value , class Distance  = double, class Add\+Info  = double$>$ \\
+Add\+Info \mbox{\hyperlink{class_interpolation_element}{Interpolation\+Element}}$<$ Value, Distance, Add\+Info $>$\+::add\+\_\+info\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+付加情報 
+
+
+
+ Interpolation.\+h の 26 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_element_a8c7cba752cfa48df627b64f7924a7edf}\label{class_interpolation_element_a8c7cba752cfa48df627b64f7924a7edf}} 
+\index{Interpolation\+Element@{Interpolation\+Element}!distance\+\_\+@{distance\+\_\+}}
+\index{distance\+\_\+@{distance\+\_\+}!Interpolation\+Element@{Interpolation\+Element}}
+\subsubsection{\texorpdfstring{distance\+\_\+}{distance\_}}
+{\footnotesize\ttfamily template$<$class Value , class Distance  = double, class Add\+Info  = double$>$ \\
+Distance \mbox{\hyperlink{class_interpolation_element}{Interpolation\+Element}}$<$ Value, Distance, Add\+Info $>$\+::distance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+補間距離(前の要素からの相対距離) 
+
+
+
+ Interpolation.\+h の 25 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_element_ab032d3e1d0cfaa9d2fe6560a1633b7e0}\label{class_interpolation_element_ab032d3e1d0cfaa9d2fe6560a1633b7e0}} 
+\index{Interpolation\+Element@{Interpolation\+Element}!value\+\_\+@{value\+\_\+}}
+\index{value\+\_\+@{value\+\_\+}!Interpolation\+Element@{Interpolation\+Element}}
+\subsubsection{\texorpdfstring{value\+\_\+}{value\_}}
+{\footnotesize\ttfamily template$<$class Value , class Distance  = double, class Add\+Info  = double$>$ \\
+Value \mbox{\hyperlink{class_interpolation_element}{Interpolation\+Element}}$<$ Value, Distance, Add\+Info $>$\+::value\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+キー値 
+
+
+
+ Interpolation.\+h の 24 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_interpolation_8h}{Interpolation.\+h}}\end{DoxyCompactItemize}

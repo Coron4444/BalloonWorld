@@ -1,0 +1,571 @@
+\hypertarget{class_sound_manager}{}\section{Sound\+Manager クラス}
+\label{class_sound_manager}\index{Sound\+Manager@{Sound\+Manager}}
+
+
+サウンドマネージャ\+Class(\+Singleton)  
+
+
+
+
+{\ttfamily \#include $<$Sound\+Manager.\+h$>$}
+
+
+
+Sound\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{class_sound_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_sound_manager_1_1_parameter}{Parameter}}
+\begin{DoxyCompactList}\small\item\em パラメーター\+Class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1d}{Type}} \{ \newline
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dab50339a10e1de285ac99d4c3990b8693}{Type\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dabb113fd8addf2b80497f56343b87a4a1}{Type\+::\+B\+G\+M\+\_\+\+T\+I\+T\+LE}}, 
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dafd151491d529c86a03961aa65be07bda}{Type\+::\+B\+G\+M\+\_\+\+T\+U\+T\+O\+R\+I\+AL}}, 
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1daa16edf1402bd0c56eb91f437a096c368}{Type\+::\+B\+G\+M\+\_\+\+S\+T\+A\+GE}}, 
+\newline
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dafa79f994bbe8139a1d752291a42d8135}{Type\+::\+B\+G\+M\+\_\+\+R\+E\+S\+U\+LT}}, 
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dae04f1d7a32c6fe24adabf473441900e1}{Type\+::\+S\+E\+\_\+\+K\+E\+T\+EI}}, 
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dac94690b4396e2c7c416a27602ce41b52}{Type\+::\+S\+E\+\_\+\+C\+U\+R\+S\+OR}}, 
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1daa0aa7d03adf4a0b627a19b077fe4f66d}{Type\+::\+S\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+UP}}, 
+\newline
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da92887653300fa9de03d87e5510cde654}{Type\+::\+S\+E\+\_\+\+D\+A\+M\+A\+GE}}, 
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da6d3e1e9d4e7f27446d2de186c58925b9}{Type\+::\+S\+E\+\_\+\+O\+P\+EN}}, 
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da066cbf7d13eef9bc518463a7b8fdff75}{Type\+::\+S\+E\+\_\+\+C\+L\+O\+SE}}, 
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da2a94f4efeaa1cf0309447d10e517dc90}{Type\+::\+S\+E\+\_\+\+C\+L\+E\+AR}}, 
+\newline
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da8d352a6b65951ba1398253a29d991907}{Type\+::\+S\+E\+\_\+\+P\+U\+R\+GE}}, 
+\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5}{Type\+::\+M\+AX}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{class_sound_manager_ab6f67ebd0f3a3555b334870c46c6d52b}{Init}} (H\+W\+ND h\+Wnd)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a61543e2532817e5116fa4f7808545921}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{class_sound_manager_a190f088a8f9c95b596ec61ccc323f86c}{Play\+Or\+Stop}} (\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1d}{Type}} type)
+\begin{DoxyCompactList}\small\item\em 再生or停止関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a97ace4d5c214d5a97f749e2c76e2c18d}{Stop}} (\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1d}{Type}} type)
+\begin{DoxyCompactList}\small\item\em 停止関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a59093ea4593b0f9036f976db929aecb1}{All\+Stop}} ()
+\begin{DoxyCompactList}\small\item\em 停止関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} $\ast$ \mbox{\hyperlink{class_sound_manager_ae46d05e32c52587ff3988f5ef81c1cbe}{getp\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス取得関数 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_sound_manager_a5761e23b2658ba177703c40088f5e43e}{Release\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sound_manager_abcc1fbf3488be5788a42c9a4fe56df35}{Sound\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{class_sound_manager_a1f26a5ddca358c60772b40e99b181836}{Check\+Chunk}} (H\+A\+N\+D\+LE file\+\_\+handle, D\+W\+O\+RD format, D\+W\+O\+RD $\ast$chunk\+\_\+size, D\+W\+O\+RD $\ast$chunk\+\_\+data\+\_\+position)
+\begin{DoxyCompactList}\small\item\em チャンクチェック関数 \end{DoxyCompactList}\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{class_sound_manager_a89826acbdcf32a9ec1110f3e805892e1}{Read\+Chunk}} (H\+A\+N\+D\+LE file\+\_\+handle, void $\ast$buffer, D\+W\+O\+RD buffer\+\_\+size, D\+W\+O\+RD buffer\+\_\+offset)
+\begin{DoxyCompactList}\small\item\em チャンク読み込み関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sound_manager_a64d6b47ad5f72114d2cae83b2ef7b350}{Sound\+Manager}} (const \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} \&class\+\_\+name)=delete
+\item 
+\mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} \& \mbox{\hyperlink{class_sound_manager_a22fd4008f3e0c4f5e0e4480e3f89baed}{operator=}} (const \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} \&class\+\_\+name)=delete
+\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+I\+X\+Audio2 $\ast$ \mbox{\hyperlink{class_sound_manager_a61e40cffb2fea01e0840134e10bd8e69}{x\+\_\+audio\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em X\+Audio2オブジェクトインターフェイス \end{DoxyCompactList}\item 
+I\+X\+Audio2\+Mastering\+Voice $\ast$ \mbox{\hyperlink{class_sound_manager_a96f7bde6fb880cb242434707cd769e64}{mastering\+\_\+voice\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em マスターボイス \end{DoxyCompactList}\item 
+I\+X\+Audio2\+Source\+Voice $\ast$ \mbox{\hyperlink{class_sound_manager_a48fc88576a4066e7739138a3c4a0cd47}{source\+\_\+voice\+\_\+}} \mbox{[}(int) \mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5}{Type\+::\+M\+AX}}\mbox{]} = \{nullptr\}
+\begin{DoxyCompactList}\small\item\em ソースボイス \end{DoxyCompactList}\item 
+B\+Y\+TE $\ast$ \mbox{\hyperlink{class_sound_manager_ab519873998a45c15e8cf74881d3ee6ca}{data\+\_\+audio\+\_\+}} \mbox{[}(int) \mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5}{Type\+::\+M\+AX}}\mbox{]} = \{nullptr\}
+\begin{DoxyCompactList}\small\item\em オーディオデータ \end{DoxyCompactList}\item 
+D\+W\+O\+RD \mbox{\hyperlink{class_sound_manager_aa95190cc70cca6b516bed20f22f2f0ba}{size\+\_\+audio\+\_\+}} \mbox{[}(int) \mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5}{Type\+::\+M\+AX}}\mbox{]} = \{0\}
+\begin{DoxyCompactList}\small\item\em オーディオデータサイズ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{struct_sound_manager_1_1_parameter}{Parameter}} \mbox{\hyperlink{class_sound_manager_aaa51d88b702313608c25be96945d7bc6}{P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+R\+R\+AY}} \mbox{[}(int) \mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5}{Type\+::\+M\+AX}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em パラメーター配列 \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} $\ast$ \mbox{\hyperlink{class_sound_manager_a9b056c7a340bb57b317533d34f679743}{instance\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em インスタンス \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+サウンドマネージャ\+Class(\+Singleton) 
+
+サウンドのマネージャ\+Class(\+Singleton) 
+
+ Sound\+Manager.\+h の 24 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1d}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1d}} 
+\index{Sound\+Manager@{Sound\+Manager}!Type@{Type}}
+\index{Type@{Type}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1d}{Sound\+Manager\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dab50339a10e1de285ac99d4c3990b8693}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+G\+M\+\_\+\+T\+I\+T\+LE@{B\+G\+M\+\_\+\+T\+I\+T\+LE}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!B\+G\+M\+\_\+\+T\+I\+T\+LE@{B\+G\+M\+\_\+\+T\+I\+T\+LE}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dabb113fd8addf2b80497f56343b87a4a1}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dabb113fd8addf2b80497f56343b87a4a1}} 
+B\+G\+M\+\_\+\+T\+I\+T\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+G\+M\+\_\+\+T\+U\+T\+O\+R\+I\+AL@{B\+G\+M\+\_\+\+T\+U\+T\+O\+R\+I\+AL}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!B\+G\+M\+\_\+\+T\+U\+T\+O\+R\+I\+AL@{B\+G\+M\+\_\+\+T\+U\+T\+O\+R\+I\+AL}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dafd151491d529c86a03961aa65be07bda}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dafd151491d529c86a03961aa65be07bda}} 
+B\+G\+M\+\_\+\+T\+U\+T\+O\+R\+I\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+G\+M\+\_\+\+S\+T\+A\+GE@{B\+G\+M\+\_\+\+S\+T\+A\+GE}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!B\+G\+M\+\_\+\+S\+T\+A\+GE@{B\+G\+M\+\_\+\+S\+T\+A\+GE}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1daa16edf1402bd0c56eb91f437a096c368}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1daa16edf1402bd0c56eb91f437a096c368}} 
+B\+G\+M\+\_\+\+S\+T\+A\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+G\+M\+\_\+\+R\+E\+S\+U\+LT@{B\+G\+M\+\_\+\+R\+E\+S\+U\+LT}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!B\+G\+M\+\_\+\+R\+E\+S\+U\+LT@{B\+G\+M\+\_\+\+R\+E\+S\+U\+LT}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dafa79f994bbe8139a1d752291a42d8135}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dafa79f994bbe8139a1d752291a42d8135}} 
+B\+G\+M\+\_\+\+R\+E\+S\+U\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+\_\+\+K\+E\+T\+EI@{S\+E\+\_\+\+K\+E\+T\+EI}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!S\+E\+\_\+\+K\+E\+T\+EI@{S\+E\+\_\+\+K\+E\+T\+EI}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dae04f1d7a32c6fe24adabf473441900e1}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dae04f1d7a32c6fe24adabf473441900e1}} 
+S\+E\+\_\+\+K\+E\+T\+EI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+\_\+\+C\+U\+R\+S\+OR@{S\+E\+\_\+\+C\+U\+R\+S\+OR}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!S\+E\+\_\+\+C\+U\+R\+S\+OR@{S\+E\+\_\+\+C\+U\+R\+S\+OR}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dac94690b4396e2c7c416a27602ce41b52}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1dac94690b4396e2c7c416a27602ce41b52}} 
+S\+E\+\_\+\+C\+U\+R\+S\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+UP@{S\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+UP}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!S\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+UP@{S\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+UP}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1daa0aa7d03adf4a0b627a19b077fe4f66d}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1daa0aa7d03adf4a0b627a19b077fe4f66d}} 
+S\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+\_\+\+D\+A\+M\+A\+GE@{S\+E\+\_\+\+D\+A\+M\+A\+GE}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!S\+E\+\_\+\+D\+A\+M\+A\+GE@{S\+E\+\_\+\+D\+A\+M\+A\+GE}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da92887653300fa9de03d87e5510cde654}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da92887653300fa9de03d87e5510cde654}} 
+S\+E\+\_\+\+D\+A\+M\+A\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+\_\+\+O\+P\+EN@{S\+E\+\_\+\+O\+P\+EN}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!S\+E\+\_\+\+O\+P\+EN@{S\+E\+\_\+\+O\+P\+EN}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da6d3e1e9d4e7f27446d2de186c58925b9}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da6d3e1e9d4e7f27446d2de186c58925b9}} 
+S\+E\+\_\+\+O\+P\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+\_\+\+C\+L\+O\+SE@{S\+E\+\_\+\+C\+L\+O\+SE}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!S\+E\+\_\+\+C\+L\+O\+SE@{S\+E\+\_\+\+C\+L\+O\+SE}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da066cbf7d13eef9bc518463a7b8fdff75}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da066cbf7d13eef9bc518463a7b8fdff75}} 
+S\+E\+\_\+\+C\+L\+O\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+\_\+\+C\+L\+E\+AR@{S\+E\+\_\+\+C\+L\+E\+AR}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!S\+E\+\_\+\+C\+L\+E\+AR@{S\+E\+\_\+\+C\+L\+E\+AR}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da2a94f4efeaa1cf0309447d10e517dc90}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da2a94f4efeaa1cf0309447d10e517dc90}} 
+S\+E\+\_\+\+C\+L\+E\+AR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+\_\+\+P\+U\+R\+GE@{S\+E\+\_\+\+P\+U\+R\+GE}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!S\+E\+\_\+\+P\+U\+R\+GE@{S\+E\+\_\+\+P\+U\+R\+GE}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da8d352a6b65951ba1398253a29d991907}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da8d352a6b65951ba1398253a29d991907}} 
+S\+E\+\_\+\+P\+U\+R\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Sound\+Manager@{Sound\+Manager}}\index{Sound\+Manager@{Sound\+Manager}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5}\label{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Sound\+Manager.\+h の 50 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_sound_manager_abcc1fbf3488be5788a42c9a4fe56df35}\label{class_sound_manager_abcc1fbf3488be5788a42c9a4fe56df35}} 
+\index{Sound\+Manager@{Sound\+Manager}!Sound\+Manager@{Sound\+Manager}}
+\index{Sound\+Manager@{Sound\+Manager}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{Sound\+Manager()}{SoundManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sound\+Manager\+::\+Sound\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Sound\+Manager.\+cpp の 72 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_a64d6b47ad5f72114d2cae83b2ef7b350}\label{class_sound_manager_a64d6b47ad5f72114d2cae83b2ef7b350}} 
+\index{Sound\+Manager@{Sound\+Manager}!Sound\+Manager@{Sound\+Manager}}
+\index{Sound\+Manager@{Sound\+Manager}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{Sound\+Manager()}{SoundManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sound\+Manager\+::\+Sound\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} \&}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_sound_manager_a59093ea4593b0f9036f976db929aecb1}\label{class_sound_manager_a59093ea4593b0f9036f976db929aecb1}} 
+\index{Sound\+Manager@{Sound\+Manager}!All\+Stop@{All\+Stop}}
+\index{All\+Stop@{All\+Stop}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{All\+Stop()}{AllStop()}}
+{\footnotesize\ttfamily void Sound\+Manager\+::\+All\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+停止関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Sound\+Manager.\+cpp の 305 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_a1f26a5ddca358c60772b40e99b181836}\label{class_sound_manager_a1f26a5ddca358c60772b40e99b181836}} 
+\index{Sound\+Manager@{Sound\+Manager}!Check\+Chunk@{Check\+Chunk}}
+\index{Check\+Chunk@{Check\+Chunk}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{Check\+Chunk()}{CheckChunk()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Sound\+Manager\+::\+Check\+Chunk (\begin{DoxyParamCaption}\item[{H\+A\+N\+D\+LE}]{file\+\_\+handle,  }\item[{D\+W\+O\+RD}]{format,  }\item[{D\+W\+O\+RD $\ast$}]{chunk\+\_\+size,  }\item[{D\+W\+O\+RD $\ast$}]{chunk\+\_\+data\+\_\+position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+チャンクチェック関数 
+
+
+\begin{DoxyParams}{引数}
+{\em file\+\_\+handle} & ファイルハンドル \\
+\hline
+{\em format} & フォーマット \\
+\hline
+{\em chunk\+\_\+size} & チャンクサイズ \\
+\hline
+{\em chunk\+\_\+data\+\_\+position} & チャンクデータの場所 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em H\+R\+E\+S\+U\+LT} & エラーチェック用 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Sound\+Manager.\+cpp の 320 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_ae46d05e32c52587ff3988f5ef81c1cbe}\label{class_sound_manager_ae46d05e32c52587ff3988f5ef81c1cbe}} 
+\index{Sound\+Manager@{Sound\+Manager}!getp\+Instance@{getp\+Instance}}
+\index{getp\+Instance@{getp\+Instance}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Instance()}{getpInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} $\ast$ Sound\+Manager\+::getp\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+インスタンス取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Sound\+Manager$\ast$} & インスタンス \\
+\hline
+\end{DoxyRetVals}
+
+
+ Sound\+Manager.\+cpp の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_ab6f67ebd0f3a3555b334870c46c6d52b}\label{class_sound_manager_ab6f67ebd0f3a3555b334870c46c6d52b}} 
+\index{Sound\+Manager@{Sound\+Manager}!Init@{Init}}
+\index{Init@{Init}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Sound\+Manager\+::\+Init (\begin{DoxyParamCaption}\item[{H\+W\+ND}]{h\+Wnd }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em h\+Wnd} & ウィンドウハンドル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em H\+R\+E\+S\+U\+LT} & エラーチェック用 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Sound\+Manager.\+cpp の 78 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_a22fd4008f3e0c4f5e0e4480e3f89baed}\label{class_sound_manager_a22fd4008f3e0c4f5e0e4480e3f89baed}} 
+\index{Sound\+Manager@{Sound\+Manager}!operator=@{operator=}}
+\index{operator=@{operator=}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}}\& Sound\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} \&}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_sound_manager_a190f088a8f9c95b596ec61ccc323f86c}\label{class_sound_manager_a190f088a8f9c95b596ec61ccc323f86c}} 
+\index{Sound\+Manager@{Sound\+Manager}!Play\+Or\+Stop@{Play\+Or\+Stop}}
+\index{Play\+Or\+Stop@{Play\+Or\+Stop}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{Play\+Or\+Stop()}{PlayOrStop()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Sound\+Manager\+::\+Play\+Or\+Stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1d}{Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+再生or停止関数 
+
+
+\begin{DoxyParams}{引数}
+{\em type} & サウンドタイプ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em H\+R\+E\+S\+U\+LT} & エラーチェック用 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Sound\+Manager.\+cpp の 253 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_a89826acbdcf32a9ec1110f3e805892e1}\label{class_sound_manager_a89826acbdcf32a9ec1110f3e805892e1}} 
+\index{Sound\+Manager@{Sound\+Manager}!Read\+Chunk@{Read\+Chunk}}
+\index{Read\+Chunk@{Read\+Chunk}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{Read\+Chunk()}{ReadChunk()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Sound\+Manager\+::\+Read\+Chunk (\begin{DoxyParamCaption}\item[{H\+A\+N\+D\+LE}]{file\+\_\+handle,  }\item[{void $\ast$}]{buffer,  }\item[{D\+W\+O\+RD}]{buffer\+\_\+size,  }\item[{D\+W\+O\+RD}]{buffer\+\_\+offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+チャンク読み込み関数 
+
+
+\begin{DoxyParams}{引数}
+{\em file\+\_\+handle} & ファイルハンドル \\
+\hline
+{\em buffer} & 読み込み先バッファ \\
+\hline
+{\em buffer\+\_\+size} & 読み込み先バッファのサイズ \\
+\hline
+{\em buffer\+\_\+offset} & 読み込み先バッファのオフセット \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em H\+R\+E\+S\+U\+LT} & エラーチェック用 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Sound\+Manager.\+cpp の 388 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_a5761e23b2658ba177703c40088f5e43e}\label{class_sound_manager_a5761e23b2658ba177703c40088f5e43e}} 
+\index{Sound\+Manager@{Sound\+Manager}!Release\+Instance@{Release\+Instance}}
+\index{Release\+Instance@{Release\+Instance}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{Release\+Instance()}{ReleaseInstance()}}
+{\footnotesize\ttfamily void Sound\+Manager\+::\+Release\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+インスタンス解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Sound\+Manager.\+cpp の 62 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_a97ace4d5c214d5a97f749e2c76e2c18d}\label{class_sound_manager_a97ace4d5c214d5a97f749e2c76e2c18d}} 
+\index{Sound\+Manager@{Sound\+Manager}!Stop@{Stop}}
+\index{Stop@{Stop}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily void Sound\+Manager\+::\+Stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1d}{Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+停止関数 
+
+
+\begin{DoxyParams}{引数}
+{\em type} & サウンドタイプ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Sound\+Manager.\+cpp の 287 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_a61543e2532817e5116fa4f7808545921}\label{class_sound_manager_a61543e2532817e5116fa4f7808545921}} 
+\index{Sound\+Manager@{Sound\+Manager}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Sound\+Manager\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Sound\+Manager.\+cpp の 216 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_sound_manager_ab519873998a45c15e8cf74881d3ee6ca}\label{class_sound_manager_ab519873998a45c15e8cf74881d3ee6ca}} 
+\index{Sound\+Manager@{Sound\+Manager}!data\+\_\+audio\+\_\+@{data\+\_\+audio\+\_\+}}
+\index{data\+\_\+audio\+\_\+@{data\+\_\+audio\+\_\+}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{data\+\_\+audio\+\_\+}{data\_audio\_}}
+{\footnotesize\ttfamily B\+Y\+TE$\ast$ Sound\+Manager\+::data\+\_\+audio\+\_\+\mbox{[}(int) \mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5}{Type\+::\+M\+AX}}\mbox{]} = \{nullptr\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+オーディオデータ 
+
+
+
+ Sound\+Manager.\+h の 116 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_a9b056c7a340bb57b317533d34f679743}\label{class_sound_manager_a9b056c7a340bb57b317533d34f679743}} 
+\index{Sound\+Manager@{Sound\+Manager}!instance\+\_\+@{instance\+\_\+}}
+\index{instance\+\_\+@{instance\+\_\+}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{instance\+\_\+}{instance\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} $\ast$ Sound\+Manager\+::instance\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+インスタンス 
+
+
+
+ Sound\+Manager.\+h の 80 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_a96f7bde6fb880cb242434707cd769e64}\label{class_sound_manager_a96f7bde6fb880cb242434707cd769e64}} 
+\index{Sound\+Manager@{Sound\+Manager}!mastering\+\_\+voice\+\_\+@{mastering\+\_\+voice\+\_\+}}
+\index{mastering\+\_\+voice\+\_\+@{mastering\+\_\+voice\+\_\+}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{mastering\+\_\+voice\+\_\+}{mastering\_voice\_}}
+{\footnotesize\ttfamily I\+X\+Audio2\+Mastering\+Voice$\ast$ Sound\+Manager\+::mastering\+\_\+voice\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+マスターボイス 
+
+
+
+ Sound\+Manager.\+h の 114 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_aaa51d88b702313608c25be96945d7bc6}\label{class_sound_manager_aaa51d88b702313608c25be96945d7bc6}} 
+\index{Sound\+Manager@{Sound\+Manager}!P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+R\+R\+AY@{P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+R\+R\+AY}}
+\index{P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+R\+R\+AY@{P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+R\+R\+AY}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+R\+R\+AY}{PARAMETER\_ARRAY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_sound_manager_1_1_parameter}{Sound\+Manager\+::\+Parameter}} Sound\+Manager\+::\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+R\+R\+AY\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}
+=
+\{
+    \{\textcolor{stringliteral}{"resource/Music/BGM/Title.wav"}, -1\},
+    \{\textcolor{stringliteral}{"resource/Music/BGM/Tutorial.wav"}, -1\},
+    \{\textcolor{stringliteral}{"resource/Music/BGM/Stage.wav"}, -1\},
+    \{\textcolor{stringliteral}{"resource/Music/BGM/Result.wav"}, -1\},
+    \{\textcolor{stringliteral}{"resource/Music/SE/01\_Ketei.wav"}, 0\},
+    \{\textcolor{stringliteral}{"resource/Music/SE/02\_Cursor.wav"}, 0\},
+    \{\textcolor{stringliteral}{"resource/Music/SE/03\_ScoreUp.wav"}, 0\},
+    \{\textcolor{stringliteral}{"resource/Music/SE/04\_Damage.wav"}, 0\},
+    \{\textcolor{stringliteral}{"resource/Music/SE/05\_Open.wav"}, 0\},
+    \{\textcolor{stringliteral}{"resource/Music/SE/06\_Close.wav"}, 0\},
+    \{\textcolor{stringliteral}{"resource/Music/SE/07\_Clear.wav"}, 0\},
+    \{\textcolor{stringliteral}{"resource/Music/SE/08\_Purge.wav"}, 0\},
+\}
+\end{DoxyCode}
+
+
+パラメーター配列 
+
+
+
+ Sound\+Manager.\+h の 73 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_aa95190cc70cca6b516bed20f22f2f0ba}\label{class_sound_manager_aa95190cc70cca6b516bed20f22f2f0ba}} 
+\index{Sound\+Manager@{Sound\+Manager}!size\+\_\+audio\+\_\+@{size\+\_\+audio\+\_\+}}
+\index{size\+\_\+audio\+\_\+@{size\+\_\+audio\+\_\+}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{size\+\_\+audio\+\_\+}{size\_audio\_}}
+{\footnotesize\ttfamily D\+W\+O\+RD Sound\+Manager\+::size\+\_\+audio\+\_\+\mbox{[}(int) \mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5}{Type\+::\+M\+AX}}\mbox{]} = \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+オーディオデータサイズ 
+
+
+
+ Sound\+Manager.\+h の 117 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_a48fc88576a4066e7739138a3c4a0cd47}\label{class_sound_manager_a48fc88576a4066e7739138a3c4a0cd47}} 
+\index{Sound\+Manager@{Sound\+Manager}!source\+\_\+voice\+\_\+@{source\+\_\+voice\+\_\+}}
+\index{source\+\_\+voice\+\_\+@{source\+\_\+voice\+\_\+}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{source\+\_\+voice\+\_\+}{source\_voice\_}}
+{\footnotesize\ttfamily I\+X\+Audio2\+Source\+Voice$\ast$ Sound\+Manager\+::source\+\_\+voice\+\_\+\mbox{[}(int) \mbox{\hyperlink{class_sound_manager_a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5}{Type\+::\+M\+AX}}\mbox{]} = \{nullptr\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ソースボイス 
+
+
+
+ Sound\+Manager.\+h の 115 行目に定義があります。
+
+\mbox{\Hypertarget{class_sound_manager_a61e40cffb2fea01e0840134e10bd8e69}\label{class_sound_manager_a61e40cffb2fea01e0840134e10bd8e69}} 
+\index{Sound\+Manager@{Sound\+Manager}!x\+\_\+audio\+\_\+@{x\+\_\+audio\+\_\+}}
+\index{x\+\_\+audio\+\_\+@{x\+\_\+audio\+\_\+}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection{\texorpdfstring{x\+\_\+audio\+\_\+}{x\_audio\_}}
+{\footnotesize\ttfamily I\+X\+Audio2$\ast$ Sound\+Manager\+::x\+\_\+audio\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+X\+Audio2オブジェクトインターフェイス 
+
+
+
+ Sound\+Manager.\+h の 113 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Sound/\mbox{\hyperlink{_sound_manager_8h}{Sound\+Manager.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Sound/\+Source/\mbox{\hyperlink{_sound_manager_8cpp}{Sound\+Manager.\+cpp}}\end{DoxyCompactItemize}

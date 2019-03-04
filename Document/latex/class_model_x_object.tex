@@ -2,173 +2,425 @@
 \label{class_model_x_object}\index{Model\+X\+Object@{Model\+X\+Object}}
 
 
+Xモデルオブジェクト\+Class  
+
+
+
+
 {\ttfamily \#include $<$Model\+X\+Object.\+h$>$}
 
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_model_x_object_a83bd334b1f24a69c4cbdcaa62464ff31}{Model\+X\+Object}} (const std\+::string $\ast$file\+\_\+path, bool is\+\_\+share\+\_\+data)
-\item 
-virtual \mbox{\hyperlink{class_model_x_object_a33553f8ab78dfd3c9d571a048ae85324}{$\sim$\+Model\+X\+Object}} ()
-\item 
-L\+P\+D3\+D\+X\+M\+E\+SH \mbox{\hyperlink{class_model_x_object_a3aaab083fe6e1956b2eaab815ebb4bfb}{Get\+Mesh}} ()
-\item 
+L\+P\+D3\+D\+X\+M\+E\+SH \mbox{\hyperlink{class_model_x_object_af40b9567dda03049daf9f299b33ba5a0}{getp\+Mesh}} ()
+\begin{DoxyCompactList}\small\item\em メッシュ取得関数 \end{DoxyCompactList}\item 
 unsigned \mbox{\hyperlink{class_model_x_object_a894790eda90cf0cc202b86f854583fda}{get\+Mesh\+Num}} ()
-\item 
-void \mbox{\hyperlink{class_model_x_object_ac005f3f164a1f75d6cfc0772e2e95382}{Update\+Mesh\+Declaration}} (const D3\+D\+V\+E\+R\+T\+E\+X\+E\+L\+E\+M\+E\+N\+T9 $\ast$D\+E\+C\+L\+A\+R\+A\+T\+I\+ON)
-\item 
-D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_model_x_object_a27df4304e87da11e2f9c9d7a8487a985}{Get\+Material}} (unsigned index)
-\item 
-void \mbox{\hyperlink{class_model_x_object_acc6b5f187b74b421451c8c2c7c2964d7}{Set\+Material\+Color}} (unsigned index, \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} color)
-\item 
-const \mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_model_x_object_afd57d5b6b74817f4d69047640e69f14e}{Get\+Decale\+Texture\+Name}} (unsigned index)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_model_x_object_a02fd2eb65e848f354c92f7640c18a93c}{getp\+Material}} (unsigned index)
+\begin{DoxyCompactList}\small\item\em マテリアル取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_x_object_ad2ab1249e44993543e1a847591d1ff16}{set\+Material\+Color}} (unsigned index, \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} color)
+\begin{DoxyCompactList}\small\item\em マテリアル色設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_model_x_object_a6398eb50785789e5145803fd4981bc2c}{getp\+Diffuse\+Texture\+Object}} (unsigned index)
+\begin{DoxyCompactList}\small\item\em ディヒューズテクスチャオブジェクト取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_x_object_a9d731de11568871fb5002cc9d5099a75}{Init}} (std\+::string $\ast$file\+\_\+path, const std\+::string $\ast$map\+\_\+key\+\_\+name)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_x_object_a01e988c50849c048915b957667cb80f1}{Release}} ()
+\begin{DoxyCompactList}\small\item\em 解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_x_object_a6035084c786294b69a76e34724504eb5}{Forced\+Release}} ()
+\begin{DoxyCompactList}\small\item\em 強制解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_x_object_a6329bb0953ff48bb440b0142dc64dd64}{Add\+Reference\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em 参照カウンタ追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_x_object_a9ec21b2d9f541bcb80fe61257bbd8722}{Update\+Mesh\+Declaration}} (const D3\+D\+V\+E\+R\+T\+E\+X\+E\+L\+E\+M\+E\+N\+T9 $\ast$declaration)
+\begin{DoxyCompactList}\small\item\em 頂点情報変更関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_model_x_object_ac7a86f4d034600ae5d8f8fd3610f4628}{Input\+ModelX}} (const std\+::string $\ast$file\+\_\+path, L\+P\+D3\+D\+X\+B\+U\+F\+F\+ER $\ast$material\+\_\+buffer)
-\item 
-void \mbox{\hyperlink{class_model_x_object_a612ecc2cb9b19ae1674dcc5ee8aab710}{Input\+Material}} (const std\+::string $\ast$file\+\_\+path, L\+P\+D3\+D\+X\+B\+U\+F\+F\+ER $\ast$material\+\_\+buffer, bool is\+\_\+share\+\_\+data)
-\item 
-void \mbox{\hyperlink{class_model_x_object_a83995ec817bccb4584d635b2005578a8}{Make\+Texture\+File\+Path\+And\+Key\+Name}} (std\+::string $\ast$texture\+\_\+key\+\_\+name, std\+::string $\ast$texture\+\_\+file\+\_\+path)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_model_x_object_a9808ef050cd3123ce72d8de2e07009da}{Create\+Mesh}} (std\+::string $\ast$file\+\_\+path, L\+P\+D3\+D\+X\+B\+U\+F\+F\+ER $\ast$material\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em メッシュ生成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_x_object_a7ecf8b8515d10e21566e1d54b9dae5b0}{Create\+Material}} (std\+::string $\ast$file\+\_\+path, L\+P\+D3\+D\+X\+B\+U\+F\+F\+ER $\ast$material\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em マテリアル生成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_x_object_ac72ea2bf21c475ba8e9d0b3bf8b9aef4}{Create\+File\+Path\+And\+Key\+Name}} (std\+::string $\ast$file\+\_\+path, std\+::string $\ast$key\+\_\+name)
+\begin{DoxyCompactList}\small\item\em ファイルパス\&キー名生成関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 L\+P\+D3\+D\+X\+M\+E\+SH \mbox{\hyperlink{class_model_x_object_a5ef4e892e06649ab32ba40e29d8acb8a}{mesh\+\_\+}}
-\item 
-D\+W\+O\+RD \mbox{\hyperlink{class_model_x_object_a8f421c1047c72f9b5e01942b8167a379}{material\+\_\+num\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em メッシュ \end{DoxyCompactList}\item 
+D\+W\+O\+RD \mbox{\hyperlink{class_model_x_object_af493845ef291f950fcaee2d3eba10bc5}{mesh\+\_\+num\+\_\+}}
+\begin{DoxyCompactList}\small\item\em メッシュ数 \end{DoxyCompactList}\item 
 std\+::vector$<$ D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $>$ \mbox{\hyperlink{class_model_x_object_a6b59d177c6056be64211b34b054e88a6}{material\+\_\+}}
-\item 
-std\+::vector$<$ \mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ $>$ \mbox{\hyperlink{class_model_x_object_ab0af78894e6aa05a0aecb3174eafe26b}{texture\+\_\+object\+\_\+array\+\_\+}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em マテリアル \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ $>$ \mbox{\hyperlink{class_model_x_object_a1d85909d707f74358802402259c02abc}{diffuse\+\_\+texture\+\_\+object\+\_\+}}
+\begin{DoxyCompactList}\small\item\em ディヒューズテクスチャオブジェクト \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_model_x_object_a087228b37a2fc93d9ed4b6e0c1abc3f8}{map\+\_\+key\+\_\+name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em マップ用キー名 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_model_x_object_a8ae0e1ca4a249c3b475d41107c4816d3}{reference\+\_\+counter\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em 参照カウンタ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
+Xモデルオブジェクト\+Class 
 
+Xモデルのオブジェクト\+Class 
 
- Model\+X\+Object.\+h の 34 行目に定義があります。
-
-
-
-\subsection{構築子と解体子}
-\mbox{\Hypertarget{class_model_x_object_a83bd334b1f24a69c4cbdcaa62464ff31}\label{class_model_x_object_a83bd334b1f24a69c4cbdcaa62464ff31}} 
-\index{Model\+X\+Object@{Model\+X\+Object}!Model\+X\+Object@{Model\+X\+Object}}
-\index{Model\+X\+Object@{Model\+X\+Object}!Model\+X\+Object@{Model\+X\+Object}}
-\subsubsection{\texorpdfstring{Model\+X\+Object()}{ModelXObject()}}
-{\footnotesize\ttfamily Model\+X\+Object\+::\+Model\+X\+Object (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{file\+\_\+path,  }\item[{bool}]{is\+\_\+share\+\_\+data }\end{DoxyParamCaption})}
-
-
-
- Model\+X\+Object.\+cpp の 34 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_object_a33553f8ab78dfd3c9d571a048ae85324}\label{class_model_x_object_a33553f8ab78dfd3c9d571a048ae85324}} 
-\index{Model\+X\+Object@{Model\+X\+Object}!````~Model\+X\+Object@{$\sim$\+Model\+X\+Object}}
-\index{````~Model\+X\+Object@{$\sim$\+Model\+X\+Object}!Model\+X\+Object@{Model\+X\+Object}}
-\subsubsection{\texorpdfstring{$\sim$\+Model\+X\+Object()}{~ModelXObject()}}
-{\footnotesize\ttfamily Model\+X\+Object\+::$\sim$\+Model\+X\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
- Model\+X\+Object.\+cpp の 54 行目に定義があります。
+ Model\+X\+Object.\+h の 24 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_model_x_object_afd57d5b6b74817f4d69047640e69f14e}\label{class_model_x_object_afd57d5b6b74817f4d69047640e69f14e}} 
-\index{Model\+X\+Object@{Model\+X\+Object}!Get\+Decale\+Texture\+Name@{Get\+Decale\+Texture\+Name}}
-\index{Get\+Decale\+Texture\+Name@{Get\+Decale\+Texture\+Name}!Model\+X\+Object@{Model\+X\+Object}}
-\subsubsection{\texorpdfstring{Get\+Decale\+Texture\+Name()}{GetDecaleTextureName()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Model\+X\+Object\+::\+Get\+Decale\+Texture\+Name (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_model_x_object_a6329bb0953ff48bb440b0142dc64dd64}\label{class_model_x_object_a6329bb0953ff48bb440b0142dc64dd64}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!Add\+Reference\+Counter@{Add\+Reference\+Counter}}
+\index{Add\+Reference\+Counter@{Add\+Reference\+Counter}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{Add\+Reference\+Counter()}{AddReferenceCounter()}}
+{\footnotesize\ttfamily void Model\+X\+Object\+::\+Add\+Reference\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Model\+X\+Object.\+h の 60 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_object_a27df4304e87da11e2f9c9d7a8487a985}\label{class_model_x_object_a27df4304e87da11e2f9c9d7a8487a985}} 
-\index{Model\+X\+Object@{Model\+X\+Object}!Get\+Material@{Get\+Material}}
-\index{Get\+Material@{Get\+Material}!Model\+X\+Object@{Model\+X\+Object}}
-\subsubsection{\texorpdfstring{Get\+Material()}{GetMaterial()}}
-{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$ Model\+X\+Object\+::\+Get\+Material (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+参照カウンタ追加関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Model\+X\+Object.\+h の 56 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_object_a3aaab083fe6e1956b2eaab815ebb4bfb}\label{class_model_x_object_a3aaab083fe6e1956b2eaab815ebb4bfb}} 
-\index{Model\+X\+Object@{Model\+X\+Object}!Get\+Mesh@{Get\+Mesh}}
-\index{Get\+Mesh@{Get\+Mesh}!Model\+X\+Object@{Model\+X\+Object}}
-\subsubsection{\texorpdfstring{Get\+Mesh()}{GetMesh()}}
-{\footnotesize\ttfamily L\+P\+D3\+D\+X\+M\+E\+SH Model\+X\+Object\+::\+Get\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Model\+X\+Object.\+cpp の 104 行目に定義があります。
 
- Model\+X\+Object.\+h の 51 行目に定義があります。
+\mbox{\Hypertarget{class_model_x_object_ac72ea2bf21c475ba8e9d0b3bf8b9aef4}\label{class_model_x_object_ac72ea2bf21c475ba8e9d0b3bf8b9aef4}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!Create\+File\+Path\+And\+Key\+Name@{Create\+File\+Path\+And\+Key\+Name}}
+\index{Create\+File\+Path\+And\+Key\+Name@{Create\+File\+Path\+And\+Key\+Name}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{Create\+File\+Path\+And\+Key\+Name()}{CreateFilePathAndKeyName()}}
+{\footnotesize\ttfamily void Model\+X\+Object\+::\+Create\+File\+Path\+And\+Key\+Name (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+path,  }\item[{std\+::string $\ast$}]{key\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ファイルパス\&キー名生成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+{\em $\ast$key\+\_\+name} & キー名 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Object.\+cpp の 205 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_object_a7ecf8b8515d10e21566e1d54b9dae5b0}\label{class_model_x_object_a7ecf8b8515d10e21566e1d54b9dae5b0}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!Create\+Material@{Create\+Material}}
+\index{Create\+Material@{Create\+Material}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{Create\+Material()}{CreateMaterial()}}
+{\footnotesize\ttfamily void Model\+X\+Object\+::\+Create\+Material (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+path,  }\item[{L\+P\+D3\+D\+X\+B\+U\+F\+F\+ER $\ast$}]{material\+\_\+buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+マテリアル生成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+{\em $\ast$material\+\_\+buffer} & マテリアルバッファ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Object.\+cpp の 164 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_object_a9808ef050cd3123ce72d8de2e07009da}\label{class_model_x_object_a9808ef050cd3123ce72d8de2e07009da}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!Create\+Mesh@{Create\+Mesh}}
+\index{Create\+Mesh@{Create\+Mesh}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{Create\+Mesh()}{CreateMesh()}}
+{\footnotesize\ttfamily void Model\+X\+Object\+::\+Create\+Mesh (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+path,  }\item[{L\+P\+D3\+D\+X\+B\+U\+F\+F\+ER $\ast$}]{material\+\_\+buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+メッシュ生成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+{\em $\ast$material\+\_\+buffer} & マテリアルバッファ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Object.\+cpp の 136 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_object_a6035084c786294b69a76e34724504eb5}\label{class_model_x_object_a6035084c786294b69a76e34724504eb5}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!Forced\+Release@{Forced\+Release}}
+\index{Forced\+Release@{Forced\+Release}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{Forced\+Release()}{ForcedRelease()}}
+{\footnotesize\ttfamily void Model\+X\+Object\+::\+Forced\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+強制解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Object.\+cpp の 96 行目に定義があります。
 
 \mbox{\Hypertarget{class_model_x_object_a894790eda90cf0cc202b86f854583fda}\label{class_model_x_object_a894790eda90cf0cc202b86f854583fda}} 
 \index{Model\+X\+Object@{Model\+X\+Object}!get\+Mesh\+Num@{get\+Mesh\+Num}}
 \index{get\+Mesh\+Num@{get\+Mesh\+Num}!Model\+X\+Object@{Model\+X\+Object}}
 \subsubsection{\texorpdfstring{get\+Mesh\+Num()}{getMeshNum()}}
-{\footnotesize\ttfamily unsigned Model\+X\+Object\+::get\+Mesh\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily unsigned Model\+X\+Object\+::get\+Mesh\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Model\+X\+Object.\+h の 52 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_object_a612ecc2cb9b19ae1674dcc5ee8aab710}\label{class_model_x_object_a612ecc2cb9b19ae1674dcc5ee8aab710}} 
-\index{Model\+X\+Object@{Model\+X\+Object}!Input\+Material@{Input\+Material}}
-\index{Input\+Material@{Input\+Material}!Model\+X\+Object@{Model\+X\+Object}}
-\subsubsection{\texorpdfstring{Input\+Material()}{InputMaterial()}}
-{\footnotesize\ttfamily void Model\+X\+Object\+::\+Input\+Material (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{file\+\_\+path,  }\item[{L\+P\+D3\+D\+X\+B\+U\+F\+F\+ER $\ast$}]{material\+\_\+buffer,  }\item[{bool}]{is\+\_\+share\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+メッシュ数取得関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Model\+X\+Object.\+cpp の 149 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_object_ac7a86f4d034600ae5d8f8fd3610f4628}\label{class_model_x_object_ac7a86f4d034600ae5d8f8fd3610f4628}} 
-\index{Model\+X\+Object@{Model\+X\+Object}!Input\+ModelX@{Input\+ModelX}}
-\index{Input\+ModelX@{Input\+ModelX}!Model\+X\+Object@{Model\+X\+Object}}
-\subsubsection{\texorpdfstring{Input\+Model\+X()}{InputModelX()}}
-{\footnotesize\ttfamily void Model\+X\+Object\+::\+Input\+ModelX (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{file\+\_\+path,  }\item[{L\+P\+D3\+D\+X\+B\+U\+F\+F\+ER $\ast$}]{material\+\_\+buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & メッシュ数 \\
+\hline
+\end{DoxyRetVals}
 
 
+ Model\+X\+Object.\+cpp の 27 行目に定義があります。
 
- Model\+X\+Object.\+cpp の 114 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_object_a83995ec817bccb4584d635b2005578a8}\label{class_model_x_object_a83995ec817bccb4584d635b2005578a8}} 
-\index{Model\+X\+Object@{Model\+X\+Object}!Make\+Texture\+File\+Path\+And\+Key\+Name@{Make\+Texture\+File\+Path\+And\+Key\+Name}}
-\index{Make\+Texture\+File\+Path\+And\+Key\+Name@{Make\+Texture\+File\+Path\+And\+Key\+Name}!Model\+X\+Object@{Model\+X\+Object}}
-\subsubsection{\texorpdfstring{Make\+Texture\+File\+Path\+And\+Key\+Name()}{MakeTextureFilePathAndKeyName()}}
-{\footnotesize\ttfamily void Model\+X\+Object\+::\+Make\+Texture\+File\+Path\+And\+Key\+Name (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{texture\+\_\+key\+\_\+name,  }\item[{std\+::string $\ast$}]{texture\+\_\+file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_model_x_object_a6398eb50785789e5145803fd4981bc2c}\label{class_model_x_object_a6398eb50785789e5145803fd4981bc2c}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!getp\+Diffuse\+Texture\+Object@{getp\+Diffuse\+Texture\+Object}}
+\index{getp\+Diffuse\+Texture\+Object@{getp\+Diffuse\+Texture\+Object}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{getp\+Diffuse\+Texture\+Object()}{getpDiffuseTextureObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ Model\+X\+Object\+::getp\+Diffuse\+Texture\+Object (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})}
 
 
 
- Model\+X\+Object.\+cpp の 206 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_object_acc6b5f187b74b421451c8c2c7c2964d7}\label{class_model_x_object_acc6b5f187b74b421451c8c2c7c2964d7}} 
-\index{Model\+X\+Object@{Model\+X\+Object}!Set\+Material\+Color@{Set\+Material\+Color}}
-\index{Set\+Material\+Color@{Set\+Material\+Color}!Model\+X\+Object@{Model\+X\+Object}}
-\subsubsection{\texorpdfstring{Set\+Material\+Color()}{SetMaterialColor()}}
-{\footnotesize\ttfamily void Model\+X\+Object\+::\+Set\+Material\+Color (\begin{DoxyParamCaption}\item[{unsigned}]{index,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}}]{color }\end{DoxyParamCaption})}
+ディヒューズテクスチャオブジェクト取得関数 
 
 
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
 
- Model\+X\+Object.\+cpp の 67 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em Texture\+Object$\ast$} & ディヒューズテクスチャオブジェクト \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\Hypertarget{class_model_x_object_ac005f3f164a1f75d6cfc0772e2e95382}\label{class_model_x_object_ac005f3f164a1f75d6cfc0772e2e95382}} 
+
+ Model\+X\+Object.\+cpp の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_object_a02fd2eb65e848f354c92f7640c18a93c}\label{class_model_x_object_a02fd2eb65e848f354c92f7640c18a93c}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!getp\+Material@{getp\+Material}}
+\index{getp\+Material@{getp\+Material}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{getp\+Material()}{getpMaterial()}}
+{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ Model\+X\+Object\+::getp\+Material (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})}
+
+
+
+マテリアル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Object.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_object_af40b9567dda03049daf9f299b33ba5a0}\label{class_model_x_object_af40b9567dda03049daf9f299b33ba5a0}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!getp\+Mesh@{getp\+Mesh}}
+\index{getp\+Mesh@{getp\+Mesh}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{getp\+Mesh()}{getpMesh()}}
+{\footnotesize\ttfamily L\+P\+D3\+D\+X\+M\+E\+SH Model\+X\+Object\+::getp\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+メッシュ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D3\+D\+X\+M\+E\+SH} & メッシュ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Object.\+cpp の 20 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_object_a9d731de11568871fb5002cc9d5099a75}\label{class_model_x_object_a9d731de11568871fb5002cc9d5099a75}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!Init@{Init}}
+\index{Init@{Init}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Model\+X\+Object\+::\+Init (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+path,  }\item[{const std\+::string $\ast$}]{map\+\_\+key\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+{\em $\ast$map\+\_\+key\+\_\+name} & マップ用キー名 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Object.\+cpp の 61 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_object_a01e988c50849c048915b957667cb80f1}\label{class_model_x_object_a01e988c50849c048915b957667cb80f1}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!Release@{Release}}
+\index{Release@{Release}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Model\+X\+Object\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Object.\+cpp の 78 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_object_ad2ab1249e44993543e1a847591d1ff16}\label{class_model_x_object_ad2ab1249e44993543e1a847591d1ff16}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!set\+Material\+Color@{set\+Material\+Color}}
+\index{set\+Material\+Color@{set\+Material\+Color}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{set\+Material\+Color()}{setMaterialColor()}}
+{\footnotesize\ttfamily void Model\+X\+Object\+::set\+Material\+Color (\begin{DoxyParamCaption}\item[{unsigned}]{index,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}}]{color }\end{DoxyParamCaption})}
+
+
+
+マテリアル色設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+{\em color} & 色 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Object.\+cpp の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_object_a9ec21b2d9f541bcb80fe61257bbd8722}\label{class_model_x_object_a9ec21b2d9f541bcb80fe61257bbd8722}} 
 \index{Model\+X\+Object@{Model\+X\+Object}!Update\+Mesh\+Declaration@{Update\+Mesh\+Declaration}}
 \index{Update\+Mesh\+Declaration@{Update\+Mesh\+Declaration}!Model\+X\+Object@{Model\+X\+Object}}
 \subsubsection{\texorpdfstring{Update\+Mesh\+Declaration()}{UpdateMeshDeclaration()}}
-{\footnotesize\ttfamily void Model\+X\+Object\+::\+Update\+Mesh\+Declaration (\begin{DoxyParamCaption}\item[{const D3\+D\+V\+E\+R\+T\+E\+X\+E\+L\+E\+M\+E\+N\+T9 $\ast$}]{D\+E\+C\+L\+A\+R\+A\+T\+I\+ON }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Model\+X\+Object\+::\+Update\+Mesh\+Declaration (\begin{DoxyParamCaption}\item[{const D3\+D\+V\+E\+R\+T\+E\+X\+E\+L\+E\+M\+E\+N\+T9 $\ast$}]{declaration }\end{DoxyParamCaption})}
 
 
 
- Model\+X\+Object.\+cpp の 83 行目に定義があります。
+頂点情報変更関数 
+
+
+\begin{DoxyParams}{引数}
+{\em declaration} & 頂点宣言 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Object.\+cpp の 111 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
+\mbox{\Hypertarget{class_model_x_object_a1d85909d707f74358802402259c02abc}\label{class_model_x_object_a1d85909d707f74358802402259c02abc}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!diffuse\+\_\+texture\+\_\+object\+\_\+@{diffuse\+\_\+texture\+\_\+object\+\_\+}}
+\index{diffuse\+\_\+texture\+\_\+object\+\_\+@{diffuse\+\_\+texture\+\_\+object\+\_\+}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{diffuse\+\_\+texture\+\_\+object\+\_\+}{diffuse\_texture\_object\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$$>$ Model\+X\+Object\+::diffuse\+\_\+texture\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ディヒューズテクスチャオブジェクト 
+
+
+
+ Model\+X\+Object.\+h の 33 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_object_a087228b37a2fc93d9ed4b6e0c1abc3f8}\label{class_model_x_object_a087228b37a2fc93d9ed4b6e0c1abc3f8}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!map\+\_\+key\+\_\+name\+\_\+@{map\+\_\+key\+\_\+name\+\_\+}}
+\index{map\+\_\+key\+\_\+name\+\_\+@{map\+\_\+key\+\_\+name\+\_\+}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{map\+\_\+key\+\_\+name\+\_\+}{map\_key\_name\_}}
+{\footnotesize\ttfamily std\+::string Model\+X\+Object\+::map\+\_\+key\+\_\+name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+マップ用キー名 
+
+
+
+ Model\+X\+Object.\+h の 34 行目に定義があります。
+
 \mbox{\Hypertarget{class_model_x_object_a6b59d177c6056be64211b34b054e88a6}\label{class_model_x_object_a6b59d177c6056be64211b34b054e88a6}} 
 \index{Model\+X\+Object@{Model\+X\+Object}!material\+\_\+@{material\+\_\+}}
 \index{material\+\_\+@{material\+\_\+}!Model\+X\+Object@{Model\+X\+Object}}
@@ -177,17 +429,11 @@ std\+::vector$<$ \mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$
 
 
 
- Model\+X\+Object.\+h の 78 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_object_a8f421c1047c72f9b5e01942b8167a379}\label{class_model_x_object_a8f421c1047c72f9b5e01942b8167a379}} 
-\index{Model\+X\+Object@{Model\+X\+Object}!material\+\_\+num\+\_\+@{material\+\_\+num\+\_\+}}
-\index{material\+\_\+num\+\_\+@{material\+\_\+num\+\_\+}!Model\+X\+Object@{Model\+X\+Object}}
-\subsubsection{\texorpdfstring{material\+\_\+num\+\_\+}{material\_num\_}}
-{\footnotesize\ttfamily D\+W\+O\+RD Model\+X\+Object\+::material\+\_\+num\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+マテリアル 
 
 
 
- Model\+X\+Object.\+h の 75 行目に定義があります。
+ Model\+X\+Object.\+h の 32 行目に定義があります。
 
 \mbox{\Hypertarget{class_model_x_object_a5ef4e892e06649ab32ba40e29d8acb8a}\label{class_model_x_object_a5ef4e892e06649ab32ba40e29d8acb8a}} 
 \index{Model\+X\+Object@{Model\+X\+Object}!mesh\+\_\+@{mesh\+\_\+}}
@@ -197,21 +443,43 @@ std\+::vector$<$ \mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$
 
 
 
- Model\+X\+Object.\+h の 74 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_object_ab0af78894e6aa05a0aecb3174eafe26b}\label{class_model_x_object_ab0af78894e6aa05a0aecb3174eafe26b}} 
-\index{Model\+X\+Object@{Model\+X\+Object}!texture\+\_\+object\+\_\+array\+\_\+@{texture\+\_\+object\+\_\+array\+\_\+}}
-\index{texture\+\_\+object\+\_\+array\+\_\+@{texture\+\_\+object\+\_\+array\+\_\+}!Model\+X\+Object@{Model\+X\+Object}}
-\subsubsection{\texorpdfstring{texture\+\_\+object\+\_\+array\+\_\+}{texture\_object\_array\_}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$$>$ Model\+X\+Object\+::texture\+\_\+object\+\_\+array\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+メッシュ 
 
 
 
- Model\+X\+Object.\+h の 81 行目に定義があります。
+ Model\+X\+Object.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_object_af493845ef291f950fcaee2d3eba10bc5}\label{class_model_x_object_af493845ef291f950fcaee2d3eba10bc5}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!mesh\+\_\+num\+\_\+@{mesh\+\_\+num\+\_\+}}
+\index{mesh\+\_\+num\+\_\+@{mesh\+\_\+num\+\_\+}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{mesh\+\_\+num\+\_\+}{mesh\_num\_}}
+{\footnotesize\ttfamily D\+W\+O\+RD Model\+X\+Object\+::mesh\+\_\+num\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+メッシュ数 
+
+
+
+ Model\+X\+Object.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_object_a8ae0e1ca4a249c3b475d41107c4816d3}\label{class_model_x_object_a8ae0e1ca4a249c3b475d41107c4816d3}} 
+\index{Model\+X\+Object@{Model\+X\+Object}!reference\+\_\+counter\+\_\+@{reference\+\_\+counter\+\_\+}}
+\index{reference\+\_\+counter\+\_\+@{reference\+\_\+counter\+\_\+}!Model\+X\+Object@{Model\+X\+Object}}
+\subsubsection{\texorpdfstring{reference\+\_\+counter\+\_\+}{reference\_counter\_}}
+{\footnotesize\ttfamily int Model\+X\+Object\+::reference\+\_\+counter\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+参照カウンタ 
+
+
+
+ Model\+X\+Object.\+h の 35 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/05\+\_\+\+Resource/\+Model\+X/\+Model\+X\+Object/\mbox{\hyperlink{_model_x_object_8h}{Model\+X\+Object.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/05\+\_\+\+Resource/\+Model\+X/\+Model\+X\+Object/\mbox{\hyperlink{_model_x_object_8cpp}{Model\+X\+Object.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Model\+X/\mbox{\hyperlink{_model_x_object_8h}{Model\+X\+Object.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Model\+X/\+Source/\mbox{\hyperlink{_model_x_object_8cpp}{Model\+X\+Object.\+cpp}}\end{DoxyCompactItemize}

@@ -9,6 +9,15 @@
 
 {\ttfamily \#include $<$Scene\+Manager.\+h$>$}
 
+
+
+Scene\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{class_scene_manager__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
@@ -28,14 +37,22 @@ enum \mbox{\hyperlink{class_scene_manager_a68d32794fe1ce945c6a6c380c11a08eb}{Sta
 \item 
 void \mbox{\hyperlink{class_scene_manager_a208cc1690dcb260ae7fb94d13118f6ce}{set\+Next\+Scene}} (\mbox{\hyperlink{class_scene_base}{Scene\+Base}} $\ast$value)
 \begin{DoxyCompactList}\small\item\em 次のシーンポインタ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_a3c3eb28c97fb0f5091aa26917dc2ecaf}{set\+Reset\+Scene}} (\mbox{\hyperlink{class_scene_base_1_1_state_base}{Scene\+Base\+::\+State\+Base}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em リセット設定関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_scene_manager_1_1_common_data}{Common\+Data}} $\ast$ \mbox{\hyperlink{class_scene_manager_a4de42577d81672dee3e79300e745553c}{getp\+Common\+Data}} ()
 \begin{DoxyCompactList}\small\item\em 共通データポインタ取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_scene_manager_a92336770a77daef88d99f14352a53c60}{get\+Is\+Fade}} ()
+\begin{DoxyCompactList}\small\item\em フェード中フラグ取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_scene_manager_a95bb32ee4d3461bf56381d288a98c61b}{set\+Fade\+Type}} (\mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Fade\+::\+Type}} value)
 \begin{DoxyCompactList}\small\item\em フェードタイプ設定関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_scene_manager_af3b87ef963b80aa1942a2f804f61bdeb}{set\+Fade\+Speed}} (float value)
 \begin{DoxyCompactList}\small\item\em フェード速度設定関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_scene_manager_a24e7fa08c34ecacdca37ee35c5c39141}{set\+Fade\+Color}} (\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} value)
 \begin{DoxyCompactList}\small\item\em フェード色設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_scene_manager_a52085e6737c23b491c228e86781af808}{Scene\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_scene_manager_a2bb376a85d29e85f47753e26c7539229}{$\sim$\+Scene\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_scene_manager_a3d14c04a921c6c670e89fbf22a719b00}{Init}} (\mbox{\hyperlink{class_scene_base}{Scene\+Base}} $\ast$scene)
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_scene_manager_ae3ff21f2261fc50f1e860cf7fc3a2108}{Uninit}} ()
@@ -45,9 +62,7 @@ void \mbox{\hyperlink{class_scene_manager_a63dcf65832d6a2c190bf496d9a3b00a3}{Upd
 void \mbox{\hyperlink{class_scene_manager_a493bc0d65558ce004f6f248a185ba956}{Update\+Scene}} ()
 \begin{DoxyCompactList}\small\item\em シーン更新関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_scene_manager_a828b35826f757b8af34aa767c6b40378}{Draw\+Scene}} ()
-\begin{DoxyCompactList}\small\item\em シーン描画関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_scene_manager_a1759161a38025ec8212dc98439fd7335}{Reset\+Scene}} ()
-\begin{DoxyCompactList}\small\item\em シーンリセット関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em シーン描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -58,26 +73,28 @@ void \mbox{\hyperlink{class_scene_manager_a0652a81c7baff52add9ec4b13205865c}{Sce
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_scene_manager_a68d32794fe1ce945c6a6c380c11a08eb}{State}} \mbox{\hyperlink{class_scene_manager_adf81d8a63dee92bfe5bb934903542bec}{state\+\_\+}} = State\+::\+N\+O\+NE
+\mbox{\hyperlink{class_scene_manager_a68d32794fe1ce945c6a6c380c11a08eb}{State}} \mbox{\hyperlink{class_scene_manager_adf81d8a63dee92bfe5bb934903542bec}{state\+\_\+}}
 \begin{DoxyCompactList}\small\item\em シーンマネージャステート \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_scene_manager_1_1_common_data}{Common\+Data}} $\ast$ \mbox{\hyperlink{class_scene_manager_a5f0f0da3d7f9a8a94f0b5a20c3a4908a}{common\+\_\+data\+\_\+}} = nullptr
+\mbox{\hyperlink{class_scene_manager_1_1_common_data}{Common\+Data}} $\ast$ \mbox{\hyperlink{class_scene_manager_a5f0f0da3d7f9a8a94f0b5a20c3a4908a}{common\+\_\+data\+\_\+}}
 \begin{DoxyCompactList}\small\item\em シーン間共通データ \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_scene_base}{Scene\+Base}} $\ast$ \mbox{\hyperlink{class_scene_manager_a62dd6d9d807f0a7f2ea4d014126b765e}{current\+\_\+scene\+\_\+}} = nullptr
+\mbox{\hyperlink{class_scene_base}{Scene\+Base}} $\ast$ \mbox{\hyperlink{class_scene_manager_a62dd6d9d807f0a7f2ea4d014126b765e}{current\+\_\+scene\+\_\+}}
 \begin{DoxyCompactList}\small\item\em 現在のシーン \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_scene_base}{Scene\+Base}} $\ast$ \mbox{\hyperlink{class_scene_manager_a7f9bb649125a114715b07154ac3df6ae}{next\+\_\+scene\+\_\+}} = nullptr
+\mbox{\hyperlink{class_scene_base}{Scene\+Base}} $\ast$ \mbox{\hyperlink{class_scene_manager_a7f9bb649125a114715b07154ac3df6ae}{next\+\_\+scene\+\_\+}}
 \begin{DoxyCompactList}\small\item\em 次のシーン \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Fade\+::\+Type}} \mbox{\hyperlink{class_scene_manager_af8e268f4b8f39deb1c23b52c22375d8f}{fade\+\_\+type\+\_\+}} = \mbox{\hyperlink{class_scene_manager_ab87f30ef7e11305bb4e3400b41225c22}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+T\+Y\+PE}}
-\begin{DoxyCompactList}\small\item\em フェードの種類 \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{class_scene_manager_a8c54bc4de81209cb1576337bbbe45a6b}{fade\+\_\+speed\+\_\+}} = \mbox{\hyperlink{class_scene_manager_a58cd446096f95d3e62e7eba16a4096ee}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+S\+P\+E\+ED}}
+bool \mbox{\hyperlink{class_scene_manager_a16f3b953ab3d2804b23ca01d64dc50b2}{is\+\_\+fade\+\_\+}}
+\begin{DoxyCompactList}\small\item\em フェード中フラグ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Fade\+::\+Type}} \mbox{\hyperlink{class_scene_manager_af8e268f4b8f39deb1c23b52c22375d8f}{fade\+\_\+type\+\_\+}}
+\begin{DoxyCompactList}\small\item\em フェードタイプ \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_scene_manager_a8c54bc4de81209cb1576337bbbe45a6b}{fade\+\_\+speed\+\_\+}}
 \begin{DoxyCompactList}\small\item\em フェード速度 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_scene_manager_a978b815258c4591f81a16995484fe9fb}{fade\+\_\+color\+\_\+}} = \mbox{\hyperlink{class_scene_manager_a8b6874644ba8998b0db76780d56f371f}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+C\+O\+L\+OR}}
+\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_scene_manager_a978b815258c4591f81a16995484fe9fb}{fade\+\_\+color\+\_\+}}
 \begin{DoxyCompactList}\small\item\em フェード色 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-static const \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Fade\+::\+Type}} \mbox{\hyperlink{class_scene_manager_ab87f30ef7e11305bb4e3400b41225c22}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+T\+Y\+PE}} = Fade\+::\+Type\+::\+T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+AL
+static const \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Fade\+::\+Type}} \mbox{\hyperlink{class_scene_manager_ab87f30ef7e11305bb4e3400b41225c22}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+T\+Y\+PE}} = \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80a1e23852820b9154316c7c06e2b7ba051}{Fade\+::\+Type\+::\+N\+O\+R\+M\+AL}}
 \begin{DoxyCompactList}\small\item\em 初期フェードタイプ \end{DoxyCompactList}\item 
-static const float \mbox{\hyperlink{class_scene_manager_a58cd446096f95d3e62e7eba16a4096ee}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+S\+P\+E\+ED}} = 1.\+0f
+static const float \mbox{\hyperlink{class_scene_manager_a58cd446096f95d3e62e7eba16a4096ee}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+S\+P\+E\+ED}} = 0.\+3f
 \begin{DoxyCompactList}\small\item\em 初期フェード速度 \end{DoxyCompactList}\item 
 static const \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_scene_manager_a8b6874644ba8998b0db76780d56f371f}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+C\+O\+L\+OR}}
 \begin{DoxyCompactList}\small\item\em 初期フェード色 \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -88,7 +105,7 @@ static const \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X
 
 シーンのマネージャ\+Class 
 
- Scene\+Manager.\+h の 32 行目に定義があります。
+ Scene\+Manager.\+h の 25 行目に定義があります。
 
 
 
@@ -119,7 +136,48 @@ M\+AX&\\
 \end{DoxyEnumFields}
 
 
- Scene\+Manager.\+h の 113 行目に定義があります。
+ Scene\+Manager.\+h の 115 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_scene_manager_a52085e6737c23b491c228e86781af808}\label{class_scene_manager_a52085e6737c23b491c228e86781af808}} 
+\index{Scene\+Manager@{Scene\+Manager}!Scene\+Manager@{Scene\+Manager}}
+\index{Scene\+Manager@{Scene\+Manager}!Scene\+Manager@{Scene\+Manager}}
+\subsubsection{\texorpdfstring{Scene\+Manager()}{SceneManager()}}
+{\footnotesize\ttfamily Scene\+Manager\+::\+Scene\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Scene\+Manager.\+cpp の 166 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_manager_a2bb376a85d29e85f47753e26c7539229}\label{class_scene_manager_a2bb376a85d29e85f47753e26c7539229}} 
+\index{Scene\+Manager@{Scene\+Manager}!````~Scene\+Manager@{$\sim$\+Scene\+Manager}}
+\index{````~Scene\+Manager@{$\sim$\+Scene\+Manager}!Scene\+Manager@{Scene\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Scene\+Manager()}{~SceneManager()}}
+{\footnotesize\ttfamily Scene\+Manager\+::$\sim$\+Scene\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+デストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Scene\+Manager.\+cpp の 180 行目に定義があります。
 
 
 
@@ -146,7 +204,31 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Scene\+Manager.\+cpp の 196 行目に定義があります。
+ Scene\+Manager.\+cpp の 255 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_manager_a92336770a77daef88d99f14352a53c60}\label{class_scene_manager_a92336770a77daef88d99f14352a53c60}} 
+\index{Scene\+Manager@{Scene\+Manager}!get\+Is\+Fade@{get\+Is\+Fade}}
+\index{get\+Is\+Fade@{get\+Is\+Fade}!Scene\+Manager@{Scene\+Manager}}
+\subsubsection{\texorpdfstring{get\+Is\+Fade()}{getIsFade()}}
+{\footnotesize\ttfamily bool Scene\+Manager\+::get\+Is\+Fade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+フェード中フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & フェード中の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scene\+Manager.\+cpp の 101 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_a4de42577d81672dee3e79300e745553c}\label{class_scene_manager_a4de42577d81672dee3e79300e745553c}} 
 \index{Scene\+Manager@{Scene\+Manager}!getp\+Common\+Data@{getp\+Common\+Data}}
@@ -170,7 +252,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Scene\+Manager.\+cpp の 91 行目に定義があります。
+ Scene\+Manager.\+cpp の 94 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_a3d14c04a921c6c670e89fbf22a719b00}\label{class_scene_manager_a3d14c04a921c6c670e89fbf22a719b00}} 
 \index{Scene\+Manager@{Scene\+Manager}!Init@{Init}}
@@ -183,32 +265,8 @@ M\+AX&\\
 初期化関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em scene} & 最初のシーン \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyRetVals}{戻り値}
-{\em void} & なし \\
-\hline
-\end{DoxyRetVals}
-
-
- Scene\+Manager.\+cpp の 122 行目に定義があります。
-
-\mbox{\Hypertarget{class_scene_manager_a1759161a38025ec8212dc98439fd7335}\label{class_scene_manager_a1759161a38025ec8212dc98439fd7335}} 
-\index{Scene\+Manager@{Scene\+Manager}!Reset\+Scene@{Reset\+Scene}}
-\index{Reset\+Scene@{Reset\+Scene}!Scene\+Manager@{Scene\+Manager}}
-\subsubsection{\texorpdfstring{Reset\+Scene()}{ResetScene()}}
-{\footnotesize\ttfamily void Scene\+Manager\+::\+Reset\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-シーンリセット関数 
-
-
 \begin{DoxyParams}{引数}
-{\em void} & なし \\
+{\em $\ast$scene} & 最初のシーン \\
 \hline
 \end{DoxyParams}
 
@@ -218,7 +276,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Scene\+Manager.\+cpp の 206 行目に定義があります。
+ Scene\+Manager.\+cpp の 186 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_ab1ffc5d84cf812e4105cba755d034770}\label{class_scene_manager_ab1ffc5d84cf812e4105cba755d034770}} 
 \index{Scene\+Manager@{Scene\+Manager}!Scene\+Change@{Scene\+Change}}
@@ -242,7 +300,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Scene\+Manager.\+cpp の 223 行目に定義があります。
+ Scene\+Manager.\+cpp の 265 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_a0652a81c7baff52add9ec4b13205865c}\label{class_scene_manager_a0652a81c7baff52add9ec4b13205865c}} 
 \index{Scene\+Manager@{Scene\+Manager}!Scene\+Reset@{Scene\+Reset}}
@@ -266,7 +324,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Scene\+Manager.\+cpp の 268 行目に定義があります。
+ Scene\+Manager.\+cpp の 305 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_a24e7fa08c34ecacdca37ee35c5c39141}\label{class_scene_manager_a24e7fa08c34ecacdca37ee35c5c39141}} 
 \index{Scene\+Manager@{Scene\+Manager}!set\+Fade\+Color@{set\+Fade\+Color}}
@@ -279,8 +337,8 @@ M\+AX&\\
 フェード色設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & フェード色 \\
+\begin{DoxyParams}{引数}
+{\em value} & フェード色 \\
 \hline
 \end{DoxyParams}
 
@@ -290,7 +348,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Scene\+Manager.\+cpp の 112 行目に定義があります。
+ Scene\+Manager.\+cpp の 122 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_af3b87ef963b80aa1942a2f804f61bdeb}\label{class_scene_manager_af3b87ef963b80aa1942a2f804f61bdeb}} 
 \index{Scene\+Manager@{Scene\+Manager}!set\+Fade\+Speed@{set\+Fade\+Speed}}
@@ -303,8 +361,8 @@ M\+AX&\\
 フェード速度設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & フェード速度 \\
+\begin{DoxyParams}{引数}
+{\em value} & フェード速度 \\
 \hline
 \end{DoxyParams}
 
@@ -314,7 +372,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Scene\+Manager.\+cpp の 105 行目に定義があります。
+ Scene\+Manager.\+cpp の 115 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_a95bb32ee4d3461bf56381d288a98c61b}\label{class_scene_manager_a95bb32ee4d3461bf56381d288a98c61b}} 
 \index{Scene\+Manager@{Scene\+Manager}!set\+Fade\+Type@{set\+Fade\+Type}}
@@ -327,8 +385,8 @@ M\+AX&\\
 フェードタイプ設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & フェードタイプ \\
+\begin{DoxyParams}{引数}
+{\em value} & フェードタイプ \\
 \hline
 \end{DoxyParams}
 
@@ -338,7 +396,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Scene\+Manager.\+cpp の 98 行目に定義があります。
+ Scene\+Manager.\+cpp の 108 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_a208cc1690dcb260ae7fb94d13118f6ce}\label{class_scene_manager_a208cc1690dcb260ae7fb94d13118f6ce}} 
 \index{Scene\+Manager@{Scene\+Manager}!set\+Next\+Scene@{set\+Next\+Scene}}
@@ -351,8 +409,8 @@ M\+AX&\\
 次のシーンポインタ設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & 次のシーンポインタ \\
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & 次のシーンポインタ \\
 \hline
 \end{DoxyParams}
 
@@ -362,7 +420,31 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Scene\+Manager.\+cpp の 63 行目に定義があります。
+ Scene\+Manager.\+cpp の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_manager_a3c3eb28c97fb0f5091aa26917dc2ecaf}\label{class_scene_manager_a3c3eb28c97fb0f5091aa26917dc2ecaf}} 
+\index{Scene\+Manager@{Scene\+Manager}!set\+Reset\+Scene@{set\+Reset\+Scene}}
+\index{set\+Reset\+Scene@{set\+Reset\+Scene}!Scene\+Manager@{Scene\+Manager}}
+\subsubsection{\texorpdfstring{set\+Reset\+Scene()}{setResetScene()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::set\+Reset\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene_base_1_1_state_base}{Scene\+Base\+::\+State\+Base}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+リセット設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & シーンステート \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scene\+Manager.\+cpp の 71 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_ae3ff21f2261fc50f1e860cf7fc3a2108}\label{class_scene_manager_ae3ff21f2261fc50f1e860cf7fc3a2108}} 
 \index{Scene\+Manager@{Scene\+Manager}!Uninit@{Uninit}}
@@ -386,7 +468,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Scene\+Manager.\+cpp の 142 行目に定義があります。
+ Scene\+Manager.\+cpp の 203 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_a63dcf65832d6a2c190bf496d9a3b00a3}\label{class_scene_manager_a63dcf65832d6a2c190bf496d9a3b00a3}} 
 \index{Scene\+Manager@{Scene\+Manager}!Update@{Update}}
@@ -410,7 +492,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Scene\+Manager.\+cpp の 162 行目に定義があります。
+ Scene\+Manager.\+cpp の 221 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_a493bc0d65558ce004f6f248a185ba956}\label{class_scene_manager_a493bc0d65558ce004f6f248a185ba956}} 
 \index{Scene\+Manager@{Scene\+Manager}!Update\+Scene@{Update\+Scene}}
@@ -434,7 +516,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Scene\+Manager.\+cpp の 183 行目に定義があります。
+ Scene\+Manager.\+cpp の 242 行目に定義があります。
 
 
 
@@ -443,7 +525,7 @@ M\+AX&\\
 \index{Scene\+Manager@{Scene\+Manager}!common\+\_\+data\+\_\+@{common\+\_\+data\+\_\+}}
 \index{common\+\_\+data\+\_\+@{common\+\_\+data\+\_\+}!Scene\+Manager@{Scene\+Manager}}
 \subsubsection{\texorpdfstring{common\+\_\+data\+\_\+}{common\_data\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_manager_1_1_common_data}{Common\+Data}}$\ast$ Scene\+Manager\+::common\+\_\+data\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_manager_1_1_common_data}{Common\+Data}}$\ast$ Scene\+Manager\+::common\+\_\+data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -451,13 +533,13 @@ M\+AX&\\
 
 
 
- Scene\+Manager.\+h の 136 行目に定義があります。
+ Scene\+Manager.\+h の 138 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_a62dd6d9d807f0a7f2ea4d014126b765e}\label{class_scene_manager_a62dd6d9d807f0a7f2ea4d014126b765e}} 
 \index{Scene\+Manager@{Scene\+Manager}!current\+\_\+scene\+\_\+@{current\+\_\+scene\+\_\+}}
 \index{current\+\_\+scene\+\_\+@{current\+\_\+scene\+\_\+}!Scene\+Manager@{Scene\+Manager}}
 \subsubsection{\texorpdfstring{current\+\_\+scene\+\_\+}{current\_scene\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_base}{Scene\+Base}}$\ast$ Scene\+Manager\+::current\+\_\+scene\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_base}{Scene\+Base}}$\ast$ Scene\+Manager\+::current\+\_\+scene\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -465,7 +547,7 @@ M\+AX&\\
 
 
 
- Scene\+Manager.\+h の 138 行目に定義があります。
+ Scene\+Manager.\+h の 139 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_a8b6874644ba8998b0db76780d56f371f}\label{class_scene_manager_a8b6874644ba8998b0db76780d56f371f}} 
 \index{Scene\+Manager@{Scene\+Manager}!D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+C\+O\+L\+OR@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+C\+O\+L\+OR}}
@@ -479,13 +561,13 @@ M\+AX&\\
 
 
 
- Scene\+Manager.\+h の 128 行目に定義があります。
+ Scene\+Manager.\+h の 130 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_a58cd446096f95d3e62e7eba16a4096ee}\label{class_scene_manager_a58cd446096f95d3e62e7eba16a4096ee}} 
 \index{Scene\+Manager@{Scene\+Manager}!D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+S\+P\+E\+ED@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+S\+P\+E\+ED}}
 \index{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+S\+P\+E\+ED@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+S\+P\+E\+ED}!Scene\+Manager@{Scene\+Manager}}
 \subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+S\+P\+E\+ED}{DEFAULT\_FADE\_SPEED}}
-{\footnotesize\ttfamily const float Scene\+Manager\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+S\+P\+E\+ED = 1.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily const float Scene\+Manager\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+S\+P\+E\+ED = 0.\+3f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
@@ -493,13 +575,13 @@ M\+AX&\\
 
 
 
- Scene\+Manager.\+h の 127 行目に定義があります。
+ Scene\+Manager.\+h の 129 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_ab87f30ef7e11305bb4e3400b41225c22}\label{class_scene_manager_ab87f30ef7e11305bb4e3400b41225c22}} 
 \index{Scene\+Manager@{Scene\+Manager}!D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+T\+Y\+PE@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+T\+Y\+PE}}
 \index{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+T\+Y\+PE@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+T\+Y\+PE}!Scene\+Manager@{Scene\+Manager}}
 \subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+T\+Y\+PE}{DEFAULT\_FADE\_TYPE}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Fade\+::\+Type}} Scene\+Manager\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+T\+Y\+PE = Fade\+::\+Type\+::\+T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+AL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Fade\+::\+Type}} Scene\+Manager\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+T\+Y\+PE = \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80a1e23852820b9154316c7c06e2b7ba051}{Fade\+::\+Type\+::\+N\+O\+R\+M\+AL}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
@@ -507,13 +589,13 @@ M\+AX&\\
 
 
 
- Scene\+Manager.\+h の 126 行目に定義があります。
+ Scene\+Manager.\+h の 128 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_a978b815258c4591f81a16995484fe9fb}\label{class_scene_manager_a978b815258c4591f81a16995484fe9fb}} 
 \index{Scene\+Manager@{Scene\+Manager}!fade\+\_\+color\+\_\+@{fade\+\_\+color\+\_\+}}
 \index{fade\+\_\+color\+\_\+@{fade\+\_\+color\+\_\+}!Scene\+Manager@{Scene\+Manager}}
 \subsubsection{\texorpdfstring{fade\+\_\+color\+\_\+}{fade\_color\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Scene\+Manager\+::fade\+\_\+color\+\_\+ = \mbox{\hyperlink{class_scene_manager_a8b6874644ba8998b0db76780d56f371f}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+C\+O\+L\+OR}}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Scene\+Manager\+::fade\+\_\+color\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -521,13 +603,13 @@ M\+AX&\\
 
 
 
- Scene\+Manager.\+h の 143 行目に定義があります。
+ Scene\+Manager.\+h の 144 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_a8c54bc4de81209cb1576337bbbe45a6b}\label{class_scene_manager_a8c54bc4de81209cb1576337bbbe45a6b}} 
 \index{Scene\+Manager@{Scene\+Manager}!fade\+\_\+speed\+\_\+@{fade\+\_\+speed\+\_\+}}
 \index{fade\+\_\+speed\+\_\+@{fade\+\_\+speed\+\_\+}!Scene\+Manager@{Scene\+Manager}}
 \subsubsection{\texorpdfstring{fade\+\_\+speed\+\_\+}{fade\_speed\_}}
-{\footnotesize\ttfamily float Scene\+Manager\+::fade\+\_\+speed\+\_\+ = \mbox{\hyperlink{class_scene_manager_a58cd446096f95d3e62e7eba16a4096ee}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+S\+P\+E\+ED}}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily float Scene\+Manager\+::fade\+\_\+speed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -535,17 +617,31 @@ M\+AX&\\
 
 
 
- Scene\+Manager.\+h の 142 行目に定義があります。
+ Scene\+Manager.\+h の 143 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_af8e268f4b8f39deb1c23b52c22375d8f}\label{class_scene_manager_af8e268f4b8f39deb1c23b52c22375d8f}} 
 \index{Scene\+Manager@{Scene\+Manager}!fade\+\_\+type\+\_\+@{fade\+\_\+type\+\_\+}}
 \index{fade\+\_\+type\+\_\+@{fade\+\_\+type\+\_\+}!Scene\+Manager@{Scene\+Manager}}
 \subsubsection{\texorpdfstring{fade\+\_\+type\+\_\+}{fade\_type\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Fade\+::\+Type}} Scene\+Manager\+::fade\+\_\+type\+\_\+ = \mbox{\hyperlink{class_scene_manager_ab87f30ef7e11305bb4e3400b41225c22}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+D\+E\+\_\+\+T\+Y\+PE}}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fade_ac06f27215b454aa05b93c236476d6e80}{Fade\+::\+Type}} Scene\+Manager\+::fade\+\_\+type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-フェードの種類 
+フェードタイプ 
+
+
+
+ Scene\+Manager.\+h の 142 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_manager_a16f3b953ab3d2804b23ca01d64dc50b2}\label{class_scene_manager_a16f3b953ab3d2804b23ca01d64dc50b2}} 
+\index{Scene\+Manager@{Scene\+Manager}!is\+\_\+fade\+\_\+@{is\+\_\+fade\+\_\+}}
+\index{is\+\_\+fade\+\_\+@{is\+\_\+fade\+\_\+}!Scene\+Manager@{Scene\+Manager}}
+\subsubsection{\texorpdfstring{is\+\_\+fade\+\_\+}{is\_fade\_}}
+{\footnotesize\ttfamily bool Scene\+Manager\+::is\+\_\+fade\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+フェード中フラグ 
 
 
 
@@ -555,7 +651,7 @@ M\+AX&\\
 \index{Scene\+Manager@{Scene\+Manager}!next\+\_\+scene\+\_\+@{next\+\_\+scene\+\_\+}}
 \index{next\+\_\+scene\+\_\+@{next\+\_\+scene\+\_\+}!Scene\+Manager@{Scene\+Manager}}
 \subsubsection{\texorpdfstring{next\+\_\+scene\+\_\+}{next\_scene\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_base}{Scene\+Base}}$\ast$ Scene\+Manager\+::next\+\_\+scene\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_base}{Scene\+Base}}$\ast$ Scene\+Manager\+::next\+\_\+scene\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -563,13 +659,13 @@ M\+AX&\\
 
 
 
- Scene\+Manager.\+h の 139 行目に定義があります。
+ Scene\+Manager.\+h の 140 行目に定義があります。
 
 \mbox{\Hypertarget{class_scene_manager_adf81d8a63dee92bfe5bb934903542bec}\label{class_scene_manager_adf81d8a63dee92bfe5bb934903542bec}} 
 \index{Scene\+Manager@{Scene\+Manager}!state\+\_\+@{state\+\_\+}}
 \index{state\+\_\+@{state\+\_\+}!Scene\+Manager@{Scene\+Manager}}
 \subsubsection{\texorpdfstring{state\+\_\+}{state\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_manager_a68d32794fe1ce945c6a6c380c11a08eb}{State}} Scene\+Manager\+::state\+\_\+ = State\+::\+N\+O\+NE\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_manager_a68d32794fe1ce945c6a6c380c11a08eb}{State}} Scene\+Manager\+::state\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -577,11 +673,11 @@ M\+AX&\\
 
 
 
- Scene\+Manager.\+h の 135 行目に定義があります。
+ Scene\+Manager.\+h の 137 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/02\+\_\+\+Scene/\+Scene\+Manager/\mbox{\hyperlink{_scene_manager_8h}{Scene\+Manager.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/02\+\_\+\+Scene/\+Scene\+Manager/\mbox{\hyperlink{_scene_manager_8cpp}{Scene\+Manager.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Scene/\+Scene\+Manager/\mbox{\hyperlink{_scene_manager_8h}{Scene\+Manager.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Scene/\+Scene\+Manager/\+Source/\mbox{\hyperlink{_scene_manager_8cpp}{Scene\+Manager.\+cpp}}\end{DoxyCompactItemize}

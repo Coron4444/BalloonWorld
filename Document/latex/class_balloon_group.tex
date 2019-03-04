@@ -1,0 +1,423 @@
+\hypertarget{class_balloon_group}{}\section{Balloon\+Group クラス}
+\label{class_balloon_group}\index{Balloon\+Group@{Balloon\+Group}}
+
+
+風船群\+Class  
+
+
+
+
+{\ttfamily \#include $<$Balloon\+Group.\+h$>$}
+
+
+
+Balloon\+Group 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_balloon_group__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reference_list}{Reference\+List}}$<$ \mbox{\hyperlink{class_balloon_group}{Balloon\+Group}} $>$ $\ast$ \mbox{\hyperlink{class_balloon_group_aa32071776f49db498c51e71d39ba0f19}{getp\+Reference\+List}} ()
+\begin{DoxyCompactList}\small\item\em 参照リスト取得関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_balloon_group_acb54ba4e3355015eb24a2090c87e209f}{get\+Balloon\+Num}} ()
+\begin{DoxyCompactList}\small\item\em 風船数取得関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_balloon_group_ae70b007902b2f9f2d4452f26c98dcca9}{get\+Remaining\+Balloon\+Num}} ()
+\begin{DoxyCompactList}\small\item\em 風船の残り数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_balloon_group_ac0ffe27fcf8966d7017fd8f0c3efc7d7}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em 座標取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_group_a6f62d77c2467b0b54f311daca117a0aa}{set\+Position}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} value)
+\begin{DoxyCompactList}\small\item\em 座標設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_group_afbfc2425d41c42f70116f3f6f352c1c0}{Init}} (unsigned balloon\+\_\+num, \mbox{\hyperlink{class_vector3_d}{Vector3D}} position)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_group_a12ade72ec1cbb2a1afe431c471bbc255}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_group_abb663d61b35feebaf1997644138df64b}{Release\+Constraint}} ()
+\begin{DoxyCompactList}\small\item\em 拘束解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_group_addb01a96ff7f31b693d8f39757840234}{Add\+Velocity}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} velocity)
+\begin{DoxyCompactList}\small\item\em 速度追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_group_ab2c00147bfd4c7776f2babc5d6568738}{Add\+Acceleration}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} acceleration)
+\begin{DoxyCompactList}\small\item\em 加速度追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_group_a6c7ee1166595e8809a06ccfeb49b8371}{Rupture}} ()
+\begin{DoxyCompactList}\small\item\em 破裂関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_balloon_group_abc53b845e436f62dc4f5899b83d1b029}{M\+A\+X\+\_\+\+B\+A\+L\+L\+O\+O\+N\+\_\+\+N\+UM}} = 10
+\begin{DoxyCompactList}\small\item\em 最大風船数 \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{class_balloon_group_a1ff5315ab1a2d7706399cdd8db1f1a70}{B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+N\+UM}} = 20
+\begin{DoxyCompactList}\small\item\em 風船の線の数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reference_list}{Reference\+List}}$<$ \mbox{\hyperlink{class_balloon_group}{Balloon\+Group}} $>$ \mbox{\hyperlink{class_balloon_group_a5734f227201920a38dd0379fce5b2ee8}{reference\+\_\+list\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 参照リスト \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_balloon}{Balloon}} $\ast$ $>$ \mbox{\hyperlink{class_balloon_group_a20dd8b50558bbbb0e8169bccea50261b}{balloons\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 風船群 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_balloon_group_a7ec7d71eb6d9e333ccf3fc2017bfe9b2}{end\+\_\+index\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 終端インデックス \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+風船群\+Class 
+
+風船の集合\+Class 
+
+ Balloon\+Group.\+h の 31 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_balloon_group_ab2c00147bfd4c7776f2babc5d6568738}\label{class_balloon_group_ab2c00147bfd4c7776f2babc5d6568738}} 
+\index{Balloon\+Group@{Balloon\+Group}!Add\+Acceleration@{Add\+Acceleration}}
+\index{Add\+Acceleration@{Add\+Acceleration}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{Add\+Acceleration()}{AddAcceleration()}}
+{\footnotesize\ttfamily void Balloon\+Group\+::\+Add\+Acceleration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{acceleration }\end{DoxyParamCaption})}
+
+
+
+加速度追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em acceleration} & 加速度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon\+Group.\+cpp の 119 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_addb01a96ff7f31b693d8f39757840234}\label{class_balloon_group_addb01a96ff7f31b693d8f39757840234}} 
+\index{Balloon\+Group@{Balloon\+Group}!Add\+Velocity@{Add\+Velocity}}
+\index{Add\+Velocity@{Add\+Velocity}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{Add\+Velocity()}{AddVelocity()}}
+{\footnotesize\ttfamily void Balloon\+Group\+::\+Add\+Velocity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{velocity }\end{DoxyParamCaption})}
+
+
+
+速度追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em velocity} & 速度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon\+Group.\+cpp の 109 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_acb54ba4e3355015eb24a2090c87e209f}\label{class_balloon_group_acb54ba4e3355015eb24a2090c87e209f}} 
+\index{Balloon\+Group@{Balloon\+Group}!get\+Balloon\+Num@{get\+Balloon\+Num}}
+\index{get\+Balloon\+Num@{get\+Balloon\+Num}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{get\+Balloon\+Num()}{getBalloonNum()}}
+{\footnotesize\ttfamily int Balloon\+Group\+::get\+Balloon\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+風船数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & 風船数 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon\+Group.\+cpp の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_ac0ffe27fcf8966d7017fd8f0c3efc7d7}\label{class_balloon_group_ac0ffe27fcf8966d7017fd8f0c3efc7d7}} 
+\index{Balloon\+Group@{Balloon\+Group}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Balloon\+Group\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+座標取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 座標 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon\+Group.\+cpp の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_aa32071776f49db498c51e71d39ba0f19}\label{class_balloon_group_aa32071776f49db498c51e71d39ba0f19}} 
+\index{Balloon\+Group@{Balloon\+Group}!getp\+Reference\+List@{getp\+Reference\+List}}
+\index{getp\+Reference\+List@{getp\+Reference\+List}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{getp\+Reference\+List()}{getpReferenceList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reference_list}{Reference\+List}}$<$ \mbox{\hyperlink{class_balloon_group}{Balloon\+Group}} $>$ $\ast$ Balloon\+Group\+::getp\+Reference\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+参照リスト取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Reference\+List$<$\+Balloon\+Group$>$$\ast$} & 参照リスト \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon\+Group.\+cpp の 28 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_ae70b007902b2f9f2d4452f26c98dcca9}\label{class_balloon_group_ae70b007902b2f9f2d4452f26c98dcca9}} 
+\index{Balloon\+Group@{Balloon\+Group}!get\+Remaining\+Balloon\+Num@{get\+Remaining\+Balloon\+Num}}
+\index{get\+Remaining\+Balloon\+Num@{get\+Remaining\+Balloon\+Num}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{get\+Remaining\+Balloon\+Num()}{getRemainingBalloonNum()}}
+{\footnotesize\ttfamily int Balloon\+Group\+::get\+Remaining\+Balloon\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+風船の残り数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & 風船数 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon\+Group.\+cpp の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_afbfc2425d41c42f70116f3f6f352c1c0}\label{class_balloon_group_afbfc2425d41c42f70116f3f6f352c1c0}} 
+\index{Balloon\+Group@{Balloon\+Group}!Init@{Init}}
+\index{Init@{Init}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Balloon\+Group\+::\+Init (\begin{DoxyParamCaption}\item[{unsigned}]{balloon\+\_\+num,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{position }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em balloon\+\_\+num} & 風船数 \\
+\hline
+{\em position} & 座標 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon\+Group.\+cpp の 70 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_abb663d61b35feebaf1997644138df64b}\label{class_balloon_group_abb663d61b35feebaf1997644138df64b}} 
+\index{Balloon\+Group@{Balloon\+Group}!Release\+Constraint@{Release\+Constraint}}
+\index{Release\+Constraint@{Release\+Constraint}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{Release\+Constraint()}{ReleaseConstraint()}}
+{\footnotesize\ttfamily void Balloon\+Group\+::\+Release\+Constraint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+拘束解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon\+Group.\+cpp の 100 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_a6c7ee1166595e8809a06ccfeb49b8371}\label{class_balloon_group_a6c7ee1166595e8809a06ccfeb49b8371}} 
+\index{Balloon\+Group@{Balloon\+Group}!Rupture@{Rupture}}
+\index{Rupture@{Rupture}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{Rupture()}{Rupture()}}
+{\footnotesize\ttfamily void Balloon\+Group\+::\+Rupture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+破裂関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon\+Group.\+cpp の 129 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_a6f62d77c2467b0b54f311daca117a0aa}\label{class_balloon_group_a6f62d77c2467b0b54f311daca117a0aa}} 
+\index{Balloon\+Group@{Balloon\+Group}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Balloon\+Group\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{value }\end{DoxyParamCaption})}
+
+
+
+座標設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 座標 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Balloon\+Group.\+cpp の 56 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_a12ade72ec1cbb2a1afe431c471bbc255}\label{class_balloon_group_a12ade72ec1cbb2a1afe431c471bbc255}} 
+\index{Balloon\+Group@{Balloon\+Group}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Balloon\+Group\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_a1a70fbd3260fd1c0100320756830a0db}{Game\+Object\+Null}}を再実装しています。
+
+
+
+ Balloon\+Group.\+cpp の 92 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_balloon_group_a1ff5315ab1a2d7706399cdd8db1f1a70}\label{class_balloon_group_a1ff5315ab1a2d7706399cdd8db1f1a70}} 
+\index{Balloon\+Group@{Balloon\+Group}!B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+N\+UM@{B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+N\+UM}}
+\index{B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+N\+UM@{B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+N\+UM}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+N\+UM}{BALLOON\_LINE\_NUM}}
+{\footnotesize\ttfamily const int Balloon\+Group\+::\+B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+N\+UM = 20\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+風船の線の数 
+
+
+
+ Balloon\+Group.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_a20dd8b50558bbbb0e8169bccea50261b}\label{class_balloon_group_a20dd8b50558bbbb0e8169bccea50261b}} 
+\index{Balloon\+Group@{Balloon\+Group}!balloons\+\_\+@{balloons\+\_\+}}
+\index{balloons\+\_\+@{balloons\+\_\+}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{balloons\+\_\+}{balloons\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_balloon}{Balloon}}$\ast$$>$ Balloon\+Group\+::balloons\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+風船群 
+
+
+
+ Balloon\+Group.\+h の 46 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_a7ec7d71eb6d9e333ccf3fc2017bfe9b2}\label{class_balloon_group_a7ec7d71eb6d9e333ccf3fc2017bfe9b2}} 
+\index{Balloon\+Group@{Balloon\+Group}!end\+\_\+index\+\_\+@{end\+\_\+index\+\_\+}}
+\index{end\+\_\+index\+\_\+@{end\+\_\+index\+\_\+}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{end\+\_\+index\+\_\+}{end\_index\_}}
+{\footnotesize\ttfamily int Balloon\+Group\+::end\+\_\+index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+終端インデックス 
+
+
+
+ Balloon\+Group.\+h の 47 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_abc53b845e436f62dc4f5899b83d1b029}\label{class_balloon_group_abc53b845e436f62dc4f5899b83d1b029}} 
+\index{Balloon\+Group@{Balloon\+Group}!M\+A\+X\+\_\+\+B\+A\+L\+L\+O\+O\+N\+\_\+\+N\+UM@{M\+A\+X\+\_\+\+B\+A\+L\+L\+O\+O\+N\+\_\+\+N\+UM}}
+\index{M\+A\+X\+\_\+\+B\+A\+L\+L\+O\+O\+N\+\_\+\+N\+UM@{M\+A\+X\+\_\+\+B\+A\+L\+L\+O\+O\+N\+\_\+\+N\+UM}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+B\+A\+L\+L\+O\+O\+N\+\_\+\+N\+UM}{MAX\_BALLOON\_NUM}}
+{\footnotesize\ttfamily const int Balloon\+Group\+::\+M\+A\+X\+\_\+\+B\+A\+L\+L\+O\+O\+N\+\_\+\+N\+UM = 10\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+最大風船数 
+
+
+
+ Balloon\+Group.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_group_a5734f227201920a38dd0379fce5b2ee8}\label{class_balloon_group_a5734f227201920a38dd0379fce5b2ee8}} 
+\index{Balloon\+Group@{Balloon\+Group}!reference\+\_\+list\+\_\+@{reference\+\_\+list\+\_\+}}
+\index{reference\+\_\+list\+\_\+@{reference\+\_\+list\+\_\+}!Balloon\+Group@{Balloon\+Group}}
+\subsubsection{\texorpdfstring{reference\+\_\+list\+\_\+}{reference\_list\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reference_list}{Reference\+List}}$<$\mbox{\hyperlink{class_balloon_group}{Balloon\+Group}}$>$ Balloon\+Group\+::reference\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+参照リスト 
+
+
+
+ Balloon\+Group.\+h の 45 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Balloon/\mbox{\hyperlink{_balloon_group_8h}{Balloon\+Group.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Balloon/\+Source/\mbox{\hyperlink{_balloon_group_8cpp}{Balloon\+Group.\+cpp}}\end{DoxyCompactItemize}

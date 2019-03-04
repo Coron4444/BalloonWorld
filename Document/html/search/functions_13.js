@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['tempchangecameratype',['TempChangeCameraType',['../class_render_target_main.html#a8f267db7731eac84b1a88d502d4c192d',1,'RenderTargetMain']]],
   ['text',['Text',['../namespace_im_gui.html#a9e7b83611fe441d54fad2effb4bf4965',1,'ImGui']]],
   ['textcolored',['TextColored',['../namespace_im_gui.html#a36ab8fcad68b26863d6e910755de04c2',1,'ImGui']]],
   ['textcoloredv',['TextColoredV',['../namespace_im_gui.html#a87c24ece994188a7145d8feecb4439ed',1,'ImGui']]],
@@ -10,8 +11,7 @@ var searchData=
   ['textrange',['TextRange',['../struct_im_gui_text_filter_1_1_text_range.html#a5a6548fd40884ef5837e6a1ffa33af61',1,'ImGuiTextFilter::TextRange::TextRange()'],['../struct_im_gui_text_filter_1_1_text_range.html#a4a2b377d4fd141fc3664378041f9f007',1,'ImGuiTextFilter::TextRange::TextRange(const char *_b, const char *_e)']]],
   ['textunformatted',['TextUnformatted',['../namespace_im_gui.html#a96a5f42789ecc419b2ae8af7b2acc28e',1,'ImGui']]],
   ['textureloader',['TextureLoader',['../class_effekseer_1_1_texture_loader.html#a41dcac0ae6143fd422486aa504021f2c',1,'Effekseer::TextureLoader']]],
-  ['texturemanager',['TextureManager',['../class_texture_manager.html#a379a79168e8481b70c188259e0672981',1,'TextureManager::TextureManager()=delete'],['../class_texture_manager.html#a4ef42214937c5c9e58f87c28a079a858',1,'TextureManager::TextureManager(const TextureManager &amp;class_name)=delete']]],
-  ['textureobject',['TextureObject',['../class_texture_object.html#add74bde2c60ec3d61229ce70b26602f2',1,'TextureObject']]],
+  ['texturemanager',['TextureManager',['../class_texture_manager.html#ad76abb178b37cedf4514eb0154349935',1,'TextureManager::TextureManager()'],['../class_texture_manager.html#a4ef42214937c5c9e58f87c28a079a858',1,'TextureManager::TextureManager(const TextureManager &amp;class_name)=delete']]],
   ['textv',['TextV',['../namespace_im_gui.html#a10a0d6362178c2f743092f21e1b6cd20',1,'ImGui']]],
   ['textwrapped',['TextWrapped',['../namespace_im_gui.html#ad57bb15c599e73b2ccc7c0f7de6e5823',1,'ImGui']]],
   ['textwrappedv',['TextWrappedV',['../namespace_im_gui.html#a9019a388cd0c410bcb3d3ae63a008123',1,'ImGui']]],
@@ -19,11 +19,10 @@ var searchData=
   ['titlebarrect',['TitleBarRect',['../struct_im_gui_window.html#a06884e1bc80e460e51e1626b5b976196',1,'ImGuiWindow']]],
   ['titlescene',['TitleScene',['../class_title_scene.html#a433ef854689b1c9defb29d9f999c52da',1,'TitleScene']]],
   ['trackrenderer',['TrackRenderer',['../class_effekseer_1_1_track_renderer.html#a9517f40758eac1a40a06ef05875a9acb',1,'Effekseer::TrackRenderer']]],
-  ['transform',['Transform',['../class_transform.html#aa08ca4266efabc768973cdeea51945ab',1,'Transform::Transform()'],['../struct_effekseer_1_1_vector3_d.html#ae46e69eb77703cd01dc860d5024cec7d',1,'Effekseer::Vector3D::Transform(Vector3D &amp;o, const Vector3D &amp;in, const Matrix43 &amp;mat)'],['../struct_effekseer_1_1_vector3_d.html#a036e8dd4bdd50963f889f6c885440e06',1,'Effekseer::Vector3D::Transform(Vector3D &amp;o, const Vector3D &amp;in, const Matrix44 &amp;mat)']]],
+  ['transform',['Transform',['../struct_effekseer_1_1_vector3_d.html#ae46e69eb77703cd01dc860d5024cec7d',1,'Effekseer::Vector3D::Transform(Vector3D &amp;o, const Vector3D &amp;in, const Matrix43 &amp;mat)'],['../struct_effekseer_1_1_vector3_d.html#a036e8dd4bdd50963f889f6c885440e06',1,'Effekseer::Vector3D::Transform(Vector3D &amp;o, const Vector3D &amp;in, const Matrix44 &amp;mat)'],['../class_transform.html#aa08ca4266efabc768973cdeea51945ab',1,'Transform::Transform()']]],
   ['translate',['Translate',['../struct_im_rect.html#ae964217d0317002b1ae80f935c97e689',1,'ImRect']]],
   ['translation',['Translation',['../struct_effekseer_1_1_matrix43.html#ab86a1212ba446b26d684b7f4b2361b64',1,'Effekseer::Matrix43::Translation()'],['../struct_effekseer_1_1_matrix44.html#af10dc0777b15b329cb33e173ce86924b',1,'Effekseer::Matrix44::Translation()']]],
   ['transpose',['Transpose',['../struct_effekseer_1_1_matrix44.html#a9feeb08ed8858074e9bf433244ace76e',1,'Effekseer::Matrix44']]],
-  ['transposematrixtranslationoff',['TransposeMatrixTranslationOff',['../class_matrix_extend.html#ae567bb2d140dff892ed1b63f8de33ba9',1,'MatrixExtend::TransposeMatrixTranslationOff()'],['../class_transform.html#a053037b225e6fb11e680cc60df15dd45',1,'Transform::TransposeMatrixTranslationOff()']]],
   ['treeadvancetolabelpos',['TreeAdvanceToLabelPos',['../namespace_im_gui.html#a54e15c2f65cea3aeddd66b5dcfb45716',1,'ImGui']]],
   ['treenode',['TreeNode',['../namespace_im_gui.html#a4dff507ce8bbe0da9556bb50b1e60d7f',1,'ImGui::TreeNode(const char *label)'],['../namespace_im_gui.html#a6e6e4de20291002430854cbd8cd58843',1,'ImGui::TreeNode(const char *str_id, const char *fmt,...) IM_FMTARGS(2)'],['../namespace_im_gui.html#a47f1421323f90fdd0a9cbfea2338b10f',1,'ImGui::TreeNode(const void *ptr_id, const char *fmt,...) IM_FMTARGS(2)']]],
   ['treenodebehavior',['TreeNodeBehavior',['../namespace_im_gui.html#a918eabf70d288e93b2519ee1eac2c0b4',1,'ImGui']]],
@@ -34,7 +33,6 @@ var searchData=
   ['treepop',['TreePop',['../namespace_im_gui.html#a41ecf265e5f678c78fc9c30b3cf2077f',1,'ImGui']]],
   ['treepush',['TreePush',['../namespace_im_gui.html#a596151d99bca5cc0b6393809c1e07af5',1,'ImGui::TreePush(const char *str_id=NULL)'],['../namespace_im_gui.html#a71440d86edee2b23abc25cb80e9c9444',1,'ImGui::TreePush(const void *ptr_id=NULL)']]],
   ['treepushrawid',['TreePushRawID',['../namespace_im_gui.html#afddcddce9f2801769e4c79ef769ab600',1,'ImGui']]],
-  ['triangle',['Triangle',['../class_triangle.html#aaefe4ed500c07918d30c6f0e286332c5',1,'Triangle']]],
   ['trim_5fblanks',['trim_blanks',['../struct_im_gui_text_filter_1_1_text_range.html#aa3bbd8b17b528f548d73c0936228dc85',1,'ImGuiTextFilter::TextRange']]],
   ['tutorialscene',['TutorialScene',['../class_tutorial_scene.html#a90f8c010bd72aa3dae61a5294fdfbeb7',1,'TutorialScene']]]
 ];

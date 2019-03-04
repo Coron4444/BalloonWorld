@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: CollisionShapeBase クラス</title>
+<title>BalloonWorld: CollisionShapeBase クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('class_collision_shape_base.html','');}
   <div class="summary">
 <a href="#pub-types">公開型</a> &#124;
 <a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
 <a href="#pri-attribs">非公開変数類</a> &#124;
 <a href="class_collision_shape_base-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
@@ -102,36 +103,29 @@ $(document).ready(function(){initNavTree('class_collision_shape_base.html','');}
 
 <p><code>#include &lt;<a class="el" href="_collision_shape_base_8h_source.html">CollisionShapeBase.h</a>&gt;</code></p>
 <div class="dynheader">
-CollisionShapeBase の継承関係図</div>
+CollisionShapeBase 連携図</div>
 <div class="dyncontent">
-<div class="center"><img src="class_collision_shape_base__inherit__graph.png" border="0" usemap="#_collision_shape_base_inherit__map" alt="Inheritance graph"/></div>
-<map name="_collision_shape_base_inherit__map" id="_collision_shape_base_inherit__map">
-<area shape="rect" id="node2" href="class_a_a_b_b.html" title="AABBClass " alt="" coords="5,80,64,107"/>
-<area shape="rect" id="node3" href="class_capsule.html" title="カプセルClass " alt="" coords="88,80,157,107"/>
-<area shape="rect" id="node4" href="class_cylinder.html" title="円柱Class " alt="" coords="181,80,251,107"/>
-<area shape="rect" id="node5" href="class_line_segment.html" title="線分Class " alt="" coords="275,80,373,107"/>
-<area shape="rect" id="node6" href="class_o_b_b.html" title="OBBClass " alt="" coords="397,80,448,107"/>
-<area shape="rect" id="node7" href="class_plane.html" title="平面Class " alt="" coords="473,80,527,107"/>
-<area shape="rect" id="node8" href="class_sphere.html" title="球Class " alt="" coords="551,80,614,107"/>
-<area shape="rect" id="node9" href="class_triangle.html" title="三角形平面Class " alt="" coords="639,80,705,107"/>
+<div class="center"><img src="class_collision_shape_base__coll__graph.png" border="0" usemap="#_collision_shape_base_coll__map" alt="Collaboration graph"/></div>
+<map name="_collision_shape_base_coll__map" id="_collision_shape_base_coll__map">
+<area shape="rect" id="node2" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="37,81,113,108"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 公開型</h2></td></tr>
 <tr class="memitem:a8abcef092855ad0ca191047044b002cb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">Type</a> { <br />
-&#160;&#160;<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba1129630002cc3cf03126a4ef39383c98">NONE</a> = -1, 
-<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba2512ecb2c7c72bdbdf8aa3f5a07671c7">AABB</a>, 
-<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba2cae7484589db3e777b158aeae2a633b">CAPSULE</a>, 
-<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba92f81388af31f36357b692f2aead2f19">CYLINDER</a>, 
+&#160;&#160;<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cbab50339a10e1de285ac99d4c3990b8693">Type::NONE</a> = -1, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba4276d50f05d2cac4c98c17337ac30c99">Type::AABB</a>, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba67586f12c9792da11a4bdf60360d40e9">Type::CAPSULE</a>, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cbaddec32fe897072b48368b1abe03de2aa">Type::CYLINDER</a>, 
 <br />
-&#160;&#160;<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba56e56c8ee634330847018d716ca222b0">OBB</a>, 
-<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba740709eb8c52c5d67d1c9af02af074cf">PLANE</a>, 
-<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba8cae4c6afb929fa9a9f3ca67c35f78bd">LINE_SEGMENT</a>, 
-<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cbaf5cbf5af4d5ef779592f1a293895c63e">SPHERE</a>, 
+&#160;&#160;<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba9aac15e014ce3a36fcbf4a3f669332da">Type::OBB</a>, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cbaad6990fc23cd957328515fde2db852a3">Type::PLANE</a>, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cbaa553bd03b2c1935b2632e97e19ce7826">Type::LINE_SEGMENT</a>, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba6f7cea7381e843e2ee0338b4a92b0d43">Type::SPHERE</a>, 
 <br />
-&#160;&#160;<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba4b6a6ea5d0152ec22ef54af55a4c872b">TRIANGLE</a>, 
-<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba4636454f94c8f39be9fed0b1a3124a2c">MAX</a>
+&#160;&#160;<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba9bcd89070cae224dce305f5011659ef4">Type::TRIANGLE</a>, 
+<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba26a4b44a837bf97b972628509912b4a5">Type::MAX</a>
 <br />
  }</td></tr>
 <tr class="separator:a8abcef092855ad0ca191047044b002cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,84 +133,85 @@ CollisionShapeBase の継承関係図</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a3dac385b3718f80171046cde33da04b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a3dac385b3718f80171046cde33da04b1">getType</a> ()</td></tr>
-<tr class="memdesc:a3dac385b3718f80171046cde33da04b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">形状タイプ取得関数  <a href="#a3dac385b3718f80171046cde33da04b1">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a3dac385b3718f80171046cde33da04b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイプ取得関数  <a href="#a3dac385b3718f80171046cde33da04b1">[詳解]</a><br /></td></tr>
 <tr class="separator:a3dac385b3718f80171046cde33da04b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dd2ab42e2a6e96c6bff832ce8ca62b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a9dd2ab42e2a6e96c6bff832ce8ca62b9">CollisionShapeBase</a> (<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">Type</a> type)</td></tr>
-<tr class="memdesc:a9dd2ab42e2a6e96c6bff832ce8ca62b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#a9dd2ab42e2a6e96c6bff832ce8ca62b9">[詳解]</a><br /></td></tr>
-<tr class="separator:a9dd2ab42e2a6e96c6bff832ce8ca62b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82a91baac1983dab014be36864eecf54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a82a91baac1983dab014be36864eecf54">setType</a> (<a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">Type</a> value)</td></tr>
+<tr class="memdesc:a82a91baac1983dab014be36864eecf54"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイプ設定関数  <a href="#a82a91baac1983dab014be36864eecf54">[詳解]</a><br /></td></tr>
+<tr class="separator:a82a91baac1983dab014be36864eecf54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0443ca3ada3e6fd6e9b23e2463c9c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#aec0443ca3ada3e6fd6e9b23e2463c9c9">getpMax</a> ()</td></tr>
+<tr class="memdesc:aec0443ca3ada3e6fd6e9b23e2463c9c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大座標取得関数  <a href="#aec0443ca3ada3e6fd6e9b23e2463c9c9">[詳解]</a><br /></td></tr>
+<tr class="separator:aec0443ca3ada3e6fd6e9b23e2463c9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a426957f57223656c8ef26cec368288d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a426957f57223656c8ef26cec368288d0">getpMin</a> ()</td></tr>
+<tr class="memdesc:a426957f57223656c8ef26cec368288d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小座標取得関数  <a href="#a426957f57223656c8ef26cec368288d0">[詳解]</a><br /></td></tr>
+<tr class="separator:a426957f57223656c8ef26cec368288d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6fb40d8815d749743555bd2ab505fe6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#af6fb40d8815d749743555bd2ab505fe6">~CollisionShapeBase</a> ()=0</td></tr>
 <tr class="memdesc:af6fb40d8815d749743555bd2ab505fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="#af6fb40d8815d749743555bd2ab505fe6">[詳解]</a><br /></td></tr>
 <tr class="separator:af6fb40d8815d749743555bd2ab505fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aaa0f4de4e208f168f78e3445313929"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a7aaa0f4de4e208f168f78e3445313929">Update</a> ()=0</td></tr>
+<tr class="memdesc:a7aaa0f4de4e208f168f78e3445313929"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#a7aaa0f4de4e208f168f78e3445313929">[詳解]</a><br /></td></tr>
+<tr class="separator:a7aaa0f4de4e208f168f78e3445313929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad227c2f83038d7c05bc6b1d510cb4000"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#ad227c2f83038d7c05bc6b1d510cb4000">CalculationMinAndMax</a> ()=0</td></tr>
+<tr class="memdesc:ad227c2f83038d7c05bc6b1d510cb4000"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小値と最大値算出関数  <a href="#ad227c2f83038d7c05bc6b1d510cb4000">[詳解]</a><br /></td></tr>
+<tr class="separator:ad227c2f83038d7c05bc6b1d510cb4000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 非公開変数類</h2></td></tr>
-<tr class="memitem:a46413b1e4d4b3a35075232fa9012addb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a46413b1e4d4b3a35075232fa9012addb">type_</a></td></tr>
-<tr class="memdesc:a46413b1e4d4b3a35075232fa9012addb"><td class="mdescLeft">&#160;</td><td class="mdescRight">形状タイプ  <a href="#a46413b1e4d4b3a35075232fa9012addb">[詳解]</a><br /></td></tr>
+<tr class="memitem:a46413b1e4d4b3a35075232fa9012addb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a46413b1e4d4b3a35075232fa9012addb">type_</a> = <a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cbab50339a10e1de285ac99d4c3990b8693">Type::NONE</a></td></tr>
+<tr class="memdesc:a46413b1e4d4b3a35075232fa9012addb"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイプ  <a href="#a46413b1e4d4b3a35075232fa9012addb">[詳解]</a><br /></td></tr>
 <tr class="separator:a46413b1e4d4b3a35075232fa9012addb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b4c8627469bfe135d02b67de688bac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#af6b4c8627469bfe135d02b67de688bac">min_</a></td></tr>
+<tr class="memdesc:af6b4c8627469bfe135d02b67de688bac"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小値  <a href="#af6b4c8627469bfe135d02b67de688bac">[詳解]</a><br /></td></tr>
+<tr class="separator:af6b4c8627469bfe135d02b67de688bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a9788a4a72f5dd77cd26a281c2d17e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_shape_base.html#a4a9788a4a72f5dd77cd26a281c2d17e4">max_</a></td></tr>
+<tr class="memdesc:a4a9788a4a72f5dd77cd26a281c2d17e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大値  <a href="#a4a9788a4a72f5dd77cd26a281c2d17e4">[詳解]</a><br /></td></tr>
+<tr class="separator:a4a9788a4a72f5dd77cd26a281c2d17e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>衝突形状BaseClass </p>
 <p>衝突形状のBaseClass </p>
 
-<p class="definition"> <a class="el" href="_collision_shape_base_8h_source.html">CollisionShapeBase.h</a> の <a class="el" href="_collision_shape_base_8h_source.html#l00017">17</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_collision_shape_base_8h_source.html">CollisionShapeBase.h</a> の <a class="el" href="_collision_shape_base_8h_source.html#l00024">24</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">列挙型メンバ詳解</h2>
 <a id="a8abcef092855ad0ca191047044b002cb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8abcef092855ad0ca191047044b002cb">&#9670;&nbsp;</a></span>Type</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">enum <a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">CollisionShapeBase::Type</a></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba1129630002cc3cf03126a4ef39383c98"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba2512ecb2c7c72bdbdf8aa3f5a07671c7"></a>AABB&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba2cae7484589db3e777b158aeae2a633b"></a>CAPSULE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba92f81388af31f36357b692f2aead2f19"></a>CYLINDER&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba56e56c8ee634330847018d716ca222b0"></a>OBB&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba740709eb8c52c5d67d1c9af02af074cf"></a>PLANE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba8cae4c6afb929fa9a9f3ca67c35f78bd"></a>LINE_SEGMENT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cbaf5cbf5af4d5ef779592f1a293895c63e"></a>SPHERE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba4b6a6ea5d0152ec22ef54af55a4c872b"></a>TRIANGLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba4636454f94c8f39be9fed0b1a3124a2c"></a>MAX&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cbab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba4276d50f05d2cac4c98c17337ac30c99"></a>AABB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba67586f12c9792da11a4bdf60360d40e9"></a>CAPSULE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cbaddec32fe897072b48368b1abe03de2aa"></a>CYLINDER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba9aac15e014ce3a36fcbf4a3f669332da"></a>OBB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cbaad6990fc23cd957328515fde2db852a3"></a>PLANE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cbaa553bd03b2c1935b2632e97e19ce7826"></a>LINE_SEGMENT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba6f7cea7381e843e2ee0338b4a92b0d43"></a>SPHERE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba9bcd89070cae224dce305f5011659ef4"></a>TRIANGLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8abcef092855ad0ca191047044b002cba26a4b44a837bf97b972628509912b4a5"></a>MAX&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="_collision_shape_base_8h_source.html">CollisionShapeBase.h</a> の <a class="el" href="_collision_shape_base_8h_source.html#l00024">24</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_collision_shape_base_8h_source.html">CollisionShapeBase.h</a> の <a class="el" href="_collision_shape_base_8h_source.html#l00031">31</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">構築子と解体子</h2>
-<a id="a9dd2ab42e2a6e96c6bff832ce8ca62b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dd2ab42e2a6e96c6bff832ce8ca62b9">&#9670;&nbsp;</a></span>CollisionShapeBase()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CollisionShapeBase::CollisionShapeBase </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">Type</a>&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>コンストラクタ </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>形状タイプ </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="_collision_shape_base_8cpp_source.html">CollisionShapeBase.cpp</a> の <a class="el" href="_collision_shape_base_8cpp_source.html#l00030">30</a> 行目に定義があります。</p>
-
-</div>
-</div>
 <a id="af6fb40d8815d749743555bd2ab505fe6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af6fb40d8815d749743555bd2ab505fe6">&#9670;&nbsp;</a></span>~CollisionShapeBase()</h2>
 
@@ -248,11 +243,118 @@ CollisionShapeBase の継承関係図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_collision_shape_base_8cpp_source.html">CollisionShapeBase.cpp</a> の <a class="el" href="_collision_shape_base_8cpp_source.html#l00037">37</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_collision_shape_base_8cpp_source.html">CollisionShapeBase.cpp</a> の <a class="el" href="_collision_shape_base_8cpp_source.html#l00052">52</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
+<a id="ad227c2f83038d7c05bc6b1d510cb4000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad227c2f83038d7c05bc6b1d510cb4000">&#9670;&nbsp;</a></span>CalculationMinAndMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CollisionShapeBase::CalculationMinAndMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最小値と最大値算出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_o_b_b.html#a638080ada1be9bef353359358dba23bc">OBB</a>, <a class="el" href="class_capsule.html#a52ada68cdb0c18a4dd8b4b169ad0d6df">Capsule</a>, <a class="el" href="class_cylinder.html#ac8fb25627ff41e9ae265cd80bfbde03a">Cylinder</a>, <a class="el" href="class_line_segment.html#aa680211e185d2c98febb5af5a6527496">LineSegment</a>, <a class="el" href="class_a_a_b_b.html#a9f2f03e02053b4f170fc030bdc4ba6b6">AABB</a>, <a class="el" href="class_triangle.html#a8e8c4d3a0bb8a4dfb15429d38a3bdaaa">Triangle</a>, <a class="el" href="class_plane.html#a8df0a1a800b32aa21a2a22c7cb52aa86">Plane</a>, <a class="el" href="class_sphere.html#a651b659cec38a3a93a4be589f25899d7">Sphere</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="aec0443ca3ada3e6fd6e9b23e2463c9c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0443ca3ada3e6fd6e9b23e2463c9c9">&#9670;&nbsp;</a></span>getpMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * CollisionShapeBase::getpMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最大座標取得関数 </p>
+<p>形状を包むAABBの最大座標 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>最大座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_shape_base_8cpp_source.html">CollisionShapeBase.cpp</a> の <a class="el" href="_collision_shape_base_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a426957f57223656c8ef26cec368288d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a426957f57223656c8ef26cec368288d0">&#9670;&nbsp;</a></span>getpMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * CollisionShapeBase::getpMin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最小座標取得関数 </p>
+<p>形状を包むAABBの最小座標 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>最小座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_shape_base_8cpp_source.html">CollisionShapeBase.cpp</a> の <a class="el" href="_collision_shape_base_8cpp_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="a3dac385b3718f80171046cde33da04b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3dac385b3718f80171046cde33da04b1">&#9670;&nbsp;</a></span>getType()</h2>
 
@@ -268,7 +370,7 @@ CollisionShapeBase の継承関係図</div>
       </table>
 </div><div class="memdoc">
 
-<p>形状タイプ取得関数 </p>
+<p>タイプ取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">void</td><td>なし </td></tr>
@@ -277,7 +379,7 @@ CollisionShapeBase の継承関係図</div>
 </dl>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">Type</td><td>形状タイプ </td></tr>
+    <tr><td class="paramname">Type</td><td>タイプ </td></tr>
   </table>
   </dd>
 </dl>
@@ -286,7 +388,134 @@ CollisionShapeBase の継承関係図</div>
 
 </div>
 </div>
+<a id="a82a91baac1983dab014be36864eecf54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82a91baac1983dab014be36864eecf54">&#9670;&nbsp;</a></span>setType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionShapeBase::setType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">CollisionShapeBase::Type</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>タイプ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>タイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_shape_base_8cpp_source.html">CollisionShapeBase.cpp</a> の <a class="el" href="_collision_shape_base_8cpp_source.html#l00027">27</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7aaa0f4de4e208f168f78e3445313929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aaa0f4de4e208f168f78e3445313929">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CollisionShapeBase::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_o_b_b.html#af9b3e9a2d810f5b37cf849a3804d7bc7">OBB</a>, <a class="el" href="class_capsule.html#abfa1026590603a2971c5269171a50864">Capsule</a>, <a class="el" href="class_cylinder.html#a7b835c069d873b53d57fd01b9f44bacd">Cylinder</a>, <a class="el" href="class_line_segment.html#af38555a54ae3cae5e06876331b9d7522">LineSegment</a>, <a class="el" href="class_a_a_b_b.html#a0a96be8dec3969d893bf90d3f05e22b7">AABB</a>, <a class="el" href="class_triangle.html#acc4ecbf029aafe3cda4e6a49218e2e0b">Triangle</a>, <a class="el" href="class_plane.html#a1dd55b527bae8194b21bf2009f53afb0">Plane</a>, <a class="el" href="class_sphere.html#a5e72970f207683a3cf5fe430f6a62e15">Sphere</a>で実装されています。</p>
+
+</div>
+</div>
 <h2 class="groupheader">メンバ詳解</h2>
+<a id="a4a9788a4a72f5dd77cd26a281c2d17e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a9788a4a72f5dd77cd26a281c2d17e4">&#9670;&nbsp;</a></span>max_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> CollisionShapeBase::max_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最大値 </p>
+
+<p class="definition"> <a class="el" href="_collision_shape_base_8h_source.html">CollisionShapeBase.h</a> の <a class="el" href="_collision_shape_base_8h_source.html#l00052">52</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af6b4c8627469bfe135d02b67de688bac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6b4c8627469bfe135d02b67de688bac">&#9670;&nbsp;</a></span>min_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> CollisionShapeBase::min_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最小値 </p>
+
+<p class="definition"> <a class="el" href="_collision_shape_base_8h_source.html">CollisionShapeBase.h</a> の <a class="el" href="_collision_shape_base_8h_source.html#l00051">51</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="a46413b1e4d4b3a35075232fa9012addb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46413b1e4d4b3a35075232fa9012addb">&#9670;&nbsp;</a></span>type_</h2>
 
@@ -297,7 +526,7 @@ CollisionShapeBase の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">Type</a> CollisionShapeBase::type_</td>
+          <td class="memname"><a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cb">Type</a> CollisionShapeBase::type_ = <a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cbab50339a10e1de285ac99d4c3990b8693">Type::NONE</a></td>
         </tr>
       </table>
   </td>
@@ -307,15 +536,15 @@ CollisionShapeBase の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p>形状タイプ </p>
+<p>タイプ </p>
 
-<p class="definition"> <a class="el" href="_collision_shape_base_8h_source.html">CollisionShapeBase.h</a> の <a class="el" href="_collision_shape_base_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_collision_shape_base_8h_source.html">CollisionShapeBase.h</a> の <a class="el" href="_collision_shape_base_8h_source.html#l00050">50</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Component/Collision/CollisionBase/CollisionObject/CollisionShapeBase/<a class="el" href="_collision_shape_base_8h_source.html">CollisionShapeBase.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Component/Collision/CollisionBase/CollisionObject/CollisionShapeBase/<a class="el" href="_collision_shape_base_8cpp_source.html">CollisionShapeBase.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Collision/CollisionShape/<a class="el" href="_collision_shape_base_8h_source.html">CollisionShapeBase.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Collision/CollisionShape/Source/<a class="el" href="_collision_shape_base_8cpp_source.html">CollisionShapeBase.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

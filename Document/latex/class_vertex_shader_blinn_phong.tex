@@ -1,0 +1,213 @@
+\hypertarget{class_vertex_shader_blinn_phong}{}\section{Vertex\+Shader\+Blinn\+Phong クラス}
+\label{class_vertex_shader_blinn_phong}\index{Vertex\+Shader\+Blinn\+Phong@{Vertex\+Shader\+Blinn\+Phong}}
+
+
+ブリン・フォンの鏡面反射頂点シェーダー\+Class  
+
+
+
+
+{\ttfamily \#include $<$Vertex\+Shader\+Blinn\+Phong.\+h$>$}
+
+
+
+Vertex\+Shader\+Blinn\+Phong 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_vertex_shader_blinn_phong__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_vertex_shader_blinn_phong_a565b15a20d6c73d8b8e0c7dcc3078464}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_shader_blinn_phong_a26af54fcf9adccbe449a65d7a078c02f}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_shader_blinn_phong_ac1a1ee4254b6b44a680b31c2ee42f44f}{Object\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)
+\begin{DoxyCompactList}\small\item\em オブジェクト設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_shader_blinn_phong_a5a5e76dcd64d4da2b2d3a4d9b1f4af21}{Mesh\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index, unsigned mesh\+\_\+index)
+\begin{DoxyCompactList}\small\item\em メッシュ設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_vertex_shader_blinn_phong_ad9e0207ddf6d0b2452d8dfdf3ee1ccbd}{math\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 計算用行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \mbox{\hyperlink{class_vertex_shader_blinn_phong_a7b721175a17910728b9d2b887f567730}{P\+A\+TH}} = \char`\"{}resource/H\+L\+SL/Effect/Vertex\+Shader/Blinn\+Phong.\+vsh\char`\"{}
+\begin{DoxyCompactList}\small\item\em ファイルパス \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+ブリン・フォンの鏡面反射頂点シェーダー\+Class 
+
+ブリン・フォンの鏡面反射の頂点シェーダー\+Class 
+
+ Vertex\+Shader\+Blinn\+Phong.\+h の 26 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_vertex_shader_blinn_phong_a565b15a20d6c73d8b8e0c7dcc3078464}\label{class_vertex_shader_blinn_phong_a565b15a20d6c73d8b8e0c7dcc3078464}} 
+\index{Vertex\+Shader\+Blinn\+Phong@{Vertex\+Shader\+Blinn\+Phong}!Init@{Init}}
+\index{Init@{Init}!Vertex\+Shader\+Blinn\+Phong@{Vertex\+Shader\+Blinn\+Phong}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Blinn\+Phong\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_a4d79b358dab49c840345d74823a16840}{Vertex\+Shader\+Null}}を再実装しています。
+
+
+
+ Vertex\+Shader\+Blinn\+Phong.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_blinn_phong_a5a5e76dcd64d4da2b2d3a4d9b1f4af21}\label{class_vertex_shader_blinn_phong_a5a5e76dcd64d4da2b2d3a4d9b1f4af21}} 
+\index{Vertex\+Shader\+Blinn\+Phong@{Vertex\+Shader\+Blinn\+Phong}!Mesh\+Setting@{Mesh\+Setting}}
+\index{Mesh\+Setting@{Mesh\+Setting}!Vertex\+Shader\+Blinn\+Phong@{Vertex\+Shader\+Blinn\+Phong}}
+\subsubsection{\texorpdfstring{Mesh\+Setting()}{MeshSetting()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Blinn\+Phong\+::\+Mesh\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+メッシュ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_a7bd853b15ab81cec44f1b6a1ea70a3a9}{Vertex\+Shader\+Null}}を再実装しています。
+
+
+
+ Vertex\+Shader\+Blinn\+Phong.\+cpp の 75 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_blinn_phong_ac1a1ee4254b6b44a680b31c2ee42f44f}\label{class_vertex_shader_blinn_phong_ac1a1ee4254b6b44a680b31c2ee42f44f}} 
+\index{Vertex\+Shader\+Blinn\+Phong@{Vertex\+Shader\+Blinn\+Phong}!Object\+Setting@{Object\+Setting}}
+\index{Object\+Setting@{Object\+Setting}!Vertex\+Shader\+Blinn\+Phong@{Vertex\+Shader\+Blinn\+Phong}}
+\subsubsection{\texorpdfstring{Object\+Setting()}{ObjectSetting()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Blinn\+Phong\+::\+Object\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+オブジェクト設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_aae3231bb3fa5df2578ba89701867ffb3}{Vertex\+Shader\+Null}}を再実装しています。
+
+
+
+ Vertex\+Shader\+Blinn\+Phong.\+cpp の 46 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_blinn_phong_a26af54fcf9adccbe449a65d7a078c02f}\label{class_vertex_shader_blinn_phong_a26af54fcf9adccbe449a65d7a078c02f}} 
+\index{Vertex\+Shader\+Blinn\+Phong@{Vertex\+Shader\+Blinn\+Phong}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Vertex\+Shader\+Blinn\+Phong@{Vertex\+Shader\+Blinn\+Phong}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Blinn\+Phong\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_adf758f295d2803c6d8bd7e05e461abec}{Vertex\+Shader\+Null}}を再実装しています。
+
+
+
+ Vertex\+Shader\+Blinn\+Phong.\+cpp の 38 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_vertex_shader_blinn_phong_ad9e0207ddf6d0b2452d8dfdf3ee1ccbd}\label{class_vertex_shader_blinn_phong_ad9e0207ddf6d0b2452d8dfdf3ee1ccbd}} 
+\index{Vertex\+Shader\+Blinn\+Phong@{Vertex\+Shader\+Blinn\+Phong}!math\+\_\+matrix\+\_\+@{math\+\_\+matrix\+\_\+}}
+\index{math\+\_\+matrix\+\_\+@{math\+\_\+matrix\+\_\+}!Vertex\+Shader\+Blinn\+Phong@{Vertex\+Shader\+Blinn\+Phong}}
+\subsubsection{\texorpdfstring{math\+\_\+matrix\+\_\+}{math\_matrix\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Vertex\+Shader\+Blinn\+Phong\+::math\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+計算用行列 
+
+
+
+ Vertex\+Shader\+Blinn\+Phong.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_blinn_phong_a7b721175a17910728b9d2b887f567730}\label{class_vertex_shader_blinn_phong_a7b721175a17910728b9d2b887f567730}} 
+\index{Vertex\+Shader\+Blinn\+Phong@{Vertex\+Shader\+Blinn\+Phong}!P\+A\+TH@{P\+A\+TH}}
+\index{P\+A\+TH@{P\+A\+TH}!Vertex\+Shader\+Blinn\+Phong@{Vertex\+Shader\+Blinn\+Phong}}
+\subsubsection{\texorpdfstring{P\+A\+TH}{PATH}}
+{\footnotesize\ttfamily const char $\ast$ Vertex\+Shader\+Blinn\+Phong\+::\+P\+A\+TH = \char`\"{}resource/H\+L\+SL/Effect/Vertex\+Shader/Blinn\+Phong.\+vsh\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+ファイルパス 
+
+
+
+ Vertex\+Shader\+Blinn\+Phong.\+h の 32 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Vertex\+Shader/\mbox{\hyperlink{_vertex_shader_blinn_phong_8h}{Vertex\+Shader\+Blinn\+Phong.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Vertex\+Shader/\+Source/\mbox{\hyperlink{_vertex_shader_blinn_phong_8cpp}{Vertex\+Shader\+Blinn\+Phong.\+cpp}}\end{DoxyCompactItemize}

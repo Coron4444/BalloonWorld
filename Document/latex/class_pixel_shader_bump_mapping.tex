@@ -2,7 +2,7 @@
 \label{class_pixel_shader_bump_mapping}\index{Pixel\+Shader\+Bump\+Mapping@{Pixel\+Shader\+Bump\+Mapping}}
 
 
-バンプマッピングピクセルシェーダークラス  
+バンプマッピングピクセルシェーダー\+Class  
 
 
 
@@ -11,11 +11,11 @@
 
 
 
-Pixel\+Shader\+Bump\+Mapping の継承関係図\nopagebreak
+Pixel\+Shader\+Bump\+Mapping 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=211pt]{class_pixel_shader_bump_mapping__inherit__graph}
+\includegraphics[height=550pt]{class_pixel_shader_bump_mapping__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
@@ -25,55 +25,33 @@ void \mbox{\hyperlink{class_pixel_shader_bump_mapping_ab7807b7c56242e965ddb23e66
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_pixel_shader_bump_mapping_a004f731db6dab6b59949baed4a5a32d7}{Uninit}} ()
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pixel_shader_bump_mapping_af62a2b40930533a3bae17319f876705d}{Common\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)
-\begin{DoxyCompactList}\small\item\em 共通設定関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pixel_shader_bump_mapping_afa80c2404b490a444d54cc47c681ca8f}{Specific\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index, unsigned mesh\+\_\+index)
-\begin{DoxyCompactList}\small\item\em 固有設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_pixel_shader_bump_mapping_a03839e7482a4a53ff1dc18ab288fec05}{Object\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)
+\begin{DoxyCompactList}\small\item\em オブジェクト設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_shader_bump_mapping_ac1ff541401f121f7bd15b6e11cab997f}{Mesh\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index, unsigned mesh\+\_\+index)
+\begin{DoxyCompactList}\small\item\em メッシュ設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 D3\+D\+X\+M\+A\+T\+R\+IX \mbox{\hyperlink{class_pixel_shader_bump_mapping_a3c24357ac9611761eece892054847c83}{math\+\_\+matrix\+\_\+}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 計算用行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 static const char $\ast$ \mbox{\hyperlink{class_pixel_shader_bump_mapping_a62c06006cdfad9bc6158b5d779aa732c}{P\+A\+TH}} = \char`\"{}resource/H\+L\+SL/Effect/Pixel\+Shader/Bump\+Mapping.\+psh\char`\"{}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em ファイルパス \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
-バンプマッピングピクセルシェーダークラス 
+バンプマッピングピクセルシェーダー\+Class 
 
-バンプマッピングのピクセルシェーダークラス 
+バンプマッピングピクセルシェーダーの\+Class 
 
- Pixel\+Shader\+Bump\+Mapping.\+h の 26 行目に定義があります。
+ Pixel\+Shader\+Bump\+Mapping.\+h の 24 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_pixel_shader_bump_mapping_af62a2b40930533a3bae17319f876705d}\label{class_pixel_shader_bump_mapping_af62a2b40930533a3bae17319f876705d}} 
-\index{Pixel\+Shader\+Bump\+Mapping@{Pixel\+Shader\+Bump\+Mapping}!Common\+Setting@{Common\+Setting}}
-\index{Common\+Setting@{Common\+Setting}!Pixel\+Shader\+Bump\+Mapping@{Pixel\+Shader\+Bump\+Mapping}}
-\subsubsection{\texorpdfstring{Common\+Setting()}{CommonSetting()}}
-{\footnotesize\ttfamily void Pixel\+Shader\+Bump\+Mapping\+::\+Common\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-共通設定関数 
-
-
-\begin{DoxyParams}{引数}
-{\em draw} & \+: 描画基底クラス camera \+: カメラ object\+\_\+index \+: 描画オブジェクトインデックス \\
-\hline
-\end{DoxyParams}
-
-
-\mbox{\hyperlink{class_pixel_shader_null_a99c712ab174da29ba26a893820b64799}{Pixel\+Shader\+Null}}を再実装しています。
-
-
-
- Pixel\+Shader\+Bump\+Mapping.\+cpp の 57 行目に定義があります。
-
 \mbox{\Hypertarget{class_pixel_shader_bump_mapping_ab7807b7c56242e965ddb23e66e1a5d9e}\label{class_pixel_shader_bump_mapping_ab7807b7c56242e965ddb23e66e1a5d9e}} 
 \index{Pixel\+Shader\+Bump\+Mapping@{Pixel\+Shader\+Bump\+Mapping}!Init@{Init}}
 \index{Init@{Init}!Pixel\+Shader\+Bump\+Mapping@{Pixel\+Shader\+Bump\+Mapping}}
@@ -85,35 +63,88 @@ static const char $\ast$ \mbox{\hyperlink{class_pixel_shader_bump_mapping_a62c06
 初期化関数 
 
 
-
-\mbox{\hyperlink{class_pixel_shader_null_abfd7a6a986da09061a55d31024219eba}{Pixel\+Shader\+Null}}を再実装しています。
-
-
-
- Pixel\+Shader\+Bump\+Mapping.\+cpp の 32 行目に定義があります。
-
-\mbox{\Hypertarget{class_pixel_shader_bump_mapping_afa80c2404b490a444d54cc47c681ca8f}\label{class_pixel_shader_bump_mapping_afa80c2404b490a444d54cc47c681ca8f}} 
-\index{Pixel\+Shader\+Bump\+Mapping@{Pixel\+Shader\+Bump\+Mapping}!Specific\+Setting@{Specific\+Setting}}
-\index{Specific\+Setting@{Specific\+Setting}!Pixel\+Shader\+Bump\+Mapping@{Pixel\+Shader\+Bump\+Mapping}}
-\subsubsection{\texorpdfstring{Specific\+Setting()}{SpecificSetting()}}
-{\footnotesize\ttfamily void Pixel\+Shader\+Bump\+Mapping\+::\+Specific\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-固有設定関数 
-
-
 \begin{DoxyParams}{引数}
-{\em draw} & \+: 描画基底クラス camera \+: カメラ object\+\_\+index \+: 描画オブジェクトインデックス mesh\+\_\+index \+: メッシュインデックス \\
+{\em void} & なし \\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\hyperlink{class_pixel_shader_null_a8dd0194b5a22da5261ab35233a7cfdcd}{Pixel\+Shader\+Null}}を再実装しています。
+
+\mbox{\hyperlink{class_pixel_shader_null_a5318be2bf26892c385d863e3e8409571}{Pixel\+Shader\+Null}}を再実装しています。
 
 
 
- Pixel\+Shader\+Bump\+Mapping.\+cpp の 80 行目に定義があります。
+ Pixel\+Shader\+Bump\+Mapping.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_bump_mapping_ac1ff541401f121f7bd15b6e11cab997f}\label{class_pixel_shader_bump_mapping_ac1ff541401f121f7bd15b6e11cab997f}} 
+\index{Pixel\+Shader\+Bump\+Mapping@{Pixel\+Shader\+Bump\+Mapping}!Mesh\+Setting@{Mesh\+Setting}}
+\index{Mesh\+Setting@{Mesh\+Setting}!Pixel\+Shader\+Bump\+Mapping@{Pixel\+Shader\+Bump\+Mapping}}
+\subsubsection{\texorpdfstring{Mesh\+Setting()}{MeshSetting()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Bump\+Mapping\+::\+Mesh\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+メッシュ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_a89b6f0558a969478b06af52bb8e6ee16}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Bump\+Mapping.\+cpp の 65 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_bump_mapping_a03839e7482a4a53ff1dc18ab288fec05}\label{class_pixel_shader_bump_mapping_a03839e7482a4a53ff1dc18ab288fec05}} 
+\index{Pixel\+Shader\+Bump\+Mapping@{Pixel\+Shader\+Bump\+Mapping}!Object\+Setting@{Object\+Setting}}
+\index{Object\+Setting@{Object\+Setting}!Pixel\+Shader\+Bump\+Mapping@{Pixel\+Shader\+Bump\+Mapping}}
+\subsubsection{\texorpdfstring{Object\+Setting()}{ObjectSetting()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Bump\+Mapping\+::\+Object\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+オブジェクト設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_a488bde4a2c9a9c45c4ec0ad42487d3b1}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Bump\+Mapping.\+cpp の 46 行目に定義があります。
 
 \mbox{\Hypertarget{class_pixel_shader_bump_mapping_a004f731db6dab6b59949baed4a5a32d7}\label{class_pixel_shader_bump_mapping_a004f731db6dab6b59949baed4a5a32d7}} 
 \index{Pixel\+Shader\+Bump\+Mapping@{Pixel\+Shader\+Bump\+Mapping}!Uninit@{Uninit}}
@@ -126,12 +157,22 @@ static const char $\ast$ \mbox{\hyperlink{class_pixel_shader_bump_mapping_a62c06
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
-\mbox{\hyperlink{class_pixel_shader_null_ae5ee2fa95e5da787918ccbd1877cd0ef}{Pixel\+Shader\+Null}}を再実装しています。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_adca4c44cd25c90a5ebd75b459f5e641e}{Pixel\+Shader\+Null}}を再実装しています。
 
 
 
- Pixel\+Shader\+Bump\+Mapping.\+cpp の 46 行目に定義があります。
+ Pixel\+Shader\+Bump\+Mapping.\+cpp の 38 行目に定義があります。
 
 
 
@@ -144,7 +185,11 @@ static const char $\ast$ \mbox{\hyperlink{class_pixel_shader_bump_mapping_a62c06
 
 
 
- Pixel\+Shader\+Bump\+Mapping.\+h の 40 行目に定義があります。
+計算用行列 
+
+
+
+ Pixel\+Shader\+Bump\+Mapping.\+h の 37 行目に定義があります。
 
 \mbox{\Hypertarget{class_pixel_shader_bump_mapping_a62c06006cdfad9bc6158b5d779aa732c}\label{class_pixel_shader_bump_mapping_a62c06006cdfad9bc6158b5d779aa732c}} 
 \index{Pixel\+Shader\+Bump\+Mapping@{Pixel\+Shader\+Bump\+Mapping}!P\+A\+TH@{P\+A\+TH}}
@@ -154,11 +199,15 @@ static const char $\ast$ \mbox{\hyperlink{class_pixel_shader_bump_mapping_a62c06
 
 
 
- Pixel\+Shader\+Bump\+Mapping.\+h の 32 行目に定義があります。
+ファイルパス 
+
+
+
+ Pixel\+Shader\+Bump\+Mapping.\+h の 30 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\+Pixel\+Shader\+Bump\+Mapping/\mbox{\hyperlink{_pixel_shader_bump_mapping_8h}{Pixel\+Shader\+Bump\+Mapping.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\+Pixel\+Shader\+Bump\+Mapping/\mbox{\hyperlink{_pixel_shader_bump_mapping_8cpp}{Pixel\+Shader\+Bump\+Mapping.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\mbox{\hyperlink{_pixel_shader_bump_mapping_8h}{Pixel\+Shader\+Bump\+Mapping.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\+Source/\mbox{\hyperlink{_pixel_shader_bump_mapping_8cpp}{Pixel\+Shader\+Bump\+Mapping.\+cpp}}\end{DoxyCompactItemize}

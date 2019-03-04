@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Tool/BitFlag.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_bit_flag_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">BitFlag.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_bit_flag_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span><span class="comment">//================================================================================</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef _BIT_FLAG_H_</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define _BIT_FLAG_H_</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//************************************************************                                                         </span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span><span class="comment">//************************************************************</span></div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_bit_flag.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_bit_flag.html">BitFlag</a></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// 変数</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_bit_flag.html#a028f7ae93ca40f24eefaef58aad615bc">   23</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="class_bit_flag.html#a028f7ae93ca40f24eefaef58aad615bc">flag_</a> = 0;         </div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// プロパティ</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="class_bit_flag.html#a1d7f83056b377f8f43097bb86b025bee">getFlag</a>();</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_bit_flag.html#a3052dd5ee44269665e0ae3ddea4c1c28">setFlag</a>(<span class="keywordtype">unsigned</span> value);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// 関数</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_bit_flag.html#a54519ca6c7daed4a5a3bb1e89d271901">Reset</a>();</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_bit_flag.html#aa164c8084a8e7d3fadd983f330824a2e">Release</a>(<span class="keywordtype">unsigned</span> flag);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_bit_flag.html#a17f2da0c09d9055a14df21ea4cce01f3">CheckAny</a>(<span class="keywordtype">unsigned</span> flag);</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_bit_flag.html#abfb42d46682425d99275ac15c51a02f4">CheckAll</a>(<span class="keywordtype">unsigned</span> flag);</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_bit_flag_html_a54519ca6c7daed4a5a3bb1e89d271901"><div class="ttname"><a href="class_bit_flag.html#a54519ca6c7daed4a5a3bb1e89d271901">BitFlag::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">フラグリセット関数 </div><div class="ttdef"><b>Definition:</b> <a href="_bit_flag_8cpp_source.html#l00039">BitFlag.cpp:39</a></div></div>
+<div class="ttc" id="class_bit_flag_html"><div class="ttname"><a href="class_bit_flag.html">BitFlag</a></div><div class="ttdoc">ビットフラグClass </div><div class="ttdef"><b>Definition:</b> <a href="_bit_flag_8h_source.html#l00017">BitFlag.h:17</a></div></div>
+<div class="ttc" id="class_bit_flag_html_a1d7f83056b377f8f43097bb86b025bee"><div class="ttname"><a href="class_bit_flag.html#a1d7f83056b377f8f43097bb86b025bee">BitFlag::getFlag</a></div><div class="ttdeci">unsigned getFlag()</div><div class="ttdoc">フラグ取得関数 </div><div class="ttdef"><b>Definition:</b> <a href="_bit_flag_8cpp_source.html#l00022">BitFlag.cpp:22</a></div></div>
+<div class="ttc" id="class_bit_flag_html_a3052dd5ee44269665e0ae3ddea4c1c28"><div class="ttname"><a href="class_bit_flag.html#a3052dd5ee44269665e0ae3ddea4c1c28">BitFlag::setFlag</a></div><div class="ttdeci">void setFlag(unsigned value)</div><div class="ttdoc">フラグ設定関数 </div><div class="ttdef"><b>Definition:</b> <a href="_bit_flag_8cpp_source.html#l00029">BitFlag.cpp:29</a></div></div>
+<div class="ttc" id="class_bit_flag_html_abfb42d46682425d99275ac15c51a02f4"><div class="ttname"><a href="class_bit_flag.html#abfb42d46682425d99275ac15c51a02f4">BitFlag::CheckAll</a></div><div class="ttdeci">bool CheckAll(unsigned flag)</div><div class="ttdoc">完全一致フラグ確認関数 </div><div class="ttdef"><b>Definition:</b> <a href="_bit_flag_8cpp_source.html#l00060">BitFlag.cpp:60</a></div></div>
+<div class="ttc" id="class_bit_flag_html_aa164c8084a8e7d3fadd983f330824a2e"><div class="ttname"><a href="class_bit_flag.html#aa164c8084a8e7d3fadd983f330824a2e">BitFlag::Release</a></div><div class="ttdeci">void Release(unsigned flag)</div><div class="ttdoc">フラグ解放関数 </div><div class="ttdef"><b>Definition:</b> <a href="_bit_flag_8cpp_source.html#l00046">BitFlag.cpp:46</a></div></div>
+<div class="ttc" id="class_bit_flag_html_a17f2da0c09d9055a14df21ea4cce01f3"><div class="ttname"><a href="class_bit_flag.html#a17f2da0c09d9055a14df21ea4cce01f3">BitFlag::CheckAny</a></div><div class="ttdeci">bool CheckAny(unsigned flag)</div><div class="ttdoc">任意一致フラグ確認関数 </div><div class="ttdef"><b>Definition:</b> <a href="_bit_flag_8cpp_source.html#l00053">BitFlag.cpp:53</a></div></div>
+<div class="ttc" id="class_bit_flag_html_a028f7ae93ca40f24eefaef58aad615bc"><div class="ttname"><a href="class_bit_flag.html#a028f7ae93ca40f24eefaef58aad615bc">BitFlag::flag_</a></div><div class="ttdeci">unsigned flag_</div><div class="ttdoc">フラグ </div><div class="ttdef"><b>Definition:</b> <a href="_bit_flag_8h_source.html#l00023">BitFlag.h:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_b45bb414237523d3953b384861a4c0d0.html">Framework</a></li><li class="navelem"><a class="el" href="dir_a9de774c8f4bf8ca99a50ebaa8865440.html">Tool</a></li><li class="navelem"><a class="el" href="_bit_flag_8h.html">BitFlag.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

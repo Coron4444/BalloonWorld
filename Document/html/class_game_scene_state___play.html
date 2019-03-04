@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: GameSceneState_Play クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_game_scene_state___play.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="class_game_scene_state___play-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">GameSceneState_Play クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ゲームシーンステート(プレイ)Class  
+ <a href="class_game_scene_state___play.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_game_scene_state___play_8h_source.html">GameSceneState_Play.h</a>&gt;</code></p>
+<div class="dynheader">
+GameSceneState_Play 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_scene_state___play__coll__graph.png" border="0" usemap="#_game_scene_state___play_coll__map" alt="Collaboration graph"/></div>
+<map name="_game_scene_state___play_coll__map" id="_game_scene_state___play_coll__map">
+<area shape="rect" id="node2" href="class_scene_null_1_1_state_null.html" title="シーンステート空白Class " alt="" coords="3491,5,3633,32"/>
+<area shape="rect" id="node3" href="class_scene_base_1_1_state_base.html" title="シーンステートBaseClass " alt="" coords="2965,185,3124,212"/>
+<area shape="rect" id="node4" href="class_scene_base.html" title="シーンBaseClass " alt="" coords="3321,149,3410,176"/>
+<area shape="rect" id="node5" href="class_scene_manager.html" title="シーンマネージャClass " alt="" coords="3657,153,3767,180"/>
+<area shape="rect" id="node8" href="class_scene_null.html" title="シーン空白Class " alt="" coords="3671,227,3753,253"/>
+<area shape="rect" id="node6" href="class_scene_manager_1_1_common_data.html" title="シーン間共通データClass " alt="" coords="3267,200,3463,227"/>
+<area shape="rect" id="node7" href="class_game_scene.html" title="ゲームシーンClass " alt="" coords="3916,277,4011,304"/>
+<area shape="rect" id="node9" href="class_pause.html" title="ポーズClass " alt="" coords="3015,135,3074,161"/>
+<area shape="rect" id="node10" href="class_game_object_null.html" title="ゲームオブジェクト空白Class " alt="" coords="2695,485,2813,512"/>
+<area shape="rect" id="node37" href="class_stage_manager.html" title="ステージマネージャClass " alt="" coords="3659,504,3765,531"/>
+<area shape="rect" id="node38" href="class_scaffold.html" title="足場Class " alt="" coords="3011,384,3079,411"/>
+<area shape="rect" id="node39" href="class_start_block.html" title="スタートブロックClass " alt="" coords="3003,435,3086,461"/>
+<area shape="rect" id="node40" href="class_player.html" title="プレイヤーClass " alt="" coords="3336,679,3395,705"/>
+<area shape="rect" id="node42" href="class_balloon_group.html" title="風船群Class " alt="" coords="2995,556,3095,583"/>
+<area shape="rect" id="node44" href="class_needle.html" title="棘Class " alt="" coords="3013,797,3076,824"/>
+<area shape="rect" id="node46" href="class_balloon_num.html" title="風船数Class " alt="" coords="3148,929,3240,956"/>
+<area shape="rect" id="node47" href="class_time.html" title="時間Class " alt="" coords="3169,280,3219,307"/>
+<area shape="rect" id="node48" href="class_score.html" title="スコアClass " alt="" coords="3534,328,3590,355"/>
+<area shape="rect" id="node11" href="class_game_object_base.html" title="ゲームオブジェクトBaseClass " alt="" coords="2364,809,2489,836"/>
+<area shape="rect" id="node13" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="2695,1005,2813,1032"/>
+<area shape="rect" id="node33" href="class_physics.html" title="物理Class " alt="" coords="2719,816,2789,843"/>
+<area shape="rect" id="node12" href="class_collision_base.html" title="衝突BaseClass " alt="" coords="2068,1029,2169,1056"/>
+<area shape="rect" id="node15" href="class_collision_object.html" title="衝突オブジェクトClass " alt="" coords="1315,991,1424,1017"/>
+<area shape="rect" id="node24" href="class_draw_base.html" title="描画BaseClass " alt="" coords="3004,927,3085,953"/>
+<area shape="rect" id="node14" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject *,\l ARRAY_NUM \&gt;" alt="" coords="1679,1015,1815,1071"/>
+<area shape="rect" id="node20" href="class_object_of_tree.html" title="ObjectOfTree\&lt; CollisionObject *\&gt;" alt="" coords="1640,964,1855,991"/>
+<area shape="rect" id="node16" href="class_a_a_b_b.html" title="AABBClass " alt="" coords="741,992,800,1019"/>
+<area shape="rect" id="node17" href="class_collision_shape_base.html" title="衝突形状BaseClass " alt="" coords="364,911,503,937"/>
+<area shape="rect" id="node23" href="class_collision_object_1_1_shape.html" title="衝突形状Class " alt="" coords="693,917,848,944"/>
+<area shape="rect" id="node18" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="107,689,183,716"/>
+<area shape="rect" id="node27" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="1051,743,1182,769"/>
+<area shape="rect" id="node28" href="class_camera.html" title="カメラClass " alt="" coords="737,411,804,437"/>
+<area shape="rect" id="node30" href="class_matrix.html" title="行列Class " alt="" coords="404,345,463,372"/>
+<area shape="rect" id="node34" href="class_transform.html" title="変形Class " alt="" coords="901,605,980,632"/>
+<area shape="rect" id="node21" href="class_space_of_tree.html" title="SpaceOfTree\&lt; CollisionObject *\&gt;" alt="" coords="2012,957,2225,984"/>
+<area shape="rect" id="node22" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject::Shape\l *, ARRAY_NUM \&gt;" alt="" coords="1033,911,1200,967"/>
+<area shape="rect" id="node25" href="class_draw_order_list.html" title="描画注文リストClass " alt="" coords="2702,955,2806,981"/>
+<area shape="rect" id="node26" href="class_bit_flag.html" title="ビットフラグClass " alt="" coords="2395,940,2458,967"/>
+<area shape="rect" id="node29" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="1063,388,1170,415"/>
+<area shape="rect" id="node32" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="717,759,824,785"/>
+<area shape="rect" id="node35" href="class_interpolation.html" title="Interpolation\&lt; float \&gt;" alt="" coords="2684,127,2824,153"/>
+<area shape="rect" id="node36" href="class_interpolation_element.html" title="補間要素Class(Template) " alt="" coords="2332,118,2521,159"/>
+<area shape="rect" id="node41" href="class_bullet_physics_object.html" title="バレットフィジックスオブジェクトClass " alt="" coords="2975,747,3115,773"/>
+<area shape="rect" id="node43" href="class_reference_list.html" title="ReferenceList\&lt; BalloonGroup \&gt;" alt="" coords="3264,555,3467,581"/>
+<area shape="rect" id="node45" href="class_needle_1_1_state.html" title="ステートClass " alt="" coords="3315,811,3416,837"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a2637c407c8bbe0ef76b472c5b63e8057"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_scene_state___play.html#a2637c407c8bbe0ef76b472c5b63e8057">Init</a> () override</td></tr>
+<tr class="memdesc:a2637c407c8bbe0ef76b472c5b63e8057"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a2637c407c8bbe0ef76b472c5b63e8057">[詳解]</a><br /></td></tr>
+<tr class="separator:a2637c407c8bbe0ef76b472c5b63e8057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14fa99f6138f6c4ef8598210cdb6cc06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_scene_state___play.html#a14fa99f6138f6c4ef8598210cdb6cc06">Update</a> () override</td></tr>
+<tr class="memdesc:a14fa99f6138f6c4ef8598210cdb6cc06"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#a14fa99f6138f6c4ef8598210cdb6cc06">[詳解]</a><br /></td></tr>
+<tr class="separator:a14fa99f6138f6c4ef8598210cdb6cc06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd935dc9cf71fc77d35a1e9001b0d94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_scene_state___play.html#a3bd935dc9cf71fc77d35a1e9001b0d94">PauseEntrance</a> () override</td></tr>
+<tr class="memdesc:a3bd935dc9cf71fc77d35a1e9001b0d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポーズ入口関数  <a href="#a3bd935dc9cf71fc77d35a1e9001b0d94">[詳解]</a><br /></td></tr>
+<tr class="separator:a3bd935dc9cf71fc77d35a1e9001b0d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae564bcc1a570009c144722f252cb73ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_scene_state___play.html#ae564bcc1a570009c144722f252cb73ff">PauseExit</a> () override</td></tr>
+<tr class="memdesc:ae564bcc1a570009c144722f252cb73ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポーズ出口関数  <a href="#ae564bcc1a570009c144722f252cb73ff">[詳解]</a><br /></td></tr>
+<tr class="separator:ae564bcc1a570009c144722f252cb73ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_scene_null_1_1_state_null"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_scene_null_1_1_state_null')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_scene_null_1_1_state_null.html">SceneNull::StateNull</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a5e4b7bef40fa261c7ca3fb1b4feed137 inherit pub_methods_class_scene_null_1_1_state_null"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_null_1_1_state_null.html#a5e4b7bef40fa261c7ca3fb1b4feed137">~StateNull</a> ()</td></tr>
+<tr class="memdesc:a5e4b7bef40fa261c7ca3fb1b4feed137 inherit pub_methods_class_scene_null_1_1_state_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_scene_null_1_1_state_null.html#a5e4b7bef40fa261c7ca3fb1b4feed137">[詳解]</a><br /></td></tr>
+<tr class="separator:a5e4b7bef40fa261c7ca3fb1b4feed137 inherit pub_methods_class_scene_null_1_1_state_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b633f3f092834cea11f489bf41e548 inherit pub_methods_class_scene_null_1_1_state_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_null_1_1_state_null.html#ae6b633f3f092834cea11f489bf41e548">Uninit</a> ()</td></tr>
+<tr class="memdesc:ae6b633f3f092834cea11f489bf41e548 inherit pub_methods_class_scene_null_1_1_state_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="class_scene_null_1_1_state_null.html#ae6b633f3f092834cea11f489bf41e548">[詳解]</a><br /></td></tr>
+<tr class="separator:ae6b633f3f092834cea11f489bf41e548 inherit pub_methods_class_scene_null_1_1_state_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_scene_base_1_1_state_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_scene_base_1_1_state_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_scene_base_1_1_state_base.html">SceneBase::StateBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a5333fd722f17c6da71b09afdc56c84b4 inherit pub_methods_class_scene_base_1_1_state_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene_base.html">SceneBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_base_1_1_state_base.html#a5333fd722f17c6da71b09afdc56c84b4">getpScene</a> ()</td></tr>
+<tr class="memdesc:a5333fd722f17c6da71b09afdc56c84b4 inherit pub_methods_class_scene_base_1_1_state_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン取得関数  <a href="class_scene_base_1_1_state_base.html#a5333fd722f17c6da71b09afdc56c84b4">[詳解]</a><br /></td></tr>
+<tr class="separator:a5333fd722f17c6da71b09afdc56c84b4 inherit pub_methods_class_scene_base_1_1_state_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb19da59b938832387aa10528bedb44 inherit pub_methods_class_scene_base_1_1_state_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_base_1_1_state_base.html#adfb19da59b938832387aa10528bedb44">setScene</a> (<a class="el" href="class_scene_base.html">SceneBase</a> *value)</td></tr>
+<tr class="memdesc:adfb19da59b938832387aa10528bedb44 inherit pub_methods_class_scene_base_1_1_state_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン設定関数  <a href="class_scene_base_1_1_state_base.html#adfb19da59b938832387aa10528bedb44">[詳解]</a><br /></td></tr>
+<tr class="separator:adfb19da59b938832387aa10528bedb44 inherit pub_methods_class_scene_base_1_1_state_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a489f32b0d355790f91164c5f71a6fee3 inherit pub_methods_class_scene_base_1_1_state_base"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_base_1_1_state_base.html#a489f32b0d355790f91164c5f71a6fee3">getID</a> ()</td></tr>
+<tr class="memdesc:a489f32b0d355790f91164c5f71a6fee3 inherit pub_methods_class_scene_base_1_1_state_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID取得関数  <a href="class_scene_base_1_1_state_base.html#a489f32b0d355790f91164c5f71a6fee3">[詳解]</a><br /></td></tr>
+<tr class="separator:a489f32b0d355790f91164c5f71a6fee3 inherit pub_methods_class_scene_base_1_1_state_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a924e400bdb8be957b92ee2ac3177534d inherit pub_methods_class_scene_base_1_1_state_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_base_1_1_state_base.html#a924e400bdb8be957b92ee2ac3177534d">setID</a> (int value)</td></tr>
+<tr class="memdesc:a924e400bdb8be957b92ee2ac3177534d inherit pub_methods_class_scene_base_1_1_state_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID設定関数  <a href="class_scene_base_1_1_state_base.html#a924e400bdb8be957b92ee2ac3177534d">[詳解]</a><br /></td></tr>
+<tr class="separator:a924e400bdb8be957b92ee2ac3177534d inherit pub_methods_class_scene_base_1_1_state_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a349212d453f37028a9b41d2d3b25e6ed inherit pub_methods_class_scene_base_1_1_state_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_base_1_1_state_base.html#a349212d453f37028a9b41d2d3b25e6ed">~StateBase</a> ()=0</td></tr>
+<tr class="memdesc:a349212d453f37028a9b41d2d3b25e6ed inherit pub_methods_class_scene_base_1_1_state_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_scene_base_1_1_state_base.html#a349212d453f37028a9b41d2d3b25e6ed">[詳解]</a><br /></td></tr>
+<tr class="separator:a349212d453f37028a9b41d2d3b25e6ed inherit pub_methods_class_scene_base_1_1_state_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:aec1f62101eefe333d4da5a2a30ef21d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_scene.html">GameScene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_scene_state___play.html#aec1f62101eefe333d4da5a2a30ef21d2">game_scene_</a> = nullptr</td></tr>
+<tr class="memdesc:aec1f62101eefe333d4da5a2a30ef21d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームシーン  <a href="#aec1f62101eefe333d4da5a2a30ef21d2">[詳解]</a><br /></td></tr>
+<tr class="separator:aec1f62101eefe333d4da5a2a30ef21d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ゲームシーンステート(プレイ)Class </p>
+<p>ゲームシーンのステート(プレイ)Class</p>
+<p>プレイの状態を表す </p>
+
+<p class="definition"> <a class="el" href="_game_scene_state___play_8h_source.html">GameSceneState_Play.h</a> の <a class="el" href="_game_scene_state___play_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a2637c407c8bbe0ef76b472c5b63e8057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2637c407c8bbe0ef76b472c5b63e8057">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameSceneState_Play::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_scene_null_1_1_state_null.html#ac0b3f1adf01b580144337e37a847131f">SceneNull::StateNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_game_scene_state___play_8cpp_source.html">GameSceneState_Play.cpp</a> の <a class="el" href="_game_scene_state___play_8cpp_source.html#l00024">24</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3bd935dc9cf71fc77d35a1e9001b0d94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd935dc9cf71fc77d35a1e9001b0d94">&#9670;&nbsp;</a></span>PauseEntrance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameSceneState_Play::PauseEntrance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ポーズ入口関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_scene_null_1_1_state_null.html#a0a14205bef6c8f73c3ef6b785b104f02">SceneNull::StateNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_game_scene_state___play_8cpp_source.html">GameSceneState_Play.cpp</a> の <a class="el" href="_game_scene_state___play_8cpp_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae564bcc1a570009c144722f252cb73ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae564bcc1a570009c144722f252cb73ff">&#9670;&nbsp;</a></span>PauseExit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameSceneState_Play::PauseExit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ポーズ出口関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_scene_null_1_1_state_null.html#acf2eecc6ee9f16b57095aa0b88192257">SceneNull::StateNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_game_scene_state___play_8cpp_source.html">GameSceneState_Play.cpp</a> の <a class="el" href="_game_scene_state___play_8cpp_source.html#l00057">57</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a14fa99f6138f6c4ef8598210cdb6cc06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14fa99f6138f6c4ef8598210cdb6cc06">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameSceneState_Play::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_scene_null_1_1_state_null.html#a835f82c22afb290eca79460450088baf">SceneNull::StateNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_game_scene_state___play_8cpp_source.html">GameSceneState_Play.cpp</a> の <a class="el" href="_game_scene_state___play_8cpp_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="aec1f62101eefe333d4da5a2a30ef21d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec1f62101eefe333d4da5a2a30ef21d2">&#9670;&nbsp;</a></span>game_scene_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_scene.html">GameScene</a>* GameSceneState_Play::game_scene_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ゲームシーン </p>
+
+<p class="definition"> <a class="el" href="_game_scene_state___play_8h_source.html">GameSceneState_Play.h</a> の <a class="el" href="_game_scene_state___play_8h_source.html#l00038">38</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Game/Scenes/GameScene/<a class="el" href="_game_scene_state___play_8h_source.html">GameSceneState_Play.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Game/Scenes/GameScene/Source/<a class="el" href="_game_scene_state___play_8cpp_source.html">GameSceneState_Play.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_game_scene_state___play.html">GameSceneState_Play</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

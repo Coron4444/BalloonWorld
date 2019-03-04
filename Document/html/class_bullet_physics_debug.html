@@ -1,0 +1,649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: BulletPhysicsDebug クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_bullet_physics_debug.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="class_bullet_physics_debug-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">BulletPhysicsDebug クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>バレットフィジックスデバッグClass  
+ <a href="class_bullet_physics_debug.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_bullet_physics_debug_8h_source.html">BulletPhysicsDebug.h</a>&gt;</code></p>
+<div class="dynheader">
+BulletPhysicsDebug 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_bullet_physics_debug__coll__graph.png" border="0" usemap="#_bullet_physics_debug_coll__map" alt="Collaboration graph"/></div>
+<map name="_bullet_physics_debug_coll__map" id="_bullet_physics_debug_coll__map">
+<area shape="rect" id="node3" href="class_renderer_direct_x9_1_1_v_e_r_t_e_x__3_d.html" title="頂点Class " alt="" coords="133,600,335,627"/>
+<area shape="rect" id="node4" href="class_transform.html" title="変形Class " alt="" coords="360,600,439,627"/>
+<area shape="rect" id="node5" href="class_matrix.html" title="行列Class " alt="" coords="285,304,343,331"/>
+<area shape="rect" id="node7" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="379,81,455,108"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6b75505ddd99b72ab6d72658a835419f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_debug.html#a6b75505ddd99b72ab6d72658a835419f">getDebugMode</a> () const override</td></tr>
+<tr class="memdesc:a6b75505ddd99b72ab6d72658a835419f"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグモード取得関数  <a href="#a6b75505ddd99b72ab6d72658a835419f">[詳解]</a><br /></td></tr>
+<tr class="separator:a6b75505ddd99b72ab6d72658a835419f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97707d5b14ac1c55edec5d4686dd802"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_debug.html#ae97707d5b14ac1c55edec5d4686dd802">setDebugMode</a> (int value) override</td></tr>
+<tr class="memdesc:ae97707d5b14ac1c55edec5d4686dd802"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグモード設定関数  <a href="#ae97707d5b14ac1c55edec5d4686dd802">[詳解]</a><br /></td></tr>
+<tr class="separator:ae97707d5b14ac1c55edec5d4686dd802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1881672318e69c82f3c4f3eee81c0f11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_debug.html#a1881672318e69c82f3c4f3eee81c0f11">Init</a> ()</td></tr>
+<tr class="memdesc:a1881672318e69c82f3c4f3eee81c0f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a1881672318e69c82f3c4f3eee81c0f11">[詳解]</a><br /></td></tr>
+<tr class="separator:a1881672318e69c82f3c4f3eee81c0f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2602a90645ab868f8b3aafc98be7109"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_debug.html#ad2602a90645ab868f8b3aafc98be7109">drawLine</a> (const btVector3 &amp;from, const btVector3 &amp;to, const btVector3 &amp;color) override</td></tr>
+<tr class="memdesc:ad2602a90645ab868f8b3aafc98be7109"><td class="mdescLeft">&#160;</td><td class="mdescRight">線の描画関数  <a href="#ad2602a90645ab868f8b3aafc98be7109">[詳解]</a><br /></td></tr>
+<tr class="separator:ad2602a90645ab868f8b3aafc98be7109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88494485e3532fcb79c56a715dfa737"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_debug.html#ac88494485e3532fcb79c56a715dfa737">DrawSettingBefore</a> (<a class="el" href="class_camera.html">Camera</a> *camera)</td></tr>
+<tr class="memdesc:ac88494485e3532fcb79c56a715dfa737"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画前設定関数  <a href="#ac88494485e3532fcb79c56a715dfa737">[詳解]</a><br /></td></tr>
+<tr class="separator:ac88494485e3532fcb79c56a715dfa737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d38dedc62b0479bf65f4f92058ca9b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_debug.html#a6d38dedc62b0479bf65f4f92058ca9b8">DrawSettingAfter</a> ()</td></tr>
+<tr class="memdesc:a6d38dedc62b0479bf65f4f92058ca9b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画後設定関数  <a href="#a6d38dedc62b0479bf65f4f92058ca9b8">[詳解]</a><br /></td></tr>
+<tr class="separator:a6d38dedc62b0479bf65f4f92058ca9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa895e20c63340cb995693d3ad8f71a19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_debug.html#aa895e20c63340cb995693d3ad8f71a19">drawContactPoint</a> (const btVector3 &amp;PointOnB, const btVector3 &amp;normalOnB, btScalar distance, int lifeTime, const btVector3 &amp;color) override</td></tr>
+<tr class="separator:aa895e20c63340cb995693d3ad8f71a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec16a6d939beb6afbae9760310ec098"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_debug.html#aeec16a6d939beb6afbae9760310ec098">reportErrorWarning</a> (const char *warningString) override</td></tr>
+<tr class="separator:aeec16a6d939beb6afbae9760310ec098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a517d4d3b25ee5d9a83d984bb19e81ca4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_debug.html#a517d4d3b25ee5d9a83d984bb19e81ca4">draw3dText</a> (const btVector3 &amp;location, const char *textString) override</td></tr>
+<tr class="separator:a517d4d3b25ee5d9a83d984bb19e81ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a7aec768464aa74fc9c97e10bff2375fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_debug.html#a7aec768464aa74fc9c97e10bff2375fe">debug_mode_</a> = 0</td></tr>
+<tr class="memdesc:a7aec768464aa74fc9c97e10bff2375fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグモード  <a href="#a7aec768464aa74fc9c97e10bff2375fe">[詳解]</a><br /></td></tr>
+<tr class="separator:a7aec768464aa74fc9c97e10bff2375fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ff9e5b54a2830046ad94116443e036a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_renderer_direct_x9_1_1_v_e_r_t_e_x__3_d.html">RendererDirectX9::VERTEX_3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_debug.html#a4ff9e5b54a2830046ad94116443e036a">vertex_</a> [2]</td></tr>
+<tr class="memdesc:a4ff9e5b54a2830046ad94116443e036a"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点  <a href="#a4ff9e5b54a2830046ad94116443e036a">[詳解]</a><br /></td></tr>
+<tr class="separator:a4ff9e5b54a2830046ad94116443e036a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0504ae564495b078f7805fcb42b66b6b"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DDEVICE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_debug.html#a0504ae564495b078f7805fcb42b66b6b">device_</a> = nullptr</td></tr>
+<tr class="memdesc:a0504ae564495b078f7805fcb42b66b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイス  <a href="#a0504ae564495b078f7805fcb42b66b6b">[詳解]</a><br /></td></tr>
+<tr class="separator:a0504ae564495b078f7805fcb42b66b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba9367272ecf72569e20f740389e31e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_debug.html#aba9367272ecf72569e20f740389e31e5">transform_</a></td></tr>
+<tr class="memdesc:aba9367272ecf72569e20f740389e31e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">変形  <a href="#aba9367272ecf72569e20f740389e31e5">[詳解]</a><br /></td></tr>
+<tr class="separator:aba9367272ecf72569e20f740389e31e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>バレットフィジックスデバッグClass </p>
+<p>バレットフィジックスのデバッグClass </p>
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8h_source.html">BulletPhysicsDebug.h</a> の <a class="el" href="_bullet_physics_debug_8h_source.html#l00038">38</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a517d4d3b25ee5d9a83d984bb19e81ca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a517d4d3b25ee5d9a83d984bb19e81ca4">&#9670;&nbsp;</a></span>draw3dText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsDebug::draw3dText </td>
+          <td>(</td>
+          <td class="paramtype">const btVector3 &amp;&#160;</td>
+          <td class="paramname"><em>location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>textString</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8cpp_source.html">BulletPhysicsDebug.cpp</a> の <a class="el" href="_bullet_physics_debug_8cpp_source.html#l00130">130</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa895e20c63340cb995693d3ad8f71a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa895e20c63340cb995693d3ad8f71a19">&#9670;&nbsp;</a></span>drawContactPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsDebug::drawContactPoint </td>
+          <td>(</td>
+          <td class="paramtype">const btVector3 &amp;&#160;</td>
+          <td class="paramname"><em>PointOnB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const btVector3 &amp;&#160;</td>
+          <td class="paramname"><em>normalOnB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">btScalar&#160;</td>
+          <td class="paramname"><em>distance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lifeTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const btVector3 &amp;&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8cpp_source.html">BulletPhysicsDebug.cpp</a> の <a class="el" href="_bullet_physics_debug_8cpp_source.html#l00110">110</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad2602a90645ab868f8b3aafc98be7109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2602a90645ab868f8b3aafc98be7109">&#9670;&nbsp;</a></span>drawLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsDebug::drawLine </td>
+          <td>(</td>
+          <td class="paramtype">const btVector3 &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const btVector3 &amp;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const btVector3 &amp;&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>線の描画関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td>開始点 </td></tr>
+    <tr><td class="paramname">to</td><td>終端点 </td></tr>
+    <tr><td class="paramname">color</td><td>色 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8cpp_source.html">BulletPhysicsDebug.cpp</a> の <a class="el" href="_bullet_physics_debug_8cpp_source.html#l00055">55</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6d38dedc62b0479bf65f4f92058ca9b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d38dedc62b0479bf65f4f92058ca9b8">&#9670;&nbsp;</a></span>DrawSettingAfter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsDebug::DrawSettingAfter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画後設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8cpp_source.html">BulletPhysicsDebug.cpp</a> の <a class="el" href="_bullet_physics_debug_8cpp_source.html#l00102">102</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac88494485e3532fcb79c56a715dfa737"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88494485e3532fcb79c56a715dfa737">&#9670;&nbsp;</a></span>DrawSettingBefore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsDebug::DrawSettingBefore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画前設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>カメラ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8cpp_source.html">BulletPhysicsDebug.cpp</a> の <a class="el" href="_bullet_physics_debug_8cpp_source.html#l00073">73</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6b75505ddd99b72ab6d72658a835419f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b75505ddd99b72ab6d72658a835419f">&#9670;&nbsp;</a></span>getDebugMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BulletPhysicsDebug::getDebugMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デバッグモード取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">int</td><td>デバッグモード </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8cpp_source.html">BulletPhysicsDebug.cpp</a> の <a class="el" href="_bullet_physics_debug_8cpp_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1881672318e69c82f3c4f3eee81c0f11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1881672318e69c82f3c4f3eee81c0f11">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsDebug::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8cpp_source.html">BulletPhysicsDebug.cpp</a> の <a class="el" href="_bullet_physics_debug_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aeec16a6d939beb6afbae9760310ec098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeec16a6d939beb6afbae9760310ec098">&#9670;&nbsp;</a></span>reportErrorWarning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsDebug::reportErrorWarning </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>warningString</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8cpp_source.html">BulletPhysicsDebug.cpp</a> の <a class="el" href="_bullet_physics_debug_8cpp_source.html#l00122">122</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae97707d5b14ac1c55edec5d4686dd802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae97707d5b14ac1c55edec5d4686dd802">&#9670;&nbsp;</a></span>setDebugMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsDebug::setDebugMode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デバッグモード設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>デバッグモード </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8cpp_source.html">BulletPhysicsDebug.cpp</a> の <a class="el" href="_bullet_physics_debug_8cpp_source.html#l00027">27</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a7aec768464aa74fc9c97e10bff2375fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aec768464aa74fc9c97e10bff2375fe">&#9670;&nbsp;</a></span>debug_mode_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BulletPhysicsDebug::debug_mode_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デバッグモード </p>
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8h_source.html">BulletPhysicsDebug.h</a> の <a class="el" href="_bullet_physics_debug_8h_source.html#l00044">44</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0504ae564495b078f7805fcb42b66b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0504ae564495b078f7805fcb42b66b6b">&#9670;&nbsp;</a></span>device_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPDIRECT3DDEVICE9 BulletPhysicsDebug::device_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デバイス </p>
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8h_source.html">BulletPhysicsDebug.h</a> の <a class="el" href="_bullet_physics_debug_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aba9367272ecf72569e20f740389e31e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba9367272ecf72569e20f740389e31e5">&#9670;&nbsp;</a></span>transform_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_transform.html">Transform</a> BulletPhysicsDebug::transform_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>変形 </p>
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8h_source.html">BulletPhysicsDebug.h</a> の <a class="el" href="_bullet_physics_debug_8h_source.html#l00047">47</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4ff9e5b54a2830046ad94116443e036a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ff9e5b54a2830046ad94116443e036a">&#9670;&nbsp;</a></span>vertex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_renderer_direct_x9_1_1_v_e_r_t_e_x__3_d.html">RendererDirectX9::VERTEX_3D</a> BulletPhysicsDebug::vertex_[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>頂点 </p>
+
+<p class="definition"> <a class="el" href="_bullet_physics_debug_8h_source.html">BulletPhysicsDebug.h</a> の <a class="el" href="_bullet_physics_debug_8h_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Collision/BulletPhysics/<a class="el" href="_bullet_physics_debug_8h_source.html">BulletPhysicsDebug.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Collision/BulletPhysics/Source/<a class="el" href="_bullet_physics_debug_8cpp_source.html">BulletPhysicsDebug.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_bullet_physics_debug.html">BulletPhysicsDebug</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

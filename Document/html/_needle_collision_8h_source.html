@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Game/Object/3D/Needle/NeedleCollision.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_needle_collision_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">NeedleCollision.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_needle_collision_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span><span class="comment">//================================================================================</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef _NEEDLE_COLLISION_H_</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define _NEEDLE_COLLISION_H_</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// インクルード文</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_collision_null_8h.html">GameEngine/Collision/CollisionNull.h</a>&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//************************************************************                                                         </span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span><span class="comment">//************************************************************</span></div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_needle_collision.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_needle_collision.html">NeedleCollision</a> : <span class="keyword">public</span> <a class="code" href="class_collision_null.html">CollisionNull</a></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// 列挙型定義</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_needle_collision.html#a6c4a6b084cf70c08c03c66ddfdf1d2ed">   30</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="class_needle_collision.html#a6c4a6b084cf70c08c03c66ddfdf1d2ed">ObjectTag</a></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="class_needle_collision.html#a6c4a6b084cf70c08c03c66ddfdf1d2edab50339a10e1de285ac99d4c3990b8693">NONE</a> = -1,</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="class_needle_collision.html#a6c4a6b084cf70c08c03c66ddfdf1d2eda186495f7da296bf880df3a22a492b378">MAIN</a>,</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="class_needle_collision.html#a6c4a6b084cf70c08c03c66ddfdf1d2eda26a4b44a837bf97b972628509912b4a5">MAX</a></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_needle_collision.html#a7584717bbbf735d73ea6415ca8a0b841">   37</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="class_needle_collision.html#a7584717bbbf735d73ea6415ca8a0b841">ShapeTag</a></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_needle_collision.html#a7584717bbbf735d73ea6415ca8a0b841ab50339a10e1de285ac99d4c3990b8693">NONE</a> = -1,</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_needle_collision.html#a7584717bbbf735d73ea6415ca8a0b841a186495f7da296bf880df3a22a492b378">MAIN</a>,</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="class_needle_collision.html#a7584717bbbf735d73ea6415ca8a0b841a26a4b44a837bf97b972628509912b4a5">MAX</a></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">// 定数</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_needle_collision.html#accb402dfcaa534d5ac14a01d58c1d843">   49</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_needle_collision.html#accb402dfcaa534d5ac14a01d58c1d843">MAIN_SPHERE_RADIUS</a>;      </div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// 変数</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_needle_collision.html#a67e818d495de2f8b7ee623f76c793771">   56</a></span>&#160;    <a class="code" href="class_collision_object.html">CollisionObject</a>* <a class="code" href="class_needle_collision.html#a67e818d495de2f8b7ee623f76c793771">collision_object_</a>;     </div><div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_needle_collision.html#ac99f319bdcc48ff3057096ba8b8b8f35">   57</a></span>&#160;    <a class="code" href="class_sphere.html">Sphere</a>* <a class="code" href="class_needle_collision.html#ac99f319bdcc48ff3057096ba8b8b8f35">main_sphere_</a>;                   </div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">// 関数</span></div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_needle_collision.html#ae8084bdfa91ae1a7accfee33e31d429b">Init</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_needle_collision.html#a9226bcc45aa952abcafa56c7af8c8627">Update</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_needle_collision_html_ae8084bdfa91ae1a7accfee33e31d429b"><div class="ttname"><a href="class_needle_collision.html#ae8084bdfa91ae1a7accfee33e31d429b">NeedleCollision::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">初期化関数 </div><div class="ttdef"><b>Definition:</b> <a href="_needle_collision_8cpp_source.html#l00027">NeedleCollision.cpp:27</a></div></div>
+<div class="ttc" id="class_needle_collision_html_a6c4a6b084cf70c08c03c66ddfdf1d2ed"><div class="ttname"><a href="class_needle_collision.html#a6c4a6b084cf70c08c03c66ddfdf1d2ed">NeedleCollision::ObjectTag</a></div><div class="ttdeci">ObjectTag</div><div class="ttdef"><b>Definition:</b> <a href="_needle_collision_8h_source.html#l00030">NeedleCollision.h:30</a></div></div>
+<div class="ttc" id="class_needle_collision_html_a9226bcc45aa952abcafa56c7af8c8627"><div class="ttname"><a href="class_needle_collision.html#a9226bcc45aa952abcafa56c7af8c8627">NeedleCollision::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">更新関数 </div><div class="ttdef"><b>Definition:</b> <a href="_needle_collision_8cpp_source.html#l00047">NeedleCollision.cpp:47</a></div></div>
+<div class="ttc" id="class_needle_collision_html_a6c4a6b084cf70c08c03c66ddfdf1d2edab50339a10e1de285ac99d4c3990b8693"><div class="ttname"><a href="class_needle_collision.html#a6c4a6b084cf70c08c03c66ddfdf1d2edab50339a10e1de285ac99d4c3990b8693">NeedleCollision::ObjectTag::NONE</a></div></div>
+<div class="ttc" id="class_needle_collision_html_accb402dfcaa534d5ac14a01d58c1d843"><div class="ttname"><a href="class_needle_collision.html#accb402dfcaa534d5ac14a01d58c1d843">NeedleCollision::MAIN_SPHERE_RADIUS</a></div><div class="ttdeci">static const float MAIN_SPHERE_RADIUS</div><div class="ttdoc">メイン球半径 </div><div class="ttdef"><b>Definition:</b> <a href="_needle_collision_8h_source.html#l00049">NeedleCollision.h:49</a></div></div>
+<div class="ttc" id="class_needle_collision_html_a67e818d495de2f8b7ee623f76c793771"><div class="ttname"><a href="class_needle_collision.html#a67e818d495de2f8b7ee623f76c793771">NeedleCollision::collision_object_</a></div><div class="ttdeci">CollisionObject * collision_object_</div><div class="ttdoc">衝突オブジェクト </div><div class="ttdef"><b>Definition:</b> <a href="_needle_collision_8h_source.html#l00056">NeedleCollision.h:56</a></div></div>
+<div class="ttc" id="_collision_null_8h_html"><div class="ttname"><a href="_collision_null_8h.html">CollisionNull.h</a></div></div>
+<div class="ttc" id="class_needle_collision_html_a7584717bbbf735d73ea6415ca8a0b841ab50339a10e1de285ac99d4c3990b8693"><div class="ttname"><a href="class_needle_collision.html#a7584717bbbf735d73ea6415ca8a0b841ab50339a10e1de285ac99d4c3990b8693">NeedleCollision::ShapeTag::NONE</a></div></div>
+<div class="ttc" id="class_needle_collision_html_a7584717bbbf735d73ea6415ca8a0b841a26a4b44a837bf97b972628509912b4a5"><div class="ttname"><a href="class_needle_collision.html#a7584717bbbf735d73ea6415ca8a0b841a26a4b44a837bf97b972628509912b4a5">NeedleCollision::ShapeTag::MAX</a></div></div>
+<div class="ttc" id="class_needle_collision_html"><div class="ttname"><a href="class_needle_collision.html">NeedleCollision</a></div><div class="ttdoc">棘衝突Class </div><div class="ttdef"><b>Definition:</b> <a href="_needle_collision_8h_source.html#l00024">NeedleCollision.h:24</a></div></div>
+<div class="ttc" id="class_needle_collision_html_a7584717bbbf735d73ea6415ca8a0b841a186495f7da296bf880df3a22a492b378"><div class="ttname"><a href="class_needle_collision.html#a7584717bbbf735d73ea6415ca8a0b841a186495f7da296bf880df3a22a492b378">NeedleCollision::ShapeTag::MAIN</a></div></div>
+<div class="ttc" id="class_needle_collision_html_a6c4a6b084cf70c08c03c66ddfdf1d2eda26a4b44a837bf97b972628509912b4a5"><div class="ttname"><a href="class_needle_collision.html#a6c4a6b084cf70c08c03c66ddfdf1d2eda26a4b44a837bf97b972628509912b4a5">NeedleCollision::ObjectTag::MAX</a></div></div>
+<div class="ttc" id="class_needle_collision_html_ac99f319bdcc48ff3057096ba8b8b8f35"><div class="ttname"><a href="class_needle_collision.html#ac99f319bdcc48ff3057096ba8b8b8f35">NeedleCollision::main_sphere_</a></div><div class="ttdeci">Sphere * main_sphere_</div><div class="ttdoc">メイン球 </div><div class="ttdef"><b>Definition:</b> <a href="_needle_collision_8h_source.html#l00057">NeedleCollision.h:57</a></div></div>
+<div class="ttc" id="class_collision_null_html"><div class="ttname"><a href="class_collision_null.html">CollisionNull</a></div><div class="ttdoc">空白衝突Class </div><div class="ttdef"><b>Definition:</b> <a href="_collision_null_8h_source.html#l00024">CollisionNull.h:24</a></div></div>
+<div class="ttc" id="class_collision_object_html"><div class="ttname"><a href="class_collision_object.html">CollisionObject</a></div><div class="ttdoc">衝突オブジェクトClass </div><div class="ttdef"><b>Definition:</b> <a href="_collision_object_8h_source.html#l00039">CollisionObject.h:39</a></div></div>
+<div class="ttc" id="class_needle_collision_html_a6c4a6b084cf70c08c03c66ddfdf1d2eda186495f7da296bf880df3a22a492b378"><div class="ttname"><a href="class_needle_collision.html#a6c4a6b084cf70c08c03c66ddfdf1d2eda186495f7da296bf880df3a22a492b378">NeedleCollision::ObjectTag::MAIN</a></div></div>
+<div class="ttc" id="class_sphere_html"><div class="ttname"><a href="class_sphere.html">Sphere</a></div><div class="ttdoc">球Class </div><div class="ttdef"><b>Definition:</b> <a href="_sphere_8h_source.html#l00026">Sphere.h:26</a></div></div>
+<div class="ttc" id="class_needle_collision_html_a7584717bbbf735d73ea6415ca8a0b841"><div class="ttname"><a href="class_needle_collision.html#a7584717bbbf735d73ea6415ca8a0b841">NeedleCollision::ShapeTag</a></div><div class="ttdeci">ShapeTag</div><div class="ttdef"><b>Definition:</b> <a href="_needle_collision_8h_source.html#l00037">NeedleCollision.h:37</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_a8670f68e5e207ff6b1d0d24eb385efb.html">Game</a></li><li class="navelem"><a class="el" href="dir_0df63539cebe0c4c23afab917ef959ef.html">Object</a></li><li class="navelem"><a class="el" href="dir_5cfcf2b36e45d02a21be8dfc909800af.html">3D</a></li><li class="navelem"><a class="el" href="dir_30781ddd2d916c4a142fc0eaa046c555.html">Needle</a></li><li class="navelem"><a class="el" href="_needle_collision_8h.html">NeedleCollision.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

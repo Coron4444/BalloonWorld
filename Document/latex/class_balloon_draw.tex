@@ -1,0 +1,447 @@
+\hypertarget{class_balloon_draw}{}\section{Balloon\+Draw クラス}
+\label{class_balloon_draw}\index{Balloon\+Draw@{Balloon\+Draw}}
+
+
+風船描画\+Class  
+
+
+
+
+{\ttfamily \#include $<$Balloon\+Draw.\+h$>$}
+
+
+
+Balloon\+Draw 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_balloon_draw__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual unsigned \mbox{\hyperlink{class_balloon_draw_a979518a6cc85aa355f680336953b5e46}{get\+Object\+Num}} () override
+\begin{DoxyCompactList}\small\item\em オブジェクト数取得関数 \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_balloon_draw_ab6d1aa381df255809889d9f646154dc5}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_balloon_draw_ab98a9333dcdf57c0ede287444b7cbabb}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ワールド行列取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_balloon_draw_aa84c8479ee1a6e95376b7fc0c82e5173}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアル取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_draw_ad00ffd9c5316e08938259e1f1116812f}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_draw_a9c38865af6eb74b163fcdd6204c42e3e}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_draw_a9314af6e3458e87fcace44a11e33126f}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_balloon_draw_aff3ee0684a7c027878915e332ca895ee}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_balloon}{Balloon}} $\ast$ \mbox{\hyperlink{class_balloon_draw_a1d503c50dd419f2dd364c6e18f975585}{balloon\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 風船 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ \mbox{\hyperlink{class_balloon_draw_acc4ff1b604452841e91811edda3f3188}{balloon\+\_\+object\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 風船オブジェクト \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ \mbox{\hyperlink{class_balloon_draw_a387388e5cad0a034cae82f038c1dd986}{balloon\+\_\+line\+\_\+object\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 風船の線オブジェクト \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_transform}{Transform}} $>$ \mbox{\hyperlink{class_balloon_draw_a6135e9a9ecae17f428af4b3d8cc7d95e}{object\+\_\+transform\+\_\+}}
+\begin{DoxyCompactList}\small\item\em オブジェクト変形 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_balloon_draw_ac5fb39cbe0dd2dcdcb40c1edb142c43f}{color\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 色 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{class_balloon_draw_a892d427dfc33f87ab174257cfc8cd7b1}{B\+A\+L\+L\+O\+O\+N\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME}} = \char`\"{}Balloon/Balloon.\+x\char`\"{}
+\begin{DoxyCompactList}\small\item\em 風船モデル名 \end{DoxyCompactList}\item 
+static const std\+::string \mbox{\hyperlink{class_balloon_draw_aa802c13b2c618cff5a1b51e87b8cf657}{B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME}} = \char`\"{}Balloon/Line.\+x\char`\"{}
+\begin{DoxyCompactList}\small\item\em 風船の線モデル名 \end{DoxyCompactList}\item 
+static const unsigned \mbox{\hyperlink{class_balloon_draw_a9c7de251bb86760a8447fa41d247e5a9}{B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM}} = 3
+\begin{DoxyCompactList}\small\item\em 風船色 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_balloon_draw_a13857f5f6308f7f2903322c7a86b18fd}{B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+OR}} \mbox{[}\mbox{\hyperlink{class_balloon_draw_a9c7de251bb86760a8447fa41d247e5a9}{B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em 風船色 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+風船描画\+Class 
+
+風船の描画\+Class 
+
+ Balloon\+Draw.\+h の 33 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_balloon_draw_aff3ee0684a7c027878915e332ca895ee}\label{class_balloon_draw_aff3ee0684a7c027878915e332ca895ee}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!Draw@{Draw}}
+\index{Draw@{Draw}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Balloon\+Draw\+::\+Draw (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
+
+
+
+ Balloon\+Draw.\+cpp の 149 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_ab6d1aa381df255809889d9f646154dc5}\label{class_balloon_draw_ab6d1aa381df255809889d9f646154dc5}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!get\+Mesh\+Num@{get\+Mesh\+Num}}
+\index{get\+Mesh\+Num@{get\+Mesh\+Num}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{get\+Mesh\+Num()}{getMeshNum()}}
+{\footnotesize\ttfamily unsigned Balloon\+Draw\+::get\+Mesh\+Num (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+メッシュ数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & メッシュ数 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a4c566a37d27fac3dcf76c7970443f375}{Draw\+Null}}を再実装しています。
+
+
+
+ Balloon\+Draw.\+cpp の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_a979518a6cc85aa355f680336953b5e46}\label{class_balloon_draw_a979518a6cc85aa355f680336953b5e46}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!get\+Object\+Num@{get\+Object\+Num}}
+\index{get\+Object\+Num@{get\+Object\+Num}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{get\+Object\+Num()}{getObjectNum()}}
+{\footnotesize\ttfamily unsigned Balloon\+Draw\+::get\+Object\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+オブジェクト数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & オブジェクト数 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a8bddfa6ee87e47b2ecbbe6803b088e37}{Draw\+Null}}を再実装しています。
+
+
+
+ Balloon\+Draw.\+cpp の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_aa84c8479ee1a6e95376b7fc0c82e5173}\label{class_balloon_draw_aa84c8479ee1a6e95376b7fc0c82e5173}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!getp\+Material@{getp\+Material}}
+\index{getp\+Material@{getp\+Material}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Material()}{getpMaterial()}}
+{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ Balloon\+Draw\+::getp\+Material (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+マテリアル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a0c1efe55fea325ad277594be6fe1e938}{Draw\+Null}}を再実装しています。
+
+
+
+ Balloon\+Draw.\+cpp の 65 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_ab98a9333dcdf57c0ede287444b7cbabb}\label{class_balloon_draw_ab98a9333dcdf57c0ede287444b7cbabb}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!getp\+Matrix@{getp\+Matrix}}
+\index{getp\+Matrix@{getp\+Matrix}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Balloon\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+ワールド行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & ワールド行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a9aac059eb3b5d1f77e8bd3aa0647cff9}{Draw\+Null}}を再実装しています。
+
+
+
+ Balloon\+Draw.\+cpp の 58 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_ad00ffd9c5316e08938259e1f1116812f}\label{class_balloon_draw_ad00ffd9c5316e08938259e1f1116812f}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!Init@{Init}}
+\index{Init@{Init}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Balloon\+Draw\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
+
+
+
+ Balloon\+Draw.\+cpp の 83 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_a9c38865af6eb74b163fcdd6204c42e3e}\label{class_balloon_draw_a9c38865af6eb74b163fcdd6204c42e3e}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Balloon\+Draw\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
+
+
+
+ Balloon\+Draw.\+cpp の 126 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_a9314af6e3458e87fcace44a11e33126f}\label{class_balloon_draw_a9314af6e3458e87fcace44a11e33126f}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!Update@{Update}}
+\index{Update@{Update}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Balloon\+Draw\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_ad32a508d269de7eda8ad24ea72230464}{Draw\+Null}}を再実装しています。
+
+
+
+ Balloon\+Draw.\+cpp の 134 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_balloon_draw_a1d503c50dd419f2dd364c6e18f975585}\label{class_balloon_draw_a1d503c50dd419f2dd364c6e18f975585}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!balloon\+\_\+@{balloon\+\_\+}}
+\index{balloon\+\_\+@{balloon\+\_\+}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{balloon\+\_\+}{balloon\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_balloon}{Balloon}}$\ast$ Balloon\+Draw\+::balloon\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+風船 
+
+
+
+ Balloon\+Draw.\+h の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_a13857f5f6308f7f2903322c7a86b18fd}\label{class_balloon_draw_a13857f5f6308f7f2903322c7a86b18fd}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+OR@{B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+OR}}
+\index{B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+OR@{B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+OR}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+OR}{BALLOON\_COLOR}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Balloon\+Draw\+::\+B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+OR\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}
+=
+\{
+    \{0.3f, 1.0f, 1.0f, 1.0f\},
+    \{1.0f, 1.0f, 0.5f, 1.0f\},
+    \{1.0f, 0.3f, 0.5f, 1.0f\}
+\}
+\end{DoxyCode}
+
+
+風船色 
+
+
+
+ Balloon\+Draw.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_a9c7de251bb86760a8447fa41d247e5a9}\label{class_balloon_draw_a9c7de251bb86760a8447fa41d247e5a9}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM@{B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM}}
+\index{B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM@{B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM}{BALLOON\_COLOR\_NUM}}
+{\footnotesize\ttfamily const unsigned Balloon\+Draw\+::\+B\+A\+L\+L\+O\+O\+N\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM = 3\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+風船色 
+
+
+
+ Balloon\+Draw.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_aa802c13b2c618cff5a1b51e87b8cf657}\label{class_balloon_draw_aa802c13b2c618cff5a1b51e87b8cf657}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME@{B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME}}
+\index{B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME@{B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME}{BALLOON\_LINE\_MODEL\_NAME}}
+{\footnotesize\ttfamily const std\+::string Balloon\+Draw\+::\+B\+A\+L\+L\+O\+O\+N\+\_\+\+L\+I\+N\+E\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME = \char`\"{}Balloon/Line.\+x\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+風船の線モデル名 
+
+
+
+ Balloon\+Draw.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_a387388e5cad0a034cae82f038c1dd986}\label{class_balloon_draw_a387388e5cad0a034cae82f038c1dd986}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!balloon\+\_\+line\+\_\+object\+\_\+@{balloon\+\_\+line\+\_\+object\+\_\+}}
+\index{balloon\+\_\+line\+\_\+object\+\_\+@{balloon\+\_\+line\+\_\+object\+\_\+}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{balloon\+\_\+line\+\_\+object\+\_\+}{balloon\_line\_object\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}}$\ast$ Balloon\+Draw\+::balloon\+\_\+line\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+風船の線オブジェクト 
+
+
+
+ Balloon\+Draw.\+h の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_a892d427dfc33f87ab174257cfc8cd7b1}\label{class_balloon_draw_a892d427dfc33f87ab174257cfc8cd7b1}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!B\+A\+L\+L\+O\+O\+N\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME@{B\+A\+L\+L\+O\+O\+N\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME}}
+\index{B\+A\+L\+L\+O\+O\+N\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME@{B\+A\+L\+L\+O\+O\+N\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{B\+A\+L\+L\+O\+O\+N\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME}{BALLOON\_MODEL\_NAME}}
+{\footnotesize\ttfamily const std\+::string Balloon\+Draw\+::\+B\+A\+L\+L\+O\+O\+N\+\_\+\+M\+O\+D\+E\+L\+\_\+\+N\+A\+ME = \char`\"{}Balloon/Balloon.\+x\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+風船モデル名 
+
+
+
+ Balloon\+Draw.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_acc4ff1b604452841e91811edda3f3188}\label{class_balloon_draw_acc4ff1b604452841e91811edda3f3188}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!balloon\+\_\+object\+\_\+@{balloon\+\_\+object\+\_\+}}
+\index{balloon\+\_\+object\+\_\+@{balloon\+\_\+object\+\_\+}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{balloon\+\_\+object\+\_\+}{balloon\_object\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}}$\ast$ Balloon\+Draw\+::balloon\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+風船オブジェクト 
+
+
+
+ Balloon\+Draw.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_ac5fb39cbe0dd2dcdcb40c1edb142c43f}\label{class_balloon_draw_ac5fb39cbe0dd2dcdcb40c1edb142c43f}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!color\+\_\+@{color\+\_\+}}
+\index{color\+\_\+@{color\+\_\+}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{color\+\_\+}{color\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Balloon\+Draw\+::color\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+色 
+
+
+
+ Balloon\+Draw.\+h の 53 行目に定義があります。
+
+\mbox{\Hypertarget{class_balloon_draw_a6135e9a9ecae17f428af4b3d8cc7d95e}\label{class_balloon_draw_a6135e9a9ecae17f428af4b3d8cc7d95e}} 
+\index{Balloon\+Draw@{Balloon\+Draw}!object\+\_\+transform\+\_\+@{object\+\_\+transform\+\_\+}}
+\index{object\+\_\+transform\+\_\+@{object\+\_\+transform\+\_\+}!Balloon\+Draw@{Balloon\+Draw}}
+\subsubsection{\texorpdfstring{object\+\_\+transform\+\_\+}{object\_transform\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_transform}{Transform}}$>$ Balloon\+Draw\+::object\+\_\+transform\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+オブジェクト変形 
+
+
+
+ Balloon\+Draw.\+h の 52 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Balloon/\mbox{\hyperlink{_balloon_draw_8h}{Balloon\+Draw.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Balloon/\+Source/\mbox{\hyperlink{_balloon_draw_8cpp}{Balloon\+Draw.\+cpp}}\end{DoxyCompactItemize}

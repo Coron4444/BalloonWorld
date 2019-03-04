@@ -1,25 +1,17 @@
-\hypertarget{_o_b_b_8h}{}\section{C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+O\+B\+B/\+O\+BB.h ファイル}
-\label{_o_b_b_8h}\index{C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+O\+B\+B/\+O\+B\+B.\+h@{C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+O\+B\+B/\+O\+B\+B.\+h}}
+\hypertarget{_o_b_b_8h}{}\section{C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\+O\+BB.h ファイル}
+\label{_o_b_b_8h}\index{C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\+O\+B\+B.\+h@{C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\+O\+B\+B.\+h}}
 
 
 O\+B\+B\+Class  
 
 
-{\ttfamily \#include \char`\"{}../\+Collision\+Shape\+Base.\+h\char`\"{}}\newline
-{\ttfamily \#include $<$Vector3\+D.\+h$>$}\newline
-{\ttfamily \#include $<$Transform\textbackslash{}\+Axis\+Vector\textbackslash{}\+Axis\+Vector.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Collision\+Shape\+Base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Plane.\+h\char`\"{}}\newline
 \subsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_o_b_b}{O\+BB}}
 \begin{DoxyCompactList}\small\item\em O\+B\+B\+Class \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{関数}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{_o_b_b_8h_a8b73ecbc066cc8ba74fca89b797bca23}{Overhanging\+Part\+O\+B\+B\+\_\+\+Segment1\+D\+\_\+\+Point}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$shortest\+\_\+distance\+\_\+vector, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$obb\+\_\+position, \mbox{\hyperlink{class_vector3_d}{Vector3D}} obb\+\_\+vector\+\_\+half, \mbox{\hyperlink{class_vector3_d}{Vector3D}} obb\+\_\+axis\+\_\+vector, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$point)
-\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{_o_b_b_8h_afeafa9a2069f4c653117373e276af0ab}{Shortest\+Distance\+\_\+\+O\+B\+B\+\_\+\+Point}} (\mbox{\hyperlink{class_o_b_b}{O\+BB}} $\ast$obb, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$point)
-\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
@@ -31,26 +23,3 @@ Kai Araki
 \begin{DoxyDate}{日付}
 2018/11/02 
 \end{DoxyDate}
-
-
-\subsection{関数詳解}
-\mbox{\Hypertarget{_o_b_b_8h_a8b73ecbc066cc8ba74fca89b797bca23}\label{_o_b_b_8h_a8b73ecbc066cc8ba74fca89b797bca23}} 
-\index{O\+B\+B.\+h@{O\+B\+B.\+h}!Overhanging\+Part\+O\+B\+B\+\_\+\+Segment1\+D\+\_\+\+Point@{Overhanging\+Part\+O\+B\+B\+\_\+\+Segment1\+D\+\_\+\+Point}}
-\index{Overhanging\+Part\+O\+B\+B\+\_\+\+Segment1\+D\+\_\+\+Point@{Overhanging\+Part\+O\+B\+B\+\_\+\+Segment1\+D\+\_\+\+Point}!O\+B\+B.\+h@{O\+B\+B.\+h}}
-\subsubsection{\texorpdfstring{Overhanging\+Part\+O\+B\+B\+\_\+\+Segment1\+D\+\_\+\+Point()}{OverhangingPartOBB\_Segment1D\_Point()}}
-{\footnotesize\ttfamily void Overhanging\+Part\+O\+B\+B\+\_\+\+Segment1\+D\+\_\+\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{shortest\+\_\+distance\+\_\+vector,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{obb\+\_\+position,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{obb\+\_\+vector\+\_\+half,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{obb\+\_\+axis\+\_\+vector,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- O\+B\+B.\+h の 149 行目に定義があります。
-
-\mbox{\Hypertarget{_o_b_b_8h_afeafa9a2069f4c653117373e276af0ab}\label{_o_b_b_8h_afeafa9a2069f4c653117373e276af0ab}} 
-\index{O\+B\+B.\+h@{O\+B\+B.\+h}!Shortest\+Distance\+\_\+\+O\+B\+B\+\_\+\+Point@{Shortest\+Distance\+\_\+\+O\+B\+B\+\_\+\+Point}}
-\index{Shortest\+Distance\+\_\+\+O\+B\+B\+\_\+\+Point@{Shortest\+Distance\+\_\+\+O\+B\+B\+\_\+\+Point}!O\+B\+B.\+h@{O\+B\+B.\+h}}
-\subsubsection{\texorpdfstring{Shortest\+Distance\+\_\+\+O\+B\+B\+\_\+\+Point()}{ShortestDistance\_OBB\_Point()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Shortest\+Distance\+\_\+\+O\+B\+B\+\_\+\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_b_b}{O\+BB}} $\ast$}]{obb,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- O\+B\+B.\+h の 182 行目に定義があります。
-

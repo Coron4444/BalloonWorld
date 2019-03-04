@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: ModelXManager クラス</title>
+<title>BalloonWorld: ModelXManager クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -88,9 +88,10 @@ $(document).ready(function(){initNavTree('class_model_x_manager.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
 <a href="#pri-methods">非公開メンバ関数</a> &#124;
-<a href="#pri-static-methods">静的非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
 <a href="#pri-static-attribs">静的非公開変数類</a> &#124;
 <a href="class_model_x_manager-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
@@ -98,58 +99,76 @@ $(document).ready(function(){initNavTree('class_model_x_manager.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>XモデルマネージャClass(Singleton)  
+ <a href="class_model_x_manager.html#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_model_x_manager_8h_source.html">ModelXManager.h</a>&gt;</code></p>
+<div class="dynheader">
+ModelXManager 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_model_x_manager__coll__graph.png" border="0" usemap="#_model_x_manager_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab4c3b09885b975da1e42644b5335472f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_model_x_object.html">ModelXObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#ab4c3b09885b975da1e42644b5335472f">getpObject</a> (const std::string *key_name, const std::string *file_path=nullptr)</td></tr>
+<tr class="memdesc:ab4c3b09885b975da1e42644b5335472f"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト取得関数  <a href="#ab4c3b09885b975da1e42644b5335472f">[詳解]</a><br /></td></tr>
+<tr class="separator:ab4c3b09885b975da1e42644b5335472f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77fcb11b4229352c68e61736935a7ece"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a77fcb11b4229352c68e61736935a7ece">Init</a> ()</td></tr>
+<tr class="memdesc:a77fcb11b4229352c68e61736935a7ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a77fcb11b4229352c68e61736935a7ece">[詳解]</a><br /></td></tr>
+<tr class="separator:a77fcb11b4229352c68e61736935a7ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac833fc6c1ad4c491f9e68b7e5d5af99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#aac833fc6c1ad4c491f9e68b7e5d5af99">Uninit</a> ()</td></tr>
+<tr class="memdesc:aac833fc6c1ad4c491f9e68b7e5d5af99"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#aac833fc6c1ad4c491f9e68b7e5d5af99">[詳解]</a><br /></td></tr>
+<tr class="separator:aac833fc6c1ad4c491f9e68b7e5d5af99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7182ee338b307e32c26f110bb651c4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#ab7182ee338b307e32c26f110bb651c4b">ReleaseFromTheMap</a> (std::string *key_name)</td></tr>
+<tr class="memdesc:ab7182ee338b307e32c26f110bb651c4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">マップから解放関数  <a href="#ab7182ee338b307e32c26f110bb651c4b">[詳解]</a><br /></td></tr>
+<tr class="separator:ab7182ee338b307e32c26f110bb651c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
-<tr class="memitem:a8d7965d9eaa41fcf0297eebea287ee82"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a8d7965d9eaa41fcf0297eebea287ee82">InitAllData</a> ()</td></tr>
-<tr class="separator:a8d7965d9eaa41fcf0297eebea287ee82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8096a9ed1b19c41270df944aa855015a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a8096a9ed1b19c41270df944aa855015a">InitShareData</a> ()</td></tr>
-<tr class="separator:a8096a9ed1b19c41270df944aa855015a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bed6cb5ffcd2cbfec6c405e21af362e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a9bed6cb5ffcd2cbfec6c405e21af362e">InitUniqueData</a> ()</td></tr>
-<tr class="separator:a9bed6cb5ffcd2cbfec6c405e21af362e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a915bf3c57058e235d91db06f3fe5f538"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a915bf3c57058e235d91db06f3fe5f538">UninitAllData</a> ()</td></tr>
-<tr class="separator:a915bf3c57058e235d91db06f3fe5f538"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e3d0dc8addebebc87f450cde6c5e659"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a9e3d0dc8addebebc87f450cde6c5e659">UninitShareData</a> ()</td></tr>
-<tr class="separator:a9e3d0dc8addebebc87f450cde6c5e659"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dde269502f40b7d1208c8e0f84b13f0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a7dde269502f40b7d1208c8e0f84b13f0">UninitUniqueData</a> ()</td></tr>
-<tr class="separator:a7dde269502f40b7d1208c8e0f84b13f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a395565622dff14d4ff80bf64611f9a36"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_model_x_object.html">ModelXObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a395565622dff14d4ff80bf64611f9a36">AddShareData</a> (const std::string *key_name, const std::string *file_path=nullptr)</td></tr>
-<tr class="separator:a395565622dff14d4ff80bf64611f9a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a0cd728e7b92de6c18e96026708d97b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_model_x_object.html">ModelXObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a0a0cd728e7b92de6c18e96026708d97b">AddUniqueData</a> (const std::string *key_name, const std::string *file_path=nullptr)</td></tr>
-<tr class="separator:a0a0cd728e7b92de6c18e96026708d97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70cc89b8314e5e91b74770606c734c97"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_model_x_object.html">ModelXObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a70cc89b8314e5e91b74770606c734c97">GetModelXObject</a> (const std::string *key_name)</td></tr>
-<tr class="separator:a70cc89b8314e5e91b74770606c734c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a141baa9d96bf528ffced9a884b3b5828"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_model_x_manager.html">ModelXManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a141baa9d96bf528ffced9a884b3b5828">getpInstance</a> ()</td></tr>
+<tr class="memdesc:a141baa9d96bf528ffced9a884b3b5828"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス取得関数  <a href="#a141baa9d96bf528ffced9a884b3b5828">[詳解]</a><br /></td></tr>
+<tr class="separator:a141baa9d96bf528ffced9a884b3b5828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa53b75de4f147652a5abb61c66eaa4bd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#aa53b75de4f147652a5abb61c66eaa4bd">ReleaseInstance</a> ()</td></tr>
+<tr class="memdesc:aa53b75de4f147652a5abb61c66eaa4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス解放関数  <a href="#aa53b75de4f147652a5abb61c66eaa4bd">[詳解]</a><br /></td></tr>
+<tr class="separator:aa53b75de4f147652a5abb61c66eaa4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 非公開メンバ関数</h2></td></tr>
-<tr class="memitem:a4e3620210fca89770bf08b9ec1265357"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a4e3620210fca89770bf08b9ec1265357">ModelXManager</a> ()=delete</td></tr>
-<tr class="separator:a4e3620210fca89770bf08b9ec1265357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9add853f72deb575e332f39c3373624"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#aa9add853f72deb575e332f39c3373624">ModelXManager</a> ()</td></tr>
+<tr class="memdesc:aa9add853f72deb575e332f39c3373624"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#aa9add853f72deb575e332f39c3373624">[詳解]</a><br /></td></tr>
+<tr class="separator:aa9add853f72deb575e332f39c3373624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c152c72ec36cb12a6ae2007f84c6405"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a7c152c72ec36cb12a6ae2007f84c6405">CreateFilePath</a> (const std::string *key_name, const std::string *file_path)</td></tr>
+<tr class="memdesc:a7c152c72ec36cb12a6ae2007f84c6405"><td class="mdescLeft">&#160;</td><td class="mdescRight">フルパス生成関数  <a href="#a7c152c72ec36cb12a6ae2007f84c6405">[詳解]</a><br /></td></tr>
+<tr class="separator:a7c152c72ec36cb12a6ae2007f84c6405"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6df03f9aef72a490b755955e70f12685"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a6df03f9aef72a490b755955e70f12685">ModelXManager</a> (const <a class="el" href="class_model_x_manager.html">ModelXManager</a> &amp;class_name)=delete</td></tr>
 <tr class="separator:a6df03f9aef72a490b755955e70f12685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc65f6b4b9b06b4a20923245606175d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_model_x_manager.html">ModelXManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#adc65f6b4b9b06b4a20923245606175d8">operator=</a> (const <a class="el" href="class_model_x_manager.html">ModelXManager</a> &amp;class_name)=delete</td></tr>
 <tr class="separator:adc65f6b4b9b06b4a20923245606175d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-静的非公開メンバ関数</h2></td></tr>
-<tr class="memitem:a2d367047714442f8a928e4360d11b773"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a2d367047714442f8a928e4360d11b773">MakeFilePath</a> (const std::string *key_name, const std::string *file_path)</td></tr>
-<tr class="separator:a2d367047714442f8a928e4360d11b773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:ac3a90eea2890ea233f6f8c909f705e16"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="class_model_x_object.html">ModelXObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#ac3a90eea2890ea233f6f8c909f705e16">object_map_</a></td></tr>
+<tr class="memdesc:ac3a90eea2890ea233f6f8c909f705e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトマップ  <a href="#ac3a90eea2890ea233f6f8c909f705e16">[詳解]</a><br /></td></tr>
+<tr class="separator:ac3a90eea2890ea233f6f8c909f705e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 静的非公開変数類</h2></td></tr>
-<tr class="memitem:a745ad339e5fc73cec28d205881a969f8"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a745ad339e5fc73cec28d205881a969f8">DEFAULT_PATH</a> = &quot;resource/ModelX/&quot;</td></tr>
+<tr class="memitem:a745ad339e5fc73cec28d205881a969f8"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a745ad339e5fc73cec28d205881a969f8">DEFAULT_PATH</a> = &quot;Resource/ModelX/&quot;</td></tr>
+<tr class="memdesc:a745ad339e5fc73cec28d205881a969f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定パス  <a href="#a745ad339e5fc73cec28d205881a969f8">[詳解]</a><br /></td></tr>
 <tr class="separator:a745ad339e5fc73cec28d205881a969f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad76c3a0fa42d0e562487f27c20096a12"><td class="memItemLeft" align="right" valign="top">static std::unordered_map&lt; std::string, <a class="el" href="class_model_x_object.html">ModelXObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#ad76c3a0fa42d0e562487f27c20096a12">share_model_map_</a></td></tr>
-<tr class="separator:ad76c3a0fa42d0e562487f27c20096a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77ce902ab239fbb67a9fbbbb87929079"><td class="memItemLeft" align="right" valign="top">static std::unordered_map&lt; std::string, <a class="el" href="class_model_x_object.html">ModelXObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a77ce902ab239fbb67a9fbbbb87929079">unique_model_map_</a></td></tr>
-<tr class="separator:a77ce902ab239fbb67a9fbbbb87929079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8631ef7e11e9c92e3af008acfceb35d7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_model_x_manager.html">ModelXManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_x_manager.html#a8631ef7e11e9c92e3af008acfceb35d7">instance_</a> = nullptr</td></tr>
+<tr class="memdesc:a8631ef7e11e9c92e3af008acfceb35d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス  <a href="#a8631ef7e11e9c92e3af008acfceb35d7">[詳解]</a><br /></td></tr>
+<tr class="separator:a8631ef7e11e9c92e3af008acfceb35d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="_model_x_manager_8h_source.html">ModelXManager.h</a> の <a class="el" href="_model_x_manager_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+<div class="textblock"><p>XモデルマネージャClass(Singleton) </p>
+<p>XモデルのマネージャClass(Singleton) </p>
+
+<p class="definition"> <a class="el" href="_model_x_manager_8h_source.html">ModelXManager.h</a> の <a class="el" href="_model_x_manager_8h_source.html#l00024">24</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
-<a id="a4e3620210fca89770bf08b9ec1265357"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e3620210fca89770bf08b9ec1265357">&#9670;&nbsp;</a></span>ModelXManager() <span class="overload">[1/2]</span></h2>
+<a id="aa9add853f72deb575e332f39c3373624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9add853f72deb575e332f39c3373624">&#9670;&nbsp;</a></span>ModelXManager() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,10 +185,20 @@ $(document).ready(function(){initNavTree('class_model_x_manager.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00085">85</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -200,8 +229,8 @@ $(document).ready(function(){initNavTree('class_model_x_manager.html','');});
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a395565622dff14d4ff80bf64611f9a36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a395565622dff14d4ff80bf64611f9a36">&#9670;&nbsp;</a></span>AddShareData()</h2>
+<a id="a7c152c72ec36cb12a6ae2007f84c6405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c152c72ec36cb12a6ae2007f84c6405">&#9670;&nbsp;</a></span>CreateFilePath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,192 +239,7 @@ $(document).ready(function(){initNavTree('class_model_x_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_model_x_object.html">ModelXObject</a> * ModelXManager::AddShareData </td>
-          <td>(</td>
-          <td class="paramtype">const std::string *&#160;</td>
-          <td class="paramname"><em>key_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
-          <td class="paramname"><em>file_path</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00161">161</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a0a0cd728e7b92de6c18e96026708d97b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a0cd728e7b92de6c18e96026708d97b">&#9670;&nbsp;</a></span>AddUniqueData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_model_x_object.html">ModelXObject</a> * ModelXManager::AddUniqueData </td>
-          <td>(</td>
-          <td class="paramtype">const std::string *&#160;</td>
-          <td class="paramname"><em>key_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
-          <td class="paramname"><em>file_path</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00183">183</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a70cc89b8314e5e91b74770606c734c97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70cc89b8314e5e91b74770606c734c97">&#9670;&nbsp;</a></span>GetModelXObject()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_model_x_object.html">ModelXObject</a> * ModelXManager::GetModelXObject </td>
-          <td>(</td>
-          <td class="paramtype">const std::string *&#160;</td>
-          <td class="paramname"><em>key_name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00205">205</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a8d7965d9eaa41fcf0297eebea287ee82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d7965d9eaa41fcf0297eebea287ee82">&#9670;&nbsp;</a></span>InitAllData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ModelXManager::InitAllData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00055">55</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a8096a9ed1b19c41270df944aa855015a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8096a9ed1b19c41270df944aa855015a">&#9670;&nbsp;</a></span>InitShareData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ModelXManager::InitShareData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00070">70</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a9bed6cb5ffcd2cbfec6c405e21af362e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bed6cb5ffcd2cbfec6c405e21af362e">&#9670;&nbsp;</a></span>InitUniqueData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ModelXManager::InitUniqueData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00084">84</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a2d367047714442f8a928e4360d11b773"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d367047714442f8a928e4360d11b773">&#9670;&nbsp;</a></span>MakeFilePath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string ModelXManager::MakeFilePath </td>
+          <td class="memname">std::string ModelXManager::CreateFilePath </td>
           <td>(</td>
           <td class="paramtype">const std::string *&#160;</td>
           <td class="paramname"><em>key_name</em>, </td>
@@ -414,12 +258,145 @@ $(document).ready(function(){initNavTree('class_model_x_manager.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00226">226</a> 行目に定義があります。</p>
+<p>フルパス生成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*key_name</td><td>キー名 </td></tr>
+    <tr><td class="paramname">*file_path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">std::string</td><td>フルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00125">125</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a141baa9d96bf528ffced9a884b3b5828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a141baa9d96bf528ffced9a884b3b5828">&#9670;&nbsp;</a></span>getpInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_model_x_manager.html">ModelXManager</a> * ModelXManager::getpInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンス取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">ModelXManager*</td><td>インスタンス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab4c3b09885b975da1e42644b5335472f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c3b09885b975da1e42644b5335472f">&#9670;&nbsp;</a></span>getpObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_model_x_object.html">ModelXObject</a> * ModelXManager::getpObject </td>
+          <td>(</td>
+          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramname"><em>key_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramname"><em>file_path</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>オブジェクト取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">ModelXObject*</td><td>オブジェクト </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00058">58</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a77fcb11b4229352c68e61736935a7ece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77fcb11b4229352c68e61736935a7ece">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ModelXManager::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00091">91</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -449,62 +426,43 @@ $(document).ready(function(){initNavTree('class_model_x_manager.html','');});
 
 </div>
 </div>
-<a id="a915bf3c57058e235d91db06f3fe5f538"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a915bf3c57058e235d91db06f3fe5f538">&#9670;&nbsp;</a></span>UninitAllData()</h2>
+<a id="ab7182ee338b307e32c26f110bb651c4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7182ee338b307e32c26f110bb651c4b">&#9670;&nbsp;</a></span>ReleaseFromTheMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ModelXManager::UninitAllData </td>
+          <td class="memname">void ModelXManager::ReleaseFromTheMap </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>key_name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00098">98</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a9e3d0dc8addebebc87f450cde6c5e659"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e3d0dc8addebebc87f450cde6c5e659">&#9670;&nbsp;</a></span>UninitShareData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ModelXManager::UninitShareData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>マップから解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*key_name</td><td>キー名 </td></tr>
+    <tr><td class="paramname">*file_path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00113">113</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a7dde269502f40b7d1208c8e0f84b13f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dde269502f40b7d1208c8e0f84b13f0">&#9670;&nbsp;</a></span>UninitUniqueData()</h2>
+<a id="aa53b75de4f147652a5abb61c66eaa4bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa53b75de4f147652a5abb61c66eaa4bd">&#9670;&nbsp;</a></span>ReleaseInstance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -513,7 +471,7 @@ $(document).ready(function(){initNavTree('class_model_x_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ModelXManager::UninitUniqueData </td>
+          <td class="memname">void ModelXManager::ReleaseInstance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -526,7 +484,54 @@ $(document).ready(function(){initNavTree('class_model_x_manager.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00137">137</a> 行目に定義があります。</p>
+<p>インスタンス解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aac833fc6c1ad4c491f9e68b7e5d5af99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac833fc6c1ad4c491f9e68b7e5d5af99">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ModelXManager::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a> の <a class="el" href="_model_x_manager_8cpp_source.html#l00099">99</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -541,7 +546,7 @@ $(document).ready(function(){initNavTree('class_model_x_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string ModelXManager::DEFAULT_PATH = &quot;resource/ModelX/&quot;</td>
+          <td class="memname">const std::string ModelXManager::DEFAULT_PATH = &quot;Resource/ModelX/&quot;</td>
         </tr>
       </table>
   </td>
@@ -550,13 +555,41 @@ $(document).ready(function(){initNavTree('class_model_x_manager.html','');});
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>既定パス </p>
+
+<p class="definition"> <a class="el" href="_model_x_manager_8h_source.html">ModelXManager.h</a> の <a class="el" href="_model_x_manager_8h_source.html#l00030">30</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8631ef7e11e9c92e3af008acfceb35d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8631ef7e11e9c92e3af008acfceb35d7">&#9670;&nbsp;</a></span>instance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_model_x_manager.html">ModelXManager</a> * ModelXManager::instance_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンス </p>
 
 <p class="definition"> <a class="el" href="_model_x_manager_8h_source.html">ModelXManager.h</a> の <a class="el" href="_model_x_manager_8h_source.html#l00037">37</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ad76c3a0fa42d0e562487f27c20096a12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad76c3a0fa42d0e562487f27c20096a12">&#9670;&nbsp;</a></span>share_model_map_</h2>
+<a id="ac3a90eea2890ea233f6f8c909f705e16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3a90eea2890ea233f6f8c909f705e16">&#9670;&nbsp;</a></span>object_map_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -565,47 +598,25 @@ $(document).ready(function(){initNavTree('class_model_x_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt; std::string, <a class="el" href="class_model_x_object.html">ModelXObject</a> * &gt; ModelXManager::share_model_map_</td>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="class_model_x_object.html">ModelXObject</a>*&gt; ModelXManager::object_map_</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_model_x_manager_8h_source.html">ModelXManager.h</a> の <a class="el" href="_model_x_manager_8h_source.html#l00080">80</a> 行目に定義があります。</p>
+<p>オブジェクトマップ </p>
 
-</div>
-</div>
-<a id="a77ce902ab239fbb67a9fbbbb87929079"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77ce902ab239fbb67a9fbbbb87929079">&#9670;&nbsp;</a></span>unique_model_map_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt; std::string, <a class="el" href="class_model_x_object.html">ModelXObject</a> * &gt; ModelXManager::unique_model_map_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_model_x_manager_8h_source.html">ModelXManager.h</a> の <a class="el" href="_model_x_manager_8h_source.html#l00081">81</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_model_x_manager_8h_source.html">ModelXManager.h</a> の <a class="el" href="_model_x_manager_8h_source.html#l00070">70</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/05_Resource/ModelX/ModelXManager/<a class="el" href="_model_x_manager_8h_source.html">ModelXManager.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/05_Resource/ModelX/ModelXManager/<a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Resource/ModelX/ModelXManager/<a class="el" href="_model_x_manager_8h_source.html">ModelXManager.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Resource/ModelX/ModelXManager/Source/<a class="el" href="_model_x_manager_8cpp_source.html">ModelXManager.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

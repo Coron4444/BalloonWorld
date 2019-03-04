@@ -1,0 +1,416 @@
+\hypertarget{class_keyboard}{}\section{Keyboard クラス}
+\label{class_keyboard}\index{Keyboard@{Keyboard}}
+
+
+キーボード\+Class  
+
+
+
+
+{\ttfamily \#include $<$Keyboard.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_keyboard_a7dd4b44882383870bb1923065ca0fdfb}{get\+Hold}} (int value)
+\begin{DoxyCompactList}\small\item\em ホールド状態取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_keyboard_a74cad384c6592d1db0c3a8a50ae9ff9e}{get\+Trigger}} (int value)
+\begin{DoxyCompactList}\small\item\em トリガー状態取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_keyboard_aafeebcebd37ed0652a52b40c43c15a3b}{get\+Repeat}} (int value)
+\begin{DoxyCompactList}\small\item\em リピート状態取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_keyboard_a03fa7ef22c90afaad27fc79fd1d7235c}{get\+Release}} (int value)
+\begin{DoxyCompactList}\small\item\em リリ−ス状態取得関数 \end{DoxyCompactList}\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{class_keyboard_a5de6d3cc2a2a6ac69945f7075d58547d}{Init}} (H\+I\+N\+S\+T\+A\+N\+CE h\+Instance, H\+W\+ND h\+Wnd)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_keyboard_aeeed458a75ddc291f6742d317a99766d}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_keyboard_a071313d0ae6538e9307ff6a059aa9197}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{class_keyboard_adb5e03226ff7b5217b47db119825fb08}{Init\+Direct\+Input}} (H\+I\+N\+S\+T\+A\+N\+CE h\+Instance, H\+W\+ND h\+Wnd)
+\begin{DoxyCompactList}\small\item\em Direct\+Input初期化関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+L\+P\+D\+I\+R\+E\+C\+T\+I\+N\+P\+U\+T8 \mbox{\hyperlink{class_keyboard_a490b43137055dd864119b4a37966445b}{direct\+\_\+input\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em Direct\+Inputオブジェクト \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T\+I\+N\+P\+U\+T\+D\+E\+V\+I\+C\+E8 \mbox{\hyperlink{class_keyboard_aa903ad645e8801546cacb1ad646b2ecc}{keyboard\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 入力デバイス(キーボード) \end{DoxyCompactList}\item 
+B\+Y\+TE \mbox{\hyperlink{class_keyboard_a5479f751fc72ea8e1a89a0e0c3ac3141}{key\+\_\+state\+\_\+}} \mbox{[}\mbox{\hyperlink{class_keyboard_ab151afccd1372a53748e225c7c98e65e}{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em キーボードの入力情報 \end{DoxyCompactList}\item 
+B\+Y\+TE \mbox{\hyperlink{class_keyboard_a00b5e2a9b2071056ba3fe1ba07231a7b}{key\+\_\+state\+\_\+trigger\+\_\+}} \mbox{[}\mbox{\hyperlink{class_keyboard_ab151afccd1372a53748e225c7c98e65e}{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em キーボードのトリガー情報 \end{DoxyCompactList}\item 
+B\+Y\+TE \mbox{\hyperlink{class_keyboard_a98cd407cc6d5a7a4d8676b887149110f}{key\+\_\+state\+\_\+repeat\+\_\+}} \mbox{[}\mbox{\hyperlink{class_keyboard_ab151afccd1372a53748e225c7c98e65e}{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em キーボードのリピート情報 \end{DoxyCompactList}\item 
+B\+Y\+TE \mbox{\hyperlink{class_keyboard_ad3dfea2e28ccb3491f2b8f525fd43d16}{key\+\_\+state\+\_\+release\+\_\+}} \mbox{[}\mbox{\hyperlink{class_keyboard_ab151afccd1372a53748e225c7c98e65e}{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em キーボードのリリース情報 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_keyboard_a1f97dc50d345892d74a8960d79b7d6bc}{repeat\+\_\+counter\+\_\+}} \mbox{[}\mbox{\hyperlink{class_keyboard_ab151afccd1372a53748e225c7c98e65e}{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em リピートカウンター \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const D\+W\+O\+RD \mbox{\hyperlink{class_keyboard_a7d90181edbea0aaeb30b734b603f4fe1}{I\+N\+P\+U\+T\+\_\+\+V\+E\+R\+S\+I\+ON}} = 0x0800
+\begin{DoxyCompactList}\small\item\em ダイレクトインプットバージョン \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{class_keyboard_ab151afccd1372a53748e225c7c98e65e}{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}} = 256
+\begin{DoxyCompactList}\small\item\em キーの最大数 \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{class_keyboard_a1093ea18b208f9f645eb282acc8b874e}{L\+I\+M\+I\+T\+\_\+\+C\+O\+U\+N\+T\+\_\+\+R\+E\+P\+E\+AT}} = 20
+\begin{DoxyCompactList}\small\item\em リピートカウントリミット \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+キーボード\+Class 
+
+キーボードの入力\+Class 
+
+ Keyboard.\+h の 24 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_keyboard_a7dd4b44882383870bb1923065ca0fdfb}\label{class_keyboard_a7dd4b44882383870bb1923065ca0fdfb}} 
+\index{Keyboard@{Keyboard}!get\+Hold@{get\+Hold}}
+\index{get\+Hold@{get\+Hold}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{get\+Hold()}{getHold()}}
+{\footnotesize\ttfamily bool Keyboard\+::get\+Hold (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+ホールド状態取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & ホールド状態を確認したいキーボードボタン\+ID \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 押されていればtrue \\
+\hline
+\end{DoxyRetVals}
+
+
+ Keyboard.\+cpp の 28 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_a03fa7ef22c90afaad27fc79fd1d7235c}\label{class_keyboard_a03fa7ef22c90afaad27fc79fd1d7235c}} 
+\index{Keyboard@{Keyboard}!get\+Release@{get\+Release}}
+\index{get\+Release@{get\+Release}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{get\+Release()}{getRelease()}}
+{\footnotesize\ttfamily bool Keyboard\+::get\+Release (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+リリ−ス状態取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & リリ−ス状態を確認したいキーボードボタン\+ID \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 離した瞬間true \\
+\hline
+\end{DoxyRetVals}
+
+
+ Keyboard.\+cpp の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_aafeebcebd37ed0652a52b40c43c15a3b}\label{class_keyboard_aafeebcebd37ed0652a52b40c43c15a3b}} 
+\index{Keyboard@{Keyboard}!get\+Repeat@{get\+Repeat}}
+\index{get\+Repeat@{get\+Repeat}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{get\+Repeat()}{getRepeat()}}
+{\footnotesize\ttfamily bool Keyboard\+::get\+Repeat (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+リピート状態取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & リピート状態を確認したいキーボードボタン\+ID \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 押されてから一定時間そのままのときtrue \\
+\hline
+\end{DoxyRetVals}
+
+
+ Keyboard.\+cpp の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_a74cad384c6592d1db0c3a8a50ae9ff9e}\label{class_keyboard_a74cad384c6592d1db0c3a8a50ae9ff9e}} 
+\index{Keyboard@{Keyboard}!get\+Trigger@{get\+Trigger}}
+\index{get\+Trigger@{get\+Trigger}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{get\+Trigger()}{getTrigger()}}
+{\footnotesize\ttfamily bool Keyboard\+::get\+Trigger (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+トリガー状態取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & トリガー状態を確認したいキーボードボタン\+ID \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 押した瞬間はtrue \\
+\hline
+\end{DoxyRetVals}
+
+
+ Keyboard.\+cpp の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_a5de6d3cc2a2a6ac69945f7075d58547d}\label{class_keyboard_a5de6d3cc2a2a6ac69945f7075d58547d}} 
+\index{Keyboard@{Keyboard}!Init@{Init}}
+\index{Init@{Init}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Keyboard\+::\+Init (\begin{DoxyParamCaption}\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Instance,  }\item[{H\+W\+ND}]{h\+Wnd }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em h\+Instance} & インスタンスハンドル \\
+\hline
+{\em h\+Wnd} & ウィンドウハンドル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em H\+R\+E\+S\+U\+LT} & エラーチェック用 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Keyboard.\+cpp の 59 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_adb5e03226ff7b5217b47db119825fb08}\label{class_keyboard_adb5e03226ff7b5217b47db119825fb08}} 
+\index{Keyboard@{Keyboard}!Init\+Direct\+Input@{Init\+Direct\+Input}}
+\index{Init\+Direct\+Input@{Init\+Direct\+Input}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{Init\+Direct\+Input()}{InitDirectInput()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Keyboard\+::\+Init\+Direct\+Input (\begin{DoxyParamCaption}\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Instance,  }\item[{H\+W\+ND}]{h\+Wnd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Direct\+Input初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em h\+Instance} & インスタンスハンドル \\
+\hline
+{\em h\+Wnd} & ウィンドウハンドル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em H\+R\+E\+S\+U\+LT} & エラーチェック用 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Keyboard.\+cpp の 166 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_aeeed458a75ddc291f6742d317a99766d}\label{class_keyboard_aeeed458a75ddc291f6742d317a99766d}} 
+\index{Keyboard@{Keyboard}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Keyboard\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Keyboard.\+cpp の 99 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_a071313d0ae6538e9307ff6a059aa9197}\label{class_keyboard_a071313d0ae6538e9307ff6a059aa9197}} 
+\index{Keyboard@{Keyboard}!Update@{Update}}
+\index{Update@{Update}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Keyboard\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Keyboard.\+cpp の 116 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_keyboard_a490b43137055dd864119b4a37966445b}\label{class_keyboard_a490b43137055dd864119b4a37966445b}} 
+\index{Keyboard@{Keyboard}!direct\+\_\+input\+\_\+@{direct\+\_\+input\+\_\+}}
+\index{direct\+\_\+input\+\_\+@{direct\+\_\+input\+\_\+}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{direct\+\_\+input\+\_\+}{direct\_input\_}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T\+I\+N\+P\+U\+T8 Keyboard\+::direct\+\_\+input\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Direct\+Inputオブジェクト 
+
+
+
+ Keyboard.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_a7d90181edbea0aaeb30b734b603f4fe1}\label{class_keyboard_a7d90181edbea0aaeb30b734b603f4fe1}} 
+\index{Keyboard@{Keyboard}!I\+N\+P\+U\+T\+\_\+\+V\+E\+R\+S\+I\+ON@{I\+N\+P\+U\+T\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{I\+N\+P\+U\+T\+\_\+\+V\+E\+R\+S\+I\+ON@{I\+N\+P\+U\+T\+\_\+\+V\+E\+R\+S\+I\+ON}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{I\+N\+P\+U\+T\+\_\+\+V\+E\+R\+S\+I\+ON}{INPUT\_VERSION}}
+{\footnotesize\ttfamily const D\+W\+O\+RD Keyboard\+::\+I\+N\+P\+U\+T\+\_\+\+V\+E\+R\+S\+I\+ON = 0x0800\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+ダイレクトインプットバージョン 
+
+
+
+ Keyboard.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_a5479f751fc72ea8e1a89a0e0c3ac3141}\label{class_keyboard_a5479f751fc72ea8e1a89a0e0c3ac3141}} 
+\index{Keyboard@{Keyboard}!key\+\_\+state\+\_\+@{key\+\_\+state\+\_\+}}
+\index{key\+\_\+state\+\_\+@{key\+\_\+state\+\_\+}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{key\+\_\+state\+\_\+}{key\_state\_}}
+{\footnotesize\ttfamily B\+Y\+TE Keyboard\+::key\+\_\+state\+\_\+\mbox{[}\mbox{\hyperlink{class_keyboard_ab151afccd1372a53748e225c7c98e65e}{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+キーボードの入力情報 
+
+
+
+ Keyboard.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_ad3dfea2e28ccb3491f2b8f525fd43d16}\label{class_keyboard_ad3dfea2e28ccb3491f2b8f525fd43d16}} 
+\index{Keyboard@{Keyboard}!key\+\_\+state\+\_\+release\+\_\+@{key\+\_\+state\+\_\+release\+\_\+}}
+\index{key\+\_\+state\+\_\+release\+\_\+@{key\+\_\+state\+\_\+release\+\_\+}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{key\+\_\+state\+\_\+release\+\_\+}{key\_state\_release\_}}
+{\footnotesize\ttfamily B\+Y\+TE Keyboard\+::key\+\_\+state\+\_\+release\+\_\+\mbox{[}\mbox{\hyperlink{class_keyboard_ab151afccd1372a53748e225c7c98e65e}{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+キーボードのリリース情報 
+
+
+
+ Keyboard.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_a98cd407cc6d5a7a4d8676b887149110f}\label{class_keyboard_a98cd407cc6d5a7a4d8676b887149110f}} 
+\index{Keyboard@{Keyboard}!key\+\_\+state\+\_\+repeat\+\_\+@{key\+\_\+state\+\_\+repeat\+\_\+}}
+\index{key\+\_\+state\+\_\+repeat\+\_\+@{key\+\_\+state\+\_\+repeat\+\_\+}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{key\+\_\+state\+\_\+repeat\+\_\+}{key\_state\_repeat\_}}
+{\footnotesize\ttfamily B\+Y\+TE Keyboard\+::key\+\_\+state\+\_\+repeat\+\_\+\mbox{[}\mbox{\hyperlink{class_keyboard_ab151afccd1372a53748e225c7c98e65e}{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+キーボードのリピート情報 
+
+
+
+ Keyboard.\+h の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_a00b5e2a9b2071056ba3fe1ba07231a7b}\label{class_keyboard_a00b5e2a9b2071056ba3fe1ba07231a7b}} 
+\index{Keyboard@{Keyboard}!key\+\_\+state\+\_\+trigger\+\_\+@{key\+\_\+state\+\_\+trigger\+\_\+}}
+\index{key\+\_\+state\+\_\+trigger\+\_\+@{key\+\_\+state\+\_\+trigger\+\_\+}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{key\+\_\+state\+\_\+trigger\+\_\+}{key\_state\_trigger\_}}
+{\footnotesize\ttfamily B\+Y\+TE Keyboard\+::key\+\_\+state\+\_\+trigger\+\_\+\mbox{[}\mbox{\hyperlink{class_keyboard_ab151afccd1372a53748e225c7c98e65e}{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+キーボードのトリガー情報 
+
+
+
+ Keyboard.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_aa903ad645e8801546cacb1ad646b2ecc}\label{class_keyboard_aa903ad645e8801546cacb1ad646b2ecc}} 
+\index{Keyboard@{Keyboard}!keyboard\+\_\+@{keyboard\+\_\+}}
+\index{keyboard\+\_\+@{keyboard\+\_\+}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{keyboard\+\_\+}{keyboard\_}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T\+I\+N\+P\+U\+T\+D\+E\+V\+I\+C\+E8 Keyboard\+::keyboard\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+入力デバイス(キーボード) 
+
+
+
+ Keyboard.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_a1093ea18b208f9f645eb282acc8b874e}\label{class_keyboard_a1093ea18b208f9f645eb282acc8b874e}} 
+\index{Keyboard@{Keyboard}!L\+I\+M\+I\+T\+\_\+\+C\+O\+U\+N\+T\+\_\+\+R\+E\+P\+E\+AT@{L\+I\+M\+I\+T\+\_\+\+C\+O\+U\+N\+T\+\_\+\+R\+E\+P\+E\+AT}}
+\index{L\+I\+M\+I\+T\+\_\+\+C\+O\+U\+N\+T\+\_\+\+R\+E\+P\+E\+AT@{L\+I\+M\+I\+T\+\_\+\+C\+O\+U\+N\+T\+\_\+\+R\+E\+P\+E\+AT}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{L\+I\+M\+I\+T\+\_\+\+C\+O\+U\+N\+T\+\_\+\+R\+E\+P\+E\+AT}{LIMIT\_COUNT\_REPEAT}}
+{\footnotesize\ttfamily const int Keyboard\+::\+L\+I\+M\+I\+T\+\_\+\+C\+O\+U\+N\+T\+\_\+\+R\+E\+P\+E\+AT = 20\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+リピートカウントリミット 
+
+
+
+ Keyboard.\+h の 32 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_ab151afccd1372a53748e225c7c98e65e}\label{class_keyboard_ab151afccd1372a53748e225c7c98e65e}} 
+\index{Keyboard@{Keyboard}!M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM@{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}}
+\index{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM@{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}{MAX\_KEY\_NUM}}
+{\footnotesize\ttfamily const int Keyboard\+::\+M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM = 256\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+キーの最大数 
+
+
+
+ Keyboard.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_keyboard_a1f97dc50d345892d74a8960d79b7d6bc}\label{class_keyboard_a1f97dc50d345892d74a8960d79b7d6bc}} 
+\index{Keyboard@{Keyboard}!repeat\+\_\+counter\+\_\+@{repeat\+\_\+counter\+\_\+}}
+\index{repeat\+\_\+counter\+\_\+@{repeat\+\_\+counter\+\_\+}!Keyboard@{Keyboard}}
+\subsubsection{\texorpdfstring{repeat\+\_\+counter\+\_\+}{repeat\_counter\_}}
+{\footnotesize\ttfamily int Keyboard\+::repeat\+\_\+counter\+\_\+\mbox{[}\mbox{\hyperlink{class_keyboard_ab151afccd1372a53748e225c7c98e65e}{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+N\+UM}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+リピートカウンター 
+
+
+
+ Keyboard.\+h の 45 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Input/\mbox{\hyperlink{_keyboard_8h}{Keyboard.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Input/\+Source/\mbox{\hyperlink{_keyboard_8cpp}{Keyboard.\+cpp}}\end{DoxyCompactItemize}

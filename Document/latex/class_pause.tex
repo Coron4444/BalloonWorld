@@ -1,0 +1,616 @@
+\hypertarget{class_pause}{}\section{Pause クラス}
+\label{class_pause}\index{Pause@{Pause}}
+
+
+ポーズ\+Class  
+
+
+
+
+{\ttfamily \#include $<$Pause.\+h$>$}
+
+
+
+Pause 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pause__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_pause_a13a552c560a41cf0b17cbef35f8fece7}{Select\+Type}} \{ \newline
+\mbox{\hyperlink{class_pause_a13a552c560a41cf0b17cbef35f8fece7ab50339a10e1de285ac99d4c3990b8693}{Select\+Type\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_pause_a13a552c560a41cf0b17cbef35f8fece7a2f453cfe638e57e27bb0c9512436111e}{Select\+Type\+::\+C\+O\+N\+T\+I\+N\+UE}}, 
+\mbox{\hyperlink{class_pause_a13a552c560a41cf0b17cbef35f8fece7a1104c54a9ec6549e4ef9562b687596fb}{Select\+Type\+::\+R\+E\+S\+T\+A\+RT}}, 
+\mbox{\hyperlink{class_pause_a13a552c560a41cf0b17cbef35f8fece7a5dfd352dd6b7a5d118237fcf1e19fcc1}{Select\+Type\+::\+Q\+U\+IT}}, 
+\newline
+\mbox{\hyperlink{class_pause_a13a552c560a41cf0b17cbef35f8fece7a26a4b44a837bf97b972628509912b4a5}{Select\+Type\+::\+M\+AX}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_pause_ad0dfae63dc2370deb96d5fde4fffe1df}{get\+Is\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em 有効フラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pause_abdc2f8eb5a953b807d95b15529b82ac1}{set\+Is\+Enable}} (bool value)
+\begin{DoxyCompactList}\small\item\em 有効フラグ設定関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pause_a31d255e4ec7bd216ec0eb5f3fc14dcac}{get\+Is\+Decision}} ()
+\begin{DoxyCompactList}\small\item\em 決定フラグ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transform}{Transform}} $\ast$ \mbox{\hyperlink{class_pause_af6f43901ddcf224b3915e0248effce17}{getp\+Icon\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em アイコン変形取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pause_a13a552c560a41cf0b17cbef35f8fece7}{Select\+Type}} \mbox{\hyperlink{class_pause_a0c6bf0b0e82e2beace53808e3d08d45f}{get\+Select\+Type}} ()
+\begin{DoxyCompactList}\small\item\em 選択したタイプ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_pause_afd41b36ed24525fffa4acabde09eaa18}{get\+Character\+Color}} (int index)
+\begin{DoxyCompactList}\small\item\em 文字色取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pause_a0986aa6eb5fcf9375408b47150d6f611}{Init}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pause_aeb1d068bcff8e32feea81945e2202141}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_pause_a628fcc4e89bb7af4de4cbd1d52928cb7}{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R0}}
+\begin{DoxyCompactList}\small\item\em 文字色0 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_pause_af494ffad9e8f1e048d775a1ee285b488}{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R1}}
+\begin{DoxyCompactList}\small\item\em 文字色1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pause_a7a5bc88c879edac4ae9144b7cb6b1d2f}{Input}} ()
+\begin{DoxyCompactList}\small\item\em 入力関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_pause_a60151b941654da4a277df4082cc39588}{is\+\_\+enable\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em 有効フラグ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pause_a13a552c560a41cf0b17cbef35f8fece7}{Select\+Type}} \mbox{\hyperlink{class_pause_a15222e6a2aa9e359850e54edc3336cc0}{select\+\_\+type\+\_\+}} = \mbox{\hyperlink{class_pause_a13a552c560a41cf0b17cbef35f8fece7ab50339a10e1de285ac99d4c3990b8693}{Select\+Type\+::\+N\+O\+NE}}
+\begin{DoxyCompactList}\small\item\em 選択したタイプ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_pause_a8c3cdf04bc62da97b7d3cd3181e0d106}{icon\+\_\+transform\+\_\+}}
+\begin{DoxyCompactList}\small\item\em アイコン用変形 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_pause_ac930b4189cb78f16dfa388ae32ebc1e3}{character\+\_\+color\+\_\+}} \mbox{[}\mbox{\hyperlink{class_pause_a1f0cde57b638afcbe97baa0c0cbd6229}{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em 文字色 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ float $>$ \mbox{\hyperlink{class_pause_a75682108df2d095cc62c0106cc9a913b}{inter\+\_\+container\+\_\+}} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em 補間コンテナ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ float $>$\+::Iterator \mbox{\hyperlink{class_pause_ad99a99f12949db21eae5cfdaf75b79e6}{inter\+\_\+iter\+\_\+}} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em 補間イテレータ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const float \mbox{\hyperlink{class_pause_a1dd4a58b423386d95a848a52d9fb6ef2}{F\+R\+A\+M\+E\+\_\+\+S\+C\+A\+LE}} = 0.\+5f
+\begin{DoxyCompactList}\small\item\em フレーム拡縮 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_pause_a707447ebd78ae48e3d52bf226f0c8324}{I\+C\+O\+N\+\_\+\+S\+C\+A\+LE}} = 0.\+3f
+\begin{DoxyCompactList}\small\item\em アイコン拡縮 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_pause_aec0b6c71ab048313f574dfdb50b95f3b}{T\+O\+P\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}} = 40.\+0f
+\begin{DoxyCompactList}\small\item\em アイコンの\+Y上座標 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_pause_afe41dc7ec4e232145031759d84bbf1c1}{B\+O\+T\+T\+O\+M\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}} = -\/200.\+0f
+\begin{DoxyCompactList}\small\item\em アイコンの\+Y下座標 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_pause_a9a4d0e76c041957420854824cb1bc042}{A\+D\+D\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}} = 120.\+0f
+\begin{DoxyCompactList}\small\item\em アイコンの\+Y座標の変化量 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_pause_a1dd0b606e517fcc6bb8efe230d0c897d}{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}
+\begin{DoxyCompactList}\small\item\em 既定アイコン座標 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_pause_a17f47107051e4a01a5fef550bbe9edd1}{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+S\+E\+C\+O\+ND}} = 0.\+3f
+\begin{DoxyCompactList}\small\item\em 点滅秒数 \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{class_pause_a9c2be6415b80f755aea9b77572c31c69}{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+N\+UM}} = 8
+\begin{DoxyCompactList}\small\item\em 点滅数 \end{DoxyCompactList}\item 
+static const unsigned \mbox{\hyperlink{class_pause_a1f0cde57b638afcbe97baa0c0cbd6229}{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM}} = 3
+\begin{DoxyCompactList}\small\item\em 文字色数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+ポーズ\+Class 
+
+ポーズの\+Class 
+
+ Pause.\+h の 24 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_pause_a13a552c560a41cf0b17cbef35f8fece7}\label{class_pause_a13a552c560a41cf0b17cbef35f8fece7}} 
+\index{Pause@{Pause}!Select\+Type@{Select\+Type}}
+\index{Select\+Type@{Select\+Type}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{Select\+Type}{SelectType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_pause_a13a552c560a41cf0b17cbef35f8fece7}{Pause\+::\+Select\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Pause@{Pause}}\index{Pause@{Pause}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_pause_a13a552c560a41cf0b17cbef35f8fece7ab50339a10e1de285ac99d4c3990b8693}\label{class_pause_a13a552c560a41cf0b17cbef35f8fece7ab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+O\+N\+T\+I\+N\+UE@{C\+O\+N\+T\+I\+N\+UE}!Pause@{Pause}}\index{Pause@{Pause}!C\+O\+N\+T\+I\+N\+UE@{C\+O\+N\+T\+I\+N\+UE}}}\mbox{\Hypertarget{class_pause_a13a552c560a41cf0b17cbef35f8fece7a2f453cfe638e57e27bb0c9512436111e}\label{class_pause_a13a552c560a41cf0b17cbef35f8fece7a2f453cfe638e57e27bb0c9512436111e}} 
+C\+O\+N\+T\+I\+N\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+E\+S\+T\+A\+RT@{R\+E\+S\+T\+A\+RT}!Pause@{Pause}}\index{Pause@{Pause}!R\+E\+S\+T\+A\+RT@{R\+E\+S\+T\+A\+RT}}}\mbox{\Hypertarget{class_pause_a13a552c560a41cf0b17cbef35f8fece7a1104c54a9ec6549e4ef9562b687596fb}\label{class_pause_a13a552c560a41cf0b17cbef35f8fece7a1104c54a9ec6549e4ef9562b687596fb}} 
+R\+E\+S\+T\+A\+RT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Q\+U\+IT@{Q\+U\+IT}!Pause@{Pause}}\index{Pause@{Pause}!Q\+U\+IT@{Q\+U\+IT}}}\mbox{\Hypertarget{class_pause_a13a552c560a41cf0b17cbef35f8fece7a5dfd352dd6b7a5d118237fcf1e19fcc1}\label{class_pause_a13a552c560a41cf0b17cbef35f8fece7a5dfd352dd6b7a5d118237fcf1e19fcc1}} 
+Q\+U\+IT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Pause@{Pause}}\index{Pause@{Pause}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_pause_a13a552c560a41cf0b17cbef35f8fece7a26a4b44a837bf97b972628509912b4a5}\label{class_pause_a13a552c560a41cf0b17cbef35f8fece7a26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Pause.\+h の 30 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_pause_afd41b36ed24525fffa4acabde09eaa18}\label{class_pause_afd41b36ed24525fffa4acabde09eaa18}} 
+\index{Pause@{Pause}!get\+Character\+Color@{get\+Character\+Color}}
+\index{get\+Character\+Color@{get\+Character\+Color}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{get\+Character\+Color()}{getCharacterColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Pause\+::get\+Character\+Color (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+文字色取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em X\+Color4} & 文字色 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Pause.\+cpp の 104 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a31d255e4ec7bd216ec0eb5f3fc14dcac}\label{class_pause_a31d255e4ec7bd216ec0eb5f3fc14dcac}} 
+\index{Pause@{Pause}!get\+Is\+Decision@{get\+Is\+Decision}}
+\index{get\+Is\+Decision@{get\+Is\+Decision}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{get\+Is\+Decision()}{getIsDecision()}}
+{\footnotesize\ttfamily bool Pause\+::get\+Is\+Decision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+決定フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 決定フラグ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Pause.\+cpp の 81 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_ad0dfae63dc2370deb96d5fde4fffe1df}\label{class_pause_ad0dfae63dc2370deb96d5fde4fffe1df}} 
+\index{Pause@{Pause}!get\+Is\+Enable@{get\+Is\+Enable}}
+\index{get\+Is\+Enable@{get\+Is\+Enable}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{get\+Is\+Enable()}{getIsEnable()}}
+{\footnotesize\ttfamily bool Pause\+::get\+Is\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+有効フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em value} & 有効フラグ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Pause.\+cpp の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_af6f43901ddcf224b3915e0248effce17}\label{class_pause_af6f43901ddcf224b3915e0248effce17}} 
+\index{Pause@{Pause}!getp\+Icon\+Transform@{getp\+Icon\+Transform}}
+\index{getp\+Icon\+Transform@{getp\+Icon\+Transform}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{getp\+Icon\+Transform()}{getpIconTransform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}} $\ast$ Pause\+::getp\+Icon\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+アイコン変形取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Pause.\+cpp の 90 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a0c6bf0b0e82e2beace53808e3d08d45f}\label{class_pause_a0c6bf0b0e82e2beace53808e3d08d45f}} 
+\index{Pause@{Pause}!get\+Select\+Type@{get\+Select\+Type}}
+\index{get\+Select\+Type@{get\+Select\+Type}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{get\+Select\+Type()}{getSelectType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pause_a13a552c560a41cf0b17cbef35f8fece7}{Pause\+::\+Select\+Type}} Pause\+::get\+Select\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+選択したタイプ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Select\+Type} & 選択したタイプ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Pause.\+cpp の 97 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a0986aa6eb5fcf9375408b47150d6f611}\label{class_pause_a0986aa6eb5fcf9375408b47150d6f611}} 
+\index{Pause@{Pause}!Init@{Init}}
+\index{Init@{Init}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Pause\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$update} & 更新基底クラス \\
+\hline
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Pause.\+cpp の 114 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a7a5bc88c879edac4ae9144b7cb6b1d2f}\label{class_pause_a7a5bc88c879edac4ae9144b7cb6b1d2f}} 
+\index{Pause@{Pause}!Input@{Input}}
+\index{Input@{Input}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily void Pause\+::\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+入力関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Pause.\+cpp の 175 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_abdc2f8eb5a953b807d95b15529b82ac1}\label{class_pause_abdc2f8eb5a953b807d95b15529b82ac1}} 
+\index{Pause@{Pause}!set\+Is\+Enable@{set\+Is\+Enable}}
+\index{set\+Is\+Enable@{set\+Is\+Enable}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{set\+Is\+Enable()}{setIsEnable()}}
+{\footnotesize\ttfamily void Pause\+::set\+Is\+Enable (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+有効フラグ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 有効フラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Pause.\+cpp の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_aeb1d068bcff8e32feea81945e2202141}\label{class_pause_aeb1d068bcff8e32feea81945e2202141}} 
+\index{Pause@{Pause}!Update@{Update}}
+\index{Update@{Update}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Pause\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_aeeb51b7e7aa41fd0b16f8f7c016bdb55}{Game\+Object\+Null}}を再実装しています。
+
+
+
+ Pause.\+cpp の 131 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_pause_a9a4d0e76c041957420854824cb1bc042}\label{class_pause_a9a4d0e76c041957420854824cb1bc042}} 
+\index{Pause@{Pause}!A\+D\+D\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y@{A\+D\+D\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}}
+\index{A\+D\+D\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y@{A\+D\+D\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{A\+D\+D\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}{ADD\_ICON\_POSITION\_Y}}
+{\footnotesize\ttfamily const float Pause\+::\+A\+D\+D\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y = 120.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+アイコンの\+Y座標の変化量 
+
+
+
+ Pause.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a9c2be6415b80f755aea9b77572c31c69}\label{class_pause_a9c2be6415b80f755aea9b77572c31c69}} 
+\index{Pause@{Pause}!B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+N\+UM@{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+N\+UM}}
+\index{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+N\+UM@{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+N\+UM}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+N\+UM}{BLINKING\_NUM}}
+{\footnotesize\ttfamily const int Pause\+::\+B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+N\+UM = 8\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+点滅数 
+
+
+
+ Pause.\+h の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a17f47107051e4a01a5fef550bbe9edd1}\label{class_pause_a17f47107051e4a01a5fef550bbe9edd1}} 
+\index{Pause@{Pause}!B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+S\+E\+C\+O\+ND@{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+S\+E\+C\+O\+ND}}
+\index{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+S\+E\+C\+O\+ND@{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+S\+E\+C\+O\+ND}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+S\+E\+C\+O\+ND}{BLINKING\_SECOND}}
+{\footnotesize\ttfamily const float Pause\+::\+B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+S\+E\+C\+O\+ND = 0.\+3f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+点滅秒数 
+
+
+
+ Pause.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_afe41dc7ec4e232145031759d84bbf1c1}\label{class_pause_afe41dc7ec4e232145031759d84bbf1c1}} 
+\index{Pause@{Pause}!B\+O\+T\+T\+O\+M\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y@{B\+O\+T\+T\+O\+M\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}}
+\index{B\+O\+T\+T\+O\+M\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y@{B\+O\+T\+T\+O\+M\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{B\+O\+T\+T\+O\+M\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}{BOTTOM\_ICON\_POSITION\_Y}}
+{\footnotesize\ttfamily const float Pause\+::\+B\+O\+T\+T\+O\+M\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y = -\/200.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+アイコンの\+Y下座標 
+
+
+
+ Pause.\+h の 47 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a628fcc4e89bb7af4de4cbd1d52928cb7}\label{class_pause_a628fcc4e89bb7af4de4cbd1d52928cb7}} 
+\index{Pause@{Pause}!C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R0@{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R0}}
+\index{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R0@{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R0}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R0}{CHARACTER\_COLOR0}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Pause\+::\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+文字色0 
+
+
+
+ Pause.\+h の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_af494ffad9e8f1e048d775a1ee285b488}\label{class_pause_af494ffad9e8f1e048d775a1ee285b488}} 
+\index{Pause@{Pause}!C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R1@{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R1}}
+\index{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R1@{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R1}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R1}{CHARACTER\_COLOR1}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Pause\+::\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+文字色1 
+
+
+
+ Pause.\+h の 56 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_ac930b4189cb78f16dfa388ae32ebc1e3}\label{class_pause_ac930b4189cb78f16dfa388ae32ebc1e3}} 
+\index{Pause@{Pause}!character\+\_\+color\+\_\+@{character\+\_\+color\+\_\+}}
+\index{character\+\_\+color\+\_\+@{character\+\_\+color\+\_\+}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{character\+\_\+color\+\_\+}{character\_color\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Pause\+::character\+\_\+color\+\_\+\mbox{[}\mbox{\hyperlink{class_pause_a1f0cde57b638afcbe97baa0c0cbd6229}{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+文字色 
+
+
+
+ Pause.\+h の 66 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a1f0cde57b638afcbe97baa0c0cbd6229}\label{class_pause_a1f0cde57b638afcbe97baa0c0cbd6229}} 
+\index{Pause@{Pause}!C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM@{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM}}
+\index{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM@{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM}{CHARACTER\_COLOR\_NUM}}
+{\footnotesize\ttfamily const unsigned Pause\+::\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM = 3\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+文字色数 
+
+
+
+ Pause.\+h の 52 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a1dd0b606e517fcc6bb8efe230d0c897d}\label{class_pause_a1dd0b606e517fcc6bb8efe230d0c897d}} 
+\index{Pause@{Pause}!D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+ON@{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+ON@{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+ON}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+ON}{DEFAULT\_ICON\_POSITION}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Pause\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+ON\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+既定アイコン座標 
+
+
+
+ Pause.\+h の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a1dd4a58b423386d95a848a52d9fb6ef2}\label{class_pause_a1dd4a58b423386d95a848a52d9fb6ef2}} 
+\index{Pause@{Pause}!F\+R\+A\+M\+E\+\_\+\+S\+C\+A\+LE@{F\+R\+A\+M\+E\+\_\+\+S\+C\+A\+LE}}
+\index{F\+R\+A\+M\+E\+\_\+\+S\+C\+A\+LE@{F\+R\+A\+M\+E\+\_\+\+S\+C\+A\+LE}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{F\+R\+A\+M\+E\+\_\+\+S\+C\+A\+LE}{FRAME\_SCALE}}
+{\footnotesize\ttfamily const float Pause\+::\+F\+R\+A\+M\+E\+\_\+\+S\+C\+A\+LE = 0.\+5f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+フレーム拡縮 
+
+
+
+ Pause.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a707447ebd78ae48e3d52bf226f0c8324}\label{class_pause_a707447ebd78ae48e3d52bf226f0c8324}} 
+\index{Pause@{Pause}!I\+C\+O\+N\+\_\+\+S\+C\+A\+LE@{I\+C\+O\+N\+\_\+\+S\+C\+A\+LE}}
+\index{I\+C\+O\+N\+\_\+\+S\+C\+A\+LE@{I\+C\+O\+N\+\_\+\+S\+C\+A\+LE}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{I\+C\+O\+N\+\_\+\+S\+C\+A\+LE}{ICON\_SCALE}}
+{\footnotesize\ttfamily const float Pause\+::\+I\+C\+O\+N\+\_\+\+S\+C\+A\+LE = 0.\+3f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+アイコン拡縮 
+
+
+
+ Pause.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a8c3cdf04bc62da97b7d3cd3181e0d106}\label{class_pause_a8c3cdf04bc62da97b7d3cd3181e0d106}} 
+\index{Pause@{Pause}!icon\+\_\+transform\+\_\+@{icon\+\_\+transform\+\_\+}}
+\index{icon\+\_\+transform\+\_\+@{icon\+\_\+transform\+\_\+}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{icon\+\_\+transform\+\_\+}{icon\_transform\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}} Pause\+::icon\+\_\+transform\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+アイコン用変形 
+
+
+
+ Pause.\+h の 65 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a75682108df2d095cc62c0106cc9a913b}\label{class_pause_a75682108df2d095cc62c0106cc9a913b}} 
+\index{Pause@{Pause}!inter\+\_\+container\+\_\+@{inter\+\_\+container\+\_\+}}
+\index{inter\+\_\+container\+\_\+@{inter\+\_\+container\+\_\+}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{inter\+\_\+container\+\_\+}{inter\_container\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$float$>$ Pause\+::inter\+\_\+container\+\_\+\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+補間コンテナ 
+
+
+
+ Pause.\+h の 67 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_ad99a99f12949db21eae5cfdaf75b79e6}\label{class_pause_ad99a99f12949db21eae5cfdaf75b79e6}} 
+\index{Pause@{Pause}!inter\+\_\+iter\+\_\+@{inter\+\_\+iter\+\_\+}}
+\index{inter\+\_\+iter\+\_\+@{inter\+\_\+iter\+\_\+}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{inter\+\_\+iter\+\_\+}{inter\_iter\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$float$>$\+::Iterator Pause\+::inter\+\_\+iter\+\_\+\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+補間イテレータ 
+
+
+
+ Pause.\+h の 68 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a60151b941654da4a277df4082cc39588}\label{class_pause_a60151b941654da4a277df4082cc39588}} 
+\index{Pause@{Pause}!is\+\_\+enable\+\_\+@{is\+\_\+enable\+\_\+}}
+\index{is\+\_\+enable\+\_\+@{is\+\_\+enable\+\_\+}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{is\+\_\+enable\+\_\+}{is\_enable\_}}
+{\footnotesize\ttfamily bool Pause\+::is\+\_\+enable\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+有効フラグ 
+
+
+
+ Pause.\+h の 63 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_a15222e6a2aa9e359850e54edc3336cc0}\label{class_pause_a15222e6a2aa9e359850e54edc3336cc0}} 
+\index{Pause@{Pause}!select\+\_\+type\+\_\+@{select\+\_\+type\+\_\+}}
+\index{select\+\_\+type\+\_\+@{select\+\_\+type\+\_\+}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{select\+\_\+type\+\_\+}{select\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pause_a13a552c560a41cf0b17cbef35f8fece7}{Select\+Type}} Pause\+::select\+\_\+type\+\_\+ = \mbox{\hyperlink{class_pause_a13a552c560a41cf0b17cbef35f8fece7ab50339a10e1de285ac99d4c3990b8693}{Select\+Type\+::\+N\+O\+NE}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+選択したタイプ 
+
+
+
+ Pause.\+h の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_pause_aec0b6c71ab048313f574dfdb50b95f3b}\label{class_pause_aec0b6c71ab048313f574dfdb50b95f3b}} 
+\index{Pause@{Pause}!T\+O\+P\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y@{T\+O\+P\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}}
+\index{T\+O\+P\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y@{T\+O\+P\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}!Pause@{Pause}}
+\subsubsection{\texorpdfstring{T\+O\+P\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}{TOP\_ICON\_POSITION\_Y}}
+{\footnotesize\ttfamily const float Pause\+::\+T\+O\+P\+\_\+\+I\+C\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y = 40.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+アイコンの\+Y上座標 
+
+
+
+ Pause.\+h の 46 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/2\+D/\+Pause/\mbox{\hyperlink{_pause_8h}{Pause.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/2\+D/\+Pause/\+Source/\mbox{\hyperlink{_pause_8cpp}{Pause.\+cpp}}\end{DoxyCompactItemize}

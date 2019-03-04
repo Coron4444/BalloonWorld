@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: PlanePolygon クラス</title>
+<title>BalloonWorld: PlanePolygon クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -98,124 +98,95 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>平面ポリゴンClass  
+ <a href="class_plane_polygon.html#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a27987c23a242840b142e0fa11650daf6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a27987c23a242840b142e0fa11650daf6">PlanePolygon</a> (<a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a> color=<a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a>(1.0f, 1.0f, 1.0f, 1.0f), Vec2 plane_size=Vec2(1.0f, 1.0f))</td></tr>
-<tr class="separator:a27987c23a242840b142e0fa11650daf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac91d7ac1ceb00239f54b543690a78dab"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#ac91d7ac1ceb00239f54b543690a78dab">~PlanePolygon</a> ()</td></tr>
-<tr class="separator:ac91d7ac1ceb00239f54b543690a78dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f20691ee0feee4fa428f5d017d7062a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a2f20691ee0feee4fa428f5d017d7062a">Draw</a> ()</td></tr>
-<tr class="separator:a2f20691ee0feee4fa428f5d017d7062a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55307fc341641d7fd42fe2269acbd113"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a55307fc341641d7fd42fe2269acbd113">SetColor</a> (<a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a> color)</td></tr>
-<tr class="separator:a55307fc341641d7fd42fe2269acbd113"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a081458fcb9e758dd8be5b027c66a92ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a081458fcb9e758dd8be5b027c66a92ad">SetUV</a> (const <a class="el" href="class_texture_object.html">TextureObject</a> *texture, const int pattern_num=0)</td></tr>
-<tr class="separator:a081458fcb9e758dd8be5b027c66a92ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4f8f7b51acdb744231efd342d3b2734"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#ac4f8f7b51acdb744231efd342d3b2734">GetColor</a> ()</td></tr>
-<tr class="separator:ac4f8f7b51acdb744231efd342d3b2734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93bf115d1d918f4c6372ae760c19ce6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a93bf115d1d918f4c6372ae760c19ce6b">getColor</a> ()</td></tr>
+<tr class="memdesc:a93bf115d1d918f4c6372ae760c19ce6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">色取得関数  <a href="#a93bf115d1d918f4c6372ae760c19ce6b">[詳解]</a><br /></td></tr>
+<tr class="separator:a93bf115d1d918f4c6372ae760c19ce6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc578914c14b2648455e12d2d3724a07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#adc578914c14b2648455e12d2d3724a07">setColor</a> (<a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a> value)</td></tr>
+<tr class="memdesc:adc578914c14b2648455e12d2d3724a07"><td class="mdescLeft">&#160;</td><td class="mdescRight">色設定関数  <a href="#adc578914c14b2648455e12d2d3724a07">[詳解]</a><br /></td></tr>
+<tr class="separator:adc578914c14b2648455e12d2d3724a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a494068044805bdd4054bc69328c71d7f"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a494068044805bdd4054bc69328c71d7f">getMeshNum</a> ()</td></tr>
+<tr class="memdesc:a494068044805bdd4054bc69328c71d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ数取得関数  <a href="#a494068044805bdd4054bc69328c71d7f">[詳解]</a><br /></td></tr>
 <tr class="separator:a494068044805bdd4054bc69328c71d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a808087c9d82c0eb7cfb0709c9906e833"><td class="memItemLeft" align="right" valign="top">D3DMATERIAL9 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a808087c9d82c0eb7cfb0709c9906e833">GetMaterial</a> ()</td></tr>
-<tr class="separator:a808087c9d82c0eb7cfb0709c9906e833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa475e66d5cbd2c966d47d97dc253ae24"><td class="memItemLeft" align="right" valign="top">D3DMATERIAL9 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#aa475e66d5cbd2c966d47d97dc253ae24">getpMaterial</a> ()</td></tr>
+<tr class="memdesc:aa475e66d5cbd2c966d47d97dc253ae24"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル取得関数  <a href="#aa475e66d5cbd2c966d47d97dc253ae24">[詳解]</a><br /></td></tr>
+<tr class="separator:aa475e66d5cbd2c966d47d97dc253ae24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2591516a432a77b95932bbb076fad80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#af2591516a432a77b95932bbb076fad80">setUV</a> (<a class="el" href="class_texture_object.html">TextureObject</a> *texture, int pattern_num=0)</td></tr>
+<tr class="memdesc:af2591516a432a77b95932bbb076fad80"><td class="mdescLeft">&#160;</td><td class="mdescRight">UV設定関数  <a href="#af2591516a432a77b95932bbb076fad80">[詳解]</a><br /></td></tr>
+<tr class="separator:af2591516a432a77b95932bbb076fad80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace07dfd794f3f2b4fbd1fe4dea3cca96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#ace07dfd794f3f2b4fbd1fe4dea3cca96">Init</a> (<a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a> mesh_scale={1.0f, 1.0f}, XColor4 color={1.0f, 1.0f, 1.0f, 1.0f})</td></tr>
+<tr class="memdesc:ace07dfd794f3f2b4fbd1fe4dea3cca96"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#ace07dfd794f3f2b4fbd1fe4dea3cca96">[詳解]</a><br /></td></tr>
+<tr class="separator:ace07dfd794f3f2b4fbd1fe4dea3cca96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf0e9bf23d298371de64bfa4ab76c808"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#aaf0e9bf23d298371de64bfa4ab76c808">Uninit</a> ()</td></tr>
+<tr class="memdesc:aaf0e9bf23d298371de64bfa4ab76c808"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#aaf0e9bf23d298371de64bfa4ab76c808">[詳解]</a><br /></td></tr>
+<tr class="separator:aaf0e9bf23d298371de64bfa4ab76c808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f20691ee0feee4fa428f5d017d7062a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a2f20691ee0feee4fa428f5d017d7062a">Draw</a> ()</td></tr>
+<tr class="memdesc:a2f20691ee0feee4fa428f5d017d7062a"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画関数  <a href="#a2f20691ee0feee4fa428f5d017d7062a">[詳解]</a><br /></td></tr>
+<tr class="separator:a2f20691ee0feee4fa428f5d017d7062a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28ed1c8f4ca971b1a82e8c6567855779"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a28ed1c8f4ca971b1a82e8c6567855779">DrawWireFrame</a> ()</td></tr>
+<tr class="memdesc:a28ed1c8f4ca971b1a82e8c6567855779"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワイヤーフレームで描画関数  <a href="#a28ed1c8f4ca971b1a82e8c6567855779">[詳解]</a><br /></td></tr>
+<tr class="separator:a28ed1c8f4ca971b1a82e8c6567855779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 非公開メンバ関数</h2></td></tr>
-<tr class="memitem:aa002e213c1b0481c8b8ee56caadd270d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#aa002e213c1b0481c8b8ee56caadd270d">CreateVertex</a> (<a class="el" href="_vector3_d_8h.html#a9c2339f516cf07ce4753b8a99fab3791">Color4</a> color, <a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a> plane_size)</td></tr>
-<tr class="separator:aa002e213c1b0481c8b8ee56caadd270d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4636b29e9f115e00b16a52089508fb2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a4636b29e9f115e00b16a52089508fb2e">CreateVertex</a> (<a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a> mesh_scale, <a class="el" href="_vector3_d_8h.html#a9c2339f516cf07ce4753b8a99fab3791">Color4</a> color)</td></tr>
+<tr class="memdesc:a4636b29e9f115e00b16a52089508fb2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点作成関数  <a href="#a4636b29e9f115e00b16a52089508fb2e">[詳解]</a><br /></td></tr>
+<tr class="separator:a4636b29e9f115e00b16a52089508fb2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55840ace8bfa216c37f94e963b3fa5e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a55840ace8bfa216c37f94e963b3fa5e3">CreateIndex</a> ()</td></tr>
+<tr class="memdesc:a55840ace8bfa216c37f94e963b3fa5e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックス作成関数  <a href="#a55840ace8bfa216c37f94e963b3fa5e3">[詳解]</a><br /></td></tr>
 <tr class="separator:a55840ace8bfa216c37f94e963b3fa5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4539899c78a222ddc651e45943a7f55b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a4539899c78a222ddc651e45943a7f55b">CreateMaterial</a> ()</td></tr>
+<tr class="memdesc:a4539899c78a222ddc651e45943a7f55b"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル作成関数  <a href="#a4539899c78a222ddc651e45943a7f55b">[詳解]</a><br /></td></tr>
 <tr class="separator:a4539899c78a222ddc651e45943a7f55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88e476aa4b627d7242dc4f1b5eccf889"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a88e476aa4b627d7242dc4f1b5eccf889">AccessVRAM</a> ()</td></tr>
+<tr class="memdesc:a88e476aa4b627d7242dc4f1b5eccf889"><td class="mdescLeft">&#160;</td><td class="mdescRight">VRAMへアクセス関数  <a href="#a88e476aa4b627d7242dc4f1b5eccf889">[詳解]</a><br /></td></tr>
 <tr class="separator:a88e476aa4b627d7242dc4f1b5eccf889"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4ba95cfaf0aba506eeb58cdc80bfd46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#af4ba95cfaf0aba506eeb58cdc80bfd46">RegistrationVertex</a> ()</td></tr>
+<tr class="memdesc:af4ba95cfaf0aba506eeb58cdc80bfd46"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点バッファに登録関数  <a href="#af4ba95cfaf0aba506eeb58cdc80bfd46">[詳解]</a><br /></td></tr>
 <tr class="separator:af4ba95cfaf0aba506eeb58cdc80bfd46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a535d0222908f4a4a030d8b525b225554"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a535d0222908f4a4a030d8b525b225554">RegistrationIndex</a> ()</td></tr>
+<tr class="memdesc:a535d0222908f4a4a030d8b525b225554"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスバッファに登録関数  <a href="#a535d0222908f4a4a030d8b525b225554">[詳解]</a><br /></td></tr>
 <tr class="separator:a535d0222908f4a4a030d8b525b225554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 非公開変数類</h2></td></tr>
 <tr class="memitem:a81a3f3d50f00a8772bc47c1015789e7a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_renderer_direct_x9_1_1_v_e_r_t_e_x__3_d.html">RendererDirectX9::VERTEX_3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a81a3f3d50f00a8772bc47c1015789e7a">vertex_</a></td></tr>
+<tr class="memdesc:a81a3f3d50f00a8772bc47c1015789e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点  <a href="#a81a3f3d50f00a8772bc47c1015789e7a">[詳解]</a><br /></td></tr>
 <tr class="separator:a81a3f3d50f00a8772bc47c1015789e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75b4c7fca8f0b25f11bd59da087b5a07"><td class="memItemLeft" align="right" valign="top">std::vector&lt; WORD &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a75b4c7fca8f0b25f11bd59da087b5a07">index_</a></td></tr>
+<tr class="memdesc:a75b4c7fca8f0b25f11bd59da087b5a07"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックス  <a href="#a75b4c7fca8f0b25f11bd59da087b5a07">[詳解]</a><br /></td></tr>
 <tr class="separator:a75b4c7fca8f0b25f11bd59da087b5a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04d132486ffae704f7200718ae395170"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DVERTEXBUFFER9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a04d132486ffae704f7200718ae395170">vertex_buffer_</a></td></tr>
-<tr class="separator:a04d132486ffae704f7200718ae395170"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc95fd0cfa590e34aba0f7928539a0ff"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DINDEXBUFFER9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#adc95fd0cfa590e34aba0f7928539a0ff">index_buffer_</a></td></tr>
-<tr class="separator:adc95fd0cfa590e34aba0f7928539a0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1427bc1b198247eb0a82485f6d63c23e"><td class="memItemLeft" align="right" valign="top">D3DMATERIAL9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a1427bc1b198247eb0a82485f6d63c23e">material_</a></td></tr>
+<tr class="memdesc:a1427bc1b198247eb0a82485f6d63c23e"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル  <a href="#a1427bc1b198247eb0a82485f6d63c23e">[詳解]</a><br /></td></tr>
 <tr class="separator:a1427bc1b198247eb0a82485f6d63c23e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b07736e5b36983967d0fac67c39dc82"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DDEVICE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a9b07736e5b36983967d0fac67c39dc82">device_</a></td></tr>
+<tr class="memitem:a04d132486ffae704f7200718ae395170"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DVERTEXBUFFER9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a04d132486ffae704f7200718ae395170">vertex_buffer_</a> = nullptr</td></tr>
+<tr class="memdesc:a04d132486ffae704f7200718ae395170"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点バッファ  <a href="#a04d132486ffae704f7200718ae395170">[詳解]</a><br /></td></tr>
+<tr class="separator:a04d132486ffae704f7200718ae395170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc95fd0cfa590e34aba0f7928539a0ff"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DINDEXBUFFER9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#adc95fd0cfa590e34aba0f7928539a0ff">index_buffer_</a> = nullptr</td></tr>
+<tr class="memdesc:adc95fd0cfa590e34aba0f7928539a0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスバッファ  <a href="#adc95fd0cfa590e34aba0f7928539a0ff">[詳解]</a><br /></td></tr>
+<tr class="separator:adc95fd0cfa590e34aba0f7928539a0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b07736e5b36983967d0fac67c39dc82"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DDEVICE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#a9b07736e5b36983967d0fac67c39dc82">device_</a> = nullptr</td></tr>
+<tr class="memdesc:a9b07736e5b36983967d0fac67c39dc82"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイス  <a href="#a9b07736e5b36983967d0fac67c39dc82">[詳解]</a><br /></td></tr>
 <tr class="separator:a9b07736e5b36983967d0fac67c39dc82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 静的非公開変数類</h2></td></tr>
 <tr class="memitem:ad79c2128868044fb495b70ee08c65e8c"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plane_polygon.html#ad79c2128868044fb495b70ee08c65e8c">PRIMITIVE_NUM</a> = 2</td></tr>
+<tr class="memdesc:ad79c2128868044fb495b70ee08c65e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">プリミティブ数  <a href="#ad79c2128868044fb495b70ee08c65e8c">[詳解]</a><br /></td></tr>
 <tr class="separator:ad79c2128868044fb495b70ee08c65e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00044">44</a> 行目に定義があります。</p>
-</div><h2 class="groupheader">構築子と解体子</h2>
-<a id="a27987c23a242840b142e0fa11650daf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27987c23a242840b142e0fa11650daf6">&#9670;&nbsp;</a></span>PlanePolygon()</h2>
+<div class="textblock"><p>平面ポリゴンClass </p>
+<p>平面のポリゴンClass </p>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">PlanePolygon::PlanePolygon </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a>&#160;</td>
-          <td class="paramname"><em>color</em> = <code><a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a>&#160;(1.0f,&#160;1.0f,&#160;1.0f,&#160;1.0f)</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a>&#160;</td>
-          <td class="paramname"><em>plane_size</em> = <code><a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a>&#160;(1.0f,&#160;1.0f)</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00048">48</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ac91d7ac1ceb00239f54b543690a78dab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac91d7ac1ceb00239f54b543690a78dab">&#9670;&nbsp;</a></span>~PlanePolygon()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">PlanePolygon::~PlanePolygon </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00076">76</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<h2 class="groupheader">関数詳解</h2>
+<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00024">24</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
 <a id="a88e476aa4b627d7242dc4f1b5eccf889"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88e476aa4b627d7242dc4f1b5eccf889">&#9670;&nbsp;</a></span>AccessVRAM()</h2>
 
@@ -239,7 +210,21 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00234">234</a> 行目に定義があります。</p>
+<p>VRAMへアクセス関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00183">183</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -266,7 +251,21 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00192">192</a> 行目に定義があります。</p>
+<p>インデックス作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00153">153</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -293,12 +292,26 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00208">208</a> 行目に定義があります。</p>
+<p>マテリアル作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00163">163</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aa002e213c1b0481c8b8ee56caadd270d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa002e213c1b0481c8b8ee56caadd270d">&#9670;&nbsp;</a></span>CreateVertex()</h2>
+<a id="a4636b29e9f115e00b16a52089508fb2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4636b29e9f115e00b16a52089508fb2e">&#9670;&nbsp;</a></span>CreateVertex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -309,14 +322,14 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
         <tr>
           <td class="memname">void PlanePolygon::CreateVertex </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#a9c2339f516cf07ce4753b8a99fab3791">Color4</a>&#160;</td>
-          <td class="paramname"><em>color</em>, </td>
+          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a>&#160;</td>
+          <td class="paramname"><em>mesh_scale</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a>&#160;</td>
-          <td class="paramname"><em>plane_size</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#a9c2339f516cf07ce4753b8a99fab3791">Color4</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -331,7 +344,22 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00167">167</a> 行目に定義があります。</p>
+<p>頂点作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh_scale</td><td>メッシュ拡縮 </td></tr>
+    <tr><td class="paramname">color</td><td>色 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00134">134</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -350,61 +378,85 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00129">129</a> 行目に定義があります。</p>
+<p>描画関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00104">104</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ac4f8f7b51acdb744231efd342d3b2734"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4f8f7b51acdb744231efd342d3b2734">&#9670;&nbsp;</a></span>GetColor()</h2>
+<a id="a28ed1c8f4ca971b1a82e8c6567855779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28ed1c8f4ca971b1a82e8c6567855779">&#9670;&nbsp;</a></span>DrawWireFrame()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a> PlanePolygon::GetColor </td>
+          <td class="memname">void PlanePolygon::DrawWireFrame </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00072">72</a> 行目に定義があります。</p>
+<p>ワイヤーフレームで描画関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a808087c9d82c0eb7cfb0709c9906e833"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a808087c9d82c0eb7cfb0709c9906e833">&#9670;&nbsp;</a></span>GetMaterial()</h2>
+<a id="a93bf115d1d918f4c6372ae760c19ce6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93bf115d1d918f4c6372ae760c19ce6b">&#9670;&nbsp;</a></span>getColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">D3DMATERIAL9* PlanePolygon::GetMaterial </td>
+          <td class="memname"><a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a> PlanePolygon::getColor </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00075">75</a> 行目に定義があります。</p>
+<p>色取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">XColor4</td><td>色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00027">27</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -413,9 +465,6 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned PlanePolygon::getMeshNum </td>
@@ -424,14 +473,101 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00074">74</a> 行目に定義があります。</p>
+<p>メッシュ数取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">unsigned</td><td>メッシュ数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00047">47</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa475e66d5cbd2c966d47d97dc253ae24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa475e66d5cbd2c966d47d97dc253ae24">&#9670;&nbsp;</a></span>getpMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3DMATERIAL9 * PlanePolygon::getpMaterial </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>マテリアル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">D3DMATERIAL9*</td><td>マテリアル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00054">54</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ace07dfd794f3f2b4fbd1fe4dea3cca96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace07dfd794f3f2b4fbd1fe4dea3cca96">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlanePolygon::Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a>&#160;</td>
+          <td class="paramname"><em>mesh_scale</em> = <code>{1.0f,&#160;1.0f}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a>&#160;</td>
+          <td class="paramname"><em>color</em> = <code>{1.0f,&#160;1.0f,&#160;1.0f,&#160;1.0f}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh_scale</td><td>メッシュ拡縮 </td></tr>
+    <tr><td class="paramname">color</td><td>色 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00079">79</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -458,7 +594,21 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00306">306</a> 行目に定義があります。</p>
+<p>インデックスバッファに登録関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00240">240</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -485,46 +635,74 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00276">276</a> 行目に定義があります。</p>
+<p>頂点バッファに登録関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00217">217</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a55307fc341641d7fd42fe2269acbd113"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55307fc341641d7fd42fe2269acbd113">&#9670;&nbsp;</a></span>SetColor()</h2>
+<a id="adc578914c14b2648455e12d2d3724a07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc578914c14b2648455e12d2d3724a07">&#9670;&nbsp;</a></span>setColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void PlanePolygon::SetColor </td>
+          <td class="memname">void PlanePolygon::setColor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a>&#160;</td>
-          <td class="paramname"><em>color</em></td><td>)</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00093">93</a> 行目に定義があります。</p>
+<p>色設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>色 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a081458fcb9e758dd8be5b027c66a92ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a081458fcb9e758dd8be5b027c66a92ad">&#9670;&nbsp;</a></span>SetUV()</h2>
+<a id="af2591516a432a77b95932bbb076fad80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2591516a432a77b95932bbb076fad80">&#9670;&nbsp;</a></span>setUV()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void PlanePolygon::SetUV </td>
+          <td class="memname">void PlanePolygon::setUV </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_texture_object.html">TextureObject</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_texture_object.html">TextureObject</a> *&#160;</td>
           <td class="paramname"><em>texture</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>pattern_num</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
@@ -535,7 +713,55 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00111">111</a> 行目に定義があります。</p>
+<p>UV設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*texture</td><td>テクスチャオブジェクト </td></tr>
+    <tr><td class="paramname">pattern_num</td><td>パターン数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">D3DMATERIAL9*</td><td>マテリアル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00061">61</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aaf0e9bf23d298371de64bfa4ab76c808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf0e9bf23d298371de64bfa4ab76c808">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlanePolygon::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a> の <a class="el" href="_plane_polygon_8cpp_source.html#l00096">96</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -550,7 +776,7 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">LPDIRECT3DDEVICE9 PlanePolygon::device_</td>
+          <td class="memname">LPDIRECT3DDEVICE9 PlanePolygon::device_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -560,7 +786,9 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00099">99</a> 行目に定義があります。</p>
+<p>デバイス </p>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00042">42</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -584,7 +812,9 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00094">94</a> 行目に定義があります。</p>
+<p>インデックス </p>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00038">38</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -598,7 +828,7 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">LPDIRECT3DINDEXBUFFER9 PlanePolygon::index_buffer_</td>
+          <td class="memname">LPDIRECT3DINDEXBUFFER9 PlanePolygon::index_buffer_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -608,7 +838,9 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00097">97</a> 行目に定義があります。</p>
+<p>インデックスバッファ </p>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00041">41</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -632,7 +864,9 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00098">98</a> 行目に定義があります。</p>
+<p>マテリアル </p>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00039">39</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -656,7 +890,9 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00049">49</a> 行目に定義があります。</p>
+<p>プリミティブ数 </p>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00030">30</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -680,7 +916,9 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00093">93</a> 行目に定義があります。</p>
+<p>頂点 </p>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00037">37</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -694,7 +932,7 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">LPDIRECT3DVERTEXBUFFER9 PlanePolygon::vertex_buffer_</td>
+          <td class="memname">LPDIRECT3DVERTEXBUFFER9 PlanePolygon::vertex_buffer_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -704,13 +942,15 @@ $(document).ready(function(){initNavTree('class_plane_polygon.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00096">96</a> 行目に定義があります。</p>
+<p>頂点バッファ </p>
+
+<p class="definition"> <a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a> の <a class="el" href="_plane_polygon_8h_source.html#l00040">40</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Polygon/PlanePolygon/<a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Polygon/PlanePolygon/<a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Resource/Polygon/<a class="el" href="_plane_polygon_8h_source.html">PlanePolygon.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Resource/Polygon/Source/<a class="el" href="_plane_polygon_8cpp_source.html">PlanePolygon.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

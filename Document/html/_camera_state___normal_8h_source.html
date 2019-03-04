@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/Camera/CameraState_Normal.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_camera_state___normal_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">CameraState_Normal.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_camera_state___normal_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span><span class="comment">//================================================================================</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef _CAMERA_STATE_NORMAL_H_</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define _CAMERA_STATE_NORMAL_H_</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// インクルード文</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_camera_8h.html">Camera.h</a>&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// クラス宣言</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span><a class="code" href="class_game_object_base.html">GameObjectBase</a>;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//************************************************************                                                         </span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span><span class="comment">//************************************************************</span></div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_camera_state___normal.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_camera_state___normal.html">CameraState_Normal</a> : <span class="keyword">public</span> <a class="code" href="class_camera_1_1_state.html">Camera::State</a></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// 定数</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_camera_state___normal.html#acd086e43e51154cb0bff449ea39db79c">   37</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_camera_state___normal.html#acd086e43e51154cb0bff449ea39db79c">TRANSLATION_SPEED</a>;   </div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_camera_state___normal.html#a793965d8e28c23dc9393f2f2657ebaee">   38</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_camera_state___normal.html#a793965d8e28c23dc9393f2f2657ebaee">ROTATION_SPEED</a>;      </div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_camera_state___normal.html#a1cc19e3c91f60ff2d61ba13dff3fa038">   39</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_camera_state___normal.html#a1cc19e3c91f60ff2d61ba13dff3fa038">POSITION_Y</a>;          </div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_camera_state___normal.html#a4a606caae109107cc222287620b7e37d">   40</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_camera_state___normal.html#a4a606caae109107cc222287620b7e37d">GAZING_POINT_Y</a>;      </div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// 変数</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_camera_state___normal.html#aa7b4ddcfeca36912e3236c7532e2e8eb">   47</a></span>&#160;    <a class="code" href="class_vector3_d.html">Vector3D</a> <a class="code" href="class_camera_state___normal.html#aa7b4ddcfeca36912e3236c7532e2e8eb">lenght_</a>;                           </div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_camera_state___normal.html#ab55771b7c607d086c919fc761aca5399">   48</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_camera_state___normal.html#ab55771b7c607d086c919fc761aca5399">rotation_speed_</a>;                      </div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">// 関数</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera_state___normal.html#a9e08312abffe36e42e53decdd015f079">Init</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera_state___normal.html#a456267d93f83419f635c6e5c692a79bd">Uninit</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera_state___normal.html#a52b73e55084b36b1d085b62dc8f15b0a">Update</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera_state___normal.html#a8989cddf35141ae6b875393755479c4c">InputTranslation</a>();</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera_state___normal.html#acaaa5e148b8ce2769a54fe13892ae3bd">InputRotation</a>();</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_camera_state___normal_html_a793965d8e28c23dc9393f2f2657ebaee"><div class="ttname"><a href="class_camera_state___normal.html#a793965d8e28c23dc9393f2f2657ebaee">CameraState_Normal::ROTATION_SPEED</a></div><div class="ttdeci">static const float ROTATION_SPEED</div><div class="ttdoc">回転速度 </div><div class="ttdef"><b>Definition:</b> <a href="_camera_state___normal_8h_source.html#l00038">CameraState_Normal.h:38</a></div></div>
+<div class="ttc" id="class_camera_state___normal_html_aa7b4ddcfeca36912e3236c7532e2e8eb"><div class="ttname"><a href="class_camera_state___normal.html#aa7b4ddcfeca36912e3236c7532e2e8eb">CameraState_Normal::lenght_</a></div><div class="ttdeci">Vector3D lenght_</div><div class="ttdoc">距離 </div><div class="ttdef"><b>Definition:</b> <a href="_camera_state___normal_8h_source.html#l00047">CameraState_Normal.h:47</a></div></div>
+<div class="ttc" id="class_camera_state___normal_html_a1cc19e3c91f60ff2d61ba13dff3fa038"><div class="ttname"><a href="class_camera_state___normal.html#a1cc19e3c91f60ff2d61ba13dff3fa038">CameraState_Normal::POSITION_Y</a></div><div class="ttdeci">static const float POSITION_Y</div><div class="ttdoc">Y座標 </div><div class="ttdef"><b>Definition:</b> <a href="_camera_state___normal_8h_source.html#l00039">CameraState_Normal.h:39</a></div></div>
+<div class="ttc" id="class_camera_state___normal_html_a8989cddf35141ae6b875393755479c4c"><div class="ttname"><a href="class_camera_state___normal.html#a8989cddf35141ae6b875393755479c4c">CameraState_Normal::InputTranslation</a></div><div class="ttdeci">void InputTranslation()</div><div class="ttdoc">平行移動入力関数 </div><div class="ttdef"><b>Definition:</b> <a href="_camera_state___normal_8cpp_source.html#l00054">CameraState_Normal.cpp:54</a></div></div>
+<div class="ttc" id="class_camera_state___normal_html_a9e08312abffe36e42e53decdd015f079"><div class="ttname"><a href="class_camera_state___normal.html#a9e08312abffe36e42e53decdd015f079">CameraState_Normal::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">初期化関数 </div><div class="ttdef"><b>Definition:</b> <a href="_camera_state___normal_8cpp_source.html#l00032">CameraState_Normal.cpp:32</a></div></div>
+<div class="ttc" id="class_camera_state___normal_html_ab55771b7c607d086c919fc761aca5399"><div class="ttname"><a href="class_camera_state___normal.html#ab55771b7c607d086c919fc761aca5399">CameraState_Normal::rotation_speed_</a></div><div class="ttdeci">float rotation_speed_</div><div class="ttdoc">回転速度 </div><div class="ttdef"><b>Definition:</b> <a href="_camera_state___normal_8h_source.html#l00048">CameraState_Normal.h:48</a></div></div>
+<div class="ttc" id="class_camera_1_1_state_html"><div class="ttname"><a href="class_camera_1_1_state.html">Camera::State</a></div><div class="ttdoc">カメラステートClass </div><div class="ttdef"><b>Definition:</b> <a href="_camera_8h_source.html#l00028">Camera.h:28</a></div></div>
+<div class="ttc" id="class_camera_state___normal_html_acd086e43e51154cb0bff449ea39db79c"><div class="ttname"><a href="class_camera_state___normal.html#acd086e43e51154cb0bff449ea39db79c">CameraState_Normal::TRANSLATION_SPEED</a></div><div class="ttdeci">static const float TRANSLATION_SPEED</div><div class="ttdoc">速度 </div><div class="ttdef"><b>Definition:</b> <a href="_camera_state___normal_8h_source.html#l00037">CameraState_Normal.h:37</a></div></div>
+<div class="ttc" id="class_vector3_d_html"><div class="ttname"><a href="class_vector3_d.html">Vector3D</a></div><div class="ttdoc">3DベクトルClass </div><div class="ttdef"><b>Definition:</b> <a href="_vector3_d_8h_source.html#l00038">Vector3D.h:38</a></div></div>
+<div class="ttc" id="class_camera_state___normal_html_acaaa5e148b8ce2769a54fe13892ae3bd"><div class="ttname"><a href="class_camera_state___normal.html#acaaa5e148b8ce2769a54fe13892ae3bd">CameraState_Normal::InputRotation</a></div><div class="ttdeci">void InputRotation()</div><div class="ttdoc">回転入力関数 </div><div class="ttdef"><b>Definition:</b> <a href="_camera_state___normal_8cpp_source.html#l00090">CameraState_Normal.cpp:90</a></div></div>
+<div class="ttc" id="_camera_8h_html"><div class="ttname"><a href="_camera_8h.html">Camera.h</a></div><div class="ttdoc">カメラClass </div></div>
+<div class="ttc" id="class_camera_state___normal_html_a456267d93f83419f635c6e5c692a79bd"><div class="ttname"><a href="class_camera_state___normal.html#a456267d93f83419f635c6e5c692a79bd">CameraState_Normal::Uninit</a></div><div class="ttdeci">void Uninit() override</div><div class="ttdoc">終了関数 </div><div class="ttdef"><b>Definition:</b> <a href="_camera_state___normal_8cpp_source.html#l00040">CameraState_Normal.cpp:40</a></div></div>
+<div class="ttc" id="class_camera_state___normal_html_a4a606caae109107cc222287620b7e37d"><div class="ttname"><a href="class_camera_state___normal.html#a4a606caae109107cc222287620b7e37d">CameraState_Normal::GAZING_POINT_Y</a></div><div class="ttdeci">static const float GAZING_POINT_Y</div><div class="ttdoc">注視点のY座標 </div><div class="ttdef"><b>Definition:</b> <a href="_camera_state___normal_8h_source.html#l00040">CameraState_Normal.h:40</a></div></div>
+<div class="ttc" id="class_game_object_base_html"><div class="ttname"><a href="class_game_object_base.html">GameObjectBase</a></div><div class="ttdoc">ゲームオブジェクトBaseClass </div><div class="ttdef"><b>Definition:</b> <a href="_game_object_base_8h_source.html#l00026">GameObjectBase.h:26</a></div></div>
+<div class="ttc" id="class_camera_state___normal_html_a52b73e55084b36b1d085b62dc8f15b0a"><div class="ttname"><a href="class_camera_state___normal.html#a52b73e55084b36b1d085b62dc8f15b0a">CameraState_Normal::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">更新関数 </div><div class="ttdef"><b>Definition:</b> <a href="_camera_state___normal_8cpp_source.html#l00046">CameraState_Normal.cpp:46</a></div></div>
+<div class="ttc" id="class_camera_state___normal_html"><div class="ttname"><a href="class_camera_state___normal.html">CameraState_Normal</a></div><div class="ttdoc">ノーマルカメラステートClass </div><div class="ttdef"><b>Definition:</b> <a href="_camera_state___normal_8h_source.html#l00031">CameraState_Normal.h:31</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_b45bb414237523d3953b384861a4c0d0.html">Framework</a></li><li class="navelem"><a class="el" href="dir_7bdbca00cdc73946cd7159151ed3a63d.html">GameEngine</a></li><li class="navelem"><a class="el" href="dir_52ab0f1b347112aed62424c3b4c19724.html">Draw</a></li><li class="navelem"><a class="el" href="dir_4e20e8d3284afb4165c720499051373b.html">Camera</a></li><li class="navelem"><a class="el" href="_camera_state___normal_8h.html">CameraState_Normal.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

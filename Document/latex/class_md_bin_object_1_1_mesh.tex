@@ -1,0 +1,695 @@
+\hypertarget{class_md_bin_object_1_1_mesh}{}\section{Md\+Bin\+Object\+:\+:Mesh クラス}
+\label{class_md_bin_object_1_1_mesh}\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+
+
+メッシュ\+Class  
+
+
+
+
+{\ttfamily \#include $<$Md\+Bin\+Object.\+h$>$}
+
+
+
+Md\+Bin\+Object\+:\+:Mesh 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_md_bin_object_1_1_mesh__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a60cd3c85b9f5660ae82a74902a5d5af5}{get\+Vertex\+Array\+Size}} ()
+\begin{DoxyCompactList}\small\item\em 頂点配列サイズ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_object_1_1_mesh_ac603b4494f9b2ad2e18ee0fb97e88bab}{set\+Vertex\+Array\+Size}} (int value)
+\begin{DoxyCompactList}\small\item\em 頂点配列サイズ設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_md_bin_object_1_1_vertex}{Vertex}} $\ast$ \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a5f4f7ae157b3cd20ae2b4039ccf3d613}{getp\+Vertex}} (int index)
+\begin{DoxyCompactList}\small\item\em 頂点取得関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a8ceb4bee2ee47a34362083f0e95c3cad}{get\+Index\+Array\+Size}} ()
+\begin{DoxyCompactList}\small\item\em インデックス配列サイズ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a50cefabfd848ba6aa4ab192e1587fb3e}{set\+Index\+Array\+Size}} (int value)
+\begin{DoxyCompactList}\small\item\em インデックス配列サイズ設定関数 \end{DoxyCompactList}\item 
+W\+O\+RD $\ast$ \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a92e04810b2fafa386142f02128091fdb}{getp\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em インデックス取得関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a68046db82ad174df0e993fda7f2bbae1}{get\+Bone\+Array\+Size}} ()
+\begin{DoxyCompactList}\small\item\em ボーン配列サイズ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a976071846bb7161d877b9c5da59e6128}{set\+Bone\+Array\+Size}} (int value)
+\begin{DoxyCompactList}\small\item\em ボーン配列サイズ設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_object_1_1_bone}{Bone}} $\ast$ \mbox{\hyperlink{class_md_bin_object_1_1_mesh_ad7cac05848e94675d9f87c85a60aab86}{getp\+Bone}} (int index)
+\begin{DoxyCompactList}\small\item\em ボーン取得関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a73edae81060b25b68f5008930180e210}{get\+Material\+Index}} ()
+\begin{DoxyCompactList}\small\item\em マテリアルインデックス取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_object_1_1_mesh_ae847facdeb6ae73eab3e8e01ac8ea011}{set\+Material\+Index}} (int value)
+\begin{DoxyCompactList}\small\item\em マテリアルインデックス設定関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_md_bin_object_1_1_mesh_ad97e4b5005a2522fbebb1b8d3318cd14}{get\+Primitive\+Num}} ()
+\begin{DoxyCompactList}\small\item\em プリミティブ数取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a14d0fd4cc67bf8fb5c98772bd93d2eb1}{set\+Primitive\+Num}} (int value)
+\begin{DoxyCompactList}\small\item\em プリミティブ数設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_md_bin_object_1_1_mesh_ae3aea9879a86c16661e7030b3cdb0b58}{getp\+Diffuse\+Texture\+Object}} ()
+\begin{DoxyCompactList}\small\item\em ディヒューズテクスチャオブジェクト取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a8f050909bab779ea4f8ac96dbe7e47b4}{set\+Diffuse\+Texture\+Object}} (\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em ディヒューズテクスチャオブジェクト設定関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+B\+U\+F\+F\+E\+R9 \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a62ca792b3cbc96fa052555dfca83eb3d}{getp\+Vertex\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em 頂点バッファ取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+B\+U\+F\+F\+E\+R9 $\ast$ \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a0b0cc5058ce31c35d38a42c099615746}{getp2\+Vertex\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em 頂点バッファ変数ポインタ取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+I\+N\+D\+E\+X\+B\+U\+F\+F\+E\+R9 \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a5a8c1392a554808067e27163c942cf02}{getp\+Index\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em インデックスバッファ取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+I\+N\+D\+E\+X\+B\+U\+F\+F\+E\+R9 $\ast$ \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a0028dae2742769687d2cc6c5a7f3518e}{getp2\+Index\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em インデックスバッファ変数ポインタ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a05413005511d6715ce8ea9142b257e7a}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_md_bin_object_1_1_vertex}{Vertex}} $>$ \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a5b9315e10ec54e41c6f34a2356cae921}{vertex\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 頂点配列 \end{DoxyCompactList}\item 
+std\+::vector$<$ W\+O\+RD $>$ \mbox{\hyperlink{class_md_bin_object_1_1_mesh_aa43653580fee9b2de544d11f48a8cde3}{index\+\_\+}}
+\begin{DoxyCompactList}\small\item\em インデックス配列 \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_md_bin_object_1_1_bone}{Bone}} $>$ \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a709eebcf7b3c24d195b95a90b9aabf5d}{bone\+\_\+}}
+\begin{DoxyCompactList}\small\item\em ボーン配列 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a1d91456b2bf86cefaccb98721e641b1e}{material\+\_\+index\+\_\+}}
+\begin{DoxyCompactList}\small\item\em マテリアルインデックス \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a435bc1e0493b6a3494febb5085fa226b}{primitive\+\_\+num\+\_\+}}
+\begin{DoxyCompactList}\small\item\em プリミティブ数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_md_bin_object_1_1_mesh_aa8733b094fb461d76af9a2f014fc66aa}{diffuse\+\_\+texture\+\_\+object\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em ディヒューズテクスチャオブジェクト \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+B\+U\+F\+F\+E\+R9 \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a184d71ac41aa259b9af29386f3349380}{vertex\+\_\+buffer\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 頂点バッファ \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+I\+N\+D\+E\+X\+B\+U\+F\+F\+E\+R9 \mbox{\hyperlink{class_md_bin_object_1_1_mesh_a401339a5e426053e9cac2b8d2defaedd}{index\+\_\+buffer\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em インデックスバッファ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+メッシュ\+Class 
+
+メッシュの\+Class 
+
+ Md\+Bin\+Object.\+h の 124 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a68046db82ad174df0e993fda7f2bbae1}\label{class_md_bin_object_1_1_mesh_a68046db82ad174df0e993fda7f2bbae1}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!get\+Bone\+Array\+Size@{get\+Bone\+Array\+Size}}
+\index{get\+Bone\+Array\+Size@{get\+Bone\+Array\+Size}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{get\+Bone\+Array\+Size()}{getBoneArraySize()}}
+{\footnotesize\ttfamily int Md\+Bin\+Object\+::\+Mesh\+::get\+Bone\+Array\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ボーン配列サイズ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & サイズ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 97 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a8ceb4bee2ee47a34362083f0e95c3cad}\label{class_md_bin_object_1_1_mesh_a8ceb4bee2ee47a34362083f0e95c3cad}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!get\+Index\+Array\+Size@{get\+Index\+Array\+Size}}
+\index{get\+Index\+Array\+Size@{get\+Index\+Array\+Size}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{get\+Index\+Array\+Size()}{getIndexArraySize()}}
+{\footnotesize\ttfamily int Md\+Bin\+Object\+::\+Mesh\+::get\+Index\+Array\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+インデックス配列サイズ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & サイズ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 76 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a73edae81060b25b68f5008930180e210}\label{class_md_bin_object_1_1_mesh_a73edae81060b25b68f5008930180e210}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!get\+Material\+Index@{get\+Material\+Index}}
+\index{get\+Material\+Index@{get\+Material\+Index}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{get\+Material\+Index()}{getMaterialIndex()}}
+{\footnotesize\ttfamily int Md\+Bin\+Object\+::\+Mesh\+::get\+Material\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+マテリアルインデックス取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & マテリアルインデックス \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 118 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a0028dae2742769687d2cc6c5a7f3518e}\label{class_md_bin_object_1_1_mesh_a0028dae2742769687d2cc6c5a7f3518e}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!getp2\+Index\+Buffer@{getp2\+Index\+Buffer}}
+\index{getp2\+Index\+Buffer@{getp2\+Index\+Buffer}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{getp2\+Index\+Buffer()}{getp2IndexBuffer()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+I\+N\+D\+E\+X\+B\+U\+F\+F\+E\+R9 $\ast$ Md\+Bin\+Object\+::\+Mesh\+::getp2\+Index\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+インデックスバッファ変数ポインタ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+I\+N\+D\+E\+X\+B\+U\+F\+F\+E\+R9$\ast$} & インデックスバッファ変数ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 181 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a0b0cc5058ce31c35d38a42c099615746}\label{class_md_bin_object_1_1_mesh_a0b0cc5058ce31c35d38a42c099615746}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!getp2\+Vertex\+Buffer@{getp2\+Vertex\+Buffer}}
+\index{getp2\+Vertex\+Buffer@{getp2\+Vertex\+Buffer}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{getp2\+Vertex\+Buffer()}{getp2VertexBuffer()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+B\+U\+F\+F\+E\+R9 $\ast$ Md\+Bin\+Object\+::\+Mesh\+::getp2\+Vertex\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+頂点バッファ変数ポインタ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+B\+U\+F\+F\+E\+R9$\ast$} & 頂点バッファ変数ポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 167 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_ad7cac05848e94675d9f87c85a60aab86}\label{class_md_bin_object_1_1_mesh_ad7cac05848e94675d9f87c85a60aab86}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!getp\+Bone@{getp\+Bone}}
+\index{getp\+Bone@{getp\+Bone}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{getp\+Bone()}{getpBone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_object_1_1_bone}{Md\+Bin\+Object\+::\+Bone}} $\ast$ Md\+Bin\+Object\+::\+Mesh\+::getp\+Bone (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+ボーン取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Bone$\ast$} & 頂点 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 111 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_ae3aea9879a86c16661e7030b3cdb0b58}\label{class_md_bin_object_1_1_mesh_ae3aea9879a86c16661e7030b3cdb0b58}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!getp\+Diffuse\+Texture\+Object@{getp\+Diffuse\+Texture\+Object}}
+\index{getp\+Diffuse\+Texture\+Object@{getp\+Diffuse\+Texture\+Object}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{getp\+Diffuse\+Texture\+Object()}{getpDiffuseTextureObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ Md\+Bin\+Object\+::\+Mesh\+::getp\+Diffuse\+Texture\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ディヒューズテクスチャオブジェクト取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Texture\+Object$\ast$} & ディヒューズテクスチャオブジェクト \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 146 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a92e04810b2fafa386142f02128091fdb}\label{class_md_bin_object_1_1_mesh_a92e04810b2fafa386142f02128091fdb}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!getp\+Index@{getp\+Index}}
+\index{getp\+Index@{getp\+Index}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{getp\+Index()}{getpIndex()}}
+{\footnotesize\ttfamily W\+O\+RD $\ast$ Md\+Bin\+Object\+::\+Mesh\+::getp\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+インデックス取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em W\+O\+R\+D$\ast$} & インデックス \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 90 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a5a8c1392a554808067e27163c942cf02}\label{class_md_bin_object_1_1_mesh_a5a8c1392a554808067e27163c942cf02}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!getp\+Index\+Buffer@{getp\+Index\+Buffer}}
+\index{getp\+Index\+Buffer@{getp\+Index\+Buffer}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{getp\+Index\+Buffer()}{getpIndexBuffer()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+I\+N\+D\+E\+X\+B\+U\+F\+F\+E\+R9 Md\+Bin\+Object\+::\+Mesh\+::getp\+Index\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+インデックスバッファ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+I\+N\+D\+E\+X\+B\+U\+F\+F\+E\+R9} & インデックスバッファ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 174 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_ad97e4b5005a2522fbebb1b8d3318cd14}\label{class_md_bin_object_1_1_mesh_ad97e4b5005a2522fbebb1b8d3318cd14}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!get\+Primitive\+Num@{get\+Primitive\+Num}}
+\index{get\+Primitive\+Num@{get\+Primitive\+Num}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{get\+Primitive\+Num()}{getPrimitiveNum()}}
+{\footnotesize\ttfamily int Md\+Bin\+Object\+::\+Mesh\+::get\+Primitive\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+プリミティブ数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & プリミティブ数 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 132 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a5f4f7ae157b3cd20ae2b4039ccf3d613}\label{class_md_bin_object_1_1_mesh_a5f4f7ae157b3cd20ae2b4039ccf3d613}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!getp\+Vertex@{getp\+Vertex}}
+\index{getp\+Vertex@{getp\+Vertex}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{getp\+Vertex()}{getpVertex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_md_bin_object_1_1_vertex}{Md\+Bin\+Object\+::\+Vertex}} $\ast$ Md\+Bin\+Object\+::\+Mesh\+::getp\+Vertex (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+頂点取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vertex$\ast$} & 頂点 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 69 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a62ca792b3cbc96fa052555dfca83eb3d}\label{class_md_bin_object_1_1_mesh_a62ca792b3cbc96fa052555dfca83eb3d}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!getp\+Vertex\+Buffer@{getp\+Vertex\+Buffer}}
+\index{getp\+Vertex\+Buffer@{getp\+Vertex\+Buffer}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{getp\+Vertex\+Buffer()}{getpVertexBuffer()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+B\+U\+F\+F\+E\+R9 Md\+Bin\+Object\+::\+Mesh\+::getp\+Vertex\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+頂点バッファ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+B\+U\+F\+F\+E\+R9} & 頂点バッファ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 160 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a60cd3c85b9f5660ae82a74902a5d5af5}\label{class_md_bin_object_1_1_mesh_a60cd3c85b9f5660ae82a74902a5d5af5}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!get\+Vertex\+Array\+Size@{get\+Vertex\+Array\+Size}}
+\index{get\+Vertex\+Array\+Size@{get\+Vertex\+Array\+Size}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{get\+Vertex\+Array\+Size()}{getVertexArraySize()}}
+{\footnotesize\ttfamily int Md\+Bin\+Object\+::\+Mesh\+::get\+Vertex\+Array\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+頂点配列サイズ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & サイズ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a976071846bb7161d877b9c5da59e6128}\label{class_md_bin_object_1_1_mesh_a976071846bb7161d877b9c5da59e6128}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!set\+Bone\+Array\+Size@{set\+Bone\+Array\+Size}}
+\index{set\+Bone\+Array\+Size@{set\+Bone\+Array\+Size}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{set\+Bone\+Array\+Size()}{setBoneArraySize()}}
+{\footnotesize\ttfamily void Md\+Bin\+Object\+::\+Mesh\+::set\+Bone\+Array\+Size (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+ボーン配列サイズ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & サイズ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 104 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a8f050909bab779ea4f8ac96dbe7e47b4}\label{class_md_bin_object_1_1_mesh_a8f050909bab779ea4f8ac96dbe7e47b4}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!set\+Diffuse\+Texture\+Object@{set\+Diffuse\+Texture\+Object}}
+\index{set\+Diffuse\+Texture\+Object@{set\+Diffuse\+Texture\+Object}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{set\+Diffuse\+Texture\+Object()}{setDiffuseTextureObject()}}
+{\footnotesize\ttfamily void Md\+Bin\+Object\+::\+Mesh\+::set\+Diffuse\+Texture\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+ディヒューズテクスチャオブジェクト設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & ディヒューズテクスチャオブジェクト \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 153 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a50cefabfd848ba6aa4ab192e1587fb3e}\label{class_md_bin_object_1_1_mesh_a50cefabfd848ba6aa4ab192e1587fb3e}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!set\+Index\+Array\+Size@{set\+Index\+Array\+Size}}
+\index{set\+Index\+Array\+Size@{set\+Index\+Array\+Size}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{set\+Index\+Array\+Size()}{setIndexArraySize()}}
+{\footnotesize\ttfamily void Md\+Bin\+Object\+::\+Mesh\+::set\+Index\+Array\+Size (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+インデックス配列サイズ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & サイズ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 83 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_ae847facdeb6ae73eab3e8e01ac8ea011}\label{class_md_bin_object_1_1_mesh_ae847facdeb6ae73eab3e8e01ac8ea011}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!set\+Material\+Index@{set\+Material\+Index}}
+\index{set\+Material\+Index@{set\+Material\+Index}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{set\+Material\+Index()}{setMaterialIndex()}}
+{\footnotesize\ttfamily void Md\+Bin\+Object\+::\+Mesh\+::set\+Material\+Index (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+マテリアルインデックス設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & マテリアルインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 125 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a14d0fd4cc67bf8fb5c98772bd93d2eb1}\label{class_md_bin_object_1_1_mesh_a14d0fd4cc67bf8fb5c98772bd93d2eb1}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!set\+Primitive\+Num@{set\+Primitive\+Num}}
+\index{set\+Primitive\+Num@{set\+Primitive\+Num}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{set\+Primitive\+Num()}{setPrimitiveNum()}}
+{\footnotesize\ttfamily void Md\+Bin\+Object\+::\+Mesh\+::set\+Primitive\+Num (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+プリミティブ数設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & プリミティブ数 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 139 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_ac603b4494f9b2ad2e18ee0fb97e88bab}\label{class_md_bin_object_1_1_mesh_ac603b4494f9b2ad2e18ee0fb97e88bab}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!set\+Vertex\+Array\+Size@{set\+Vertex\+Array\+Size}}
+\index{set\+Vertex\+Array\+Size@{set\+Vertex\+Array\+Size}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{set\+Vertex\+Array\+Size()}{setVertexArraySize()}}
+{\footnotesize\ttfamily void Md\+Bin\+Object\+::\+Mesh\+::set\+Vertex\+Array\+Size (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+頂点配列サイズ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & サイズ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 62 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a05413005511d6715ce8ea9142b257e7a}\label{class_md_bin_object_1_1_mesh_a05413005511d6715ce8ea9142b257e7a}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Md\+Bin\+Object\+::\+Mesh\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 227 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a709eebcf7b3c24d195b95a90b9aabf5d}\label{class_md_bin_object_1_1_mesh_a709eebcf7b3c24d195b95a90b9aabf5d}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!bone\+\_\+@{bone\+\_\+}}
+\index{bone\+\_\+@{bone\+\_\+}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{bone\+\_\+}{bone\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_md_bin_object_1_1_bone}{Bone}}$>$ Md\+Bin\+Object\+::\+Mesh\+::bone\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ボーン配列 
+
+
+
+ Md\+Bin\+Object.\+h の 132 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_aa8733b094fb461d76af9a2f014fc66aa}\label{class_md_bin_object_1_1_mesh_aa8733b094fb461d76af9a2f014fc66aa}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!diffuse\+\_\+texture\+\_\+object\+\_\+@{diffuse\+\_\+texture\+\_\+object\+\_\+}}
+\index{diffuse\+\_\+texture\+\_\+object\+\_\+@{diffuse\+\_\+texture\+\_\+object\+\_\+}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{diffuse\+\_\+texture\+\_\+object\+\_\+}{diffuse\_texture\_object\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Md\+Bin\+Object\+::\+Mesh\+::diffuse\+\_\+texture\+\_\+object\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ディヒューズテクスチャオブジェクト 
+
+
+
+ Md\+Bin\+Object.\+h の 135 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_aa43653580fee9b2de544d11f48a8cde3}\label{class_md_bin_object_1_1_mesh_aa43653580fee9b2de544d11f48a8cde3}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!index\+\_\+@{index\+\_\+}}
+\index{index\+\_\+@{index\+\_\+}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{index\+\_\+}{index\_}}
+{\footnotesize\ttfamily std\+::vector$<$W\+O\+RD$>$ Md\+Bin\+Object\+::\+Mesh\+::index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+インデックス配列 
+
+
+
+ Md\+Bin\+Object.\+h の 131 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a401339a5e426053e9cac2b8d2defaedd}\label{class_md_bin_object_1_1_mesh_a401339a5e426053e9cac2b8d2defaedd}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!index\+\_\+buffer\+\_\+@{index\+\_\+buffer\+\_\+}}
+\index{index\+\_\+buffer\+\_\+@{index\+\_\+buffer\+\_\+}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{index\+\_\+buffer\+\_\+}{index\_buffer\_}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+I\+N\+D\+E\+X\+B\+U\+F\+F\+E\+R9 Md\+Bin\+Object\+::\+Mesh\+::index\+\_\+buffer\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+インデックスバッファ 
+
+
+
+ Md\+Bin\+Object.\+h の 137 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a1d91456b2bf86cefaccb98721e641b1e}\label{class_md_bin_object_1_1_mesh_a1d91456b2bf86cefaccb98721e641b1e}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!material\+\_\+index\+\_\+@{material\+\_\+index\+\_\+}}
+\index{material\+\_\+index\+\_\+@{material\+\_\+index\+\_\+}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{material\+\_\+index\+\_\+}{material\_index\_}}
+{\footnotesize\ttfamily int Md\+Bin\+Object\+::\+Mesh\+::material\+\_\+index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+マテリアルインデックス 
+
+
+
+ Md\+Bin\+Object.\+h の 133 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a435bc1e0493b6a3494febb5085fa226b}\label{class_md_bin_object_1_1_mesh_a435bc1e0493b6a3494febb5085fa226b}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!primitive\+\_\+num\+\_\+@{primitive\+\_\+num\+\_\+}}
+\index{primitive\+\_\+num\+\_\+@{primitive\+\_\+num\+\_\+}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{primitive\+\_\+num\+\_\+}{primitive\_num\_}}
+{\footnotesize\ttfamily int Md\+Bin\+Object\+::\+Mesh\+::primitive\+\_\+num\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+プリミティブ数 
+
+
+
+ Md\+Bin\+Object.\+h の 134 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a5b9315e10ec54e41c6f34a2356cae921}\label{class_md_bin_object_1_1_mesh_a5b9315e10ec54e41c6f34a2356cae921}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!vertex\+\_\+@{vertex\+\_\+}}
+\index{vertex\+\_\+@{vertex\+\_\+}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{vertex\+\_\+}{vertex\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_md_bin_object_1_1_vertex}{Vertex}}$>$ Md\+Bin\+Object\+::\+Mesh\+::vertex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+頂点配列 
+
+
+
+ Md\+Bin\+Object.\+h の 130 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_mesh_a184d71ac41aa259b9af29386f3349380}\label{class_md_bin_object_1_1_mesh_a184d71ac41aa259b9af29386f3349380}} 
+\index{Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}!vertex\+\_\+buffer\+\_\+@{vertex\+\_\+buffer\+\_\+}}
+\index{vertex\+\_\+buffer\+\_\+@{vertex\+\_\+buffer\+\_\+}!Md\+Bin\+Object\+::\+Mesh@{Md\+Bin\+Object\+::\+Mesh}}
+\subsubsection{\texorpdfstring{vertex\+\_\+buffer\+\_\+}{vertex\_buffer\_}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+B\+U\+F\+F\+E\+R9 Md\+Bin\+Object\+::\+Mesh\+::vertex\+\_\+buffer\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+頂点バッファ 
+
+
+
+ Md\+Bin\+Object.\+h の 136 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Md\+Bin/\mbox{\hyperlink{_md_bin_object_8h}{Md\+Bin\+Object.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Md\+Bin/\+Source/\mbox{\hyperlink{_md_bin_object_8cpp}{Md\+Bin\+Object.\+cpp}}\end{DoxyCompactItemize}

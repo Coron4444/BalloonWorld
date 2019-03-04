@@ -1,0 +1,222 @@
+\hypertarget{class_needle_collision}{}\section{Needle\+Collision クラス}
+\label{class_needle_collision}\index{Needle\+Collision@{Needle\+Collision}}
+
+
+棘衝突\+Class  
+
+
+
+
+{\ttfamily \#include $<$Needle\+Collision.\+h$>$}
+
+
+
+Needle\+Collision 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_needle_collision__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_needle_collision_a6c4a6b084cf70c08c03c66ddfdf1d2ed}{Object\+Tag}} \{ \mbox{\hyperlink{class_needle_collision_a6c4a6b084cf70c08c03c66ddfdf1d2edab50339a10e1de285ac99d4c3990b8693}{Object\+Tag\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_needle_collision_a6c4a6b084cf70c08c03c66ddfdf1d2eda186495f7da296bf880df3a22a492b378}{Object\+Tag\+::\+M\+A\+IN}}, 
+\mbox{\hyperlink{class_needle_collision_a6c4a6b084cf70c08c03c66ddfdf1d2eda26a4b44a837bf97b972628509912b4a5}{Object\+Tag\+::\+M\+AX}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_needle_collision_a7584717bbbf735d73ea6415ca8a0b841}{Shape\+Tag}} \{ \mbox{\hyperlink{class_needle_collision_a7584717bbbf735d73ea6415ca8a0b841ab50339a10e1de285ac99d4c3990b8693}{Shape\+Tag\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_needle_collision_a7584717bbbf735d73ea6415ca8a0b841a186495f7da296bf880df3a22a492b378}{Shape\+Tag\+::\+M\+A\+IN}}, 
+\mbox{\hyperlink{class_needle_collision_a7584717bbbf735d73ea6415ca8a0b841a26a4b44a837bf97b972628509912b4a5}{Shape\+Tag\+::\+M\+AX}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_needle_collision_ae8084bdfa91ae1a7accfee33e31d429b}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_needle_collision_a9226bcc45aa952abcafa56c7af8c8627}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$ \mbox{\hyperlink{class_needle_collision_a67e818d495de2f8b7ee623f76c793771}{collision\+\_\+object\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 衝突オブジェクト \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sphere}{Sphere}} $\ast$ \mbox{\hyperlink{class_needle_collision_ac99f319bdcc48ff3057096ba8b8b8f35}{main\+\_\+sphere\+\_\+}}
+\begin{DoxyCompactList}\small\item\em メイン球 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const float \mbox{\hyperlink{class_needle_collision_accb402dfcaa534d5ac14a01d58c1d843}{M\+A\+I\+N\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US}} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em メイン球半径 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+棘衝突\+Class 
+
+棘の衝突\+Class 
+
+ Needle\+Collision.\+h の 24 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_needle_collision_a6c4a6b084cf70c08c03c66ddfdf1d2ed}\label{class_needle_collision_a6c4a6b084cf70c08c03c66ddfdf1d2ed}} 
+\index{Needle\+Collision@{Needle\+Collision}!Object\+Tag@{Object\+Tag}}
+\index{Object\+Tag@{Object\+Tag}!Needle\+Collision@{Needle\+Collision}}
+\subsubsection{\texorpdfstring{Object\+Tag}{ObjectTag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_needle_collision_a6c4a6b084cf70c08c03c66ddfdf1d2ed}{Needle\+Collision\+::\+Object\+Tag}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Needle\+Collision@{Needle\+Collision}}\index{Needle\+Collision@{Needle\+Collision}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_needle_collision_a6c4a6b084cf70c08c03c66ddfdf1d2edab50339a10e1de285ac99d4c3990b8693}\label{class_needle_collision_a6c4a6b084cf70c08c03c66ddfdf1d2edab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+IN@{M\+A\+IN}!Needle\+Collision@{Needle\+Collision}}\index{Needle\+Collision@{Needle\+Collision}!M\+A\+IN@{M\+A\+IN}}}\mbox{\Hypertarget{class_needle_collision_a6c4a6b084cf70c08c03c66ddfdf1d2eda186495f7da296bf880df3a22a492b378}\label{class_needle_collision_a6c4a6b084cf70c08c03c66ddfdf1d2eda186495f7da296bf880df3a22a492b378}} 
+M\+A\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Needle\+Collision@{Needle\+Collision}}\index{Needle\+Collision@{Needle\+Collision}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_needle_collision_a6c4a6b084cf70c08c03c66ddfdf1d2eda26a4b44a837bf97b972628509912b4a5}\label{class_needle_collision_a6c4a6b084cf70c08c03c66ddfdf1d2eda26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Needle\+Collision.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_collision_a7584717bbbf735d73ea6415ca8a0b841}\label{class_needle_collision_a7584717bbbf735d73ea6415ca8a0b841}} 
+\index{Needle\+Collision@{Needle\+Collision}!Shape\+Tag@{Shape\+Tag}}
+\index{Shape\+Tag@{Shape\+Tag}!Needle\+Collision@{Needle\+Collision}}
+\subsubsection{\texorpdfstring{Shape\+Tag}{ShapeTag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_needle_collision_a7584717bbbf735d73ea6415ca8a0b841}{Needle\+Collision\+::\+Shape\+Tag}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Needle\+Collision@{Needle\+Collision}}\index{Needle\+Collision@{Needle\+Collision}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_needle_collision_a7584717bbbf735d73ea6415ca8a0b841ab50339a10e1de285ac99d4c3990b8693}\label{class_needle_collision_a7584717bbbf735d73ea6415ca8a0b841ab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+IN@{M\+A\+IN}!Needle\+Collision@{Needle\+Collision}}\index{Needle\+Collision@{Needle\+Collision}!M\+A\+IN@{M\+A\+IN}}}\mbox{\Hypertarget{class_needle_collision_a7584717bbbf735d73ea6415ca8a0b841a186495f7da296bf880df3a22a492b378}\label{class_needle_collision_a7584717bbbf735d73ea6415ca8a0b841a186495f7da296bf880df3a22a492b378}} 
+M\+A\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Needle\+Collision@{Needle\+Collision}}\index{Needle\+Collision@{Needle\+Collision}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_needle_collision_a7584717bbbf735d73ea6415ca8a0b841a26a4b44a837bf97b972628509912b4a5}\label{class_needle_collision_a7584717bbbf735d73ea6415ca8a0b841a26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Needle\+Collision.\+h の 37 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_needle_collision_ae8084bdfa91ae1a7accfee33e31d429b}\label{class_needle_collision_ae8084bdfa91ae1a7accfee33e31d429b}} 
+\index{Needle\+Collision@{Needle\+Collision}!Init@{Init}}
+\index{Init@{Init}!Needle\+Collision@{Needle\+Collision}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Needle\+Collision\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_null_a18cfc21fefcd3e8dec380ac44a85f111}{Collision\+Null}}を再実装しています。
+
+
+
+ Needle\+Collision.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_collision_a9226bcc45aa952abcafa56c7af8c8627}\label{class_needle_collision_a9226bcc45aa952abcafa56c7af8c8627}} 
+\index{Needle\+Collision@{Needle\+Collision}!Update@{Update}}
+\index{Update@{Update}!Needle\+Collision@{Needle\+Collision}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Needle\+Collision\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_null_ad6ac0e9b06fcb4e3d19a5c3c1cadfe7e}{Collision\+Null}}を再実装しています。
+
+
+
+ Needle\+Collision.\+cpp の 47 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_needle_collision_a67e818d495de2f8b7ee623f76c793771}\label{class_needle_collision_a67e818d495de2f8b7ee623f76c793771}} 
+\index{Needle\+Collision@{Needle\+Collision}!collision\+\_\+object\+\_\+@{collision\+\_\+object\+\_\+}}
+\index{collision\+\_\+object\+\_\+@{collision\+\_\+object\+\_\+}!Needle\+Collision@{Needle\+Collision}}
+\subsubsection{\texorpdfstring{collision\+\_\+object\+\_\+}{collision\_object\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_object}{Collision\+Object}}$\ast$ Needle\+Collision\+::collision\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+衝突オブジェクト 
+
+
+
+ Needle\+Collision.\+h の 56 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_collision_ac99f319bdcc48ff3057096ba8b8b8f35}\label{class_needle_collision_ac99f319bdcc48ff3057096ba8b8b8f35}} 
+\index{Needle\+Collision@{Needle\+Collision}!main\+\_\+sphere\+\_\+@{main\+\_\+sphere\+\_\+}}
+\index{main\+\_\+sphere\+\_\+@{main\+\_\+sphere\+\_\+}!Needle\+Collision@{Needle\+Collision}}
+\subsubsection{\texorpdfstring{main\+\_\+sphere\+\_\+}{main\_sphere\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sphere}{Sphere}}$\ast$ Needle\+Collision\+::main\+\_\+sphere\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+メイン球 
+
+
+
+ Needle\+Collision.\+h の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_collision_accb402dfcaa534d5ac14a01d58c1d843}\label{class_needle_collision_accb402dfcaa534d5ac14a01d58c1d843}} 
+\index{Needle\+Collision@{Needle\+Collision}!M\+A\+I\+N\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US@{M\+A\+I\+N\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US}}
+\index{M\+A\+I\+N\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US@{M\+A\+I\+N\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US}!Needle\+Collision@{Needle\+Collision}}
+\subsubsection{\texorpdfstring{M\+A\+I\+N\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US}{MAIN\_SPHERE\_RADIUS}}
+{\footnotesize\ttfamily const float Needle\+Collision\+::\+M\+A\+I\+N\+\_\+\+S\+P\+H\+E\+R\+E\+\_\+\+R\+A\+D\+I\+US = 1.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+メイン球半径 
+
+
+
+ Needle\+Collision.\+h の 49 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Needle/\mbox{\hyperlink{_needle_collision_8h}{Needle\+Collision.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Needle/\+Source/\mbox{\hyperlink{_needle_collision_8cpp}{Needle\+Collision.\+cpp}}\end{DoxyCompactItemize}

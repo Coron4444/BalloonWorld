@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: クラスメンバ</title>
+<title>BalloonWorld: クラスメンバ</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -90,39 +90,100 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 <div class="textblock">全クラスメンバ一覧です。各メンバが属するクラスへのリンクがあります。</div>
 
 <h3><a id="index_o"></a>- o -</h3><ul>
-<li>OBB
-: <a class="el" href="class_collision_shape_base.html#a8abcef092855ad0ca191047044b002cba56e56c8ee634330847018d716ca222b0">CollisionShapeBase</a>
-, <a class="el" href="class_o_b_b.html#af752af068c6fc1787f06556b6a71c929">OBB</a>
+<li>OBB_EDGE_LENGTH_HALF
+: <a class="el" href="class_balloon.html#a72e9f550154e31339200686a7b9dcdc2">Balloon</a>
 </li>
 <li>object_
-: <a class="el" href="class_object_of_tree.html#ad3ce36879f78ba2c2171385a8428c7ba">ObjectOfTree&lt; Type &gt;</a>
+: <a class="el" href="class_bullet_physics_manager.html#aeb28861b2291675a67cd710611b33244">BulletPhysicsManager</a>
+, <a class="el" href="class_object_of_tree.html#ad3ce36879f78ba2c2171385a8428c7ba">ObjectOfTree&lt; Type &gt;</a>
+, <a class="el" href="class_reference_list.html#a4db4d51f2d810aea8668abdae6f0bd56">ReferenceList&lt; Type &gt;</a>
+</li>
+<li>object_constraint_
+: <a class="el" href="class_balloon.html#a18e7a10f252ab3075c3c58640425bd8c">Balloon</a>
+</li>
+<li>object_map_
+: <a class="el" href="class_effekseer_manager.html#a85e9a95a0b20c4b1b55c6796ed4b2d1c">EffekseerManager</a>
+, <a class="el" href="class_md_bin_manager.html#a595804fccdd750e02df524bb75cec65b">MdBinManager</a>
+, <a class="el" href="class_model_x_manager.html#ac3a90eea2890ea233f6f8c909f705e16">ModelXManager</a>
+, <a class="el" href="class_texture_manager.html#a105e7936953e0907fc6a7b9c9734a01a">TextureManager</a>
+</li>
+<li>OBJECT_NUM
+: <a class="el" href="class_pause_draw.html#a28303189f2f9cf000bd8f2ca9d55ee05">PauseDraw</a>
 </li>
 <li>object_of_tree_
-: <a class="el" href="class_collision_objects.html#a649c1aa07a6043611aa8f7394690250a">CollisionObjects</a>
+: <a class="el" href="class_collision_object.html#a99020569ae9dd130b0f92751c5bff0f9">CollisionObject</a>
+</li>
+<li>object_transform_
+: <a class="el" href="class_balloon_draw.html#a6135e9a9ecae17f428af4b3d8cc7d95e">BalloonDraw</a>
+</li>
+<li>ObjectSetting()
+: <a class="el" href="class_pixel_shader_blinn_phong.html#a772f7d20219ce7a563a8e608306f0ca1">PixelShaderBlinnPhong</a>
+, <a class="el" href="class_pixel_shader_bump_mapping.html#a03839e7482a4a53ff1dc18ab288fec05">PixelShaderBumpMapping</a>
+, <a class="el" href="class_pixel_shader_cook_torrance.html#a2eff8f1808d5c7686599949537e7fdc4">PixelShaderCookTorrance</a>
+, <a class="el" href="class_pixel_shader_default.html#ae70580bd12afdbf654122bdb4dce85d0">PixelShaderDefault</a>
+, <a class="el" href="class_pixel_shader_default_shadow.html#ac7e4f76ddef588b97dd898c31023be37">PixelShaderDefaultShadow</a>
+, <a class="el" href="class_pixel_shader_null.html#a488bde4a2c9a9c45c4ec0ad42487d3b1">PixelShaderNull</a>
+, <a class="el" href="class_shader_base.html#a054bc5e129619ec976740e0698ef9a8b">ShaderBase</a>
+, <a class="el" href="class_shader_manager.html#a401db6f6f5157833ddd3020892ad81b4">ShaderManager</a>
+, <a class="el" href="class_vertex_shader_animated_default.html#a43d82c0666bffa49704eda4eb1f549d3">VertexShaderAnimatedDefault</a>
+, <a class="el" href="class_vertex_shader_blinn_phong.html#ac1a1ee4254b6b44a680b31c2ee42f44f">VertexShaderBlinnPhong</a>
+, <a class="el" href="class_vertex_shader_bump_mapping.html#a29aa8761a52dbd79b7cd3063027e67db">VertexShaderBumpMapping</a>
+, <a class="el" href="class_vertex_shader_cook_torrance.html#ac58b40e7b64d3460c66fac23bd067789">VertexShaderCookTorrance</a>
+, <a class="el" href="class_vertex_shader_default.html#aaf5f5716a2ec33bf374ae7b7f16e5c8b">VertexShaderDefault</a>
+, <a class="el" href="class_vertex_shader_default_shadow.html#ab86431938f31721d1c5d6fe60ebe2f92">VertexShaderDefaultShadow</a>
+, <a class="el" href="class_vertex_shader_fixed.html#abe7cdb76b7da899680b1079344631cef">VertexShaderFixed</a>
+, <a class="el" href="class_vertex_shader_null.html#aae3231bb3fa5df2578ba89701867ffb3">VertexShaderNull</a>
+, <a class="el" href="class_vertex_shader_shadow_map.html#a49f6120c2ca0200ca4d8bcb05cfae4d8">VertexShaderShadowMap</a>
+</li>
+<li>ObjectSettingAfter()
+: <a class="el" href="class_draw_base.html#ab1592d0f04fb49289758008dcff4e7a0">DrawBase</a>
+, <a class="el" href="class_draw_null.html#a5b4466ae238e46cffe4a10fd253caf17">DrawNull</a>
+, <a class="el" href="class_stencil_shadow_test_draw.html#a11fa9d700ca8db585b6f0b0be779d1ab">StencilShadowTestDraw</a>
+</li>
+<li>ObjectSettingBefore()
+: <a class="el" href="class_draw_base.html#a9bf55f6b67735e0bff42d749f43826c1">DrawBase</a>
+, <a class="el" href="class_draw_null.html#ac79a0adfc83537d5e677851463bb3028">DrawNull</a>
+, <a class="el" href="class_stencil_shadow_test_draw.html#ab798b88896ba3f0b3de057dff49823be">StencilShadowTestDraw</a>
+</li>
+<li>ObjectSettingPixelShader()
+: <a class="el" href="class_shader_manager.html#a4d970eb653aa67a9e7fc0b37ab05d73d">ShaderManager</a>
+</li>
+<li>ObjectSettingVertexShader()
+: <a class="el" href="class_shader_manager.html#a8c7505114a88fdffa534737bb29ba6fa">ShaderManager</a>
 </li>
 <li>ObjectTag
 : <a class="el" href="class_coin_collision.html#ade7912345747f522fd895e87621ce049">CoinCollision</a>
 , <a class="el" href="class_enemy_collision.html#a8423c2c1dce9ba8ab2ba9bed82ee4843">EnemyCollision</a>
 , <a class="el" href="class_goal_collision.html#a8d0d760973816d9086df90491f38ff62">GoalCollision</a>
+, <a class="el" href="class_needle_collision.html#a6c4a6b084cf70c08c03c66ddfdf1d2ed">NeedleCollision</a>
 , <a class="el" href="class_player_collision.html#a628e8898ff4fc1f85eb4ba44eb0a6907">PlayerCollision</a>
+, <a class="el" href="class_scaffold_collision.html#a6fadd848bbcba4c102f93047214a8492">ScaffoldCollision</a>
+, <a class="el" href="class_start_block_collision.html#af6bc5a437ac6427dbf664269c22c8e13">StartBlockCollision</a>
 </li>
 <li>octree_aabb_
-: <a class="el" href="class_collision_objects.html#a611be393dff69dc143e729c4f3f37399">CollisionObjects</a>
+: <a class="el" href="class_collision_object.html#a045baf059f7c85af820677c26b47d03d">CollisionObject</a>
 </li>
 <li>octree_unit_length_
-: <a class="el" href="class_liner_octree.html#af412add67f71dd8ceb8af82be6015988">LinerOctree&lt; Type &gt;</a>
+: <a class="el" href="class_liner_octree.html#a732a1f9bd3674be516c46d5805719e11">LinerOctree&lt; Type &gt;</a>
 </li>
 <li>octree_width_
-: <a class="el" href="class_liner_octree.html#accf45495e9a4cbf5ed3d8a839eda9806">LinerOctree&lt; Type &gt;</a>
+: <a class="el" href="class_liner_octree.html#a4c710ef0e4ea86372d80d88051815026">LinerOctree&lt; Type &gt;</a>
 </li>
 <li>octree_width_max_
-: <a class="el" href="class_liner_octree.html#abf54d24034d8ae53d7f7d17e6dfe02ff">LinerOctree&lt; Type &gt;</a>
+: <a class="el" href="class_liner_octree.html#a29578ee8b44b1da05dadc291cfc4c354">LinerOctree&lt; Type &gt;</a>
 </li>
 <li>octree_width_min_
-: <a class="el" href="class_liner_octree.html#a391dbd4c22c6b16bfe49884d8b156738">LinerOctree&lt; Type &gt;</a>
+: <a class="el" href="class_liner_octree.html#a5992f986cf372dc2467c4dd2dec8771b">LinerOctree&lt; Type &gt;</a>
 </li>
 <li>Offset
 : <a class="el" href="struct_im_gui_style_var_info.html#ae900d6a02166d3d0433c18b95aec10e8">ImGuiStyleVarInfo</a>
+</li>
+<li>offset_index_
+: <a class="el" href="class_interpolation_1_1_iterator__.html#abdbf4ab755008781e80bbc5ec2405d83">Interpolation&lt; Value, Distance, AddInfo, Strategy &gt;::Iterator_</a>
+</li>
+<li>offset_matrix_
+: <a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone.html#ab2119901317e2beb384a36d40f31c385">MdBinData::Mesh::Bone</a>
+, <a class="el" href="class_md_bin_object_1_1_bone.html#a7ec2fdffbe14211b099c580c492f808a">MdBinObject::Bone</a>
 </li>
 <li>OffsetNorm
 : <a class="el" href="struct_im_gui_column_data.html#a9678a00f55c9fa44ed35ec14ea9b697b">ImGuiColumnData</a>
@@ -131,22 +192,19 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 : <a class="el" href="class_depth_buffer_shadow_object.html#aa3a73112a31ff2665079f86ab592559e">DepthBufferShadowObject</a>
 </li>
 <li>old_number_
-: <a class="el" href="class_number.html#acd5422010e99cbf61196094a9b501115">Number</a>
+: <a class="el" href="class_numbers_polygon_1_1_number_polygon.html#ab4baecc9e4f7d469a0ec832f44112a17">NumbersPolygon::NumberPolygon</a>
 </li>
 <li>old_render_target_surface_
 : <a class="el" href="class_depth_buffer_shadow_object.html#abfeefee54df20a800a8fc33365332724">DepthBufferShadowObject</a>
+</li>
+<li>old_state_
+: <a class="el" href="class_controller_1_1_x_input_controller.html#a8b9cc519f51442d11b0eecf06afaf702">Controller::XInputController</a>
 </li>
 <li>old_target_quaternion_
 : <a class="el" href="class_transform.html#a52fa2db52356033f42908fde94f9cb28">Transform</a>
 </li>
 <li>old_view_port_
 : <a class="el" href="class_depth_buffer_shadow_object.html#aaeb83afec448ed26aba19b2b40bb6667">DepthBufferShadowObject</a>
-</li>
-<li>OldCollisionDetermination()
-: <a class="el" href="class_collision_manager.html#a25dbc14dbc709a6bc2dc4424e3965dbe">CollisionManager</a>
-</li>
-<li>oldState
-: <a class="el" href="class_x_input_controller.html#a686db9fe59e21e84e3cfcfbe15b518a2">XInputController</a>
 </li>
 <li>OnDistorting()
 : <a class="el" href="class_effekseer_renderer_1_1_distorting_callback.html#a0fd8a141682f73cccdf9e744cd811041">EffekseerRenderer::DistortingCallback</a>
@@ -186,14 +244,25 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 <li>operator ImVec4()
 : <a class="el" href="struct_im_color.html#a10f1de242f13c93f8be64545e4cbcb0a">ImColor</a>
 </li>
+<li>operator!=()
+: <a class="el" href="class_interpolation_1_1_iterator__.html#a60ad4c8de6408cac63947d0c11db011a">Interpolation&lt; Value, Distance, AddInfo, Strategy &gt;::Iterator_</a>
+</li>
+<li>operator()()
+: <a class="el" href="class_is_playing_disposable_object.html#aae3835c78851e50028556ec5b475ac8d">IsPlayingDisposableObject</a>
+</li>
 <li>operator*()
 : <a class="el" href="struct_effekseer_1_1_vector3_d.html#a95d40548c0aeb66d531d8f0d1e781c5d">Effekseer::Vector3D</a>
+, <a class="el" href="class_interpolation_1_1_iterator__.html#adb8f40c63f30301266f26d74742dcbd3">Interpolation&lt; Value, Distance, AddInfo, Strategy &gt;::Iterator_</a>
+, <a class="el" href="class_matrix.html#aa2f78f6d34450195fec250fee6172afd">Matrix</a>
 </li>
 <li>operator*=()
 : <a class="el" href="struct_effekseer_1_1_vector3_d.html#a37cdddecb129f14208169a84b4fea773">Effekseer::Vector3D</a>
 </li>
 <li>operator+()
 : <a class="el" href="struct_effekseer_1_1_vector3_d.html#ad5b284129380bacd6229d796df3adecb">Effekseer::Vector3D</a>
+</li>
+<li>operator++()
+: <a class="el" href="class_interpolation_1_1_iterator__.html#a3c6e608dce87d136b0d7ed5b933b9db4">Interpolation&lt; Value, Distance, AddInfo, Strategy &gt;::Iterator_</a>
 </li>
 <li>operator+=()
 : <a class="el" href="struct_effekseer_1_1_vector2_d.html#aa86968d06d78c0a951e85f6a44b02f95">Effekseer::Vector2D</a>
@@ -206,28 +275,53 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 : <a class="el" href="struct_effekseer_1_1_vector3_d.html#a41737c64743b0f001d1a0ae502d6c0d9">Effekseer::Vector3D</a>
 </li>
 <li>operator/()
-: <a class="el" href="struct_effekseer_1_1_vector3_d.html#adcedf7fe595971f7fbbddbc846bf2462">Effekseer::Vector3D</a>
+: <a class="el" href="struct_effekseer_1_1_vector3_d.html#ad6ee55218a4aa3836fa9c937eb976131">Effekseer::Vector3D</a>
 </li>
 <li>operator/=()
 : <a class="el" href="struct_effekseer_1_1_vector3_d.html#a611f802ffd7514b3f3a6b99936d371fc">Effekseer::Vector3D</a>
 </li>
+<li>operator&lt;()
+: <a class="el" href="class_vector3_d.html#abe8e87481ed14469de6aae3dbfa0953e">Vector3D</a>
+</li>
+<li>operator&lt;=()
+: <a class="el" href="class_vector3_d.html#ada60cd10b049b046da1254b83a30f133">Vector3D</a>
+</li>
 <li>operator=()
-: <a class="el" href="class_collision_calculation.html#a20738fa64ae8749165328d48ee90d32e">CollisionCalculation</a>
+: <a class="el" href="class_bullet_physics_manager.html#a179d9a6da3f1b96efbe091419968b53c">BulletPhysicsManager</a>
+, <a class="el" href="class_collision_calculation.html#a20738fa64ae8749165328d48ee90d32e">CollisionCalculation</a>
 , <a class="el" href="class_collision_pair_check.html#a32ebe7303801a6bfa9225c60ddb4b749">CollisionPairCheck</a>
 , <a class="el" href="class_depth_buffer_shadow_object.html#a00d8b986d4f2c1d82dd836c0f5ce3751">DepthBufferShadowObject</a>
-, <a class="el" href="class_effekseer_manager.html#ade688aba495d8a9d74f2d8de98e9bb75">EffekseerManager</a>
-, <a class="el" href="class_game_object_manager.html#af66275734b2098dc631fdb789d31fd52">GameObjectManager</a>
+, <a class="el" href="class_game_object_manager.html#a626e7ffb6c7f3e1ecb6521fcc485234d">GameObjectManager</a>
+, <a class="el" href="class_input_manager.html#a4b1d021f5dcd4e029f5210b7dd99fa36">InputManager</a>
+, <a class="el" href="class_md_bin_manager.html#a17b8525afa9637fb07506178f1b01d9c">MdBinManager</a>
 , <a class="el" href="class_model_x_manager.html#adc65f6b4b9b06b4a20923245606175d8">ModelXManager</a>
+, <a class="el" href="class_random.html#a233dc764071ecf4e95619ea86f7edf61">Random</a>
 , <a class="el" href="class_renderer.html#ab80abe5f35a095f221f8c43916900d66">Renderer</a>
-, <a class="el" href="class_resource_manager.html#a9c420ee8ffde51a27fe6ca37229ffa83">ResourceManager</a>
+, <a class="el" href="class_sound_manager.html#a22fd4008f3e0c4f5e0e4480e3f89baed">SoundManager</a>
 , <a class="el" href="class_texture_manager.html#a3f13712c65812a9053852165a9a67824">TextureManager</a>
 </li>
 <li>operator==()
 : <a class="el" href="struct_effekseer_1_1_vector3_d.html#afa6e5af7d0a7120a8aaa05b771d759f4">Effekseer::Vector3D</a>
+, <a class="el" href="class_interpolation_1_1_iterator__.html#a922fd7a71f9c457df07b7d8070d01c08">Interpolation&lt; Value, Distance, AddInfo, Strategy &gt;::Iterator_</a>
+</li>
+<li>operator&gt;()
+: <a class="el" href="class_vector3_d.html#a06de9e8940880c4241e05533a7ad0db9">Vector3D</a>
+</li>
+<li>operator&gt;=()
+: <a class="el" href="class_vector3_d.html#a74d53debf36f302abf4d28a9300dae32">Vector3D</a>
 </li>
 <li>operator[]()
 : <a class="el" href="struct_im_gui_text_buffer.html#a8550f53463fd12711e3d08b740227bd4">ImGuiTextBuffer</a>
 , <a class="el" href="class_im_vector.html#ab97c3f6f1943602e36afb593c6f03ff1">ImVector&lt; T &gt;</a>
+</li>
+<li>opponent_base_
+: <a class="el" href="class_collision_information.html#ad5a230826a7a53a916bea3116dee807d">CollisionInformation</a>
+</li>
+<li>opponent_object_
+: <a class="el" href="class_collision_information.html#a0050ea8230d1d6ec83d2859ac71be20f">CollisionInformation</a>
+</li>
+<li>opponent_shape_
+: <a class="el" href="class_collision_information.html#ab09b1a156c939f009f7c72be1dcfa917">CollisionInformation</a>
 </li>
 <li>OptCursorBlink
 : <a class="el" href="struct_im_gui_i_o.html#a676ccbf84e205effc5a023e8d5adc6eb">ImGuiIO</a>
@@ -235,11 +329,11 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 <li>OptMacOSXBehaviors
 : <a class="el" href="struct_im_gui_i_o.html#a99ffac55fc01f11166e8e92ca9ebda98">ImGuiIO</a>
 </li>
+<li>order_list_
+: <a class="el" href="class_draw_base.html#a68325df7021177f7ca82a18511e1328f">DrawBase</a>
+</li>
 <li>OrderWithinParent
 : <a class="el" href="struct_im_gui_window.html#a81cb24c35445e1259367284701253c79">ImGuiWindow</a>
-</li>
-<li>ORTHO
-: <a class="el" href="class_camera.html#a3b0a1f58deca679ac665f61c480d1dcba5421bcd519dac606b7af9786b11f88d6">Camera</a>
 </li>
 <li>OrthographicLH()
 : <a class="el" href="struct_effekseer_1_1_matrix44.html#a8b53aee4d2c1598cbdd64ab6a6364af2">Effekseer::Matrix44</a>
@@ -283,17 +377,11 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 <li>OverwriteArrayCollisionBase()
 : <a class="el" href="class_collision_manager.html#af9c2ce87e0189cdd1256c83decc64673">CollisionManager</a>
 </li>
-<li>OverwriteArrayCollisionObject()
-: <a class="el" href="class_collision_objects.html#aed8d6903485ae775d8bbff511796a653">CollisionObjects</a>
-</li>
-<li>OverwriteArrayCollisionsObject()
-: <a class="el" href="class_collision_base.html#a4a7bba0fc9d39e27dc58d695f04cf186">CollisionBase</a>
-</li>
 <li>OverwriteArrayDrawBase()
 : <a class="el" href="class_draw_manager.html#a94ef5a241c8d78187a2a6c0ed3c9efec">DrawManager</a>
 </li>
-<li>OverwriteArrayUpdateBase()
-: <a class="el" href="class_update_manager.html#ab4f492c33ed941ddd01ccae8218080ff">UpdateManager</a>
+<li>OverwriteCollisionsObject()
+: <a class="el" href="class_collision_base.html#a5d59d851904725f6301bebd2b952c49c">CollisionBase</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -1,0 +1,335 @@
+\hypertarget{class_numbers_polygon_1_1_number_polygon}{}\section{Numbers\+Polygon\+:\+:Number\+Polygon クラス}
+\label{class_numbers_polygon_1_1_number_polygon}\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+
+
+数字ポリゴン\+Class  
+
+
+
+
+{\ttfamily \#include $<$Numbers\+Polygon.\+h$>$}
+
+
+
+Numbers\+Polygon\+:\+:Number\+Polygon 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_numbers_polygon_1_1_number_polygon__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_numbers_polygon_1_1_number_polygon_aed0291a733964cf55fc0b64e7cb94913}{set\+Number}} (int value)
+\begin{DoxyCompactList}\small\item\em 数字設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_numbers_polygon_1_1_number_polygon_aa3f7ad5e57a7c517637713e93b923def}{set\+Color}} (\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} value)
+\begin{DoxyCompactList}\small\item\em 色設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_numbers_polygon_1_1_number_polygon_a93cf66894af5d7f93eeba793c9776fdf}{set\+Texture\+Object}} (\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em テクスチャオブジェクト設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transform}{Transform}} $\ast$ \mbox{\hyperlink{class_numbers_polygon_1_1_number_polygon_adbbd23d716cb041a0ab1c1f71e7a2cc9}{getp\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em 変形取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_numbers_polygon_1_1_number_polygon_a1e7a8d196f26c95461e99f393667f300}{getp\+Material}} ()
+\begin{DoxyCompactList}\small\item\em マテリアル取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_numbers_polygon_1_1_number_polygon_af4d9476caf03b0cb7971d66361b61fdb}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_numbers_polygon_1_1_number_polygon_ab0e804caf3778324516b7a8113cc1d39}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_numbers_polygon_1_1_number_polygon_a48c8dd4a526a9bb0d657effa3bc471db}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}} $\ast$ \mbox{\hyperlink{class_numbers_polygon_1_1_number_polygon_a1347df9d12f3224175801062bfa62e96}{plane\+\_\+polygon\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 平面ポリゴン \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_numbers_polygon_1_1_number_polygon_aa276e12a69aab753c8c35a7f41f5452f}{texture\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em テクスチャオブジェクト \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_numbers_polygon_1_1_number_polygon_a199d698d4986e1fb9cfbfbac6a383fc2}{transform\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 変形 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_numbers_polygon_1_1_number_polygon_a026cdb72be813835b704e2628c287615}{number\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 現在の数字 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_numbers_polygon_1_1_number_polygon_ab4baecc9e4f7d469a0ec832f44112a17}{old\+\_\+number\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 前回の数字 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+数字ポリゴン\+Class 
+
+数字のポリゴン\+Class 
+
+ Numbers\+Polygon.\+h の 36 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_numbers_polygon_1_1_number_polygon_a48c8dd4a526a9bb0d657effa3bc471db}\label{class_numbers_polygon_1_1_number_polygon_a48c8dd4a526a9bb0d657effa3bc471db}} 
+\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}!Draw@{Draw}}
+\index{Draw@{Draw}!Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Numbers\+Polygon\+::\+Number\+Polygon\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Numbers\+Polygon.\+cpp の 163 行目に定義があります。
+
+\mbox{\Hypertarget{class_numbers_polygon_1_1_number_polygon_a1e7a8d196f26c95461e99f393667f300}\label{class_numbers_polygon_1_1_number_polygon_a1e7a8d196f26c95461e99f393667f300}} 
+\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}!getp\+Material@{getp\+Material}}
+\index{getp\+Material@{getp\+Material}!Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+\subsubsection{\texorpdfstring{getp\+Material()}{getpMaterial()}}
+{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ Numbers\+Polygon\+::\+Number\+Polygon\+::getp\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+マテリアル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Numbers\+Polygon.\+cpp の 54 行目に定義があります。
+
+\mbox{\Hypertarget{class_numbers_polygon_1_1_number_polygon_adbbd23d716cb041a0ab1c1f71e7a2cc9}\label{class_numbers_polygon_1_1_number_polygon_adbbd23d716cb041a0ab1c1f71e7a2cc9}} 
+\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}!getp\+Transform@{getp\+Transform}}
+\index{getp\+Transform@{getp\+Transform}!Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+\subsubsection{\texorpdfstring{getp\+Transform()}{getpTransform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}} $\ast$ Numbers\+Polygon\+::\+Number\+Polygon\+::getp\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+変形取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Transform$\ast$} & 変形 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Numbers\+Polygon.\+cpp の 47 行目に定義があります。
+
+\mbox{\Hypertarget{class_numbers_polygon_1_1_number_polygon_af4d9476caf03b0cb7971d66361b61fdb}\label{class_numbers_polygon_1_1_number_polygon_af4d9476caf03b0cb7971d66361b61fdb}} 
+\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}!Init@{Init}}
+\index{Init@{Init}!Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Numbers\+Polygon\+::\+Number\+Polygon\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Numbers\+Polygon.\+cpp の 143 行目に定義があります。
+
+\mbox{\Hypertarget{class_numbers_polygon_1_1_number_polygon_aa3f7ad5e57a7c517637713e93b923def}\label{class_numbers_polygon_1_1_number_polygon_aa3f7ad5e57a7c517637713e93b923def}} 
+\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}}
+{\footnotesize\ttfamily void Numbers\+Polygon\+::\+Number\+Polygon\+::set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}}]{value }\end{DoxyParamCaption})}
+
+
+
+色設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 色 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Numbers\+Polygon.\+cpp の 33 行目に定義があります。
+
+\mbox{\Hypertarget{class_numbers_polygon_1_1_number_polygon_aed0291a733964cf55fc0b64e7cb94913}\label{class_numbers_polygon_1_1_number_polygon_aed0291a733964cf55fc0b64e7cb94913}} 
+\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}!set\+Number@{set\+Number}}
+\index{set\+Number@{set\+Number}!Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+\subsubsection{\texorpdfstring{set\+Number()}{setNumber()}}
+{\footnotesize\ttfamily void Numbers\+Polygon\+::\+Number\+Polygon\+::set\+Number (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+数字設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 数字 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Numbers\+Polygon.\+cpp の 21 行目に定義があります。
+
+\mbox{\Hypertarget{class_numbers_polygon_1_1_number_polygon_a93cf66894af5d7f93eeba793c9776fdf}\label{class_numbers_polygon_1_1_number_polygon_a93cf66894af5d7f93eeba793c9776fdf}} 
+\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}!set\+Texture\+Object@{set\+Texture\+Object}}
+\index{set\+Texture\+Object@{set\+Texture\+Object}!Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+\subsubsection{\texorpdfstring{set\+Texture\+Object()}{setTextureObject()}}
+{\footnotesize\ttfamily void Numbers\+Polygon\+::\+Number\+Polygon\+::set\+Texture\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+テクスチャオブジェクト設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & テクスチャオブジェクト \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Numbers\+Polygon.\+cpp の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_numbers_polygon_1_1_number_polygon_ab0e804caf3778324516b7a8113cc1d39}\label{class_numbers_polygon_1_1_number_polygon_ab0e804caf3778324516b7a8113cc1d39}} 
+\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Numbers\+Polygon\+::\+Number\+Polygon\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Numbers\+Polygon.\+cpp の 156 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_numbers_polygon_1_1_number_polygon_a026cdb72be813835b704e2628c287615}\label{class_numbers_polygon_1_1_number_polygon_a026cdb72be813835b704e2628c287615}} 
+\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}!number\+\_\+@{number\+\_\+}}
+\index{number\+\_\+@{number\+\_\+}!Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+\subsubsection{\texorpdfstring{number\+\_\+}{number\_}}
+{\footnotesize\ttfamily int Numbers\+Polygon\+::\+Number\+Polygon\+::number\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+現在の数字 
+
+
+
+ Numbers\+Polygon.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_numbers_polygon_1_1_number_polygon_ab4baecc9e4f7d469a0ec832f44112a17}\label{class_numbers_polygon_1_1_number_polygon_ab4baecc9e4f7d469a0ec832f44112a17}} 
+\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}!old\+\_\+number\+\_\+@{old\+\_\+number\+\_\+}}
+\index{old\+\_\+number\+\_\+@{old\+\_\+number\+\_\+}!Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+\subsubsection{\texorpdfstring{old\+\_\+number\+\_\+}{old\_number\_}}
+{\footnotesize\ttfamily int Numbers\+Polygon\+::\+Number\+Polygon\+::old\+\_\+number\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+前回の数字 
+
+
+
+ Numbers\+Polygon.\+h の 46 行目に定義があります。
+
+\mbox{\Hypertarget{class_numbers_polygon_1_1_number_polygon_a1347df9d12f3224175801062bfa62e96}\label{class_numbers_polygon_1_1_number_polygon_a1347df9d12f3224175801062bfa62e96}} 
+\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}!plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}}
+\index{plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}!Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+\subsubsection{\texorpdfstring{plane\+\_\+polygon\+\_\+}{plane\_polygon\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}}$\ast$ Numbers\+Polygon\+::\+Number\+Polygon\+::plane\+\_\+polygon\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+平面ポリゴン 
+
+
+
+ Numbers\+Polygon.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_numbers_polygon_1_1_number_polygon_aa276e12a69aab753c8c35a7f41f5452f}\label{class_numbers_polygon_1_1_number_polygon_aa276e12a69aab753c8c35a7f41f5452f}} 
+\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}!texture\+\_\+@{texture\+\_\+}}
+\index{texture\+\_\+@{texture\+\_\+}!Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+\subsubsection{\texorpdfstring{texture\+\_\+}{texture\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Numbers\+Polygon\+::\+Number\+Polygon\+::texture\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+テクスチャオブジェクト 
+
+
+
+ Numbers\+Polygon.\+h の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_numbers_polygon_1_1_number_polygon_a199d698d4986e1fb9cfbfbac6a383fc2}\label{class_numbers_polygon_1_1_number_polygon_a199d698d4986e1fb9cfbfbac6a383fc2}} 
+\index{Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}!transform\+\_\+@{transform\+\_\+}}
+\index{transform\+\_\+@{transform\+\_\+}!Numbers\+Polygon\+::\+Number\+Polygon@{Numbers\+Polygon\+::\+Number\+Polygon}}
+\subsubsection{\texorpdfstring{transform\+\_\+}{transform\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}} Numbers\+Polygon\+::\+Number\+Polygon\+::transform\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+変形 
+
+
+
+ Numbers\+Polygon.\+h の 44 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Polygon/\mbox{\hyperlink{_numbers_polygon_8h}{Numbers\+Polygon.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Polygon/\+Source/\mbox{\hyperlink{_numbers_polygon_8cpp}{Numbers\+Polygon.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,2998 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: Matrix クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_matrix.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="#pri-static-attribs">静的非公開変数類</a> &#124;
+<a href="class_matrix-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Matrix クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>行列Class  
+ <a href="class_matrix.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_matrix_8h_source.html">Matrix.h</a>&gt;</code></p>
+<div class="dynheader">
+Matrix 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_matrix__coll__graph.png" border="0" usemap="#_matrix_coll__map" alt="Collaboration graph"/></div>
+<map name="_matrix_coll__map" id="_matrix_coll__map">
+<area shape="rect" id="node3" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="97,81,173,108"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aae88110e606dea36cd7d01057edbe567"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#aae88110e606dea36cd7d01057edbe567">get11</a> () const</td></tr>
+<tr class="memdesc:aae88110e606dea36cd7d01057edbe567"><td class="mdescLeft">&#160;</td><td class="mdescRight">11成分取得関数  <a href="#aae88110e606dea36cd7d01057edbe567">[詳解]</a><br /></td></tr>
+<tr class="separator:aae88110e606dea36cd7d01057edbe567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a702141355d7a4161432299224844b193"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a702141355d7a4161432299224844b193">set11</a> (float value)</td></tr>
+<tr class="memdesc:a702141355d7a4161432299224844b193"><td class="mdescLeft">&#160;</td><td class="mdescRight">11成分設定関数  <a href="#a702141355d7a4161432299224844b193">[詳解]</a><br /></td></tr>
+<tr class="separator:a702141355d7a4161432299224844b193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcea3af9d2b4a775a4850e7e061149a6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#abcea3af9d2b4a775a4850e7e061149a6">get12</a> () const</td></tr>
+<tr class="memdesc:abcea3af9d2b4a775a4850e7e061149a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">12成分取得関数  <a href="#abcea3af9d2b4a775a4850e7e061149a6">[詳解]</a><br /></td></tr>
+<tr class="separator:abcea3af9d2b4a775a4850e7e061149a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16351455b43031ca0aaf27dceb3b65b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a16351455b43031ca0aaf27dceb3b65b4">set12</a> (float value)</td></tr>
+<tr class="memdesc:a16351455b43031ca0aaf27dceb3b65b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">12成分設定関数  <a href="#a16351455b43031ca0aaf27dceb3b65b4">[詳解]</a><br /></td></tr>
+<tr class="separator:a16351455b43031ca0aaf27dceb3b65b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a921bc8b3e2f3e373fe2728075caf462f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a921bc8b3e2f3e373fe2728075caf462f">get13</a> () const</td></tr>
+<tr class="memdesc:a921bc8b3e2f3e373fe2728075caf462f"><td class="mdescLeft">&#160;</td><td class="mdescRight">13成分取得関数  <a href="#a921bc8b3e2f3e373fe2728075caf462f">[詳解]</a><br /></td></tr>
+<tr class="separator:a921bc8b3e2f3e373fe2728075caf462f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aa865228e8713575ccba777c0a1a059"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a0aa865228e8713575ccba777c0a1a059">set13</a> (float value)</td></tr>
+<tr class="memdesc:a0aa865228e8713575ccba777c0a1a059"><td class="mdescLeft">&#160;</td><td class="mdescRight">13成分設定関数  <a href="#a0aa865228e8713575ccba777c0a1a059">[詳解]</a><br /></td></tr>
+<tr class="separator:a0aa865228e8713575ccba777c0a1a059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e5886125fced6427695c51f99bfbd98"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a2e5886125fced6427695c51f99bfbd98">get14</a> () const</td></tr>
+<tr class="memdesc:a2e5886125fced6427695c51f99bfbd98"><td class="mdescLeft">&#160;</td><td class="mdescRight">14成分取得関数  <a href="#a2e5886125fced6427695c51f99bfbd98">[詳解]</a><br /></td></tr>
+<tr class="separator:a2e5886125fced6427695c51f99bfbd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a289a3908210e92d94534d30dc0b12476"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a289a3908210e92d94534d30dc0b12476">set14</a> (float value)</td></tr>
+<tr class="memdesc:a289a3908210e92d94534d30dc0b12476"><td class="mdescLeft">&#160;</td><td class="mdescRight">14成分設定関数  <a href="#a289a3908210e92d94534d30dc0b12476">[詳解]</a><br /></td></tr>
+<tr class="separator:a289a3908210e92d94534d30dc0b12476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15690e89cfa1b92622e0351241866155"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a15690e89cfa1b92622e0351241866155">get21</a> () const</td></tr>
+<tr class="memdesc:a15690e89cfa1b92622e0351241866155"><td class="mdescLeft">&#160;</td><td class="mdescRight">21成分取得関数  <a href="#a15690e89cfa1b92622e0351241866155">[詳解]</a><br /></td></tr>
+<tr class="separator:a15690e89cfa1b92622e0351241866155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f282ddbc60accffe4f1577a93c4d01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a05f282ddbc60accffe4f1577a93c4d01">set21</a> (float value)</td></tr>
+<tr class="memdesc:a05f282ddbc60accffe4f1577a93c4d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">21成分設定関数  <a href="#a05f282ddbc60accffe4f1577a93c4d01">[詳解]</a><br /></td></tr>
+<tr class="separator:a05f282ddbc60accffe4f1577a93c4d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a428eda049627bc475ab5eedecb24e5b8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a428eda049627bc475ab5eedecb24e5b8">get22</a> () const</td></tr>
+<tr class="memdesc:a428eda049627bc475ab5eedecb24e5b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">22成分取得関数  <a href="#a428eda049627bc475ab5eedecb24e5b8">[詳解]</a><br /></td></tr>
+<tr class="separator:a428eda049627bc475ab5eedecb24e5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56eee3be58eefa236f75cbf7872e4dbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a56eee3be58eefa236f75cbf7872e4dbc">set22</a> (float value)</td></tr>
+<tr class="memdesc:a56eee3be58eefa236f75cbf7872e4dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">22成分設定関数  <a href="#a56eee3be58eefa236f75cbf7872e4dbc">[詳解]</a><br /></td></tr>
+<tr class="separator:a56eee3be58eefa236f75cbf7872e4dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda10197b722e22d6779726975be976c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#adda10197b722e22d6779726975be976c">get23</a> () const</td></tr>
+<tr class="memdesc:adda10197b722e22d6779726975be976c"><td class="mdescLeft">&#160;</td><td class="mdescRight">23成分取得関数  <a href="#adda10197b722e22d6779726975be976c">[詳解]</a><br /></td></tr>
+<tr class="separator:adda10197b722e22d6779726975be976c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765ef911f6d3345b05f6bda8f2330595"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a765ef911f6d3345b05f6bda8f2330595">set23</a> (float value)</td></tr>
+<tr class="memdesc:a765ef911f6d3345b05f6bda8f2330595"><td class="mdescLeft">&#160;</td><td class="mdescRight">23成分設定関数  <a href="#a765ef911f6d3345b05f6bda8f2330595">[詳解]</a><br /></td></tr>
+<tr class="separator:a765ef911f6d3345b05f6bda8f2330595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4655f6764dfb0f9afeb6a9f6055adb93"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a4655f6764dfb0f9afeb6a9f6055adb93">get24</a> () const</td></tr>
+<tr class="memdesc:a4655f6764dfb0f9afeb6a9f6055adb93"><td class="mdescLeft">&#160;</td><td class="mdescRight">24成分取得関数  <a href="#a4655f6764dfb0f9afeb6a9f6055adb93">[詳解]</a><br /></td></tr>
+<tr class="separator:a4655f6764dfb0f9afeb6a9f6055adb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99120cc734398118f0708daa95ca545b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a99120cc734398118f0708daa95ca545b">set24</a> (float value)</td></tr>
+<tr class="memdesc:a99120cc734398118f0708daa95ca545b"><td class="mdescLeft">&#160;</td><td class="mdescRight">24成分設定関数  <a href="#a99120cc734398118f0708daa95ca545b">[詳解]</a><br /></td></tr>
+<tr class="separator:a99120cc734398118f0708daa95ca545b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b745b0d0b3602fb3bb2bcadba85bad"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#ad6b745b0d0b3602fb3bb2bcadba85bad">get31</a> () const</td></tr>
+<tr class="memdesc:ad6b745b0d0b3602fb3bb2bcadba85bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">31成分取得関数  <a href="#ad6b745b0d0b3602fb3bb2bcadba85bad">[詳解]</a><br /></td></tr>
+<tr class="separator:ad6b745b0d0b3602fb3bb2bcadba85bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a625ed38d8c5e8d20cdd399a5afd61c45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a625ed38d8c5e8d20cdd399a5afd61c45">set31</a> (float value)</td></tr>
+<tr class="memdesc:a625ed38d8c5e8d20cdd399a5afd61c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">31成分設定関数  <a href="#a625ed38d8c5e8d20cdd399a5afd61c45">[詳解]</a><br /></td></tr>
+<tr class="separator:a625ed38d8c5e8d20cdd399a5afd61c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99786d344646aacf1391118e1968850b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a99786d344646aacf1391118e1968850b">get32</a> () const</td></tr>
+<tr class="memdesc:a99786d344646aacf1391118e1968850b"><td class="mdescLeft">&#160;</td><td class="mdescRight">32成分取得関数  <a href="#a99786d344646aacf1391118e1968850b">[詳解]</a><br /></td></tr>
+<tr class="separator:a99786d344646aacf1391118e1968850b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cc8c6612366d92b7b8a81f7f802f50c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a3cc8c6612366d92b7b8a81f7f802f50c">set32</a> (float value)</td></tr>
+<tr class="memdesc:a3cc8c6612366d92b7b8a81f7f802f50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">32成分設定関数  <a href="#a3cc8c6612366d92b7b8a81f7f802f50c">[詳解]</a><br /></td></tr>
+<tr class="separator:a3cc8c6612366d92b7b8a81f7f802f50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d71b38d75c903207dc314262c910ad"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a82d71b38d75c903207dc314262c910ad">get33</a> () const</td></tr>
+<tr class="memdesc:a82d71b38d75c903207dc314262c910ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">33成分取得関数  <a href="#a82d71b38d75c903207dc314262c910ad">[詳解]</a><br /></td></tr>
+<tr class="separator:a82d71b38d75c903207dc314262c910ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4817d20e03fe01105b6e4957d49060e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#ae4817d20e03fe01105b6e4957d49060e">set33</a> (float value)</td></tr>
+<tr class="memdesc:ae4817d20e03fe01105b6e4957d49060e"><td class="mdescLeft">&#160;</td><td class="mdescRight">33成分設定関数  <a href="#ae4817d20e03fe01105b6e4957d49060e">[詳解]</a><br /></td></tr>
+<tr class="separator:ae4817d20e03fe01105b6e4957d49060e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a544b0203b2d6656f45696f2c8f1af8cc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a544b0203b2d6656f45696f2c8f1af8cc">get34</a> () const</td></tr>
+<tr class="memdesc:a544b0203b2d6656f45696f2c8f1af8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">34成分取得関数  <a href="#a544b0203b2d6656f45696f2c8f1af8cc">[詳解]</a><br /></td></tr>
+<tr class="separator:a544b0203b2d6656f45696f2c8f1af8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7114f1252d78581637cbb5b06cff9b33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a7114f1252d78581637cbb5b06cff9b33">set34</a> (float value)</td></tr>
+<tr class="memdesc:a7114f1252d78581637cbb5b06cff9b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">34成分設定関数  <a href="#a7114f1252d78581637cbb5b06cff9b33">[詳解]</a><br /></td></tr>
+<tr class="separator:a7114f1252d78581637cbb5b06cff9b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2afc1d50f54fc6f4a7088e4b6f016d84"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a2afc1d50f54fc6f4a7088e4b6f016d84">get41</a> () const</td></tr>
+<tr class="memdesc:a2afc1d50f54fc6f4a7088e4b6f016d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">41成分取得関数  <a href="#a2afc1d50f54fc6f4a7088e4b6f016d84">[詳解]</a><br /></td></tr>
+<tr class="separator:a2afc1d50f54fc6f4a7088e4b6f016d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae649f42548ca5617d8d1d47252a786f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#ae649f42548ca5617d8d1d47252a786f2">set41</a> (float value)</td></tr>
+<tr class="memdesc:ae649f42548ca5617d8d1d47252a786f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">41成分設定関数  <a href="#ae649f42548ca5617d8d1d47252a786f2">[詳解]</a><br /></td></tr>
+<tr class="separator:ae649f42548ca5617d8d1d47252a786f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f94d1870205989ca96695a430bd6d6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a99f94d1870205989ca96695a430bd6d6">get42</a> () const</td></tr>
+<tr class="memdesc:a99f94d1870205989ca96695a430bd6d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">42成分取得関数  <a href="#a99f94d1870205989ca96695a430bd6d6">[詳解]</a><br /></td></tr>
+<tr class="separator:a99f94d1870205989ca96695a430bd6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a397c7b3f9292c224f86cdf0cb4d8e46d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a397c7b3f9292c224f86cdf0cb4d8e46d">set42</a> (float value)</td></tr>
+<tr class="memdesc:a397c7b3f9292c224f86cdf0cb4d8e46d"><td class="mdescLeft">&#160;</td><td class="mdescRight">42成分設定関数  <a href="#a397c7b3f9292c224f86cdf0cb4d8e46d">[詳解]</a><br /></td></tr>
+<tr class="separator:a397c7b3f9292c224f86cdf0cb4d8e46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa72989c74eeeb117ba6dc4b8cc7af619"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#aa72989c74eeeb117ba6dc4b8cc7af619">get43</a> () const</td></tr>
+<tr class="memdesc:aa72989c74eeeb117ba6dc4b8cc7af619"><td class="mdescLeft">&#160;</td><td class="mdescRight">43成分取得関数  <a href="#aa72989c74eeeb117ba6dc4b8cc7af619">[詳解]</a><br /></td></tr>
+<tr class="separator:aa72989c74eeeb117ba6dc4b8cc7af619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a724ee3aa5cfc17cea02fe474d807c0cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a724ee3aa5cfc17cea02fe474d807c0cc">set43</a> (float value)</td></tr>
+<tr class="memdesc:a724ee3aa5cfc17cea02fe474d807c0cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">43成分設定関数  <a href="#a724ee3aa5cfc17cea02fe474d807c0cc">[詳解]</a><br /></td></tr>
+<tr class="separator:a724ee3aa5cfc17cea02fe474d807c0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a891abd390e49f286709c5962877395d8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a891abd390e49f286709c5962877395d8">get44</a> () const</td></tr>
+<tr class="memdesc:a891abd390e49f286709c5962877395d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">44成分取得関数  <a href="#a891abd390e49f286709c5962877395d8">[詳解]</a><br /></td></tr>
+<tr class="separator:a891abd390e49f286709c5962877395d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cea9dbd57d0ad3583243af3559917ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a1cea9dbd57d0ad3583243af3559917ad">set44</a> (float value)</td></tr>
+<tr class="memdesc:a1cea9dbd57d0ad3583243af3559917ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">44成分設定関数  <a href="#a1cea9dbd57d0ad3583243af3559917ad">[詳解]</a><br /></td></tr>
+<tr class="separator:a1cea9dbd57d0ad3583243af3559917ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af715d6df123065b56f602ea7db05238d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#af715d6df123065b56f602ea7db05238d">getPosition</a> ()</td></tr>
+<tr class="memdesc:af715d6df123065b56f602ea7db05238d"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標取得取得関数  <a href="#af715d6df123065b56f602ea7db05238d">[詳解]</a><br /></td></tr>
+<tr class="separator:af715d6df123065b56f602ea7db05238d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8872d3d34f938dd920cfd2e81a33c9cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a8872d3d34f938dd920cfd2e81a33c9cb">getpRight</a> ()</td></tr>
+<tr class="memdesc:a8872d3d34f938dd920cfd2e81a33c9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">右ベクトル取得関数  <a href="#a8872d3d34f938dd920cfd2e81a33c9cb">[詳解]</a><br /></td></tr>
+<tr class="separator:a8872d3d34f938dd920cfd2e81a33c9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed95f652a1365e3bb908c2ea07ed7884"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#aed95f652a1365e3bb908c2ea07ed7884">getpUp</a> ()</td></tr>
+<tr class="memdesc:aed95f652a1365e3bb908c2ea07ed7884"><td class="mdescLeft">&#160;</td><td class="mdescRight">上ベクトル取得関数  <a href="#aed95f652a1365e3bb908c2ea07ed7884">[詳解]</a><br /></td></tr>
+<tr class="separator:aed95f652a1365e3bb908c2ea07ed7884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a384555a3c303692932b15eef7b3abf3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a384555a3c303692932b15eef7b3abf3e">getpForward</a> ()</td></tr>
+<tr class="memdesc:a384555a3c303692932b15eef7b3abf3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">前ベクトル取得関数  <a href="#a384555a3c303692932b15eef7b3abf3e">[詳解]</a><br /></td></tr>
+<tr class="separator:a384555a3c303692932b15eef7b3abf3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8b21659e1239a4a5b4361bc72f1fad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a8b8b21659e1239a4a5b4361bc72f1fad">getpDefaultForward</a> ()</td></tr>
+<tr class="memdesc:a8b8b21659e1239a4a5b4361bc72f1fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定前ベクトル取得関数  <a href="#a8b8b21659e1239a4a5b4361bc72f1fad">[詳解]</a><br /></td></tr>
+<tr class="separator:a8b8b21659e1239a4a5b4361bc72f1fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34bf031354bde8182be09f1b7805a320"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a34bf031354bde8182be09f1b7805a320">getpDefaultUp</a> ()</td></tr>
+<tr class="memdesc:a34bf031354bde8182be09f1b7805a320"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定上ベクトル取得関数  <a href="#a34bf031354bde8182be09f1b7805a320">[詳解]</a><br /></td></tr>
+<tr class="separator:a34bf031354bde8182be09f1b7805a320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0096877aa292e1e8801deb912e1c8245"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a0096877aa292e1e8801deb912e1c8245">getpDefaultRight</a> ()</td></tr>
+<tr class="memdesc:a0096877aa292e1e8801deb912e1c8245"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定右ベクトル取得関数  <a href="#a0096877aa292e1e8801deb912e1c8245">[詳解]</a><br /></td></tr>
+<tr class="separator:a0096877aa292e1e8801deb912e1c8245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2f78f6d34450195fec250fee6172afd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#aa2f78f6d34450195fec250fee6172afd">operator*</a> (const <a class="el" href="class_matrix.html">Matrix</a> &amp;matrix) const</td></tr>
+<tr class="memdesc:aa2f78f6d34450195fec250fee6172afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">*演算子  <a href="#aa2f78f6d34450195fec250fee6172afd">[詳解]</a><br /></td></tr>
+<tr class="separator:aa2f78f6d34450195fec250fee6172afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dba13c45127354c9f75ef576f49269b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a2dba13c45127354c9f75ef576f49269b">Matrix</a> ()</td></tr>
+<tr class="memdesc:a2dba13c45127354c9f75ef576f49269b"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#a2dba13c45127354c9f75ef576f49269b">[詳解]</a><br /></td></tr>
+<tr class="separator:a2dba13c45127354c9f75ef576f49269b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec226891d64369eb1a1051ad96bf03da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#aec226891d64369eb1a1051ad96bf03da">Matrix</a> (const float *value)</td></tr>
+<tr class="memdesc:aec226891d64369eb1a1051ad96bf03da"><td class="mdescLeft">&#160;</td><td class="mdescRight">単一floatコンストラクタ  <a href="#aec226891d64369eb1a1051ad96bf03da">[詳解]</a><br /></td></tr>
+<tr class="separator:aec226891d64369eb1a1051ad96bf03da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf565e5e85611da8b1559604021fa71e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#acf565e5e85611da8b1559604021fa71e">Matrix</a> (const <a class="el" href="_vector3_d_8h.html#afe61185afc2bf3856c12613d99eede01">Float16</a> *value)</td></tr>
+<tr class="memdesc:acf565e5e85611da8b1559604021fa71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">単一float16コンストラクタ  <a href="#acf565e5e85611da8b1559604021fa71e">[詳解]</a><br /></td></tr>
+<tr class="separator:acf565e5e85611da8b1559604021fa71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b1fedfb1b076d4ae504d2c61019871f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a2b1fedfb1b076d4ae504d2c61019871f">Matrix</a> (const <a class="el" href="class_matrix.html">Matrix</a> &amp;matrix)</td></tr>
+<tr class="memdesc:a2b1fedfb1b076d4ae504d2c61019871f"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列コンストラクタ  <a href="#a2b1fedfb1b076d4ae504d2c61019871f">[詳解]</a><br /></td></tr>
+<tr class="separator:a2b1fedfb1b076d4ae504d2c61019871f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f698b5ae393f6f8395c323e4701686c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a3f698b5ae393f6f8395c323e4701686c">Matrix</a> (float value11, float value12, float value13, float value14, float value21, float value22, float value23, float value24, float value31, float value32, float value33, float value34, float value41, float value42, float value43, float value44)</td></tr>
+<tr class="memdesc:a3f698b5ae393f6f8395c323e4701686c"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数floatコンストラクタ  <a href="#a3f698b5ae393f6f8395c323e4701686c">[詳解]</a><br /></td></tr>
+<tr class="separator:a3f698b5ae393f6f8395c323e4701686c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1c3627f573d78a2f08623fdfef990f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a9b1c3627f573d78a2f08623fdfef990f">~Matrix</a> ()</td></tr>
+<tr class="memdesc:a9b1c3627f573d78a2f08623fdfef990f"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="#a9b1c3627f573d78a2f08623fdfef990f">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b1c3627f573d78a2f08623fdfef990f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab37ebbd9de3da47ebdcf332cebcc0cc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#ab37ebbd9de3da47ebdcf332cebcc0cc0">Init</a> ()</td></tr>
+<tr class="memdesc:ab37ebbd9de3da47ebdcf332cebcc0cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#ab37ebbd9de3da47ebdcf332cebcc0cc0">[詳解]</a><br /></td></tr>
+<tr class="separator:ab37ebbd9de3da47ebdcf332cebcc0cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef12300dcca7a1256e8437dcc6619b56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#aef12300dcca7a1256e8437dcc6619b56">CreatePosition</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> *position)</td></tr>
+<tr class="memdesc:aef12300dcca7a1256e8437dcc6619b56"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標行列作成関数  <a href="#aef12300dcca7a1256e8437dcc6619b56">[詳解]</a><br /></td></tr>
+<tr class="separator:aef12300dcca7a1256e8437dcc6619b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a334baeec0ce11d8766a3e5679aa0ebca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a334baeec0ce11d8766a3e5679aa0ebca">CreateScale</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> *scale)</td></tr>
+<tr class="memdesc:a334baeec0ce11d8766a3e5679aa0ebca"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡縮行列作成関数  <a href="#a334baeec0ce11d8766a3e5679aa0ebca">[詳解]</a><br /></td></tr>
+<tr class="separator:a334baeec0ce11d8766a3e5679aa0ebca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac995d9979d7f308e824cdfc17ce5df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#abac995d9979d7f308e824cdfc17ce5df">CreateRotationAxisX</a> (float radian)</td></tr>
+<tr class="memdesc:abac995d9979d7f308e824cdfc17ce5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">X軸回転行列作成関数  <a href="#abac995d9979d7f308e824cdfc17ce5df">[詳解]</a><br /></td></tr>
+<tr class="separator:abac995d9979d7f308e824cdfc17ce5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ccd2f99d93caa2bbabd34f6db9ab309"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a3ccd2f99d93caa2bbabd34f6db9ab309">CreateRotationAxisY</a> (float radian)</td></tr>
+<tr class="memdesc:a3ccd2f99d93caa2bbabd34f6db9ab309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z軸回転行列作成関数  <a href="#a3ccd2f99d93caa2bbabd34f6db9ab309">[詳解]</a><br /></td></tr>
+<tr class="separator:a3ccd2f99d93caa2bbabd34f6db9ab309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4832fd2246c43250b138980e446f72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a5b4832fd2246c43250b138980e446f72">CreateRotationAxisZ</a> (float radian)</td></tr>
+<tr class="memdesc:a5b4832fd2246c43250b138980e446f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z軸回転行列作成関数  <a href="#a5b4832fd2246c43250b138980e446f72">[詳解]</a><br /></td></tr>
+<tr class="separator:a5b4832fd2246c43250b138980e446f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e451875514019630942739f04294132"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a4e451875514019630942739f04294132">CreateRotationAxisAny</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> axis, float radian)</td></tr>
+<tr class="memdesc:a4e451875514019630942739f04294132"><td class="mdescLeft">&#160;</td><td class="mdescRight">任意軸回転行列作成関数  <a href="#a4e451875514019630942739f04294132">[詳解]</a><br /></td></tr>
+<tr class="separator:a4e451875514019630942739f04294132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5948efdd6c0f7c03ba8546f1e9cc4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a5f5948efdd6c0f7c03ba8546f1e9cc4b">CreateRotationQuaternion</a> (<a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a> *quaternion)</td></tr>
+<tr class="memdesc:a5f5948efdd6c0f7c03ba8546f1e9cc4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転行列作成関数  <a href="#a5f5948efdd6c0f7c03ba8546f1e9cc4b">[詳解]</a><br /></td></tr>
+<tr class="separator:a5f5948efdd6c0f7c03ba8546f1e9cc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6609563c41e6da8df1f9153507b24a76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a6609563c41e6da8df1f9153507b24a76">CreateWorld</a> (<a class="el" href="class_matrix.html">Matrix</a> *scale, <a class="el" href="class_matrix.html">Matrix</a> *rotation, <a class="el" href="class_matrix.html">Matrix</a> *position)</td></tr>
+<tr class="memdesc:a6609563c41e6da8df1f9153507b24a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド行列作成関数  <a href="#a6609563c41e6da8df1f9153507b24a76">[詳解]</a><br /></td></tr>
+<tr class="separator:a6609563c41e6da8df1f9153507b24a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0de7031b10ae5993e26627839daf93f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#ab0de7031b10ae5993e26627839daf93f">CreateView</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> *position, <a class="el" href="class_vector3_d.html">Vector3D</a> *gazing_point, <a class="el" href="class_vector3_d.html">Vector3D</a> *up)</td></tr>
+<tr class="memdesc:ab0de7031b10ae5993e26627839daf93f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビュー行列作成関数  <a href="#ab0de7031b10ae5993e26627839daf93f">[詳解]</a><br /></td></tr>
+<tr class="separator:ab0de7031b10ae5993e26627839daf93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c861c39a10a7069acc017ce7d51cfd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a5c861c39a10a7069acc017ce7d51cfd1">CreateProjectionPerspectiveFovLH</a> (float angle_of_view, float screen_width, float screen_height, float near_clip, float far_clip)</td></tr>
+<tr class="memdesc:a5c861c39a10a7069acc017ce7d51cfd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">左手座標系透視投影プロジェクション行列作成関数  <a href="#a5c861c39a10a7069acc017ce7d51cfd1">[詳解]</a><br /></td></tr>
+<tr class="separator:a5c861c39a10a7069acc017ce7d51cfd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d7f6955eb684d33317130ec2380cfa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a8d7f6955eb684d33317130ec2380cfa5">CreateProjectionOrtho</a> (float angle_of_view, float screen_width, float screen_height, float near_clip, float far_clip)</td></tr>
+<tr class="memdesc:a8d7f6955eb684d33317130ec2380cfa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">正射影プロジェクション行列作成関数  <a href="#a8d7f6955eb684d33317130ec2380cfa5">[詳解]</a><br /></td></tr>
+<tr class="separator:a8d7f6955eb684d33317130ec2380cfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac15c1a7a0fa2eac0b67e35a39668403"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#aac15c1a7a0fa2eac0b67e35a39668403">CreateProjection2D</a> (float screen_width, float screen_height)</td></tr>
+<tr class="memdesc:aac15c1a7a0fa2eac0b67e35a39668403"><td class="mdescLeft">&#160;</td><td class="mdescRight">2Dプロジェクション行列作成関数  <a href="#aac15c1a7a0fa2eac0b67e35a39668403">[詳解]</a><br /></td></tr>
+<tr class="separator:aac15c1a7a0fa2eac0b67e35a39668403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b351172385ed7b14f21840ed654490e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a9b351172385ed7b14f21840ed654490e">ChangeInverse</a> ()</td></tr>
+<tr class="memdesc:a9b351172385ed7b14f21840ed654490e"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆行列化関数  <a href="#a9b351172385ed7b14f21840ed654490e">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b351172385ed7b14f21840ed654490e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed98c9d04ddadd3697c382dcddf3a4f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#aed98c9d04ddadd3697c382dcddf3a4f0">ChangeTranspose</a> (bool is_position_off=false)</td></tr>
+<tr class="memdesc:aed98c9d04ddadd3697c382dcddf3a4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">転置行列化関数  <a href="#aed98c9d04ddadd3697c382dcddf3a4f0">[詳解]</a><br /></td></tr>
+<tr class="separator:aed98c9d04ddadd3697c382dcddf3a4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bfa12d6b05ca2748def870d24356946"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a9bfa12d6b05ca2748def870d24356946">AddParentMatrix</a> (<a class="el" href="class_matrix.html">Matrix</a> *matrix)</td></tr>
+<tr class="memdesc:a9bfa12d6b05ca2748def870d24356946"><td class="mdescLeft">&#160;</td><td class="mdescRight">親行列追加関数  <a href="#a9bfa12d6b05ca2748def870d24356946">[詳解]</a><br /></td></tr>
+<tr class="separator:a9bfa12d6b05ca2748def870d24356946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85469d633691b3c3d8a3cfb260dd1d48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a85469d633691b3c3d8a3cfb260dd1d48">AddChildMatrix</a> (<a class="el" href="class_matrix.html">Matrix</a> *matrix)</td></tr>
+<tr class="memdesc:a85469d633691b3c3d8a3cfb260dd1d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">子行列追加関数  <a href="#a85469d633691b3c3d8a3cfb260dd1d48">[詳解]</a><br /></td></tr>
+<tr class="separator:a85469d633691b3c3d8a3cfb260dd1d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:a57e542a9008a8ceb9a7608debb318d04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a57e542a9008a8ceb9a7608debb318d04">CreateAxis</a> ()</td></tr>
+<tr class="memdesc:a57e542a9008a8ceb9a7608debb318d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">軸作成関数  <a href="#a57e542a9008a8ceb9a7608debb318d04">[詳解]</a><br /></td></tr>
+<tr class="separator:a57e542a9008a8ceb9a7608debb318d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd474fde033edf1fd95f643888e8b22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#acdd474fde033edf1fd95f643888e8b22">CreateViewAxis</a> ()</td></tr>
+<tr class="memdesc:acdd474fde033edf1fd95f643888e8b22"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビュー軸作成関数  <a href="#acdd474fde033edf1fd95f643888e8b22">[詳解]</a><br /></td></tr>
+<tr class="separator:acdd474fde033edf1fd95f643888e8b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a49474d6852e69b73066efa3c0bf648ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a49474d6852e69b73066efa3c0bf648ac">right_</a></td></tr>
+<tr class="memdesc:a49474d6852e69b73066efa3c0bf648ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">右ベクトル  <a href="#a49474d6852e69b73066efa3c0bf648ac">[詳解]</a><br /></td></tr>
+<tr class="separator:a49474d6852e69b73066efa3c0bf648ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b63002dc85564fe623cd0ad5646cc2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a1b63002dc85564fe623cd0ad5646cc2e">up_</a></td></tr>
+<tr class="memdesc:a1b63002dc85564fe623cd0ad5646cc2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">上ベクトル  <a href="#a1b63002dc85564fe623cd0ad5646cc2e">[詳解]</a><br /></td></tr>
+<tr class="separator:a1b63002dc85564fe623cd0ad5646cc2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2759a4a1b7542efd88f2c7c91886cdb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a2759a4a1b7542efd88f2c7c91886cdb7">forward_</a></td></tr>
+<tr class="memdesc:a2759a4a1b7542efd88f2c7c91886cdb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">前ベクトル  <a href="#a2759a4a1b7542efd88f2c7c91886cdb7">[詳解]</a><br /></td></tr>
+<tr class="separator:a2759a4a1b7542efd88f2c7c91886cdb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac376ec9634c70db2366247a1133416b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#ac376ec9634c70db2366247a1133416b9">default_right_</a></td></tr>
+<tr class="memdesc:ac376ec9634c70db2366247a1133416b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定右ベクトル  <a href="#ac376ec9634c70db2366247a1133416b9">[詳解]</a><br /></td></tr>
+<tr class="separator:ac376ec9634c70db2366247a1133416b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac48c2c66fab401482576b039d1260233"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#ac48c2c66fab401482576b039d1260233">default_up_</a></td></tr>
+<tr class="memdesc:ac48c2c66fab401482576b039d1260233"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定上ベクトル  <a href="#ac48c2c66fab401482576b039d1260233">[詳解]</a><br /></td></tr>
+<tr class="separator:ac48c2c66fab401482576b039d1260233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15c25940156b22911e7e5e240ca49a16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a15c25940156b22911e7e5e240ca49a16">default_forward_</a></td></tr>
+<tr class="memdesc:a15c25940156b22911e7e5e240ca49a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定前ベクトル  <a href="#a15c25940156b22911e7e5e240ca49a16">[詳解]</a><br /></td></tr>
+<tr class="separator:a15c25940156b22911e7e5e240ca49a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静的非公開変数類</h2></td></tr>
+<tr class="memitem:adacba7656f6f241250c339c062196803"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#adacba7656f6f241250c339c062196803">DEFAULT_RIGHT</a></td></tr>
+<tr class="memdesc:adacba7656f6f241250c339c062196803"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定右ベクトル  <a href="#adacba7656f6f241250c339c062196803">[詳解]</a><br /></td></tr>
+<tr class="separator:adacba7656f6f241250c339c062196803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a464c6648a8d6a336250e11f9cf8c67bf"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a464c6648a8d6a336250e11f9cf8c67bf">DEFAULT_UP</a></td></tr>
+<tr class="memdesc:a464c6648a8d6a336250e11f9cf8c67bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定上ベクトル  <a href="#a464c6648a8d6a336250e11f9cf8c67bf">[詳解]</a><br /></td></tr>
+<tr class="separator:a464c6648a8d6a336250e11f9cf8c67bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a58999357e3a835da86f223d62ba086"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a0a58999357e3a835da86f223d62ba086">DEFAULT_FORWARD</a></td></tr>
+<tr class="memdesc:a0a58999357e3a835da86f223d62ba086"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定前ベクトル  <a href="#a0a58999357e3a835da86f223d62ba086">[詳解]</a><br /></td></tr>
+<tr class="separator:a0a58999357e3a835da86f223d62ba086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>行列Class </p>
+<p>行列のClass </p>
+
+<p class="definition"> <a class="el" href="_matrix_8h_source.html">Matrix.h</a> の <a class="el" href="_matrix_8h_source.html#l00024">24</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a2dba13c45127354c9f75ef576f49269b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dba13c45127354c9f75ef576f49269b">&#9670;&nbsp;</a></span>Matrix() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix::Matrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00286">286</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aec226891d64369eb1a1051ad96bf03da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec226891d64369eb1a1051ad96bf03da">&#9670;&nbsp;</a></span>Matrix() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix::Matrix </td>
+          <td>(</td>
+          <td class="paramtype">const float *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>単一floatコンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00298">298</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acf565e5e85611da8b1559604021fa71e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf565e5e85611da8b1559604021fa71e">&#9670;&nbsp;</a></span>Matrix() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix::Matrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_vector3_d_8h.html#afe61185afc2bf3856c12613d99eede01">Float16</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>単一float16コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00312">312</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2b1fedfb1b076d4ae504d2c61019871f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b1fedfb1b076d4ae504d2c61019871f">&#9670;&nbsp;</a></span>Matrix() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix::Matrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行列コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00325">325</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3f698b5ae393f6f8395c323e4701686c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f698b5ae393f6f8395c323e4701686c">&#9670;&nbsp;</a></span>Matrix() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix::Matrix </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value11</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value12</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value13</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value14</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value21</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value22</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value23</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value24</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value31</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value32</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value33</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value34</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value41</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value42</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value43</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value44</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>複数floatコンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value11</td><td>11成分 </td></tr>
+    <tr><td class="paramname">value12</td><td>12成分 </td></tr>
+    <tr><td class="paramname">value13</td><td>13成分 </td></tr>
+    <tr><td class="paramname">value14</td><td>14成分 </td></tr>
+    <tr><td class="paramname">value21</td><td>21成分 </td></tr>
+    <tr><td class="paramname">value22</td><td>22成分 </td></tr>
+    <tr><td class="paramname">value23</td><td>23成分 </td></tr>
+    <tr><td class="paramname">value24</td><td>24成分 </td></tr>
+    <tr><td class="paramname">value31</td><td>31成分 </td></tr>
+    <tr><td class="paramname">value32</td><td>32成分 </td></tr>
+    <tr><td class="paramname">value33</td><td>33成分 </td></tr>
+    <tr><td class="paramname">value34</td><td>34成分 </td></tr>
+    <tr><td class="paramname">value41</td><td>41成分 </td></tr>
+    <tr><td class="paramname">value42</td><td>42成分 </td></tr>
+    <tr><td class="paramname">value43</td><td>43成分 </td></tr>
+    <tr><td class="paramname">value44</td><td>44成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00338">338</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9b1c3627f573d78a2f08623fdfef990f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b1c3627f573d78a2f08623fdfef990f">&#9670;&nbsp;</a></span>~Matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix::~Matrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00355">355</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a85469d633691b3c3d8a3cfb260dd1d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85469d633691b3c3d8a3cfb260dd1d48">&#9670;&nbsp;</a></span>AddChildMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::AddChildMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>子行列追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>子行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00510">510</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9bfa12d6b05ca2748def870d24356946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bfa12d6b05ca2748def870d24356946">&#9670;&nbsp;</a></span>AddParentMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::AddParentMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>親行列追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>親行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00502">502</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9b351172385ed7b14f21840ed654490e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b351172385ed7b14f21840ed654490e">&#9670;&nbsp;</a></span>ChangeInverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::ChangeInverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>逆行列化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00482">482</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aed98c9d04ddadd3697c382dcddf3a4f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed98c9d04ddadd3697c382dcddf3a4f0">&#9670;&nbsp;</a></span>ChangeTranspose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::ChangeTranspose </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_position_off</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>転置行列化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_position_off</td><td>平行移動OFFフラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00490">490</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a57e542a9008a8ceb9a7608debb318d04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57e542a9008a8ceb9a7608debb318d04">&#9670;&nbsp;</a></span>CreateAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreateAxis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>軸作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00518">518</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aef12300dcca7a1256e8437dcc6619b56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef12300dcca7a1256e8437dcc6619b56">&#9670;&nbsp;</a></span>CreatePosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreatePosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>座標行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*position</td><td>座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00375">375</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aac15c1a7a0fa2eac0b67e35a39668403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac15c1a7a0fa2eac0b67e35a39668403">&#9670;&nbsp;</a></span>CreateProjection2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreateProjection2D </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>screen_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>screen_height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>2Dプロジェクション行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screen_width</td><td>スクリーン幅 </td></tr>
+    <tr><td class="paramname">screen_height</td><td>スクリーン高さ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00469">469</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8d7f6955eb684d33317130ec2380cfa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d7f6955eb684d33317130ec2380cfa5">&#9670;&nbsp;</a></span>CreateProjectionOrtho()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreateProjectionOrtho </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle_of_view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>screen_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>screen_height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>near_clip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>far_clip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>正射影プロジェクション行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle_of_view</td><td>画角 </td></tr>
+    <tr><td class="paramname">screen_width</td><td>スクリーン幅 </td></tr>
+    <tr><td class="paramname">screen_height</td><td>スクリーン高さ </td></tr>
+    <tr><td class="paramname">near_clip</td><td>ニアクリップ </td></tr>
+    <tr><td class="paramname">far_clip</td><td>ファークリップ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00459">459</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5c861c39a10a7069acc017ce7d51cfd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c861c39a10a7069acc017ce7d51cfd1">&#9670;&nbsp;</a></span>CreateProjectionPerspectiveFovLH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreateProjectionPerspectiveFovLH </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle_of_view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>screen_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>screen_height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>near_clip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>far_clip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>左手座標系透視投影プロジェクション行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle_of_view</td><td>画角 </td></tr>
+    <tr><td class="paramname">screen_width</td><td>スクリーン幅 </td></tr>
+    <tr><td class="paramname">screen_height</td><td>スクリーン高さ </td></tr>
+    <tr><td class="paramname">near_clip</td><td>ニアクリップ </td></tr>
+    <tr><td class="paramname">far_clip</td><td>ファークリップ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00448">448</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4e451875514019630942739f04294132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e451875514019630942739f04294132">&#9670;&nbsp;</a></span>CreateRotationAxisAny()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreateRotationAxisAny </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radian</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>任意軸回転行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>軸 </td></tr>
+    <tr><td class="paramname">radian</td><td>角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00415">415</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abac995d9979d7f308e824cdfc17ce5df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abac995d9979d7f308e824cdfc17ce5df">&#9670;&nbsp;</a></span>CreateRotationAxisX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreateRotationAxisX </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radian</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>X軸回転行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radian</td><td>角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00391">391</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3ccd2f99d93caa2bbabd34f6db9ab309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ccd2f99d93caa2bbabd34f6db9ab309">&#9670;&nbsp;</a></span>CreateRotationAxisY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreateRotationAxisY </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radian</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Z軸回転行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radian</td><td>角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00399">399</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5b4832fd2246c43250b138980e446f72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b4832fd2246c43250b138980e446f72">&#9670;&nbsp;</a></span>CreateRotationAxisZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreateRotationAxisZ </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radian</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Z軸回転行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radian</td><td>角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00407">407</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5f5948efdd6c0f7c03ba8546f1e9cc4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f5948efdd6c0f7c03ba8546f1e9cc4b">&#9670;&nbsp;</a></span>CreateRotationQuaternion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreateRotationQuaternion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a> *&#160;</td>
+          <td class="paramname"><em>quaternion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>回転行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*quaternion</td><td>クォータニオン </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00423">423</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a334baeec0ce11d8766a3e5679aa0ebca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334baeec0ce11d8766a3e5679aa0ebca">&#9670;&nbsp;</a></span>CreateScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreateScale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td>
+          <td class="paramname"><em>scale</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拡縮行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*scale</td><td>拡縮 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00383">383</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab0de7031b10ae5993e26627839daf93f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0de7031b10ae5993e26627839daf93f">&#9670;&nbsp;</a></span>CreateView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreateView </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td>
+          <td class="paramname"><em>gazing_point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td>
+          <td class="paramname"><em>up</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビュー行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*position</td><td>座標 </td></tr>
+    <tr><td class="paramname">*gazing_point</td><td>注視点 </td></tr>
+    <tr><td class="paramname">*up</td><td>上方向 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00440">440</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acdd474fde033edf1fd95f643888e8b22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd474fde033edf1fd95f643888e8b22">&#9670;&nbsp;</a></span>CreateViewAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreateViewAxis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ビュー軸作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00531">531</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6609563c41e6da8df1f9153507b24a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6609563c41e6da8df1f9153507b24a76">&#9670;&nbsp;</a></span>CreateWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::CreateWorld </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ワールド行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*scale</td><td>拡縮行列 </td></tr>
+    <tr><td class="paramname">*rotation</td><td>回転行列 </td></tr>
+    <tr><td class="paramname">*position</td><td>座標行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00431">431</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aae88110e606dea36cd7d01057edbe567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae88110e606dea36cd7d01057edbe567">&#9670;&nbsp;</a></span>get11()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get11 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>11成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>11成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00029">29</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abcea3af9d2b4a775a4850e7e061149a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcea3af9d2b4a775a4850e7e061149a6">&#9670;&nbsp;</a></span>get12()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get12 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>12成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>12成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a921bc8b3e2f3e373fe2728075caf462f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a921bc8b3e2f3e373fe2728075caf462f">&#9670;&nbsp;</a></span>get13()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get13 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>13成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>13成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00053">53</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2e5886125fced6427695c51f99bfbd98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e5886125fced6427695c51f99bfbd98">&#9670;&nbsp;</a></span>get14()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get14 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>14成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>14成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00065">65</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a15690e89cfa1b92622e0351241866155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15690e89cfa1b92622e0351241866155">&#9670;&nbsp;</a></span>get21()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get21 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>21成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>21成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00077">77</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a428eda049627bc475ab5eedecb24e5b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a428eda049627bc475ab5eedecb24e5b8">&#9670;&nbsp;</a></span>get22()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get22 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>22成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>22成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00089">89</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adda10197b722e22d6779726975be976c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda10197b722e22d6779726975be976c">&#9670;&nbsp;</a></span>get23()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get23 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>23成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>23成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00101">101</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4655f6764dfb0f9afeb6a9f6055adb93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4655f6764dfb0f9afeb6a9f6055adb93">&#9670;&nbsp;</a></span>get24()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get24 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>24成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>24成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00113">113</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad6b745b0d0b3602fb3bb2bcadba85bad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6b745b0d0b3602fb3bb2bcadba85bad">&#9670;&nbsp;</a></span>get31()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get31 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>31成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>31成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00125">125</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a99786d344646aacf1391118e1968850b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99786d344646aacf1391118e1968850b">&#9670;&nbsp;</a></span>get32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get32 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>32成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>32成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00137">137</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a82d71b38d75c903207dc314262c910ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82d71b38d75c903207dc314262c910ad">&#9670;&nbsp;</a></span>get33()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get33 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>33成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>33成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00149">149</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a544b0203b2d6656f45696f2c8f1af8cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a544b0203b2d6656f45696f2c8f1af8cc">&#9670;&nbsp;</a></span>get34()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get34 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>34成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>34成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00161">161</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2afc1d50f54fc6f4a7088e4b6f016d84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2afc1d50f54fc6f4a7088e4b6f016d84">&#9670;&nbsp;</a></span>get41()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get41 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>41成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>41成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00173">173</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a99f94d1870205989ca96695a430bd6d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99f94d1870205989ca96695a430bd6d6">&#9670;&nbsp;</a></span>get42()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get42 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>42成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>42成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00185">185</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa72989c74eeeb117ba6dc4b8cc7af619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa72989c74eeeb117ba6dc4b8cc7af619">&#9670;&nbsp;</a></span>get43()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get43 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>43成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>43成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00197">197</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a891abd390e49f286709c5962877395d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a891abd390e49f286709c5962877395d8">&#9670;&nbsp;</a></span>get44()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix::get44 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>44成分取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>44成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00209">209</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8b8b21659e1239a4a5b4361bc72f1fad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b8b21659e1239a4a5b4361bc72f1fad">&#9670;&nbsp;</a></span>getpDefaultForward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Matrix::getpDefaultForward </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>既定前ベクトル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>既定前ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00264">264</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0096877aa292e1e8801deb912e1c8245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0096877aa292e1e8801deb912e1c8245">&#9670;&nbsp;</a></span>getpDefaultRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Matrix::getpDefaultRight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>既定右ベクトル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>既定右ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00250">250</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a34bf031354bde8182be09f1b7805a320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34bf031354bde8182be09f1b7805a320">&#9670;&nbsp;</a></span>getpDefaultUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Matrix::getpDefaultUp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>既定上ベクトル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>既定上ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00257">257</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a384555a3c303692932b15eef7b3abf3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a384555a3c303692932b15eef7b3abf3e">&#9670;&nbsp;</a></span>getpForward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Matrix::getpForward </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>前ベクトル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>前ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00243">243</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af715d6df123065b56f602ea7db05238d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af715d6df123065b56f602ea7db05238d">&#9670;&nbsp;</a></span>getPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Matrix::getPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>座標取得取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="class_vector3_d.html" title="3DベクトルClass ">Vector3D</a></td><td>座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00222">222</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8872d3d34f938dd920cfd2e81a33c9cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8872d3d34f938dd920cfd2e81a33c9cb">&#9670;&nbsp;</a></span>getpRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Matrix::getpRight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>右ベクトル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>右ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00229">229</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aed95f652a1365e3bb908c2ea07ed7884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed95f652a1365e3bb908c2ea07ed7884">&#9670;&nbsp;</a></span>getpUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Matrix::getpUp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上ベクトル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>上ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00236">236</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab37ebbd9de3da47ebdcf332cebcc0cc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab37ebbd9de3da47ebdcf332cebcc0cc0">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00361">361</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa2f78f6d34450195fec250fee6172afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2f78f6d34450195fec250fee6172afd">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Matrix::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>*演算子 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&amp;matrix</td><td>行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="class_matrix.html" title="行列Class ">Matrix</a></td><td>乗算後の行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00274">274</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a702141355d7a4161432299224844b193"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a702141355d7a4161432299224844b193">&#9670;&nbsp;</a></span>set11()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set11 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>11成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>11成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a16351455b43031ca0aaf27dceb3b65b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16351455b43031ca0aaf27dceb3b65b4">&#9670;&nbsp;</a></span>set12()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set12 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>12成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>12成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00047">47</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0aa865228e8713575ccba777c0a1a059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aa865228e8713575ccba777c0a1a059">&#9670;&nbsp;</a></span>set13()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set13 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>13成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>13成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00059">59</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a289a3908210e92d94534d30dc0b12476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a289a3908210e92d94534d30dc0b12476">&#9670;&nbsp;</a></span>set14()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set14 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>14成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>14成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00071">71</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a05f282ddbc60accffe4f1577a93c4d01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05f282ddbc60accffe4f1577a93c4d01">&#9670;&nbsp;</a></span>set21()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set21 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>21成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>21成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00083">83</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a56eee3be58eefa236f75cbf7872e4dbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56eee3be58eefa236f75cbf7872e4dbc">&#9670;&nbsp;</a></span>set22()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set22 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>22成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>22成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00095">95</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a765ef911f6d3345b05f6bda8f2330595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765ef911f6d3345b05f6bda8f2330595">&#9670;&nbsp;</a></span>set23()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set23 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>23成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>23成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00107">107</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a99120cc734398118f0708daa95ca545b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99120cc734398118f0708daa95ca545b">&#9670;&nbsp;</a></span>set24()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set24 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>24成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>24成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00119">119</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a625ed38d8c5e8d20cdd399a5afd61c45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a625ed38d8c5e8d20cdd399a5afd61c45">&#9670;&nbsp;</a></span>set31()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set31 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>31成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>31成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00131">131</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3cc8c6612366d92b7b8a81f7f802f50c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cc8c6612366d92b7b8a81f7f802f50c">&#9670;&nbsp;</a></span>set32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set32 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>32成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>32成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00143">143</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae4817d20e03fe01105b6e4957d49060e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4817d20e03fe01105b6e4957d49060e">&#9670;&nbsp;</a></span>set33()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set33 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>33成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>33成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00155">155</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7114f1252d78581637cbb5b06cff9b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7114f1252d78581637cbb5b06cff9b33">&#9670;&nbsp;</a></span>set34()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set34 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>34成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>34成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00167">167</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae649f42548ca5617d8d1d47252a786f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae649f42548ca5617d8d1d47252a786f2">&#9670;&nbsp;</a></span>set41()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set41 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>41成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>41成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00179">179</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a397c7b3f9292c224f86cdf0cb4d8e46d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a397c7b3f9292c224f86cdf0cb4d8e46d">&#9670;&nbsp;</a></span>set42()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set42 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>42成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>42成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00191">191</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a724ee3aa5cfc17cea02fe474d807c0cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a724ee3aa5cfc17cea02fe474d807c0cc">&#9670;&nbsp;</a></span>set43()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set43 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>43成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>43成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00203">203</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1cea9dbd57d0ad3583243af3559917ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cea9dbd57d0ad3583243af3559917ad">&#9670;&nbsp;</a></span>set44()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::set44 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>44成分設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>44成分 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a> の <a class="el" href="_matrix_8cpp_source.html#l00215">215</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a0a58999357e3a835da86f223d62ba086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a58999357e3a835da86f223d62ba086">&#9670;&nbsp;</a></span>DEFAULT_FORWARD</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_vector3_d.html">Vector3D</a> Matrix::DEFAULT_FORWARD</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>既定前ベクトル </p>
+
+<p class="definition"> <a class="el" href="_matrix_8h_source.html">Matrix.h</a> の <a class="el" href="_matrix_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a15c25940156b22911e7e5e240ca49a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15c25940156b22911e7e5e240ca49a16">&#9670;&nbsp;</a></span>default_forward_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Matrix::default_forward_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>既定前ベクトル </p>
+
+<p class="definition"> <a class="el" href="_matrix_8h_source.html">Matrix.h</a> の <a class="el" href="_matrix_8h_source.html#l00044">44</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adacba7656f6f241250c339c062196803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adacba7656f6f241250c339c062196803">&#9670;&nbsp;</a></span>DEFAULT_RIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_vector3_d.html">Vector3D</a> Matrix::DEFAULT_RIGHT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>既定右ベクトル </p>
+
+<p class="definition"> <a class="el" href="_matrix_8h_source.html">Matrix.h</a> の <a class="el" href="_matrix_8h_source.html#l00030">30</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac376ec9634c70db2366247a1133416b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac376ec9634c70db2366247a1133416b9">&#9670;&nbsp;</a></span>default_right_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Matrix::default_right_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>既定右ベクトル </p>
+
+<p class="definition"> <a class="el" href="_matrix_8h_source.html">Matrix.h</a> の <a class="el" href="_matrix_8h_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a464c6648a8d6a336250e11f9cf8c67bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a464c6648a8d6a336250e11f9cf8c67bf">&#9670;&nbsp;</a></span>DEFAULT_UP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_vector3_d.html">Vector3D</a> Matrix::DEFAULT_UP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>既定上ベクトル </p>
+
+<p class="definition"> <a class="el" href="_matrix_8h_source.html">Matrix.h</a> の <a class="el" href="_matrix_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac48c2c66fab401482576b039d1260233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac48c2c66fab401482576b039d1260233">&#9670;&nbsp;</a></span>default_up_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Matrix::default_up_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>既定上ベクトル </p>
+
+<p class="definition"> <a class="el" href="_matrix_8h_source.html">Matrix.h</a> の <a class="el" href="_matrix_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2759a4a1b7542efd88f2c7c91886cdb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2759a4a1b7542efd88f2c7c91886cdb7">&#9670;&nbsp;</a></span>forward_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Matrix::forward_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>前ベクトル </p>
+
+<p class="definition"> <a class="el" href="_matrix_8h_source.html">Matrix.h</a> の <a class="el" href="_matrix_8h_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a49474d6852e69b73066efa3c0bf648ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49474d6852e69b73066efa3c0bf648ac">&#9670;&nbsp;</a></span>right_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Matrix::right_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>右ベクトル </p>
+
+<p class="definition"> <a class="el" href="_matrix_8h_source.html">Matrix.h</a> の <a class="el" href="_matrix_8h_source.html#l00039">39</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1b63002dc85564fe623cd0ad5646cc2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b63002dc85564fe623cd0ad5646cc2e">&#9670;&nbsp;</a></span>up_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Matrix::up_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>上ベクトル </p>
+
+<p class="definition"> <a class="el" href="_matrix_8h_source.html">Matrix.h</a> の <a class="el" href="_matrix_8h_source.html#l00040">40</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Tool/<a class="el" href="_matrix_8h_source.html">Matrix.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Tool/Source/<a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_matrix.html">Matrix</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

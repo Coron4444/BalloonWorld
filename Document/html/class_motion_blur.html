@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: MotionBlur クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_motion_blur.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="class_motion_blur-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">MotionBlur クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>モーションブラーClass  
+ <a href="class_motion_blur.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_motion_blur_8h_source.html">MotionBlur.h</a>&gt;</code></p>
+<div class="dynheader">
+MotionBlur 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motion_blur__coll__graph.png" border="0" usemap="#_motion_blur_coll__map" alt="Collaboration graph"/></div>
+<map name="_motion_blur_coll__map" id="_motion_blur_coll__map">
+<area shape="rect" id="node2" href="class_shader_manager.html" title="シェーダーマネージャClass " alt="" coords="1920,207,2033,233"/>
+<area shape="rect" id="node3" href="class_vertex_shader_base.html" title="頂点シェーダーBassClass " alt="" coords="1627,207,1757,233"/>
+<area shape="rect" id="node4" href="class_shader_base.html" title="シェーダーBaseClass " alt="" coords="1383,227,1477,253"/>
+<area shape="rect" id="node13" href="class_pixel_shader_base.html" title="ピクセルシェーダーBassClass " alt="" coords="1631,257,1753,284"/>
+<area shape="rect" id="node5" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="1033,229,1164,256"/>
+<area shape="rect" id="node17" href="class_draw_base.html" title="描画BaseClass " alt="" coords="1389,455,1471,481"/>
+<area shape="rect" id="node6" href="class_camera.html" title="カメラClass " alt="" coords="737,96,804,123"/>
+<area shape="rect" id="node7" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="1045,96,1152,123"/>
+<area shape="rect" id="node8" href="class_matrix.html" title="行列Class " alt="" coords="404,204,463,231"/>
+<area shape="rect" id="node30" href="class_transform.html" title="変形Class " alt="" coords="901,528,980,555"/>
+<area shape="rect" id="node10" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="107,568,183,595"/>
+<area shape="rect" id="node23" href="class_a_a_b_b.html" title="AABBClass " alt="" coords="741,776,800,803"/>
+<area shape="rect" id="node24" href="class_collision_shape_base.html" title="衝突形状BaseClass " alt="" coords="364,680,503,707"/>
+<area shape="rect" id="node29" href="class_physics.html" title="物理Class " alt="" coords="1942,585,2011,612"/>
+<area shape="rect" id="node12" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="717,231,824,257"/>
+<area shape="rect" id="node14" href="class_texture_object.html" title="テクスチャオブジェクトClass " alt="" coords="1379,277,1481,304"/>
+<area shape="rect" id="node15" href="class_render_texture_polygon.html" title="レンダーテクスチャポリゴンClass " alt="" coords="1900,333,2053,360"/>
+<area shape="rect" id="node16" href="class_draw_null.html" title="空白描画Class " alt="" coords="1655,409,1729,436"/>
+<area shape="rect" id="node19" href="class_game_object_base.html" title="ゲームオブジェクトBaseClass " alt="" coords="1629,539,1755,565"/>
+<area shape="rect" id="node18" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="1917,495,2036,521"/>
+<area shape="rect" id="node20" href="class_collision_base.html" title="衝突BaseClass " alt="" coords="2209,653,2311,680"/>
+<area shape="rect" id="node22" href="class_collision_object.html" title="衝突オブジェクトClass " alt="" coords="2452,725,2561,752"/>
+<area shape="rect" id="node21" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject *,\l ARRAY_NUM \&gt;" alt="" coords="2742,633,2878,689"/>
+<area shape="rect" id="node25" href="class_object_of_tree.html" title="ObjectOfTree\&lt; CollisionObject *\&gt;" alt="" coords="2703,768,2917,795"/>
+<area shape="rect" id="node28" href="class_collision_object_1_1_shape.html" title="衝突形状Class " alt="" coords="693,695,848,721"/>
+<area shape="rect" id="node26" href="class_space_of_tree.html" title="SpaceOfTree\&lt; CollisionObject *\&gt;" alt="" coords="3075,768,3288,795"/>
+<area shape="rect" id="node27" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject::Shape\l *, ARRAY_NUM \&gt;" alt="" coords="1188,701,1355,757"/>
+<area shape="rect" id="node31" href="class_draw_order_list.html" title="描画注文リストClass " alt="" coords="1047,455,1151,481"/>
+<area shape="rect" id="node32" href="class_bit_flag.html" title="ビットフラグClass " alt="" coords="739,455,802,481"/>
+<area shape="rect" id="node33" href="class_plane_polygon.html" title="平面ポリゴンClass " alt="" coords="1641,308,1743,335"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab4f38538f4a0ca8e444109aa090537ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_blur.html#ab4f38538f4a0ca8e444109aa090537ee">setCamera</a> (<a class="el" href="class_camera.html">Camera</a> *value)</td></tr>
+<tr class="memdesc:ab4f38538f4a0ca8e444109aa090537ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラ設定関数  <a href="#ab4f38538f4a0ca8e444109aa090537ee">[詳解]</a><br /></td></tr>
+<tr class="separator:ab4f38538f4a0ca8e444109aa090537ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33ebb6a66254418212786178f4e4479"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_blur.html#ac33ebb6a66254418212786178f4e4479">setDrawCommonData</a> (<a class="el" href="class_draw_common_data.html">DrawCommonData</a> *value)</td></tr>
+<tr class="memdesc:ac33ebb6a66254418212786178f4e4479"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ設定関数  <a href="#ac33ebb6a66254418212786178f4e4479">[詳解]</a><br /></td></tr>
+<tr class="separator:ac33ebb6a66254418212786178f4e4479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a801a9afbb4ee439af84bbaa2050cd414"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_blur.html#a801a9afbb4ee439af84bbaa2050cd414">setShaderManager</a> (<a class="el" href="class_shader_manager.html">ShaderManager</a> *value)</td></tr>
+<tr class="memdesc:a801a9afbb4ee439af84bbaa2050cd414"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダーマネージャ設定関数  <a href="#a801a9afbb4ee439af84bbaa2050cd414">[詳解]</a><br /></td></tr>
+<tr class="separator:a801a9afbb4ee439af84bbaa2050cd414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f61cc3a14ed681e026d286a51da059"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_blur.html#a93f61cc3a14ed681e026d286a51da059">Init</a> ()</td></tr>
+<tr class="memdesc:a93f61cc3a14ed681e026d286a51da059"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a93f61cc3a14ed681e026d286a51da059">[詳解]</a><br /></td></tr>
+<tr class="separator:a93f61cc3a14ed681e026d286a51da059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada6365aa40bddda3adf76695e9651e89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_blur.html#ada6365aa40bddda3adf76695e9651e89">UninitWhenChangeScene</a> ()</td></tr>
+<tr class="memdesc:ada6365aa40bddda3adf76695e9651e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン変更時の終了関数  <a href="#ada6365aa40bddda3adf76695e9651e89">[詳解]</a><br /></td></tr>
+<tr class="separator:ada6365aa40bddda3adf76695e9651e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bceb3a1e625653a0037af10fa5cf422"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_blur.html#a4bceb3a1e625653a0037af10fa5cf422">Uninit</a> ()</td></tr>
+<tr class="memdesc:a4bceb3a1e625653a0037af10fa5cf422"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#a4bceb3a1e625653a0037af10fa5cf422">[詳解]</a><br /></td></tr>
+<tr class="separator:a4bceb3a1e625653a0037af10fa5cf422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931793c39ebeed7da3406f3aeaa7452e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_blur.html#a931793c39ebeed7da3406f3aeaa7452e">Update</a> ()</td></tr>
+<tr class="memdesc:a931793c39ebeed7da3406f3aeaa7452e"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#a931793c39ebeed7da3406f3aeaa7452e">[詳解]</a><br /></td></tr>
+<tr class="separator:a931793c39ebeed7da3406f3aeaa7452e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3c39934e707c4325310873eea3ed45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_blur.html#a8f3c39934e707c4325310873eea3ed45">Draw</a> ()</td></tr>
+<tr class="memdesc:a8f3c39934e707c4325310873eea3ed45"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画関数  <a href="#a8f3c39934e707c4325310873eea3ed45">[詳解]</a><br /></td></tr>
+<tr class="separator:a8f3c39934e707c4325310873eea3ed45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fcf35d649a2e1174e5fdaa0ee168a9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_blur.html#a5fcf35d649a2e1174e5fdaa0ee168a9f">LateUpdate</a> ()</td></tr>
+<tr class="memdesc:a5fcf35d649a2e1174e5fdaa0ee168a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">後更新関数  <a href="#a5fcf35d649a2e1174e5fdaa0ee168a9f">[詳解]</a><br /></td></tr>
+<tr class="separator:a5fcf35d649a2e1174e5fdaa0ee168a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a1e43ed8f5b0ae775221695807b68ae8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_blur.html#a1e43ed8f5b0ae775221695807b68ae8f">camera_</a> = nullptr</td></tr>
+<tr class="memdesc:a1e43ed8f5b0ae775221695807b68ae8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラ  <a href="#a1e43ed8f5b0ae775221695807b68ae8f">[詳解]</a><br /></td></tr>
+<tr class="separator:a1e43ed8f5b0ae775221695807b68ae8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc7c243d6ec641ec5d0bdc7bbeff481"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_blur.html#aecc7c243d6ec641ec5d0bdc7bbeff481">common_data_</a> = nullptr</td></tr>
+<tr class="memdesc:aecc7c243d6ec641ec5d0bdc7bbeff481"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ  <a href="#aecc7c243d6ec641ec5d0bdc7bbeff481">[詳解]</a><br /></td></tr>
+<tr class="separator:aecc7c243d6ec641ec5d0bdc7bbeff481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a888c174da110fd14c2fcf2ab5c751dda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shader_manager.html">ShaderManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_blur.html#a888c174da110fd14c2fcf2ab5c751dda">shader_manager_</a> = nullptr</td></tr>
+<tr class="memdesc:a888c174da110fd14c2fcf2ab5c751dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダーマネージャ  <a href="#a888c174da110fd14c2fcf2ab5c751dda">[詳解]</a><br /></td></tr>
+<tr class="separator:a888c174da110fd14c2fcf2ab5c751dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14af04a5a96dbdeed47b07bd7bd3d860"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_render_texture_polygon.html">RenderTexturePolygon</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_blur.html#a14af04a5a96dbdeed47b07bd7bd3d860">polygon_</a> = nullptr</td></tr>
+<tr class="memdesc:a14af04a5a96dbdeed47b07bd7bd3d860"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示用ポリゴン  <a href="#a14af04a5a96dbdeed47b07bd7bd3d860">[詳解]</a><br /></td></tr>
+<tr class="separator:a14af04a5a96dbdeed47b07bd7bd3d860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>モーションブラーClass </p>
+<p>モーションブラーのClass </p>
+
+<p class="definition"> <a class="el" href="_motion_blur_8h_source.html">MotionBlur.h</a> の <a class="el" href="_motion_blur_8h_source.html#l00027">27</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a8f3c39934e707c4325310873eea3ed45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f3c39934e707c4325310873eea3ed45">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionBlur::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_motion_blur_8cpp_source.html">MotionBlur.cpp</a> の <a class="el" href="_motion_blur_8cpp_source.html#l00100">100</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a93f61cc3a14ed681e026d286a51da059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f61cc3a14ed681e026d286a51da059">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionBlur::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_motion_blur_8cpp_source.html">MotionBlur.cpp</a> の <a class="el" href="_motion_blur_8cpp_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5fcf35d649a2e1174e5fdaa0ee168a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fcf35d649a2e1174e5fdaa0ee168a9f">&#9670;&nbsp;</a></span>LateUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionBlur::LateUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>後更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_motion_blur_8cpp_source.html">MotionBlur.cpp</a> の <a class="el" href="_motion_blur_8cpp_source.html#l00080">80</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab4f38538f4a0ca8e444109aa090537ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f38538f4a0ca8e444109aa090537ee">&#9670;&nbsp;</a></span>setCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionBlur::setCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>カメラ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*value</td><td>カメラ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_motion_blur_8cpp_source.html">MotionBlur.cpp</a> の <a class="el" href="_motion_blur_8cpp_source.html#l00024">24</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac33ebb6a66254418212786178f4e4479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33ebb6a66254418212786178f4e4479">&#9670;&nbsp;</a></span>setDrawCommonData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionBlur::setDrawCommonData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画共通データ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*value</td><td>描画共通データ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_motion_blur_8cpp_source.html">MotionBlur.cpp</a> の <a class="el" href="_motion_blur_8cpp_source.html#l00031">31</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a801a9afbb4ee439af84bbaa2050cd414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a801a9afbb4ee439af84bbaa2050cd414">&#9670;&nbsp;</a></span>setShaderManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionBlur::setShaderManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shader_manager.html">ShaderManager</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>シェーダーマネージャ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>シェーダーマネージャ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_motion_blur_8cpp_source.html">MotionBlur.cpp</a> の <a class="el" href="_motion_blur_8cpp_source.html#l00038">38</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4bceb3a1e625653a0037af10fa5cf422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bceb3a1e625653a0037af10fa5cf422">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionBlur::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_motion_blur_8cpp_source.html">MotionBlur.cpp</a> の <a class="el" href="_motion_blur_8cpp_source.html#l00060">60</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ada6365aa40bddda3adf76695e9651e89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada6365aa40bddda3adf76695e9651e89">&#9670;&nbsp;</a></span>UninitWhenChangeScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionBlur::UninitWhenChangeScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>シーン変更時の終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_motion_blur_8cpp_source.html">MotionBlur.cpp</a> の <a class="el" href="_motion_blur_8cpp_source.html#l00067">67</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a931793c39ebeed7da3406f3aeaa7452e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a931793c39ebeed7da3406f3aeaa7452e">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionBlur::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_motion_blur_8cpp_source.html">MotionBlur.cpp</a> の <a class="el" href="_motion_blur_8cpp_source.html#l00074">74</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a1e43ed8f5b0ae775221695807b68ae8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e43ed8f5b0ae775221695807b68ae8f">&#9670;&nbsp;</a></span>camera_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_camera.html">Camera</a>* MotionBlur::camera_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>カメラ </p>
+
+<p class="definition"> <a class="el" href="_motion_blur_8h_source.html">MotionBlur.h</a> の <a class="el" href="_motion_blur_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aecc7c243d6ec641ec5d0bdc7bbeff481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc7c243d6ec641ec5d0bdc7bbeff481">&#9670;&nbsp;</a></span>common_data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_draw_common_data.html">DrawCommonData</a>* MotionBlur::common_data_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画共通データ </p>
+
+<p class="definition"> <a class="el" href="_motion_blur_8h_source.html">MotionBlur.h</a> の <a class="el" href="_motion_blur_8h_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a14af04a5a96dbdeed47b07bd7bd3d860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14af04a5a96dbdeed47b07bd7bd3d860">&#9670;&nbsp;</a></span>polygon_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_render_texture_polygon.html">RenderTexturePolygon</a>* MotionBlur::polygon_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>表示用ポリゴン </p>
+
+<p class="definition"> <a class="el" href="_motion_blur_8h_source.html">MotionBlur.h</a> の <a class="el" href="_motion_blur_8h_source.html#l00036">36</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a888c174da110fd14c2fcf2ab5c751dda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888c174da110fd14c2fcf2ab5c751dda">&#9670;&nbsp;</a></span>shader_manager_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shader_manager.html">ShaderManager</a>* MotionBlur::shader_manager_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シェーダーマネージャ </p>
+
+<p class="definition"> <a class="el" href="_motion_blur_8h_source.html">MotionBlur.h</a> の <a class="el" href="_motion_blur_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/PostEffect/<a class="el" href="_motion_blur_8h_source.html">MotionBlur.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/PostEffect/Source/<a class="el" href="_motion_blur_8cpp_source.html">MotionBlur.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_motion_blur.html">MotionBlur</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

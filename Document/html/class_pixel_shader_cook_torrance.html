@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: PixelShaderCookTorrance クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_pixel_shader_cook_torrance.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="#pri-static-attribs">静的非公開変数類</a> &#124;
+<a href="class_pixel_shader_cook_torrance-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">PixelShaderCookTorrance クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>クック・トランスの金属反射ピクセルシェーダーClass  
+ <a href="class_pixel_shader_cook_torrance.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_pixel_shader_cook_torrance_8h_source.html">PixelShaderCookTorrance.h</a>&gt;</code></p>
+<div class="dynheader">
+PixelShaderCookTorrance 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_shader_cook_torrance__coll__graph.png" border="0" usemap="#_pixel_shader_cook_torrance_coll__map" alt="Collaboration graph"/></div>
+<map name="_pixel_shader_cook_torrance_coll__map" id="_pixel_shader_cook_torrance_coll__map">
+<area shape="rect" id="node2" href="class_pixel_shader_null.html" title="空白ピクセルシェーダーClass " alt="" coords="105,841,220,868"/>
+<area shape="rect" id="node3" href="class_pixel_shader_base.html" title="ピクセルシェーダーBassClass " alt="" coords="101,765,224,792"/>
+<area shape="rect" id="node4" href="class_shader_base.html" title="シェーダーBaseClass " alt="" coords="24,676,117,703"/>
+<area shape="rect" id="node5" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="5,587,136,613"/>
+<area shape="rect" id="node6" href="class_camera.html" title="カメラClass " alt="" coords="307,468,373,495"/>
+<area shape="rect" id="node7" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="336,587,443,613"/>
+<area shape="rect" id="node8" href="class_matrix.html" title="行列Class " alt="" coords="311,297,369,323"/>
+<area shape="rect" id="node10" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="154,81,230,108"/>
+<area shape="rect" id="node12" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="41,468,148,495"/>
+<area shape="rect" id="node13" href="class_texture_object.html" title="テクスチャオブジェクトClass " alt="" coords="142,676,245,703"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aed6d21d6560d11fede08e596f49716d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_shader_cook_torrance.html#aed6d21d6560d11fede08e596f49716d5">Init</a> ()</td></tr>
+<tr class="memdesc:aed6d21d6560d11fede08e596f49716d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#aed6d21d6560d11fede08e596f49716d5">[詳解]</a><br /></td></tr>
+<tr class="separator:aed6d21d6560d11fede08e596f49716d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2af86383b1724d1bf1364533a07fc5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_shader_cook_torrance.html#af2af86383b1724d1bf1364533a07fc5a">Uninit</a> ()</td></tr>
+<tr class="memdesc:af2af86383b1724d1bf1364533a07fc5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#af2af86383b1724d1bf1364533a07fc5a">[詳解]</a><br /></td></tr>
+<tr class="separator:af2af86383b1724d1bf1364533a07fc5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eff8f1808d5c7686599949537e7fdc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_shader_cook_torrance.html#a2eff8f1808d5c7686599949537e7fdc4">ObjectSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index)</td></tr>
+<tr class="memdesc:a2eff8f1808d5c7686599949537e7fdc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト設定関数  <a href="#a2eff8f1808d5c7686599949537e7fdc4">[詳解]</a><br /></td></tr>
+<tr class="separator:a2eff8f1808d5c7686599949537e7fdc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e658d9792cc15730c800db5a509fad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_shader_cook_torrance.html#a0e658d9792cc15730c800db5a509fad9">MeshSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index, unsigned mesh_index)</td></tr>
+<tr class="memdesc:a0e658d9792cc15730c800db5a509fad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ設定関数  <a href="#a0e658d9792cc15730c800db5a509fad9">[詳解]</a><br /></td></tr>
+<tr class="separator:a0e658d9792cc15730c800db5a509fad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_pixel_shader_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_pixel_shader_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_pixel_shader_base.html">PixelShaderBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ac71a02e257267d6f64397b7e30bda88f inherit pub_methods_class_pixel_shader_base"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DPIXELSHADER9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_shader_base.html#ac71a02e257267d6f64397b7e30bda88f">getpPixelShader</a> ()</td></tr>
+<tr class="memdesc:ac71a02e257267d6f64397b7e30bda88f inherit pub_methods_class_pixel_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダー取得関数  <a href="class_pixel_shader_base.html#ac71a02e257267d6f64397b7e30bda88f">[詳解]</a><br /></td></tr>
+<tr class="separator:ac71a02e257267d6f64397b7e30bda88f inherit pub_methods_class_pixel_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9a3a8966ab1e880df50596af730438e inherit pub_methods_class_pixel_shader_base"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DTEXTURE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_shader_base.html#ad9a3a8966ab1e880df50596af730438e">getpDefaultTexture</a> ()</td></tr>
+<tr class="memdesc:ad9a3a8966ab1e880df50596af730438e inherit pub_methods_class_pixel_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトテクスチャハンドラ取得関数  <a href="class_pixel_shader_base.html#ad9a3a8966ab1e880df50596af730438e">[詳解]</a><br /></td></tr>
+<tr class="separator:ad9a3a8966ab1e880df50596af730438e inherit pub_methods_class_pixel_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af72a2206bace384df51f34393053cf1e inherit pub_methods_class_pixel_shader_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_shader_base.html#af72a2206bace384df51f34393053cf1e">InitDefaultTexture</a> ()</td></tr>
+<tr class="memdesc:af72a2206bace384df51f34393053cf1e inherit pub_methods_class_pixel_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトテクスチャハンドラ初期化関数  <a href="class_pixel_shader_base.html#af72a2206bace384df51f34393053cf1e">[詳解]</a><br /></td></tr>
+<tr class="separator:af72a2206bace384df51f34393053cf1e inherit pub_methods_class_pixel_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb7e981ff245b27a30f1943c28f2229 inherit pub_methods_class_pixel_shader_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_shader_base.html#a6cb7e981ff245b27a30f1943c28f2229">ShaderSetToDevice</a> () override</td></tr>
+<tr class="memdesc:a6cb7e981ff245b27a30f1943c28f2229 inherit pub_methods_class_pixel_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスにシェーダー設定関数  <a href="class_pixel_shader_base.html#a6cb7e981ff245b27a30f1943c28f2229">[詳解]</a><br /></td></tr>
+<tr class="separator:a6cb7e981ff245b27a30f1943c28f2229 inherit pub_methods_class_pixel_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac572f1cb13a4486fc8bc2e60e5a14dc4 inherit pub_methods_class_pixel_shader_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_shader_base.html#ac572f1cb13a4486fc8bc2e60e5a14dc4">PixelShaderCompile</a> (const char *file_name, const char *entry_function, const char *version)</td></tr>
+<tr class="memdesc:ac572f1cb13a4486fc8bc2e60e5a14dc4 inherit pub_methods_class_pixel_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダーコンパイル関数  <a href="class_pixel_shader_base.html#ac572f1cb13a4486fc8bc2e60e5a14dc4">[詳解]</a><br /></td></tr>
+<tr class="separator:ac572f1cb13a4486fc8bc2e60e5a14dc4 inherit pub_methods_class_pixel_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e00c19f5ece0a08762442f355195591 inherit pub_methods_class_pixel_shader_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_shader_base.html#a8e00c19f5ece0a08762442f355195591">ReleasePixelShader</a> ()</td></tr>
+<tr class="memdesc:a8e00c19f5ece0a08762442f355195591 inherit pub_methods_class_pixel_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダー解放関数  <a href="class_pixel_shader_base.html#a8e00c19f5ece0a08762442f355195591">[詳解]</a><br /></td></tr>
+<tr class="separator:a8e00c19f5ece0a08762442f355195591 inherit pub_methods_class_pixel_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_shader_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_shader_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_shader_base.html">ShaderBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a89f6e1ba14f7db57248c794356f9b076 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">LPD3DXCONSTANTTABLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a89f6e1ba14f7db57248c794356f9b076">getpConstantTable</a> ()</td></tr>
+<tr class="memdesc:a89f6e1ba14f7db57248c794356f9b076 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">定数テーブル取得関数  <a href="class_shader_base.html#a89f6e1ba14f7db57248c794356f9b076">[詳解]</a><br /></td></tr>
+<tr class="separator:a89f6e1ba14f7db57248c794356f9b076 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa16d631f799060854de36a024dcfce48 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DDEVICE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#aa16d631f799060854de36a024dcfce48">getpDevice</a> ()</td></tr>
+<tr class="memdesc:aa16d631f799060854de36a024dcfce48 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイス取得関数  <a href="class_shader_base.html#aa16d631f799060854de36a024dcfce48">[詳解]</a><br /></td></tr>
+<tr class="separator:aa16d631f799060854de36a024dcfce48 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7637faa8fe5aa027dc91e00cfee26f33 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a7637faa8fe5aa027dc91e00cfee26f33">getpDrawCommonData</a> ()</td></tr>
+<tr class="memdesc:a7637faa8fe5aa027dc91e00cfee26f33 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ取得関数  <a href="class_shader_base.html#a7637faa8fe5aa027dc91e00cfee26f33">[詳解]</a><br /></td></tr>
+<tr class="separator:a7637faa8fe5aa027dc91e00cfee26f33 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbffa59fae48651c11489de37a88b190 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#abbffa59fae48651c11489de37a88b190">setDrawCommonData</a> (<a class="el" href="class_draw_common_data.html">DrawCommonData</a> *value)</td></tr>
+<tr class="memdesc:abbffa59fae48651c11489de37a88b190 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ設定関数  <a href="class_shader_base.html#abbffa59fae48651c11489de37a88b190">[詳解]</a><br /></td></tr>
+<tr class="separator:abbffa59fae48651c11489de37a88b190 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7c2337128ca825093ab3a47bce4084 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a3b7c2337128ca825093ab3a47bce4084">~ShaderBase</a> ()=0</td></tr>
+<tr class="memdesc:a3b7c2337128ca825093ab3a47bce4084 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ関数  <a href="class_shader_base.html#a3b7c2337128ca825093ab3a47bce4084">[詳解]</a><br /></td></tr>
+<tr class="separator:a3b7c2337128ca825093ab3a47bce4084 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:ab23e34b701369457f0c2f63b414228c2"><td class="memItemLeft" align="right" valign="top">D3DXMATRIX&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_shader_cook_torrance.html#ab23e34b701369457f0c2f63b414228c2">math_matrix_</a></td></tr>
+<tr class="memdesc:ab23e34b701369457f0c2f63b414228c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">計算用行列  <a href="#ab23e34b701369457f0c2f63b414228c2">[詳解]</a><br /></td></tr>
+<tr class="separator:ab23e34b701369457f0c2f63b414228c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静的非公開変数類</h2></td></tr>
+<tr class="memitem:a15a4b3e226f5c33dffe0d0679dd40134"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_shader_cook_torrance.html#a15a4b3e226f5c33dffe0d0679dd40134">PATH</a> = &quot;resource/HLSL/Effect/PixelShader/CookTorrance.psh&quot;</td></tr>
+<tr class="memdesc:a15a4b3e226f5c33dffe0d0679dd40134"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパス  <a href="#a15a4b3e226f5c33dffe0d0679dd40134">[詳解]</a><br /></td></tr>
+<tr class="separator:a15a4b3e226f5c33dffe0d0679dd40134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_methods_class_shader_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_shader_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_shader_base.html">ShaderBase</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:ac6e791440374f97592cfb4cb36f4fa55 inherit pro_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#ac6e791440374f97592cfb4cb36f4fa55">ShaderCompile</a> (const char *file_name, const char *entry_function, const char *version, LPD3DXBUFFER *compiled_code)</td></tr>
+<tr class="memdesc:ac6e791440374f97592cfb4cb36f4fa55 inherit pro_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダーコンパイル関数  <a href="class_shader_base.html#ac6e791440374f97592cfb4cb36f4fa55">[詳解]</a><br /></td></tr>
+<tr class="separator:ac6e791440374f97592cfb4cb36f4fa55 inherit pro_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaac3419f1fce5bf12973e827daadbf8c inherit pro_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#aaac3419f1fce5bf12973e827daadbf8c">InitDevice</a> ()</td></tr>
+<tr class="memdesc:aaac3419f1fce5bf12973e827daadbf8c inherit pro_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイス初期化関数  <a href="class_shader_base.html#aaac3419f1fce5bf12973e827daadbf8c">[詳解]</a><br /></td></tr>
+<tr class="separator:aaac3419f1fce5bf12973e827daadbf8c inherit pro_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b6fc2252b39598f36e91aec1a207e7 inherit pro_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a30b6fc2252b39598f36e91aec1a207e7">ReleaseConstantTable</a> ()</td></tr>
+<tr class="memdesc:a30b6fc2252b39598f36e91aec1a207e7 inherit pro_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">定数テーブル解放関数  <a href="class_shader_base.html#a30b6fc2252b39598f36e91aec1a207e7">[詳解]</a><br /></td></tr>
+<tr class="separator:a30b6fc2252b39598f36e91aec1a207e7 inherit pro_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>クック・トランスの金属反射ピクセルシェーダーClass </p>
+<p>クック・トランスの金属反射のピクセルシェーダーのClass </p>
+
+<p class="definition"> <a class="el" href="_pixel_shader_cook_torrance_8h_source.html">PixelShaderCookTorrance.h</a> の <a class="el" href="_pixel_shader_cook_torrance_8h_source.html#l00024">24</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="aed6d21d6560d11fede08e596f49716d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed6d21d6560d11fede08e596f49716d5">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelShaderCookTorrance::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_pixel_shader_null.html#a5318be2bf26892c385d863e3e8409571">PixelShaderNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_pixel_shader_cook_torrance_8cpp_source.html">PixelShaderCookTorrance.cpp</a> の <a class="el" href="_pixel_shader_cook_torrance_8cpp_source.html#l00027">27</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0e658d9792cc15730c800db5a509fad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e658d9792cc15730c800db5a509fad9">&#9670;&nbsp;</a></span>MeshSetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelShaderCookTorrance::MeshSetting </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mesh_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>メッシュ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+    <tr><td class="paramname">*camera</td><td>カメラ </td></tr>
+    <tr><td class="paramname">object_index</td><td>描画オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_pixel_shader_null.html#a89b6f0558a969478b06af52bb8e6ee16">PixelShaderNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_pixel_shader_cook_torrance_8cpp_source.html">PixelShaderCookTorrance.cpp</a> の <a class="el" href="_pixel_shader_cook_torrance_8cpp_source.html#l00080">80</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2eff8f1808d5c7686599949537e7fdc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eff8f1808d5c7686599949537e7fdc4">&#9670;&nbsp;</a></span>ObjectSetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelShaderCookTorrance::ObjectSetting </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オブジェクト設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+    <tr><td class="paramname">*camera</td><td>カメラ </td></tr>
+    <tr><td class="paramname">object_index</td><td>描画オブジェクトインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_pixel_shader_null.html#a488bde4a2c9a9c45c4ec0ad42487d3b1">PixelShaderNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_pixel_shader_cook_torrance_8cpp_source.html">PixelShaderCookTorrance.cpp</a> の <a class="el" href="_pixel_shader_cook_torrance_8cpp_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af2af86383b1724d1bf1364533a07fc5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2af86383b1724d1bf1364533a07fc5a">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelShaderCookTorrance::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_pixel_shader_null.html#adca4c44cd25c90a5ebd75b459f5e641e">PixelShaderNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_pixel_shader_cook_torrance_8cpp_source.html">PixelShaderCookTorrance.cpp</a> の <a class="el" href="_pixel_shader_cook_torrance_8cpp_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="ab23e34b701369457f0c2f63b414228c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab23e34b701369457f0c2f63b414228c2">&#9670;&nbsp;</a></span>math_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3DXMATRIX PixelShaderCookTorrance::math_matrix_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>計算用行列 </p>
+
+<p class="definition"> <a class="el" href="_pixel_shader_cook_torrance_8h_source.html">PixelShaderCookTorrance.h</a> の <a class="el" href="_pixel_shader_cook_torrance_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a15a4b3e226f5c33dffe0d0679dd40134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15a4b3e226f5c33dffe0d0679dd40134">&#9670;&nbsp;</a></span>PATH</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * PixelShaderCookTorrance::PATH = &quot;resource/HLSL/Effect/PixelShader/CookTorrance.psh&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイルパス </p>
+
+<p class="definition"> <a class="el" href="_pixel_shader_cook_torrance_8h_source.html">PixelShaderCookTorrance.h</a> の <a class="el" href="_pixel_shader_cook_torrance_8h_source.html#l00030">30</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/Shader/PixelShader/<a class="el" href="_pixel_shader_cook_torrance_8h_source.html">PixelShaderCookTorrance.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/Shader/PixelShader/Source/<a class="el" href="_pixel_shader_cook_torrance_8cpp_source.html">PixelShaderCookTorrance.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_pixel_shader_cook_torrance.html">PixelShaderCookTorrance</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

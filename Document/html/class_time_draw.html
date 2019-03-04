@@ -1,0 +1,953 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: TimeDraw クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_time_draw.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="#pri-static-attribs">静的非公開変数類</a> &#124;
+<a href="class_time_draw-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">TimeDraw クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>時間描画Class  
+ <a href="class_time_draw.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a>&gt;</code></p>
+<div class="dynheader">
+TimeDraw 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_time_draw__coll__graph.png" border="0" usemap="#_time_draw_coll__map" alt="Collaboration graph"/></div>
+<map name="_time_draw_coll__map" id="_time_draw_coll__map">
+<area shape="rect" id="node2" href="class_draw_null.html" title="空白描画Class " alt="" coords="1702,331,1775,357"/>
+<area shape="rect" id="node3" href="class_draw_base.html" title="描画BaseClass " alt="" coords="1379,456,1460,483"/>
+<area shape="rect" id="node5" href="class_game_object_base.html" title="ゲームオブジェクトBaseClass " alt="" coords="1547,456,1672,483"/>
+<area shape="rect" id="node4" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="1805,537,1924,564"/>
+<area shape="rect" id="node6" href="class_collision_base.html" title="衝突BaseClass " alt="" coords="2034,553,2135,580"/>
+<area shape="rect" id="node17" href="class_physics.html" title="物理Class " alt="" coords="1830,588,1899,615"/>
+<area shape="rect" id="node31" href="class_game_object_null.html" title="ゲームオブジェクト空白Class " alt="" coords="1806,376,1923,403"/>
+<area shape="rect" id="node8" href="class_collision_object.html" title="衝突オブジェクトClass " alt="" coords="2307,688,2416,715"/>
+<area shape="rect" id="node7" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject *,\l ARRAY_NUM \&gt;" alt="" coords="2597,547,2733,603"/>
+<area shape="rect" id="node13" href="class_object_of_tree.html" title="ObjectOfTree\&lt; CollisionObject *\&gt;" alt="" coords="2557,687,2772,713"/>
+<area shape="rect" id="node9" href="class_a_a_b_b.html" title="AABBClass " alt="" coords="741,743,800,769"/>
+<area shape="rect" id="node10" href="class_collision_shape_base.html" title="衝突形状BaseClass " alt="" coords="364,740,503,767"/>
+<area shape="rect" id="node16" href="class_collision_object_1_1_shape.html" title="衝突形状Class " alt="" coords="693,692,848,719"/>
+<area shape="rect" id="node11" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="107,509,183,536"/>
+<area shape="rect" id="node18" href="class_transform.html" title="変形Class " alt="" coords="731,264,810,291"/>
+<area shape="rect" id="node19" href="class_matrix.html" title="行列Class " alt="" coords="404,320,463,347"/>
+<area shape="rect" id="node23" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="1033,420,1164,447"/>
+<area shape="rect" id="node24" href="class_camera.html" title="カメラClass " alt="" coords="737,496,804,523"/>
+<area shape="rect" id="node14" href="class_space_of_tree.html" title="SpaceOfTree\&lt; CollisionObject *\&gt;" alt="" coords="2929,687,3143,713"/>
+<area shape="rect" id="node15" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject::Shape\l *, ARRAY_NUM \&gt;" alt="" coords="1188,677,1355,733"/>
+<area shape="rect" id="node21" href="class_draw_order_list.html" title="描画注文リストClass " alt="" coords="1047,548,1151,575"/>
+<area shape="rect" id="node22" href="class_bit_flag.html" title="ビットフラグClass " alt="" coords="739,580,802,607"/>
+<area shape="rect" id="node25" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="1045,496,1152,523"/>
+<area shape="rect" id="node26" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="717,405,824,432"/>
+<area shape="rect" id="node27" href="class_numbers_polygon.html" title="数字群ポリゴンClass " alt="" coords="2024,147,2145,173"/>
+<area shape="rect" id="node28" href="class_texture_object.html" title="テクスチャオブジェクトClass " alt="" coords="1813,192,1916,219"/>
+<area shape="rect" id="node29" href="class_plane_polygon.html" title="平面ポリゴンClass " alt="" coords="2033,275,2136,301"/>
+<area shape="rect" id="node30" href="class_time.html" title="時間Class " alt="" coords="2059,376,2110,403"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aea19327b7f9a50a9e634fbb56d430222"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#aea19327b7f9a50a9e634fbb56d430222">getObjectNum</a> () override</td></tr>
+<tr class="memdesc:aea19327b7f9a50a9e634fbb56d430222"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト数取得関数  <a href="#aea19327b7f9a50a9e634fbb56d430222">[詳解]</a><br /></td></tr>
+<tr class="separator:aea19327b7f9a50a9e634fbb56d430222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3624fef571681cf4861891aa073338a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_matrix_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a3624fef571681cf4861891aa073338a0">getpMatrix</a> (unsigned object_index) override</td></tr>
+<tr class="memdesc:a3624fef571681cf4861891aa073338a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド行列取得関数  <a href="#a3624fef571681cf4861891aa073338a0">[詳解]</a><br /></td></tr>
+<tr class="separator:a3624fef571681cf4861891aa073338a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e9166df2da094b6b8c6cfc9dd73872"><td class="memItemLeft" align="right" valign="top">D3DMATERIAL9 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a32e9166df2da094b6b8c6cfc9dd73872">getpMaterial</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
+<tr class="memdesc:a32e9166df2da094b6b8c6cfc9dd73872"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル取得関数  <a href="#a32e9166df2da094b6b8c6cfc9dd73872">[詳解]</a><br /></td></tr>
+<tr class="separator:a32e9166df2da094b6b8c6cfc9dd73872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac844c99a6d5cdcad9c541779a0e99b22"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DTEXTURE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#ac844c99a6d5cdcad9c541779a0e99b22">getpDiffuseTexture</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
+<tr class="memdesc:ac844c99a6d5cdcad9c541779a0e99b22"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディヒューズテクスチャ取得関数  <a href="#ac844c99a6d5cdcad9c541779a0e99b22">[詳解]</a><br /></td></tr>
+<tr class="separator:ac844c99a6d5cdcad9c541779a0e99b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a7a80dfac7c27fab8476655348be36a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a6a7a80dfac7c27fab8476655348be36a">Init</a> () override</td></tr>
+<tr class="memdesc:a6a7a80dfac7c27fab8476655348be36a"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a6a7a80dfac7c27fab8476655348be36a">[詳解]</a><br /></td></tr>
+<tr class="separator:a6a7a80dfac7c27fab8476655348be36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcfea17acdc56d251e680e926da001fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#abcfea17acdc56d251e680e926da001fc">Uninit</a> () override</td></tr>
+<tr class="memdesc:abcfea17acdc56d251e680e926da001fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#abcfea17acdc56d251e680e926da001fc">[詳解]</a><br /></td></tr>
+<tr class="separator:abcfea17acdc56d251e680e926da001fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2471360fb021ce38bec34dbe6f171b9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a2471360fb021ce38bec34dbe6f171b9f">Update</a> () override</td></tr>
+<tr class="memdesc:a2471360fb021ce38bec34dbe6f171b9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#a2471360fb021ce38bec34dbe6f171b9f">[詳解]</a><br /></td></tr>
+<tr class="separator:a2471360fb021ce38bec34dbe6f171b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d5bd7b20e71eb37f3f0b225079cc9b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a1d5bd7b20e71eb37f3f0b225079cc9b3">Draw</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
+<tr class="memdesc:a1d5bd7b20e71eb37f3f0b225079cc9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画関数  <a href="#a1d5bd7b20e71eb37f3f0b225079cc9b3">[詳解]</a><br /></td></tr>
+<tr class="separator:a1d5bd7b20e71eb37f3f0b225079cc9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_draw_null"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_draw_null')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_draw_null.html">DrawNull</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a4c566a37d27fac3dcf76c7970443f375 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a4c566a37d27fac3dcf76c7970443f375">getMeshNum</a> (unsigned object_index) override</td></tr>
+<tr class="memdesc:a4c566a37d27fac3dcf76c7970443f375 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ数取得関数  <a href="class_draw_null.html#a4c566a37d27fac3dcf76c7970443f375">[詳解]</a><br /></td></tr>
+<tr class="separator:a4c566a37d27fac3dcf76c7970443f375 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74aee63e6146b7256b80610abfb3eabb inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a74aee63e6146b7256b80610abfb3eabb">getBoneNum</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
+<tr class="memdesc:a74aee63e6146b7256b80610abfb3eabb inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボーン数取得関数  <a href="class_draw_null.html#a74aee63e6146b7256b80610abfb3eabb">[詳解]</a><br /></td></tr>
+<tr class="separator:a74aee63e6146b7256b80610abfb3eabb inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9843abd940623bf84bbb0931f7e21af6 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_matrix_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a9843abd940623bf84bbb0931f7e21af6">getpBoneMatrix</a> (unsigned object_index, unsigned mesh_index, unsigned bone_index) override</td></tr>
+<tr class="memdesc:a9843abd940623bf84bbb0931f7e21af6 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボーン行列取得関数  <a href="class_draw_null.html#a9843abd940623bf84bbb0931f7e21af6">[詳解]</a><br /></td></tr>
+<tr class="separator:a9843abd940623bf84bbb0931f7e21af6 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb03713b973fd1f65c914fa146414a1 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual LPDIRECT3DTEXTURE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#abdb03713b973fd1f65c914fa146414a1">getpNormalTexture</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
+<tr class="memdesc:abdb03713b973fd1f65c914fa146414a1 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">法線テクスチャ取得関数  <a href="class_draw_null.html#abdb03713b973fd1f65c914fa146414a1">[詳解]</a><br /></td></tr>
+<tr class="separator:abdb03713b973fd1f65c914fa146414a1 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03c2d730ff3351baf234f89cc28303b inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#af03c2d730ff3351baf234f89cc28303b">~DrawNull</a> ()</td></tr>
+<tr class="memdesc:af03c2d730ff3351baf234f89cc28303b inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="class_draw_null.html#af03c2d730ff3351baf234f89cc28303b">[詳解]</a><br /></td></tr>
+<tr class="separator:af03c2d730ff3351baf234f89cc28303b inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e295d7fa2d2b78cfe3121e0a0fcd799 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a1e295d7fa2d2b78cfe3121e0a0fcd799">Reset</a> () override</td></tr>
+<tr class="memdesc:a1e295d7fa2d2b78cfe3121e0a0fcd799 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">リセット関数  <a href="class_draw_null.html#a1e295d7fa2d2b78cfe3121e0a0fcd799">[詳解]</a><br /></td></tr>
+<tr class="separator:a1e295d7fa2d2b78cfe3121e0a0fcd799 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3bbedfe8db8daf7cafa143750f2114 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#aed3bbedfe8db8daf7cafa143750f2114">DebugDisplay</a> () override</td></tr>
+<tr class="memdesc:aed3bbedfe8db8daf7cafa143750f2114 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ表示関数  <a href="class_draw_null.html#aed3bbedfe8db8daf7cafa143750f2114">[詳解]</a><br /></td></tr>
+<tr class="separator:aed3bbedfe8db8daf7cafa143750f2114 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac79a0adfc83537d5e677851463bb3028 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#ac79a0adfc83537d5e677851463bb3028">ObjectSettingBefore</a> (unsigned object_index) override</td></tr>
+<tr class="memdesc:ac79a0adfc83537d5e677851463bb3028 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト前設定関数  <a href="class_draw_null.html#ac79a0adfc83537d5e677851463bb3028">[詳解]</a><br /></td></tr>
+<tr class="separator:ac79a0adfc83537d5e677851463bb3028 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4466ae238e46cffe4a10fd253caf17 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a5b4466ae238e46cffe4a10fd253caf17">ObjectSettingAfter</a> (unsigned object_index) override</td></tr>
+<tr class="memdesc:a5b4466ae238e46cffe4a10fd253caf17 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト後設定関数  <a href="class_draw_null.html#a5b4466ae238e46cffe4a10fd253caf17">[詳解]</a><br /></td></tr>
+<tr class="separator:a5b4466ae238e46cffe4a10fd253caf17 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_draw_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_draw_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_draw_base.html">DrawBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:af5fe522d4bbce381e6fe8e5601b69e9f inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_order_list.html">DrawOrderList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#af5fe522d4bbce381e6fe8e5601b69e9f">getpDrawOrderList</a> ()</td></tr>
+<tr class="memdesc:af5fe522d4bbce381e6fe8e5601b69e9f inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画注文リスト取得関数  <a href="class_draw_base.html#af5fe522d4bbce381e6fe8e5601b69e9f">[詳解]</a><br /></td></tr>
+<tr class="separator:af5fe522d4bbce381e6fe8e5601b69e9f inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac55a0cbcb51067ec9a3515530bb3f7de inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#ac55a0cbcb51067ec9a3515530bb3f7de">getpDrawCommonData</a> ()</td></tr>
+<tr class="memdesc:ac55a0cbcb51067ec9a3515530bb3f7de inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ取得関数  <a href="class_draw_base.html#ac55a0cbcb51067ec9a3515530bb3f7de">[詳解]</a><br /></td></tr>
+<tr class="separator:ac55a0cbcb51067ec9a3515530bb3f7de inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75591fe15951811f294dc964a7894214 inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a75591fe15951811f294dc964a7894214">setDrawCommonData</a> (<a class="el" href="class_draw_common_data.html">DrawCommonData</a> *value)</td></tr>
+<tr class="memdesc:a75591fe15951811f294dc964a7894214 inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ設定関数  <a href="class_draw_base.html#a75591fe15951811f294dc964a7894214">[詳解]</a><br /></td></tr>
+<tr class="separator:a75591fe15951811f294dc964a7894214 inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af276fa23e7c5f51a4fdeab016456a992 inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#af276fa23e7c5f51a4fdeab016456a992">~DrawBase</a> ()=0</td></tr>
+<tr class="memdesc:af276fa23e7c5f51a4fdeab016456a992 inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="class_draw_base.html#af276fa23e7c5f51a4fdeab016456a992">[詳解]</a><br /></td></tr>
+<tr class="separator:af276fa23e7c5f51a4fdeab016456a992 inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_component_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_component_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_component_base.html">ComponentBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#ab9517b92e45e084b1cc450c147e16642">getpGameObject</a> ()</td></tr>
+<tr class="memdesc:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクト取得関数  <a href="class_component_base.html#ab9517b92e45e084b1cc450c147e16642">[詳解]</a><br /></td></tr>
+<tr class="separator:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#ae671317076d3c89ba0793ae2cd34d5ea">setGameObject</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *value)</td></tr>
+<tr class="memdesc:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクト設定関数  <a href="class_component_base.html#ae671317076d3c89ba0793ae2cd34d5ea">[詳解]</a><br /></td></tr>
+<tr class="separator:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f289382f4dd0187a6f355e06c5c08e inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#a36f289382f4dd0187a6f355e06c5c08e">getIsEnable</a> ()</td></tr>
+<tr class="memdesc:a36f289382f4dd0187a6f355e06c5c08e inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効フラグ取得関数  <a href="class_component_base.html#a36f289382f4dd0187a6f355e06c5c08e">[詳解]</a><br /></td></tr>
+<tr class="separator:a36f289382f4dd0187a6f355e06c5c08e inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded407119b125a269d272647fc4c4639 inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#aded407119b125a269d272647fc4c4639">setIsEnable</a> (bool value)</td></tr>
+<tr class="memdesc:aded407119b125a269d272647fc4c4639 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効フラグ取得関数  <a href="class_component_base.html#aded407119b125a269d272647fc4c4639">[詳解]</a><br /></td></tr>
+<tr class="separator:aded407119b125a269d272647fc4c4639 inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80a37e33ecca2471b2186fba1aaf2cdd inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#a80a37e33ecca2471b2186fba1aaf2cdd">~ComponentBase</a> ()=0</td></tr>
+<tr class="memdesc:a80a37e33ecca2471b2186fba1aaf2cdd inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="class_component_base.html#a80a37e33ecca2471b2186fba1aaf2cdd">[詳解]</a><br /></td></tr>
+<tr class="separator:a80a37e33ecca2471b2186fba1aaf2cdd inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a83b53ac1efa11c6737564a5490b10312"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_time.html">Time</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a83b53ac1efa11c6737564a5490b10312">time_</a></td></tr>
+<tr class="memdesc:a83b53ac1efa11c6737564a5490b10312"><td class="mdescLeft">&#160;</td><td class="mdescRight">時間  <a href="#a83b53ac1efa11c6737564a5490b10312">[詳解]</a><br /></td></tr>
+<tr class="separator:a83b53ac1efa11c6737564a5490b10312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5debc3ca2af05073560a1a3a30426d14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_numbers_polygon.html">NumbersPolygon</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a5debc3ca2af05073560a1a3a30426d14">numbers_polygon_</a></td></tr>
+<tr class="memdesc:a5debc3ca2af05073560a1a3a30426d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">数字群ポリゴン  <a href="#a5debc3ca2af05073560a1a3a30426d14">[詳解]</a><br /></td></tr>
+<tr class="separator:a5debc3ca2af05073560a1a3a30426d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab21ae68b078069640c8317325601ac75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_plane_polygon.html">PlanePolygon</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#ab21ae68b078069640c8317325601ac75">plane_polygon_</a></td></tr>
+<tr class="memdesc:ab21ae68b078069640c8317325601ac75"><td class="mdescLeft">&#160;</td><td class="mdescRight">平面ポリゴン  <a href="#ab21ae68b078069640c8317325601ac75">[詳解]</a><br /></td></tr>
+<tr class="separator:ab21ae68b078069640c8317325601ac75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea93191d534fba6d46e570c3ccd5396"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_texture_object.html">TextureObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a1ea93191d534fba6d46e570c3ccd5396">texture_</a></td></tr>
+<tr class="memdesc:a1ea93191d534fba6d46e570c3ccd5396"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャオブジェクト  <a href="#a1ea93191d534fba6d46e570c3ccd5396">[詳解]</a><br /></td></tr>
+<tr class="separator:a1ea93191d534fba6d46e570c3ccd5396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a927363821346555965ae3ee3b712b30e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_texture_object.html">TextureObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a927363821346555965ae3ee3b712b30e">texture_2</a></td></tr>
+<tr class="memdesc:a927363821346555965ae3ee3b712b30e"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャオブジェクト  <a href="#a927363821346555965ae3ee3b712b30e">[詳解]</a><br /></td></tr>
+<tr class="separator:a927363821346555965ae3ee3b712b30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静的非公開変数類</h2></td></tr>
+<tr class="memitem:aead8e68c07b9995faef2044a37fa2b59"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#aead8e68c07b9995faef2044a37fa2b59">TEXTURE_NAME</a> = &quot;UI/Num.png&quot;</td></tr>
+<tr class="memdesc:aead8e68c07b9995faef2044a37fa2b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ名  <a href="#aead8e68c07b9995faef2044a37fa2b59">[詳解]</a><br /></td></tr>
+<tr class="separator:aead8e68c07b9995faef2044a37fa2b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f3552278dcc90a9301b1cfca7be0d4f"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a2f3552278dcc90a9301b1cfca7be0d4f">TEXTURE_NAME2</a> = &quot;UI/Time.png&quot;</td></tr>
+<tr class="memdesc:a2f3552278dcc90a9301b1cfca7be0d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ名  <a href="#a2f3552278dcc90a9301b1cfca7be0d4f">[詳解]</a><br /></td></tr>
+<tr class="separator:a2f3552278dcc90a9301b1cfca7be0d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a054b5ebf0f05c5fc80072491fac8d2f5"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a054b5ebf0f05c5fc80072491fac8d2f5">TIME_DIGITS_NUM</a> = 2</td></tr>
+<tr class="memdesc:a054b5ebf0f05c5fc80072491fac8d2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">時間桁数  <a href="#a054b5ebf0f05c5fc80072491fac8d2f5">[詳解]</a><br /></td></tr>
+<tr class="separator:a054b5ebf0f05c5fc80072491fac8d2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72df1ddbe9ea6a326e2a4f2a950b0fe1"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a72df1ddbe9ea6a326e2a4f2a950b0fe1">TIME_POSITION</a></td></tr>
+<tr class="memdesc:a72df1ddbe9ea6a326e2a4f2a950b0fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">時間座標  <a href="#a72df1ddbe9ea6a326e2a4f2a950b0fe1">[詳解]</a><br /></td></tr>
+<tr class="separator:a72df1ddbe9ea6a326e2a4f2a950b0fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc7a69141e165fb397b5e06caf7828e"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a2cc7a69141e165fb397b5e06caf7828e">TIME_SCALE</a></td></tr>
+<tr class="memdesc:a2cc7a69141e165fb397b5e06caf7828e"><td class="mdescLeft">&#160;</td><td class="mdescRight">時間拡縮  <a href="#a2cc7a69141e165fb397b5e06caf7828e">[詳解]</a><br /></td></tr>
+<tr class="separator:a2cc7a69141e165fb397b5e06caf7828e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c039a965f7340093780e72cbf79ddc0"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_time_draw.html#a0c039a965f7340093780e72cbf79ddc0">TIME_COLOR</a></td></tr>
+<tr class="memdesc:a0c039a965f7340093780e72cbf79ddc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">時間色  <a href="#a0c039a965f7340093780e72cbf79ddc0">[詳解]</a><br /></td></tr>
+<tr class="separator:a0c039a965f7340093780e72cbf79ddc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>時間描画Class </p>
+<p>時間の描画Class </p>
+
+<p class="definition"> <a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a> の <a class="el" href="_time_draw_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a1d5bd7b20e71eb37f3f0b225079cc9b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d5bd7b20e71eb37f3f0b225079cc9b3">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TimeDraw::Draw </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mesh_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a72ac0b7dc40b1469582419dcc5b0e114">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_time_draw_8cpp_source.html">TimeDraw.cpp</a> の <a class="el" href="_time_draw_8cpp_source.html#l00128">128</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aea19327b7f9a50a9e634fbb56d430222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea19327b7f9a50a9e634fbb56d430222">&#9670;&nbsp;</a></span>getObjectNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TimeDraw::getObjectNum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オブジェクト数取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">unsigned</td><td>オブジェクト数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a8bddfa6ee87e47b2ecbbe6803b088e37">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_time_draw_8cpp_source.html">TimeDraw.cpp</a> の <a class="el" href="_time_draw_8cpp_source.html#l00033">33</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac844c99a6d5cdcad9c541779a0e99b22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac844c99a6d5cdcad9c541779a0e99b22">&#9670;&nbsp;</a></span>getpDiffuseTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPDIRECT3DTEXTURE9 TimeDraw::getpDiffuseTexture </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mesh_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ディヒューズテクスチャ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">LPDIRECT3DTEXTURE9</td><td>ディヒューズテクスチャ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a98cc7cd43b19d9d70cc621d23d89286f">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_time_draw_8cpp_source.html">TimeDraw.cpp</a> の <a class="el" href="_time_draw_8cpp_source.html#l00063">63</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a32e9166df2da094b6b8c6cfc9dd73872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e9166df2da094b6b8c6cfc9dd73872">&#9670;&nbsp;</a></span>getpMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3DMATERIAL9 * TimeDraw::getpMaterial </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mesh_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マテリアル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">D3DMATERIAL9*</td><td>マテリアル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a0c1efe55fea325ad277594be6fe1e938">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_time_draw_8cpp_source.html">TimeDraw.cpp</a> の <a class="el" href="_time_draw_8cpp_source.html#l00051">51</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3624fef571681cf4861891aa073338a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3624fef571681cf4861891aa073338a0">&#9670;&nbsp;</a></span>getpMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_matrix_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> * TimeDraw::getpMatrix </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ワールド行列取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">MATRIX*</td><td>ワールド行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a9aac059eb3b5d1f77e8bd3aa0647cff9">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_time_draw_8cpp_source.html">TimeDraw.cpp</a> の <a class="el" href="_time_draw_8cpp_source.html#l00040">40</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6a7a80dfac7c27fab8476655348be36a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a7a80dfac7c27fab8476655348be36a">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TimeDraw::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a20aef1e54c1a158b741bfd731e18efdf">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_time_draw_8cpp_source.html">TimeDraw.cpp</a> の <a class="el" href="_time_draw_8cpp_source.html#l00079">79</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abcfea17acdc56d251e680e926da001fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcfea17acdc56d251e680e926da001fc">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TimeDraw::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a6e81d63efab7333e8d0e8af99362a4d9">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_time_draw_8cpp_source.html">TimeDraw.cpp</a> の <a class="el" href="_time_draw_8cpp_source.html#l00111">111</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2471360fb021ce38bec34dbe6f171b9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2471360fb021ce38bec34dbe6f171b9f">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TimeDraw::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#ad32a508d269de7eda8ad24ea72230464">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_time_draw_8cpp_source.html">TimeDraw.cpp</a> の <a class="el" href="_time_draw_8cpp_source.html#l00121">121</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a5debc3ca2af05073560a1a3a30426d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5debc3ca2af05073560a1a3a30426d14">&#9670;&nbsp;</a></span>numbers_polygon_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_numbers_polygon.html">NumbersPolygon</a>* TimeDraw::numbers_polygon_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>数字群ポリゴン </p>
+
+<p class="definition"> <a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a> の <a class="el" href="_time_draw_8h_source.html#l00052">52</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab21ae68b078069640c8317325601ac75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab21ae68b078069640c8317325601ac75">&#9670;&nbsp;</a></span>plane_polygon_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_plane_polygon.html">PlanePolygon</a>* TimeDraw::plane_polygon_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平面ポリゴン </p>
+
+<p class="definition"> <a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a> の <a class="el" href="_time_draw_8h_source.html#l00053">53</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1ea93191d534fba6d46e570c3ccd5396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea93191d534fba6d46e570c3ccd5396">&#9670;&nbsp;</a></span>texture_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_texture_object.html">TextureObject</a>* TimeDraw::texture_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テクスチャオブジェクト </p>
+
+<p class="definition"> <a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a> の <a class="el" href="_time_draw_8h_source.html#l00054">54</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a927363821346555965ae3ee3b712b30e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a927363821346555965ae3ee3b712b30e">&#9670;&nbsp;</a></span>texture_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_texture_object.html">TextureObject</a>* TimeDraw::texture_2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テクスチャオブジェクト </p>
+
+<p class="definition"> <a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a> の <a class="el" href="_time_draw_8h_source.html#l00055">55</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aead8e68c07b9995faef2044a37fa2b59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aead8e68c07b9995faef2044a37fa2b59">&#9670;&nbsp;</a></span>TEXTURE_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string TimeDraw::TEXTURE_NAME = &quot;UI/Num.png&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テクスチャ名 </p>
+
+<p class="definition"> <a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a> の <a class="el" href="_time_draw_8h_source.html#l00039">39</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2f3552278dcc90a9301b1cfca7be0d4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f3552278dcc90a9301b1cfca7be0d4f">&#9670;&nbsp;</a></span>TEXTURE_NAME2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string TimeDraw::TEXTURE_NAME2 = &quot;UI/Time.png&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テクスチャ名 </p>
+
+<p class="definition"> <a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a> の <a class="el" href="_time_draw_8h_source.html#l00040">40</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a83b53ac1efa11c6737564a5490b10312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83b53ac1efa11c6737564a5490b10312">&#9670;&nbsp;</a></span>time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_time.html">Time</a>* TimeDraw::time_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>時間 </p>
+
+<p class="definition"> <a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a> の <a class="el" href="_time_draw_8h_source.html#l00051">51</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0c039a965f7340093780e72cbf79ddc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c039a965f7340093780e72cbf79ddc0">&#9670;&nbsp;</a></span>TIME_COLOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a> TimeDraw::TIME_COLOR</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>時間色 </p>
+
+<p class="definition"> <a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a> の <a class="el" href="_time_draw_8h_source.html#l00044">44</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a054b5ebf0f05c5fc80072491fac8d2f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a054b5ebf0f05c5fc80072491fac8d2f5">&#9670;&nbsp;</a></span>TIME_DIGITS_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TimeDraw::TIME_DIGITS_NUM = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>時間桁数 </p>
+
+<p class="definition"> <a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a> の <a class="el" href="_time_draw_8h_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a72df1ddbe9ea6a326e2a4f2a950b0fe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72df1ddbe9ea6a326e2a4f2a950b0fe1">&#9670;&nbsp;</a></span>TIME_POSITION</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a> TimeDraw::TIME_POSITION</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>時間座標 </p>
+
+<p class="definition"> <a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a> の <a class="el" href="_time_draw_8h_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2cc7a69141e165fb397b5e06caf7828e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc7a69141e165fb397b5e06caf7828e">&#9670;&nbsp;</a></span>TIME_SCALE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a> TimeDraw::TIME_SCALE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>時間拡縮 </p>
+
+<p class="definition"> <a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a> の <a class="el" href="_time_draw_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Game/Object/2D/Time/<a class="el" href="_time_draw_8h_source.html">TimeDraw.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Game/Object/2D/Time/Source/<a class="el" href="_time_draw_8cpp_source.html">TimeDraw.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_time_draw.html">TimeDraw</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

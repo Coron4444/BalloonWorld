@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/PostEffect/MotionBlur.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_motion_blur_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">MotionBlur.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_motion_blur_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span><span class="comment">//================================================================================</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef _MOTION_BLUR_H_</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define _MOTION_BLUR_H_</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// クラス宣言</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span><a class="code" href="class_camera.html">Camera</a>;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="class_draw_common_data.html">DrawCommonData</a>;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span><a class="code" href="class_shader_manager.html">ShaderManager</a>;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span><a class="code" href="class_render_texture_polygon.html">RenderTexturePolygon</a>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//************************************************************                                                         </span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span><span class="comment">//************************************************************</span></div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_motion_blur.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_motion_blur.html">MotionBlur</a></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// 変数</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_motion_blur.html#a1e43ed8f5b0ae775221695807b68ae8f">   33</a></span>&#160;    <a class="code" href="class_camera.html">Camera</a>* <a class="code" href="class_motion_blur.html#a1e43ed8f5b0ae775221695807b68ae8f">camera_</a> = <span class="keyword">nullptr</span>;                  </div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_motion_blur.html#aecc7c243d6ec641ec5d0bdc7bbeff481">   34</a></span>&#160;    <a class="code" href="class_draw_common_data.html">DrawCommonData</a>* <a class="code" href="class_motion_blur.html#aecc7c243d6ec641ec5d0bdc7bbeff481">common_data_</a> = <span class="keyword">nullptr</span>;     </div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_motion_blur.html#a888c174da110fd14c2fcf2ab5c751dda">   35</a></span>&#160;    <a class="code" href="class_shader_manager.html">ShaderManager</a>* <a class="code" href="class_motion_blur.html#a888c174da110fd14c2fcf2ab5c751dda">shader_manager_</a> = <span class="keyword">nullptr</span>;   </div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_motion_blur.html#a14af04a5a96dbdeed47b07bd7bd3d860">   36</a></span>&#160;    <a class="code" href="class_render_texture_polygon.html">RenderTexturePolygon</a>* <a class="code" href="class_motion_blur.html#a14af04a5a96dbdeed47b07bd7bd3d860">polygon_</a> = <span class="keyword">nullptr</span>;   </div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// プロパティ</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_motion_blur.html#ab4f38538f4a0ca8e444109aa090537ee">setCamera</a>(<a class="code" href="class_camera.html">Camera</a>* value);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_motion_blur.html#ac33ebb6a66254418212786178f4e4479">setDrawCommonData</a>(<a class="code" href="class_draw_common_data.html">DrawCommonData</a>* value);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_motion_blur.html#a801a9afbb4ee439af84bbaa2050cd414">setShaderManager</a>(<a class="code" href="class_shader_manager.html">ShaderManager</a>* value);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">// 関数</span></div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">//====================</span></div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_motion_blur.html#a93f61cc3a14ed681e026d286a51da059">Init</a>();</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_motion_blur.html#ada6365aa40bddda3adf76695e9651e89">UninitWhenChangeScene</a>();</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_motion_blur.html#a4bceb3a1e625653a0037af10fa5cf422">Uninit</a>();</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_motion_blur.html#a931793c39ebeed7da3406f3aeaa7452e">Update</a>();</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_motion_blur.html#a8f3c39934e707c4325310873eea3ed45">Draw</a>();</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------</span></div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_motion_blur.html#a5fcf35d649a2e1174e5fdaa0ee168a9f">LateUpdate</a>();</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;};</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_motion_blur_html_a888c174da110fd14c2fcf2ab5c751dda"><div class="ttname"><a href="class_motion_blur.html#a888c174da110fd14c2fcf2ab5c751dda">MotionBlur::shader_manager_</a></div><div class="ttdeci">ShaderManager * shader_manager_</div><div class="ttdoc">シェーダーマネージャ </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8h_source.html#l00035">MotionBlur.h:35</a></div></div>
+<div class="ttc" id="class_motion_blur_html_a801a9afbb4ee439af84bbaa2050cd414"><div class="ttname"><a href="class_motion_blur.html#a801a9afbb4ee439af84bbaa2050cd414">MotionBlur::setShaderManager</a></div><div class="ttdeci">void setShaderManager(ShaderManager *value)</div><div class="ttdoc">シェーダーマネージャ設定関数 </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8cpp_source.html#l00038">MotionBlur.cpp:38</a></div></div>
+<div class="ttc" id="class_motion_blur_html_a1e43ed8f5b0ae775221695807b68ae8f"><div class="ttname"><a href="class_motion_blur.html#a1e43ed8f5b0ae775221695807b68ae8f">MotionBlur::camera_</a></div><div class="ttdeci">Camera * camera_</div><div class="ttdoc">カメラ </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8h_source.html#l00033">MotionBlur.h:33</a></div></div>
+<div class="ttc" id="class_motion_blur_html_a5fcf35d649a2e1174e5fdaa0ee168a9f"><div class="ttname"><a href="class_motion_blur.html#a5fcf35d649a2e1174e5fdaa0ee168a9f">MotionBlur::LateUpdate</a></div><div class="ttdeci">void LateUpdate()</div><div class="ttdoc">後更新関数 </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8cpp_source.html#l00080">MotionBlur.cpp:80</a></div></div>
+<div class="ttc" id="class_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdoc">カメラClass </div><div class="ttdef"><b>Definition:</b> <a href="_camera_8h_source.html#l00017">Camera.h:17</a></div></div>
+<div class="ttc" id="class_draw_common_data_html"><div class="ttname"><a href="class_draw_common_data.html">DrawCommonData</a></div><div class="ttdoc">描画共通データClass </div><div class="ttdef"><b>Definition:</b> <a href="_draw_common_data_8h_source.html#l00032">DrawCommonData.h:32</a></div></div>
+<div class="ttc" id="class_shader_manager_html"><div class="ttname"><a href="class_shader_manager.html">ShaderManager</a></div><div class="ttdoc">シェーダーマネージャClass </div><div class="ttdef"><b>Definition:</b> <a href="_shader_manager_8h_source.html#l00028">ShaderManager.h:28</a></div></div>
+<div class="ttc" id="class_motion_blur_html_a93f61cc3a14ed681e026d286a51da059"><div class="ttname"><a href="class_motion_blur.html#a93f61cc3a14ed681e026d286a51da059">MotionBlur::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">初期化関数 </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8cpp_source.html#l00048">MotionBlur.cpp:48</a></div></div>
+<div class="ttc" id="class_motion_blur_html_a8f3c39934e707c4325310873eea3ed45"><div class="ttname"><a href="class_motion_blur.html#a8f3c39934e707c4325310873eea3ed45">MotionBlur::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdoc">描画関数 </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8cpp_source.html#l00100">MotionBlur.cpp:100</a></div></div>
+<div class="ttc" id="class_motion_blur_html"><div class="ttname"><a href="class_motion_blur.html">MotionBlur</a></div><div class="ttdoc">モーションブラーClass </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8h_source.html#l00027">MotionBlur.h:27</a></div></div>
+<div class="ttc" id="class_motion_blur_html_a14af04a5a96dbdeed47b07bd7bd3d860"><div class="ttname"><a href="class_motion_blur.html#a14af04a5a96dbdeed47b07bd7bd3d860">MotionBlur::polygon_</a></div><div class="ttdeci">RenderTexturePolygon * polygon_</div><div class="ttdoc">表示用ポリゴン </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8h_source.html#l00036">MotionBlur.h:36</a></div></div>
+<div class="ttc" id="class_motion_blur_html_a931793c39ebeed7da3406f3aeaa7452e"><div class="ttname"><a href="class_motion_blur.html#a931793c39ebeed7da3406f3aeaa7452e">MotionBlur::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">更新関数 </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8cpp_source.html#l00074">MotionBlur.cpp:74</a></div></div>
+<div class="ttc" id="class_render_texture_polygon_html"><div class="ttname"><a href="class_render_texture_polygon.html">RenderTexturePolygon</a></div><div class="ttdoc">レンダーテクスチャポリゴンClass </div><div class="ttdef"><b>Definition:</b> <a href="_render_texture_polygon_8h_source.html#l00033">RenderTexturePolygon.h:33</a></div></div>
+<div class="ttc" id="class_motion_blur_html_a4bceb3a1e625653a0037af10fa5cf422"><div class="ttname"><a href="class_motion_blur.html#a4bceb3a1e625653a0037af10fa5cf422">MotionBlur::Uninit</a></div><div class="ttdeci">void Uninit()</div><div class="ttdoc">終了関数 </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8cpp_source.html#l00060">MotionBlur.cpp:60</a></div></div>
+<div class="ttc" id="class_motion_blur_html_aecc7c243d6ec641ec5d0bdc7bbeff481"><div class="ttname"><a href="class_motion_blur.html#aecc7c243d6ec641ec5d0bdc7bbeff481">MotionBlur::common_data_</a></div><div class="ttdeci">DrawCommonData * common_data_</div><div class="ttdoc">描画共通データ </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8h_source.html#l00034">MotionBlur.h:34</a></div></div>
+<div class="ttc" id="class_motion_blur_html_ab4f38538f4a0ca8e444109aa090537ee"><div class="ttname"><a href="class_motion_blur.html#ab4f38538f4a0ca8e444109aa090537ee">MotionBlur::setCamera</a></div><div class="ttdeci">void setCamera(Camera *value)</div><div class="ttdoc">カメラ設定関数 </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8cpp_source.html#l00024">MotionBlur.cpp:24</a></div></div>
+<div class="ttc" id="class_motion_blur_html_ada6365aa40bddda3adf76695e9651e89"><div class="ttname"><a href="class_motion_blur.html#ada6365aa40bddda3adf76695e9651e89">MotionBlur::UninitWhenChangeScene</a></div><div class="ttdeci">void UninitWhenChangeScene()</div><div class="ttdoc">シーン変更時の終了関数 </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8cpp_source.html#l00067">MotionBlur.cpp:67</a></div></div>
+<div class="ttc" id="class_motion_blur_html_ac33ebb6a66254418212786178f4e4479"><div class="ttname"><a href="class_motion_blur.html#ac33ebb6a66254418212786178f4e4479">MotionBlur::setDrawCommonData</a></div><div class="ttdeci">void setDrawCommonData(DrawCommonData *value)</div><div class="ttdoc">描画共通データ設定関数 </div><div class="ttdef"><b>Definition:</b> <a href="_motion_blur_8cpp_source.html#l00031">MotionBlur.cpp:31</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_b45bb414237523d3953b384861a4c0d0.html">Framework</a></li><li class="navelem"><a class="el" href="dir_7bdbca00cdc73946cd7159151ed3a63d.html">GameEngine</a></li><li class="navelem"><a class="el" href="dir_52ab0f1b347112aed62424c3b4c19724.html">Draw</a></li><li class="navelem"><a class="el" href="dir_f5145951cd4a50d05b932b948ae6b018.html">DrawManager</a></li><li class="navelem"><a class="el" href="dir_7de9234150f1207dd15a92df68331dfc.html">PostEffect</a></li><li class="navelem"><a class="el" href="_motion_blur_8h.html">MotionBlur.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

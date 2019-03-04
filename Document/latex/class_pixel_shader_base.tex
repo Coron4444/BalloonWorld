@@ -2,7 +2,7 @@
 \label{class_pixel_shader_base}\index{Pixel\+Shader\+Base@{Pixel\+Shader\+Base}}
 
 
-ピクセルシェーダー基底クラス  
+ピクセルシェーダー\+Bass\+Class  
 
 
 
@@ -11,56 +11,130 @@
 
 
 
-Pixel\+Shader\+Base の継承関係図\nopagebreak
+Pixel\+Shader\+Base 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=211pt]{class_pixel_shader_base__inherit__graph}
+\includegraphics[width=350pt]{class_pixel_shader_base__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_pixel_shader_base_a73f41bda5cbb9309ad415cdc471954a2}{Set\+Shader}} () override
-\begin{DoxyCompactList}\small\item\em シェーダー設定関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+P\+I\+X\+E\+L\+S\+H\+A\+D\+E\+R9 \mbox{\hyperlink{class_pixel_shader_base_ac71a02e257267d6f64397b7e30bda88f}{getp\+Pixel\+Shader}} ()
+\begin{DoxyCompactList}\small\item\em ピクセルシェーダー取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_pixel_shader_base_ad9a3a8966ab1e880df50596af730438e}{getp\+Default\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em デフォルトテクスチャハンドラ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_shader_base_af72a2206bace384df51f34393053cf1e}{Init\+Default\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em デフォルトテクスチャハンドラ初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_shader_base_a6cb7e981ff245b27a30f1943c28f2229}{Shader\+Set\+To\+Device}} () override
+\begin{DoxyCompactList}\small\item\em デバイスにシェーダー設定関数 \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_pixel_shader_base_ac572f1cb13a4486fc8bc2e60e5a14dc4}{Pixel\+Shader\+Compile}} (const char $\ast$file\+\_\+name, const char $\ast$entry\+\_\+function, const char $\ast$version)
 \begin{DoxyCompactList}\small\item\em ピクセルシェーダーコンパイル関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_pixel_shader_base_a8e00c19f5ece0a08762442f355195591}{Release\+Pixel\+Shader}} ()
-\begin{DoxyCompactList}\small\item\em ピクセルシェーダー解放関数 \end{DoxyCompactList}\item 
-L\+P\+D\+I\+R\+E\+C\+T3\+D\+P\+I\+X\+E\+L\+S\+H\+A\+D\+E\+R9 \mbox{\hyperlink{class_pixel_shader_base_a936a4a1e99488854ffdd4cc245134481}{Get\+Pixel\+Shader}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em ピクセルシェーダー解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 L\+P\+D\+I\+R\+E\+C\+T3\+D\+P\+I\+X\+E\+L\+S\+H\+A\+D\+E\+R9 \mbox{\hyperlink{class_pixel_shader_base_a5d7213c21268dc57ef82d37a64ff942f}{pixel\+\_\+shader\+\_\+}} = nullptr
-\begin{DoxyCompactList}\small\item\em ピクセルシェーダー \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em ピクセルシェーダー \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_pixel_shader_base_a9bd118473860effedf5ab1201352540f}{default\+\_\+texture\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em デフォルトテクスチャオブジェクト \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{class_pixel_shader_base_a34ef5095d790635c1a0d71d5d8a5863c}{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}} = \char`\"{}Shader/Default\+Texture.\+png\char`\"{}
+\begin{DoxyCompactList}\small\item\em デフォルトテクスチャ名 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
-ピクセルシェーダー基底クラス 
+ピクセルシェーダー\+Bass\+Class 
 
-ピクセルシェーダー基底クラス 
+ピクセルシェーダーの\+Bass\+Class 
 
- Pixel\+Shader\+Base.\+h の 26 行目に定義があります。
+ Pixel\+Shader\+Base.\+h の 31 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_pixel_shader_base_a936a4a1e99488854ffdd4cc245134481}\label{class_pixel_shader_base_a936a4a1e99488854ffdd4cc245134481}} 
-\index{Pixel\+Shader\+Base@{Pixel\+Shader\+Base}!Get\+Pixel\+Shader@{Get\+Pixel\+Shader}}
-\index{Get\+Pixel\+Shader@{Get\+Pixel\+Shader}!Pixel\+Shader\+Base@{Pixel\+Shader\+Base}}
-\subsubsection{\texorpdfstring{Get\+Pixel\+Shader()}{GetPixelShader()}}
-{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+P\+I\+X\+E\+L\+S\+H\+A\+D\+E\+R9 Pixel\+Shader\+Base\+::\+Get\+Pixel\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_pixel_shader_base_ad9a3a8966ab1e880df50596af730438e}\label{class_pixel_shader_base_ad9a3a8966ab1e880df50596af730438e}} 
+\index{Pixel\+Shader\+Base@{Pixel\+Shader\+Base}!getp\+Default\+Texture@{getp\+Default\+Texture}}
+\index{getp\+Default\+Texture@{getp\+Default\+Texture}!Pixel\+Shader\+Base@{Pixel\+Shader\+Base}}
+\subsubsection{\texorpdfstring{getp\+Default\+Texture()}{getpDefaultTexture()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Pixel\+Shader\+Base\+::getp\+Default\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Pixel\+Shader\+Base.\+h の 87 行目に定義があります。
+デフォルトテクスチャハンドラ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & デフォルトテクスチャハンドラ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Pixel\+Shader\+Base.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_base_ac71a02e257267d6f64397b7e30bda88f}\label{class_pixel_shader_base_ac71a02e257267d6f64397b7e30bda88f}} 
+\index{Pixel\+Shader\+Base@{Pixel\+Shader\+Base}!getp\+Pixel\+Shader@{getp\+Pixel\+Shader}}
+\index{getp\+Pixel\+Shader@{getp\+Pixel\+Shader}!Pixel\+Shader\+Base@{Pixel\+Shader\+Base}}
+\subsubsection{\texorpdfstring{getp\+Pixel\+Shader()}{getpPixelShader()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+P\+I\+X\+E\+L\+S\+H\+A\+D\+E\+R9 Pixel\+Shader\+Base\+::getp\+Pixel\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ピクセルシェーダー取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+P\+I\+X\+E\+L\+S\+H\+A\+D\+E\+R9} & ピクセルシェーダー \\
+\hline
+\end{DoxyRetVals}
+
+
+ Pixel\+Shader\+Base.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_base_af72a2206bace384df51f34393053cf1e}\label{class_pixel_shader_base_af72a2206bace384df51f34393053cf1e}} 
+\index{Pixel\+Shader\+Base@{Pixel\+Shader\+Base}!Init\+Default\+Texture@{Init\+Default\+Texture}}
+\index{Init\+Default\+Texture@{Init\+Default\+Texture}!Pixel\+Shader\+Base@{Pixel\+Shader\+Base}}
+\subsubsection{\texorpdfstring{Init\+Default\+Texture()}{InitDefaultTexture()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Base\+::\+Init\+Default\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+デフォルトテクスチャハンドラ初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Pixel\+Shader\+Base.\+cpp の 45 行目に定義があります。
 
 \mbox{\Hypertarget{class_pixel_shader_base_ac572f1cb13a4486fc8bc2e60e5a14dc4}\label{class_pixel_shader_base_ac572f1cb13a4486fc8bc2e60e5a14dc4}} 
 \index{Pixel\+Shader\+Base@{Pixel\+Shader\+Base}!Pixel\+Shader\+Compile@{Pixel\+Shader\+Compile}}
 \index{Pixel\+Shader\+Compile@{Pixel\+Shader\+Compile}!Pixel\+Shader\+Base@{Pixel\+Shader\+Base}}
 \subsubsection{\texorpdfstring{Pixel\+Shader\+Compile()}{PixelShaderCompile()}}
-{\footnotesize\ttfamily bool Pixel\+Shader\+Base\+::\+Pixel\+Shader\+Compile (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name,  }\item[{const char $\ast$}]{entry\+\_\+function,  }\item[{const char $\ast$}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bool Pixel\+Shader\+Base\+::\+Pixel\+Shader\+Compile (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name,  }\item[{const char $\ast$}]{entry\+\_\+function,  }\item[{const char $\ast$}]{version }\end{DoxyParamCaption})}
 
 
 
@@ -68,51 +142,105 @@ L\+P\+D\+I\+R\+E\+C\+T3\+D\+P\+I\+X\+E\+L\+S\+H\+A\+D\+E\+R9 \mbox{\hyperlink{cl
 
 
 \begin{DoxyParams}{引数}
-{\em file\+\_\+name} & \+: ファイル名 entry\+\_\+function \+: エントリ関数名 version \+: シェーダーバージョン \\
+{\em $\ast$file\+\_\+name} & ファイル名 \\
+\hline
+{\em $\ast$entry\+\_\+function} & エントリ関数名 \\
+\hline
+{\em $\ast$version} & シェーダーバージョン \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{戻り値}
-コンパイル成功ならtrue 
-\end{DoxyReturn}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & コンパイル成功ならtrue \\
+\hline
+\end{DoxyRetVals}
 
 
- Pixel\+Shader\+Base.\+h の 57 行目に定義があります。
+ Pixel\+Shader\+Base.\+cpp の 62 行目に定義があります。
 
 \mbox{\Hypertarget{class_pixel_shader_base_a8e00c19f5ece0a08762442f355195591}\label{class_pixel_shader_base_a8e00c19f5ece0a08762442f355195591}} 
 \index{Pixel\+Shader\+Base@{Pixel\+Shader\+Base}!Release\+Pixel\+Shader@{Release\+Pixel\+Shader}}
 \index{Release\+Pixel\+Shader@{Release\+Pixel\+Shader}!Pixel\+Shader\+Base@{Pixel\+Shader\+Base}}
 \subsubsection{\texorpdfstring{Release\+Pixel\+Shader()}{ReleasePixelShader()}}
-{\footnotesize\ttfamily void Pixel\+Shader\+Base\+::\+Release\+Pixel\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Base\+::\+Release\+Pixel\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 ピクセルシェーダー解放関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Pixel\+Shader\+Base.\+h の 81 行目に定義があります。
-
-\mbox{\Hypertarget{class_pixel_shader_base_a73f41bda5cbb9309ad415cdc471954a2}\label{class_pixel_shader_base_a73f41bda5cbb9309ad415cdc471954a2}} 
-\index{Pixel\+Shader\+Base@{Pixel\+Shader\+Base}!Set\+Shader@{Set\+Shader}}
-\index{Set\+Shader@{Set\+Shader}!Pixel\+Shader\+Base@{Pixel\+Shader\+Base}}
-\subsubsection{\texorpdfstring{Set\+Shader()}{SetShader()}}
-{\footnotesize\ttfamily void Pixel\+Shader\+Base\+::\+Set\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-シェーダー設定関数 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Pixel\+Shader\+Base.\+cpp の 87 行目に定義があります。
 
-\mbox{\hyperlink{class_shader_base_af45063254b80602db8626360d643baee}{Shader\+Base}}を実装しています。
+\mbox{\Hypertarget{class_pixel_shader_base_a6cb7e981ff245b27a30f1943c28f2229}\label{class_pixel_shader_base_a6cb7e981ff245b27a30f1943c28f2229}} 
+\index{Pixel\+Shader\+Base@{Pixel\+Shader\+Base}!Shader\+Set\+To\+Device@{Shader\+Set\+To\+Device}}
+\index{Shader\+Set\+To\+Device@{Shader\+Set\+To\+Device}!Pixel\+Shader\+Base@{Pixel\+Shader\+Base}}
+\subsubsection{\texorpdfstring{Shader\+Set\+To\+Device()}{ShaderSetToDevice()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Base\+::\+Shader\+Set\+To\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
- Pixel\+Shader\+Base.\+h の 43 行目に定義があります。
+デバイスにシェーダー設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_shader_base_a78e5b6f343821648409d50653e0105e2}{Shader\+Base}}を実装しています。
+
+
+
+ Pixel\+Shader\+Base.\+cpp の 55 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
+\mbox{\Hypertarget{class_pixel_shader_base_a9bd118473860effedf5ab1201352540f}\label{class_pixel_shader_base_a9bd118473860effedf5ab1201352540f}} 
+\index{Pixel\+Shader\+Base@{Pixel\+Shader\+Base}!default\+\_\+texture\+\_\+@{default\+\_\+texture\+\_\+}}
+\index{default\+\_\+texture\+\_\+@{default\+\_\+texture\+\_\+}!Pixel\+Shader\+Base@{Pixel\+Shader\+Base}}
+\subsubsection{\texorpdfstring{default\+\_\+texture\+\_\+}{default\_texture\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Pixel\+Shader\+Base\+::default\+\_\+texture\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+デフォルトテクスチャオブジェクト 
+
+
+
+ Pixel\+Shader\+Base.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_base_a34ef5095d790635c1a0d71d5d8a5863c}\label{class_pixel_shader_base_a34ef5095d790635c1a0d71d5d8a5863c}} 
+\index{Pixel\+Shader\+Base@{Pixel\+Shader\+Base}!D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}!Pixel\+Shader\+Base@{Pixel\+Shader\+Base}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}{DEFAULT\_TEXTURE\_NAME}}
+{\footnotesize\ttfamily const std\+::string Pixel\+Shader\+Base\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME = \char`\"{}Shader/Default\+Texture.\+png\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+デフォルトテクスチャ名 
+
+
+
+ Pixel\+Shader\+Base.\+h の 37 行目に定義があります。
+
 \mbox{\Hypertarget{class_pixel_shader_base_a5d7213c21268dc57ef82d37a64ff942f}\label{class_pixel_shader_base_a5d7213c21268dc57ef82d37a64ff942f}} 
 \index{Pixel\+Shader\+Base@{Pixel\+Shader\+Base}!pixel\+\_\+shader\+\_\+@{pixel\+\_\+shader\+\_\+}}
 \index{pixel\+\_\+shader\+\_\+@{pixel\+\_\+shader\+\_\+}!Pixel\+Shader\+Base@{Pixel\+Shader\+Base}}
@@ -125,10 +253,11 @@ L\+P\+D\+I\+R\+E\+C\+T3\+D\+P\+I\+X\+E\+L\+S\+H\+A\+D\+E\+R9 \mbox{\hyperlink{cl
 
 
 
- Pixel\+Shader\+Base.\+h の 32 行目に定義があります。
+ Pixel\+Shader\+Base.\+h の 44 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Shader/\+Shader\+Base/\mbox{\hyperlink{_pixel_shader_base_8h}{Pixel\+Shader\+Base.\+h}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\mbox{\hyperlink{_pixel_shader_base_8h}{Pixel\+Shader\+Base.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\+Source/\mbox{\hyperlink{_pixel_shader_base_8cpp}{Pixel\+Shader\+Base.\+cpp}}\end{DoxyCompactItemize}

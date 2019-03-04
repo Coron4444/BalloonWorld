@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: TextureManager クラス</title>
+<title>BalloonWorld: TextureManager クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -88,9 +88,10 @@ $(document).ready(function(){initNavTree('class_texture_manager.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
 <a href="#pri-methods">非公開メンバ関数</a> &#124;
-<a href="#pri-static-methods">静的非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
 <a href="#pri-static-attribs">静的非公開変数類</a> &#124;
 <a href="class_texture_manager-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
@@ -98,58 +99,76 @@ $(document).ready(function(){initNavTree('class_texture_manager.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>テクスチャマネージャClass(Singleton)  
+ <a href="class_texture_manager.html#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_texture_manager_8h_source.html">TextureManager.h</a>&gt;</code></p>
+<div class="dynheader">
+TextureManager 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_texture_manager__coll__graph.png" border="0" usemap="#_texture_manager_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a8dc2cfb7e5d1a52b41401fed33342de0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_texture_object.html">TextureObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a8dc2cfb7e5d1a52b41401fed33342de0">getpObject</a> (const std::string *key_name, const std::string *file_path=nullptr)</td></tr>
+<tr class="memdesc:a8dc2cfb7e5d1a52b41401fed33342de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト取得関数  <a href="#a8dc2cfb7e5d1a52b41401fed33342de0">[詳解]</a><br /></td></tr>
+<tr class="separator:a8dc2cfb7e5d1a52b41401fed33342de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ebc403618f25c44a44c74cc04690502"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a7ebc403618f25c44a44c74cc04690502">Init</a> ()</td></tr>
+<tr class="memdesc:a7ebc403618f25c44a44c74cc04690502"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a7ebc403618f25c44a44c74cc04690502">[詳解]</a><br /></td></tr>
+<tr class="separator:a7ebc403618f25c44a44c74cc04690502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2ef3139e30856ee768b2e98ec5259f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#ab2ef3139e30856ee768b2e98ec5259f5">Uninit</a> ()</td></tr>
+<tr class="memdesc:ab2ef3139e30856ee768b2e98ec5259f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#ab2ef3139e30856ee768b2e98ec5259f5">[詳解]</a><br /></td></tr>
+<tr class="separator:ab2ef3139e30856ee768b2e98ec5259f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa95379c1144d0cf1bbff438709ba72e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#aa95379c1144d0cf1bbff438709ba72e8">ReleaseFromTheMap</a> (std::string *key_name)</td></tr>
+<tr class="memdesc:aa95379c1144d0cf1bbff438709ba72e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">マップから解放関数  <a href="#aa95379c1144d0cf1bbff438709ba72e8">[詳解]</a><br /></td></tr>
+<tr class="separator:aa95379c1144d0cf1bbff438709ba72e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
-<tr class="memitem:aee4c784f3f32bfe810bf66313735dece"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#aee4c784f3f32bfe810bf66313735dece">InitAllData</a> ()</td></tr>
-<tr class="separator:aee4c784f3f32bfe810bf66313735dece"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed1e9666d0ef8698db754280a1d4bad4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#aed1e9666d0ef8698db754280a1d4bad4">InitShareData</a> ()</td></tr>
-<tr class="separator:aed1e9666d0ef8698db754280a1d4bad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfba2c4293e692a351d9b98e28f6ed31"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#abfba2c4293e692a351d9b98e28f6ed31">InitUniqueData</a> ()</td></tr>
-<tr class="separator:abfba2c4293e692a351d9b98e28f6ed31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e81df5cd89e7794fb9230357663a729"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a5e81df5cd89e7794fb9230357663a729">UninitAllData</a> ()</td></tr>
-<tr class="separator:a5e81df5cd89e7794fb9230357663a729"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a770b76a28bac4c20c16960f58a2d3b77"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a770b76a28bac4c20c16960f58a2d3b77">UninitShareData</a> ()</td></tr>
-<tr class="separator:a770b76a28bac4c20c16960f58a2d3b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d9dd61edf4153bd70ba830ae2dc62e8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a9d9dd61edf4153bd70ba830ae2dc62e8">UninitUniqueData</a> ()</td></tr>
-<tr class="separator:a9d9dd61edf4153bd70ba830ae2dc62e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a571c5b288fe16c53965f45d8bd7c8769"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_texture_object.html">TextureObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a571c5b288fe16c53965f45d8bd7c8769">AddShareData</a> (const std::string *key_name, const std::string *file_path=nullptr, int pattern_num_all=1, int pattern_num_width=1, int pattern_num_height=1)</td></tr>
-<tr class="separator:a571c5b288fe16c53965f45d8bd7c8769"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af86003fd2afaf09f0295745d486e42e4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_texture_object.html">TextureObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#af86003fd2afaf09f0295745d486e42e4">AddUniqueData</a> (const std::string *key_name, const std::string *file_path=nullptr, int pattern_num_all=1, int pattern_num_width=1, int pattern_num_height=1)</td></tr>
-<tr class="separator:af86003fd2afaf09f0295745d486e42e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18d1f3418511075804f9d11cff1010ff"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_texture_object.html">TextureObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a18d1f3418511075804f9d11cff1010ff">GetTextureObject</a> (const std::string *key_name)</td></tr>
-<tr class="separator:a18d1f3418511075804f9d11cff1010ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a476998e9556141f2b5443ee34797c41d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_texture_manager.html">TextureManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a476998e9556141f2b5443ee34797c41d">getpInstance</a> ()</td></tr>
+<tr class="memdesc:a476998e9556141f2b5443ee34797c41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス取得関数  <a href="#a476998e9556141f2b5443ee34797c41d">[詳解]</a><br /></td></tr>
+<tr class="separator:a476998e9556141f2b5443ee34797c41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae490a44d40d31bda3297c64b4ce37c51"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#ae490a44d40d31bda3297c64b4ce37c51">ReleaseInstance</a> ()</td></tr>
+<tr class="memdesc:ae490a44d40d31bda3297c64b4ce37c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス解放関数  <a href="#ae490a44d40d31bda3297c64b4ce37c51">[詳解]</a><br /></td></tr>
+<tr class="separator:ae490a44d40d31bda3297c64b4ce37c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 非公開メンバ関数</h2></td></tr>
-<tr class="memitem:a379a79168e8481b70c188259e0672981"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a379a79168e8481b70c188259e0672981">TextureManager</a> ()=delete</td></tr>
-<tr class="separator:a379a79168e8481b70c188259e0672981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76abb178b37cedf4514eb0154349935"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#ad76abb178b37cedf4514eb0154349935">TextureManager</a> ()</td></tr>
+<tr class="memdesc:ad76abb178b37cedf4514eb0154349935"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#ad76abb178b37cedf4514eb0154349935">[詳解]</a><br /></td></tr>
+<tr class="separator:ad76abb178b37cedf4514eb0154349935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1686601d7194dc42fdb373d5f76f2af9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a1686601d7194dc42fdb373d5f76f2af9">CreateFilePath</a> (const std::string *key_name, const std::string *file_path)</td></tr>
+<tr class="memdesc:a1686601d7194dc42fdb373d5f76f2af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">フルパス生成関数  <a href="#a1686601d7194dc42fdb373d5f76f2af9">[詳解]</a><br /></td></tr>
+<tr class="separator:a1686601d7194dc42fdb373d5f76f2af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ef42214937c5c9e58f87c28a079a858"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a4ef42214937c5c9e58f87c28a079a858">TextureManager</a> (const <a class="el" href="class_texture_manager.html">TextureManager</a> &amp;class_name)=delete</td></tr>
 <tr class="separator:a4ef42214937c5c9e58f87c28a079a858"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f13712c65812a9053852165a9a67824"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_texture_manager.html">TextureManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a3f13712c65812a9053852165a9a67824">operator=</a> (const <a class="el" href="class_texture_manager.html">TextureManager</a> &amp;class_name)=delete</td></tr>
 <tr class="separator:a3f13712c65812a9053852165a9a67824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-静的非公開メンバ関数</h2></td></tr>
-<tr class="memitem:a950562ff671a620592708906925fad7f"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a950562ff671a620592708906925fad7f">MakeFilePath</a> (const std::string *key_name, const std::string *file_path)</td></tr>
-<tr class="separator:a950562ff671a620592708906925fad7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a105e7936953e0907fc6a7b9c9734a01a"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="class_texture_object.html">TextureObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a105e7936953e0907fc6a7b9c9734a01a">object_map_</a></td></tr>
+<tr class="memdesc:a105e7936953e0907fc6a7b9c9734a01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトマップ  <a href="#a105e7936953e0907fc6a7b9c9734a01a">[詳解]</a><br /></td></tr>
+<tr class="separator:a105e7936953e0907fc6a7b9c9734a01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 静的非公開変数類</h2></td></tr>
-<tr class="memitem:a7cdcbb47cf36d179ae88716210e7db65"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a7cdcbb47cf36d179ae88716210e7db65">DEFAULT_PATH</a> = &quot;resource/Texture/&quot;</td></tr>
+<tr class="memitem:a7cdcbb47cf36d179ae88716210e7db65"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a7cdcbb47cf36d179ae88716210e7db65">DEFAULT_PATH</a> = &quot;Resource/Texture/&quot;</td></tr>
+<tr class="memdesc:a7cdcbb47cf36d179ae88716210e7db65"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定パス  <a href="#a7cdcbb47cf36d179ae88716210e7db65">[詳解]</a><br /></td></tr>
 <tr class="separator:a7cdcbb47cf36d179ae88716210e7db65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8488bb78ab5b797291a5a82e33da3486"><td class="memItemLeft" align="right" valign="top">static std::unordered_map&lt; std::string, <a class="el" href="class_texture_object.html">TextureObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#a8488bb78ab5b797291a5a82e33da3486">share_texture_map_</a></td></tr>
-<tr class="separator:a8488bb78ab5b797291a5a82e33da3486"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9d3a68306acf224380084508ee2fbdd"><td class="memItemLeft" align="right" valign="top">static std::unordered_map&lt; std::string, <a class="el" href="class_texture_object.html">TextureObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#af9d3a68306acf224380084508ee2fbdd">unique_texture_map_</a></td></tr>
-<tr class="separator:af9d3a68306acf224380084508ee2fbdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac52b2d7e39fd06b9571658025ae609a4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_texture_manager.html">TextureManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_manager.html#ac52b2d7e39fd06b9571658025ae609a4">instance_</a> = nullptr</td></tr>
+<tr class="memdesc:ac52b2d7e39fd06b9571658025ae609a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス  <a href="#ac52b2d7e39fd06b9571658025ae609a4">[詳解]</a><br /></td></tr>
+<tr class="separator:ac52b2d7e39fd06b9571658025ae609a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="_texture_manager_8h_source.html">TextureManager.h</a> の <a class="el" href="_texture_manager_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+<div class="textblock"><p>テクスチャマネージャClass(Singleton) </p>
+<p>テクスチャのマネージャClass(Singleton) </p>
+
+<p class="definition"> <a class="el" href="_texture_manager_8h_source.html">TextureManager.h</a> の <a class="el" href="_texture_manager_8h_source.html#l00024">24</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
-<a id="a379a79168e8481b70c188259e0672981"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a379a79168e8481b70c188259e0672981">&#9670;&nbsp;</a></span>TextureManager() <span class="overload">[1/2]</span></h2>
+<a id="ad76abb178b37cedf4514eb0154349935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76abb178b37cedf4514eb0154349935">&#9670;&nbsp;</a></span>TextureManager() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,10 +185,20 @@ $(document).ready(function(){initNavTree('class_texture_manager.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00085">85</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -200,8 +229,8 @@ $(document).ready(function(){initNavTree('class_texture_manager.html','');});
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a571c5b288fe16c53965f45d8bd7c8769"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a571c5b288fe16c53965f45d8bd7c8769">&#9670;&nbsp;</a></span>AddShareData()</h2>
+<a id="a1686601d7194dc42fdb373d5f76f2af9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1686601d7194dc42fdb373d5f76f2af9">&#9670;&nbsp;</a></span>CreateFilePath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,228 +239,7 @@ $(document).ready(function(){initNavTree('class_texture_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_texture_object.html">TextureObject</a> * TextureManager::AddShareData </td>
-          <td>(</td>
-          <td class="paramtype">const std::string *&#160;</td>
-          <td class="paramname"><em>key_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
-          <td class="paramname"><em>file_path</em> = <code>nullptr</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pattern_num_all</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pattern_num_width</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pattern_num_height</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00159">159</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="af86003fd2afaf09f0295745d486e42e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af86003fd2afaf09f0295745d486e42e4">&#9670;&nbsp;</a></span>AddUniqueData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_texture_object.html">TextureObject</a> * TextureManager::AddUniqueData </td>
-          <td>(</td>
-          <td class="paramtype">const std::string *&#160;</td>
-          <td class="paramname"><em>key_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
-          <td class="paramname"><em>file_path</em> = <code>nullptr</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pattern_num_all</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pattern_num_width</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pattern_num_height</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00182">182</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a18d1f3418511075804f9d11cff1010ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18d1f3418511075804f9d11cff1010ff">&#9670;&nbsp;</a></span>GetTextureObject()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_texture_object.html">TextureObject</a> * TextureManager::GetTextureObject </td>
-          <td>(</td>
-          <td class="paramtype">const std::string *&#160;</td>
-          <td class="paramname"><em>key_name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00205">205</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="aee4c784f3f32bfe810bf66313735dece"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee4c784f3f32bfe810bf66313735dece">&#9670;&nbsp;</a></span>InitAllData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TextureManager::InitAllData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00053">53</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="aed1e9666d0ef8698db754280a1d4bad4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed1e9666d0ef8698db754280a1d4bad4">&#9670;&nbsp;</a></span>InitShareData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TextureManager::InitShareData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00068">68</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="abfba2c4293e692a351d9b98e28f6ed31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfba2c4293e692a351d9b98e28f6ed31">&#9670;&nbsp;</a></span>InitUniqueData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TextureManager::InitUniqueData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00082">82</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a950562ff671a620592708906925fad7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a950562ff671a620592708906925fad7f">&#9670;&nbsp;</a></span>MakeFilePath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string TextureManager::MakeFilePath </td>
+          <td class="memname">std::string TextureManager::CreateFilePath </td>
           <td>(</td>
           <td class="paramtype">const std::string *&#160;</td>
           <td class="paramname"><em>key_name</em>, </td>
@@ -450,12 +258,145 @@ $(document).ready(function(){initNavTree('class_texture_manager.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00226">226</a> 行目に定義があります。</p>
+<p>フルパス生成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*key_name</td><td>キー名 </td></tr>
+    <tr><td class="paramname">*file_path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">std::string</td><td>フルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00125">125</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a476998e9556141f2b5443ee34797c41d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a476998e9556141f2b5443ee34797c41d">&#9670;&nbsp;</a></span>getpInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_texture_manager.html">TextureManager</a> * TextureManager::getpInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンス取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TextureManager*</td><td>インスタンス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8dc2cfb7e5d1a52b41401fed33342de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dc2cfb7e5d1a52b41401fed33342de0">&#9670;&nbsp;</a></span>getpObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_texture_object.html">TextureObject</a> * TextureManager::getpObject </td>
+          <td>(</td>
+          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramname"><em>key_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramname"><em>file_path</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>オブジェクト取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TextureObject*</td><td>オブジェクト </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00058">58</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7ebc403618f25c44a44c74cc04690502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ebc403618f25c44a44c74cc04690502">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TextureManager::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00091">91</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -485,8 +426,43 @@ $(document).ready(function(){initNavTree('class_texture_manager.html','');});
 
 </div>
 </div>
-<a id="a5e81df5cd89e7794fb9230357663a729"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e81df5cd89e7794fb9230357663a729">&#9670;&nbsp;</a></span>UninitAllData()</h2>
+<a id="aa95379c1144d0cf1bbff438709ba72e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa95379c1144d0cf1bbff438709ba72e8">&#9670;&nbsp;</a></span>ReleaseFromTheMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TextureManager::ReleaseFromTheMap </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>key_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>マップから解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*key_name</td><td>キー名 </td></tr>
+    <tr><td class="paramname">*file_path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00113">113</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae490a44d40d31bda3297c64b4ce37c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae490a44d40d31bda3297c64b4ce37c51">&#9670;&nbsp;</a></span>ReleaseInstance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -495,7 +471,7 @@ $(document).ready(function(){initNavTree('class_texture_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void TextureManager::UninitAllData </td>
+          <td class="memname">void TextureManager::ReleaseInstance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -508,61 +484,54 @@ $(document).ready(function(){initNavTree('class_texture_manager.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00096">96</a> 行目に定義があります。</p>
+<p>インスタンス解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00048">48</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a770b76a28bac4c20c16960f58a2d3b77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a770b76a28bac4c20c16960f58a2d3b77">&#9670;&nbsp;</a></span>UninitShareData()</h2>
+<a id="ab2ef3139e30856ee768b2e98ec5259f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2ef3139e30856ee768b2e98ec5259f5">&#9670;&nbsp;</a></span>Uninit()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void TextureManager::UninitShareData </td>
+          <td class="memname">void TextureManager::Uninit </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00111">111</a> 行目に定義があります。</p>
+<p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-</div>
-</div>
-<a id="a9d9dd61edf4153bd70ba830ae2dc62e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d9dd61edf4153bd70ba830ae2dc62e8">&#9670;&nbsp;</a></span>UninitUniqueData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TextureManager::UninitUniqueData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00135">135</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a> の <a class="el" href="_texture_manager_8cpp_source.html#l00099">99</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -577,7 +546,7 @@ $(document).ready(function(){initNavTree('class_texture_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string TextureManager::DEFAULT_PATH = &quot;resource/Texture/&quot;</td>
+          <td class="memname">const std::string TextureManager::DEFAULT_PATH = &quot;Resource/Texture/&quot;</td>
         </tr>
       </table>
   </td>
@@ -586,13 +555,41 @@ $(document).ready(function(){initNavTree('class_texture_manager.html','');});
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>既定パス </p>
+
+<p class="definition"> <a class="el" href="_texture_manager_8h_source.html">TextureManager.h</a> の <a class="el" href="_texture_manager_8h_source.html#l00030">30</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac52b2d7e39fd06b9571658025ae609a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac52b2d7e39fd06b9571658025ae609a4">&#9670;&nbsp;</a></span>instance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_texture_manager.html">TextureManager</a> * TextureManager::instance_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンス </p>
 
 <p class="definition"> <a class="el" href="_texture_manager_8h_source.html">TextureManager.h</a> の <a class="el" href="_texture_manager_8h_source.html#l00037">37</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a8488bb78ab5b797291a5a82e33da3486"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8488bb78ab5b797291a5a82e33da3486">&#9670;&nbsp;</a></span>share_texture_map_</h2>
+<a id="a105e7936953e0907fc6a7b9c9734a01a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a105e7936953e0907fc6a7b9c9734a01a">&#9670;&nbsp;</a></span>object_map_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -601,47 +598,25 @@ $(document).ready(function(){initNavTree('class_texture_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt; std::string, <a class="el" href="class_texture_object.html">TextureObject</a> * &gt; TextureManager::share_texture_map_</td>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="class_texture_object.html">TextureObject</a>*&gt; TextureManager::object_map_</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_texture_manager_8h_source.html">TextureManager.h</a> の <a class="el" href="_texture_manager_8h_source.html#l00080">80</a> 行目に定義があります。</p>
+<p>オブジェクトマップ </p>
 
-</div>
-</div>
-<a id="af9d3a68306acf224380084508ee2fbdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9d3a68306acf224380084508ee2fbdd">&#9670;&nbsp;</a></span>unique_texture_map_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt; std::string, <a class="el" href="class_texture_object.html">TextureObject</a> * &gt; TextureManager::unique_texture_map_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_texture_manager_8h_source.html">TextureManager.h</a> の <a class="el" href="_texture_manager_8h_source.html#l00081">81</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_texture_manager_8h_source.html">TextureManager.h</a> の <a class="el" href="_texture_manager_8h_source.html#l00070">70</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/05_Resource/Texture/TextureManager/<a class="el" href="_texture_manager_8h_source.html">TextureManager.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/05_Resource/Texture/TextureManager/<a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Resource/Texture/TextureManager/<a class="el" href="_texture_manager_8h_source.html">TextureManager.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Resource/Texture/TextureManager/Source/<a class="el" href="_texture_manager_8cpp_source.html">TextureManager.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

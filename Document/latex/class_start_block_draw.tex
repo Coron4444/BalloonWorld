@@ -1,0 +1,277 @@
+\hypertarget{class_start_block_draw}{}\section{Start\+Block\+Draw クラス}
+\label{class_start_block_draw}\index{Start\+Block\+Draw@{Start\+Block\+Draw}}
+
+
+スタートブロック描画\+Class  
+
+
+
+
+{\ttfamily \#include $<$Start\+Block\+Draw.\+h$>$}
+
+
+
+Start\+Block\+Draw 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_start_block_draw__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{class_start_block_draw_a15cefedde4eab371fa2229d86c54455d}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_start_block_draw_a062b7069d21ec07630f6c8aeea532401}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ワールド行列取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_start_block_draw_a42d2c4f04609ba09359470fc38113bbf}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアル取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_start_block_draw_aae788a1d8d023cf387839c4bd9b74a1c}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_start_block_draw_aee2e80725c15a65d085a7effb2a556f4}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_start_block_draw_a845ce671ce8191a68ef4fc159c2f2a93}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_start_block_draw_a280430a290cf9ea32117f0c460a0f775}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cube_polygon}{Cube\+Polygon}} $\ast$ \mbox{\hyperlink{class_start_block_draw_a5aa6b756335a16f05c9b0d4457eb0883}{cube\+\_\+polygon\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 四角形ポリゴン \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+スタートブロック描画\+Class 
+
+スタートブロックの描画\+Class 
+
+ Start\+Block\+Draw.\+h の 31 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_start_block_draw_a280430a290cf9ea32117f0c460a0f775}\label{class_start_block_draw_a280430a290cf9ea32117f0c460a0f775}} 
+\index{Start\+Block\+Draw@{Start\+Block\+Draw}!Draw@{Draw}}
+\index{Draw@{Draw}!Start\+Block\+Draw@{Start\+Block\+Draw}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Start\+Block\+Draw\+::\+Draw (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
+
+
+
+ Start\+Block\+Draw.\+cpp の 83 行目に定義があります。
+
+\mbox{\Hypertarget{class_start_block_draw_a15cefedde4eab371fa2229d86c54455d}\label{class_start_block_draw_a15cefedde4eab371fa2229d86c54455d}} 
+\index{Start\+Block\+Draw@{Start\+Block\+Draw}!get\+Mesh\+Num@{get\+Mesh\+Num}}
+\index{get\+Mesh\+Num@{get\+Mesh\+Num}!Start\+Block\+Draw@{Start\+Block\+Draw}}
+\subsubsection{\texorpdfstring{get\+Mesh\+Num()}{getMeshNum()}}
+{\footnotesize\ttfamily unsigned Start\+Block\+Draw\+::get\+Mesh\+Num (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+メッシュ数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & メッシュ数 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a4c566a37d27fac3dcf76c7970443f375}{Draw\+Null}}を再実装しています。
+
+
+
+ Start\+Block\+Draw.\+cpp の 20 行目に定義があります。
+
+\mbox{\Hypertarget{class_start_block_draw_a42d2c4f04609ba09359470fc38113bbf}\label{class_start_block_draw_a42d2c4f04609ba09359470fc38113bbf}} 
+\index{Start\+Block\+Draw@{Start\+Block\+Draw}!getp\+Material@{getp\+Material}}
+\index{getp\+Material@{getp\+Material}!Start\+Block\+Draw@{Start\+Block\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Material()}{getpMaterial()}}
+{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ Start\+Block\+Draw\+::getp\+Material (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+マテリアル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a0c1efe55fea325ad277594be6fe1e938}{Draw\+Null}}を再実装しています。
+
+
+
+ Start\+Block\+Draw.\+cpp の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_start_block_draw_a062b7069d21ec07630f6c8aeea532401}\label{class_start_block_draw_a062b7069d21ec07630f6c8aeea532401}} 
+\index{Start\+Block\+Draw@{Start\+Block\+Draw}!getp\+Matrix@{getp\+Matrix}}
+\index{getp\+Matrix@{getp\+Matrix}!Start\+Block\+Draw@{Start\+Block\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Start\+Block\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+ワールド行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & ワールド行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a9aac059eb3b5d1f77e8bd3aa0647cff9}{Draw\+Null}}を再実装しています。
+
+
+
+ Start\+Block\+Draw.\+cpp の 29 行目に定義があります。
+
+\mbox{\Hypertarget{class_start_block_draw_aae788a1d8d023cf387839c4bd9b74a1c}\label{class_start_block_draw_aae788a1d8d023cf387839c4bd9b74a1c}} 
+\index{Start\+Block\+Draw@{Start\+Block\+Draw}!Init@{Init}}
+\index{Init@{Init}!Start\+Block\+Draw@{Start\+Block\+Draw}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Start\+Block\+Draw\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
+
+
+
+ Start\+Block\+Draw.\+cpp の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_start_block_draw_aee2e80725c15a65d085a7effb2a556f4}\label{class_start_block_draw_aee2e80725c15a65d085a7effb2a556f4}} 
+\index{Start\+Block\+Draw@{Start\+Block\+Draw}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Start\+Block\+Draw@{Start\+Block\+Draw}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Start\+Block\+Draw\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
+
+
+
+ Start\+Block\+Draw.\+cpp の 70 行目に定義があります。
+
+\mbox{\Hypertarget{class_start_block_draw_a845ce671ce8191a68ef4fc159c2f2a93}\label{class_start_block_draw_a845ce671ce8191a68ef4fc159c2f2a93}} 
+\index{Start\+Block\+Draw@{Start\+Block\+Draw}!Update@{Update}}
+\index{Update@{Update}!Start\+Block\+Draw@{Start\+Block\+Draw}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Start\+Block\+Draw\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_ad32a508d269de7eda8ad24ea72230464}{Draw\+Null}}を再実装しています。
+
+
+
+ Start\+Block\+Draw.\+cpp の 77 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_start_block_draw_a5aa6b756335a16f05c9b0d4457eb0883}\label{class_start_block_draw_a5aa6b756335a16f05c9b0d4457eb0883}} 
+\index{Start\+Block\+Draw@{Start\+Block\+Draw}!cube\+\_\+polygon\+\_\+@{cube\+\_\+polygon\+\_\+}}
+\index{cube\+\_\+polygon\+\_\+@{cube\+\_\+polygon\+\_\+}!Start\+Block\+Draw@{Start\+Block\+Draw}}
+\subsubsection{\texorpdfstring{cube\+\_\+polygon\+\_\+}{cube\_polygon\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cube_polygon}{Cube\+Polygon}}$\ast$ Start\+Block\+Draw\+::cube\+\_\+polygon\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+四角形ポリゴン 
+
+
+
+ Start\+Block\+Draw.\+h の 37 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Start\+Block/\mbox{\hyperlink{_start_block_draw_8h}{Start\+Block\+Draw.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Start\+Block/\+Source/\mbox{\hyperlink{_start_block_draw_8cpp}{Start\+Block\+Draw.\+cpp}}\end{DoxyCompactItemize}

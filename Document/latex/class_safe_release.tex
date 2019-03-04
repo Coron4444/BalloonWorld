@@ -2,7 +2,7 @@
 \label{class_safe_release}\index{Safe\+Release@{Safe\+Release}}
 
 
-セーフリリースクラス(static)  
+セーフリリース変換\+Class(static)  
 
 
 
@@ -15,17 +15,17 @@
 {\footnotesize template$<$class Type $>$ }\\static void \mbox{\hyperlink{class_safe_release_a6ecab682df939c28d8867a67c2f4b51f}{Normal}} (Type $\ast$$\ast$pointer)
 \begin{DoxyCompactList}\small\item\em 解放関数 \end{DoxyCompactList}\item 
 {\footnotesize template$<$class Type $>$ }\\static void \mbox{\hyperlink{class_safe_release_a06160f5466a88f021e6f28489de9df1e}{Plus\+Uninit}} (Type $\ast$$\ast$pointer)
-\begin{DoxyCompactList}\small\item\em 解放関数(終了有) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Uninit付き解放関数 \end{DoxyCompactList}\item 
 {\footnotesize template$<$class Type $>$ }\\static void \mbox{\hyperlink{class_safe_release_a507950335a85da67c1722cce83dca9ae}{Plus\+Release}} (Type $\ast$$\ast$pointer)
-\begin{DoxyCompactList}\small\item\em 解放関数(Release有) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Release付き解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
-セーフリリースクラス(static) 
+セーフリリース変換\+Class(static) 
 
-動的オブジェクトの安全な解放を担う関数群クラス 
+動的オブジェクトの安全な解放を担う関数群\+Class(static) 
 
- Safe\+Release.\+h の 27 行目に定義があります。
+ Safe\+Release.\+h の 17 行目に定義があります。
 
 
 
@@ -43,12 +43,17 @@ static void Safe\+Release\+::\+Normal (\begin{DoxyParamCaption}\item[{Type $\ast
 
 
 \begin{DoxyParams}{引数}
-{\em pointer} & \+: 解放対象のポインタ \\
+{\em pointer} & 解放対象のポインタ \\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
- Safe\+Release.\+h の 40 行目に定義があります。
+
+ Safe\+Release.\+h の 30 行目に定義があります。
 
 \mbox{\Hypertarget{class_safe_release_a507950335a85da67c1722cce83dca9ae}\label{class_safe_release_a507950335a85da67c1722cce83dca9ae}} 
 \index{Safe\+Release@{Safe\+Release}!Plus\+Release@{Plus\+Release}}
@@ -59,16 +64,21 @@ static void Safe\+Release\+::\+Plus\+Release (\begin{DoxyParamCaption}\item[{Typ
 
 
 
-解放関数(Release有) 
+Release付き解放関数 
 
 
 \begin{DoxyParams}{引数}
-{\em pointer} & \+: 解放対象のポインタ \\
+{\em pointer} & 解放対象のポインタ \\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
- Safe\+Release.\+h の 73 行目に定義があります。
+
+ Safe\+Release.\+h の 63 行目に定義があります。
 
 \mbox{\Hypertarget{class_safe_release_a06160f5466a88f021e6f28489de9df1e}\label{class_safe_release_a06160f5466a88f021e6f28489de9df1e}} 
 \index{Safe\+Release@{Safe\+Release}!Plus\+Uninit@{Plus\+Uninit}}
@@ -79,19 +89,24 @@ static void Safe\+Release\+::\+Plus\+Uninit (\begin{DoxyParamCaption}\item[{Type
 
 
 
-解放関数(終了有) 
+Uninit付き解放関数 
 
 
 \begin{DoxyParams}{引数}
-{\em pointer} & \+: 解放対象のポインタ \\
+{\em pointer} & 解放対象のポインタ \\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
- Safe\+Release.\+h の 56 行目に定義があります。
+
+ Safe\+Release.\+h の 46 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Safe\+Release/\mbox{\hyperlink{_safe_release_8h}{Safe\+Release.\+h}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_safe_release_8h}{Safe\+Release.\+h}}\end{DoxyCompactItemize}

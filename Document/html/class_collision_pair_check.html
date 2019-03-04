@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: CollisionPairCheck クラス</title>
+<title>BalloonWorld: CollisionPairCheck クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('class_collision_pair_check.html','');}
 </div><!--header-->
 <div class="contents">
 
-<p>衝突ペア判定Class  
+<p>衝突ペア判定Class(static)  
  <a href="class_collision_pair_check.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="_collision_pair_check_8h_source.html">CollisionPairCheck.h</a>&gt;</code></p>
@@ -133,10 +133,10 @@ $(document).ready(function(){initNavTree('class_collision_pair_check.html','');}
 <tr class="separator:a9f1819e873a51fcf50a7dbbf5f9d8690"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>衝突ペア判定Class </p>
+<div class="textblock"><p>衝突ペア判定Class(static) </p>
 <p>衝突基底クラスのペアを判定するClass(static) </p>
 
-<p class="definition"> <a class="el" href="_collision_pair_check_8h_source.html">CollisionPairCheck.h</a> の <a class="el" href="_collision_pair_check_8h_source.html#l00028">28</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_collision_pair_check_8h_source.html">CollisionPairCheck.h</a> の <a class="el" href="_collision_pair_check_8h_source.html#l00024">24</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="a1b4609489f79e7f272e97d15893339b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b4609489f79e7f272e97d15893339b5">&#9670;&nbsp;</a></span>CollisionPairCheck() <span class="overload">[1/2]</span></h2>
@@ -227,8 +227,8 @@ $(document).ready(function(){initNavTree('class_collision_pair_check.html','');}
 <p>衝突基底クラスペア判定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*collision0</td><td>衝突基底クラス </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*collision1</td><td>衝突基底クラス </td></tr>
+    <tr><td class="paramname">*collision0</td><td>衝突基底クラス </td></tr>
+    <tr><td class="paramname">*collision1</td><td>衝突基底クラス </td></tr>
   </table>
   </dd>
 </dl>
@@ -280,8 +280,8 @@ $(document).ready(function(){initNavTree('class_collision_pair_check.html','');}
 <p>ペア判定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*collision0</td><td>衝突基底クラス </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*collision1</td><td>衝突基底クラス </td></tr>
+    <tr><td class="paramname">*collision0</td><td>衝突基底クラス </td></tr>
+    <tr><td class="paramname">*collision1</td><td>衝突基底クラス </td></tr>
   </table>
   </dd>
 </dl>
@@ -339,9 +339,9 @@ $(document).ready(function(){initNavTree('class_collision_pair_check.html','');}
 <p>指定した衝突タイプの検索関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>衝突基底クラスタイプ </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*collision0</td><td>衝突基底クラス </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*collision1</td><td>衝突基底クラス </td></tr>
+    <tr><td class="paramname">type</td><td>衝突基底クラスタイプ </td></tr>
+    <tr><td class="paramname">*collision0</td><td>衝突基底クラス </td></tr>
+    <tr><td class="paramname">*collision1</td><td>衝突基底クラス </td></tr>
   </table>
   </dd>
 </dl>
@@ -425,15 +425,15 @@ $(document).ready(function(){initNavTree('class_collision_pair_check.html','');}
 <p>指定したコンポーネントの逆を返す関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">age_component</td><td>指定する衝突基底クラスポインタ </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">collision0</td><td>衝突基底クラスポインタ </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">collision1</td><td>衝突基底クラスポインタ </td></tr>
+    <tr><td class="paramname">*age_component</td><td>指定する衝突基底クラス </td></tr>
+    <tr><td class="paramname">*collision0</td><td>衝突基底クラス </td></tr>
+    <tr><td class="paramname">*collision1</td><td>衝突基底クラス </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">CollisionBase*</td><td>指定した衝突基底クラスポインタの逆の衝突基底クラスポインタ </td></tr>
+    <tr><td class="paramname">CollisionBase*</td><td>指定した衝突基底クラスポインタの逆の衝突基底クラス </td></tr>
   </table>
   </dd>
 </dl>
@@ -469,7 +469,7 @@ $(document).ready(function(){initNavTree('class_collision_pair_check.html','');}
 <p>プレイヤーのペアリスト関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*collision</td><td>衝突基底クラス </td></tr>
+    <tr><td class="paramname">*collision</td><td>衝突基底クラス </td></tr>
   </table>
   </dd>
 </dl>
@@ -485,8 +485,8 @@ $(document).ready(function(){initNavTree('class_collision_pair_check.html','');}
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/CollisionManager/CollisionPairCheck/<a class="el" href="_collision_pair_check_8h_source.html">CollisionPairCheck.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/CollisionManager/CollisionPairCheck/<a class="el" href="_collision_pair_check_8cpp_source.html">CollisionPairCheck.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Collision/CollisionManager/<a class="el" href="_collision_pair_check_8h_source.html">CollisionPairCheck.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Collision/CollisionManager/Source/<a class="el" href="_collision_pair_check_8cpp_source.html">CollisionPairCheck.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

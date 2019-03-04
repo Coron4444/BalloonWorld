@@ -2,23 +2,32 @@
 \label{class_liner_octree}\index{Liner\+Octree$<$ Type $>$@{Liner\+Octree$<$ Type $>$}}
 
 
-線形8分木\+Class  
+線形8分木\+Class(template)  
 
 
 
 
 {\ttfamily \#include $<$Liner\+Octree.\+h$>$}
 
+
+
+Liner\+Octree$<$ Type $>$ 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_liner_octree__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_liner_octree_a715d655c722c00c002d0bb006d0600d8}{Init}} (unsigned lowest\+\_\+level, \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} octree\+\_\+width\+\_\+min, \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} octree\+\_\+width\+\_\+max)
+void \mbox{\hyperlink{class_liner_octree_ac6729faf11a52abc056cd3c39a14d312}{Init}} (unsigned lowest\+\_\+level, \mbox{\hyperlink{class_vector3_d}{Vector3D}} octree\+\_\+width\+\_\+min, \mbox{\hyperlink{class_vector3_d}{Vector3D}} octree\+\_\+width\+\_\+max)
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_liner_octree_a86b5b9bc86630644e84508ff385cda69}{Uninit}} ()
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_liner_octree_a89f700400ce575b869633328755d23cb}{Update\+Collision\+List}} (std\+::vector$<$ Type $>$ $\ast$collision\+\_\+list)
 \begin{DoxyCompactList}\small\item\em 衝突リスト更新関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_liner_octree_ac5773a5193942a68f77a33baed9d69d4}{Add}} (\mbox{\hyperlink{class_object_of_tree}{Object\+Of\+Tree}}$<$ Type $>$ $\ast$object, const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$object\+\_\+min, const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$object\+\_\+max)
+void \mbox{\hyperlink{class_liner_octree_a3eaccf8098efa5354aecb4f682ffd400}{Add}} (\mbox{\hyperlink{class_object_of_tree}{Object\+Of\+Tree}}$<$ Type $>$ $\ast$object, const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$object\+\_\+min, const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$object\+\_\+max)
 \begin{DoxyCompactList}\small\item\em 追加関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的公開変数類}
 \begin{DoxyCompactItemize}
@@ -30,9 +39,9 @@ static const unsigned \mbox{\hyperlink{class_liner_octree_aced865f2822181486eb80
 \item 
 void \mbox{\hyperlink{class_liner_octree_acfa567ec0f969684f55443fc9ee98432}{Separate\+Into3\+Bit\+Intervals}} (D\+W\+O\+RD $\ast$num)
 \begin{DoxyCompactList}\small\item\em 3bit間隔へ分離関数 \end{DoxyCompactList}\item 
-D\+W\+O\+RD \mbox{\hyperlink{class_liner_octree_ad931e5f3ae94cd4337dd96d133ee42a8}{Get\+Morton\+Number}} (const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$position)
+D\+W\+O\+RD \mbox{\hyperlink{class_liner_octree_a310bf4eaded9ff5a1c5ce4262e74662b}{Get\+Morton\+Number}} (const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$position)
 \begin{DoxyCompactList}\small\item\em 3\+Dモートン空間番号取得関数 \end{DoxyCompactList}\item 
-D\+W\+O\+RD \mbox{\hyperlink{class_liner_octree_a4d7c6e47990d16ed28e3ab89443c1af4}{Get\+Array\+Index\+Of\+Belongin\+Space}} (const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$object\+\_\+min, const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$object\+\_\+max)
+D\+W\+O\+RD \mbox{\hyperlink{class_liner_octree_adf06484a50549a17b1657f188814709e}{Get\+Array\+Index\+Of\+Belongin\+Space}} (const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$object\+\_\+min, const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$object\+\_\+max)
 \begin{DoxyCompactList}\small\item\em 所属空間の配列インデックス取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_liner_octree_a62aa42a787a399c3651bac3bbef8f1a6}{Create\+Space}} (D\+W\+O\+RD array\+\_\+index)
 \begin{DoxyCompactList}\small\item\em 空間の生成関数 \end{DoxyCompactList}\item 
@@ -45,13 +54,13 @@ unsigned \mbox{\hyperlink{class_liner_octree_ab7ddbc8f86cfa3ff46f01f080b56572a}{
 \begin{DoxyCompactList}\small\item\em ８のべき乗数値配列 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_space_of_tree}{Space\+Of\+Tree}}$<$ Type $>$ $\ast$$\ast$ \mbox{\hyperlink{class_liner_octree_a0ffc2effd42779c7f88c4eecc8a68bfb}{space\+\_\+pointer\+\_\+array\+\_\+}} = nullptr
 \begin{DoxyCompactList}\small\item\em 各空間ポインタ配列 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_liner_octree_accf45495e9a4cbf5ed3d8a839eda9806}{octree\+\_\+width\+\_\+}} = \{1.\+0f, 1.\+0f, 1.\+0f\}
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_liner_octree_a4c710ef0e4ea86372d80d88051815026}{octree\+\_\+width\+\_\+}} = \{1.\+0f, 1.\+0f, 1.\+0f\}
 \begin{DoxyCompactList}\small\item\em 8分木の幅 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_liner_octree_a391dbd4c22c6b16bfe49884d8b156738}{octree\+\_\+width\+\_\+min\+\_\+}} = \{0.\+0f, 0.\+0f, 0.\+0f\}
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_liner_octree_a5992f986cf372dc2467c4dd2dec8771b}{octree\+\_\+width\+\_\+min\+\_\+}} = \{0.\+0f, 0.\+0f, 0.\+0f\}
 \begin{DoxyCompactList}\small\item\em 8分木の幅の最小値 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_liner_octree_abf54d24034d8ae53d7f7d17e6dfe02ff}{octree\+\_\+width\+\_\+max\+\_\+}} = \{1.\+0f, 1.\+0f, 1.\+0f\}
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_liner_octree_a29578ee8b44b1da05dadc291cfc4c354}{octree\+\_\+width\+\_\+max\+\_\+}} = \{1.\+0f, 1.\+0f, 1.\+0f\}
 \begin{DoxyCompactList}\small\item\em 8分木の幅の最大値 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_liner_octree_af412add67f71dd8ceb8af82be6015988}{octree\+\_\+unit\+\_\+length\+\_\+}} = \{1.\+0f, 1.\+0f, 1.\+0f\}
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_liner_octree_a732a1f9bd3674be516c46d5805719e11}{octree\+\_\+unit\+\_\+length\+\_\+}} = \{1.\+0f, 1.\+0f, 1.\+0f\}
 \begin{DoxyCompactList}\small\item\em 8分木の単位長さ \end{DoxyCompactList}\item 
 D\+W\+O\+RD \mbox{\hyperlink{class_liner_octree_aff1d6fcdf606bb2e42461714c0e7aa50}{all\+\_\+space\+\_\+num\+\_\+}} = 0
 \begin{DoxyCompactList}\small\item\em 空間数 \end{DoxyCompactList}\item 
@@ -63,33 +72,33 @@ unsigned \mbox{\hyperlink{class_liner_octree_aa62a6ad34ceed4a8fef93123ca45350d}{
 \subsubsection*{template$<$class Type$>$\newline
 class Liner\+Octree$<$ Type $>$}
 
-線形8分木\+Class 
+線形8分木\+Class(template) 
 
 線形配列による8分木の管理\+Class(template) 
 
- Liner\+Octree.\+h の 33 行目に定義があります。
+ Liner\+Octree.\+h の 26 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_liner_octree_ac5773a5193942a68f77a33baed9d69d4}\label{class_liner_octree_ac5773a5193942a68f77a33baed9d69d4}} 
+\mbox{\Hypertarget{class_liner_octree_a3eaccf8098efa5354aecb4f682ffd400}\label{class_liner_octree_a3eaccf8098efa5354aecb4f682ffd400}} 
 \index{Liner\+Octree@{Liner\+Octree}!Add@{Add}}
 \index{Add@{Add}!Liner\+Octree@{Liner\+Octree}}
 \subsubsection{\texorpdfstring{Add()}{Add()}}
 {\footnotesize\ttfamily template$<$class Type$>$ \\
-void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_object_of_tree}{Object\+Of\+Tree}}$<$ Type $>$ $\ast$}]{object,  }\item[{const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$}]{object\+\_\+min,  }\item[{const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$}]{object\+\_\+max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_object_of_tree}{Object\+Of\+Tree}}$<$ Type $>$ $\ast$}]{object,  }\item[{const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{object\+\_\+min,  }\item[{const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{object\+\_\+max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 追加関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object} & 追加したいオブジェクト \\
+\begin{DoxyParams}{引数}
+{\em object} & 追加したいオブジェクト \\
 \hline
-\mbox{\tt in}  & {\em object\+\_\+min} & 追加したいオブジェクトの最小値 \\
+{\em object\+\_\+min} & 追加したいオブジェクトの最小値 \\
 \hline
-\mbox{\tt in}  & {\em object\+\_\+max} & 追加したいオブジェクトの最大値 \\
+{\em object\+\_\+max} & 追加したいオブジェクトの最大値 \\
 \hline
 \end{DoxyParams}
 
@@ -99,7 +108,7 @@ void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Add (\b
 \end{DoxyRetVals}
 
 
- Liner\+Octree.\+h の 147 行目に定義があります。
+ Liner\+Octree.\+h の 140 行目に定義があります。
 
 \mbox{\Hypertarget{class_liner_octree_a62aa42a787a399c3651bac3bbef8f1a6}\label{class_liner_octree_a62aa42a787a399c3651bac3bbef8f1a6}} 
 \index{Liner\+Octree@{Liner\+Octree}!Create\+Space@{Create\+Space}}
@@ -113,8 +122,8 @@ void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Create\
 空間の生成関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em array\+\_\+index} & 配列インデックス \\
+\begin{DoxyParams}{引数}
+{\em array\+\_\+index} & 配列インデックス \\
 \hline
 \end{DoxyParams}
 
@@ -124,24 +133,24 @@ void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Create\
 \end{DoxyRetVals}
 
 
- Liner\+Octree.\+h の 241 行目に定義があります。
+ Liner\+Octree.\+h の 234 行目に定義があります。
 
-\mbox{\Hypertarget{class_liner_octree_a4d7c6e47990d16ed28e3ab89443c1af4}\label{class_liner_octree_a4d7c6e47990d16ed28e3ab89443c1af4}} 
+\mbox{\Hypertarget{class_liner_octree_adf06484a50549a17b1657f188814709e}\label{class_liner_octree_adf06484a50549a17b1657f188814709e}} 
 \index{Liner\+Octree@{Liner\+Octree}!Get\+Array\+Index\+Of\+Belongin\+Space@{Get\+Array\+Index\+Of\+Belongin\+Space}}
 \index{Get\+Array\+Index\+Of\+Belongin\+Space@{Get\+Array\+Index\+Of\+Belongin\+Space}!Liner\+Octree@{Liner\+Octree}}
 \subsubsection{\texorpdfstring{Get\+Array\+Index\+Of\+Belongin\+Space()}{GetArrayIndexOfBelonginSpace()}}
 {\footnotesize\ttfamily template$<$class Type$>$ \\
-D\+W\+O\+RD \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Get\+Array\+Index\+Of\+Belongin\+Space (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$}]{object\+\_\+min,  }\item[{const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$}]{object\+\_\+max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+D\+W\+O\+RD \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Get\+Array\+Index\+Of\+Belongin\+Space (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{object\+\_\+min,  }\item[{const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{object\+\_\+max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
 
 
 所属空間の配列インデックス取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em $\ast$object\+\_\+min} & 所属空間の配列インデックスを取得したいオブジェクトの最小値 \\
+\begin{DoxyParams}{引数}
+{\em $\ast$object\+\_\+min} & 所属空間の配列インデックスを取得したいオブジェクトの最小値 \\
 \hline
-\mbox{\tt in}  & {\em $\ast$object\+\_\+max} & 所属空間の配列インデックスを取得したいオブジェクトの最大値 \\
+{\em $\ast$object\+\_\+max} & 所属空間の配列インデックスを取得したいオブジェクトの最大値 \\
 \hline
 \end{DoxyParams}
 
@@ -151,7 +160,7 @@ D\+W\+O\+RD \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::
 \end{DoxyRetVals}
 
 
- Liner\+Octree.\+h の 210 行目に定義があります。
+ Liner\+Octree.\+h の 203 行目に定義があります。
 
 \mbox{\Hypertarget{class_liner_octree_aa166d590cbda54d856a732d0171f6554}\label{class_liner_octree_aa166d590cbda54d856a732d0171f6554}} 
 \index{Liner\+Octree@{Liner\+Octree}!Get\+Collision\+List@{Get\+Collision\+List}}
@@ -165,12 +174,12 @@ void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Get\+Co
 衝突リストの作成関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em space\+\_\+index} & 空間配列インデックス \\
+\begin{DoxyParams}{引数}
+{\em space\+\_\+index} & 空間配列インデックス \\
 \hline
-\mbox{\tt in,out}  & {\em $\ast$collision\+\_\+list} & 衝突オブジェクトリスト \\
+{\em $\ast$collision\+\_\+list} & 衝突オブジェクトリスト \\
 \hline
-\mbox{\tt in,out}  & {\em $\ast$collision\+\_\+stack} & 衝突オブジェクトスタック \\
+{\em $\ast$collision\+\_\+stack} & 衝突オブジェクトスタック \\
 \hline
 \end{DoxyParams}
 
@@ -180,22 +189,22 @@ void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Get\+Co
 \end{DoxyRetVals}
 
 
- Liner\+Octree.\+h の 262 行目に定義があります。
+ Liner\+Octree.\+h の 255 行目に定義があります。
 
-\mbox{\Hypertarget{class_liner_octree_ad931e5f3ae94cd4337dd96d133ee42a8}\label{class_liner_octree_ad931e5f3ae94cd4337dd96d133ee42a8}} 
+\mbox{\Hypertarget{class_liner_octree_a310bf4eaded9ff5a1c5ce4262e74662b}\label{class_liner_octree_a310bf4eaded9ff5a1c5ce4262e74662b}} 
 \index{Liner\+Octree@{Liner\+Octree}!Get\+Morton\+Number@{Get\+Morton\+Number}}
 \index{Get\+Morton\+Number@{Get\+Morton\+Number}!Liner\+Octree@{Liner\+Octree}}
 \subsubsection{\texorpdfstring{Get\+Morton\+Number()}{GetMortonNumber()}}
 {\footnotesize\ttfamily template$<$class Type$>$ \\
-D\+W\+O\+RD \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Get\+Morton\+Number (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+D\+W\+O\+RD \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Get\+Morton\+Number (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
 
 
 3\+Dモートン空間番号取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em $\ast$position} & モートン番号を取得したい座標 \\
+\begin{DoxyParams}{引数}
+{\em $\ast$position} & モートン番号を取得したい座標 \\
 \hline
 \end{DoxyParams}
 
@@ -205,26 +214,26 @@ D\+W\+O\+RD \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::
 \end{DoxyRetVals}
 
 
- Liner\+Octree.\+h の 187 行目に定義があります。
+ Liner\+Octree.\+h の 180 行目に定義があります。
 
-\mbox{\Hypertarget{class_liner_octree_a715d655c722c00c002d0bb006d0600d8}\label{class_liner_octree_a715d655c722c00c002d0bb006d0600d8}} 
+\mbox{\Hypertarget{class_liner_octree_ac6729faf11a52abc056cd3c39a14d312}\label{class_liner_octree_ac6729faf11a52abc056cd3c39a14d312}} 
 \index{Liner\+Octree@{Liner\+Octree}!Init@{Init}}
 \index{Init@{Init}!Liner\+Octree@{Liner\+Octree}}
 \subsubsection{\texorpdfstring{Init()}{Init()}}
 {\footnotesize\ttfamily template$<$class Type$>$ \\
-void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Init (\begin{DoxyParamCaption}\item[{unsigned}]{lowest\+\_\+level,  }\item[{\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}}}]{octree\+\_\+width\+\_\+min,  }\item[{\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}}}]{octree\+\_\+width\+\_\+max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Init (\begin{DoxyParamCaption}\item[{unsigned}]{lowest\+\_\+level,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{octree\+\_\+width\+\_\+min,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{octree\+\_\+width\+\_\+max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 初期化関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em lowest\+\_\+level} & 最下位レベル(一番末端の\+Level数) \\
+\begin{DoxyParams}{引数}
+{\em lowest\+\_\+level} & 最下位レベル(一番末端の\+Level数) \\
 \hline
-\mbox{\tt in}  & {\em octree\+\_\+width\+\_\+min} & 8分木の幅の最小値 \\
+{\em octree\+\_\+width\+\_\+min} & 8分木の幅の最小値 \\
 \hline
-\mbox{\tt in}  & {\em octree\+\_\+width\+\_\+max} & 8分木の幅の最大値 \\
+{\em octree\+\_\+width\+\_\+max} & 8分木の幅の最大値 \\
 \hline
 \end{DoxyParams}
 
@@ -234,7 +243,7 @@ void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Init (\
 \end{DoxyRetVals}
 
 
- Liner\+Octree.\+h の 68 行目に定義があります。
+ Liner\+Octree.\+h の 61 行目に定義があります。
 
 \mbox{\Hypertarget{class_liner_octree_acfa567ec0f969684f55443fc9ee98432}\label{class_liner_octree_acfa567ec0f969684f55443fc9ee98432}} 
 \index{Liner\+Octree@{Liner\+Octree}!Separate\+Into3\+Bit\+Intervals@{Separate\+Into3\+Bit\+Intervals}}
@@ -248,8 +257,8 @@ void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Separat
 3bit間隔へ分離関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in,out}  & {\em $\ast$num} & 分離したい数値 \\
+\begin{DoxyParams}{引数}
+{\em $\ast$num} & 分離したい数値 \\
 \hline
 \end{DoxyParams}
 
@@ -259,7 +268,7 @@ void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Separat
 \end{DoxyRetVals}
 
 
- Liner\+Octree.\+h の 174 行目に定義があります。
+ Liner\+Octree.\+h の 167 行目に定義があります。
 
 \mbox{\Hypertarget{class_liner_octree_a86b5b9bc86630644e84508ff385cda69}\label{class_liner_octree_a86b5b9bc86630644e84508ff385cda69}} 
 \index{Liner\+Octree@{Liner\+Octree}!Uninit@{Uninit}}
@@ -284,7 +293,7 @@ void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Uninit 
 \end{DoxyRetVals}
 
 
- Liner\+Octree.\+h の 108 行目に定義があります。
+ Liner\+Octree.\+h の 101 行目に定義があります。
 
 \mbox{\Hypertarget{class_liner_octree_a89f700400ce575b869633328755d23cb}\label{class_liner_octree_a89f700400ce575b869633328755d23cb}} 
 \index{Liner\+Octree@{Liner\+Octree}!Update\+Collision\+List@{Update\+Collision\+List}}
@@ -298,8 +307,8 @@ void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Update\
 衝突リスト更新関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in,out}  & {\em $\ast$collision\+\_\+list} & 衝突リスト \\
+\begin{DoxyParams}{引数}
+{\em $\ast$collision\+\_\+list} & 衝突リスト \\
 \hline
 \end{DoxyParams}
 
@@ -309,7 +318,7 @@ void \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::Update\
 \end{DoxyRetVals}
 
 
- Liner\+Octree.\+h の 126 行目に定義があります。
+ Liner\+Octree.\+h の 119 行目に定義があります。
 
 
 
@@ -327,7 +336,7 @@ D\+W\+O\+RD \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::
 
 
 
- Liner\+Octree.\+h の 52 行目に定義があります。
+ Liner\+Octree.\+h の 45 行目に定義があります。
 
 \mbox{\Hypertarget{class_liner_octree_aa62a6ad34ceed4a8fef93123ca45350d}\label{class_liner_octree_aa62a6ad34ceed4a8fef93123ca45350d}} 
 \index{Liner\+Octree@{Liner\+Octree}!lowest\+\_\+level\+\_\+@{lowest\+\_\+level\+\_\+}}
@@ -342,7 +351,7 @@ unsigned \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::low
 
 
 
- Liner\+Octree.\+h の 53 行目に定義があります。
+ Liner\+Octree.\+h の 46 行目に定義があります。
 
 \mbox{\Hypertarget{class_liner_octree_aced865f2822181486eb805e4db1f0a32}\label{class_liner_octree_aced865f2822181486eb805e4db1f0a32}} 
 \index{Liner\+Octree@{Liner\+Octree}!M\+A\+X\+\_\+\+L\+E\+V\+EL@{M\+A\+X\+\_\+\+L\+E\+V\+EL}}
@@ -357,14 +366,14 @@ const unsigned \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\
 
 
 
- Liner\+Octree.\+h の 39 行目に定義があります。
+ Liner\+Octree.\+h の 32 行目に定義があります。
 
-\mbox{\Hypertarget{class_liner_octree_af412add67f71dd8ceb8af82be6015988}\label{class_liner_octree_af412add67f71dd8ceb8af82be6015988}} 
+\mbox{\Hypertarget{class_liner_octree_a732a1f9bd3674be516c46d5805719e11}\label{class_liner_octree_a732a1f9bd3674be516c46d5805719e11}} 
 \index{Liner\+Octree@{Liner\+Octree}!octree\+\_\+unit\+\_\+length\+\_\+@{octree\+\_\+unit\+\_\+length\+\_\+}}
 \index{octree\+\_\+unit\+\_\+length\+\_\+@{octree\+\_\+unit\+\_\+length\+\_\+}!Liner\+Octree@{Liner\+Octree}}
 \subsubsection{\texorpdfstring{octree\+\_\+unit\+\_\+length\+\_\+}{octree\_unit\_length\_}}
 {\footnotesize\ttfamily template$<$class Type$>$ \\
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::octree\+\_\+unit\+\_\+length\+\_\+ = \{1.\+0f, 1.\+0f, 1.\+0f\}\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::octree\+\_\+unit\+\_\+length\+\_\+ = \{1.\+0f, 1.\+0f, 1.\+0f\}\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -372,14 +381,14 @@ const unsigned \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\
 
 
 
- Liner\+Octree.\+h の 51 行目に定義があります。
+ Liner\+Octree.\+h の 44 行目に定義があります。
 
-\mbox{\Hypertarget{class_liner_octree_accf45495e9a4cbf5ed3d8a839eda9806}\label{class_liner_octree_accf45495e9a4cbf5ed3d8a839eda9806}} 
+\mbox{\Hypertarget{class_liner_octree_a4c710ef0e4ea86372d80d88051815026}\label{class_liner_octree_a4c710ef0e4ea86372d80d88051815026}} 
 \index{Liner\+Octree@{Liner\+Octree}!octree\+\_\+width\+\_\+@{octree\+\_\+width\+\_\+}}
 \index{octree\+\_\+width\+\_\+@{octree\+\_\+width\+\_\+}!Liner\+Octree@{Liner\+Octree}}
 \subsubsection{\texorpdfstring{octree\+\_\+width\+\_\+}{octree\_width\_}}
 {\footnotesize\ttfamily template$<$class Type$>$ \\
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::octree\+\_\+width\+\_\+ = \{1.\+0f, 1.\+0f, 1.\+0f\}\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::octree\+\_\+width\+\_\+ = \{1.\+0f, 1.\+0f, 1.\+0f\}\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -387,14 +396,14 @@ const unsigned \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\
 
 
 
- Liner\+Octree.\+h の 48 行目に定義があります。
+ Liner\+Octree.\+h の 41 行目に定義があります。
 
-\mbox{\Hypertarget{class_liner_octree_abf54d24034d8ae53d7f7d17e6dfe02ff}\label{class_liner_octree_abf54d24034d8ae53d7f7d17e6dfe02ff}} 
+\mbox{\Hypertarget{class_liner_octree_a29578ee8b44b1da05dadc291cfc4c354}\label{class_liner_octree_a29578ee8b44b1da05dadc291cfc4c354}} 
 \index{Liner\+Octree@{Liner\+Octree}!octree\+\_\+width\+\_\+max\+\_\+@{octree\+\_\+width\+\_\+max\+\_\+}}
 \index{octree\+\_\+width\+\_\+max\+\_\+@{octree\+\_\+width\+\_\+max\+\_\+}!Liner\+Octree@{Liner\+Octree}}
 \subsubsection{\texorpdfstring{octree\+\_\+width\+\_\+max\+\_\+}{octree\_width\_max\_}}
 {\footnotesize\ttfamily template$<$class Type$>$ \\
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::octree\+\_\+width\+\_\+max\+\_\+ = \{1.\+0f, 1.\+0f, 1.\+0f\}\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::octree\+\_\+width\+\_\+max\+\_\+ = \{1.\+0f, 1.\+0f, 1.\+0f\}\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -402,14 +411,14 @@ const unsigned \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\
 
 
 
- Liner\+Octree.\+h の 50 行目に定義があります。
+ Liner\+Octree.\+h の 43 行目に定義があります。
 
-\mbox{\Hypertarget{class_liner_octree_a391dbd4c22c6b16bfe49884d8b156738}\label{class_liner_octree_a391dbd4c22c6b16bfe49884d8b156738}} 
+\mbox{\Hypertarget{class_liner_octree_a5992f986cf372dc2467c4dd2dec8771b}\label{class_liner_octree_a5992f986cf372dc2467c4dd2dec8771b}} 
 \index{Liner\+Octree@{Liner\+Octree}!octree\+\_\+width\+\_\+min\+\_\+@{octree\+\_\+width\+\_\+min\+\_\+}}
 \index{octree\+\_\+width\+\_\+min\+\_\+@{octree\+\_\+width\+\_\+min\+\_\+}!Liner\+Octree@{Liner\+Octree}}
 \subsubsection{\texorpdfstring{octree\+\_\+width\+\_\+min\+\_\+}{octree\_width\_min\_}}
 {\footnotesize\ttfamily template$<$class Type$>$ \\
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::octree\+\_\+width\+\_\+min\+\_\+ = \{0.\+0f, 0.\+0f, 0.\+0f\}\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::octree\+\_\+width\+\_\+min\+\_\+ = \{0.\+0f, 0.\+0f, 0.\+0f\}\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -417,7 +426,7 @@ const unsigned \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\
 
 
 
- Liner\+Octree.\+h の 49 行目に定義があります。
+ Liner\+Octree.\+h の 42 行目に定義があります。
 
 \mbox{\Hypertarget{class_liner_octree_ab7ddbc8f86cfa3ff46f01f080b56572a}\label{class_liner_octree_ab7ddbc8f86cfa3ff46f01f080b56572a}} 
 \index{Liner\+Octree@{Liner\+Octree}!power\+\_\+of\+\_\+eight\+\_\+array\+\_\+@{power\+\_\+of\+\_\+eight\+\_\+array\+\_\+}}
@@ -432,7 +441,7 @@ unsigned \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::pow
 
 
 
- Liner\+Octree.\+h の 46 行目に定義があります。
+ Liner\+Octree.\+h の 39 行目に定義があります。
 
 \mbox{\Hypertarget{class_liner_octree_a0ffc2effd42779c7f88c4eecc8a68bfb}\label{class_liner_octree_a0ffc2effd42779c7f88c4eecc8a68bfb}} 
 \index{Liner\+Octree@{Liner\+Octree}!space\+\_\+pointer\+\_\+array\+\_\+@{space\+\_\+pointer\+\_\+array\+\_\+}}
@@ -447,10 +456,10 @@ unsigned \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ Type $>$\+::pow
 
 
 
- Liner\+Octree.\+h の 47 行目に定義があります。
+ Liner\+Octree.\+h の 40 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Collision\+Manager/\+Liner\+Octree/\mbox{\hyperlink{_liner_octree_8h}{Liner\+Octree.\+h}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Manager/\mbox{\hyperlink{_liner_octree_8h}{Liner\+Octree.\+h}}\end{DoxyCompactItemize}

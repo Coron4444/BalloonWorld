@@ -1,0 +1,267 @@
+\hypertarget{class_render_texture_polygon}{}\section{Render\+Texture\+Polygon クラス}
+\label{class_render_texture_polygon}\index{Render\+Texture\+Polygon@{Render\+Texture\+Polygon}}
+
+
+レンダーテクスチャポリゴン\+Class  
+
+
+
+
+{\ttfamily \#include $<$Render\+Texture\+Polygon.\+h$>$}
+
+
+
+Render\+Texture\+Polygon 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_render_texture_polygon__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_render_texture_polygon_a76ab48dff0a23ee4db47da598f4d6a70}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 行列取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_render_texture_polygon_a86dac06a0a8c8cc64ade472011745fa3}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアル取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_texture_polygon_a623a232ed09b2bfca8c3557075044aac}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_texture_polygon_a3ff2fc37bb953074a5ab8a0dde7aaa1c}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_texture_polygon_aacbc16dd7ed1117533728d68dcfeb154}{Update}} (float position\+\_\+x, float position\+\_\+y, float scale\+\_\+x, float scale\+\_\+y, \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} color)
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_texture_polygon_a95e688cae107312649c1fb7965e2ba6b}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}} $\ast$ \mbox{\hyperlink{class_render_texture_polygon_abf107a1f67b8009ec2a039b044067576}{plane\+\_\+polygon\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 板ポリゴン \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transform}{Transform}} $\ast$ \mbox{\hyperlink{class_render_texture_polygon_a6dab60101effeb8a36af342f53cd93e8}{transform\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 状態 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+レンダーテクスチャポリゴン\+Class 
+
+レンダーテクスチャの描画用ポリゴン\+Class 
+
+ Render\+Texture\+Polygon.\+h の 33 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_render_texture_polygon_a95e688cae107312649c1fb7965e2ba6b}\label{class_render_texture_polygon_a95e688cae107312649c1fb7965e2ba6b}} 
+\index{Render\+Texture\+Polygon@{Render\+Texture\+Polygon}!Draw@{Draw}}
+\index{Draw@{Draw}!Render\+Texture\+Polygon@{Render\+Texture\+Polygon}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Render\+Texture\+Polygon\+::\+Draw (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
+
+
+
+ Render\+Texture\+Polygon.\+cpp の 71 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_texture_polygon_a86dac06a0a8c8cc64ade472011745fa3}\label{class_render_texture_polygon_a86dac06a0a8c8cc64ade472011745fa3}} 
+\index{Render\+Texture\+Polygon@{Render\+Texture\+Polygon}!getp\+Material@{getp\+Material}}
+\index{getp\+Material@{getp\+Material}!Render\+Texture\+Polygon@{Render\+Texture\+Polygon}}
+\subsubsection{\texorpdfstring{getp\+Material()}{getpMaterial()}}
+{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ Render\+Texture\+Polygon\+::getp\+Material (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+マテリアル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a0c1efe55fea325ad277594be6fe1e938}{Draw\+Null}}を再実装しています。
+
+
+
+ Render\+Texture\+Polygon.\+cpp の 28 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_texture_polygon_a76ab48dff0a23ee4db47da598f4d6a70}\label{class_render_texture_polygon_a76ab48dff0a23ee4db47da598f4d6a70}} 
+\index{Render\+Texture\+Polygon@{Render\+Texture\+Polygon}!getp\+Matrix@{getp\+Matrix}}
+\index{getp\+Matrix@{getp\+Matrix}!Render\+Texture\+Polygon@{Render\+Texture\+Polygon}}
+\subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Render\+Texture\+Polygon\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & 行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a9aac059eb3b5d1f77e8bd3aa0647cff9}{Draw\+Null}}を再実装しています。
+
+
+
+ Render\+Texture\+Polygon.\+cpp の 20 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_texture_polygon_a623a232ed09b2bfca8c3557075044aac}\label{class_render_texture_polygon_a623a232ed09b2bfca8c3557075044aac}} 
+\index{Render\+Texture\+Polygon@{Render\+Texture\+Polygon}!Init@{Init}}
+\index{Init@{Init}!Render\+Texture\+Polygon@{Render\+Texture\+Polygon}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Render\+Texture\+Polygon\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
+
+
+
+ Render\+Texture\+Polygon.\+cpp の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_texture_polygon_a3ff2fc37bb953074a5ab8a0dde7aaa1c}\label{class_render_texture_polygon_a3ff2fc37bb953074a5ab8a0dde7aaa1c}} 
+\index{Render\+Texture\+Polygon@{Render\+Texture\+Polygon}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Render\+Texture\+Polygon@{Render\+Texture\+Polygon}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Render\+Texture\+Polygon\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
+
+
+
+ Render\+Texture\+Polygon.\+cpp の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_texture_polygon_aacbc16dd7ed1117533728d68dcfeb154}\label{class_render_texture_polygon_aacbc16dd7ed1117533728d68dcfeb154}} 
+\index{Render\+Texture\+Polygon@{Render\+Texture\+Polygon}!Update@{Update}}
+\index{Update@{Update}!Render\+Texture\+Polygon@{Render\+Texture\+Polygon}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Render\+Texture\+Polygon\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{position\+\_\+x,  }\item[{float}]{position\+\_\+y,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}}]{color }\end{DoxyParamCaption})}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em position\+\_\+x} & 座標X \\
+\hline
+{\em position\+\_\+y} & 座標Y \\
+\hline
+{\em scale\+\_\+x} & 拡縮X \\
+\hline
+{\em scale\+\_\+y} & 拡縮Y \\
+\hline
+{\em color} & 色 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Texture\+Polygon.\+cpp の 57 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_render_texture_polygon_abf107a1f67b8009ec2a039b044067576}\label{class_render_texture_polygon_abf107a1f67b8009ec2a039b044067576}} 
+\index{Render\+Texture\+Polygon@{Render\+Texture\+Polygon}!plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}}
+\index{plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}!Render\+Texture\+Polygon@{Render\+Texture\+Polygon}}
+\subsubsection{\texorpdfstring{plane\+\_\+polygon\+\_\+}{plane\_polygon\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}}$\ast$ Render\+Texture\+Polygon\+::plane\+\_\+polygon\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+板ポリゴン 
+
+
+
+ Render\+Texture\+Polygon.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_texture_polygon_a6dab60101effeb8a36af342f53cd93e8}\label{class_render_texture_polygon_a6dab60101effeb8a36af342f53cd93e8}} 
+\index{Render\+Texture\+Polygon@{Render\+Texture\+Polygon}!transform\+\_\+@{transform\+\_\+}}
+\index{transform\+\_\+@{transform\+\_\+}!Render\+Texture\+Polygon@{Render\+Texture\+Polygon}}
+\subsubsection{\texorpdfstring{transform\+\_\+}{transform\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}}$\ast$ Render\+Texture\+Polygon\+::transform\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+状態 
+
+
+
+ Render\+Texture\+Polygon.\+h の 40 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\mbox{\hyperlink{_render_texture_polygon_8h}{Render\+Texture\+Polygon.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Source/\mbox{\hyperlink{_render_texture_polygon_8cpp}{Render\+Texture\+Polygon.\+cpp}}\end{DoxyCompactItemize}

@@ -2,16 +2,27 @@
 \label{class_collision_manager}\index{Collision\+Manager@{Collision\+Manager}}
 
 
-衝突マネージャークラス  
+衝突マネージャー\+Class  
 
 
 
 
 {\ttfamily \#include $<$Collision\+Manager.\+h$>$}
 
+
+
+Collision\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_collision_manager__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{class_collision_manager_a0591bf9f6fc5bfbd9041106c5297ef83}{set\+Ground}} (\mbox{\hyperlink{class_mesh_plane_polygon}{Mesh\+Plane\+Polygon}} $\ast$ground\+\_\+polygon)
+\begin{DoxyCompactList}\small\item\em 地面ポリゴン設定関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_collision_manager_a2c5770b90b7a46a5674df008a7a57145}{Init}} ()
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_collision_manager_abfa4b87f3ce102f0d173e112e7963f09}{Uninit}} ()
@@ -25,9 +36,7 @@ void \mbox{\hyperlink{class_collision_manager_a42be7a26321110f5daaf1828da32f667}
 void \mbox{\hyperlink{class_collision_manager_af9c2ce87e0189cdd1256c83decc64673}{Overwrite\+Array\+Collision\+Base}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$game\+\_\+object, \mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$new\+\_\+collision)
 \begin{DoxyCompactList}\small\item\em 衝突基底クラスの上書き関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_collision_manager_a34318163f4256cebc7aefb95fc475030}{Release\+Collision\+Base\+From\+Array}} (\mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$collision)
-\begin{DoxyCompactList}\small\item\em 衝突基底クラスの解放関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_collision_manager_a63ce6003d8d042085d7b388a4cfa0666}{Set\+Ground}} (\mbox{\hyperlink{class_mesh_plane_polygon}{Mesh\+Plane\+Polygon}} $\ast$ground\+\_\+polygon)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 衝突基底クラスの解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的公開変数類}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,13 +51,11 @@ void \mbox{\hyperlink{class_collision_manager_a351353ddde07f2ff4f6642c8e1fc4ede}
 \begin{DoxyCompactList}\small\item\em 解放待ち配列の中身を解放関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_collision_manager_a67c1ebc4d4a19e06122f11c3eeec89ec}{Collision\+Determination}} ()
 \begin{DoxyCompactList}\small\item\em 衝突判定関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_collision_manager_a25dbc14dbc709a6bc2dc4424e3965dbe}{Old\+Collision\+Determination}} ()
-\begin{DoxyCompactList}\small\item\em 古い衝突判定関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_collision_manager_a1d67f4076eb71e191db5cff4e5abe3b0}{Collision\+Ground}} ()
 \begin{DoxyCompactList}\small\item\em 地面との衝突判定関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_collision_manager_ab7a212529ce17392d2ca120153318090}{Actual\+Calculation}} (\mbox{\hyperlink{class_collision_objects}{Collision\+Objects}} $\ast$collision\+\_\+objects0, \mbox{\hyperlink{class_collision_objects}{Collision\+Objects}} $\ast$collision\+\_\+objects1)
+void \mbox{\hyperlink{class_collision_manager_afe96885d766cf78376c5a8f929ab3c39}{Actual\+Calculation}} (\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$collision\+\_\+object0, \mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$collision\+\_\+object1)
 \begin{DoxyCompactList}\small\item\em 実際の計算関数 \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_collision_manager_a87f64affda1906cd6eee3d177ca25045}{Sort\+Collision\+Calculation}} (\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$collision\+\_\+object0, \mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$collision\+\_\+object1)
+bool \mbox{\hyperlink{class_collision_manager_a0b3ce179f879bfcfb1c6c51a49fd8a79}{Sort\+Collision\+Calculation}} (\mbox{\hyperlink{class_collision_information}{Collision\+Information}} $\ast$information0, \mbox{\hyperlink{class_collision_information}{Collision\+Information}} $\ast$information1, \mbox{\hyperlink{class_collision_object_1_1_shape}{Collision\+Object\+::\+Shape}} $\ast$collision\+\_\+shape0, \mbox{\hyperlink{class_collision_object_1_1_shape}{Collision\+Object\+::\+Shape}} $\ast$collision\+\_\+shape1)
 \begin{DoxyCompactList}\small\item\em 衝突計算振り分け関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_collision_manager_a4da1241f3905c3855b31d7e20ceed5a1}{Debug\+Display}} ()
 \begin{DoxyCompactList}\small\item\em Debug表示関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -61,43 +68,49 @@ void \mbox{\hyperlink{class_collision_manager_a4da1241f3905c3855b31d7e20ceed5a1}
 \begin{DoxyCompactList}\small\item\em 追加待ち配列 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$, \mbox{\hyperlink{class_collision_manager_addbc64e1fa0b01f3be07c897887f44ec}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_collision_manager_a077c3b33557c56afef69c69698fc76e0}{await\+\_\+release\+\_\+}}
 \begin{DoxyCompactList}\small\item\em 解放待ち配列 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_mesh_plane_polygon}{Mesh\+Plane\+Polygon}} $\ast$ \mbox{\hyperlink{class_collision_manager_ab080264a45322bec38189279428d44cb}{ground\+\_\+polygon\+\_\+}}
-\begin{DoxyCompactList}\small\item\em 地面ポリゴン \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ \mbox{\hyperlink{class_collision_objects}{Collision\+Objects}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_collision_manager_aa7e8919f4e8af9764106a26a0cfcf6a7}{liner\+\_\+octree\+\_\+}} = nullptr
+\mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$ \mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_collision_manager_aaaf833204e8ac7f3d649801abb95ecf5}{liner\+\_\+octree\+\_\+}} = nullptr
 \begin{DoxyCompactList}\small\item\em 8分木 \end{DoxyCompactList}\item 
-std\+::vector$<$ \mbox{\hyperlink{class_collision_objects}{Collision\+Objects}} $\ast$ $>$ \mbox{\hyperlink{class_collision_manager_a9e3350981cdf6a6ecd6b5151bedb72ef}{collision\+\_\+objects\+\_\+list\+\_\+}}
-\item 
-D\+W\+O\+RD \mbox{\hyperlink{class_collision_manager_a6520ff69c7035e61267998885669d960}{time\+\_\+}}
-\item 
-bool \mbox{\hyperlink{class_collision_manager_a356e89f8204c643179e68d0b50758f21}{is\+\_\+octree\+\_\+}} = true
-\item 
-bool \mbox{\hyperlink{class_collision_manager_a5ba36f21dfb636d6b2c8b84bb07560ad}{is\+\_\+pair\+\_\+check\+\_\+}} = true
-\end{DoxyCompactItemize}
+std\+::vector$<$ \mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$ $>$ \mbox{\hyperlink{class_collision_manager_a11b347344cfec378a0e752b4720e16b1}{collision\+\_\+objects\+\_\+list\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 衝突リスト \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mesh_plane_polygon}{Mesh\+Plane\+Polygon}} $\ast$ \mbox{\hyperlink{class_collision_manager_ab080264a45322bec38189279428d44cb}{ground\+\_\+polygon\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 地面ポリゴン \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
-衝突マネージャークラス 
+衝突マネージャー\+Class 
 
-登録されている衝突基底クラスを管理するクラス 
+登録されている衝突基底クラスを管理する\+Class 
 
- Collision\+Manager.\+h の 41 行目に定義があります。
+ Collision\+Manager.\+h の 35 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_collision_manager_ab7a212529ce17392d2ca120153318090}\label{class_collision_manager_ab7a212529ce17392d2ca120153318090}} 
+\mbox{\Hypertarget{class_collision_manager_afe96885d766cf78376c5a8f929ab3c39}\label{class_collision_manager_afe96885d766cf78376c5a8f929ab3c39}} 
 \index{Collision\+Manager@{Collision\+Manager}!Actual\+Calculation@{Actual\+Calculation}}
 \index{Actual\+Calculation@{Actual\+Calculation}!Collision\+Manager@{Collision\+Manager}}
 \subsubsection{\texorpdfstring{Actual\+Calculation()}{ActualCalculation()}}
-{\footnotesize\ttfamily void Collision\+Manager\+::\+Actual\+Calculation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collision_objects}{Collision\+Objects}} $\ast$}]{collision\+\_\+objects0,  }\item[{\mbox{\hyperlink{class_collision_objects}{Collision\+Objects}} $\ast$}]{collision\+\_\+objects1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Collision\+Manager\+::\+Actual\+Calculation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$}]{collision\+\_\+object0,  }\item[{\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$}]{collision\+\_\+object1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 実際の計算関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$collision\+\_\+object0} & 衝突オブジェクト0 \\
+\hline
+{\em $\ast$collision\+\_\+object1} & 衝突オブジェクト1 \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 469 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Manager.\+cpp の 319 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_a42be7a26321110f5daaf1828da32f667}\label{class_collision_manager_a42be7a26321110f5daaf1828da32f667}} 
 \index{Collision\+Manager@{Collision\+Manager}!Add\+Collision\+Base\+To\+Array@{Add\+Collision\+Base\+To\+Array}}
@@ -110,8 +123,18 @@ bool \mbox{\hyperlink{class_collision_manager_a5ba36f21dfb636d6b2c8b84bb07560ad}
 衝突基底クラスの追加関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$collision} & 衝突基底クラス \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 190 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Manager.\+cpp の 163 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_a53e468bb8624f84a5c65c9779781033f}\label{class_collision_manager_a53e468bb8624f84a5c65c9779781033f}} 
 \index{Collision\+Manager@{Collision\+Manager}!Add\+Contents\+Of\+Await\+Add\+Array@{Add\+Contents\+Of\+Await\+Add\+Array}}
@@ -124,8 +147,18 @@ bool \mbox{\hyperlink{class_collision_manager_a5ba36f21dfb636d6b2c8b84bb07560ad}
 追加待ち配列の中身を追加関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 267 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Manager.\+cpp の 223 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_a67c1ebc4d4a19e06122f11c3eeec89ec}\label{class_collision_manager_a67c1ebc4d4a19e06122f11c3eeec89ec}} 
 \index{Collision\+Manager@{Collision\+Manager}!Collision\+Determination@{Collision\+Determination}}
@@ -138,8 +171,18 @@ bool \mbox{\hyperlink{class_collision_manager_a5ba36f21dfb636d6b2c8b84bb07560ad}
 衝突判定関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 319 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Manager.\+cpp の 269 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_a1d67f4076eb71e191db5cff4e5abe3b0}\label{class_collision_manager_a1d67f4076eb71e191db5cff4e5abe3b0}} 
 \index{Collision\+Manager@{Collision\+Manager}!Collision\+Ground@{Collision\+Ground}}
@@ -152,8 +195,18 @@ bool \mbox{\hyperlink{class_collision_manager_a5ba36f21dfb636d6b2c8b84bb07560ad}
 地面との衝突判定関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 435 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Manager.\+cpp の 293 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_a4da1241f3905c3855b31d7e20ceed5a1}\label{class_collision_manager_a4da1241f3905c3855b31d7e20ceed5a1}} 
 \index{Collision\+Manager@{Collision\+Manager}!Debug\+Display@{Debug\+Display}}
@@ -166,9 +219,15 @@ bool \mbox{\hyperlink{class_collision_manager_a5ba36f21dfb636d6b2c8b84bb07560ad}
 Debug表示関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 930 行目に定義があります。
-
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 \mbox{\Hypertarget{class_collision_manager_a2c5770b90b7a46a5674df008a7a57145}\label{class_collision_manager_a2c5770b90b7a46a5674df008a7a57145}} 
 \index{Collision\+Manager@{Collision\+Manager}!Init@{Init}}
 \index{Init@{Init}!Collision\+Manager@{Collision\+Manager}}
@@ -180,22 +239,18 @@ Debug表示関数
 初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 33 行目に定義があります。
-
-\mbox{\Hypertarget{class_collision_manager_a25dbc14dbc709a6bc2dc4424e3965dbe}\label{class_collision_manager_a25dbc14dbc709a6bc2dc4424e3965dbe}} 
-\index{Collision\+Manager@{Collision\+Manager}!Old\+Collision\+Determination@{Old\+Collision\+Determination}}
-\index{Old\+Collision\+Determination@{Old\+Collision\+Determination}!Collision\+Manager@{Collision\+Manager}}
-\subsubsection{\texorpdfstring{Old\+Collision\+Determination()}{OldCollisionDetermination()}}
-{\footnotesize\ttfamily void Collision\+Manager\+::\+Old\+Collision\+Determination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-古い衝突判定関数 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
-
- Collision\+Manager.\+cpp の 359 行目に定義があります。
+ Collision\+Manager.\+cpp の 34 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_af9c2ce87e0189cdd1256c83decc64673}\label{class_collision_manager_af9c2ce87e0189cdd1256c83decc64673}} 
 \index{Collision\+Manager@{Collision\+Manager}!Overwrite\+Array\+Collision\+Base@{Overwrite\+Array\+Collision\+Base}}
@@ -208,8 +263,20 @@ Debug表示関数
 衝突基底クラスの上書き関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$game\+\_\+object} & ゲームオブジェクト \\
+\hline
+{\em $\ast$new\+\_\+collision} & 新規衝突基底クラス \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 201 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Manager.\+cpp の 171 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_a34318163f4256cebc7aefb95fc475030}\label{class_collision_manager_a34318163f4256cebc7aefb95fc475030}} 
 \index{Collision\+Manager@{Collision\+Manager}!Release\+Collision\+Base\+From\+Array@{Release\+Collision\+Base\+From\+Array}}
@@ -222,8 +289,18 @@ Debug表示関数
 衝突基底クラスの解放関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$collision} & 衝突基底クラス \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 238 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Manager.\+cpp の 205 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_a351353ddde07f2ff4f6642c8e1fc4ede}\label{class_collision_manager_a351353ddde07f2ff4f6642c8e1fc4ede}} 
 \index{Collision\+Manager@{Collision\+Manager}!Release\+Contents\+Of\+Await\+Release\+Array@{Release\+Contents\+Of\+Await\+Release\+Array}}
@@ -236,32 +313,72 @@ Debug表示関数
 解放待ち配列の中身を解放関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 298 行目に定義があります。
-
-\mbox{\Hypertarget{class_collision_manager_a63ce6003d8d042085d7b388a4cfa0666}\label{class_collision_manager_a63ce6003d8d042085d7b388a4cfa0666}} 
-\index{Collision\+Manager@{Collision\+Manager}!Set\+Ground@{Set\+Ground}}
-\index{Set\+Ground@{Set\+Ground}!Collision\+Manager@{Collision\+Manager}}
-\subsubsection{\texorpdfstring{Set\+Ground()}{SetGround()}}
-{\footnotesize\ttfamily void Collision\+Manager\+::\+Set\+Ground (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mesh_plane_polygon}{Mesh\+Plane\+Polygon}} $\ast$}]{ground\+\_\+polygon }\end{DoxyParamCaption})}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Collision\+Manager.\+cpp の 251 行目に定義があります。
 
- Collision\+Manager.\+cpp の 257 行目に定義があります。
+\mbox{\Hypertarget{class_collision_manager_a0591bf9f6fc5bfbd9041106c5297ef83}\label{class_collision_manager_a0591bf9f6fc5bfbd9041106c5297ef83}} 
+\index{Collision\+Manager@{Collision\+Manager}!set\+Ground@{set\+Ground}}
+\index{set\+Ground@{set\+Ground}!Collision\+Manager@{Collision\+Manager}}
+\subsubsection{\texorpdfstring{set\+Ground()}{setGround()}}
+{\footnotesize\ttfamily void Collision\+Manager\+::set\+Ground (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mesh_plane_polygon}{Mesh\+Plane\+Polygon}} $\ast$}]{ground\+\_\+polygon }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_collision_manager_a87f64affda1906cd6eee3d177ca25045}\label{class_collision_manager_a87f64affda1906cd6eee3d177ca25045}} 
+
+
+地面ポリゴン設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$ground\+\_\+polygon} & 地面ポリゴン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Manager.\+cpp の 24 行目に定義があります。
+
+\mbox{\Hypertarget{class_collision_manager_a0b3ce179f879bfcfb1c6c51a49fd8a79}\label{class_collision_manager_a0b3ce179f879bfcfb1c6c51a49fd8a79}} 
 \index{Collision\+Manager@{Collision\+Manager}!Sort\+Collision\+Calculation@{Sort\+Collision\+Calculation}}
 \index{Sort\+Collision\+Calculation@{Sort\+Collision\+Calculation}!Collision\+Manager@{Collision\+Manager}}
 \subsubsection{\texorpdfstring{Sort\+Collision\+Calculation()}{SortCollisionCalculation()}}
-{\footnotesize\ttfamily bool Collision\+Manager\+::\+Sort\+Collision\+Calculation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$}]{collision\+\_\+object0,  }\item[{\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$}]{collision\+\_\+object1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily bool Collision\+Manager\+::\+Sort\+Collision\+Calculation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collision_information}{Collision\+Information}} $\ast$}]{information0,  }\item[{\mbox{\hyperlink{class_collision_information}{Collision\+Information}} $\ast$}]{information1,  }\item[{\mbox{\hyperlink{class_collision_object_1_1_shape}{Collision\+Object\+::\+Shape}} $\ast$}]{collision\+\_\+shape0,  }\item[{\mbox{\hyperlink{class_collision_object_1_1_shape}{Collision\+Object\+::\+Shape}} $\ast$}]{collision\+\_\+shape1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 衝突計算振り分け関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$information0} & 衝突情報0 \\
+\hline
+{\em $\ast$information1} & 衝突情報1 \\
+\hline
+{\em $\ast$collision\+\_\+shape0} & 衝突形状0 \\
+\hline
+{\em $\ast$collision\+\_\+shape1} & 衝突形状1 \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 526 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Manager.\+cpp の 356 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_abfa4b87f3ce102f0d173e112e7963f09}\label{class_collision_manager_abfa4b87f3ce102f0d173e112e7963f09}} 
 \index{Collision\+Manager@{Collision\+Manager}!Uninit@{Uninit}}
@@ -274,8 +391,18 @@ Debug表示関数
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 51 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Manager.\+cpp の 49 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_a33ce56b5a6f68d71b0f2bf733413dddb}\label{class_collision_manager_a33ce56b5a6f68d71b0f2bf733413dddb}} 
 \index{Collision\+Manager@{Collision\+Manager}!Uninit\+When\+Change\+Scene@{Uninit\+When\+Change\+Scene}}
@@ -288,8 +415,18 @@ Debug表示関数
 シーン変更時の終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 86 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Manager.\+cpp の 81 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_a23c21d077dbfd7ca86e7c0649d775dfc}\label{class_collision_manager_a23c21d077dbfd7ca86e7c0649d775dfc}} 
 \index{Collision\+Manager@{Collision\+Manager}!Update@{Update}}
@@ -302,8 +439,18 @@ Debug表示関数
 更新関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Collision\+Manager.\+cpp の 120 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Manager.\+cpp の 112 行目に定義があります。
 
 
 
@@ -320,7 +467,7 @@ Debug表示関数
 
 
 
- Collision\+Manager.\+h の 54 行目に定義があります。
+ Collision\+Manager.\+h の 48 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_addbc64e1fa0b01f3be07c897887f44ec}\label{class_collision_manager_addbc64e1fa0b01f3be07c897887f44ec}} 
 \index{Collision\+Manager@{Collision\+Manager}!A\+R\+R\+A\+Y\+\_\+\+N\+UM@{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}
@@ -334,7 +481,7 @@ Debug表示関数
 
 
 
- Collision\+Manager.\+h の 47 行目に定義があります。
+ Collision\+Manager.\+h の 41 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_aca55a8f7b3f67f58b5455cf1ac17fc8b}\label{class_collision_manager_aca55a8f7b3f67f58b5455cf1ac17fc8b}} 
 \index{Collision\+Manager@{Collision\+Manager}!await\+\_\+add\+\_\+@{await\+\_\+add\+\_\+}}
@@ -348,7 +495,7 @@ Debug表示関数
 
 
 
- Collision\+Manager.\+h の 55 行目に定義があります。
+ Collision\+Manager.\+h の 49 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_a077c3b33557c56afef69c69698fc76e0}\label{class_collision_manager_a077c3b33557c56afef69c69698fc76e0}} 
 \index{Collision\+Manager@{Collision\+Manager}!await\+\_\+release\+\_\+@{await\+\_\+release\+\_\+}}
@@ -362,17 +509,21 @@ Debug表示関数
 
 
 
- Collision\+Manager.\+h の 56 行目に定義があります。
+ Collision\+Manager.\+h の 50 行目に定義があります。
 
-\mbox{\Hypertarget{class_collision_manager_a9e3350981cdf6a6ecd6b5151bedb72ef}\label{class_collision_manager_a9e3350981cdf6a6ecd6b5151bedb72ef}} 
+\mbox{\Hypertarget{class_collision_manager_a11b347344cfec378a0e752b4720e16b1}\label{class_collision_manager_a11b347344cfec378a0e752b4720e16b1}} 
 \index{Collision\+Manager@{Collision\+Manager}!collision\+\_\+objects\+\_\+list\+\_\+@{collision\+\_\+objects\+\_\+list\+\_\+}}
 \index{collision\+\_\+objects\+\_\+list\+\_\+@{collision\+\_\+objects\+\_\+list\+\_\+}!Collision\+Manager@{Collision\+Manager}}
 \subsubsection{\texorpdfstring{collision\+\_\+objects\+\_\+list\+\_\+}{collision\_objects\_list\_}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_collision_objects}{Collision\+Objects}}$\ast$$>$ Collision\+Manager\+::collision\+\_\+objects\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_collision_object}{Collision\+Object}}$\ast$$>$ Collision\+Manager\+::collision\+\_\+objects\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Collision\+Manager.\+h の 61 行目に定義があります。
+衝突リスト 
+
+
+
+ Collision\+Manager.\+h の 52 行目に定義があります。
 
 \mbox{\Hypertarget{class_collision_manager_ab080264a45322bec38189279428d44cb}\label{class_collision_manager_ab080264a45322bec38189279428d44cb}} 
 \index{Collision\+Manager@{Collision\+Manager}!ground\+\_\+polygon\+\_\+@{ground\+\_\+polygon\+\_\+}}
@@ -386,33 +537,13 @@ Debug表示関数
 
 
 
- Collision\+Manager.\+h の 58 行目に定義があります。
+ Collision\+Manager.\+h の 53 行目に定義があります。
 
-\mbox{\Hypertarget{class_collision_manager_a356e89f8204c643179e68d0b50758f21}\label{class_collision_manager_a356e89f8204c643179e68d0b50758f21}} 
-\index{Collision\+Manager@{Collision\+Manager}!is\+\_\+octree\+\_\+@{is\+\_\+octree\+\_\+}}
-\index{is\+\_\+octree\+\_\+@{is\+\_\+octree\+\_\+}!Collision\+Manager@{Collision\+Manager}}
-\subsubsection{\texorpdfstring{is\+\_\+octree\+\_\+}{is\_octree\_}}
-{\footnotesize\ttfamily bool Collision\+Manager\+::is\+\_\+octree\+\_\+ = true\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Collision\+Manager.\+h の 65 行目に定義があります。
-
-\mbox{\Hypertarget{class_collision_manager_a5ba36f21dfb636d6b2c8b84bb07560ad}\label{class_collision_manager_a5ba36f21dfb636d6b2c8b84bb07560ad}} 
-\index{Collision\+Manager@{Collision\+Manager}!is\+\_\+pair\+\_\+check\+\_\+@{is\+\_\+pair\+\_\+check\+\_\+}}
-\index{is\+\_\+pair\+\_\+check\+\_\+@{is\+\_\+pair\+\_\+check\+\_\+}!Collision\+Manager@{Collision\+Manager}}
-\subsubsection{\texorpdfstring{is\+\_\+pair\+\_\+check\+\_\+}{is\_pair\_check\_}}
-{\footnotesize\ttfamily bool Collision\+Manager\+::is\+\_\+pair\+\_\+check\+\_\+ = true\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Collision\+Manager.\+h の 66 行目に定義があります。
-
-\mbox{\Hypertarget{class_collision_manager_aa7e8919f4e8af9764106a26a0cfcf6a7}\label{class_collision_manager_aa7e8919f4e8af9764106a26a0cfcf6a7}} 
+\mbox{\Hypertarget{class_collision_manager_aaaf833204e8ac7f3d649801abb95ecf5}\label{class_collision_manager_aaaf833204e8ac7f3d649801abb95ecf5}} 
 \index{Collision\+Manager@{Collision\+Manager}!liner\+\_\+octree\+\_\+@{liner\+\_\+octree\+\_\+}}
 \index{liner\+\_\+octree\+\_\+@{liner\+\_\+octree\+\_\+}!Collision\+Manager@{Collision\+Manager}}
 \subsubsection{\texorpdfstring{liner\+\_\+octree\+\_\+}{liner\_octree\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$\mbox{\hyperlink{class_collision_objects}{Collision\+Objects}}$\ast$$>$$\ast$ Collision\+Manager\+::liner\+\_\+octree\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_liner_octree}{Liner\+Octree}}$<$\mbox{\hyperlink{class_collision_object}{Collision\+Object}}$\ast$$>$$\ast$ Collision\+Manager\+::liner\+\_\+octree\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -420,21 +551,11 @@ Debug表示関数
 
 
 
- Collision\+Manager.\+h の 60 行目に定義があります。
-
-\mbox{\Hypertarget{class_collision_manager_a6520ff69c7035e61267998885669d960}\label{class_collision_manager_a6520ff69c7035e61267998885669d960}} 
-\index{Collision\+Manager@{Collision\+Manager}!time\+\_\+@{time\+\_\+}}
-\index{time\+\_\+@{time\+\_\+}!Collision\+Manager@{Collision\+Manager}}
-\subsubsection{\texorpdfstring{time\+\_\+}{time\_}}
-{\footnotesize\ttfamily D\+W\+O\+RD Collision\+Manager\+::time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Collision\+Manager.\+h の 64 行目に定義があります。
+ Collision\+Manager.\+h の 51 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Collision\+Manager/\mbox{\hyperlink{_collision_manager_8h}{Collision\+Manager.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Collision\+Manager/\mbox{\hyperlink{_collision_manager_8cpp}{Collision\+Manager.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Manager/\mbox{\hyperlink{_collision_manager_8h}{Collision\+Manager.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Manager/\+Source/\mbox{\hyperlink{_collision_manager_8cpp}{Collision\+Manager.\+cpp}}\end{DoxyCompactItemize}

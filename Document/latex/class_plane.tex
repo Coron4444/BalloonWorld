@@ -11,26 +11,33 @@
 
 
 
-Plane の継承関係図\nopagebreak
+Plane 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=184pt]{class_plane__inherit__graph}
+\includegraphics[width=253pt]{class_plane__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_plane_a8c279383bdaeb247e68c557960eb0c0c}{getp\+Normal}} ()
-\begin{DoxyCompactList}\small\item\em 法線ポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 法線取得関数 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_plane_a66c47e8798df166c458ca215ed115684}{get\+AdjustmetD}} ()
 \begin{DoxyCompactList}\small\item\em D成分取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_plane_acac0d9c003e0ab10d07b146c3566a0c7}{Plane}} ()
-\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane_a69abd86051c880dcb44b249ad10c4436}{$\sim$\+Plane}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_plane_a2182719af8f880a3871be4cfc33a969b}{Init}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} normal, \mbox{\hyperlink{class_vector3_d}{Vector3D}} point)
 \begin{DoxyCompactList}\small\item\em 初期化関数(法線と1点) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_plane_ae50b8a5b6e6e7db1b0bdd5c6df515848}{Init}} (\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} point0, \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} point1, \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} point2)
-\begin{DoxyCompactList}\small\item\em 初期化関数(3点) \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_plane_a951041208b47c022ee8955a31baf3507}{Init}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} point0, \mbox{\hyperlink{class_vector3_d}{Vector3D}} point1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} point2)
+\begin{DoxyCompactList}\small\item\em 初期化関数(3点) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plane_a1dd55b527bae8194b21bf2009f53afb0}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_plane_a8df0a1a800b32aa21a2a22c7cb52aa86}{Calculation\+Min\+And\+Max}} () override
+\begin{DoxyCompactList}\small\item\em 最小値と最大値算出関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,20 +53,20 @@ float \mbox{\hyperlink{class_plane_ab43e3263bd879ea710936d85cacb6006}{adjustmet\
 
 平面の\+Class 
 
- Plane.\+h の 26 行目に定義があります。
+ Plane.\+h の 24 行目に定義があります。
 
 
 
 \subsection{構築子と解体子}
-\mbox{\Hypertarget{class_plane_acac0d9c003e0ab10d07b146c3566a0c7}\label{class_plane_acac0d9c003e0ab10d07b146c3566a0c7}} 
-\index{Plane@{Plane}!Plane@{Plane}}
-\index{Plane@{Plane}!Plane@{Plane}}
-\subsubsection{\texorpdfstring{Plane()}{Plane()}}
-{\footnotesize\ttfamily Plane\+::\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_plane_a69abd86051c880dcb44b249ad10c4436}\label{class_plane_a69abd86051c880dcb44b249ad10c4436}} 
+\index{Plane@{Plane}!````~Plane@{$\sim$\+Plane}}
+\index{````~Plane@{$\sim$\+Plane}!Plane@{Plane}}
+\subsubsection{\texorpdfstring{$\sim$\+Plane()}{~Plane()}}
+{\footnotesize\ttfamily Plane\+::$\sim$\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-コンストラクタ 
+デストラクタ 
 
 
 \begin{DoxyParams}{引数}
@@ -73,6 +80,34 @@ float \mbox{\hyperlink{class_plane_ab43e3263bd879ea710936d85cacb6006}{adjustmet\
 
 
 \subsection{関数詳解}
+\mbox{\Hypertarget{class_plane_a8df0a1a800b32aa21a2a22c7cb52aa86}\label{class_plane_a8df0a1a800b32aa21a2a22c7cb52aa86}} 
+\index{Plane@{Plane}!Calculation\+Min\+And\+Max@{Calculation\+Min\+And\+Max}}
+\index{Calculation\+Min\+And\+Max@{Calculation\+Min\+And\+Max}!Plane@{Plane}}
+\subsubsection{\texorpdfstring{Calculation\+Min\+And\+Max()}{CalculationMinAndMax()}}
+{\footnotesize\ttfamily void Plane\+::\+Calculation\+Min\+And\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+最小値と最大値算出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_shape_base_ad227c2f83038d7c05bc6b1d510cb4000}{Collision\+Shape\+Base}}を実装しています。
+
+
+
+ Plane.\+cpp の 77 行目に定義があります。
+
 \mbox{\Hypertarget{class_plane_a66c47e8798df166c458ca215ed115684}\label{class_plane_a66c47e8798df166c458ca215ed115684}} 
 \index{Plane@{Plane}!get\+AdjustmetD@{get\+AdjustmetD}}
 \index{get\+AdjustmetD@{get\+AdjustmetD}!Plane@{Plane}}
@@ -105,7 +140,7 @@ D成分取得関数
 
 
 
-法線ポインタ取得関数 
+法線取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -114,7 +149,7 @@ D成分取得関数
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Vector3\+D$\ast$} & 法線ポインタ \\
+{\em Vector3\+D$\ast$} & 法線 \\
 \hline
 \end{DoxyRetVals}
 
@@ -132,10 +167,10 @@ D成分取得関数
 初期化関数(法線と1点) 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em normal} & 法線 \\
+\begin{DoxyParams}{引数}
+{\em normal} & 法線 \\
 \hline
-\mbox{\tt in}  & {\em point} & 点 \\
+{\em point} & 点 \\
 \hline
 \end{DoxyParams}
 
@@ -145,25 +180,25 @@ D成分取得関数
 \end{DoxyRetVals}
 
 
- Plane.\+cpp の 44 行目に定義があります。
+ Plane.\+cpp の 43 行目に定義があります。
 
-\mbox{\Hypertarget{class_plane_ae50b8a5b6e6e7db1b0bdd5c6df515848}\label{class_plane_ae50b8a5b6e6e7db1b0bdd5c6df515848}} 
+\mbox{\Hypertarget{class_plane_a951041208b47c022ee8955a31baf3507}\label{class_plane_a951041208b47c022ee8955a31baf3507}} 
 \index{Plane@{Plane}!Init@{Init}}
 \index{Init@{Init}!Plane@{Plane}}
 \subsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Plane\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}}}]{point0,  }\item[{\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}}}]{point1,  }\item[{\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}}}]{point2 }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Plane\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{point0,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{point1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{point2 }\end{DoxyParamCaption})}
 
 
 
 初期化関数(3点) 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em point0} & 点 \\
+\begin{DoxyParams}{引数}
+{\em point0} & 点 \\
 \hline
-\mbox{\tt in}  & {\em point1} & 点 \\
+{\em point1} & 点 \\
 \hline
-\mbox{\tt in}  & {\em point2} & 点 \\
+{\em point2} & 点 \\
 \hline
 \end{DoxyParams}
 
@@ -173,7 +208,35 @@ D成分取得関数
 \end{DoxyRetVals}
 
 
- Plane.\+cpp の 57 行目に定義があります。
+ Plane.\+cpp の 58 行目に定義があります。
+
+\mbox{\Hypertarget{class_plane_a1dd55b527bae8194b21bf2009f53afb0}\label{class_plane_a1dd55b527bae8194b21bf2009f53afb0}} 
+\index{Plane@{Plane}!Update@{Update}}
+\index{Update@{Update}!Plane@{Plane}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Plane\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_shape_base_a7aaa0f4de4e208f168f78e3445313929}{Collision\+Shape\+Base}}を実装しています。
+
+
+
+ Plane.\+cpp の 71 行目に定義があります。
 
 
 
@@ -190,7 +253,7 @@ D成分
 
 
 
- Plane.\+h の 33 行目に定義があります。
+ Plane.\+h の 31 行目に定義があります。
 
 \mbox{\Hypertarget{class_plane_a7ae74465500dfdd7a68fa2eb28486ae0}\label{class_plane_a7ae74465500dfdd7a68fa2eb28486ae0}} 
 \index{Plane@{Plane}!normal\+\_\+@{normal\+\_\+}}
@@ -204,11 +267,11 @@ D成分
 
 
 
- Plane.\+h の 32 行目に定義があります。
+ Plane.\+h の 30 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+Plane/\mbox{\hyperlink{_plane_8h}{Plane.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+Plane/\mbox{\hyperlink{_plane_8cpp}{Plane.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\mbox{\hyperlink{_plane_8h}{Plane.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\+Source/\mbox{\hyperlink{_plane_8cpp}{Plane.\+cpp}}\end{DoxyCompactItemize}

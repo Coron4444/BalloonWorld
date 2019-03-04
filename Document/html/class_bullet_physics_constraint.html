@@ -1,0 +1,686 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: BulletPhysicsConstraint クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_bullet_physics_constraint.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-types">非公開型</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="class_bullet_physics_constraint-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">BulletPhysicsConstraint クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>バレットフィジックス拘束Class  
+ <a href="class_bullet_physics_constraint.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_bullet_physics_constraint_8h_source.html">BulletPhysicsConstraint.h</a>&gt;</code></p>
+<div class="dynheader">
+BulletPhysicsConstraint 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_bullet_physics_constraint__coll__graph.png" border="0" usemap="#_bullet_physics_constraint_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a9b010a354abcc093e48dc66edb1e22b7"><td class="memItemLeft" align="right" valign="top">btTypedConstraint *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_constraint.html#a9b010a354abcc093e48dc66edb1e22b7">getpConstraint</a> ()</td></tr>
+<tr class="memdesc:a9b010a354abcc093e48dc66edb1e22b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">拘束取得関数  <a href="#a9b010a354abcc093e48dc66edb1e22b7">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b010a354abcc093e48dc66edb1e22b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2bcb7b7a32a5ca14210a577a613b91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bullet_physics_constraint.html#ad85080d0a6ff58365f4f6fa4c9381e24">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_constraint.html#a6d2bcb7b7a32a5ca14210a577a613b91">getType</a> ()</td></tr>
+<tr class="memdesc:a6d2bcb7b7a32a5ca14210a577a613b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイプ取得関数  <a href="#a6d2bcb7b7a32a5ca14210a577a613b91">[詳解]</a><br /></td></tr>
+<tr class="separator:a6d2bcb7b7a32a5ca14210a577a613b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb6ae98f37a54a32ef2999064733f078"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_constraint.html#aeb6ae98f37a54a32ef2999064733f078">InitPointToPoint</a> (btRigidBody *rigid_body0, btRigidBody *rigid_body1, <a class="el" href="class_vector3_d.html">Vector3D</a> *point0, <a class="el" href="class_vector3_d.html">Vector3D</a> *point1)</td></tr>
+<tr class="memdesc:aeb6ae98f37a54a32ef2999064733f078"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポイントとポイント拘束初期化関数  <a href="#aeb6ae98f37a54a32ef2999064733f078">[詳解]</a><br /></td></tr>
+<tr class="separator:aeb6ae98f37a54a32ef2999064733f078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc6efb5b423b1be8d1dfb5d1d4aee394"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_constraint.html#acc6efb5b423b1be8d1dfb5d1d4aee394">InitHinge</a> (btRigidBody *rigid_body0, btRigidBody *rigid_body1, <a class="el" href="class_vector3_d.html">Vector3D</a> *point0, <a class="el" href="class_vector3_d.html">Vector3D</a> *point1, float angle_min, float angle_max, <a class="el" href="class_vector3_d.html">Vector3D</a> *axis)</td></tr>
+<tr class="memdesc:acc6efb5b423b1be8d1dfb5d1d4aee394"><td class="mdescLeft">&#160;</td><td class="mdescRight">1つの軸を回転する拘束初期化関数  <a href="#acc6efb5b423b1be8d1dfb5d1d4aee394">[詳解]</a><br /></td></tr>
+<tr class="separator:acc6efb5b423b1be8d1dfb5d1d4aee394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779d7b52cd6c630c580e1500053c1ccb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_constraint.html#a779d7b52cd6c630c580e1500053c1ccb">InitUniversal</a> (btRigidBody *rigid_body0, btRigidBody *rigid_body1, <a class="el" href="class_vector3_d.html">Vector3D</a> *anchor, float angle_min0, float angle_min1, float angle_max0, float angle_max1, <a class="el" href="class_vector3_d.html">Vector3D</a> *axis0, <a class="el" href="class_vector3_d.html">Vector3D</a> *axis1)</td></tr>
+<tr class="memdesc:a779d7b52cd6c630c580e1500053c1ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">接続点とそれを中心とした2軸の拘束初期化関数  <a href="#a779d7b52cd6c630c580e1500053c1ccb">[詳解]</a><br /></td></tr>
+<tr class="separator:a779d7b52cd6c630c580e1500053c1ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac29d9fed9b28cc7f97a10f888c0dc12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_constraint.html#ac29d9fed9b28cc7f97a10f888c0dc12f">Release</a> ()</td></tr>
+<tr class="memdesc:ac29d9fed9b28cc7f97a10f888c0dc12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">解放関数  <a href="#ac29d9fed9b28cc7f97a10f888c0dc12f">[詳解]</a><br /></td></tr>
+<tr class="separator:ac29d9fed9b28cc7f97a10f888c0dc12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5fa02063f2b563bd01f37a2e8896554"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_constraint.html#ad5fa02063f2b563bd01f37a2e8896554">ForcedRelease</a> ()</td></tr>
+<tr class="memdesc:ad5fa02063f2b563bd01f37a2e8896554"><td class="mdescLeft">&#160;</td><td class="mdescRight">強制解放関数  <a href="#ad5fa02063f2b563bd01f37a2e8896554">[詳解]</a><br /></td></tr>
+<tr class="separator:ad5fa02063f2b563bd01f37a2e8896554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ee598adbde9eacbada40fd5d6e4942"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_constraint.html#a36ee598adbde9eacbada40fd5d6e4942">AddReferenceCounter</a> ()</td></tr>
+<tr class="memdesc:a36ee598adbde9eacbada40fd5d6e4942"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照カウンタ追加関数  <a href="#a36ee598adbde9eacbada40fd5d6e4942">[詳解]</a><br /></td></tr>
+<tr class="separator:a36ee598adbde9eacbada40fd5d6e4942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+非公開型</h2></td></tr>
+<tr class="memitem:ad85080d0a6ff58365f4f6fa4c9381e24"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_constraint.html#ad85080d0a6ff58365f4f6fa4c9381e24">Type</a> { <a class="el" href="class_bullet_physics_constraint.html#ad85080d0a6ff58365f4f6fa4c9381e24ab50339a10e1de285ac99d4c3990b8693">Type::NONE</a> = -1, 
+<a class="el" href="class_bullet_physics_constraint.html#ad85080d0a6ff58365f4f6fa4c9381e24a3593f477d0cd8e856dc7c6d621ab4eea">Type::POINT_TO_POINT</a>, 
+<a class="el" href="class_bullet_physics_constraint.html#ad85080d0a6ff58365f4f6fa4c9381e24a26a4b44a837bf97b972628509912b4a5">Type::MAX</a>
+ }</td></tr>
+<tr class="separator:ad85080d0a6ff58365f4f6fa4c9381e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:ac802be61cfbd2045affa8c5718eaa13a"><td class="memItemLeft" align="right" valign="top">btTypedConstraint *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_constraint.html#ac802be61cfbd2045affa8c5718eaa13a">constraint_</a> = nullptr</td></tr>
+<tr class="memdesc:ac802be61cfbd2045affa8c5718eaa13a"><td class="mdescLeft">&#160;</td><td class="mdescRight">拘束  <a href="#ac802be61cfbd2045affa8c5718eaa13a">[詳解]</a><br /></td></tr>
+<tr class="separator:ac802be61cfbd2045affa8c5718eaa13a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f8eee5114f4c45013d052deab208ef4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bullet_physics_constraint.html#ad85080d0a6ff58365f4f6fa4c9381e24">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_constraint.html#a7f8eee5114f4c45013d052deab208ef4">type_</a> = <a class="el" href="class_bullet_physics_constraint.html#ad85080d0a6ff58365f4f6fa4c9381e24ab50339a10e1de285ac99d4c3990b8693">Type::NONE</a></td></tr>
+<tr class="memdesc:a7f8eee5114f4c45013d052deab208ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイプ  <a href="#a7f8eee5114f4c45013d052deab208ef4">[詳解]</a><br /></td></tr>
+<tr class="separator:a7f8eee5114f4c45013d052deab208ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9fae4e261d9e36cf6540edafa37792"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_physics_constraint.html#a8d9fae4e261d9e36cf6540edafa37792">reference_counter_</a> = 0</td></tr>
+<tr class="memdesc:a8d9fae4e261d9e36cf6540edafa37792"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照カウンタ  <a href="#a8d9fae4e261d9e36cf6540edafa37792">[詳解]</a><br /></td></tr>
+<tr class="separator:a8d9fae4e261d9e36cf6540edafa37792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>バレットフィジックス拘束Class </p>
+<p>バレットフィジックスの拘束Class </p>
+
+<p class="definition"> <a class="el" href="_bullet_physics_constraint_8h_source.html">BulletPhysicsConstraint.h</a> の <a class="el" href="_bullet_physics_constraint_8h_source.html#l00029">29</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="ad85080d0a6ff58365f4f6fa4c9381e24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad85080d0a6ff58365f4f6fa4c9381e24">&#9670;&nbsp;</a></span>Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_bullet_physics_constraint.html#ad85080d0a6ff58365f4f6fa4c9381e24">BulletPhysicsConstraint::Type</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ad85080d0a6ff58365f4f6fa4c9381e24ab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad85080d0a6ff58365f4f6fa4c9381e24a3593f477d0cd8e856dc7c6d621ab4eea"></a>POINT_TO_POINT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad85080d0a6ff58365f4f6fa4c9381e24a26a4b44a837bf97b972628509912b4a5"></a>MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="_bullet_physics_constraint_8h_source.html">BulletPhysicsConstraint.h</a> の <a class="el" href="_bullet_physics_constraint_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a36ee598adbde9eacbada40fd5d6e4942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36ee598adbde9eacbada40fd5d6e4942">&#9670;&nbsp;</a></span>AddReferenceCounter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsConstraint::AddReferenceCounter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>参照カウンタ追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_constraint_8cpp_source.html">BulletPhysicsConstraint.cpp</a> の <a class="el" href="_bullet_physics_constraint_8cpp_source.html#l00101">101</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad5fa02063f2b563bd01f37a2e8896554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5fa02063f2b563bd01f37a2e8896554">&#9670;&nbsp;</a></span>ForcedRelease()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsConstraint::ForcedRelease </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>強制解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_constraint_8cpp_source.html">BulletPhysicsConstraint.cpp</a> の <a class="el" href="_bullet_physics_constraint_8cpp_source.html#l00093">93</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9b010a354abcc093e48dc66edb1e22b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b010a354abcc093e48dc66edb1e22b7">&#9670;&nbsp;</a></span>getpConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">btTypedConstraint * BulletPhysicsConstraint::getpConstraint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拘束取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">btTypedConstraint*</td><td>拘束 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_constraint_8cpp_source.html">BulletPhysicsConstraint.cpp</a> の <a class="el" href="_bullet_physics_constraint_8cpp_source.html#l00021">21</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6d2bcb7b7a32a5ca14210a577a613b91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2bcb7b7a32a5ca14210a577a613b91">&#9670;&nbsp;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bullet_physics_constraint.html#ad85080d0a6ff58365f4f6fa4c9381e24">BulletPhysicsConstraint::Type</a> BulletPhysicsConstraint::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>タイプ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Type</td><td>タイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_constraint_8cpp_source.html">BulletPhysicsConstraint.cpp</a> の <a class="el" href="_bullet_physics_constraint_8cpp_source.html#l00028">28</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acc6efb5b423b1be8d1dfb5d1d4aee394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc6efb5b423b1be8d1dfb5d1d4aee394">&#9670;&nbsp;</a></span>InitHinge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsConstraint::InitHinge </td>
+          <td>(</td>
+          <td class="paramtype">btRigidBody *&#160;</td>
+          <td class="paramname"><em>rigid_body0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">btRigidBody *&#160;</td>
+          <td class="paramname"><em>rigid_body1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td>
+          <td class="paramname"><em>point0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td>
+          <td class="paramname"><em>point1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1つの軸を回転する拘束初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*rigid_body0</td><td>剛体0 </td></tr>
+    <tr><td class="paramname">*rigid_body1</td><td>剛体1 </td></tr>
+    <tr><td class="paramname">*point0</td><td>ポイント0(ローカル座標) </td></tr>
+    <tr><td class="paramname">*point1</td><td>ポイント1(ローカル座標) </td></tr>
+    <tr><td class="paramname">angle_min</td><td>最小角度1(1.0f~0.0fで1.0fに近いほど自由が利く) </td></tr>
+    <tr><td class="paramname">angle_max</td><td>最大角度0(1.0f~0.0fで1.0fに近いほど自由が利く) </td></tr>
+    <tr><td class="paramname">*axis</td><td>回転軸 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_constraint_8cpp_source.html">BulletPhysicsConstraint.cpp</a> の <a class="el" href="_bullet_physics_constraint_8cpp_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aeb6ae98f37a54a32ef2999064733f078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb6ae98f37a54a32ef2999064733f078">&#9670;&nbsp;</a></span>InitPointToPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsConstraint::InitPointToPoint </td>
+          <td>(</td>
+          <td class="paramtype">btRigidBody *&#160;</td>
+          <td class="paramname"><em>rigid_body0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">btRigidBody *&#160;</td>
+          <td class="paramname"><em>rigid_body1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td>
+          <td class="paramname"><em>point0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td>
+          <td class="paramname"><em>point1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ポイントとポイント拘束初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*rigid_body0</td><td>剛体0 </td></tr>
+    <tr><td class="paramname">*rigid_body1</td><td>剛体1 </td></tr>
+    <tr><td class="paramname">*point0</td><td>ポイント0(ローカル座標) </td></tr>
+    <tr><td class="paramname">*point1</td><td>ポイント1(ローカル座標) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_constraint_8cpp_source.html">BulletPhysicsConstraint.cpp</a> の <a class="el" href="_bullet_physics_constraint_8cpp_source.html#l00038">38</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a779d7b52cd6c630c580e1500053c1ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a779d7b52cd6c630c580e1500053c1ccb">&#9670;&nbsp;</a></span>InitUniversal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsConstraint::InitUniversal </td>
+          <td>(</td>
+          <td class="paramtype">btRigidBody *&#160;</td>
+          <td class="paramname"><em>rigid_body0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">btRigidBody *&#160;</td>
+          <td class="paramname"><em>rigid_body1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td>
+          <td class="paramname"><em>anchor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle_min0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle_min1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle_max0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle_max1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td>
+          <td class="paramname"><em>axis0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td>
+          <td class="paramname"><em>axis1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>接続点とそれを中心とした2軸の拘束初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*rigid_body0</td><td>剛体0 </td></tr>
+    <tr><td class="paramname">*rigid_body1</td><td>剛体1 </td></tr>
+    <tr><td class="paramname">*anchor</td><td>接続点(ワールド座標) </td></tr>
+    <tr><td class="paramname">angle_min0</td><td>最小角度0(1.0f~0.0fで1.0fに近いほど自由が利く) </td></tr>
+    <tr><td class="paramname">angle_min1</td><td>最小角度1(1.0f~0.0fで1.0fに近いほど自由が利く) </td></tr>
+    <tr><td class="paramname">angle_max0</td><td>最大角度0(1.0f~0.0fで1.0fに近いほど自由が利く) </td></tr>
+    <tr><td class="paramname">angle_max1</td><td>最大角度1(1.0f~0.0fで1.0fに近いほど自由が利く) </td></tr>
+    <tr><td class="paramname">*axis0</td><td>回転軸0 </td></tr>
+    <tr><td class="paramname">*axis1</td><td>回転軸1 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_constraint_8cpp_source.html">BulletPhysicsConstraint.cpp</a> の <a class="el" href="_bullet_physics_constraint_8cpp_source.html#l00064">64</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac29d9fed9b28cc7f97a10f888c0dc12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac29d9fed9b28cc7f97a10f888c0dc12f">&#9670;&nbsp;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletPhysicsConstraint::Release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_bullet_physics_constraint_8cpp_source.html">BulletPhysicsConstraint.cpp</a> の <a class="el" href="_bullet_physics_constraint_8cpp_source.html#l00081">81</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="ac802be61cfbd2045affa8c5718eaa13a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac802be61cfbd2045affa8c5718eaa13a">&#9670;&nbsp;</a></span>constraint_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">btTypedConstraint* BulletPhysicsConstraint::constraint_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>拘束 </p>
+
+<p class="definition"> <a class="el" href="_bullet_physics_constraint_8h_source.html">BulletPhysicsConstraint.h</a> の <a class="el" href="_bullet_physics_constraint_8h_source.html#l00047">47</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8d9fae4e261d9e36cf6540edafa37792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d9fae4e261d9e36cf6540edafa37792">&#9670;&nbsp;</a></span>reference_counter_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BulletPhysicsConstraint::reference_counter_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>参照カウンタ </p>
+
+<p class="definition"> <a class="el" href="_bullet_physics_constraint_8h_source.html">BulletPhysicsConstraint.h</a> の <a class="el" href="_bullet_physics_constraint_8h_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7f8eee5114f4c45013d052deab208ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f8eee5114f4c45013d052deab208ef4">&#9670;&nbsp;</a></span>type_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bullet_physics_constraint.html#ad85080d0a6ff58365f4f6fa4c9381e24">Type</a> BulletPhysicsConstraint::type_ = <a class="el" href="class_bullet_physics_constraint.html#ad85080d0a6ff58365f4f6fa4c9381e24ab50339a10e1de285ac99d4c3990b8693">Type::NONE</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>タイプ </p>
+
+<p class="definition"> <a class="el" href="_bullet_physics_constraint_8h_source.html">BulletPhysicsConstraint.h</a> の <a class="el" href="_bullet_physics_constraint_8h_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Collision/BulletPhysics/<a class="el" href="_bullet_physics_constraint_8h_source.html">BulletPhysicsConstraint.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Collision/BulletPhysics/Source/<a class="el" href="_bullet_physics_constraint_8cpp_source.html">BulletPhysicsConstraint.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_bullet_physics_constraint.html">BulletPhysicsConstraint</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+\hypertarget{class_vertex_shader_animated_default}{}\section{Vertex\+Shader\+Animated\+Default クラス}
+\label{class_vertex_shader_animated_default}\index{Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}}
+
+
+アニメーション付きデフォルト頂点シェーダー\+Class  
+
+
+
+
+{\ttfamily \#include $<$Vertex\+Shader\+Animated\+Default.\+h$>$}
+
+
+
+Vertex\+Shader\+Animated\+Default 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_vertex_shader_animated_default__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_vertex_shader_animated_default_a974cb247b42cb1c9288a9de9ed9048e9}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_shader_animated_default_a683f221e9b70d13fdb63e7b8fb15f31c}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_shader_animated_default_a43d82c0666bffa49704eda4eb1f549d3}{Object\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)
+\begin{DoxyCompactList}\small\item\em オブジェクト設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_shader_animated_default_ad19fa307106654c4e8337db832018cc6}{Mesh\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index, unsigned mesh\+\_\+index)
+\begin{DoxyCompactList}\small\item\em メッシュ設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+I\+Direct3\+D\+Vertex\+Declaration9 $\ast$ \mbox{\hyperlink{class_vertex_shader_animated_default_af09cbf7cd74f29c79d96333b7fe922db}{vertex\+\_\+declaration\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 頂点宣言 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_vertex_shader_animated_default_a5e353de337ad6ad59b3632cd3bff8605}{bone\+\_\+matrix\+\_\+}} \mbox{[}\mbox{\hyperlink{class_vertex_shader_animated_default_aa703d290c4ce5aa16f8d030fc58bceea}{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em ボーン行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const D3\+D\+V\+E\+R\+T\+E\+X\+E\+L\+E\+M\+E\+N\+T9 \mbox{\hyperlink{class_vertex_shader_animated_default_ab2b136b8350457a6113a5ffe28d359e3}{V\+E\+R\+T\+E\+X\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em 頂点宣言配列 \end{DoxyCompactList}\item 
+static const char $\ast$ \mbox{\hyperlink{class_vertex_shader_animated_default_a0728252117c1440a94a194d26e5bcce1}{P\+A\+TH}} = \char`\"{}resource/H\+L\+SL/Effect/Vertex\+Shader/Animated\+Default.\+vsh\char`\"{}
+\begin{DoxyCompactList}\small\item\em ファイルパス \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{class_vertex_shader_animated_default_aa703d290c4ce5aa16f8d030fc58bceea}{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}} = 55
+\begin{DoxyCompactList}\small\item\em 最大ボーン数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+アニメーション付きデフォルト頂点シェーダー\+Class 
+
+アニメーション付きデフォルトの頂点シェーダー\+Class 
+
+ Vertex\+Shader\+Animated\+Default.\+h の 26 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_vertex_shader_animated_default_a974cb247b42cb1c9288a9de9ed9048e9}\label{class_vertex_shader_animated_default_a974cb247b42cb1c9288a9de9ed9048e9}} 
+\index{Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}!Init@{Init}}
+\index{Init@{Init}!Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Animated\+Default\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_a4d79b358dab49c840345d74823a16840}{Vertex\+Shader\+Null}}を再実装しています。
+
+
+
+ Vertex\+Shader\+Animated\+Default.\+cpp の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_animated_default_ad19fa307106654c4e8337db832018cc6}\label{class_vertex_shader_animated_default_ad19fa307106654c4e8337db832018cc6}} 
+\index{Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}!Mesh\+Setting@{Mesh\+Setting}}
+\index{Mesh\+Setting@{Mesh\+Setting}!Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}}
+\subsubsection{\texorpdfstring{Mesh\+Setting()}{MeshSetting()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Animated\+Default\+::\+Mesh\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+メッシュ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_a7bd853b15ab81cec44f1b6a1ea70a3a9}{Vertex\+Shader\+Null}}を再実装しています。
+
+
+
+ Vertex\+Shader\+Animated\+Default.\+cpp の 95 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_animated_default_a43d82c0666bffa49704eda4eb1f549d3}\label{class_vertex_shader_animated_default_a43d82c0666bffa49704eda4eb1f549d3}} 
+\index{Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}!Object\+Setting@{Object\+Setting}}
+\index{Object\+Setting@{Object\+Setting}!Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}}
+\subsubsection{\texorpdfstring{Object\+Setting()}{ObjectSetting()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Animated\+Default\+::\+Object\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+オブジェクト設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_aae3231bb3fa5df2578ba89701867ffb3}{Vertex\+Shader\+Null}}を再実装しています。
+
+
+
+ Vertex\+Shader\+Animated\+Default.\+cpp の 75 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_animated_default_a683f221e9b70d13fdb63e7b8fb15f31c}\label{class_vertex_shader_animated_default_a683f221e9b70d13fdb63e7b8fb15f31c}} 
+\index{Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Animated\+Default\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_adf758f295d2803c6d8bd7e05e461abec}{Vertex\+Shader\+Null}}を再実装しています。
+
+
+
+ Vertex\+Shader\+Animated\+Default.\+cpp の 64 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_vertex_shader_animated_default_a5e353de337ad6ad59b3632cd3bff8605}\label{class_vertex_shader_animated_default_a5e353de337ad6ad59b3632cd3bff8605}} 
+\index{Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}!bone\+\_\+matrix\+\_\+@{bone\+\_\+matrix\+\_\+}}
+\index{bone\+\_\+matrix\+\_\+@{bone\+\_\+matrix\+\_\+}!Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}}
+\subsubsection{\texorpdfstring{bone\+\_\+matrix\+\_\+}{bone\_matrix\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Vertex\+Shader\+Animated\+Default\+::bone\+\_\+matrix\+\_\+\mbox{[}\mbox{\hyperlink{class_vertex_shader_animated_default_aa703d290c4ce5aa16f8d030fc58bceea}{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ボーン行列 
+
+
+
+ Vertex\+Shader\+Animated\+Default.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_animated_default_aa703d290c4ce5aa16f8d030fc58bceea}\label{class_vertex_shader_animated_default_aa703d290c4ce5aa16f8d030fc58bceea}} 
+\index{Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}!M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM@{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}}
+\index{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM@{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}!Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}{MAX\_BONE\_NUM}}
+{\footnotesize\ttfamily const int Vertex\+Shader\+Animated\+Default\+::\+M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM = 55\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+最大ボーン数 
+
+
+
+ Vertex\+Shader\+Animated\+Default.\+h の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_animated_default_a0728252117c1440a94a194d26e5bcce1}\label{class_vertex_shader_animated_default_a0728252117c1440a94a194d26e5bcce1}} 
+\index{Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}!P\+A\+TH@{P\+A\+TH}}
+\index{P\+A\+TH@{P\+A\+TH}!Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}}
+\subsubsection{\texorpdfstring{P\+A\+TH}{PATH}}
+{\footnotesize\ttfamily const char $\ast$ Vertex\+Shader\+Animated\+Default\+::\+P\+A\+TH = \char`\"{}resource/H\+L\+SL/Effect/Vertex\+Shader/Animated\+Default.\+vsh\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+ファイルパス 
+
+
+
+ Vertex\+Shader\+Animated\+Default.\+h の 33 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_animated_default_ab2b136b8350457a6113a5ffe28d359e3}\label{class_vertex_shader_animated_default_ab2b136b8350457a6113a5ffe28d359e3}} 
+\index{Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}!V\+E\+R\+T\+E\+X\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON@{V\+E\+R\+T\+E\+X\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}}
+\index{V\+E\+R\+T\+E\+X\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON@{V\+E\+R\+T\+E\+X\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}!Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}}
+\subsubsection{\texorpdfstring{V\+E\+R\+T\+E\+X\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}{VERTEX\_DECLARATION}}
+{\footnotesize\ttfamily const D3\+D\+V\+E\+R\+T\+E\+X\+E\+L\+E\+M\+E\+N\+T9 Vertex\+Shader\+Animated\+Default\+::\+V\+E\+R\+T\+E\+X\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}
+=
+\{
+    \{0, 0, D3DDECLTYPE\_FLOAT3, D3DDECLMETHOD\_DEFAULT, D3DDECLUSAGE\_POSITION, 0\},
+    \{0, 12, D3DDECLTYPE\_FLOAT3, D3DDECLMETHOD\_DEFAULT, D3DDECLUSAGE\_NORMAL, 0\},
+    \{0, 24, D3DDECLTYPE\_D3DCOLOR, D3DDECLMETHOD\_DEFAULT, D3DDECLUSAGE\_COLOR, 0\},
+    \{0, 28, D3DDECLTYPE\_FLOAT2, D3DDECLMETHOD\_DEFAULT, D3DDECLUSAGE\_TEXCOORD, 0\},
+    \{0, 36, D3DDECLTYPE\_FLOAT4, D3DDECLMETHOD\_DEFAULT, D3DDECLUSAGE\_BLENDWEIGHT, 0\},
+    \{0, 52, D3DDECLTYPE\_UBYTE4, D3DDECLMETHOD\_DEFAULT, D3DDECLUSAGE\_BLENDINDICES, 0\},
+
+\}
+\end{DoxyCode}
+
+
+頂点宣言配列 
+
+
+
+ Vertex\+Shader\+Animated\+Default.\+h の 32 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_animated_default_af09cbf7cd74f29c79d96333b7fe922db}\label{class_vertex_shader_animated_default_af09cbf7cd74f29c79d96333b7fe922db}} 
+\index{Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}!vertex\+\_\+declaration\+\_\+@{vertex\+\_\+declaration\+\_\+}}
+\index{vertex\+\_\+declaration\+\_\+@{vertex\+\_\+declaration\+\_\+}!Vertex\+Shader\+Animated\+Default@{Vertex\+Shader\+Animated\+Default}}
+\subsubsection{\texorpdfstring{vertex\+\_\+declaration\+\_\+}{vertex\_declaration\_}}
+{\footnotesize\ttfamily I\+Direct3\+D\+Vertex\+Declaration9$\ast$ Vertex\+Shader\+Animated\+Default\+::vertex\+\_\+declaration\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+頂点宣言 
+
+
+
+ Vertex\+Shader\+Animated\+Default.\+h の 41 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Vertex\+Shader/\mbox{\hyperlink{_vertex_shader_animated_default_8h}{Vertex\+Shader\+Animated\+Default.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Vertex\+Shader/\+Source/\mbox{\hyperlink{_vertex_shader_animated_default_8cpp}{Vertex\+Shader\+Animated\+Default.\+cpp}}\end{DoxyCompactItemize}

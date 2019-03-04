@@ -2,51 +2,133 @@
 \label{class_push_space_logo}\index{Push\+Space\+Logo@{Push\+Space\+Logo}}
 
 
+プッシュスペースロゴ\+Class  
+
+
+
+
 {\ttfamily \#include $<$Push\+Space\+Logo.\+h$>$}
 
 
 
-Push\+Space\+Logo の継承関係図\nopagebreak
+Push\+Space\+Logo 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=174pt]{class_push_space_logo__inherit__graph}
+\includegraphics[width=350pt]{class_push_space_logo__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_push_space_logo_a381d34d0dfdd493eb46f299d2a2ba858}{Init}} (\mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$update, \mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw)
-\item 
-void \mbox{\hyperlink{class_push_space_logo_a06404113db417c58941ca7a13bba161e}{Uninit}} () override
-\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} $\ast$ \mbox{\hyperlink{class_push_space_logo_acdba863f2625454c1138dd0d79f90100}{getp\+Color}} ()
+\begin{DoxyCompactList}\small\item\em 色取得関数 \end{DoxyCompactList}\item 
+bool $\ast$ \mbox{\hyperlink{class_push_space_logo_ab61b852053e1ab953a34925f1aee3af1}{getp\+Is\+Color\+Change}} ()
+\begin{DoxyCompactList}\small\item\em 色変更フラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_push_space_logo_a3d4177f8b8124e2f278998c912a8b4d4}{Init}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_push_space_logo_a2f81cf35e02096bf309146c0bce0b44d}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_push_space_logo_afa163b1aff8df494b4f09f378bf983f0}{Reset}} () override
 \begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{公開変数類}
+\subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}} $\ast$ \mbox{\hyperlink{class_push_space_logo_ab35a4cee269c3ba0b709a8951ccc3d42}{plane\+\_\+polygon\+\_\+}}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_push_space_logo_af5bbec0fee0b7370a4b24763b40c19b0}{color\+\_\+}} = \{1.\+0f, 1.\+0f, 1.\+0f, 1.\+0f\}
+\begin{DoxyCompactList}\small\item\em 色 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_push_space_logo_a1690cbbed4e0b79bf99a406565f55b0f}{is\+\_\+color\+\_\+change\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em 色変更フラグ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_push_space_logo_ad236bf9d2919807fe34446578af868a5}{color\+\_\+change\+\_\+counter\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 色変更カウンタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_push_space_logo_acc30a6322966375508c0d35db7802617}{C\+O\+L\+O\+R\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+P\+E\+ED}} = \mbox{\hyperlink{class_time_to_frame_a02fe55cc63bdffd73d092d30cc7f0153}{Time\+To\+Frame\+::\+Second\+To\+Frame}}(1.\+0f)
+\begin{DoxyCompactList}\small\item\em 色変更速度 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
+プッシュスペースロゴ\+Class 
 
+プッシュスペースロゴの\+Class 
 
- Push\+Space\+Logo.\+h の 41 行目に定義があります。
+ Push\+Space\+Logo.\+h の 24 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_push_space_logo_a381d34d0dfdd493eb46f299d2a2ba858}\label{class_push_space_logo_a381d34d0dfdd493eb46f299d2a2ba858}} 
+\mbox{\Hypertarget{class_push_space_logo_acdba863f2625454c1138dd0d79f90100}\label{class_push_space_logo_acdba863f2625454c1138dd0d79f90100}} 
+\index{Push\+Space\+Logo@{Push\+Space\+Logo}!getp\+Color@{getp\+Color}}
+\index{getp\+Color@{getp\+Color}!Push\+Space\+Logo@{Push\+Space\+Logo}}
+\subsubsection{\texorpdfstring{getp\+Color()}{getpColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} $\ast$ Push\+Space\+Logo\+::getp\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+色取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Push\+Space\+Logo.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_push_space_logo_ab61b852053e1ab953a34925f1aee3af1}\label{class_push_space_logo_ab61b852053e1ab953a34925f1aee3af1}} 
+\index{Push\+Space\+Logo@{Push\+Space\+Logo}!getp\+Is\+Color\+Change@{getp\+Is\+Color\+Change}}
+\index{getp\+Is\+Color\+Change@{getp\+Is\+Color\+Change}!Push\+Space\+Logo@{Push\+Space\+Logo}}
+\subsubsection{\texorpdfstring{getp\+Is\+Color\+Change()}{getpIsColorChange()}}
+{\footnotesize\ttfamily bool $\ast$ Push\+Space\+Logo\+::getp\+Is\+Color\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+色変更フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 色変更フラグ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Push\+Space\+Logo.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_push_space_logo_a3d4177f8b8124e2f278998c912a8b4d4}\label{class_push_space_logo_a3d4177f8b8124e2f278998c912a8b4d4}} 
 \index{Push\+Space\+Logo@{Push\+Space\+Logo}!Init@{Init}}
 \index{Init@{Init}!Push\+Space\+Logo@{Push\+Space\+Logo}}
 \subsubsection{\texorpdfstring{Init()}{Init()}}
-{\footnotesize\ttfamily void Push\+Space\+Logo\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$}]{update,  }\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Push\+Space\+Logo\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw }\end{DoxyParamCaption})}
 
 
 
- Push\+Space\+Logo.\+cpp の 32 行目に定義があります。
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Push\+Space\+Logo.\+cpp の 44 行目に定義があります。
 
 \mbox{\Hypertarget{class_push_space_logo_afa163b1aff8df494b4f09f378bf983f0}\label{class_push_space_logo_afa163b1aff8df494b4f09f378bf983f0}} 
 \index{Push\+Space\+Logo@{Push\+Space\+Logo}!Reset@{Reset}}
@@ -59,47 +141,113 @@ void \mbox{\hyperlink{class_push_space_logo_afa163b1aff8df494b4f09f378bf983f0}{R
 リセット関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
-\mbox{\hyperlink{class_game_object_base_a85c59554f734bcb09f1a1e18d9517dce}{Game\+Object\+Base}}を実装しています。
-
-
-
- Push\+Space\+Logo.\+cpp の 67 行目に定義があります。
-
-\mbox{\Hypertarget{class_push_space_logo_a06404113db417c58941ca7a13bba161e}\label{class_push_space_logo_a06404113db417c58941ca7a13bba161e}} 
-\index{Push\+Space\+Logo@{Push\+Space\+Logo}!Uninit@{Uninit}}
-\index{Uninit@{Uninit}!Push\+Space\+Logo@{Push\+Space\+Logo}}
-\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
-{\footnotesize\ttfamily void Push\+Space\+Logo\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
-
-終了関数 
+\mbox{\hyperlink{class_game_object_null_a26a748e17ea31b987249022562f5198c}{Game\+Object\+Null}}を再実装しています。
 
 
 
-\mbox{\hyperlink{class_game_object_base_a97e1bc277d7b1c0156d4735de29a022c}{Game\+Object\+Base}}を再実装しています。
+ Push\+Space\+Logo.\+cpp の 71 行目に定義があります。
+
+\mbox{\Hypertarget{class_push_space_logo_a2f81cf35e02096bf309146c0bce0b44d}\label{class_push_space_logo_a2f81cf35e02096bf309146c0bce0b44d}} 
+\index{Push\+Space\+Logo@{Push\+Space\+Logo}!Update@{Update}}
+\index{Update@{Update}!Push\+Space\+Logo@{Push\+Space\+Logo}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Push\+Space\+Logo\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
- Push\+Space\+Logo.\+cpp の 50 行目に定義があります。
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_aeeb51b7e7aa41fd0b16f8f7c016bdb55}{Game\+Object\+Null}}を再実装しています。
+
+
+
+ Push\+Space\+Logo.\+cpp の 57 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
-\mbox{\Hypertarget{class_push_space_logo_ab35a4cee269c3ba0b709a8951ccc3d42}\label{class_push_space_logo_ab35a4cee269c3ba0b709a8951ccc3d42}} 
-\index{Push\+Space\+Logo@{Push\+Space\+Logo}!plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}}
-\index{plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}!Push\+Space\+Logo@{Push\+Space\+Logo}}
-\subsubsection{\texorpdfstring{plane\+\_\+polygon\+\_\+}{plane\_polygon\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}}$\ast$ Push\+Space\+Logo\+::plane\+\_\+polygon\+\_\+}
+\mbox{\Hypertarget{class_push_space_logo_af5bbec0fee0b7370a4b24763b40c19b0}\label{class_push_space_logo_af5bbec0fee0b7370a4b24763b40c19b0}} 
+\index{Push\+Space\+Logo@{Push\+Space\+Logo}!color\+\_\+@{color\+\_\+}}
+\index{color\+\_\+@{color\+\_\+}!Push\+Space\+Logo@{Push\+Space\+Logo}}
+\subsubsection{\texorpdfstring{color\+\_\+}{color\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Push\+Space\+Logo\+::color\+\_\+ = \{1.\+0f, 1.\+0f, 1.\+0f, 1.\+0f\}\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Push\+Space\+Logo.\+h の 55 行目に定義があります。
+色 
+
+
+
+ Push\+Space\+Logo.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_push_space_logo_ad236bf9d2919807fe34446578af868a5}\label{class_push_space_logo_ad236bf9d2919807fe34446578af868a5}} 
+\index{Push\+Space\+Logo@{Push\+Space\+Logo}!color\+\_\+change\+\_\+counter\+\_\+@{color\+\_\+change\+\_\+counter\+\_\+}}
+\index{color\+\_\+change\+\_\+counter\+\_\+@{color\+\_\+change\+\_\+counter\+\_\+}!Push\+Space\+Logo@{Push\+Space\+Logo}}
+\subsubsection{\texorpdfstring{color\+\_\+change\+\_\+counter\+\_\+}{color\_change\_counter\_}}
+{\footnotesize\ttfamily int Push\+Space\+Logo\+::color\+\_\+change\+\_\+counter\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+色変更カウンタ 
+
+
+
+ Push\+Space\+Logo.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_push_space_logo_acc30a6322966375508c0d35db7802617}\label{class_push_space_logo_acc30a6322966375508c0d35db7802617}} 
+\index{Push\+Space\+Logo@{Push\+Space\+Logo}!C\+O\+L\+O\+R\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+P\+E\+ED@{C\+O\+L\+O\+R\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+P\+E\+ED}}
+\index{C\+O\+L\+O\+R\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+P\+E\+ED@{C\+O\+L\+O\+R\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+P\+E\+ED}!Push\+Space\+Logo@{Push\+Space\+Logo}}
+\subsubsection{\texorpdfstring{C\+O\+L\+O\+R\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+P\+E\+ED}{COLOR\_CHANGE\_SPEED}}
+{\footnotesize\ttfamily const int Push\+Space\+Logo\+::\+C\+O\+L\+O\+R\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+P\+E\+ED = \mbox{\hyperlink{class_time_to_frame_a02fe55cc63bdffd73d092d30cc7f0153}{Time\+To\+Frame\+::\+Second\+To\+Frame}}(1.\+0f)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+色変更速度 
+
+
+
+ Push\+Space\+Logo.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_push_space_logo_a1690cbbed4e0b79bf99a406565f55b0f}\label{class_push_space_logo_a1690cbbed4e0b79bf99a406565f55b0f}} 
+\index{Push\+Space\+Logo@{Push\+Space\+Logo}!is\+\_\+color\+\_\+change\+\_\+@{is\+\_\+color\+\_\+change\+\_\+}}
+\index{is\+\_\+color\+\_\+change\+\_\+@{is\+\_\+color\+\_\+change\+\_\+}!Push\+Space\+Logo@{Push\+Space\+Logo}}
+\subsubsection{\texorpdfstring{is\+\_\+color\+\_\+change\+\_\+}{is\_color\_change\_}}
+{\footnotesize\ttfamily bool Push\+Space\+Logo\+::is\+\_\+color\+\_\+change\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+色変更フラグ 
+
+
+
+ Push\+Space\+Logo.\+h の 38 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/2\+D/\+U\+I/\+Push\+Space\+Logo/\mbox{\hyperlink{_push_space_logo_8h}{Push\+Space\+Logo.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/2\+D/\+U\+I/\+Push\+Space\+Logo/\mbox{\hyperlink{_push_space_logo_8cpp}{Push\+Space\+Logo.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/2\+D/\+Push\+Space\+Logo/\mbox{\hyperlink{_push_space_logo_8h}{Push\+Space\+Logo.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/2\+D/\+Push\+Space\+Logo/\+Source/\mbox{\hyperlink{_push_space_logo_8cpp}{Push\+Space\+Logo.\+cpp}}\end{DoxyCompactItemize}

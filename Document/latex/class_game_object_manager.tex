@@ -2,364 +2,581 @@
 \label{class_game_object_manager}\index{Game\+Object\+Manager@{Game\+Object\+Manager}}
 
 
-ゲームオブジェクトマネージャクラス  
+ゲームオブジェクトマネージャ\+Class(\+Singleton)  
 
 
 
 
 {\ttfamily \#include $<$Game\+Object\+Manager.\+h$>$}
 
+
+
+Game\+Object\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_object_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_update_manager}{Update\+Manager}} $\ast$ \mbox{\hyperlink{class_game_object_manager_a4804852e29b6cb4c065f6a60e5b95edd}{getp\+Update\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em 更新マネージャ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_draw_manager}{Draw\+Manager}} $\ast$ \mbox{\hyperlink{class_game_object_manager_a6692c72ceb9d059abeba91fd47cf3de7}{getp\+Draw\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em 描画マネージャ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_collision_manager}{Collision\+Manager}} $\ast$ \mbox{\hyperlink{class_game_object_manager_a6bf9e0af21885440429e3e3b07a0451d}{getp\+Collision\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em 衝突マネージャ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_abda84aa3b4c79090c43243f93b5a9c46}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_a4d2cb0e07fddeea160e64f6e1d2a326a}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_ad962739b2c2f54d4160c3513132930da}{Uninit\+When\+Change\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em シーン変更時の終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_a6f053b1c655de6ca1c9a8fa9b6e118ae}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_a0549bd4b6575ee28803c0ff8fd2be2ee}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_a77f770050f7d8022bfeceda098846ae8}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_a30e496fe43d48b434da34ade418b4fdb}{Add\+Game\+Object\+Base}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$game\+\_\+object)
+\begin{DoxyCompactList}\small\item\em ゲームオブジェクト基底クラス追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_a0293d3dca4c52d908da0906d982b44cc}{Release\+Game\+Object\+Base}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$game\+\_\+object)
+\begin{DoxyCompactList}\small\item\em ゲームオブジェクト基底クラス解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{class_game_object_manager_abda84aa3b4c79090c43243f93b5a9c46}{Init}} ()
-\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_game_object_manager_a4d2cb0e07fddeea160e64f6e1d2a326a}{Uninit}} ()
-\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_game_object_manager_ad962739b2c2f54d4160c3513132930da}{Uninit\+When\+Change\+Scene}} ()
-\begin{DoxyCompactList}\small\item\em シーン変更時の終了関数 \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_game_object_manager_a6f053b1c655de6ca1c9a8fa9b6e118ae}{Update}} ()
-\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_game_object_manager_a0549bd4b6575ee28803c0ff8fd2be2ee}{Draw}} ()
-\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_game_object_manager_a38f980aec0970f45eb9bc55db8ac01a3}{All\+Reset}} ()
-\begin{DoxyCompactList}\small\item\em 全ゲームオブジェクトリセット関数 \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_game_object_manager_ab42e8ca2c7e586d05d513e8a868a86ef}{Add\+Game\+Object\+Base\+To\+Array}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$game\+\_\+object)
-\begin{DoxyCompactList}\small\item\em ゲームオブジェクト基底クラスの追加関数 \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_game_object_manager_a83342c1c358e32f6478ae3428fcb25fa}{Release\+Game\+Object\+Base\+From\+Array}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$game\+\_\+object)
-\begin{DoxyCompactList}\small\item\em ゲームオブジェクト基底クラスの解放関数 \end{DoxyCompactList}\item 
-{\footnotesize template$<$class Type $>$ }\\static void \mbox{\hyperlink{class_game_object_manager_a4b905d160c31b234686a3d46c0743adb}{Get\+Pointer\+\_\+\+Registration\+Reference}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$reference\+\_\+object, Type $\ast$reference\+\_\+destination, Type $\ast$reference\+\_\+pointer)
-\begin{DoxyCompactList}\small\item\em ゲームオブジェクト参照の取得 \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{class_update_manager}{Update\+Manager}} $\ast$ \mbox{\hyperlink{class_game_object_manager_a7d34b53f99cc2264ab6a8c253392a865}{Get\+Update\+Manager}} ()
-\item 
-static \mbox{\hyperlink{class_draw_manager}{Draw\+Manager}} $\ast$ \mbox{\hyperlink{class_game_object_manager_a862e76bfd74495c20bddd377c62a22b7}{Get\+Draw\+Manager}} ()
-\item 
-static \mbox{\hyperlink{class_collision_manager}{Collision\+Manager}} $\ast$ \mbox{\hyperlink{class_game_object_manager_a41775a8308691a84b468a0aeeb1b3376}{Get\+Collision\+Manager}} ()
-\end{DoxyCompactItemize}
-\subsection*{静的公開変数類}
-\begin{DoxyCompactItemize}
-\item 
-static const unsigned \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} = 1000
-\begin{DoxyCompactList}\small\item\em 配列数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+static \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} $\ast$ \mbox{\hyperlink{class_game_object_manager_abd04286fb8e2ac72a5f0468263f9553d}{getp\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス取得関数 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_game_object_manager_a01636a5f8fb099ab0633fad06755be0e}{Release\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_game_object_manager_aa5693c4aefc135e5e85140427c781d3e}{Game\+Object\+Manager}} ()=delete
-\begin{DoxyCompactList}\small\item\em コンストラクタ(削除) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_game_object_manager_a8a8f9ec94ecca948fc7ab63454398e36}{Game\+Object\+Manager}} (const \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} \&value)=delete
-\begin{DoxyCompactList}\small\item\em コピーコンストラクタ(削除) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} \& \mbox{\hyperlink{class_game_object_manager_af66275734b2098dc631fdb789d31fd52}{operator=}} (const \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} \&value)=delete
-\begin{DoxyCompactList}\small\item\em 代入演算子のオーバーロード(削除) \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{静的非公開メンバ関数}
+\mbox{\hyperlink{class_game_object_manager_a58cbaec4182cda7c6d48eef7b14885e8}{Game\+Object\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_a783a9d55d566ab8c39e6ed86b3b52a09}{Add\+Contents\+Of\+Await\+Add\+Array}} ()
+\begin{DoxyCompactList}\small\item\em 追加待ちの追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_a5a6c1208229decd93c6ef396bce35b3a}{Release\+Contents\+Of\+Await\+Release\+Array}} ()
+\begin{DoxyCompactList}\small\item\em 解放待ちの解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_a3263b606ab6bac222bc07c72f0493012}{Add\+Component\+And\+Game\+Object\+Base\+To\+Manager}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$game\+\_\+object)
+\begin{DoxyCompactList}\small\item\em コンポーネントとゲームオブジェクト基底クラスをマネージャーへ追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_afaec520481683fb68ce045881def6b2e}{Release\+Component\+And\+Game\+Object\+Base\+From\+Manager}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$game\+\_\+object)
+\begin{DoxyCompactList}\small\item\em コンポーネントとゲームオブジェクト基底クラスをマネージャーから解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_ab4f76040ef97f1ad6604ffb89c796d8b}{Release}} ()
+\begin{DoxyCompactList}\small\item\em 解放関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_manager_a51232e494925f5638d6ff83f7581ad93}{Game\+Object\+Manager}} (const \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} \&class\+\_\+name)=delete
+\item 
+\mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} \& \mbox{\hyperlink{class_game_object_manager_a626e7ffb6c7f3e1ecb6521fcc485234d}{operator=}} (const \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} \&class\+\_\+name)=delete
+\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{class_game_object_manager_a783a9d55d566ab8c39e6ed86b3b52a09}{Add\+Contents\+Of\+Await\+Add\+Array}} ()
-\begin{DoxyCompactList}\small\item\em 追加待ち配列の中身を追加関数 \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_game_object_manager_a5a6c1208229decd93c6ef396bce35b3a}{Release\+Contents\+Of\+Await\+Release\+Array}} ()
-\begin{DoxyCompactList}\small\item\em 解放待ち配列の中身を解放関数 \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_game_object_manager_a4c6cdb6d0a1f43a2e2e705677fa2f5f6}{Set\+Component\+To\+Manager}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$game\+\_\+object)
-\begin{DoxyCompactList}\small\item\em コンポーネントをマネージャーへ設定関数 \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_game_object_manager_a3435fd94a3a7b9eb69f422e33848137a}{Release\+Component\+From\+Manager}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$game\+\_\+object)
-\begin{DoxyCompactList}\small\item\em コンポーネントをマネージャーから解放関数 \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_game_object_manager_a58e1266da3b18a4c0bded551e386c6ae}{All\+Release}} ()
-\begin{DoxyCompactList}\small\item\em 全ゲームオブジェクトの解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$, \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_game_object_manager_a6bde8822fae64e488627addb70c32182}{all\+\_\+game\+\_\+object\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 全ゲームオブジェクト配列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$, \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_game_object_manager_a80f815a873b36d918b3fc93b8f2ca043}{await\+\_\+add\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 追加待ち配列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$, \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_game_object_manager_a4fd19d389327c8d414c6375eee223d8a}{await\+\_\+release\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 解放待ち配列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_update_manager}{Update\+Manager}} \mbox{\hyperlink{class_game_object_manager_a330c1759e1a075fb257a01c6f48cf9f3}{update\+\_\+manager\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 更新マネージャ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_draw_manager}{Draw\+Manager}} \mbox{\hyperlink{class_game_object_manager_afad3b0a750982e55d71edd72b440c724}{draw\+\_\+manager\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 描画マネージャ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_collision_manager}{Collision\+Manager}} \mbox{\hyperlink{class_game_object_manager_a3a173415abbd4acbe2abaf40e0a6c1b8}{collision\+\_\+manager\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 衝突マネージャ \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$, \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_game_object_manager_aeaf98831f542f93db15c54a4948d6331}{all\+\_\+game\+\_\+object\+\_\+}}
-\begin{DoxyCompactList}\small\item\em 全ゲームオブジェクト配列 \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$, \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_game_object_manager_ac63518100cbdf391f137d277276e7824}{await\+\_\+add\+\_\+}}
-\begin{DoxyCompactList}\small\item\em 追加待ち配列 \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$, \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_game_object_manager_aa5dbfcf8c724e1e21279ff9b1bc9fcbe}{await\+\_\+release\+\_\+}}
-\begin{DoxyCompactList}\small\item\em 解放待ち配列 \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{class_game_object_reference_manager}{Game\+Object\+Reference\+Manager}} \mbox{\hyperlink{class_game_object_manager_a7346dd916f897462898a1b28c03cd466}{reference\+\_\+manager\+\_\+}}
-\begin{DoxyCompactList}\small\item\em 参照マネージャ \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{class_update_manager}{Update\+Manager}} \mbox{\hyperlink{class_game_object_manager_a330c1759e1a075fb257a01c6f48cf9f3}{update\+\_\+manager\+\_\+}}
-\begin{DoxyCompactList}\small\item\em 更新マネージャ \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{class_draw_manager}{Draw\+Manager}} \mbox{\hyperlink{class_game_object_manager_afad3b0a750982e55d71edd72b440c724}{draw\+\_\+manager\+\_\+}}
-\begin{DoxyCompactList}\small\item\em 描画マネージャ \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{class_collision_manager}{Collision\+Manager}} \mbox{\hyperlink{class_game_object_manager_a3a173415abbd4acbe2abaf40e0a6c1b8}{collision\+\_\+manager\+\_\+}}
-\begin{DoxyCompactList}\small\item\em 衝突マネージャ \end{DoxyCompactList}\end{DoxyCompactItemize}
+static const unsigned \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} = 1000
+\begin{DoxyCompactList}\small\item\em 配列数 \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} $\ast$ \mbox{\hyperlink{class_game_object_manager_ab21e2defb8f4f41bded4f8ab98be07aa}{instance\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em インスタンス \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
-ゲームオブジェクトマネージャクラス 
+ゲームオブジェクトマネージャ\+Class(\+Singleton) 
 
-ゲームオブジェクト全体の管理をするクラス 
+ゲームオブジェクトのマネージャ\+Class(\+Singleton) 
 
- Game\+Object\+Manager.\+h の 37 行目に定義があります。
+ Game\+Object\+Manager.\+h の 33 行目に定義があります。
 
 
 
 \subsection{構築子と解体子}
-\mbox{\Hypertarget{class_game_object_manager_aa5693c4aefc135e5e85140427c781d3e}\label{class_game_object_manager_aa5693c4aefc135e5e85140427c781d3e}} 
+\mbox{\Hypertarget{class_game_object_manager_a58cbaec4182cda7c6d48eef7b14885e8}\label{class_game_object_manager_a58cbaec4182cda7c6d48eef7b14885e8}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{Game\+Object\+Manager()}{GameObjectManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Game\+Object\+Manager\+::\+Game\+Object\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+{\footnotesize\ttfamily Game\+Object\+Manager\+::\+Game\+Object\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-コンストラクタ(削除) 
+コンストラクタ 
 
-\mbox{\Hypertarget{class_game_object_manager_a8a8f9ec94ecca948fc7ab63454398e36}\label{class_game_object_manager_a8a8f9ec94ecca948fc7ab63454398e36}} 
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Game\+Object\+Manager.\+cpp の 76 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_object_manager_a51232e494925f5638d6ff83f7581ad93}\label{class_game_object_manager_a51232e494925f5638d6ff83f7581ad93}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{Game\+Object\+Manager()}{GameObjectManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Game\+Object\+Manager\+::\+Game\+Object\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
-
-
-
-コピーコンストラクタ(削除) 
+{\footnotesize\ttfamily Game\+Object\+Manager\+::\+Game\+Object\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} \&}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
 
 
 
 \subsection{関数詳解}
+\mbox{\Hypertarget{class_game_object_manager_a3263b606ab6bac222bc07c72f0493012}\label{class_game_object_manager_a3263b606ab6bac222bc07c72f0493012}} 
+\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Add\+Component\+And\+Game\+Object\+Base\+To\+Manager@{Add\+Component\+And\+Game\+Object\+Base\+To\+Manager}}
+\index{Add\+Component\+And\+Game\+Object\+Base\+To\+Manager@{Add\+Component\+And\+Game\+Object\+Base\+To\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Component\+And\+Game\+Object\+Base\+To\+Manager()}{AddComponentAndGameObjectBaseToManager()}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Add\+Component\+And\+Game\+Object\+Base\+To\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{game\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+コンポーネントとゲームオブジェクト基底クラスをマネージャーへ追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$game\+\_\+object} & ゲームオブジェクト基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 216 行目に定義があります。
+
 \mbox{\Hypertarget{class_game_object_manager_a783a9d55d566ab8c39e6ed86b3b52a09}\label{class_game_object_manager_a783a9d55d566ab8c39e6ed86b3b52a09}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!Add\+Contents\+Of\+Await\+Add\+Array@{Add\+Contents\+Of\+Await\+Add\+Array}}
 \index{Add\+Contents\+Of\+Await\+Add\+Array@{Add\+Contents\+Of\+Await\+Add\+Array}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{Add\+Contents\+Of\+Await\+Add\+Array()}{AddContentsOfAwaitAddArray()}}
-{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Add\+Contents\+Of\+Await\+Add\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Add\+Contents\+Of\+Await\+Add\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-追加待ち配列の中身を追加関数 
+追加待ちの追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 173 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_object_manager_a30e496fe43d48b434da34ade418b4fdb}\label{class_game_object_manager_a30e496fe43d48b434da34ade418b4fdb}} 
+\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Add\+Game\+Object\+Base@{Add\+Game\+Object\+Base}}
+\index{Add\+Game\+Object\+Base@{Add\+Game\+Object\+Base}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Game\+Object\+Base()}{AddGameObjectBase()}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Add\+Game\+Object\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{game\+\_\+object }\end{DoxyParamCaption})}
 
 
 
- Game\+Object\+Manager.\+cpp の 159 行目に定義があります。
-
-\mbox{\Hypertarget{class_game_object_manager_ab42e8ca2c7e586d05d513e8a868a86ef}\label{class_game_object_manager_ab42e8ca2c7e586d05d513e8a868a86ef}} 
-\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Add\+Game\+Object\+Base\+To\+Array@{Add\+Game\+Object\+Base\+To\+Array}}
-\index{Add\+Game\+Object\+Base\+To\+Array@{Add\+Game\+Object\+Base\+To\+Array}!Game\+Object\+Manager@{Game\+Object\+Manager}}
-\subsubsection{\texorpdfstring{Add\+Game\+Object\+Base\+To\+Array()}{AddGameObjectBaseToArray()}}
-{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Add\+Game\+Object\+Base\+To\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{game\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+ゲームオブジェクト基底クラス追加関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$game\+\_\+object} & ゲームオブジェクト基底クラス \\
+\hline
+\end{DoxyParams}
 
-ゲームオブジェクト基底クラスの追加関数 
-
-
-
- Game\+Object\+Manager.\+cpp の 129 行目に定義があります。
-
-\mbox{\Hypertarget{class_game_object_manager_a58e1266da3b18a4c0bded551e386c6ae}\label{class_game_object_manager_a58e1266da3b18a4c0bded551e386c6ae}} 
-\index{Game\+Object\+Manager@{Game\+Object\+Manager}!All\+Release@{All\+Release}}
-\index{All\+Release@{All\+Release}!Game\+Object\+Manager@{Game\+Object\+Manager}}
-\subsubsection{\texorpdfstring{All\+Release()}{AllRelease()}}
-{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+All\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
-
-全ゲームオブジェクトの解放関数 
-
-
-
- Game\+Object\+Manager.\+cpp の 254 行目に定義があります。
-
-\mbox{\Hypertarget{class_game_object_manager_a38f980aec0970f45eb9bc55db8ac01a3}\label{class_game_object_manager_a38f980aec0970f45eb9bc55db8ac01a3}} 
-\index{Game\+Object\+Manager@{Game\+Object\+Manager}!All\+Reset@{All\+Reset}}
-\index{All\+Reset@{All\+Reset}!Game\+Object\+Manager@{Game\+Object\+Manager}}
-\subsubsection{\texorpdfstring{All\+Reset()}{AllReset()}}
-{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+All\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-全ゲームオブジェクトリセット関数 
-
-
-
- Game\+Object\+Manager.\+cpp の 115 行目に定義があります。
+ Game\+Object\+Manager.\+cpp の 152 行目に定義があります。
 
 \mbox{\Hypertarget{class_game_object_manager_a0549bd4b6575ee28803c0ff8fd2be2ee}\label{class_game_object_manager_a0549bd4b6575ee28803c0ff8fd2be2ee}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!Draw@{Draw}}
 \index{Draw@{Draw}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{Draw()}{Draw()}}
-{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 描画関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Game\+Object\+Manager.\+cpp の 105 行目に定義があります。
-
-\mbox{\Hypertarget{class_game_object_manager_a41775a8308691a84b468a0aeeb1b3376}\label{class_game_object_manager_a41775a8308691a84b468a0aeeb1b3376}} 
-\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Get\+Collision\+Manager@{Get\+Collision\+Manager}}
-\index{Get\+Collision\+Manager@{Get\+Collision\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
-\subsubsection{\texorpdfstring{Get\+Collision\+Manager()}{GetCollisionManager()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{class_collision_manager}{Collision\+Manager}}$\ast$ Game\+Object\+Manager\+::\+Get\+Collision\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
-
-
-
- Game\+Object\+Manager.\+h の 133 行目に定義があります。
-
-\mbox{\Hypertarget{class_game_object_manager_a862e76bfd74495c20bddd377c62a22b7}\label{class_game_object_manager_a862e76bfd74495c20bddd377c62a22b7}} 
-\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Get\+Draw\+Manager@{Get\+Draw\+Manager}}
-\index{Get\+Draw\+Manager@{Get\+Draw\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
-\subsubsection{\texorpdfstring{Get\+Draw\+Manager()}{GetDrawManager()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{class_draw_manager}{Draw\+Manager}}$\ast$ Game\+Object\+Manager\+::\+Get\+Draw\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Game\+Object\+Manager.\+cpp の 134 行目に定義があります。
 
- Game\+Object\+Manager.\+h の 132 行目に定義があります。
-
-\mbox{\Hypertarget{class_game_object_manager_a4b905d160c31b234686a3d46c0743adb}\label{class_game_object_manager_a4b905d160c31b234686a3d46c0743adb}} 
-\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Get\+Pointer\+\_\+\+Registration\+Reference@{Get\+Pointer\+\_\+\+Registration\+Reference}}
-\index{Get\+Pointer\+\_\+\+Registration\+Reference@{Get\+Pointer\+\_\+\+Registration\+Reference}!Game\+Object\+Manager@{Game\+Object\+Manager}}
-\subsubsection{\texorpdfstring{Get\+Pointer\+\_\+\+Registration\+Reference()}{GetPointer\_RegistrationReference()}}
-{\footnotesize\ttfamily template$<$class Type $>$ \\
-static void Game\+Object\+Manager\+::\+Get\+Pointer\+\_\+\+Registration\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{reference\+\_\+object,  }\item[{Type $\ast$}]{reference\+\_\+destination,  }\item[{Type $\ast$}]{reference\+\_\+pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+\mbox{\Hypertarget{class_game_object_manager_a6bf9e0af21885440429e3e3b07a0451d}\label{class_game_object_manager_a6bf9e0af21885440429e3e3b07a0451d}} 
+\index{Game\+Object\+Manager@{Game\+Object\+Manager}!getp\+Collision\+Manager@{getp\+Collision\+Manager}}
+\index{getp\+Collision\+Manager@{getp\+Collision\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Collision\+Manager()}{getpCollisionManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_manager}{Collision\+Manager}} $\ast$ Game\+Object\+Manager\+::getp\+Collision\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-ゲームオブジェクト参照の取得 
+衝突マネージャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Collision\+Manager$\ast$} & 衝突マネージャ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 66 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_object_manager_a6692c72ceb9d059abeba91fd47cf3de7}\label{class_game_object_manager_a6692c72ceb9d059abeba91fd47cf3de7}} 
+\index{Game\+Object\+Manager@{Game\+Object\+Manager}!getp\+Draw\+Manager@{getp\+Draw\+Manager}}
+\index{getp\+Draw\+Manager@{getp\+Draw\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Draw\+Manager()}{getpDrawManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_manager}{Draw\+Manager}} $\ast$ Game\+Object\+Manager\+::getp\+Draw\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Game\+Object\+Manager.\+h の 117 行目に定義があります。
-
-\mbox{\Hypertarget{class_game_object_manager_a7d34b53f99cc2264ab6a8c253392a865}\label{class_game_object_manager_a7d34b53f99cc2264ab6a8c253392a865}} 
-\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Get\+Update\+Manager@{Get\+Update\+Manager}}
-\index{Get\+Update\+Manager@{Get\+Update\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
-\subsubsection{\texorpdfstring{Get\+Update\+Manager()}{GetUpdateManager()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{class_update_manager}{Update\+Manager}}$\ast$ Game\+Object\+Manager\+::\+Get\+Update\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+描画マネージャ取得関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Game\+Object\+Manager.\+h の 131 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em Draw\+Manager$\ast$} & 描画マネージャ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 59 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_object_manager_abd04286fb8e2ac72a5f0468263f9553d}\label{class_game_object_manager_abd04286fb8e2ac72a5f0468263f9553d}} 
+\index{Game\+Object\+Manager@{Game\+Object\+Manager}!getp\+Instance@{getp\+Instance}}
+\index{getp\+Instance@{getp\+Instance}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Instance()}{getpInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} $\ast$ Game\+Object\+Manager\+::getp\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+インスタンス取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Game\+Object\+Manager$\ast$} & インスタンス \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 28 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_object_manager_a4804852e29b6cb4c065f6a60e5b95edd}\label{class_game_object_manager_a4804852e29b6cb4c065f6a60e5b95edd}} 
+\index{Game\+Object\+Manager@{Game\+Object\+Manager}!getp\+Update\+Manager@{getp\+Update\+Manager}}
+\index{getp\+Update\+Manager@{getp\+Update\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Update\+Manager()}{getpUpdateManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_update_manager}{Update\+Manager}} $\ast$ Game\+Object\+Manager\+::getp\+Update\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+更新マネージャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Update\+Manager$\ast$} & 更新マネージャ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 52 行目に定義があります。
 
 \mbox{\Hypertarget{class_game_object_manager_abda84aa3b4c79090c43243f93b5a9c46}\label{class_game_object_manager_abda84aa3b4c79090c43243f93b5a9c46}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!Init@{Init}}
 \index{Init@{Init}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{Init()}{Init()}}
-{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Game\+Object\+Manager.\+cpp の 39 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\Hypertarget{class_game_object_manager_af66275734b2098dc631fdb789d31fd52}\label{class_game_object_manager_af66275734b2098dc631fdb789d31fd52}} 
+
+ Game\+Object\+Manager.\+cpp の 82 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_object_manager_a626e7ffb6c7f3e1ecb6521fcc485234d}\label{class_game_object_manager_a626e7ffb6c7f3e1ecb6521fcc485234d}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!operator=@{operator=}}
 \index{operator=@{operator=}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}}\& Game\+Object\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}}\& Game\+Object\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} \&}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_game_object_manager_ab4f76040ef97f1ad6604ffb89c796d8b}\label{class_game_object_manager_ab4f76040ef97f1ad6604ffb89c796d8b}} 
+\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Release@{Release}}
+\index{Release@{Release}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-代入演算子のオーバーロード(削除) 
-
-\mbox{\Hypertarget{class_game_object_manager_a3435fd94a3a7b9eb69f422e33848137a}\label{class_game_object_manager_a3435fd94a3a7b9eb69f422e33848137a}} 
-\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Release\+Component\+From\+Manager@{Release\+Component\+From\+Manager}}
-\index{Release\+Component\+From\+Manager@{Release\+Component\+From\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
-\subsubsection{\texorpdfstring{Release\+Component\+From\+Manager()}{ReleaseComponentFromManager()}}
-{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Release\+Component\+From\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{game\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+解放関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
-コンポーネントをマネージャーから解放関数 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 256 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_object_manager_afaec520481683fb68ce045881def6b2e}\label{class_game_object_manager_afaec520481683fb68ce045881def6b2e}} 
+\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Release\+Component\+And\+Game\+Object\+Base\+From\+Manager@{Release\+Component\+And\+Game\+Object\+Base\+From\+Manager}}
+\index{Release\+Component\+And\+Game\+Object\+Base\+From\+Manager@{Release\+Component\+And\+Game\+Object\+Base\+From\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection{\texorpdfstring{Release\+Component\+And\+Game\+Object\+Base\+From\+Manager()}{ReleaseComponentAndGameObjectBaseFromManager()}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Release\+Component\+And\+Game\+Object\+Base\+From\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{game\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Game\+Object\+Manager.\+cpp の 231 行目に定義があります。
+コンポーネントとゲームオブジェクト基底クラスをマネージャーから解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$game\+\_\+object} & ゲームオブジェクト基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 236 行目に定義があります。
 
 \mbox{\Hypertarget{class_game_object_manager_a5a6c1208229decd93c6ef396bce35b3a}\label{class_game_object_manager_a5a6c1208229decd93c6ef396bce35b3a}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!Release\+Contents\+Of\+Await\+Release\+Array@{Release\+Contents\+Of\+Await\+Release\+Array}}
 \index{Release\+Contents\+Of\+Await\+Release\+Array@{Release\+Contents\+Of\+Await\+Release\+Array}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{Release\+Contents\+Of\+Await\+Release\+Array()}{ReleaseContentsOfAwaitReleaseArray()}}
-{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Release\+Contents\+Of\+Await\+Release\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Release\+Contents\+Of\+Await\+Release\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-解放待ち配列の中身を解放関数 
+解放待ちの解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 194 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_object_manager_a0293d3dca4c52d908da0906d982b44cc}\label{class_game_object_manager_a0293d3dca4c52d908da0906d982b44cc}} 
+\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Release\+Game\+Object\+Base@{Release\+Game\+Object\+Base}}
+\index{Release\+Game\+Object\+Base@{Release\+Game\+Object\+Base}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection{\texorpdfstring{Release\+Game\+Object\+Base()}{ReleaseGameObjectBase()}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Release\+Game\+Object\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{game\+\_\+object }\end{DoxyParamCaption})}
 
 
 
- Game\+Object\+Manager.\+cpp の 183 行目に定義があります。
-
-\mbox{\Hypertarget{class_game_object_manager_a83342c1c358e32f6478ae3428fcb25fa}\label{class_game_object_manager_a83342c1c358e32f6478ae3428fcb25fa}} 
-\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Release\+Game\+Object\+Base\+From\+Array@{Release\+Game\+Object\+Base\+From\+Array}}
-\index{Release\+Game\+Object\+Base\+From\+Array@{Release\+Game\+Object\+Base\+From\+Array}!Game\+Object\+Manager@{Game\+Object\+Manager}}
-\subsubsection{\texorpdfstring{Release\+Game\+Object\+Base\+From\+Array()}{ReleaseGameObjectBaseFromArray()}}
-{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Release\+Game\+Object\+Base\+From\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{game\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+ゲームオブジェクト基底クラス解放関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$game\+\_\+object} & ゲームオブジェクト基底クラス \\
+\hline
+\end{DoxyParams}
 
-ゲームオブジェクト基底クラスの解放関数 
-
-
-
- Game\+Object\+Manager.\+cpp の 139 行目に定義があります。
-
-\mbox{\Hypertarget{class_game_object_manager_a4c6cdb6d0a1f43a2e2e705677fa2f5f6}\label{class_game_object_manager_a4c6cdb6d0a1f43a2e2e705677fa2f5f6}} 
-\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Set\+Component\+To\+Manager@{Set\+Component\+To\+Manager}}
-\index{Set\+Component\+To\+Manager@{Set\+Component\+To\+Manager}!Game\+Object\+Manager@{Game\+Object\+Manager}}
-\subsubsection{\texorpdfstring{Set\+Component\+To\+Manager()}{SetComponentToManager()}}
-{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Set\+Component\+To\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{game\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Game\+Object\+Manager.\+cpp の 159 行目に定義があります。
 
-コンポーネントをマネージャーへ設定関数 
+\mbox{\Hypertarget{class_game_object_manager_a01636a5f8fb099ab0633fad06755be0e}\label{class_game_object_manager_a01636a5f8fb099ab0633fad06755be0e}} 
+\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Release\+Instance@{Release\+Instance}}
+\index{Release\+Instance@{Release\+Instance}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection{\texorpdfstring{Release\+Instance()}{ReleaseInstance()}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Release\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
- Game\+Object\+Manager.\+cpp の 208 行目に定義があります。
+インスタンス解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_object_manager_a77f770050f7d8022bfeceda098846ae8}\label{class_game_object_manager_a77f770050f7d8022bfeceda098846ae8}} 
+\index{Game\+Object\+Manager@{Game\+Object\+Manager}!Reset@{Reset}}
+\index{Reset@{Reset}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+リセット関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 141 行目に定義があります。
 
 \mbox{\Hypertarget{class_game_object_manager_a4d2cb0e07fddeea160e64f6e1d2a326a}\label{class_game_object_manager_a4d2cb0e07fddeea160e64f6e1d2a326a}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!Uninit@{Uninit}}
 \index{Uninit@{Uninit}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
-{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Game\+Object\+Manager.\+cpp の 52 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 92 行目に定義があります。
 
 \mbox{\Hypertarget{class_game_object_manager_ad962739b2c2f54d4160c3513132930da}\label{class_game_object_manager_ad962739b2c2f54d4160c3513132930da}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!Uninit\+When\+Change\+Scene@{Uninit\+When\+Change\+Scene}}
 \index{Uninit\+When\+Change\+Scene@{Uninit\+When\+Change\+Scene}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{Uninit\+When\+Change\+Scene()}{UninitWhenChangeScene()}}
-{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Uninit\+When\+Change\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Uninit\+When\+Change\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 シーン変更時の終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Game\+Object\+Manager.\+cpp の 69 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 105 行目に定義があります。
 
 \mbox{\Hypertarget{class_game_object_manager_a6f053b1c655de6ca1c9a8fa9b6e118ae}\label{class_game_object_manager_a6f053b1c655de6ca1c9a8fa9b6e118ae}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!Update@{Update}}
 \index{Update@{Update}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily void Game\+Object\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 更新関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Game\+Object\+Manager.\+cpp の 86 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Object\+Manager.\+cpp の 118 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
-\mbox{\Hypertarget{class_game_object_manager_aeaf98831f542f93db15c54a4948d6331}\label{class_game_object_manager_aeaf98831f542f93db15c54a4948d6331}} 
+\mbox{\Hypertarget{class_game_object_manager_a6bde8822fae64e488627addb70c32182}\label{class_game_object_manager_a6bde8822fae64e488627addb70c32182}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!all\+\_\+game\+\_\+object\+\_\+@{all\+\_\+game\+\_\+object\+\_\+}}
 \index{all\+\_\+game\+\_\+object\+\_\+@{all\+\_\+game\+\_\+object\+\_\+}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{all\+\_\+game\+\_\+object\+\_\+}{all\_game\_object\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$, \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{Game\+Object\+Manager\+::\+A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ Game\+Object\+Manager\+::all\+\_\+game\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}}$\ast$, \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}$>$ Game\+Object\+Manager\+::all\+\_\+game\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -367,13 +584,13 @@ static void Game\+Object\+Manager\+::\+Get\+Pointer\+\_\+\+Registration\+Referen
 
 
 
- Game\+Object\+Manager.\+h の 50 行目に定義があります。
+ Game\+Object\+Manager.\+h の 79 行目に定義があります。
 
 \mbox{\Hypertarget{class_game_object_manager_a591934d64d750c10c03c908371470681}\label{class_game_object_manager_a591934d64d750c10c03c908371470681}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!A\+R\+R\+A\+Y\+\_\+\+N\+UM@{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}
 \index{A\+R\+R\+A\+Y\+\_\+\+N\+UM@{A\+R\+R\+A\+Y\+\_\+\+N\+UM}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{A\+R\+R\+A\+Y\+\_\+\+N\+UM}{ARRAY\_NUM}}
-{\footnotesize\ttfamily const unsigned Game\+Object\+Manager\+::\+A\+R\+R\+A\+Y\+\_\+\+N\+UM = 1000\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily const unsigned Game\+Object\+Manager\+::\+A\+R\+R\+A\+Y\+\_\+\+N\+UM = 1000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
@@ -381,13 +598,13 @@ static void Game\+Object\+Manager\+::\+Get\+Pointer\+\_\+\+Registration\+Referen
 
 
 
- Game\+Object\+Manager.\+h の 43 行目に定義があります。
+ Game\+Object\+Manager.\+h の 39 行目に定義があります。
 
-\mbox{\Hypertarget{class_game_object_manager_ac63518100cbdf391f137d277276e7824}\label{class_game_object_manager_ac63518100cbdf391f137d277276e7824}} 
+\mbox{\Hypertarget{class_game_object_manager_a80f815a873b36d918b3fc93b8f2ca043}\label{class_game_object_manager_a80f815a873b36d918b3fc93b8f2ca043}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!await\+\_\+add\+\_\+@{await\+\_\+add\+\_\+}}
 \index{await\+\_\+add\+\_\+@{await\+\_\+add\+\_\+}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{await\+\_\+add\+\_\+}{await\_add\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$, \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{Game\+Object\+Manager\+::\+A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ Game\+Object\+Manager\+::await\+\_\+add\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}}$\ast$, \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}$>$ Game\+Object\+Manager\+::await\+\_\+add\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -395,13 +612,13 @@ static void Game\+Object\+Manager\+::\+Get\+Pointer\+\_\+\+Registration\+Referen
 
 
 
- Game\+Object\+Manager.\+h の 51 行目に定義があります。
+ Game\+Object\+Manager.\+h の 80 行目に定義があります。
 
-\mbox{\Hypertarget{class_game_object_manager_aa5dbfcf8c724e1e21279ff9b1bc9fcbe}\label{class_game_object_manager_aa5dbfcf8c724e1e21279ff9b1bc9fcbe}} 
+\mbox{\Hypertarget{class_game_object_manager_a4fd19d389327c8d414c6375eee223d8a}\label{class_game_object_manager_a4fd19d389327c8d414c6375eee223d8a}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!await\+\_\+release\+\_\+@{await\+\_\+release\+\_\+}}
 \index{await\+\_\+release\+\_\+@{await\+\_\+release\+\_\+}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{await\+\_\+release\+\_\+}{await\_release\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$, \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{Game\+Object\+Manager\+::\+A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ Game\+Object\+Manager\+::await\+\_\+release\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}}$\ast$, \mbox{\hyperlink{class_game_object_manager_a591934d64d750c10c03c908371470681}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}$>$ Game\+Object\+Manager\+::await\+\_\+release\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -409,13 +626,13 @@ static void Game\+Object\+Manager\+::\+Get\+Pointer\+\_\+\+Registration\+Referen
 
 
 
- Game\+Object\+Manager.\+h の 52 行目に定義があります。
+ Game\+Object\+Manager.\+h の 81 行目に定義があります。
 
 \mbox{\Hypertarget{class_game_object_manager_a3a173415abbd4acbe2abaf40e0a6c1b8}\label{class_game_object_manager_a3a173415abbd4acbe2abaf40e0a6c1b8}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!collision\+\_\+manager\+\_\+@{collision\+\_\+manager\+\_\+}}
 \index{collision\+\_\+manager\+\_\+@{collision\+\_\+manager\+\_\+}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{collision\+\_\+manager\+\_\+}{collision\_manager\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_manager}{Collision\+Manager}} Game\+Object\+Manager\+::collision\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_manager}{Collision\+Manager}} Game\+Object\+Manager\+::collision\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -423,13 +640,13 @@ static void Game\+Object\+Manager\+::\+Get\+Pointer\+\_\+\+Registration\+Referen
 
 
 
- Game\+Object\+Manager.\+h の 57 行目に定義があります。
+ Game\+Object\+Manager.\+h の 85 行目に定義があります。
 
 \mbox{\Hypertarget{class_game_object_manager_afad3b0a750982e55d71edd72b440c724}\label{class_game_object_manager_afad3b0a750982e55d71edd72b440c724}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!draw\+\_\+manager\+\_\+@{draw\+\_\+manager\+\_\+}}
 \index{draw\+\_\+manager\+\_\+@{draw\+\_\+manager\+\_\+}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{draw\+\_\+manager\+\_\+}{draw\_manager\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_manager}{Draw\+Manager}} Game\+Object\+Manager\+::draw\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_manager}{Draw\+Manager}} Game\+Object\+Manager\+::draw\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -437,27 +654,27 @@ static void Game\+Object\+Manager\+::\+Get\+Pointer\+\_\+\+Registration\+Referen
 
 
 
- Game\+Object\+Manager.\+h の 56 行目に定義があります。
+ Game\+Object\+Manager.\+h の 84 行目に定義があります。
 
-\mbox{\Hypertarget{class_game_object_manager_a7346dd916f897462898a1b28c03cd466}\label{class_game_object_manager_a7346dd916f897462898a1b28c03cd466}} 
-\index{Game\+Object\+Manager@{Game\+Object\+Manager}!reference\+\_\+manager\+\_\+@{reference\+\_\+manager\+\_\+}}
-\index{reference\+\_\+manager\+\_\+@{reference\+\_\+manager\+\_\+}!Game\+Object\+Manager@{Game\+Object\+Manager}}
-\subsubsection{\texorpdfstring{reference\+\_\+manager\+\_\+}{reference\_manager\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_reference_manager}{Game\+Object\+Reference\+Manager}} Game\+Object\+Manager\+::reference\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-参照マネージャ 
+\mbox{\Hypertarget{class_game_object_manager_ab21e2defb8f4f41bded4f8ab98be07aa}\label{class_game_object_manager_ab21e2defb8f4f41bded4f8ab98be07aa}} 
+\index{Game\+Object\+Manager@{Game\+Object\+Manager}!instance\+\_\+@{instance\+\_\+}}
+\index{instance\+\_\+@{instance\+\_\+}!Game\+Object\+Manager@{Game\+Object\+Manager}}
+\subsubsection{\texorpdfstring{instance\+\_\+}{instance\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} $\ast$ Game\+Object\+Manager\+::instance\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
- Game\+Object\+Manager.\+h の 54 行目に定義があります。
+インスタンス 
+
+
+
+ Game\+Object\+Manager.\+h の 46 行目に定義があります。
 
 \mbox{\Hypertarget{class_game_object_manager_a330c1759e1a075fb257a01c6f48cf9f3}\label{class_game_object_manager_a330c1759e1a075fb257a01c6f48cf9f3}} 
 \index{Game\+Object\+Manager@{Game\+Object\+Manager}!update\+\_\+manager\+\_\+@{update\+\_\+manager\+\_\+}}
 \index{update\+\_\+manager\+\_\+@{update\+\_\+manager\+\_\+}!Game\+Object\+Manager@{Game\+Object\+Manager}}
 \subsubsection{\texorpdfstring{update\+\_\+manager\+\_\+}{update\_manager\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_update_manager}{Update\+Manager}} Game\+Object\+Manager\+::update\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_update_manager}{Update\+Manager}} Game\+Object\+Manager\+::update\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -465,11 +682,11 @@ static void Game\+Object\+Manager\+::\+Get\+Pointer\+\_\+\+Registration\+Referen
 
 
 
- Game\+Object\+Manager.\+h の 55 行目に定義があります。
+ Game\+Object\+Manager.\+h の 83 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Game\+Object\+Manager/\mbox{\hyperlink{_game_object_manager_8h}{Game\+Object\+Manager.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Game\+Object\+Manager/\mbox{\hyperlink{_game_object_manager_8cpp}{Game\+Object\+Manager.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Game\+Object/\+Game\+Object\+Manager/\mbox{\hyperlink{_game_object_manager_8h}{Game\+Object\+Manager.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Game\+Object/\+Game\+Object\+Manager/\+Source/\mbox{\hyperlink{_game_object_manager_8cpp}{Game\+Object\+Manager.\+cpp}}\end{DoxyCompactItemize}

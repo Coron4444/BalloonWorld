@@ -11,27 +11,32 @@
 
 
 
-Tutorial\+Scene の継承関係図\nopagebreak
+Tutorial\+Scene 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=156pt]{class_tutorial_scene__inherit__graph}
+\includegraphics[width=350pt]{class_tutorial_scene__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_tutorial_logo}{Tutorial\+Logo}} $\ast$ \mbox{\hyperlink{class_tutorial_scene_a9f1a224f8864ccd5ddfe5a8c894a4582}{getp\+Tutorial\+Logo}} ()
-\begin{DoxyCompactList}\small\item\em チュートリアルロゴポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em チュートリアルロゴ取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_tutorial_scene_a7c8b448ac848d4811e448acf45c5a48e}{set\+Tutorial\+Logo}} (\mbox{\hyperlink{class_tutorial_logo}{Tutorial\+Logo}} $\ast$value)
-\begin{DoxyCompactList}\small\item\em チュートリアルロゴポインタ設定関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em チュートリアルロゴ設定関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_tutorial_scene_a90f8c010bd72aa3dae61a5294fdfbeb7}{Tutorial\+Scene}} (\mbox{\hyperlink{class_scene_base_1_1_state_base}{State\+Base}} $\ast$state)
-\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tutorial_scene_a73023dcc6009590adb942c04631f3294}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tutorial_scene_a988a579b179fc989876b28e24fae7591}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_tutorial_logo}{Tutorial\+Logo}} $\ast$ \mbox{\hyperlink{class_tutorial_scene_a3c2e0e47c2e6078bb7eff928d72fde2a}{tutorial\+\_\+logo\+\_\+}}
 \begin{DoxyCompactList}\small\item\em チュートリアルロゴ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
@@ -41,7 +46,7 @@ void \mbox{\hyperlink{class_tutorial_scene_a7c8b448ac848d4811e448acf45c5a48e}{se
 
 チュートリアルシーン特有の共有データを持っている 
 
- Tutorial\+Scene.\+h の 31 行目に定義があります。
+ Tutorial\+Scene.\+h の 32 行目に定義があります。
 
 
 
@@ -58,7 +63,7 @@ void \mbox{\hyperlink{class_tutorial_scene_a7c8b448ac848d4811e448acf45c5a48e}{se
 
 
 \begin{DoxyParams}{引数}
-{\em state} & 最初のステート \\
+{\em $\ast$state} & 最初のステート \\
 \hline
 \end{DoxyParams}
 
@@ -76,7 +81,7 @@ void \mbox{\hyperlink{class_tutorial_scene_a7c8b448ac848d4811e448acf45c5a48e}{se
 
 
 
-チュートリアルロゴポインタ取得関数 
+チュートリアルロゴ取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -85,12 +90,40 @@ void \mbox{\hyperlink{class_tutorial_scene_a7c8b448ac848d4811e448acf45c5a48e}{se
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Tutorial\+Logo$\ast$} & チュートリアルロゴポインタ \\
+{\em Tutorial\+Logo$\ast$} & チュートリアルロゴ \\
 \hline
 \end{DoxyRetVals}
 
 
  Tutorial\+Scene.\+cpp の 20 行目に定義があります。
+
+\mbox{\Hypertarget{class_tutorial_scene_a73023dcc6009590adb942c04631f3294}\label{class_tutorial_scene_a73023dcc6009590adb942c04631f3294}} 
+\index{Tutorial\+Scene@{Tutorial\+Scene}!Init@{Init}}
+\index{Init@{Init}!Tutorial\+Scene@{Tutorial\+Scene}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Tutorial\+Scene\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_scene_null_a6b27830a755687f2c00149bcfa739388}{Scene\+Null}}を再実装しています。
+
+
+
+ Tutorial\+Scene.\+cpp の 42 行目に定義があります。
 
 \mbox{\Hypertarget{class_tutorial_scene_a7c8b448ac848d4811e448acf45c5a48e}\label{class_tutorial_scene_a7c8b448ac848d4811e448acf45c5a48e}} 
 \index{Tutorial\+Scene@{Tutorial\+Scene}!set\+Tutorial\+Logo@{set\+Tutorial\+Logo}}
@@ -100,11 +133,11 @@ void \mbox{\hyperlink{class_tutorial_scene_a7c8b448ac848d4811e448acf45c5a48e}{se
 
 
 
-チュートリアルロゴポインタ設定関数 
+チュートリアルロゴ設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & チュートリアルロゴポインタ \\
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & チュートリアルロゴ \\
 \hline
 \end{DoxyParams}
 
@@ -115,6 +148,34 @@ void \mbox{\hyperlink{class_tutorial_scene_a7c8b448ac848d4811e448acf45c5a48e}{se
 
 
  Tutorial\+Scene.\+cpp の 25 行目に定義があります。
+
+\mbox{\Hypertarget{class_tutorial_scene_a988a579b179fc989876b28e24fae7591}\label{class_tutorial_scene_a988a579b179fc989876b28e24fae7591}} 
+\index{Tutorial\+Scene@{Tutorial\+Scene}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Tutorial\+Scene@{Tutorial\+Scene}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Tutorial\+Scene\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_scene_null_abbff54a7323b5ccde4b5094757747738}{Scene\+Null}}を再実装しています。
+
+
+
+ Tutorial\+Scene.\+cpp の 52 行目に定義があります。
 
 
 
@@ -131,11 +192,11 @@ void \mbox{\hyperlink{class_tutorial_scene_a7c8b448ac848d4811e448acf45c5a48e}{se
 
 
 
- Tutorial\+Scene.\+h の 37 行目に定義があります。
+ Tutorial\+Scene.\+h の 38 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/02\+\_\+\+Scene/\+Scenes/\+Tutorial\+Scene/\mbox{\hyperlink{_tutorial_scene_8h}{Tutorial\+Scene.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/02\+\_\+\+Scene/\+Scenes/\+Tutorial\+Scene/\mbox{\hyperlink{_tutorial_scene_8cpp}{Tutorial\+Scene.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Scenes/\+Tutorial\+Scene/\mbox{\hyperlink{_tutorial_scene_8h}{Tutorial\+Scene.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Scenes/\+Tutorial\+Scene/\+Source/\mbox{\hyperlink{_tutorial_scene_8cpp}{Tutorial\+Scene.\+cpp}}\end{DoxyCompactItemize}

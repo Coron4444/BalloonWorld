@@ -1,0 +1,920 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: Controller クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_controller.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="#pri-static-attribs">静的非公開変数類</a> &#124;
+<a href="class_controller-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Controller クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>コントローラーClass  
+ <a href="class_controller.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_controller_8h_source.html">Controller.h</a>&gt;</code></p>
+<div class="dynheader">
+Controller 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_controller__coll__graph.png" border="0" usemap="#_controller_coll__map" alt="Collaboration graph"/></div>
+<map name="_controller_coll__map" id="_controller_coll__map">
+<area shape="rect" id="node2" href="class_controller_1_1_x_input_controller.html" title="XInputコントローラーClass " alt="" coords="5,5,180,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller_1_1_x_input_controller.html">XInputController</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">XInputコントローラーClass  <a href="class_controller_1_1_x_input_controller.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:ad81882021d5a5c77855c7d656899cc62"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ad81882021d5a5c77855c7d656899cc62">Number</a> { <br />
+&#160;&#160;<a class="el" href="class_controller.html#ad81882021d5a5c77855c7d656899cc62ab50339a10e1de285ac99d4c3990b8693">Number::NONE</a> = -1, 
+<a class="el" href="class_controller.html#ad81882021d5a5c77855c7d656899cc62abc21e6484530fc9d0313cb816b733396">Number::ONE</a>, 
+<a class="el" href="class_controller.html#ad81882021d5a5c77855c7d656899cc62a0f82d86afa0f5dc965c5c15aca58dcfb">Number::TWO</a>, 
+<a class="el" href="class_controller.html#ad81882021d5a5c77855c7d656899cc62a413af0de1f97a2155acf2b8b26ab36e2">Number::THREE</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_controller.html#ad81882021d5a5c77855c7d656899cc62a7eac1ccd3fbce4abcd58868b992f0a91">Number::fOUR</a>, 
+<a class="el" href="class_controller.html#ad81882021d5a5c77855c7d656899cc62a26a4b44a837bf97b972628509912b4a5">Number::MAX</a>
+<br />
+ }</td></tr>
+<tr class="separator:ad81882021d5a5c77855c7d656899cc62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08e36bbdccc56ce55cdbd5dcc0f438d4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4">Direction</a> { <br />
+&#160;&#160;<a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4ab50339a10e1de285ac99d4c3990b8693">Direction::NONE</a> = -1, 
+<a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4afbaedde498cdead4f2780217646e9ba1">Direction::UP</a>, 
+<a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4ac4e0e4e3118472beeb2ae75827450f1f">Direction::DOWN</a>, 
+<a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4a684d325a7303f52e64011467ff5c5758">Direction::LEFT</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4a21507b40c80068eda19865706fdc2403">Direction::RIGHT</a>, 
+<a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4a26a4b44a837bf97b972628509912b4a5">Direction::MAX</a>
+<br />
+ }</td></tr>
+<tr class="separator:a08e36bbdccc56ce55cdbd5dcc0f438d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7dd769d06d277d3aae9afcf135a4ee"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#abd7dd769d06d277d3aae9afcf135a4ee">TriggerButton</a> { <a class="el" href="class_controller.html#abd7dd769d06d277d3aae9afcf135a4eeab50339a10e1de285ac99d4c3990b8693">TriggerButton::NONE</a> = -1, 
+<a class="el" href="class_controller.html#abd7dd769d06d277d3aae9afcf135a4eea8c6d22ff6f63fc6711cfa315cb80b314">TriggerButton::R2</a>, 
+<a class="el" href="class_controller.html#abd7dd769d06d277d3aae9afcf135a4eea7e6aa2d53f6ee2b1a34b017fa403cb76">TriggerButton::L2</a>, 
+<a class="el" href="class_controller.html#abd7dd769d06d277d3aae9afcf135a4eea26a4b44a837bf97b972628509912b4a5">TriggerButton::MAX</a>
+ }</td></tr>
+<tr class="separator:abd7dd769d06d277d3aae9afcf135a4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a65e554b546455b9c1fdeb9e5d87731d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a65e554b546455b9c1fdeb9e5d87731d0">getHold</a> (int controller_index, int value)</td></tr>
+<tr class="memdesc:a65e554b546455b9c1fdeb9e5d87731d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ホールド状態取得関数  <a href="#a65e554b546455b9c1fdeb9e5d87731d0">[詳解]</a><br /></td></tr>
+<tr class="separator:a65e554b546455b9c1fdeb9e5d87731d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbd455b5ca62047004ab49a236e90014"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#afbd455b5ca62047004ab49a236e90014">getTrigger</a> (int controller_index, int value)</td></tr>
+<tr class="memdesc:afbd455b5ca62047004ab49a236e90014"><td class="mdescLeft">&#160;</td><td class="mdescRight">トリガー状態取得関数  <a href="#afbd455b5ca62047004ab49a236e90014">[詳解]</a><br /></td></tr>
+<tr class="separator:afbd455b5ca62047004ab49a236e90014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2fe11eda9a29429cda53f32eb8c1f1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ae2fe11eda9a29429cda53f32eb8c1f1d">getRelease</a> (int controller_index, int value)</td></tr>
+<tr class="memdesc:ae2fe11eda9a29429cda53f32eb8c1f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">リリ−ス状態取得関数  <a href="#ae2fe11eda9a29429cda53f32eb8c1f1d">[詳解]</a><br /></td></tr>
+<tr class="separator:ae2fe11eda9a29429cda53f32eb8c1f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bdb3ab0c7d74df02488df3e02fea6ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a8bdb3ab0c7d74df02488df3e02fea6ff">getHoldLStick</a> (int controller_index, <a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4">Direction</a> value)</td></tr>
+<tr class="memdesc:a8bdb3ab0c7d74df02488df3e02fea6ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lスティックのホールド状態取得関数  <a href="#a8bdb3ab0c7d74df02488df3e02fea6ff">[詳解]</a><br /></td></tr>
+<tr class="separator:a8bdb3ab0c7d74df02488df3e02fea6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58759e8aa85b6f5bd19a8d3c9304580f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a58759e8aa85b6f5bd19a8d3c9304580f">getHoldRStick</a> (int controller_index, <a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4">Direction</a> value)</td></tr>
+<tr class="separator:a58759e8aa85b6f5bd19a8d3c9304580f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dae1e696002c07c0200432d8c4c87ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a7dae1e696002c07c0200432d8c4c87ed">getTriggerLStick</a> (int controller_index, <a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4">Direction</a> value)</td></tr>
+<tr class="memdesc:a7dae1e696002c07c0200432d8c4c87ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lスティックのトリガー状態取得関数  <a href="#a7dae1e696002c07c0200432d8c4c87ed">[詳解]</a><br /></td></tr>
+<tr class="separator:a7dae1e696002c07c0200432d8c4c87ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf3ce5dd4a886553f53a237ec02383ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#acf3ce5dd4a886553f53a237ec02383ac">getHoldTriggerButton</a> (int controller_index, <a class="el" href="class_controller.html#abd7dd769d06d277d3aae9afcf135a4ee">TriggerButton</a> value)</td></tr>
+<tr class="memdesc:acf3ce5dd4a886553f53a237ec02383ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">トリガーボタンのホールド状態取得関数  <a href="#acf3ce5dd4a886553f53a237ec02383ac">[詳解]</a><br /></td></tr>
+<tr class="separator:acf3ce5dd4a886553f53a237ec02383ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b04c7d6998a75601a5af2854a887c5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a5b04c7d6998a75601a5af2854a887c5e">getTriggerTriggerButton</a> (int controller_index, <a class="el" href="class_controller.html#abd7dd769d06d277d3aae9afcf135a4ee">TriggerButton</a> value)</td></tr>
+<tr class="memdesc:a5b04c7d6998a75601a5af2854a887c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">トリガーボタンのトリガー状態取得関数  <a href="#a5b04c7d6998a75601a5af2854a887c5e">[詳解]</a><br /></td></tr>
+<tr class="separator:a5b04c7d6998a75601a5af2854a887c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a329f08fd8b8293494a1d365148cb195e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a329f08fd8b8293494a1d365148cb195e">getReleaseTriggerButton</a> (int controller_index, <a class="el" href="class_controller.html#abd7dd769d06d277d3aae9afcf135a4ee">TriggerButton</a> value)</td></tr>
+<tr class="memdesc:a329f08fd8b8293494a1d365148cb195e"><td class="mdescLeft">&#160;</td><td class="mdescRight">トリガーボタンのリリ−ス状態取得関数  <a href="#a329f08fd8b8293494a1d365148cb195e">[詳解]</a><br /></td></tr>
+<tr class="separator:a329f08fd8b8293494a1d365148cb195e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bb801356986692b32f989574af8d669"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a8bb801356986692b32f989574af8d669">getControllerNum</a> ()</td></tr>
+<tr class="memdesc:a8bb801356986692b32f989574af8d669"><td class="mdescLeft">&#160;</td><td class="mdescRight">コントローラー数取得関数  <a href="#a8bb801356986692b32f989574af8d669">[詳解]</a><br /></td></tr>
+<tr class="separator:a8bb801356986692b32f989574af8d669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f23f649f5dc2255706f2f151bf30690"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a6f23f649f5dc2255706f2f151bf30690">Update</a> ()</td></tr>
+<tr class="memdesc:a6f23f649f5dc2255706f2f151bf30690"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#a6f23f649f5dc2255706f2f151bf30690">[詳解]</a><br /></td></tr>
+<tr class="separator:a6f23f649f5dc2255706f2f151bf30690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c3ec253ef99efe57471c6e62efe3dcf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a9c3ec253ef99efe57471c6e62efe3dcf">IsConnection</a> (int controller_index)</td></tr>
+<tr class="memdesc:a9c3ec253ef99efe57471c6e62efe3dcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">コントローラー接続確認関数  <a href="#a9c3ec253ef99efe57471c6e62efe3dcf">[詳解]</a><br /></td></tr>
+<tr class="separator:a9c3ec253ef99efe57471c6e62efe3dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a8f71d4e54911c80ea0c113f4b72ccfec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_controller_1_1_x_input_controller.html">XInputController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a8f71d4e54911c80ea0c113f4b72ccfec">controller_</a> [(int) <a class="el" href="class_controller.html#ad81882021d5a5c77855c7d656899cc62a26a4b44a837bf97b972628509912b4a5">Number::MAX</a>]</td></tr>
+<tr class="memdesc:a8f71d4e54911c80ea0c113f4b72ccfec"><td class="mdescLeft">&#160;</td><td class="mdescRight">XInputコントローラー  <a href="#a8f71d4e54911c80ea0c113f4b72ccfec">[詳解]</a><br /></td></tr>
+<tr class="separator:a8f71d4e54911c80ea0c113f4b72ccfec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静的非公開変数類</h2></td></tr>
+<tr class="memitem:a724390d67344586ab54e87b676d2b5bf"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a724390d67344586ab54e87b676d2b5bf">STICK_TRIGGER_SENSITIVITY</a> = 30000</td></tr>
+<tr class="memdesc:a724390d67344586ab54e87b676d2b5bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">スティックトリガー感度  <a href="#a724390d67344586ab54e87b676d2b5bf">[詳解]</a><br /></td></tr>
+<tr class="separator:a724390d67344586ab54e87b676d2b5bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52591fcc8144e0fb274c6a42b5593e1b"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a52591fcc8144e0fb274c6a42b5593e1b">STICK_HOLD_SENSITIVITY</a> = 100</td></tr>
+<tr class="memdesc:a52591fcc8144e0fb274c6a42b5593e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">スティックホールド感度  <a href="#a52591fcc8144e0fb274c6a42b5593e1b">[詳解]</a><br /></td></tr>
+<tr class="separator:a52591fcc8144e0fb274c6a42b5593e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f1051035784f6b5dfdd028021706f6d"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a1f1051035784f6b5dfdd028021706f6d">TRIGGER_BUTTON_SENSITIVITY</a> = 5</td></tr>
+<tr class="memdesc:a1f1051035784f6b5dfdd028021706f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">トリガーボタン感度  <a href="#a1f1051035784f6b5dfdd028021706f6d">[詳解]</a><br /></td></tr>
+<tr class="separator:a1f1051035784f6b5dfdd028021706f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>コントローラーClass </p>
+<p>コントローラーの入力Class </p>
+
+<p class="definition"> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00024">24</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a08e36bbdccc56ce55cdbd5dcc0f438d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08e36bbdccc56ce55cdbd5dcc0f438d4">&#9670;&nbsp;</a></span>Direction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4">Controller::Direction</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a08e36bbdccc56ce55cdbd5dcc0f438d4ab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a08e36bbdccc56ce55cdbd5dcc0f438d4afbaedde498cdead4f2780217646e9ba1"></a>UP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a08e36bbdccc56ce55cdbd5dcc0f438d4ac4e0e4e3118472beeb2ae75827450f1f"></a>DOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a08e36bbdccc56ce55cdbd5dcc0f438d4a684d325a7303f52e64011467ff5c5758"></a>LEFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a08e36bbdccc56ce55cdbd5dcc0f438d4a21507b40c80068eda19865706fdc2403"></a>RIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a08e36bbdccc56ce55cdbd5dcc0f438d4a26a4b44a837bf97b972628509912b4a5"></a>MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00089">89</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad81882021d5a5c77855c7d656899cc62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad81882021d5a5c77855c7d656899cc62">&#9670;&nbsp;</a></span>Number</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_controller.html#ad81882021d5a5c77855c7d656899cc62">Controller::Number</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ad81882021d5a5c77855c7d656899cc62ab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad81882021d5a5c77855c7d656899cc62abc21e6484530fc9d0313cb816b733396"></a>ONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad81882021d5a5c77855c7d656899cc62a0f82d86afa0f5dc965c5c15aca58dcfb"></a>TWO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad81882021d5a5c77855c7d656899cc62a413af0de1f97a2155acf2b8b26ab36e2"></a>THREE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad81882021d5a5c77855c7d656899cc62a7eac1ccd3fbce4abcd58868b992f0a91"></a>fOUR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad81882021d5a5c77855c7d656899cc62a26a4b44a837bf97b972628509912b4a5"></a>MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00079">79</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abd7dd769d06d277d3aae9afcf135a4ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd7dd769d06d277d3aae9afcf135a4ee">&#9670;&nbsp;</a></span>TriggerButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_controller.html#abd7dd769d06d277d3aae9afcf135a4ee">Controller::TriggerButton</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="abd7dd769d06d277d3aae9afcf135a4eeab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abd7dd769d06d277d3aae9afcf135a4eea8c6d22ff6f63fc6711cfa315cb80b314"></a>R2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abd7dd769d06d277d3aae9afcf135a4eea7e6aa2d53f6ee2b1a34b017fa403cb76"></a>L2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abd7dd769d06d277d3aae9afcf135a4eea26a4b44a837bf97b972628509912b4a5"></a>MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00099">99</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a8bb801356986692b32f989574af8d669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bb801356986692b32f989574af8d669">&#9670;&nbsp;</a></span>getControllerNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Controller::getControllerNum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コントローラー数取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">int</td><td>コントローラー数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00238">238</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a65e554b546455b9c1fdeb9e5d87731d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65e554b546455b9c1fdeb9e5d87731d0">&#9670;&nbsp;</a></span>getHold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::getHold </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controller_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ホールド状態取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller_index</td><td>コントローラーインデックス </td></tr>
+    <tr><td class="paramname">value</td><td>判定したいボタン </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>押されていればtrue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00050">50</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8bdb3ab0c7d74df02488df3e02fea6ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bdb3ab0c7d74df02488df3e02fea6ff">&#9670;&nbsp;</a></span>getHoldLStick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::getHoldLStick </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controller_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4">Controller::Direction</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lスティックのホールド状態取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller_index</td><td>コントローラーインデックス </td></tr>
+    <tr><td class="paramname">value</td><td>判定したい方向 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>押されていればtrue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00076">76</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a58759e8aa85b6f5bd19a8d3c9304580f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58759e8aa85b6f5bd19a8d3c9304580f">&#9670;&nbsp;</a></span>getHoldRStick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::getHoldRStick </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controller_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4">Controller::Direction</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00106">106</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acf3ce5dd4a886553f53a237ec02383ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf3ce5dd4a886553f53a237ec02383ac">&#9670;&nbsp;</a></span>getHoldTriggerButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::getHoldTriggerButton </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controller_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_controller.html#abd7dd769d06d277d3aae9afcf135a4ee">Controller::TriggerButton</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>トリガーボタンのホールド状態取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller_index</td><td>コントローラーインデックス </td></tr>
+    <tr><td class="paramname">value</td><td>判定したいボタン </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>押されていればtrue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00170">170</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae2fe11eda9a29429cda53f32eb8c1f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2fe11eda9a29429cda53f32eb8c1f1d">&#9670;&nbsp;</a></span>getRelease()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::getRelease </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controller_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>リリ−ス状態取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller_index</td><td>コントローラーインデックス </td></tr>
+    <tr><td class="paramname">value</td><td>判定したいボタン </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>離した瞬間true </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00067">67</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a329f08fd8b8293494a1d365148cb195e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a329f08fd8b8293494a1d365148cb195e">&#9670;&nbsp;</a></span>getReleaseTriggerButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::getReleaseTriggerButton </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controller_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_controller.html#abd7dd769d06d277d3aae9afcf135a4ee">Controller::TriggerButton</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>トリガーボタンのリリ−ス状態取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller_index</td><td>コントローラーインデックス </td></tr>
+    <tr><td class="paramname">value</td><td>判定したいボタン </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>離した瞬間true </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00215">215</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afbd455b5ca62047004ab49a236e90014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbd455b5ca62047004ab49a236e90014">&#9670;&nbsp;</a></span>getTrigger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::getTrigger </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controller_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>トリガー状態取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller_index</td><td>コントローラーインデックス </td></tr>
+    <tr><td class="paramname">value</td><td>判定したいボタン </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>押した瞬間はtrue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00058">58</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7dae1e696002c07c0200432d8c4c87ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dae1e696002c07c0200432d8c4c87ed">&#9670;&nbsp;</a></span>getTriggerLStick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::getTriggerLStick </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controller_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4">Controller::Direction</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lスティックのトリガー状態取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller_index</td><td>コントローラーインデックス </td></tr>
+    <tr><td class="paramname">value</td><td>判定したい方向 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>押した瞬間はtrue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00136">136</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5b04c7d6998a75601a5af2854a887c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b04c7d6998a75601a5af2854a887c5e">&#9670;&nbsp;</a></span>getTriggerTriggerButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::getTriggerTriggerButton </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controller_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_controller.html#abd7dd769d06d277d3aae9afcf135a4ee">Controller::TriggerButton</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>トリガーボタンのトリガー状態取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller_index</td><td>コントローラーインデックス </td></tr>
+    <tr><td class="paramname">value</td><td>判定したいボタン </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>押した瞬間はtrue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00194">194</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9c3ec253ef99efe57471c6e62efe3dcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c3ec253ef99efe57471c6e62efe3dcf">&#9670;&nbsp;</a></span>IsConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::IsConnection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controller_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コントローラー接続確認関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller_index</td><td>コントローラーインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>接続されていればtrue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00265">265</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6f23f649f5dc2255706f2f151bf30690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f23f649f5dc2255706f2f151bf30690">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_controller_8cpp_source.html">Controller.cpp</a> の <a class="el" href="_controller_8cpp_source.html#l00254">254</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a8f71d4e54911c80ea0c113f4b72ccfec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f71d4e54911c80ea0c113f4b72ccfec">&#9670;&nbsp;</a></span>controller_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_controller_1_1_x_input_controller.html">XInputController</a> Controller::controller_[(int) <a class="el" href="class_controller.html#ad81882021d5a5c77855c7d656899cc62a26a4b44a837bf97b972628509912b4a5">Number::MAX</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>XInputコントローラー </p>
+
+<p class="definition"> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00121">121</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a52591fcc8144e0fb274c6a42b5593e1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52591fcc8144e0fb274c6a42b5593e1b">&#9670;&nbsp;</a></span>STICK_HOLD_SENSITIVITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Controller::STICK_HOLD_SENSITIVITY = 100</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>スティックホールド感度 </p>
+
+<p class="definition"> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00113">113</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a724390d67344586ab54e87b676d2b5bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a724390d67344586ab54e87b676d2b5bf">&#9670;&nbsp;</a></span>STICK_TRIGGER_SENSITIVITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Controller::STICK_TRIGGER_SENSITIVITY = 30000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>スティックトリガー感度 </p>
+
+<p class="definition"> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00112">112</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1f1051035784f6b5dfdd028021706f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f1051035784f6b5dfdd028021706f6d">&#9670;&nbsp;</a></span>TRIGGER_BUTTON_SENSITIVITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Controller::TRIGGER_BUTTON_SENSITIVITY = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>トリガーボタン感度 </p>
+
+<p class="definition"> <a class="el" href="_controller_8h_source.html">Controller.h</a> の <a class="el" href="_controller_8h_source.html#l00114">114</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Input/<a class="el" href="_controller_8h_source.html">Controller.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Input/Source/<a class="el" href="_controller_8cpp_source.html">Controller.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_controller.html">Controller</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

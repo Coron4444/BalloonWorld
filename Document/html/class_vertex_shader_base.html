@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: VertexShaderBase クラス</title>
+<title>BalloonWorld: VertexShaderBase クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -96,95 +96,123 @@ $(document).ready(function(){initNavTree('class_vertex_shader_base.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>頂点シェーダー基底クラス  
+<p>頂点シェーダーBassClass  
  <a href="class_vertex_shader_base.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="_vertex_shader_base_8h_source.html">VertexShaderBase.h</a>&gt;</code></p>
 <div class="dynheader">
-VertexShaderBase の継承関係図</div>
+VertexShaderBase 連携図</div>
 <div class="dyncontent">
-<div class="center"><img src="class_vertex_shader_base__inherit__graph.png" border="0" usemap="#_vertex_shader_base_inherit__map" alt="Inheritance graph"/></div>
-<map name="_vertex_shader_base_inherit__map" id="_vertex_shader_base_inherit__map">
-<area shape="rect" id="node3" href="class_vertex_shader_null.html" title="空白頂点シェーダークラス " alt="" coords="127,155,249,181"/>
-<area shape="rect" id="node2" href="class_shader_base.html" title="シェーダー基底クラス " alt="" coords="141,5,235,32"/>
-<area shape="rect" id="node4" href="class_vertex_shader_bump_mapping.html" title="バンプマッピング頂点シェーダークラス " alt="" coords="5,229,189,256"/>
-<area shape="rect" id="node5" href="class_vertex_shader_fixed.html" title="固定機能頂点シェーダークラス " alt="" coords="213,229,347,256"/>
+<div class="center"><img src="class_vertex_shader_base__coll__graph.png" border="0" usemap="#_vertex_shader_base_coll__map" alt="Collaboration graph"/></div>
+<map name="_vertex_shader_base_coll__map" id="_vertex_shader_base_coll__map">
+<area shape="rect" id="node2" href="class_shader_base.html" title="シェーダーBaseClass " alt="" coords="24,676,117,703"/>
+<area shape="rect" id="node3" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="5,587,136,613"/>
+<area shape="rect" id="node4" href="class_camera.html" title="カメラClass " alt="" coords="307,468,373,495"/>
+<area shape="rect" id="node5" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="336,587,443,613"/>
+<area shape="rect" id="node6" href="class_matrix.html" title="行列Class " alt="" coords="311,297,369,323"/>
+<area shape="rect" id="node8" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="154,81,230,108"/>
+<area shape="rect" id="node10" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="41,468,148,495"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a9f93697c5668852850f0a7b7ef7cb67f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vertex_shader_base.html#a9f93697c5668852850f0a7b7ef7cb67f">SetShader</a> () override</td></tr>
-<tr class="memdesc:a9f93697c5668852850f0a7b7ef7cb67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダー設定関数  <a href="#a9f93697c5668852850f0a7b7ef7cb67f">[詳解]</a><br /></td></tr>
-<tr class="separator:a9f93697c5668852850f0a7b7ef7cb67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2111b20156419548afe14132651d5e21"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DVERTEXSHADER9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vertex_shader_base.html#a2111b20156419548afe14132651d5e21">getpVertexShader</a> ()</td></tr>
+<tr class="memdesc:a2111b20156419548afe14132651d5e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダー取得関数  <a href="#a2111b20156419548afe14132651d5e21">[詳解]</a><br /></td></tr>
+<tr class="separator:a2111b20156419548afe14132651d5e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c88a06560f530be7cb04923a916904"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vertex_shader_base.html#a72c88a06560f530be7cb04923a916904">ShaderSetToDevice</a> () override</td></tr>
+<tr class="memdesc:a72c88a06560f530be7cb04923a916904"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスにシェーダー設定関数  <a href="#a72c88a06560f530be7cb04923a916904">[詳解]</a><br /></td></tr>
+<tr class="separator:a72c88a06560f530be7cb04923a916904"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6565abadb8ac173d3273ab1698d31c6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vertex_shader_base.html#a6565abadb8ac173d3273ab1698d31c6c">VertexShaderCompile</a> (const char *file_name, const char *entry_function, const char *version)</td></tr>
 <tr class="memdesc:a6565abadb8ac173d3273ab1698d31c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダーコンパイル関数  <a href="#a6565abadb8ac173d3273ab1698d31c6c">[詳解]</a><br /></td></tr>
 <tr class="separator:a6565abadb8ac173d3273ab1698d31c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42ff1e32a2c231f77d0ba0e6a8312e63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vertex_shader_base.html#a42ff1e32a2c231f77d0ba0e6a8312e63">ReleaseVertexShader</a> ()</td></tr>
 <tr class="memdesc:a42ff1e32a2c231f77d0ba0e6a8312e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダー解放関数  <a href="#a42ff1e32a2c231f77d0ba0e6a8312e63">[詳解]</a><br /></td></tr>
 <tr class="separator:a42ff1e32a2c231f77d0ba0e6a8312e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab10cf1aac4a54653c553b5c84e1d3703"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DVERTEXSHADER9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vertex_shader_base.html#ab10cf1aac4a54653c553b5c84e1d3703">GetVertexShader</a> ()</td></tr>
-<tr class="separator:ab10cf1aac4a54653c553b5c84e1d3703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_shader_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_shader_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_shader_base.html">ShaderBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a89f6e1ba14f7db57248c794356f9b076 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">LPD3DXCONSTANTTABLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a89f6e1ba14f7db57248c794356f9b076">getpConstantTable</a> ()</td></tr>
+<tr class="memdesc:a89f6e1ba14f7db57248c794356f9b076 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">定数テーブル取得関数  <a href="class_shader_base.html#a89f6e1ba14f7db57248c794356f9b076">[詳解]</a><br /></td></tr>
+<tr class="separator:a89f6e1ba14f7db57248c794356f9b076 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa16d631f799060854de36a024dcfce48 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DDEVICE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#aa16d631f799060854de36a024dcfce48">getpDevice</a> ()</td></tr>
+<tr class="memdesc:aa16d631f799060854de36a024dcfce48 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイス取得関数  <a href="class_shader_base.html#aa16d631f799060854de36a024dcfce48">[詳解]</a><br /></td></tr>
+<tr class="separator:aa16d631f799060854de36a024dcfce48 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7637faa8fe5aa027dc91e00cfee26f33 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a7637faa8fe5aa027dc91e00cfee26f33">getpDrawCommonData</a> ()</td></tr>
+<tr class="memdesc:a7637faa8fe5aa027dc91e00cfee26f33 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ取得関数  <a href="class_shader_base.html#a7637faa8fe5aa027dc91e00cfee26f33">[詳解]</a><br /></td></tr>
+<tr class="separator:a7637faa8fe5aa027dc91e00cfee26f33 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbffa59fae48651c11489de37a88b190 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#abbffa59fae48651c11489de37a88b190">setDrawCommonData</a> (<a class="el" href="class_draw_common_data.html">DrawCommonData</a> *value)</td></tr>
+<tr class="memdesc:abbffa59fae48651c11489de37a88b190 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ設定関数  <a href="class_shader_base.html#abbffa59fae48651c11489de37a88b190">[詳解]</a><br /></td></tr>
+<tr class="separator:abbffa59fae48651c11489de37a88b190 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7c2337128ca825093ab3a47bce4084 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a3b7c2337128ca825093ab3a47bce4084">~ShaderBase</a> ()=0</td></tr>
+<tr class="memdesc:a3b7c2337128ca825093ab3a47bce4084 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ関数  <a href="class_shader_base.html#a3b7c2337128ca825093ab3a47bce4084">[詳解]</a><br /></td></tr>
+<tr class="separator:a3b7c2337128ca825093ab3a47bce4084 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9622b2f5e0184a78d3af82820dc5113d inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a9622b2f5e0184a78d3af82820dc5113d">Init</a> ()=0</td></tr>
 <tr class="memdesc:a9622b2f5e0184a78d3af82820dc5113d inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="class_shader_base.html#a9622b2f5e0184a78d3af82820dc5113d">[詳解]</a><br /></td></tr>
 <tr class="separator:a9622b2f5e0184a78d3af82820dc5113d inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a784edfa81bec4d08a257ed4f02c61222 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a784edfa81bec4d08a257ed4f02c61222">Uninit</a> ()=0</td></tr>
 <tr class="memdesc:a784edfa81bec4d08a257ed4f02c61222 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="class_shader_base.html#a784edfa81bec4d08a257ed4f02c61222">[詳解]</a><br /></td></tr>
 <tr class="separator:a784edfa81bec4d08a257ed4f02c61222 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef6fa922223d71fbec81464ebbfaf687 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#aef6fa922223d71fbec81464ebbfaf687">CommonSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index)=0</td></tr>
-<tr class="memdesc:aef6fa922223d71fbec81464ebbfaf687 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">共通設定関数  <a href="class_shader_base.html#aef6fa922223d71fbec81464ebbfaf687">[詳解]</a><br /></td></tr>
-<tr class="separator:aef6fa922223d71fbec81464ebbfaf687 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac78c78ede3b8e48cf28b739b97456620 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#ac78c78ede3b8e48cf28b739b97456620">SpecificSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index, unsigned mesh_index)=0</td></tr>
-<tr class="memdesc:ac78c78ede3b8e48cf28b739b97456620 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">固有設定関数  <a href="class_shader_base.html#ac78c78ede3b8e48cf28b739b97456620">[詳解]</a><br /></td></tr>
-<tr class="separator:ac78c78ede3b8e48cf28b739b97456620 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6e791440374f97592cfb4cb36f4fa55 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#ac6e791440374f97592cfb4cb36f4fa55">ShaderCompile</a> (const char *file_name, const char *entry_function, const char *version, LPD3DXBUFFER *compiled_code)</td></tr>
-<tr class="memdesc:ac6e791440374f97592cfb4cb36f4fa55 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダーコンパイル関数  <a href="class_shader_base.html#ac6e791440374f97592cfb4cb36f4fa55">[詳解]</a><br /></td></tr>
-<tr class="separator:ac6e791440374f97592cfb4cb36f4fa55 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaac3419f1fce5bf12973e827daadbf8c inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#aaac3419f1fce5bf12973e827daadbf8c">InitDevice</a> ()</td></tr>
-<tr class="memdesc:aaac3419f1fce5bf12973e827daadbf8c inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスの初期化関数  <a href="class_shader_base.html#aaac3419f1fce5bf12973e827daadbf8c">[詳解]</a><br /></td></tr>
-<tr class="separator:aaac3419f1fce5bf12973e827daadbf8c inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4601ff3d20f01800ffd676d3db8d9289 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DDEVICE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a4601ff3d20f01800ffd676d3db8d9289">GetDevice</a> ()</td></tr>
-<tr class="separator:a4601ff3d20f01800ffd676d3db8d9289 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85a5c17b56b6ffa29f7784ab42696d7c inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">LPD3DXCONSTANTTABLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a85a5c17b56b6ffa29f7784ab42696d7c">GetConstantTable</a> ()</td></tr>
-<tr class="separator:a85a5c17b56b6ffa29f7784ab42696d7c inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a054bc5e129619ec976740e0698ef9a8b inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a054bc5e129619ec976740e0698ef9a8b">ObjectSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index)=0</td></tr>
+<tr class="memdesc:a054bc5e129619ec976740e0698ef9a8b inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト設定関数  <a href="class_shader_base.html#a054bc5e129619ec976740e0698ef9a8b">[詳解]</a><br /></td></tr>
+<tr class="separator:a054bc5e129619ec976740e0698ef9a8b inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04f6ce27a707f4040e8abe48f9840951 inherit pub_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a04f6ce27a707f4040e8abe48f9840951">MeshSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index, unsigned mesh_index)=0</td></tr>
+<tr class="memdesc:a04f6ce27a707f4040e8abe48f9840951 inherit pub_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ設定関数  <a href="class_shader_base.html#a04f6ce27a707f4040e8abe48f9840951">[詳解]</a><br /></td></tr>
+<tr class="separator:a04f6ce27a707f4040e8abe48f9840951 inherit pub_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 非公開変数類</h2></td></tr>
 <tr class="memitem:a06f34810bedce79d6115c88a61dfbea4"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DVERTEXSHADER9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vertex_shader_base.html#a06f34810bedce79d6115c88a61dfbea4">vertex_shader_</a> = nullptr</td></tr>
 <tr class="memdesc:a06f34810bedce79d6115c88a61dfbea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダー  <a href="#a06f34810bedce79d6115c88a61dfbea4">[詳解]</a><br /></td></tr>
 <tr class="separator:a06f34810bedce79d6115c88a61dfbea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_methods_class_shader_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_shader_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_shader_base.html">ShaderBase</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:ac6e791440374f97592cfb4cb36f4fa55 inherit pro_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#ac6e791440374f97592cfb4cb36f4fa55">ShaderCompile</a> (const char *file_name, const char *entry_function, const char *version, LPD3DXBUFFER *compiled_code)</td></tr>
+<tr class="memdesc:ac6e791440374f97592cfb4cb36f4fa55 inherit pro_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダーコンパイル関数  <a href="class_shader_base.html#ac6e791440374f97592cfb4cb36f4fa55">[詳解]</a><br /></td></tr>
+<tr class="separator:ac6e791440374f97592cfb4cb36f4fa55 inherit pro_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaac3419f1fce5bf12973e827daadbf8c inherit pro_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#aaac3419f1fce5bf12973e827daadbf8c">InitDevice</a> ()</td></tr>
+<tr class="memdesc:aaac3419f1fce5bf12973e827daadbf8c inherit pro_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイス初期化関数  <a href="class_shader_base.html#aaac3419f1fce5bf12973e827daadbf8c">[詳解]</a><br /></td></tr>
+<tr class="separator:aaac3419f1fce5bf12973e827daadbf8c inherit pro_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b6fc2252b39598f36e91aec1a207e7 inherit pro_methods_class_shader_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a30b6fc2252b39598f36e91aec1a207e7">ReleaseConstantTable</a> ()</td></tr>
+<tr class="memdesc:a30b6fc2252b39598f36e91aec1a207e7 inherit pro_methods_class_shader_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">定数テーブル解放関数  <a href="class_shader_base.html#a30b6fc2252b39598f36e91aec1a207e7">[詳解]</a><br /></td></tr>
+<tr class="separator:a30b6fc2252b39598f36e91aec1a207e7 inherit pro_methods_class_shader_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>頂点シェーダー基底クラス </p>
-<p>頂点シェーダー基底クラス </p>
+<div class="textblock"><p>頂点シェーダーBassClass </p>
+<p>頂点シェーダーのBassClass </p>
 
-<p class="definition"> <a class="el" href="_vertex_shader_base_8h_source.html">VertexShaderBase.h</a> の <a class="el" href="_vertex_shader_base_8h_source.html#l00026">26</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_vertex_shader_base_8h_source.html">VertexShaderBase.h</a> の <a class="el" href="_vertex_shader_base_8h_source.html#l00024">24</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="ab10cf1aac4a54653c553b5c84e1d3703"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab10cf1aac4a54653c553b5c84e1d3703">&#9670;&nbsp;</a></span>GetVertexShader()</h2>
+<a id="a2111b20156419548afe14132651d5e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2111b20156419548afe14132651d5e21">&#9670;&nbsp;</a></span>getpVertexShader()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">LPDIRECT3DVERTEXSHADER9 VertexShaderBase::GetVertexShader </td>
+          <td class="memname">LPDIRECT3DVERTEXSHADER9 VertexShaderBase::getpVertexShader </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_vertex_shader_base_8h_source.html">VertexShaderBase.h</a> の <a class="el" href="_vertex_shader_base_8h_source.html#l00087">87</a> 行目に定義があります。</p>
+<p>頂点シェーダー取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">LPDIRECT3DVERTEXSHADER9</td><td>頂点シェーダー </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_vertex_shader_base_8cpp_source.html">VertexShaderBase.cpp</a> の <a class="el" href="_vertex_shader_base_8cpp_source.html#l00020">20</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -193,9 +221,6 @@ VertexShaderBase の継承関係図</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void VertexShaderBase::ReleaseVertexShader </td>
@@ -204,21 +229,28 @@ VertexShaderBase の継承関係図</div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>頂点シェーダー解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_vertex_shader_base_8h_source.html">VertexShaderBase.h</a> の <a class="el" href="_vertex_shader_base_8h_source.html#l00081">81</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_vertex_shader_base_8cpp_source.html">VertexShaderBase.cpp</a> の <a class="el" href="_vertex_shader_base_8cpp_source.html#l00062">62</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a9f93697c5668852850f0a7b7ef7cb67f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f93697c5668852850f0a7b7ef7cb67f">&#9670;&nbsp;</a></span>SetShader()</h2>
+<a id="a72c88a06560f530be7cb04923a916904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c88a06560f530be7cb04923a916904">&#9670;&nbsp;</a></span>ShaderSetToDevice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,7 +259,7 @@ VertexShaderBase の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void VertexShaderBase::SetShader </td>
+          <td class="memname">void VertexShaderBase::ShaderSetToDevice </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -235,16 +267,28 @@ VertexShaderBase の継承関係図</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>シェーダー設定関数 </p>
+<p>デバイスにシェーダー設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p><a class="el" href="class_shader_base.html#af45063254b80602db8626360d643baee">ShaderBase</a>を実装しています。</p>
+<p><a class="el" href="class_shader_base.html#a78e5b6f343821648409d50653e0105e2">ShaderBase</a>を実装しています。</p>
 
-<p class="definition"> <a class="el" href="_vertex_shader_base_8h_source.html">VertexShaderBase.h</a> の <a class="el" href="_vertex_shader_base_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_vertex_shader_base_8cpp_source.html">VertexShaderBase.cpp</a> の <a class="el" href="_vertex_shader_base_8cpp_source.html#l00030">30</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -253,9 +297,6 @@ VertexShaderBase の継承関係図</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool VertexShaderBase::VertexShaderCompile </td>
@@ -281,23 +322,25 @@ VertexShaderBase の継承関係図</div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>頂点シェーダーコンパイル関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>: ファイル名 entry_function : エントリ関数名 version : シェーダーバージョン </td></tr>
+    <tr><td class="paramname">*file_name</td><td>ファイル名 </td></tr>
+    <tr><td class="paramname">*entry_function</td><td>エントリ関数名 </td></tr>
+    <tr><td class="paramname">*version</td><td>シェーダーバージョン </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>コンパイル成功ならtrue </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>コンパイル成功ならtrue </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_vertex_shader_base_8h_source.html">VertexShaderBase.h</a> の <a class="el" href="_vertex_shader_base_8h_source.html#l00057">57</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_vertex_shader_base_8cpp_source.html">VertexShaderBase.cpp</a> の <a class="el" href="_vertex_shader_base_8cpp_source.html#l00037">37</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -324,12 +367,13 @@ VertexShaderBase の継承関係図</div>
 
 <p>頂点シェーダー </p>
 
-<p class="definition"> <a class="el" href="_vertex_shader_base_8h_source.html">VertexShaderBase.h</a> の <a class="el" href="_vertex_shader_base_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_vertex_shader_base_8h_source.html">VertexShaderBase.h</a> の <a class="el" href="_vertex_shader_base_8h_source.html#l00030">30</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/DrawManager/Shader/ShaderBase/<a class="el" href="_vertex_shader_base_8h_source.html">VertexShaderBase.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/Shader/VertexShader/<a class="el" href="_vertex_shader_base_8h_source.html">VertexShaderBase.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/Shader/VertexShader/Source/<a class="el" href="_vertex_shader_base_8cpp_source.html">VertexShaderBase.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

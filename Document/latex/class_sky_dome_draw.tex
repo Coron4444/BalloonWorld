@@ -2,7 +2,7 @@
 \label{class_sky_dome_draw}\index{Sky\+Dome\+Draw@{Sky\+Dome\+Draw}}
 
 
-プレイヤー描画クラス  
+天球描画\+Class  
 
 
 
@@ -11,46 +11,48 @@
 
 
 
-Sky\+Dome\+Draw の継承関係図\nopagebreak
+Sky\+Dome\+Draw 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=169pt]{class_sky_dome_draw__inherit__graph}
+\includegraphics[width=350pt]{class_sky_dome_draw__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
+unsigned \mbox{\hyperlink{class_sky_dome_draw_a6b281bafa71c058ee83c373ad978e3bb}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_sky_dome_draw_accbc05d1bbde9ad9d6b7180d91e9ed89}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ワールド行列取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_sky_dome_draw_a45d3e8d70753af83c84c7a7c9193459f}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアル取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_sky_dome_draw_aaa9db229fadd7d4c041afa5436a584af}{getp\+Diffuse\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ディヒューズテクスチャ取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_sky_dome_draw_a5b82e8b650a20dbc0b7ed720d1fb7fab}{Init}} () override
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_sky_dome_draw_aee1c6b102a97033073b2559b8c2c328b}{Uninit}} () override
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_sky_dome_draw_a42364ea42618cbab588d55050edfe95a}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
-unsigned \mbox{\hyperlink{class_sky_dome_draw_a6b281bafa71c058ee83c373ad978e3bb}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_sky_dome_draw_accbc05d1bbde9ad9d6b7180d91e9ed89}{getp\+Matrix}} (unsigned object\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em 行列ポインタ取得関数 \end{DoxyCompactList}\item 
-D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_sky_dome_draw_a45d3e8d70753af83c84c7a7c9193459f}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em マテリアルポインタ取得関数 \end{DoxyCompactList}\item 
-L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_sky_dome_draw_a99ec8e0a5aea708b66cf07c79a6449d1}{getp\+Decale\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em デカールテクスチャポインタ取得関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ \mbox{\hyperlink{class_sky_dome_draw_a2453fb04f979443c61acc10eafa183aa}{sky\+\_\+dome\+\_\+model\+\_\+}}
-\begin{DoxyCompactList}\small\item\em モデルオブジェクト \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 天球モデル \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 static const std\+::string \mbox{\hyperlink{class_sky_dome_draw_a366fd9d1040d77ddac71e335f10f2c29}{M\+O\+D\+E\+L\+\_\+\+N\+A\+ME}} = \char`\"{}Sky\+Dome/Sky\+Dome.\+x\char`\"{}
-\begin{DoxyCompactList}\small\item\em モデル名 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em モデル名 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_sky_dome_draw_a50389a4bcc210ebd4b2ca93a161ecae6}{S\+C\+A\+LE}} = 130.\+0f
+\begin{DoxyCompactList}\small\item\em 拡縮 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
-プレイヤー描画クラス 
+天球描画\+Class 
 
-プレイヤーの描画クラス 
+天球の描画\+Class 
 
  Sky\+Dome\+Draw.\+h の 31 行目に定義があります。
 
@@ -69,16 +71,23 @@ static const std\+::string \mbox{\hyperlink{class_sky_dome_draw_a366fd9d1040d77d
 
 
 \begin{DoxyParams}{引数}
-{\em object\+\_\+index} & \+: オブジェクトインデックス mesh\+\_\+index \+: メッシュインデックス \\
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
 \mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
 
 
 
- Sky\+Dome\+Draw.\+cpp の 58 行目に定義があります。
+ Sky\+Dome\+Draw.\+cpp の 94 行目に定義があります。
 
 \mbox{\Hypertarget{class_sky_dome_draw_a6b281bafa71c058ee83c373ad978e3bb}\label{class_sky_dome_draw_a6b281bafa71c058ee83c373ad978e3bb}} 
 \index{Sky\+Dome\+Draw@{Sky\+Dome\+Draw}!get\+Mesh\+Num@{get\+Mesh\+Num}}
@@ -91,8 +100,8 @@ static const std\+::string \mbox{\hyperlink{class_sky_dome_draw_a366fd9d1040d77d
 メッシュ数取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
@@ -106,37 +115,37 @@ static const std\+::string \mbox{\hyperlink{class_sky_dome_draw_a366fd9d1040d77d
 
 
 
- Sky\+Dome\+Draw.\+cpp の 72 行目に定義があります。
+ Sky\+Dome\+Draw.\+cpp の 28 行目に定義があります。
 
-\mbox{\Hypertarget{class_sky_dome_draw_a99ec8e0a5aea708b66cf07c79a6449d1}\label{class_sky_dome_draw_a99ec8e0a5aea708b66cf07c79a6449d1}} 
-\index{Sky\+Dome\+Draw@{Sky\+Dome\+Draw}!getp\+Decale\+Texture@{getp\+Decale\+Texture}}
-\index{getp\+Decale\+Texture@{getp\+Decale\+Texture}!Sky\+Dome\+Draw@{Sky\+Dome\+Draw}}
-\subsubsection{\texorpdfstring{getp\+Decale\+Texture()}{getpDecaleTexture()}}
-{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Sky\+Dome\+Draw\+::getp\+Decale\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-デカールテクスチャポインタ取得関数 
+\mbox{\Hypertarget{class_sky_dome_draw_aaa9db229fadd7d4c041afa5436a584af}\label{class_sky_dome_draw_aaa9db229fadd7d4c041afa5436a584af}} 
+\index{Sky\+Dome\+Draw@{Sky\+Dome\+Draw}!getp\+Diffuse\+Texture@{getp\+Diffuse\+Texture}}
+\index{getp\+Diffuse\+Texture@{getp\+Diffuse\+Texture}!Sky\+Dome\+Draw@{Sky\+Dome\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Diffuse\+Texture()}{getpDiffuseTexture()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Sky\+Dome\+Draw\+::getp\+Diffuse\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+
+ディヒューズテクスチャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & デカールテクスチャポインタ \\
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & ディヒューズテクスチャ \\
 \hline
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_draw_null_a87d21f70b6fed637a6e23029f29818c1}{Draw\+Null}}を再実装しています。
+\mbox{\hyperlink{class_draw_null_a98cc7cd43b19d9d70cc621d23d89286f}{Draw\+Null}}を再実装しています。
 
 
 
- Sky\+Dome\+Draw.\+cpp の 108 行目に定義があります。
+ Sky\+Dome\+Draw.\+cpp の 55 行目に定義があります。
 
 \mbox{\Hypertarget{class_sky_dome_draw_a45d3e8d70753af83c84c7a7c9193459f}\label{class_sky_dome_draw_a45d3e8d70753af83c84c7a7c9193459f}} 
 \index{Sky\+Dome\+Draw@{Sky\+Dome\+Draw}!getp\+Material@{getp\+Material}}
@@ -146,18 +155,18 @@ static const std\+::string \mbox{\hyperlink{class_sky_dome_draw_a366fd9d1040d77d
 
 
 
-マテリアルポインタ取得関数 
+マテリアル取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアルポインタ \\
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
 \hline
 \end{DoxyRetVals}
 
@@ -166,26 +175,26 @@ static const std\+::string \mbox{\hyperlink{class_sky_dome_draw_a366fd9d1040d77d
 
 
 
- Sky\+Dome\+Draw.\+cpp の 96 行目に定義があります。
+ Sky\+Dome\+Draw.\+cpp の 46 行目に定義があります。
 
 \mbox{\Hypertarget{class_sky_dome_draw_accbc05d1bbde9ad9d6b7180d91e9ed89}\label{class_sky_dome_draw_accbc05d1bbde9ad9d6b7180d91e9ed89}} 
 \index{Sky\+Dome\+Draw@{Sky\+Dome\+Draw}!getp\+Matrix@{getp\+Matrix}}
 \index{getp\+Matrix@{getp\+Matrix}!Sky\+Dome\+Draw@{Sky\+Dome\+Draw}}
 \subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Sky\+Dome\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Sky\+Dome\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-行列ポインタ取得関数 
+ワールド行列取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em M\+A\+T\+R\+I\+X$\ast$} & 行列ポインタ \\
+{\em M\+A\+T\+R\+I\+X$\ast$} & ワールド行列 \\
 \hline
 \end{DoxyRetVals}
 
@@ -194,7 +203,7 @@ static const std\+::string \mbox{\hyperlink{class_sky_dome_draw_a366fd9d1040d77d
 
 
 
- Sky\+Dome\+Draw.\+cpp の 84 行目に定義があります。
+ Sky\+Dome\+Draw.\+cpp の 37 行目に定義があります。
 
 \mbox{\Hypertarget{class_sky_dome_draw_a5b82e8b650a20dbc0b7ed720d1fb7fab}\label{class_sky_dome_draw_a5b82e8b650a20dbc0b7ed720d1fb7fab}} 
 \index{Sky\+Dome\+Draw@{Sky\+Dome\+Draw}!Init@{Init}}
@@ -207,12 +216,22 @@ static const std\+::string \mbox{\hyperlink{class_sky_dome_draw_a366fd9d1040d77d
 初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
 
 \mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
 
 
 
- Sky\+Dome\+Draw.\+cpp の 30 行目に定義があります。
+ Sky\+Dome\+Draw.\+cpp の 68 行目に定義があります。
 
 \mbox{\Hypertarget{class_sky_dome_draw_aee1c6b102a97033073b2559b8c2c328b}\label{class_sky_dome_draw_aee1c6b102a97033073b2559b8c2c328b}} 
 \index{Sky\+Dome\+Draw@{Sky\+Dome\+Draw}!Uninit@{Uninit}}
@@ -225,12 +244,22 @@ static const std\+::string \mbox{\hyperlink{class_sky_dome_draw_a366fd9d1040d77d
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
 
 \mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
 
 
 
- Sky\+Dome\+Draw.\+cpp の 48 行目に定義があります。
+ Sky\+Dome\+Draw.\+cpp の 87 行目に定義があります。
 
 
 
@@ -247,6 +276,20 @@ static const std\+::string \mbox{\hyperlink{class_sky_dome_draw_a366fd9d1040d77d
 
 
 
+ Sky\+Dome\+Draw.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_sky_dome_draw_a50389a4bcc210ebd4b2ca93a161ecae6}\label{class_sky_dome_draw_a50389a4bcc210ebd4b2ca93a161ecae6}} 
+\index{Sky\+Dome\+Draw@{Sky\+Dome\+Draw}!S\+C\+A\+LE@{S\+C\+A\+LE}}
+\index{S\+C\+A\+LE@{S\+C\+A\+LE}!Sky\+Dome\+Draw@{Sky\+Dome\+Draw}}
+\subsubsection{\texorpdfstring{S\+C\+A\+LE}{SCALE}}
+{\footnotesize\ttfamily const float Sky\+Dome\+Draw\+::\+S\+C\+A\+LE = 130.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+拡縮 
+
+
+
  Sky\+Dome\+Draw.\+h の 38 行目に定義があります。
 
 \mbox{\Hypertarget{class_sky_dome_draw_a2453fb04f979443c61acc10eafa183aa}\label{class_sky_dome_draw_a2453fb04f979443c61acc10eafa183aa}} 
@@ -257,7 +300,7 @@ static const std\+::string \mbox{\hyperlink{class_sky_dome_draw_a366fd9d1040d77d
 
 
 
-モデルオブジェクト 
+天球モデル 
 
 
 
@@ -267,5 +310,5 @@ static const std\+::string \mbox{\hyperlink{class_sky_dome_draw_a366fd9d1040d77d
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Sky\+Dome/\+Sky\+Dome\+Draw/\mbox{\hyperlink{_sky_dome_draw_8h}{Sky\+Dome\+Draw.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Sky\+Dome/\+Sky\+Dome\+Draw/\mbox{\hyperlink{_sky_dome_draw_8cpp}{Sky\+Dome\+Draw.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Sky\+Dome/\mbox{\hyperlink{_sky_dome_draw_8h}{Sky\+Dome\+Draw.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Sky\+Dome/\+Source/\mbox{\hyperlink{_sky_dome_draw_8cpp}{Sky\+Dome\+Draw.\+cpp}}\end{DoxyCompactItemize}

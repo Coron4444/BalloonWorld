@@ -1,0 +1,717 @@
+\hypertarget{class_render_target_main}{}\section{Render\+Target\+Main クラス}
+\label{class_render_target_main}\index{Render\+Target\+Main@{Render\+Target\+Main}}
+
+
+レンダーターゲットメイン\+Class  
+
+
+
+
+{\ttfamily \#include $<$Render\+Target\+Main.\+h$>$}
+
+
+
+Render\+Target\+Main 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_render_target_main__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_render_target_main_ae37304ee8e63056e4a1d1b956bcd47b4}{set\+Camera}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em カメラ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_a374684a81401904fbc94c748312d278b}{set\+Draw\+Common\+Data}} (\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 描画共通データ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_ae41a70c604737348419502b56720c84b}{set\+Shader\+Manager}} (\mbox{\hyperlink{class_shader_manager}{Shader\+Manager}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em シェーダーマネージャ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_a323281d847f7ecee50a5ac551fa163d9}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_aefaa81a0ccf53f1162d230b3b781d892}{Uninit\+When\+Change\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em シーン変更時の終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_a9b9b05720ddd8918c3c605250e5dd81b}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_a5c25049decc949b019147c4c94828517}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_a36625d89ab2c8ae2677648589d8cb576}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_a4c43fec8dece5c7cb49d4fb2a53c1796}{Add\+Draw\+Base\+To\+Array}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw)
+\begin{DoxyCompactList}\small\item\em 描画基底クラスの追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_af1f2134824523e02235f849b443b4ed7}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned \mbox{\hyperlink{class_render_target_main_ad677e34abb5ef7673d8ab52f47d8729e}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} = 10000
+\begin{DoxyCompactList}\small\item\em 配列数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_render_target_main_a6d9b90e599744813fc013551eee5bfc0}{Sort\+Transparent}} ()
+\begin{DoxyCompactList}\small\item\em 透明描画基底クラスのソート関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_a8a69114ba02941a5da78630c29417b8e}{Sort2D}} ()
+\begin{DoxyCompactList}\small\item\em 2\+D描画基底クラスのソート関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_aa66eba70da8da7aa85af79b266212f0a}{Change\+Billboard\+Matrix}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw)
+\begin{DoxyCompactList}\small\item\em ビルボード用行列変更関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_af59ffe67a2ccc4dc1c280362e2473d9b}{All\+Billboard\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 全ビルボード更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_acc7030fab799fcd435ef37317d2b8ea0}{Change\+Camera\+Type}} (\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}} camera\+\_\+type)
+\begin{DoxyCompactList}\small\item\em カメラタイプ変更関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_a8f267db7731eac84b1a88d502d4c192d}{Temp\+Change\+Camera\+Type}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw)
+\begin{DoxyCompactList}\small\item\em カメラタイプ一時変更関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_aa9e36ecc466757f0d463cf7f638b197a}{Revert\+Temp\+Change\+Camera\+Type}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw)
+\begin{DoxyCompactList}\small\item\em カメラタイプ一時変更を戻す関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_a71adae5f98266115b999d813e44bc393}{Draw\+Opacity}} ()
+\begin{DoxyCompactList}\small\item\em 不透明オブジェクト描画関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_ac6f40e96264e3466e30b86d5e96cf62c}{Draw\+Transparent}} ()
+\begin{DoxyCompactList}\small\item\em 透明オブジェクト描画関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_main_a5a6629f64c62e8031ccbc44c38c38554}{Draw2D}} ()
+\begin{DoxyCompactList}\small\item\em 2\+Dオブジェクト描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$, \mbox{\hyperlink{class_render_target_main_ad677e34abb5ef7673d8ab52f47d8729e}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_render_target_main_a4ac66491bf33d7a19afc3c7b40fdc718}{draw\+\_\+opacity\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 不透明配列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$, \mbox{\hyperlink{class_render_target_main_ad677e34abb5ef7673d8ab52f47d8729e}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_render_target_main_add9d2c1221e301a35805cc0a1372793a}{draw\+\_\+transparent\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 透明配列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$, \mbox{\hyperlink{class_render_target_main_ad677e34abb5ef7673d8ab52f47d8729e}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_render_target_main_a9bf0ef6e95e18fcec8721ce90637a5fd}{draw\+\_\+2\+D\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2\+D配列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera}{Camera}} $\ast$ \mbox{\hyperlink{class_render_target_main_a186546928b726af583a2e5f240185c8e}{camera\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em カメラ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}} \mbox{\hyperlink{class_render_target_main_aa30119cd9eafbd7fb3a6a47cad4a6b45}{save\+\_\+camera\+\_\+type\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 保存用カメラタイプ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$ \mbox{\hyperlink{class_render_target_main_aa12079eaa4ea1a5f659fdaf85735036c}{common\+\_\+data\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 描画共通データ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shader_manager}{Shader\+Manager}} $\ast$ \mbox{\hyperlink{class_render_target_main_a49a932fb4dc3b63a0d84b7fc324a7268}{shader\+\_\+manager\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em シェーダーマネージャ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_render_texture_polygon}{Render\+Texture\+Polygon}} $\ast$ \mbox{\hyperlink{class_render_target_main_a3c7da5871b3ed61bae36e05b5037c204}{shadow\+\_\+map\+\_\+polygon\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em シャドウマップ用ポリゴン \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+レンダーターゲットメイン\+Class 
+
+レンダーターゲットメインの\+Class 
+
+ Render\+Target\+Main.\+h の 34 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_render_target_main_a4c43fec8dece5c7cb49d4fb2a53c1796}\label{class_render_target_main_a4c43fec8dece5c7cb49d4fb2a53c1796}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Add\+Draw\+Base\+To\+Array@{Add\+Draw\+Base\+To\+Array}}
+\index{Add\+Draw\+Base\+To\+Array@{Add\+Draw\+Base\+To\+Array}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Add\+Draw\+Base\+To\+Array()}{AddDrawBaseToArray()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Add\+Draw\+Base\+To\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw }\end{DoxyParamCaption})}
+
+
+
+描画基底クラスの追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em draw} & 描画基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 136 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_af59ffe67a2ccc4dc1c280362e2473d9b}\label{class_render_target_main_af59ffe67a2ccc4dc1c280362e2473d9b}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!All\+Billboard\+Update@{All\+Billboard\+Update}}
+\index{All\+Billboard\+Update@{All\+Billboard\+Update}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{All\+Billboard\+Update()}{AllBillboardUpdate()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+All\+Billboard\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+全ビルボード更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 234 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_aa66eba70da8da7aa85af79b266212f0a}\label{class_render_target_main_aa66eba70da8da7aa85af79b266212f0a}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Change\+Billboard\+Matrix@{Change\+Billboard\+Matrix}}
+\index{Change\+Billboard\+Matrix@{Change\+Billboard\+Matrix}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Change\+Billboard\+Matrix()}{ChangeBillboardMatrix()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Change\+Billboard\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ビルボード用行列変更関数 
+
+
+\begin{DoxyParams}{引数}
+{\em draw} & 描画基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 223 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_acc7030fab799fcd435ef37317d2b8ea0}\label{class_render_target_main_acc7030fab799fcd435ef37317d2b8ea0}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Change\+Camera\+Type@{Change\+Camera\+Type}}
+\index{Change\+Camera\+Type@{Change\+Camera\+Type}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Change\+Camera\+Type()}{ChangeCameraType()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Change\+Camera\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}}}]{camera\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+カメラタイプ変更関数 
+
+
+\begin{DoxyParams}{引数}
+{\em camera\+\_\+type} & カメラタイプ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 255 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a36625d89ab2c8ae2677648589d8cb576}\label{class_render_target_main_a36625d89ab2c8ae2677648589d8cb576}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Draw@{Draw}}
+\index{Draw@{Draw}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 99 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a5a6629f64c62e8031ccbc44c38c38554}\label{class_render_target_main_a5a6629f64c62e8031ccbc44c38c38554}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Draw2D@{Draw2D}}
+\index{Draw2D@{Draw2D}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Draw2\+D()}{Draw2D()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Draw2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+2\+Dオブジェクト描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 368 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a71adae5f98266115b999d813e44bc393}\label{class_render_target_main_a71adae5f98266115b999d813e44bc393}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Draw\+Opacity@{Draw\+Opacity}}
+\index{Draw\+Opacity@{Draw\+Opacity}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Draw\+Opacity()}{DrawOpacity()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Draw\+Opacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+不透明オブジェクト描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 294 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_ac6f40e96264e3466e30b86d5e96cf62c}\label{class_render_target_main_ac6f40e96264e3466e30b86d5e96cf62c}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Draw\+Transparent@{Draw\+Transparent}}
+\index{Draw\+Transparent@{Draw\+Transparent}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Draw\+Transparent()}{DrawTransparent()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Draw\+Transparent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+透明オブジェクト描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 332 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a323281d847f7ecee50a5ac551fa163d9}\label{class_render_target_main_a323281d847f7ecee50a5ac551fa163d9}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Init@{Init}}
+\index{Init@{Init}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_af1f2134824523e02235f849b443b4ed7}\label{class_render_target_main_af1f2134824523e02235f849b443b4ed7}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Reset@{Reset}}
+\index{Reset@{Reset}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+リセット関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 160 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_aa9e36ecc466757f0d463cf7f638b197a}\label{class_render_target_main_aa9e36ecc466757f0d463cf7f638b197a}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Revert\+Temp\+Change\+Camera\+Type@{Revert\+Temp\+Change\+Camera\+Type}}
+\index{Revert\+Temp\+Change\+Camera\+Type@{Revert\+Temp\+Change\+Camera\+Type}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Revert\+Temp\+Change\+Camera\+Type()}{RevertTempChangeCameraType()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Revert\+Temp\+Change\+Camera\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+カメラタイプ一時変更を戻す関数 
+
+
+\begin{DoxyParams}{引数}
+{\em draw} & 描画基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 282 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_ae37304ee8e63056e4a1d1b956bcd47b4}\label{class_render_target_main_ae37304ee8e63056e4a1d1b956bcd47b4}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!set\+Camera@{set\+Camera}}
+\index{set\+Camera@{set\+Camera}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{set\+Camera()}{setCamera()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::set\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+カメラ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & カメラ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 26 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a374684a81401904fbc94c748312d278b}\label{class_render_target_main_a374684a81401904fbc94c748312d278b}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!set\+Draw\+Common\+Data@{set\+Draw\+Common\+Data}}
+\index{set\+Draw\+Common\+Data@{set\+Draw\+Common\+Data}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{set\+Draw\+Common\+Data()}{setDrawCommonData()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::set\+Draw\+Common\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+描画共通データ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & 描画共通データ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 33 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_ae41a70c604737348419502b56720c84b}\label{class_render_target_main_ae41a70c604737348419502b56720c84b}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!set\+Shader\+Manager@{set\+Shader\+Manager}}
+\index{set\+Shader\+Manager@{set\+Shader\+Manager}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{set\+Shader\+Manager()}{setShaderManager()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::set\+Shader\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shader_manager}{Shader\+Manager}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+シェーダーマネージャ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & シェーダーマネージャ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a8a69114ba02941a5da78630c29417b8e}\label{class_render_target_main_a8a69114ba02941a5da78630c29417b8e}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Sort2D@{Sort2D}}
+\index{Sort2D@{Sort2D}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Sort2\+D()}{Sort2D()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Sort2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+2\+D描画基底クラスのソート関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 202 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a6d9b90e599744813fc013551eee5bfc0}\label{class_render_target_main_a6d9b90e599744813fc013551eee5bfc0}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Sort\+Transparent@{Sort\+Transparent}}
+\index{Sort\+Transparent@{Sort\+Transparent}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Sort\+Transparent()}{SortTransparent()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Sort\+Transparent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+透明描画基底クラスのソート関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 169 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a8f267db7731eac84b1a88d502d4c192d}\label{class_render_target_main_a8f267db7731eac84b1a88d502d4c192d}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Temp\+Change\+Camera\+Type@{Temp\+Change\+Camera\+Type}}
+\index{Temp\+Change\+Camera\+Type@{Temp\+Change\+Camera\+Type}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Temp\+Change\+Camera\+Type()}{TempChangeCameraType()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Temp\+Change\+Camera\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+カメラタイプ一時変更関数 
+
+
+\begin{DoxyParams}{引数}
+{\em draw} & 描画基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 263 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a9b9b05720ddd8918c3c605250e5dd81b}\label{class_render_target_main_a9b9b05720ddd8918c3c605250e5dd81b}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 63 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_aefaa81a0ccf53f1162d230b3b781d892}\label{class_render_target_main_aefaa81a0ccf53f1162d230b3b781d892}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Uninit\+When\+Change\+Scene@{Uninit\+When\+Change\+Scene}}
+\index{Uninit\+When\+Change\+Scene@{Uninit\+When\+Change\+Scene}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Uninit\+When\+Change\+Scene()}{UninitWhenChangeScene()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Uninit\+When\+Change\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+シーン変更時の終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 71 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a5c25049decc949b019147c4c94828517}\label{class_render_target_main_a5c25049decc949b019147c4c94828517}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!Update@{Update}}
+\index{Update@{Update}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Render\+Target\+Main\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Main.\+cpp の 78 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_render_target_main_ad677e34abb5ef7673d8ab52f47d8729e}\label{class_render_target_main_ad677e34abb5ef7673d8ab52f47d8729e}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!A\+R\+R\+A\+Y\+\_\+\+N\+UM@{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}
+\index{A\+R\+R\+A\+Y\+\_\+\+N\+UM@{A\+R\+R\+A\+Y\+\_\+\+N\+UM}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{A\+R\+R\+A\+Y\+\_\+\+N\+UM}{ARRAY\_NUM}}
+{\footnotesize\ttfamily const unsigned Render\+Target\+Main\+::\+A\+R\+R\+A\+Y\+\_\+\+N\+UM = 10000\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+配列数 
+
+
+
+ Render\+Target\+Main.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a186546928b726af583a2e5f240185c8e}\label{class_render_target_main_a186546928b726af583a2e5f240185c8e}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!camera\+\_\+@{camera\+\_\+}}
+\index{camera\+\_\+@{camera\+\_\+}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{camera\+\_\+}{camera\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera}{Camera}}$\ast$ Render\+Target\+Main\+::camera\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+カメラ 
+
+
+
+ Render\+Target\+Main.\+h の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_aa12079eaa4ea1a5f659fdaf85735036c}\label{class_render_target_main_aa12079eaa4ea1a5f659fdaf85735036c}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!common\+\_\+data\+\_\+@{common\+\_\+data\+\_\+}}
+\index{common\+\_\+data\+\_\+@{common\+\_\+data\+\_\+}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{common\+\_\+data\+\_\+}{common\_data\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}}$\ast$ Render\+Target\+Main\+::common\+\_\+data\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+描画共通データ 
+
+
+
+ Render\+Target\+Main.\+h の 53 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a9bf0ef6e95e18fcec8721ce90637a5fd}\label{class_render_target_main_a9bf0ef6e95e18fcec8721ce90637a5fd}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!draw\+\_\+2\+D\+\_\+@{draw\+\_\+2\+D\+\_\+}}
+\index{draw\+\_\+2\+D\+\_\+@{draw\+\_\+2\+D\+\_\+}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{draw\+\_\+2\+D\+\_\+}{draw\_2D\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$\mbox{\hyperlink{class_draw_base}{Draw\+Base}}$\ast$, \mbox{\hyperlink{class_render_target_main_ad677e34abb5ef7673d8ab52f47d8729e}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}$>$ Render\+Target\+Main\+::draw\+\_\+2\+D\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+2\+D配列 
+
+
+
+ Render\+Target\+Main.\+h の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a4ac66491bf33d7a19afc3c7b40fdc718}\label{class_render_target_main_a4ac66491bf33d7a19afc3c7b40fdc718}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!draw\+\_\+opacity\+\_\+@{draw\+\_\+opacity\+\_\+}}
+\index{draw\+\_\+opacity\+\_\+@{draw\+\_\+opacity\+\_\+}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{draw\+\_\+opacity\+\_\+}{draw\_opacity\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$\mbox{\hyperlink{class_draw_base}{Draw\+Base}}$\ast$, \mbox{\hyperlink{class_render_target_main_ad677e34abb5ef7673d8ab52f47d8729e}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}$>$ Render\+Target\+Main\+::draw\+\_\+opacity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+不透明配列 
+
+
+
+ Render\+Target\+Main.\+h の 47 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_add9d2c1221e301a35805cc0a1372793a}\label{class_render_target_main_add9d2c1221e301a35805cc0a1372793a}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!draw\+\_\+transparent\+\_\+@{draw\+\_\+transparent\+\_\+}}
+\index{draw\+\_\+transparent\+\_\+@{draw\+\_\+transparent\+\_\+}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{draw\+\_\+transparent\+\_\+}{draw\_transparent\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$\mbox{\hyperlink{class_draw_base}{Draw\+Base}}$\ast$, \mbox{\hyperlink{class_render_target_main_ad677e34abb5ef7673d8ab52f47d8729e}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}$>$ Render\+Target\+Main\+::draw\+\_\+transparent\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+透明配列 
+
+
+
+ Render\+Target\+Main.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_aa30119cd9eafbd7fb3a6a47cad4a6b45}\label{class_render_target_main_aa30119cd9eafbd7fb3a6a47cad4a6b45}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!save\+\_\+camera\+\_\+type\+\_\+@{save\+\_\+camera\+\_\+type\+\_\+}}
+\index{save\+\_\+camera\+\_\+type\+\_\+@{save\+\_\+camera\+\_\+type\+\_\+}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{save\+\_\+camera\+\_\+type\+\_\+}{save\_camera\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}} Render\+Target\+Main\+::save\+\_\+camera\+\_\+type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+保存用カメラタイプ 
+
+
+
+ Render\+Target\+Main.\+h の 52 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a49a932fb4dc3b63a0d84b7fc324a7268}\label{class_render_target_main_a49a932fb4dc3b63a0d84b7fc324a7268}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!shader\+\_\+manager\+\_\+@{shader\+\_\+manager\+\_\+}}
+\index{shader\+\_\+manager\+\_\+@{shader\+\_\+manager\+\_\+}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{shader\+\_\+manager\+\_\+}{shader\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shader_manager}{Shader\+Manager}}$\ast$ Render\+Target\+Main\+::shader\+\_\+manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+シェーダーマネージャ 
+
+
+
+ Render\+Target\+Main.\+h の 54 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_main_a3c7da5871b3ed61bae36e05b5037c204}\label{class_render_target_main_a3c7da5871b3ed61bae36e05b5037c204}} 
+\index{Render\+Target\+Main@{Render\+Target\+Main}!shadow\+\_\+map\+\_\+polygon\+\_\+@{shadow\+\_\+map\+\_\+polygon\+\_\+}}
+\index{shadow\+\_\+map\+\_\+polygon\+\_\+@{shadow\+\_\+map\+\_\+polygon\+\_\+}!Render\+Target\+Main@{Render\+Target\+Main}}
+\subsubsection{\texorpdfstring{shadow\+\_\+map\+\_\+polygon\+\_\+}{shadow\_map\_polygon\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_render_texture_polygon}{Render\+Texture\+Polygon}}$\ast$ Render\+Target\+Main\+::shadow\+\_\+map\+\_\+polygon\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+シャドウマップ用ポリゴン 
+
+
+
+ Render\+Target\+Main.\+h の 55 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Render\+Target/\mbox{\hyperlink{_render_target_main_8h}{Render\+Target\+Main.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Render\+Target/\+Source/\mbox{\hyperlink{_render_target_main_8cpp}{Render\+Target\+Main.\+cpp}}\end{DoxyCompactItemize}

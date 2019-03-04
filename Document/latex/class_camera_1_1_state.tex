@@ -2,7 +2,7 @@
 \label{class_camera_1_1_state}\index{Camera\+::\+State@{Camera\+::\+State}}
 
 
-カメラステートクラス  
+カメラステート\+Class  
 
 
 
@@ -11,58 +11,156 @@
 
 
 
-Camera\+:\+:State の継承関係図\nopagebreak
+Camera\+:\+:State 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_camera_1_1_state__inherit__graph}
+\includegraphics[width=350pt]{class_camera_1_1_state__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-virtual \mbox{\hyperlink{class_camera_1_1_state_a61b74bb711d49e26c0f07af65fb74eb9}{$\sim$\+State}} ()
+bool \mbox{\hyperlink{class_camera_1_1_state_a23d6de73794a7a47a640ccb4d3e1b4ca}{get\+Is\+Input}} ()
+\begin{DoxyCompactList}\small\item\em 入力フラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_1_1_state_a29e30e611ec0fd1282e552a4304588bc}{set\+Is\+Input}} (bool value)
+\begin{DoxyCompactList}\small\item\em 入力フラグ取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_1_1_state_a03b8930b430e095cce5f63853f845494}{get\+Is\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新フラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_1_1_state_a1061b2370753de100ffd84ca877203d2}{set\+Is\+Update}} (bool value)
+\begin{DoxyCompactList}\small\item\em 更新フラグ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera}{Camera}} $\ast$ \mbox{\hyperlink{class_camera_1_1_state_a427018e0f1139ec2c189a8369eace5c3}{getp\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em カメラ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_1_1_state_a3c95f7df7651ddca8596686a118eb725}{set\+Camera}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em カメラ設定関数 \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_camera_1_1_state_a7d179b912e68fa3dc659ae4d5422ca97}{$\sim$\+State}} ()=0
 \begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_camera_1_1_state_aa1b81471ab15e64b3117ffe7de9560ff}{Init}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$camera)=0
+virtual void \mbox{\hyperlink{class_camera_1_1_state_a11627f91e7dc5085d3cbb8841747a778}{Init}} ()=0
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_camera_1_1_state_adb3f43b6c3f8100da7877867180e804b}{Uninit}} ()=0
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_camera_1_1_state_a2d41e0cb783666bae6c6ea167fcc7874}{Update}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$camera)=0
+virtual void \mbox{\hyperlink{class_camera_1_1_state_ab94ec2ba6c56d974cf9e0d7d232948cf}{Update}} ()=0
 \begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera}{Camera}} $\ast$ \mbox{\hyperlink{class_camera_1_1_state_a2e5655fdfb42bda75fe742e759c7001a}{camera\+\_\+}}
+\begin{DoxyCompactList}\small\item\em カメラ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_1_1_state_a4cdcb987af52635b6d6c81559ab03ba6}{is\+\_\+input\+\_\+}} = true
+\begin{DoxyCompactList}\small\item\em 入力フラグ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_1_1_state_aa54c42af6127f83f00845788e32e575a}{is\+\_\+update\+\_\+}} = true
+\begin{DoxyCompactList}\small\item\em 更新フラグ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
-カメラステートクラス 
+カメラステート\+Class 
 
-カメラのステートクラス 
+カメラステートの\+Class 
 
- Camera.\+h の 35 行目に定義があります。
+ Camera.\+h の 28 行目に定義があります。
 
 
 
 \subsection{構築子と解体子}
-\mbox{\Hypertarget{class_camera_1_1_state_a61b74bb711d49e26c0f07af65fb74eb9}\label{class_camera_1_1_state_a61b74bb711d49e26c0f07af65fb74eb9}} 
+\mbox{\Hypertarget{class_camera_1_1_state_a7d179b912e68fa3dc659ae4d5422ca97}\label{class_camera_1_1_state_a7d179b912e68fa3dc659ae4d5422ca97}} 
 \index{Camera\+::\+State@{Camera\+::\+State}!````~State@{$\sim$\+State}}
 \index{````~State@{$\sim$\+State}!Camera\+::\+State@{Camera\+::\+State}}
 \subsubsection{\texorpdfstring{$\sim$\+State()}{~State()}}
-{\footnotesize\ttfamily virtual Camera\+::\+State\+::$\sim$\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily Camera\+::\+State\+::$\sim$\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
 デストラクタ 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Camera.\+h の 45 行目に定義があります。
+
+ Camera.\+cpp の 234 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_camera_1_1_state_aa1b81471ab15e64b3117ffe7de9560ff}\label{class_camera_1_1_state_aa1b81471ab15e64b3117ffe7de9560ff}} 
+\mbox{\Hypertarget{class_camera_1_1_state_a23d6de73794a7a47a640ccb4d3e1b4ca}\label{class_camera_1_1_state_a23d6de73794a7a47a640ccb4d3e1b4ca}} 
+\index{Camera\+::\+State@{Camera\+::\+State}!get\+Is\+Input@{get\+Is\+Input}}
+\index{get\+Is\+Input@{get\+Is\+Input}!Camera\+::\+State@{Camera\+::\+State}}
+\subsubsection{\texorpdfstring{get\+Is\+Input()}{getIsInput()}}
+{\footnotesize\ttfamily bool Camera\+::\+State\+::get\+Is\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+入力フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 入力フラグ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 29 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_1_1_state_a03b8930b430e095cce5f63853f845494}\label{class_camera_1_1_state_a03b8930b430e095cce5f63853f845494}} 
+\index{Camera\+::\+State@{Camera\+::\+State}!get\+Is\+Update@{get\+Is\+Update}}
+\index{get\+Is\+Update@{get\+Is\+Update}!Camera\+::\+State@{Camera\+::\+State}}
+\subsubsection{\texorpdfstring{get\+Is\+Update()}{getIsUpdate()}}
+{\footnotesize\ttfamily bool Camera\+::\+State\+::get\+Is\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+更新フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 更新フラグ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_1_1_state_a427018e0f1139ec2c189a8369eace5c3}\label{class_camera_1_1_state_a427018e0f1139ec2c189a8369eace5c3}} 
+\index{Camera\+::\+State@{Camera\+::\+State}!getp\+Camera@{getp\+Camera}}
+\index{getp\+Camera@{getp\+Camera}!Camera\+::\+State@{Camera\+::\+State}}
+\subsubsection{\texorpdfstring{getp\+Camera()}{getpCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera}{Camera}} $\ast$ Camera\+::\+State\+::getp\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+カメラ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Camera$\ast$} & カメラ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_1_1_state_a11627f91e7dc5085d3cbb8841747a778}\label{class_camera_1_1_state_a11627f91e7dc5085d3cbb8841747a778}} 
 \index{Camera\+::\+State@{Camera\+::\+State}!Init@{Init}}
 \index{Init@{Init}!Camera\+::\+State@{Camera\+::\+State}}
 \subsubsection{\texorpdfstring{Init()}{Init()}}
-{\footnotesize\ttfamily virtual void Camera\+::\+State\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Camera\+::\+State\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -70,12 +168,89 @@ virtual void \mbox{\hyperlink{class_camera_1_1_state_a2d41e0cb783666bae6c6ea167f
 
 
 \begin{DoxyParams}{引数}
-{\em camera} & \+: カメラ \\
+{\em void} & なし \\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\hyperlink{class_camera_state___crawl_up_a43a47eb4e7445c6801e8316c5a635709}{Camera\+State\+\_\+\+Crawl\+Up}}, \mbox{\hyperlink{class_camera_state___homing_target_a9222190a5f26d564e99623b05941d382}{Camera\+State\+\_\+\+Homing\+Target}}で実装されています。
+
+\mbox{\hyperlink{class_camera_state___homing_target_aaf95e93c2036a280bbc0a6a9a7df6b37}{Camera\+State\+\_\+\+Homing\+Target}}, \mbox{\hyperlink{class_camera_state___normal_a9e08312abffe36e42e53decdd015f079}{Camera\+State\+\_\+\+Normal}}, \mbox{\hyperlink{class_camera_state___crawl_up_a5b0ed82fd39c7dfe46e36ab151dcd2a1}{Camera\+State\+\_\+\+Crawl\+Up}}で実装されています。
+
+\mbox{\Hypertarget{class_camera_1_1_state_a3c95f7df7651ddca8596686a118eb725}\label{class_camera_1_1_state_a3c95f7df7651ddca8596686a118eb725}} 
+\index{Camera\+::\+State@{Camera\+::\+State}!set\+Camera@{set\+Camera}}
+\index{set\+Camera@{set\+Camera}!Camera\+::\+State@{Camera\+::\+State}}
+\subsubsection{\texorpdfstring{set\+Camera()}{setCamera()}}
+{\footnotesize\ttfamily void Camera\+::\+State\+::set\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+カメラ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & カメラ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_1_1_state_a29e30e611ec0fd1282e552a4304588bc}\label{class_camera_1_1_state_a29e30e611ec0fd1282e552a4304588bc}} 
+\index{Camera\+::\+State@{Camera\+::\+State}!set\+Is\+Input@{set\+Is\+Input}}
+\index{set\+Is\+Input@{set\+Is\+Input}!Camera\+::\+State@{Camera\+::\+State}}
+\subsubsection{\texorpdfstring{set\+Is\+Input()}{setIsInput()}}
+{\footnotesize\ttfamily void Camera\+::\+State\+::set\+Is\+Input (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+入力フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 入力フラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 36 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_1_1_state_a1061b2370753de100ffd84ca877203d2}\label{class_camera_1_1_state_a1061b2370753de100ffd84ca877203d2}} 
+\index{Camera\+::\+State@{Camera\+::\+State}!set\+Is\+Update@{set\+Is\+Update}}
+\index{set\+Is\+Update@{set\+Is\+Update}!Camera\+::\+State@{Camera\+::\+State}}
+\subsubsection{\texorpdfstring{set\+Is\+Update()}{setIsUpdate()}}
+{\footnotesize\ttfamily void Camera\+::\+State\+::set\+Is\+Update (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+更新フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 更新フラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 50 行目に定義があります。
 
 \mbox{\Hypertarget{class_camera_1_1_state_adb3f43b6c3f8100da7877867180e804b}\label{class_camera_1_1_state_adb3f43b6c3f8100da7877867180e804b}} 
 \index{Camera\+::\+State@{Camera\+::\+State}!Uninit@{Uninit}}
@@ -89,18 +264,23 @@ virtual void \mbox{\hyperlink{class_camera_1_1_state_a2d41e0cb783666bae6c6ea167f
 
 
 \begin{DoxyParams}{引数}
-{\em camera} & \+: カメラ \\
+{\em void} & なし \\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\hyperlink{class_camera_state___crawl_up_a046ec18a91e31b210ae000133fa6113a}{Camera\+State\+\_\+\+Crawl\+Up}}, \mbox{\hyperlink{class_camera_state___homing_target_ab2b5379b35ebafc53189bf4d45646c8c}{Camera\+State\+\_\+\+Homing\+Target}}で実装されています。
 
-\mbox{\Hypertarget{class_camera_1_1_state_a2d41e0cb783666bae6c6ea167fcc7874}\label{class_camera_1_1_state_a2d41e0cb783666bae6c6ea167fcc7874}} 
+\mbox{\hyperlink{class_camera_state___homing_target_ab2b5379b35ebafc53189bf4d45646c8c}{Camera\+State\+\_\+\+Homing\+Target}}, \mbox{\hyperlink{class_camera_state___normal_a456267d93f83419f635c6e5c692a79bd}{Camera\+State\+\_\+\+Normal}}, \mbox{\hyperlink{class_camera_state___crawl_up_a046ec18a91e31b210ae000133fa6113a}{Camera\+State\+\_\+\+Crawl\+Up}}で実装されています。
+
+\mbox{\Hypertarget{class_camera_1_1_state_ab94ec2ba6c56d974cf9e0d7d232948cf}\label{class_camera_1_1_state_ab94ec2ba6c56d974cf9e0d7d232948cf}} 
 \index{Camera\+::\+State@{Camera\+::\+State}!Update@{Update}}
 \index{Update@{Update}!Camera\+::\+State@{Camera\+::\+State}}
 \subsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily virtual void Camera\+::\+State\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Camera\+::\+State\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -108,15 +288,66 @@ virtual void \mbox{\hyperlink{class_camera_1_1_state_a2d41e0cb783666bae6c6ea167f
 
 
 \begin{DoxyParams}{引数}
-{\em camera} & \+: カメラ \\
+{\em void} & なし \\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\hyperlink{class_camera_state___crawl_up_aaebd2634f1677b7c00e6761ed91e1264}{Camera\+State\+\_\+\+Crawl\+Up}}, \mbox{\hyperlink{class_camera_state___homing_target_a98f04985c06033febdad32d6357088c9}{Camera\+State\+\_\+\+Homing\+Target}}で実装されています。
+
+\mbox{\hyperlink{class_camera_state___homing_target_a488be0a41b5c00fbfaa56db73aefd45c}{Camera\+State\+\_\+\+Homing\+Target}}, \mbox{\hyperlink{class_camera_state___normal_a52b73e55084b36b1d085b62dc8f15b0a}{Camera\+State\+\_\+\+Normal}}, \mbox{\hyperlink{class_camera_state___crawl_up_a222f184d961d736f86dc4b2a3b227f8e}{Camera\+State\+\_\+\+Crawl\+Up}}で実装されています。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_camera_1_1_state_a2e5655fdfb42bda75fe742e759c7001a}\label{class_camera_1_1_state_a2e5655fdfb42bda75fe742e759c7001a}} 
+\index{Camera\+::\+State@{Camera\+::\+State}!camera\+\_\+@{camera\+\_\+}}
+\index{camera\+\_\+@{camera\+\_\+}!Camera\+::\+State@{Camera\+::\+State}}
+\subsubsection{\texorpdfstring{camera\+\_\+}{camera\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera}{Camera}}$\ast$ Camera\+::\+State\+::camera\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+カメラ 
+
+
+
+ Camera.\+h の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_1_1_state_a4cdcb987af52635b6d6c81559ab03ba6}\label{class_camera_1_1_state_a4cdcb987af52635b6d6c81559ab03ba6}} 
+\index{Camera\+::\+State@{Camera\+::\+State}!is\+\_\+input\+\_\+@{is\+\_\+input\+\_\+}}
+\index{is\+\_\+input\+\_\+@{is\+\_\+input\+\_\+}!Camera\+::\+State@{Camera\+::\+State}}
+\subsubsection{\texorpdfstring{is\+\_\+input\+\_\+}{is\_input\_}}
+{\footnotesize\ttfamily bool Camera\+::\+State\+::is\+\_\+input\+\_\+ = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+入力フラグ 
+
+
+
+ Camera.\+h の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_1_1_state_aa54c42af6127f83f00845788e32e575a}\label{class_camera_1_1_state_aa54c42af6127f83f00845788e32e575a}} 
+\index{Camera\+::\+State@{Camera\+::\+State}!is\+\_\+update\+\_\+@{is\+\_\+update\+\_\+}}
+\index{is\+\_\+update\+\_\+@{is\+\_\+update\+\_\+}!Camera\+::\+State@{Camera\+::\+State}}
+\subsubsection{\texorpdfstring{is\+\_\+update\+\_\+}{is\_update\_}}
+{\footnotesize\ttfamily bool Camera\+::\+State\+::is\+\_\+update\+\_\+ = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+更新フラグ 
+
+
+
+ Camera.\+h の 36 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Camera/\mbox{\hyperlink{_camera_8h}{Camera.\+h}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Camera/\mbox{\hyperlink{_camera_8h}{Camera.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Camera/\+Source/\mbox{\hyperlink{_camera_8cpp}{Camera.\+cpp}}\end{DoxyCompactItemize}

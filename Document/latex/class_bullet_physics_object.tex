@@ -1,0 +1,646 @@
+\hypertarget{class_bullet_physics_object}{}\section{Bullet\+Physics\+Object クラス}
+\label{class_bullet_physics_object}\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+
+
+バレットフィジックスオブジェクト\+Class  
+
+
+
+
+{\ttfamily \#include $<$Bullet\+Physics\+Object.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927}{Type}} \mbox{\hyperlink{class_bullet_physics_object_a12027754be0d44356ab98617b7579a52}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em タイプ取得関数 \end{DoxyCompactList}\item 
+bt\+Collision\+Shape $\ast$ \mbox{\hyperlink{class_bullet_physics_object_a436ec7f8e40865bc240eaf5669a43bf9}{getp\+Collision\+Shape}} ()
+\begin{DoxyCompactList}\small\item\em 衝突形状取得関数 \end{DoxyCompactList}\item 
+bt\+Default\+Motion\+State $\ast$ \mbox{\hyperlink{class_bullet_physics_object_a92b00adf82adf916a8b6c3e8c7570926}{getp\+Motion\+State}} ()
+\begin{DoxyCompactList}\small\item\em 外部から剛体を操作するハンドル得関数 \end{DoxyCompactList}\item 
+bt\+Rigid\+Body $\ast$ \mbox{\hyperlink{class_bullet_physics_object_a711db1c0266db2f0fc3d8baa44c6e1ab}{getp\+Rigid\+Body}} ()
+\begin{DoxyCompactList}\small\item\em 剛体取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_bullet_physics_object_a02e592eaa6470b7df077ae1f58db9323}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em 座標取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_object_a6a5196bc2fc1fad94bc65a26ff9d5cad}{set\+Position}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} value)
+\begin{DoxyCompactList}\small\item\em 座標設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} \mbox{\hyperlink{class_bullet_physics_object_a58f4fe83f0fe1f298b6e1fef14306903}{get\+Quaternion}} ()
+\begin{DoxyCompactList}\small\item\em クォータニオン取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_object_a563a3aa01fc011dbff8aa64097d7c5a8}{set\+Kinematic}} ()
+\begin{DoxyCompactList}\small\item\em Kinematic剛体設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_object_a94989c5b323cf5f5ce646a78443125b4}{Init\+Sphere}} (float mass, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$inertia, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$position, \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$quaternion, float radius)
+\begin{DoxyCompactList}\small\item\em 球初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_object_a24cbe68d50b3ee796e8a1043b55a21c1}{Init\+O\+BB}} (float mass, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$inertia, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$position, \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$quaternion, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$edge\+\_\+half\+\_\+length)
+\begin{DoxyCompactList}\small\item\em O\+B\+B初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_object_a6dc79cf0ac34446de037eac7b910d30b}{Init\+Capsule}} (float mass, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$inertia, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$position, \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$quaternion, float radius, float height)
+\begin{DoxyCompactList}\small\item\em 球初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_object_a0bb55d6e1644f45e35bcb8e2e9c945eb}{Release}} ()
+\begin{DoxyCompactList}\small\item\em 解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_object_a589046e8bbc361be462f8fe343ccec0b}{Forced\+Release}} ()
+\begin{DoxyCompactList}\small\item\em 強制解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_object_a2d8bbb2460766e646eabbff414f54cde}{Add\+Reference\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em 参照カウンタ追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_object_a2a1d883ae9c1bfc42a7ea3e48095deb0}{Add\+Velocity}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} velocity, \mbox{\hyperlink{class_vector3_d}{Vector3D}} power\+\_\+point=\{0.\+0f, 0.\+0f, 0.\+0f\})
+\begin{DoxyCompactList}\small\item\em 初速度追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_object_a1d7e12c68b4959fefd36cddb4f5f59a2}{Add\+Acceleration}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} acceleration, \mbox{\hyperlink{class_vector3_d}{Vector3D}} power\+\_\+point=\{0.\+0f, 0.\+0f, 0.\+0f\})
+\begin{DoxyCompactList}\small\item\em 加速度追加関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927}{Type}} \{ \newline
+\mbox{\hyperlink{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927ab50339a10e1de285ac99d4c3990b8693}{Type\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927a6f7cea7381e843e2ee0338b4a92b0d43}{Type\+::\+S\+P\+H\+E\+RE}}, 
+\mbox{\hyperlink{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927a9aac15e014ce3a36fcbf4a3f669332da}{Type\+::\+O\+BB}}, 
+\mbox{\hyperlink{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927a67586f12c9792da11a4bdf60360d40e9}{Type\+::\+C\+A\+P\+S\+U\+LE}}, 
+\newline
+\mbox{\hyperlink{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927a26a4b44a837bf97b972628509912b4a5}{Type\+::\+M\+AX}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_bullet_physics_object_ab4b4e1193398141c29bb8f2fb21e3265}{Init\+Common}} (float mass, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$inertia, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$position, \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$quaternion)
+\begin{DoxyCompactList}\small\item\em 共通初期化関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927}{Type}} \mbox{\hyperlink{class_bullet_physics_object_a89ca999874ab6113c1dca6e5091db62f}{type\+\_\+}} = \mbox{\hyperlink{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927ab50339a10e1de285ac99d4c3990b8693}{Type\+::\+N\+O\+NE}}
+\begin{DoxyCompactList}\small\item\em タイプ \end{DoxyCompactList}\item 
+bt\+Collision\+Shape $\ast$ \mbox{\hyperlink{class_bullet_physics_object_a1dfb431c0eefdacf3cfc1ba3ae104457}{collision\+\_\+shape\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 衝突形状 \end{DoxyCompactList}\item 
+bt\+Default\+Motion\+State $\ast$ \mbox{\hyperlink{class_bullet_physics_object_a1ea7b5057265c9a926acf3ae51dd8853}{motion\+\_\+state\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 外部から剛体を操作するハンドル \end{DoxyCompactList}\item 
+bt\+Rigid\+Body $\ast$ \mbox{\hyperlink{class_bullet_physics_object_a95bcfe681fee31cafe9f4ddf8d17a3fd}{rigid\+\_\+body\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 剛体 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_bullet_physics_object_ae36c0b40461016b4c4a536c624ca6061}{reference\+\_\+counter\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em 参照カウンタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+バレットフィジックスオブジェクト\+Class 
+
+バレットフィジックスのオブジェクト\+Class 
+
+ Bullet\+Physics\+Object.\+h の 31 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927}\label{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!Type@{Type}}
+\index{Type@{Type}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927}{Bullet\+Physics\+Object\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927ab50339a10e1de285ac99d4c3990b8693}\label{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927ab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+P\+H\+E\+RE@{S\+P\+H\+E\+RE}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!S\+P\+H\+E\+RE@{S\+P\+H\+E\+RE}}}\mbox{\Hypertarget{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927a6f7cea7381e843e2ee0338b4a92b0d43}\label{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927a6f7cea7381e843e2ee0338b4a92b0d43}} 
+S\+P\+H\+E\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+BB@{O\+BB}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!O\+BB@{O\+BB}}}\mbox{\Hypertarget{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927a9aac15e014ce3a36fcbf4a3f669332da}\label{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927a9aac15e014ce3a36fcbf4a3f669332da}} 
+O\+BB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+A\+P\+S\+U\+LE@{C\+A\+P\+S\+U\+LE}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!C\+A\+P\+S\+U\+LE@{C\+A\+P\+S\+U\+LE}}}\mbox{\Hypertarget{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927a67586f12c9792da11a4bdf60360d40e9}\label{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927a67586f12c9792da11a4bdf60360d40e9}} 
+C\+A\+P\+S\+U\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927a26a4b44a837bf97b972628509912b4a5}\label{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927a26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Bullet\+Physics\+Object.\+h の 37 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_bullet_physics_object_a1d7e12c68b4959fefd36cddb4f5f59a2}\label{class_bullet_physics_object_a1d7e12c68b4959fefd36cddb4f5f59a2}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!Add\+Acceleration@{Add\+Acceleration}}
+\index{Add\+Acceleration@{Add\+Acceleration}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{Add\+Acceleration()}{AddAcceleration()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Object\+::\+Add\+Acceleration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{acceleration,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{power\+\_\+point = {\ttfamily \{0.0f,~0.0f,~0.0f\}} }\end{DoxyParamCaption})}
+
+
+
+加速度追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em acceleration} & 加速度 \\
+\hline
+{\em power\+\_\+point} & 力点 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 166 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a2d8bbb2460766e646eabbff414f54cde}\label{class_bullet_physics_object_a2d8bbb2460766e646eabbff414f54cde}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!Add\+Reference\+Counter@{Add\+Reference\+Counter}}
+\index{Add\+Reference\+Counter@{Add\+Reference\+Counter}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{Add\+Reference\+Counter()}{AddReferenceCounter()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Object\+::\+Add\+Reference\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+参照カウンタ追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 151 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a2a1d883ae9c1bfc42a7ea3e48095deb0}\label{class_bullet_physics_object_a2a1d883ae9c1bfc42a7ea3e48095deb0}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!Add\+Velocity@{Add\+Velocity}}
+\index{Add\+Velocity@{Add\+Velocity}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{Add\+Velocity()}{AddVelocity()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Object\+::\+Add\+Velocity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{velocity,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{power\+\_\+point = {\ttfamily \{0.0f,~0.0f,~0.0f\}} }\end{DoxyParamCaption})}
+
+
+
+初速度追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em velocity} & 初速度 \\
+\hline
+{\em power\+\_\+point} & 力点 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 158 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a589046e8bbc361be462f8fe343ccec0b}\label{class_bullet_physics_object_a589046e8bbc361be462f8fe343ccec0b}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!Forced\+Release@{Forced\+Release}}
+\index{Forced\+Release@{Forced\+Release}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{Forced\+Release()}{ForcedRelease()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Object\+::\+Forced\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+強制解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 143 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a436ec7f8e40865bc240eaf5669a43bf9}\label{class_bullet_physics_object_a436ec7f8e40865bc240eaf5669a43bf9}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!getp\+Collision\+Shape@{getp\+Collision\+Shape}}
+\index{getp\+Collision\+Shape@{getp\+Collision\+Shape}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{getp\+Collision\+Shape()}{getpCollisionShape()}}
+{\footnotesize\ttfamily bt\+Collision\+Shape $\ast$ Bullet\+Physics\+Object\+::getp\+Collision\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+衝突形状取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bt\+Collision\+Shape$\ast$} & 衝突形状 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 28 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a92b00adf82adf916a8b6c3e8c7570926}\label{class_bullet_physics_object_a92b00adf82adf916a8b6c3e8c7570926}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!getp\+Motion\+State@{getp\+Motion\+State}}
+\index{getp\+Motion\+State@{getp\+Motion\+State}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{getp\+Motion\+State()}{getpMotionState()}}
+{\footnotesize\ttfamily bt\+Default\+Motion\+State $\ast$ Bullet\+Physics\+Object\+::getp\+Motion\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+外部から剛体を操作するハンドル得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bt\+Default\+Motion\+State$\ast$} & 外部から剛体を操作するハンドル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a02e592eaa6470b7df077ae1f58db9323}\label{class_bullet_physics_object_a02e592eaa6470b7df077ae1f58db9323}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Bullet\+Physics\+Object\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+座標取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 座標 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a711db1c0266db2f0fc3d8baa44c6e1ab}\label{class_bullet_physics_object_a711db1c0266db2f0fc3d8baa44c6e1ab}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!getp\+Rigid\+Body@{getp\+Rigid\+Body}}
+\index{getp\+Rigid\+Body@{getp\+Rigid\+Body}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{getp\+Rigid\+Body()}{getpRigidBody()}}
+{\footnotesize\ttfamily bt\+Rigid\+Body $\ast$ Bullet\+Physics\+Object\+::getp\+Rigid\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+剛体取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bt\+Rigid\+Body$\ast$} & 剛体 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a58f4fe83f0fe1f298b6e1fef14306903}\label{class_bullet_physics_object_a58f4fe83f0fe1f298b6e1fef14306903}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!get\+Quaternion@{get\+Quaternion}}
+\index{get\+Quaternion@{get\+Quaternion}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{get\+Quaternion()}{getQuaternion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} Bullet\+Physics\+Object\+::get\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+クォータニオン取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Quaternion} & クォータニオン \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 69 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a12027754be0d44356ab98617b7579a52}\label{class_bullet_physics_object_a12027754be0d44356ab98617b7579a52}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927}{Bullet\+Physics\+Object\+::\+Type}} Bullet\+Physics\+Object\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+タイプ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Type} & タイプ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 21 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a6dc79cf0ac34446de037eac7b910d30b}\label{class_bullet_physics_object_a6dc79cf0ac34446de037eac7b910d30b}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!Init\+Capsule@{Init\+Capsule}}
+\index{Init\+Capsule@{Init\+Capsule}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{Init\+Capsule()}{InitCapsule()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Object\+::\+Init\+Capsule (\begin{DoxyParamCaption}\item[{float}]{mass,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{inertia,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{position,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$}]{quaternion,  }\item[{float}]{radius,  }\item[{float}]{height }\end{DoxyParamCaption})}
+
+
+
+球初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em mass} & 質量 \\
+\hline
+{\em $\ast$inertia} & 慣性モーメント \\
+\hline
+{\em $\ast$position} & 座標 \\
+\hline
+{\em $\ast$quaternion} & クォータニオン \\
+\hline
+{\em radius} & 半径 \\
+\hline
+{\em height} & 高さ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 117 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_ab4b4e1193398141c29bb8f2fb21e3265}\label{class_bullet_physics_object_ab4b4e1193398141c29bb8f2fb21e3265}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!Init\+Common@{Init\+Common}}
+\index{Init\+Common@{Init\+Common}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{Init\+Common()}{InitCommon()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Object\+::\+Init\+Common (\begin{DoxyParamCaption}\item[{float}]{mass,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{inertia,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{position,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+共通初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em mass} & 質量 \\
+\hline
+{\em $\ast$inertia} & 慣性モーメント \\
+\hline
+{\em $\ast$position} & 座標 \\
+\hline
+{\em $\ast$quaternion} & クォータニオン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 174 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a24cbe68d50b3ee796e8a1043b55a21c1}\label{class_bullet_physics_object_a24cbe68d50b3ee796e8a1043b55a21c1}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!Init\+O\+BB@{Init\+O\+BB}}
+\index{Init\+O\+BB@{Init\+O\+BB}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{Init\+O\+B\+B()}{InitOBB()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Object\+::\+Init\+O\+BB (\begin{DoxyParamCaption}\item[{float}]{mass,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{inertia,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{position,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$}]{quaternion,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{edge\+\_\+half\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+O\+B\+B初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em mass} & 質量 \\
+\hline
+{\em $\ast$inertia} & 慣性モーメント \\
+\hline
+{\em $\ast$position} & 座標 \\
+\hline
+{\em $\ast$quaternion} & クォータニオン \\
+\hline
+{\em $\ast$edge\+\_\+half\+\_\+length} & 辺の半分の長さ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 103 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a94989c5b323cf5f5ce646a78443125b4}\label{class_bullet_physics_object_a94989c5b323cf5f5ce646a78443125b4}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!Init\+Sphere@{Init\+Sphere}}
+\index{Init\+Sphere@{Init\+Sphere}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{Init\+Sphere()}{InitSphere()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Object\+::\+Init\+Sphere (\begin{DoxyParamCaption}\item[{float}]{mass,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{inertia,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{position,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$}]{quaternion,  }\item[{float}]{radius }\end{DoxyParamCaption})}
+
+
+
+球初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em mass} & 質量 \\
+\hline
+{\em $\ast$inertia} & 慣性モーメント \\
+\hline
+{\em $\ast$position} & 座標 \\
+\hline
+{\em $\ast$quaternion} & クォータニオン \\
+\hline
+{\em radius} & 半径 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 91 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a0bb55d6e1644f45e35bcb8e2e9c945eb}\label{class_bullet_physics_object_a0bb55d6e1644f45e35bcb8e2e9c945eb}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!Release@{Release}}
+\index{Release@{Release}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Object\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 129 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a563a3aa01fc011dbff8aa64097d7c5a8}\label{class_bullet_physics_object_a563a3aa01fc011dbff8aa64097d7c5a8}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!set\+Kinematic@{set\+Kinematic}}
+\index{set\+Kinematic@{set\+Kinematic}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{set\+Kinematic()}{setKinematic()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Object\+::set\+Kinematic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Kinematic剛体設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 79 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a6a5196bc2fc1fad94bc65a26ff9d5cad}\label{class_bullet_physics_object_a6a5196bc2fc1fad94bc65a26ff9d5cad}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Object\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{value }\end{DoxyParamCaption})}
+
+
+
+座標設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 座標 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Object.\+cpp の 59 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_bullet_physics_object_a1dfb431c0eefdacf3cfc1ba3ae104457}\label{class_bullet_physics_object_a1dfb431c0eefdacf3cfc1ba3ae104457}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!collision\+\_\+shape\+\_\+@{collision\+\_\+shape\+\_\+}}
+\index{collision\+\_\+shape\+\_\+@{collision\+\_\+shape\+\_\+}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{collision\+\_\+shape\+\_\+}{collision\_shape\_}}
+{\footnotesize\ttfamily bt\+Collision\+Shape$\ast$ Bullet\+Physics\+Object\+::collision\+\_\+shape\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+衝突形状 
+
+
+
+ Bullet\+Physics\+Object.\+h の 52 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a1ea7b5057265c9a926acf3ae51dd8853}\label{class_bullet_physics_object_a1ea7b5057265c9a926acf3ae51dd8853}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!motion\+\_\+state\+\_\+@{motion\+\_\+state\+\_\+}}
+\index{motion\+\_\+state\+\_\+@{motion\+\_\+state\+\_\+}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{motion\+\_\+state\+\_\+}{motion\_state\_}}
+{\footnotesize\ttfamily bt\+Default\+Motion\+State$\ast$ Bullet\+Physics\+Object\+::motion\+\_\+state\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+外部から剛体を操作するハンドル 
+
+
+
+ Bullet\+Physics\+Object.\+h の 53 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_ae36c0b40461016b4c4a536c624ca6061}\label{class_bullet_physics_object_ae36c0b40461016b4c4a536c624ca6061}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!reference\+\_\+counter\+\_\+@{reference\+\_\+counter\+\_\+}}
+\index{reference\+\_\+counter\+\_\+@{reference\+\_\+counter\+\_\+}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{reference\+\_\+counter\+\_\+}{reference\_counter\_}}
+{\footnotesize\ttfamily int Bullet\+Physics\+Object\+::reference\+\_\+counter\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+参照カウンタ 
+
+
+
+ Bullet\+Physics\+Object.\+h の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a95bcfe681fee31cafe9f4ddf8d17a3fd}\label{class_bullet_physics_object_a95bcfe681fee31cafe9f4ddf8d17a3fd}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!rigid\+\_\+body\+\_\+@{rigid\+\_\+body\+\_\+}}
+\index{rigid\+\_\+body\+\_\+@{rigid\+\_\+body\+\_\+}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{rigid\+\_\+body\+\_\+}{rigid\_body\_}}
+{\footnotesize\ttfamily bt\+Rigid\+Body$\ast$ Bullet\+Physics\+Object\+::rigid\+\_\+body\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+剛体 
+
+
+
+ Bullet\+Physics\+Object.\+h の 54 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_object_a89ca999874ab6113c1dca6e5091db62f}\label{class_bullet_physics_object_a89ca999874ab6113c1dca6e5091db62f}} 
+\index{Bullet\+Physics\+Object@{Bullet\+Physics\+Object}!type\+\_\+@{type\+\_\+}}
+\index{type\+\_\+@{type\+\_\+}!Bullet\+Physics\+Object@{Bullet\+Physics\+Object}}
+\subsubsection{\texorpdfstring{type\+\_\+}{type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927}{Type}} Bullet\+Physics\+Object\+::type\+\_\+ = \mbox{\hyperlink{class_bullet_physics_object_ac428a5598df5fd4a450197e021420927ab50339a10e1de285ac99d4c3990b8693}{Type\+::\+N\+O\+NE}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+タイプ 
+
+
+
+ Bullet\+Physics\+Object.\+h の 51 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Bullet\+Physics/\mbox{\hyperlink{_bullet_physics_object_8h}{Bullet\+Physics\+Object.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Bullet\+Physics/\+Source/\mbox{\hyperlink{_bullet_physics_object_8cpp}{Bullet\+Physics\+Object.\+cpp}}\end{DoxyCompactItemize}

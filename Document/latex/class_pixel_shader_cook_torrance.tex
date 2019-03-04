@@ -1,0 +1,213 @@
+\hypertarget{class_pixel_shader_cook_torrance}{}\section{Pixel\+Shader\+Cook\+Torrance クラス}
+\label{class_pixel_shader_cook_torrance}\index{Pixel\+Shader\+Cook\+Torrance@{Pixel\+Shader\+Cook\+Torrance}}
+
+
+クック・トランスの金属反射ピクセルシェーダー\+Class  
+
+
+
+
+{\ttfamily \#include $<$Pixel\+Shader\+Cook\+Torrance.\+h$>$}
+
+
+
+Pixel\+Shader\+Cook\+Torrance 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_pixel_shader_cook_torrance__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pixel_shader_cook_torrance_aed6d21d6560d11fede08e596f49716d5}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_shader_cook_torrance_af2af86383b1724d1bf1364533a07fc5a}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_shader_cook_torrance_a2eff8f1808d5c7686599949537e7fdc4}{Object\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)
+\begin{DoxyCompactList}\small\item\em オブジェクト設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_shader_cook_torrance_a0e658d9792cc15730c800db5a509fad9}{Mesh\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index, unsigned mesh\+\_\+index)
+\begin{DoxyCompactList}\small\item\em メッシュ設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+D3\+D\+X\+M\+A\+T\+R\+IX \mbox{\hyperlink{class_pixel_shader_cook_torrance_ab23e34b701369457f0c2f63b414228c2}{math\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 計算用行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \mbox{\hyperlink{class_pixel_shader_cook_torrance_a15a4b3e226f5c33dffe0d0679dd40134}{P\+A\+TH}} = \char`\"{}resource/H\+L\+SL/Effect/Pixel\+Shader/Cook\+Torrance.\+psh\char`\"{}
+\begin{DoxyCompactList}\small\item\em ファイルパス \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+クック・トランスの金属反射ピクセルシェーダー\+Class 
+
+クック・トランスの金属反射のピクセルシェーダーの\+Class 
+
+ Pixel\+Shader\+Cook\+Torrance.\+h の 24 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_pixel_shader_cook_torrance_aed6d21d6560d11fede08e596f49716d5}\label{class_pixel_shader_cook_torrance_aed6d21d6560d11fede08e596f49716d5}} 
+\index{Pixel\+Shader\+Cook\+Torrance@{Pixel\+Shader\+Cook\+Torrance}!Init@{Init}}
+\index{Init@{Init}!Pixel\+Shader\+Cook\+Torrance@{Pixel\+Shader\+Cook\+Torrance}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Cook\+Torrance\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_a5318be2bf26892c385d863e3e8409571}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Cook\+Torrance.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_cook_torrance_a0e658d9792cc15730c800db5a509fad9}\label{class_pixel_shader_cook_torrance_a0e658d9792cc15730c800db5a509fad9}} 
+\index{Pixel\+Shader\+Cook\+Torrance@{Pixel\+Shader\+Cook\+Torrance}!Mesh\+Setting@{Mesh\+Setting}}
+\index{Mesh\+Setting@{Mesh\+Setting}!Pixel\+Shader\+Cook\+Torrance@{Pixel\+Shader\+Cook\+Torrance}}
+\subsubsection{\texorpdfstring{Mesh\+Setting()}{MeshSetting()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Cook\+Torrance\+::\+Mesh\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+メッシュ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_a89b6f0558a969478b06af52bb8e6ee16}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Cook\+Torrance.\+cpp の 80 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_cook_torrance_a2eff8f1808d5c7686599949537e7fdc4}\label{class_pixel_shader_cook_torrance_a2eff8f1808d5c7686599949537e7fdc4}} 
+\index{Pixel\+Shader\+Cook\+Torrance@{Pixel\+Shader\+Cook\+Torrance}!Object\+Setting@{Object\+Setting}}
+\index{Object\+Setting@{Object\+Setting}!Pixel\+Shader\+Cook\+Torrance@{Pixel\+Shader\+Cook\+Torrance}}
+\subsubsection{\texorpdfstring{Object\+Setting()}{ObjectSetting()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Cook\+Torrance\+::\+Object\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+オブジェクト設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_a488bde4a2c9a9c45c4ec0ad42487d3b1}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Cook\+Torrance.\+cpp の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_cook_torrance_af2af86383b1724d1bf1364533a07fc5a}\label{class_pixel_shader_cook_torrance_af2af86383b1724d1bf1364533a07fc5a}} 
+\index{Pixel\+Shader\+Cook\+Torrance@{Pixel\+Shader\+Cook\+Torrance}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Pixel\+Shader\+Cook\+Torrance@{Pixel\+Shader\+Cook\+Torrance}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Cook\+Torrance\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_adca4c44cd25c90a5ebd75b459f5e641e}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Cook\+Torrance.\+cpp の 41 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_pixel_shader_cook_torrance_ab23e34b701369457f0c2f63b414228c2}\label{class_pixel_shader_cook_torrance_ab23e34b701369457f0c2f63b414228c2}} 
+\index{Pixel\+Shader\+Cook\+Torrance@{Pixel\+Shader\+Cook\+Torrance}!math\+\_\+matrix\+\_\+@{math\+\_\+matrix\+\_\+}}
+\index{math\+\_\+matrix\+\_\+@{math\+\_\+matrix\+\_\+}!Pixel\+Shader\+Cook\+Torrance@{Pixel\+Shader\+Cook\+Torrance}}
+\subsubsection{\texorpdfstring{math\+\_\+matrix\+\_\+}{math\_matrix\_}}
+{\footnotesize\ttfamily D3\+D\+X\+M\+A\+T\+R\+IX Pixel\+Shader\+Cook\+Torrance\+::math\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+計算用行列 
+
+
+
+ Pixel\+Shader\+Cook\+Torrance.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_cook_torrance_a15a4b3e226f5c33dffe0d0679dd40134}\label{class_pixel_shader_cook_torrance_a15a4b3e226f5c33dffe0d0679dd40134}} 
+\index{Pixel\+Shader\+Cook\+Torrance@{Pixel\+Shader\+Cook\+Torrance}!P\+A\+TH@{P\+A\+TH}}
+\index{P\+A\+TH@{P\+A\+TH}!Pixel\+Shader\+Cook\+Torrance@{Pixel\+Shader\+Cook\+Torrance}}
+\subsubsection{\texorpdfstring{P\+A\+TH}{PATH}}
+{\footnotesize\ttfamily const char $\ast$ Pixel\+Shader\+Cook\+Torrance\+::\+P\+A\+TH = \char`\"{}resource/H\+L\+SL/Effect/Pixel\+Shader/Cook\+Torrance.\+psh\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+ファイルパス 
+
+
+
+ Pixel\+Shader\+Cook\+Torrance.\+h の 30 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\mbox{\hyperlink{_pixel_shader_cook_torrance_8h}{Pixel\+Shader\+Cook\+Torrance.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\+Source/\mbox{\hyperlink{_pixel_shader_cook_torrance_8cpp}{Pixel\+Shader\+Cook\+Torrance.\+cpp}}\end{DoxyCompactItemize}

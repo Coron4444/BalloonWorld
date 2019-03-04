@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: Renderer クラス</title>
+<title>BalloonWorld: Renderer クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -104,6 +104,14 @@ $(document).ready(function(){initNavTree('class_renderer.html','');});
  <a href="class_renderer.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="_renderer_8h_source.html">Renderer.h</a>&gt;</code></p>
+<div class="dynheader">
+Renderer 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_renderer__coll__graph.png" border="0" usemap="#_renderer_coll__map" alt="Collaboration graph"/></div>
+<map name="_renderer_coll__map" id="_renderer_coll__map">
+<area shape="rect" id="node2" href="class_renderer_interface.html" title="レンダラーInterfaceClass " alt="" coords="5,5,128,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 公開型</h2></td></tr>
@@ -121,7 +129,7 @@ $(document).ready(function(){initNavTree('class_renderer.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a1c49b796eff197f77ef3f75757f7d468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_renderer_interface.html">RendererInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a1c49b796eff197f77ef3f75757f7d468">getpRenderer</a> ()</td></tr>
-<tr class="memdesc:a1c49b796eff197f77ef3f75757f7d468"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダラーポインタ取得関数  <a href="#a1c49b796eff197f77ef3f75757f7d468">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a1c49b796eff197f77ef3f75757f7d468"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダラー取得関数  <a href="#a1c49b796eff197f77ef3f75757f7d468">[詳解]</a><br /></td></tr>
 <tr class="separator:a1c49b796eff197f77ef3f75757f7d468"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02e3c483b2c9d8024e51639a06159066"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a02e3c483b2c9d8024e51639a06159066">setRenderer</a> (<a class="el" href="class_renderer_factory_interface.html">RendererFactoryInterface</a> *factory, <a class="el" href="class_renderer.html#ab5a9379ccadcf2b3394c61cf8c835fec">MODE</a> mode)</td></tr>
 <tr class="memdesc:a02e3c483b2c9d8024e51639a06159066"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダラー設定関数  <a href="#a02e3c483b2c9d8024e51639a06159066">[詳解]</a><br /></td></tr>
@@ -140,9 +148,12 @@ $(document).ready(function(){initNavTree('class_renderer.html','');});
 <tr class="memitem:ae865246d6a04d467ac22458f6f5f69d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#ae865246d6a04d467ac22458f6f5f69d4">Uninit</a> ()</td></tr>
 <tr class="memdesc:ae865246d6a04d467ac22458f6f5f69d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#ae865246d6a04d467ac22458f6f5f69d4">[詳解]</a><br /></td></tr>
 <tr class="separator:ae865246d6a04d467ac22458f6f5f69d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af420951c9c163f1151bd6600df204cee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#af420951c9c163f1151bd6600df204cee">DrawBegin</a> ()</td></tr>
-<tr class="memdesc:af420951c9c163f1151bd6600df204cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画開始関数  <a href="#af420951c9c163f1151bd6600df204cee">[詳解]</a><br /></td></tr>
-<tr class="separator:af420951c9c163f1151bd6600df204cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d1b99317779905ba4b529d871a1845"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a15d1b99317779905ba4b529d871a1845">DrawBegin</a> (<a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a> clear_color={0.123f, 0.25f, 0.75f, 1.0f})</td></tr>
+<tr class="memdesc:a15d1b99317779905ba4b529d871a1845"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画開始関数  <a href="#a15d1b99317779905ba4b529d871a1845">[詳解]</a><br /></td></tr>
+<tr class="separator:a15d1b99317779905ba4b529d871a1845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9c45a64a141b0b7bbba2dde96e6180"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#abd9c45a64a141b0b7bbba2dde96e6180">NoClearDrawBegin</a> ()</td></tr>
+<tr class="memdesc:abd9c45a64a141b0b7bbba2dde96e6180"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリア無描画開始関数  <a href="#abd9c45a64a141b0b7bbba2dde96e6180">[詳解]</a><br /></td></tr>
+<tr class="separator:abd9c45a64a141b0b7bbba2dde96e6180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0393849bd4178a33861780bf07b0deee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a0393849bd4178a33861780bf07b0deee">DrawEnd</a> (bool is_begin_scene)</td></tr>
 <tr class="memdesc:a0393849bd4178a33861780bf07b0deee"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画終了関数  <a href="#a0393849bd4178a33861780bf07b0deee">[詳解]</a><br /></td></tr>
 <tr class="separator:a0393849bd4178a33861780bf07b0deee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,7 +164,7 @@ $(document).ready(function(){initNavTree('class_renderer.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
 <tr class="memitem:a995648604452c47b494de005b30de863"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a995648604452c47b494de005b30de863">getpInstance</a> ()</td></tr>
-<tr class="memdesc:a995648604452c47b494de005b30de863"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスポインタ取得関数  <a href="#a995648604452c47b494de005b30de863">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a995648604452c47b494de005b30de863"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス取得関数  <a href="#a995648604452c47b494de005b30de863">[詳解]</a><br /></td></tr>
 <tr class="separator:a995648604452c47b494de005b30de863"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7ac523172faaf376ecddaed4bdc0781"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#aa7ac523172faaf376ecddaed4bdc0781">ReleaseInstance</a> ()</td></tr>
 <tr class="memdesc:aa7ac523172faaf376ecddaed4bdc0781"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス解放関数  <a href="#aa7ac523172faaf376ecddaed4bdc0781">[詳解]</a><br /></td></tr>
@@ -232,7 +243,7 @@ $(document).ready(function(){initNavTree('class_renderer.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -245,7 +256,7 @@ $(document).ready(function(){initNavTree('class_renderer.html','');});
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_renderer_8h_source.html">Renderer.h</a> の <a class="el" href="_renderer_8h_source.html#l00229">229</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00074">74</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -276,8 +287,8 @@ $(document).ready(function(){initNavTree('class_renderer.html','');});
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="af420951c9c163f1151bd6600df204cee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af420951c9c163f1151bd6600df204cee">&#9670;&nbsp;</a></span>DrawBegin()</h2>
+<a id="a15d1b99317779905ba4b529d871a1845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15d1b99317779905ba4b529d871a1845">&#9670;&nbsp;</a></span>DrawBegin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -285,7 +296,8 @@ $(document).ready(function(){initNavTree('class_renderer.html','');});
         <tr>
           <td class="memname">bool Renderer::DrawBegin </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a>&#160;</td>
+          <td class="paramname"><em>clear_color</em> = <code>{0.123f,&#160;0.25f,&#160;0.75f,&#160;1.0f}</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -294,7 +306,7 @@ $(document).ready(function(){initNavTree('class_renderer.html','');});
 <p>描画開始関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">void</td><td>なし </td></tr>
+    <tr><td class="paramname">clear_color</td><td>クリア色 </td></tr>
   </table>
   </dd>
 </dl>
@@ -305,7 +317,7 @@ $(document).ready(function(){initNavTree('class_renderer.html','');});
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00096">96</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00100">100</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -328,7 +340,7 @@ $(document).ready(function(){initNavTree('class_renderer.html','');});
 <p>描画終了関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">is_begin_scene</td><td>描画開始成功フラグ </td></tr>
+    <tr><td class="paramname">is_begin_scene</td><td>描画開始成功フラグ </td></tr>
   </table>
   </dd>
 </dl>
@@ -339,7 +351,7 @@ $(document).ready(function(){initNavTree('class_renderer.html','');});
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00104">104</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00116">116</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -372,7 +384,7 @@ template&lt;class Type &gt; </div>
 <p>デバイス取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">out_pointer</td><td>取得用ポインタ </td></tr>
+    <tr><td class="paramname">**out_pointer</td><td>取得用 </td></tr>
   </table>
   </dd>
 </dl>
@@ -416,7 +428,7 @@ template&lt;class Type &gt; </div>
 <p>インターフェース取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">out_pointer</td><td>取得用ポインタ </td></tr>
+    <tr><td class="paramname">**out_pointer</td><td>取得用 </td></tr>
   </table>
   </dd>
 </dl>
@@ -454,7 +466,7 @@ template&lt;class Type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>インスタンスポインタ取得関数 </p>
+<p>インスタンス取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">void</td><td>なし </td></tr>
@@ -463,12 +475,12 @@ template&lt;class Type &gt; </div>
 </dl>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">Renderer*</td><td>レンダラーインスタンスポインタ </td></tr>
+    <tr><td class="paramname">Renderer*</td><td>レンダラーインスタンス </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00031">31</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00029">29</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -487,7 +499,7 @@ template&lt;class Type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>レンダラーポインタ取得関数 </p>
+<p>レンダラー取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">void</td><td>なし </td></tr>
@@ -496,12 +508,12 @@ template&lt;class Type &gt; </div>
 </dl>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">RendererInterface*</td><td>レンダラーポインタ </td></tr>
+    <tr><td class="paramname">RendererInterface*</td><td>レンダラー </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00055">55</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00053">53</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -552,11 +564,11 @@ template&lt;class Type &gt; </div>
 <p>初期化関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">hInstance</td><td>インスタンスハンドル </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">hWnd</td><td>Windowsハンドル </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">is_full_screen</td><td>フルスクリーンフラグ </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">window_width</td><td>ウィンドウ幅 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">window_height</td><td>ウィンドウ高さ </td></tr>
+    <tr><td class="paramname">hInstance</td><td>インスタンスハンドル </td></tr>
+    <tr><td class="paramname">hWnd</td><td>Windowsハンドル </td></tr>
+    <tr><td class="paramname">is_full_screen</td><td>フルスクリーンフラグ </td></tr>
+    <tr><td class="paramname">window_width</td><td>ウィンドウ幅 </td></tr>
+    <tr><td class="paramname">window_height</td><td>ウィンドウ高さ </td></tr>
   </table>
   </dd>
 </dl>
@@ -567,7 +579,40 @@ template&lt;class Type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00076">76</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00080">80</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abd9c45a64a141b0b7bbba2dde96e6180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd9c45a64a141b0b7bbba2dde96e6180">&#9670;&nbsp;</a></span>NoClearDrawBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Renderer::NoClearDrawBegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>クリア無描画開始関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>描画開始成功の有無 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00108">108</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -626,7 +671,7 @@ template&lt;class Type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00112">112</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00124">124</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -667,7 +712,7 @@ template&lt;class Type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00045">45</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00043">43</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -700,8 +745,8 @@ template&lt;class Type &gt; </div>
 <p>レンダラー設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">factory</td><td>レンダラーファクトリー </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>レンダラーモード </td></tr>
+    <tr><td class="paramname">*factory</td><td>レンダラーファクトリー </td></tr>
+    <tr><td class="paramname">*mode</td><td>レンダラーモード </td></tr>
   </table>
   </dd>
 </dl>
@@ -712,7 +757,7 @@ template&lt;class Type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00060">60</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00058">58</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -745,7 +790,7 @@ template&lt;class Type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00085">85</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00089">89</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -829,8 +874,8 @@ template&lt;class Type &gt; </div>
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/01_Main/Renderer/<a class="el" href="_renderer_8h_source.html">Renderer.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/01_Main/Renderer/<a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Renderer/<a class="el" href="_renderer_8h_source.html">Renderer.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Renderer/Source/<a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

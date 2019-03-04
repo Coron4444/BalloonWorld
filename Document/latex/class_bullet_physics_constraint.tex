@@ -1,0 +1,372 @@
+\hypertarget{class_bullet_physics_constraint}{}\section{Bullet\+Physics\+Constraint クラス}
+\label{class_bullet_physics_constraint}\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}
+
+
+バレットフィジックス拘束\+Class  
+
+
+
+
+{\ttfamily \#include $<$Bullet\+Physics\+Constraint.\+h$>$}
+
+
+
+Bullet\+Physics\+Constraint 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{class_bullet_physics_constraint__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bt\+Typed\+Constraint $\ast$ \mbox{\hyperlink{class_bullet_physics_constraint_a9b010a354abcc093e48dc66edb1e22b7}{getp\+Constraint}} ()
+\begin{DoxyCompactList}\small\item\em 拘束取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24}{Type}} \mbox{\hyperlink{class_bullet_physics_constraint_a6d2bcb7b7a32a5ca14210a577a613b91}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em タイプ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_constraint_aeb6ae98f37a54a32ef2999064733f078}{Init\+Point\+To\+Point}} (bt\+Rigid\+Body $\ast$rigid\+\_\+body0, bt\+Rigid\+Body $\ast$rigid\+\_\+body1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$point0, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$point1)
+\begin{DoxyCompactList}\small\item\em ポイントとポイント拘束初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_constraint_acc6efb5b423b1be8d1dfb5d1d4aee394}{Init\+Hinge}} (bt\+Rigid\+Body $\ast$rigid\+\_\+body0, bt\+Rigid\+Body $\ast$rigid\+\_\+body1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$point0, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$point1, float angle\+\_\+min, float angle\+\_\+max, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$axis)
+\begin{DoxyCompactList}\small\item\em 1つの軸を回転する拘束初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_constraint_a779d7b52cd6c630c580e1500053c1ccb}{Init\+Universal}} (bt\+Rigid\+Body $\ast$rigid\+\_\+body0, bt\+Rigid\+Body $\ast$rigid\+\_\+body1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$anchor, float angle\+\_\+min0, float angle\+\_\+min1, float angle\+\_\+max0, float angle\+\_\+max1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$axis0, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$axis1)
+\begin{DoxyCompactList}\small\item\em 接続点とそれを中心とした2軸の拘束初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_constraint_ac29d9fed9b28cc7f97a10f888c0dc12f}{Release}} ()
+\begin{DoxyCompactList}\small\item\em 解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_constraint_ad5fa02063f2b563bd01f37a2e8896554}{Forced\+Release}} ()
+\begin{DoxyCompactList}\small\item\em 強制解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_constraint_a36ee598adbde9eacbada40fd5d6e4942}{Add\+Reference\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em 参照カウンタ追加関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24}{Type}} \{ \mbox{\hyperlink{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24ab50339a10e1de285ac99d4c3990b8693}{Type\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24a3593f477d0cd8e856dc7c6d621ab4eea}{Type\+::\+P\+O\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT}}, 
+\mbox{\hyperlink{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24a26a4b44a837bf97b972628509912b4a5}{Type\+::\+M\+AX}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+bt\+Typed\+Constraint $\ast$ \mbox{\hyperlink{class_bullet_physics_constraint_ac802be61cfbd2045affa8c5718eaa13a}{constraint\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 拘束 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24}{Type}} \mbox{\hyperlink{class_bullet_physics_constraint_a7f8eee5114f4c45013d052deab208ef4}{type\+\_\+}} = \mbox{\hyperlink{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24ab50339a10e1de285ac99d4c3990b8693}{Type\+::\+N\+O\+NE}}
+\begin{DoxyCompactList}\small\item\em タイプ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_bullet_physics_constraint_a8d9fae4e261d9e36cf6540edafa37792}{reference\+\_\+counter\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em 参照カウンタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+バレットフィジックス拘束\+Class 
+
+バレットフィジックスの拘束\+Class 
+
+ Bullet\+Physics\+Constraint.\+h の 29 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24}\label{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24}} 
+\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!Type@{Type}}
+\index{Type@{Type}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}
+\subsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24}{Bullet\+Physics\+Constraint\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24ab50339a10e1de285ac99d4c3990b8693}\label{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24ab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+O\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT@{P\+O\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!P\+O\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT@{P\+O\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT}}}\mbox{\Hypertarget{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24a3593f477d0cd8e856dc7c6d621ab4eea}\label{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24a3593f477d0cd8e856dc7c6d621ab4eea}} 
+P\+O\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24a26a4b44a837bf97b972628509912b4a5}\label{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24a26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Bullet\+Physics\+Constraint.\+h の 35 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_bullet_physics_constraint_a36ee598adbde9eacbada40fd5d6e4942}\label{class_bullet_physics_constraint_a36ee598adbde9eacbada40fd5d6e4942}} 
+\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!Add\+Reference\+Counter@{Add\+Reference\+Counter}}
+\index{Add\+Reference\+Counter@{Add\+Reference\+Counter}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}
+\subsubsection{\texorpdfstring{Add\+Reference\+Counter()}{AddReferenceCounter()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Constraint\+::\+Add\+Reference\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+参照カウンタ追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Constraint.\+cpp の 101 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_constraint_ad5fa02063f2b563bd01f37a2e8896554}\label{class_bullet_physics_constraint_ad5fa02063f2b563bd01f37a2e8896554}} 
+\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!Forced\+Release@{Forced\+Release}}
+\index{Forced\+Release@{Forced\+Release}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}
+\subsubsection{\texorpdfstring{Forced\+Release()}{ForcedRelease()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Constraint\+::\+Forced\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+強制解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Constraint.\+cpp の 93 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_constraint_a9b010a354abcc093e48dc66edb1e22b7}\label{class_bullet_physics_constraint_a9b010a354abcc093e48dc66edb1e22b7}} 
+\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!getp\+Constraint@{getp\+Constraint}}
+\index{getp\+Constraint@{getp\+Constraint}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}
+\subsubsection{\texorpdfstring{getp\+Constraint()}{getpConstraint()}}
+{\footnotesize\ttfamily bt\+Typed\+Constraint $\ast$ Bullet\+Physics\+Constraint\+::getp\+Constraint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+拘束取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bt\+Typed\+Constraint$\ast$} & 拘束 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Constraint.\+cpp の 21 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_constraint_a6d2bcb7b7a32a5ca14210a577a613b91}\label{class_bullet_physics_constraint_a6d2bcb7b7a32a5ca14210a577a613b91}} 
+\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24}{Bullet\+Physics\+Constraint\+::\+Type}} Bullet\+Physics\+Constraint\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+タイプ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Type} & タイプ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Constraint.\+cpp の 28 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_constraint_acc6efb5b423b1be8d1dfb5d1d4aee394}\label{class_bullet_physics_constraint_acc6efb5b423b1be8d1dfb5d1d4aee394}} 
+\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!Init\+Hinge@{Init\+Hinge}}
+\index{Init\+Hinge@{Init\+Hinge}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}
+\subsubsection{\texorpdfstring{Init\+Hinge()}{InitHinge()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Constraint\+::\+Init\+Hinge (\begin{DoxyParamCaption}\item[{bt\+Rigid\+Body $\ast$}]{rigid\+\_\+body0,  }\item[{bt\+Rigid\+Body $\ast$}]{rigid\+\_\+body1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{point0,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{point1,  }\item[{float}]{angle\+\_\+min,  }\item[{float}]{angle\+\_\+max,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{axis }\end{DoxyParamCaption})}
+
+
+
+1つの軸を回転する拘束初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$rigid\+\_\+body0} & 剛体0 \\
+\hline
+{\em $\ast$rigid\+\_\+body1} & 剛体1 \\
+\hline
+{\em $\ast$point0} & ポイント0(ローカル座標) \\
+\hline
+{\em $\ast$point1} & ポイント1(ローカル座標) \\
+\hline
+{\em angle\+\_\+min} & 最小角度1(1.\+0f$\sim$0.0fで1.0fに近いほど自由が利く) \\
+\hline
+{\em angle\+\_\+max} & 最大角度0(1.\+0f$\sim$0.0fで1.0fに近いほど自由が利く) \\
+\hline
+{\em $\ast$axis} & 回転軸 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Constraint.\+cpp の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_constraint_aeb6ae98f37a54a32ef2999064733f078}\label{class_bullet_physics_constraint_aeb6ae98f37a54a32ef2999064733f078}} 
+\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!Init\+Point\+To\+Point@{Init\+Point\+To\+Point}}
+\index{Init\+Point\+To\+Point@{Init\+Point\+To\+Point}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}
+\subsubsection{\texorpdfstring{Init\+Point\+To\+Point()}{InitPointToPoint()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Constraint\+::\+Init\+Point\+To\+Point (\begin{DoxyParamCaption}\item[{bt\+Rigid\+Body $\ast$}]{rigid\+\_\+body0,  }\item[{bt\+Rigid\+Body $\ast$}]{rigid\+\_\+body1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{point0,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{point1 }\end{DoxyParamCaption})}
+
+
+
+ポイントとポイント拘束初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$rigid\+\_\+body0} & 剛体0 \\
+\hline
+{\em $\ast$rigid\+\_\+body1} & 剛体1 \\
+\hline
+{\em $\ast$point0} & ポイント0(ローカル座標) \\
+\hline
+{\em $\ast$point1} & ポイント1(ローカル座標) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Constraint.\+cpp の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_constraint_a779d7b52cd6c630c580e1500053c1ccb}\label{class_bullet_physics_constraint_a779d7b52cd6c630c580e1500053c1ccb}} 
+\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!Init\+Universal@{Init\+Universal}}
+\index{Init\+Universal@{Init\+Universal}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}
+\subsubsection{\texorpdfstring{Init\+Universal()}{InitUniversal()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Constraint\+::\+Init\+Universal (\begin{DoxyParamCaption}\item[{bt\+Rigid\+Body $\ast$}]{rigid\+\_\+body0,  }\item[{bt\+Rigid\+Body $\ast$}]{rigid\+\_\+body1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{anchor,  }\item[{float}]{angle\+\_\+min0,  }\item[{float}]{angle\+\_\+min1,  }\item[{float}]{angle\+\_\+max0,  }\item[{float}]{angle\+\_\+max1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{axis0,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{axis1 }\end{DoxyParamCaption})}
+
+
+
+接続点とそれを中心とした2軸の拘束初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$rigid\+\_\+body0} & 剛体0 \\
+\hline
+{\em $\ast$rigid\+\_\+body1} & 剛体1 \\
+\hline
+{\em $\ast$anchor} & 接続点(ワールド座標) \\
+\hline
+{\em angle\+\_\+min0} & 最小角度0(1.\+0f$\sim$0.0fで1.0fに近いほど自由が利く) \\
+\hline
+{\em angle\+\_\+min1} & 最小角度1(1.\+0f$\sim$0.0fで1.0fに近いほど自由が利く) \\
+\hline
+{\em angle\+\_\+max0} & 最大角度0(1.\+0f$\sim$0.0fで1.0fに近いほど自由が利く) \\
+\hline
+{\em angle\+\_\+max1} & 最大角度1(1.\+0f$\sim$0.0fで1.0fに近いほど自由が利く) \\
+\hline
+{\em $\ast$axis0} & 回転軸0 \\
+\hline
+{\em $\ast$axis1} & 回転軸1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Constraint.\+cpp の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_constraint_ac29d9fed9b28cc7f97a10f888c0dc12f}\label{class_bullet_physics_constraint_ac29d9fed9b28cc7f97a10f888c0dc12f}} 
+\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!Release@{Release}}
+\index{Release@{Release}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}
+\subsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Constraint\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Constraint.\+cpp の 81 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_bullet_physics_constraint_ac802be61cfbd2045affa8c5718eaa13a}\label{class_bullet_physics_constraint_ac802be61cfbd2045affa8c5718eaa13a}} 
+\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!constraint\+\_\+@{constraint\+\_\+}}
+\index{constraint\+\_\+@{constraint\+\_\+}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}
+\subsubsection{\texorpdfstring{constraint\+\_\+}{constraint\_}}
+{\footnotesize\ttfamily bt\+Typed\+Constraint$\ast$ Bullet\+Physics\+Constraint\+::constraint\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+拘束 
+
+
+
+ Bullet\+Physics\+Constraint.\+h の 47 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_constraint_a8d9fae4e261d9e36cf6540edafa37792}\label{class_bullet_physics_constraint_a8d9fae4e261d9e36cf6540edafa37792}} 
+\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!reference\+\_\+counter\+\_\+@{reference\+\_\+counter\+\_\+}}
+\index{reference\+\_\+counter\+\_\+@{reference\+\_\+counter\+\_\+}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}
+\subsubsection{\texorpdfstring{reference\+\_\+counter\+\_\+}{reference\_counter\_}}
+{\footnotesize\ttfamily int Bullet\+Physics\+Constraint\+::reference\+\_\+counter\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+参照カウンタ 
+
+
+
+ Bullet\+Physics\+Constraint.\+h の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_constraint_a7f8eee5114f4c45013d052deab208ef4}\label{class_bullet_physics_constraint_a7f8eee5114f4c45013d052deab208ef4}} 
+\index{Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}!type\+\_\+@{type\+\_\+}}
+\index{type\+\_\+@{type\+\_\+}!Bullet\+Physics\+Constraint@{Bullet\+Physics\+Constraint}}
+\subsubsection{\texorpdfstring{type\+\_\+}{type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24}{Type}} Bullet\+Physics\+Constraint\+::type\+\_\+ = \mbox{\hyperlink{class_bullet_physics_constraint_ad85080d0a6ff58365f4f6fa4c9381e24ab50339a10e1de285ac99d4c3990b8693}{Type\+::\+N\+O\+NE}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+タイプ 
+
+
+
+ Bullet\+Physics\+Constraint.\+h の 48 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Bullet\+Physics/\mbox{\hyperlink{_bullet_physics_constraint_8h}{Bullet\+Physics\+Constraint.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Bullet\+Physics/\+Source/\mbox{\hyperlink{_bullet_physics_constraint_8cpp}{Bullet\+Physics\+Constraint.\+cpp}}\end{DoxyCompactItemize}

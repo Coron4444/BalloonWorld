@@ -8,6 +8,5 @@ var class_goal_draw =
     [ "Uninit", "class_goal_draw.html#a01318a0606848a3ca8ca7b7acbf4df24", null ],
     [ "Update", "class_goal_draw.html#a6e003277ed44eb9c800a616b6acbcb20", null ],
     [ "cube_polygon_", "class_goal_draw.html#add3ff2a5f7cd52a76ccfb95c27aa8a07", null ],
-    [ "effekseer_object_", "class_goal_draw.html#a2d4449f780f6b6fd6dd3e8763fc67b2d", null ],
-    [ "goal_", "class_goal_draw.html#abbb3b4db65f3908bad9b918c6feb6a7a", null ]
+    [ "effekseer_object_", "class_goal_draw.html#a2d4449f780f6b6fd6dd3e8763fc67b2d", null ]
 ];

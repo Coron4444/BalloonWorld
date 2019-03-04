@@ -1,0 +1,259 @@
+\hypertarget{class_needle}{}\section{Needle クラス}
+\label{class_needle}\index{Needle@{Needle}}
+
+
+棘\+Class  
+
+
+
+
+{\ttfamily \#include $<$Needle.\+h$>$}
+
+
+
+Needle 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_needle__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_needle_1_1_state}{State}}
+\begin{DoxyCompactList}\small\item\em ステート\+Class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_needle_adbc39e74035a9379aad3c09a1933b3e3}{set\+Position}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} value)
+\begin{DoxyCompactList}\small\item\em 座標設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_needle_a496ac6f8e6bc0b6ea639cfe1294ee4ea}{set\+Scale}} (float value)
+\begin{DoxyCompactList}\small\item\em 拡縮設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_needle_a76b35c7ddffb5de4c44daa66e5927baa}{set\+State}} (\mbox{\hyperlink{class_needle_1_1_state}{State}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em ステート設定関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_needle_aabdce3968b99467237da733a262b00f0}{get\+Is\+Damage}} ()
+\item 
+void \mbox{\hyperlink{class_needle_a3b0e0e86944e85bfb283de011c7ce8a2}{Init}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$collision)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_needle_a077c40beda665b249522349df0f16da1}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_needle_adf4790c9ad674b809ae576a09a3ee2f2}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_needle_1_1_state}{State}} $\ast$ \mbox{\hyperlink{class_needle_a9ece23f3ee2e844aee7dbbe8d8110218}{state\+\_\+}}
+\begin{DoxyCompactList}\small\item\em ステート \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_needle_a311dfd4f4dacea81fbd194150b75a946}{is\+\_\+damage\+\_\+}} = true
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+棘\+Class 
+
+棘の\+Class 
+
+ Needle.\+h の 26 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_needle_aabdce3968b99467237da733a262b00f0}\label{class_needle_aabdce3968b99467237da733a262b00f0}} 
+\index{Needle@{Needle}!get\+Is\+Damage@{get\+Is\+Damage}}
+\index{get\+Is\+Damage@{get\+Is\+Damage}!Needle@{Needle}}
+\subsubsection{\texorpdfstring{get\+Is\+Damage()}{getIsDamage()}}
+{\footnotesize\ttfamily bool Needle\+::get\+Is\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Needle.\+h の 138 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_a3b0e0e86944e85bfb283de011c7ce8a2}\label{class_needle_a3b0e0e86944e85bfb283de011c7ce8a2}} 
+\index{Needle@{Needle}!Init@{Init}}
+\index{Init@{Init}!Needle@{Needle}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Needle\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$}]{collision }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$collision} & 衝突基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Needle.\+cpp の 70 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_adbc39e74035a9379aad3c09a1933b3e3}\label{class_needle_adbc39e74035a9379aad3c09a1933b3e3}} 
+\index{Needle@{Needle}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Needle@{Needle}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Needle\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{value }\end{DoxyParamCaption})}
+
+
+
+座標設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 座標 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Needle.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_a496ac6f8e6bc0b6ea639cfe1294ee4ea}\label{class_needle_a496ac6f8e6bc0b6ea639cfe1294ee4ea}} 
+\index{Needle@{Needle}!set\+Scale@{set\+Scale}}
+\index{set\+Scale@{set\+Scale}!Needle@{Needle}}
+\subsubsection{\texorpdfstring{set\+Scale()}{setScale()}}
+{\footnotesize\ttfamily void Needle\+::set\+Scale (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+拡縮設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 拡縮 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Needle.\+cpp の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_a76b35c7ddffb5de4c44daa66e5927baa}\label{class_needle_a76b35c7ddffb5de4c44daa66e5927baa}} 
+\index{Needle@{Needle}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!Needle@{Needle}}
+\subsubsection{\texorpdfstring{set\+State()}{setState()}}
+{\footnotesize\ttfamily void Needle\+::set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_needle_1_1_state}{State}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+ステート設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$svalue} & ステート \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Needle.\+cpp の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_a077c40beda665b249522349df0f16da1}\label{class_needle_a077c40beda665b249522349df0f16da1}} 
+\index{Needle@{Needle}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Needle@{Needle}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Needle\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_a1a70fbd3260fd1c0100320756830a0db}{Game\+Object\+Null}}を再実装しています。
+
+
+
+ Needle.\+cpp の 78 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_adf4790c9ad674b809ae576a09a3ee2f2}\label{class_needle_adf4790c9ad674b809ae576a09a3ee2f2}} 
+\index{Needle@{Needle}!Update@{Update}}
+\index{Update@{Update}!Needle@{Needle}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Needle\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_aeeb51b7e7aa41fd0b16f8f7c016bdb55}{Game\+Object\+Null}}を再実装しています。
+
+
+
+ Needle.\+cpp の 86 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_needle_a311dfd4f4dacea81fbd194150b75a946}\label{class_needle_a311dfd4f4dacea81fbd194150b75a946}} 
+\index{Needle@{Needle}!is\+\_\+damage\+\_\+@{is\+\_\+damage\+\_\+}}
+\index{is\+\_\+damage\+\_\+@{is\+\_\+damage\+\_\+}!Needle@{Needle}}
+\subsubsection{\texorpdfstring{is\+\_\+damage\+\_\+}{is\_damage\_}}
+{\footnotesize\ttfamily bool Needle\+::is\+\_\+damage\+\_\+ = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ Needle.\+h の 107 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_a9ece23f3ee2e844aee7dbbe8d8110218}\label{class_needle_a9ece23f3ee2e844aee7dbbe8d8110218}} 
+\index{Needle@{Needle}!state\+\_\+@{state\+\_\+}}
+\index{state\+\_\+@{state\+\_\+}!Needle@{Needle}}
+\subsubsection{\texorpdfstring{state\+\_\+}{state\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_needle_1_1_state}{State}}$\ast$ Needle\+::state\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ステート 
+
+
+
+ Needle.\+h の 106 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Needle/\mbox{\hyperlink{_needle_8h}{Needle.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Needle/\+Source/\mbox{\hyperlink{_needle_8cpp}{Needle.\+cpp}}\end{DoxyCompactItemize}

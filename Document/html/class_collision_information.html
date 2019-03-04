@@ -1,0 +1,1117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: CollisionInformation クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_collision_information.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="class_collision_information-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CollisionInformation クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>衝突情報Class  
+ <a href="class_collision_information.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_collision_information_8h_source.html">CollisionInformation.h</a>&gt;</code></p>
+<div class="dynheader">
+CollisionInformation 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_collision_information__coll__graph.png" border="0" usemap="#_collision_information_coll__map" alt="Collaboration graph"/></div>
+<map name="_collision_information_coll__map" id="_collision_information_coll__map">
+<area shape="rect" id="node2" href="class_collision_base.html" title="衝突BaseClass " alt="" coords="720,453,821,480"/>
+<area shape="rect" id="node4" href="class_game_object_base.html" title="ゲームオブジェクトBaseClass " alt="" coords="1054,584,1179,611"/>
+<area shape="rect" id="node19" href="class_collision_object.html" title="衝突オブジェクトClass " alt="" coords="1395,292,1505,319"/>
+<area shape="rect" id="node3" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="1391,539,1509,565"/>
+<area shape="rect" id="node5" href="class_draw_base.html" title="描画BaseClass " alt="" coords="1731,699,1812,725"/>
+<area shape="rect" id="node16" href="class_physics.html" title="物理Class " alt="" coords="1415,621,1485,648"/>
+<area shape="rect" id="node6" href="class_draw_order_list.html" title="描画注文リストClass " alt="" coords="1398,737,1502,764"/>
+<area shape="rect" id="node7" href="class_bit_flag.html" title="ビットフラグClass " alt="" coords="1085,741,1148,768"/>
+<area shape="rect" id="node8" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="1051,880,1182,907"/>
+<area shape="rect" id="node9" href="class_camera.html" title="カメラClass " alt="" coords="737,812,804,839"/>
+<area shape="rect" id="node10" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="1063,800,1170,827"/>
+<area shape="rect" id="node11" href="class_matrix.html" title="行列Class " alt="" coords="404,825,463,852"/>
+<area shape="rect" id="node17" href="class_transform.html" title="変形Class " alt="" coords="731,584,810,611"/>
+<area shape="rect" id="node13" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="107,416,183,443"/>
+<area shape="rect" id="node20" href="class_a_a_b_b.html" title="AABBClass " alt="" coords="741,279,800,305"/>
+<area shape="rect" id="node21" href="class_collision_shape_base.html" title="衝突形状BaseClass " alt="" coords="364,213,503,240"/>
+<area shape="rect" id="node26" href="class_line_segment.html" title="線分Class " alt="" coords="721,145,820,172"/>
+<area shape="rect" id="node15" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="717,965,824,992"/>
+<area shape="rect" id="node18" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject *,\l ARRAY_NUM \&gt;" alt="" coords="1703,396,1839,452"/>
+<area shape="rect" id="node22" href="class_object_of_tree.html" title="ObjectOfTree\&lt; CollisionObject *\&gt;" alt="" coords="1664,320,1879,347"/>
+<area shape="rect" id="node25" href="class_collision_object_1_1_shape.html" title="衝突形状Class " alt="" coords="693,212,848,239"/>
+<area shape="rect" id="node23" href="class_space_of_tree.html" title="SpaceOfTree\&lt; CollisionObject *\&gt;" alt="" coords="2036,320,2249,347"/>
+<area shape="rect" id="node24" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject::Shape\l *, ARRAY_NUM \&gt;" alt="" coords="1033,197,1200,253"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:affce7016429a57e1283c2e3b424d2347"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#affce7016429a57e1283c2e3b424d2347">getpCollisionPoint</a> ()</td></tr>
+<tr class="memdesc:affce7016429a57e1283c2e3b424d2347"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突点取得関数  <a href="#affce7016429a57e1283c2e3b424d2347">[詳解]</a><br /></td></tr>
+<tr class="separator:affce7016429a57e1283c2e3b424d2347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a299c2d8462f26dbacabb71029ba6ce4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a299c2d8462f26dbacabb71029ba6ce4f">setCollisionPoint</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> value)</td></tr>
+<tr class="memdesc:a299c2d8462f26dbacabb71029ba6ce4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突点設定関数  <a href="#a299c2d8462f26dbacabb71029ba6ce4f">[詳解]</a><br /></td></tr>
+<tr class="separator:a299c2d8462f26dbacabb71029ba6ce4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4146ab53569d6d52a4af94b21617ddf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a4146ab53569d6d52a4af94b21617ddf8">getpCollisionPointNormal</a> ()</td></tr>
+<tr class="memdesc:a4146ab53569d6d52a4af94b21617ddf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突点法線取得関数  <a href="#a4146ab53569d6d52a4af94b21617ddf8">[詳解]</a><br /></td></tr>
+<tr class="separator:a4146ab53569d6d52a4af94b21617ddf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4de2bbe47ac7de5587b27552cff995f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#ae4de2bbe47ac7de5587b27552cff995f">setCollisionPointNormal</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> value)</td></tr>
+<tr class="memdesc:ae4de2bbe47ac7de5587b27552cff995f"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突点法線設定関数  <a href="#ae4de2bbe47ac7de5587b27552cff995f">[詳解]</a><br /></td></tr>
+<tr class="separator:ae4de2bbe47ac7de5587b27552cff995f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44fe1a01d5b65b29181d01fa164b7dd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_line_segment.html">LineSegment</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a44fe1a01d5b65b29181d01fa164b7dd5">getpCollisionLineSegment</a> ()</td></tr>
+<tr class="memdesc:a44fe1a01d5b65b29181d01fa164b7dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突線分(平面用)取得関数  <a href="#a44fe1a01d5b65b29181d01fa164b7dd5">[詳解]</a><br /></td></tr>
+<tr class="separator:a44fe1a01d5b65b29181d01fa164b7dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa36f3b7ded9b176039b09ccc69acbf2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#aa36f3b7ded9b176039b09ccc69acbf2a">setCollisionLineSegment</a> (<a class="el" href="class_line_segment.html">LineSegment</a> *value)</td></tr>
+<tr class="memdesc:aa36f3b7ded9b176039b09ccc69acbf2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突線分(平面用)設定関数  <a href="#aa36f3b7ded9b176039b09ccc69acbf2a">[詳解]</a><br /></td></tr>
+<tr class="separator:aa36f3b7ded9b176039b09ccc69acbf2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcecc42b221dd5d45abdee5189c90fab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#abcecc42b221dd5d45abdee5189c90fab">getpNestingVector</a> ()</td></tr>
+<tr class="memdesc:abcecc42b221dd5d45abdee5189c90fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">めり込みベクトル取得関数  <a href="#abcecc42b221dd5d45abdee5189c90fab">[詳解]</a><br /></td></tr>
+<tr class="separator:abcecc42b221dd5d45abdee5189c90fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0233e1e4f322e3209d8a74c10d142c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#ad0233e1e4f322e3209d8a74c10d142c8">setNestingVector</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> value)</td></tr>
+<tr class="memdesc:ad0233e1e4f322e3209d8a74c10d142c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">めり込みベクトル設定関数  <a href="#ad0233e1e4f322e3209d8a74c10d142c8">[詳解]</a><br /></td></tr>
+<tr class="separator:ad0233e1e4f322e3209d8a74c10d142c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a957c277459c059bf43d344c23474820c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_base.html">CollisionBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a957c277459c059bf43d344c23474820c">getpOpponentCollisionBase</a> ()</td></tr>
+<tr class="memdesc:a957c277459c059bf43d344c23474820c"><td class="mdescLeft">&#160;</td><td class="mdescRight">相手の衝突基底クラス取得関数  <a href="#a957c277459c059bf43d344c23474820c">[詳解]</a><br /></td></tr>
+<tr class="separator:a957c277459c059bf43d344c23474820c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57cff995a5a2ee46e518daeb0440984a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a57cff995a5a2ee46e518daeb0440984a">setOpponentCollisionBase</a> (<a class="el" href="class_collision_base.html">CollisionBase</a> *value)</td></tr>
+<tr class="memdesc:a57cff995a5a2ee46e518daeb0440984a"><td class="mdescLeft">&#160;</td><td class="mdescRight">相手の衝突基底クラス設定関数  <a href="#a57cff995a5a2ee46e518daeb0440984a">[詳解]</a><br /></td></tr>
+<tr class="separator:a57cff995a5a2ee46e518daeb0440984a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0182f7a9bb517b4a10a0e1e22a0b972"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#af0182f7a9bb517b4a10a0e1e22a0b972">getpOpponentGameObject</a> ()</td></tr>
+<tr class="memdesc:af0182f7a9bb517b4a10a0e1e22a0b972"><td class="mdescLeft">&#160;</td><td class="mdescRight">相手のゲームオブジェクト取得関数  <a href="#af0182f7a9bb517b4a10a0e1e22a0b972">[詳解]</a><br /></td></tr>
+<tr class="separator:af0182f7a9bb517b4a10a0e1e22a0b972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53fef8b0eee1d30e6a46b6f1d7c59369"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_object.html">CollisionObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a53fef8b0eee1d30e6a46b6f1d7c59369">getpMyObject</a> ()</td></tr>
+<tr class="memdesc:a53fef8b0eee1d30e6a46b6f1d7c59369"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の衝突オブジェクト取得関数  <a href="#a53fef8b0eee1d30e6a46b6f1d7c59369">[詳解]</a><br /></td></tr>
+<tr class="separator:a53fef8b0eee1d30e6a46b6f1d7c59369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a764e1ea84bdad4c3a99e2a360d759550"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a764e1ea84bdad4c3a99e2a360d759550">setMyObject</a> (<a class="el" href="class_collision_object.html">CollisionObject</a> *value)</td></tr>
+<tr class="memdesc:a764e1ea84bdad4c3a99e2a360d759550"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の衝突オブジェクト設定関数  <a href="#a764e1ea84bdad4c3a99e2a360d759550">[詳解]</a><br /></td></tr>
+<tr class="separator:a764e1ea84bdad4c3a99e2a360d759550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecf0536a8fe6f6bf33f294d8ee9402e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_object.html">CollisionObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#aecf0536a8fe6f6bf33f294d8ee9402e2">getpOpponentObject</a> ()</td></tr>
+<tr class="memdesc:aecf0536a8fe6f6bf33f294d8ee9402e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">相手の衝突オブジェクト取得関数  <a href="#aecf0536a8fe6f6bf33f294d8ee9402e2">[詳解]</a><br /></td></tr>
+<tr class="separator:aecf0536a8fe6f6bf33f294d8ee9402e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b701b11e80756b1910f71516e24ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#ab2b701b11e80756b1910f71516e24ef8">setOpponentObject</a> (<a class="el" href="class_collision_object.html">CollisionObject</a> *value)</td></tr>
+<tr class="memdesc:ab2b701b11e80756b1910f71516e24ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">相手の衝突オブジェクト設定関数  <a href="#ab2b701b11e80756b1910f71516e24ef8">[詳解]</a><br /></td></tr>
+<tr class="separator:ab2b701b11e80756b1910f71516e24ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6776fe9ac5a0421cc96dcf1a7c83d5f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_object_1_1_shape.html">CollisionObject::Shape</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a6776fe9ac5a0421cc96dcf1a7c83d5f2">getpMyShape</a> ()</td></tr>
+<tr class="memdesc:a6776fe9ac5a0421cc96dcf1a7c83d5f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の衝突形状取得関数  <a href="#a6776fe9ac5a0421cc96dcf1a7c83d5f2">[詳解]</a><br /></td></tr>
+<tr class="separator:a6776fe9ac5a0421cc96dcf1a7c83d5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad29cf44e98f3adde478d77a6887ba6ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#ad29cf44e98f3adde478d77a6887ba6ef">setMyShape</a> (<a class="el" href="class_collision_object_1_1_shape.html">CollisionObject::Shape</a> *value)</td></tr>
+<tr class="memdesc:ad29cf44e98f3adde478d77a6887ba6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の衝突形状設定関数  <a href="#ad29cf44e98f3adde478d77a6887ba6ef">[詳解]</a><br /></td></tr>
+<tr class="separator:ad29cf44e98f3adde478d77a6887ba6ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec0e3f4f686ac0fd1bea122495bdba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_object_1_1_shape.html">CollisionObject::Shape</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#afec0e3f4f686ac0fd1bea122495bdba9">getpOpponentShape</a> ()</td></tr>
+<tr class="memdesc:afec0e3f4f686ac0fd1bea122495bdba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">相手の衝突形状取得関数  <a href="#afec0e3f4f686ac0fd1bea122495bdba9">[詳解]</a><br /></td></tr>
+<tr class="separator:afec0e3f4f686ac0fd1bea122495bdba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488caeec48c2327d3bb01c7884af688a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a488caeec48c2327d3bb01c7884af688a">setOpponentShape</a> (<a class="el" href="class_collision_object_1_1_shape.html">CollisionObject::Shape</a> *value)</td></tr>
+<tr class="memdesc:a488caeec48c2327d3bb01c7884af688a"><td class="mdescLeft">&#160;</td><td class="mdescRight">相手の衝突形状設定関数  <a href="#a488caeec48c2327d3bb01c7884af688a">[詳解]</a><br /></td></tr>
+<tr class="separator:a488caeec48c2327d3bb01c7884af688a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a84a8bdbfca8c5352cb2fed202c517fa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a84a8bdbfca8c5352cb2fed202c517fa2">collision_point_</a></td></tr>
+<tr class="memdesc:a84a8bdbfca8c5352cb2fed202c517fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突点  <a href="#a84a8bdbfca8c5352cb2fed202c517fa2">[詳解]</a><br /></td></tr>
+<tr class="separator:a84a8bdbfca8c5352cb2fed202c517fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140d3d1cc1d73fe4a77a7372e6445474"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a140d3d1cc1d73fe4a77a7372e6445474">collision_normal_</a></td></tr>
+<tr class="memdesc:a140d3d1cc1d73fe4a77a7372e6445474"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突点法線  <a href="#a140d3d1cc1d73fe4a77a7372e6445474">[詳解]</a><br /></td></tr>
+<tr class="separator:a140d3d1cc1d73fe4a77a7372e6445474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a427292714a06b762ba87a4d8c6454f2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_line_segment.html">LineSegment</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a427292714a06b762ba87a4d8c6454f2d">collision_line_segment_</a></td></tr>
+<tr class="memdesc:a427292714a06b762ba87a4d8c6454f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突線分(平面用)  <a href="#a427292714a06b762ba87a4d8c6454f2d">[詳解]</a><br /></td></tr>
+<tr class="separator:a427292714a06b762ba87a4d8c6454f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae918ce35491184faf3adba28c5c98774"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#ae918ce35491184faf3adba28c5c98774">nesting_vector_</a></td></tr>
+<tr class="memdesc:ae918ce35491184faf3adba28c5c98774"><td class="mdescLeft">&#160;</td><td class="mdescRight">めり込みベクトル  <a href="#ae918ce35491184faf3adba28c5c98774">[詳解]</a><br /></td></tr>
+<tr class="separator:ae918ce35491184faf3adba28c5c98774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a230826a7a53a916bea3116dee807d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_base.html">CollisionBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#ad5a230826a7a53a916bea3116dee807d">opponent_base_</a></td></tr>
+<tr class="memdesc:ad5a230826a7a53a916bea3116dee807d"><td class="mdescLeft">&#160;</td><td class="mdescRight">相手の衝突基底クラス  <a href="#ad5a230826a7a53a916bea3116dee807d">[詳解]</a><br /></td></tr>
+<tr class="separator:ad5a230826a7a53a916bea3116dee807d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d317027ee7d0b53e64a9241d6396b9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_object.html">CollisionObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a1d317027ee7d0b53e64a9241d6396b9d">my_object_</a></td></tr>
+<tr class="memdesc:a1d317027ee7d0b53e64a9241d6396b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の衝突オブジェクト  <a href="#a1d317027ee7d0b53e64a9241d6396b9d">[詳解]</a><br /></td></tr>
+<tr class="separator:a1d317027ee7d0b53e64a9241d6396b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0050ea8230d1d6ec83d2859ac71be20f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_object.html">CollisionObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a0050ea8230d1d6ec83d2859ac71be20f">opponent_object_</a></td></tr>
+<tr class="memdesc:a0050ea8230d1d6ec83d2859ac71be20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">相手の衝突オブジェクト  <a href="#a0050ea8230d1d6ec83d2859ac71be20f">[詳解]</a><br /></td></tr>
+<tr class="separator:a0050ea8230d1d6ec83d2859ac71be20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a957182758520f6f3e3cbca3228d44262"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_object_1_1_shape.html">CollisionObject::Shape</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#a957182758520f6f3e3cbca3228d44262">my_shape_</a></td></tr>
+<tr class="memdesc:a957182758520f6f3e3cbca3228d44262"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の衝突形状  <a href="#a957182758520f6f3e3cbca3228d44262">[詳解]</a><br /></td></tr>
+<tr class="separator:a957182758520f6f3e3cbca3228d44262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab09b1a156c939f009f7c72be1dcfa917"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_object_1_1_shape.html">CollisionObject::Shape</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_information.html#ab09b1a156c939f009f7c72be1dcfa917">opponent_shape_</a></td></tr>
+<tr class="memdesc:ab09b1a156c939f009f7c72be1dcfa917"><td class="mdescLeft">&#160;</td><td class="mdescRight">相手の衝突形状  <a href="#ab09b1a156c939f009f7c72be1dcfa917">[詳解]</a><br /></td></tr>
+<tr class="separator:ab09b1a156c939f009f7c72be1dcfa917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>衝突情報Class </p>
+<p>衝突の情報Class </p>
+
+<p class="definition"> <a class="el" href="_collision_information_8h_source.html">CollisionInformation.h</a> の <a class="el" href="_collision_information_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a44fe1a01d5b65b29181d01fa164b7dd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44fe1a01d5b65b29181d01fa164b7dd5">&#9670;&nbsp;</a></span>getpCollisionLineSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_line_segment.html">LineSegment</a> * CollisionInformation::getpCollisionLineSegment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>衝突線分(平面用)取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">LineSegment*</td><td>衝突線分(平面用) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="affce7016429a57e1283c2e3b424d2347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affce7016429a57e1283c2e3b424d2347">&#9670;&nbsp;</a></span>getpCollisionPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * CollisionInformation::getpCollisionPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>衝突点取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>衝突点 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4146ab53569d6d52a4af94b21617ddf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4146ab53569d6d52a4af94b21617ddf8">&#9670;&nbsp;</a></span>getpCollisionPointNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * CollisionInformation::getpCollisionPointNormal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>衝突点法線取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>衝突点法線 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a53fef8b0eee1d30e6a46b6f1d7c59369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53fef8b0eee1d30e6a46b6f1d7c59369">&#9670;&nbsp;</a></span>getpMyObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_object.html">CollisionObject</a> * CollisionInformation::getpMyObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自分の衝突オブジェクト取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">CollisionObject*</td><td>自分の衝突オブジェクト </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00098">98</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6776fe9ac5a0421cc96dcf1a7c83d5f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6776fe9ac5a0421cc96dcf1a7c83d5f2">&#9670;&nbsp;</a></span>getpMyShape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_object_1_1_shape.html">CollisionObject::Shape</a> * CollisionInformation::getpMyShape </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自分の衝突形状取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">CollisionObject::Shape*</td><td>自分の衝突形状 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00126">126</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abcecc42b221dd5d45abdee5189c90fab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcecc42b221dd5d45abdee5189c90fab">&#9670;&nbsp;</a></span>getpNestingVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * CollisionInformation::getpNestingVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>めり込みベクトル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>めり込みベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00062">62</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a957c277459c059bf43d344c23474820c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a957c277459c059bf43d344c23474820c">&#9670;&nbsp;</a></span>getpOpponentCollisionBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_base.html">CollisionBase</a> * CollisionInformation::getpOpponentCollisionBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相手の衝突基底クラス取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">CollisionBase*</td><td>相手の衝突基底クラス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00076">76</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af0182f7a9bb517b4a10a0e1e22a0b972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0182f7a9bb517b4a10a0e1e22a0b972">&#9670;&nbsp;</a></span>getpOpponentGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_object_base.html">GameObjectBase</a> * CollisionInformation::getpOpponentGameObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相手のゲームオブジェクト取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">CollisionBase*</td><td>相手のゲームオブジェクト </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00090">90</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aecf0536a8fe6f6bf33f294d8ee9402e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecf0536a8fe6f6bf33f294d8ee9402e2">&#9670;&nbsp;</a></span>getpOpponentObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_object.html">CollisionObject</a> * CollisionInformation::getpOpponentObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相手の衝突オブジェクト取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">CollisionObject*</td><td>相手の衝突オブジェクト </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00112">112</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afec0e3f4f686ac0fd1bea122495bdba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec0e3f4f686ac0fd1bea122495bdba9">&#9670;&nbsp;</a></span>getpOpponentShape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_object_1_1_shape.html">CollisionObject::Shape</a> * CollisionInformation::getpOpponentShape </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相手の衝突形状取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">CollisionObject::Shape*</td><td>相手の衝突形状 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00140">140</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa36f3b7ded9b176039b09ccc69acbf2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa36f3b7ded9b176039b09ccc69acbf2a">&#9670;&nbsp;</a></span>setCollisionLineSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionInformation::setCollisionLineSegment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_line_segment.html">LineSegment</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>衝突線分(平面用)設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*value</td><td>衝突線分(平面用) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00055">55</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a299c2d8462f26dbacabb71029ba6ce4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a299c2d8462f26dbacabb71029ba6ce4f">&#9670;&nbsp;</a></span>setCollisionPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionInformation::setCollisionPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>衝突点設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>めり込みベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00027">27</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae4de2bbe47ac7de5587b27552cff995f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4de2bbe47ac7de5587b27552cff995f">&#9670;&nbsp;</a></span>setCollisionPointNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionInformation::setCollisionPointNormal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>衝突点法線設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>衝突点法線 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a764e1ea84bdad4c3a99e2a360d759550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a764e1ea84bdad4c3a99e2a360d759550">&#9670;&nbsp;</a></span>setMyObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionInformation::setMyObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_collision_object.html">CollisionObject</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自分の衝突オブジェクト設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*value</td><td>自分の衝突オブジェクト </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00105">105</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad29cf44e98f3adde478d77a6887ba6ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad29cf44e98f3adde478d77a6887ba6ef">&#9670;&nbsp;</a></span>setMyShape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionInformation::setMyShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_collision_object_1_1_shape.html">CollisionObject::Shape</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自分の衝突形状設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*value</td><td>自分の衝突形状 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00133">133</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad0233e1e4f322e3209d8a74c10d142c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0233e1e4f322e3209d8a74c10d142c8">&#9670;&nbsp;</a></span>setNestingVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionInformation::setNestingVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>めり込みベクトル設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>めり込みベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00069">69</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a57cff995a5a2ee46e518daeb0440984a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57cff995a5a2ee46e518daeb0440984a">&#9670;&nbsp;</a></span>setOpponentCollisionBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionInformation::setOpponentCollisionBase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_collision_base.html">CollisionBase</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相手の衝突基底クラス設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*value</td><td>相手の衝突基底クラス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00083">83</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab2b701b11e80756b1910f71516e24ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b701b11e80756b1910f71516e24ef8">&#9670;&nbsp;</a></span>setOpponentObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionInformation::setOpponentObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_collision_object.html">CollisionObject</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相手の衝突オブジェクト設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*value</td><td>相手の衝突オブジェクト </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00119">119</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a488caeec48c2327d3bb01c7884af688a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a488caeec48c2327d3bb01c7884af688a">&#9670;&nbsp;</a></span>setOpponentShape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionInformation::setOpponentShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_collision_object_1_1_shape.html">CollisionObject::Shape</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相手の衝突形状設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*value</td><td>相手の衝突形状 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a> の <a class="el" href="_collision_information_8cpp_source.html#l00147">147</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a427292714a06b762ba87a4d8c6454f2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a427292714a06b762ba87a4d8c6454f2d">&#9670;&nbsp;</a></span>collision_line_segment_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_line_segment.html">LineSegment</a>* CollisionInformation::collision_line_segment_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>衝突線分(平面用) </p>
+
+<p class="definition"> <a class="el" href="_collision_information_8h_source.html">CollisionInformation.h</a> の <a class="el" href="_collision_information_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a140d3d1cc1d73fe4a77a7372e6445474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a140d3d1cc1d73fe4a77a7372e6445474">&#9670;&nbsp;</a></span>collision_normal_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> CollisionInformation::collision_normal_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>衝突点法線 </p>
+
+<p class="definition"> <a class="el" href="_collision_information_8h_source.html">CollisionInformation.h</a> の <a class="el" href="_collision_information_8h_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a84a8bdbfca8c5352cb2fed202c517fa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84a8bdbfca8c5352cb2fed202c517fa2">&#9670;&nbsp;</a></span>collision_point_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> CollisionInformation::collision_point_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>衝突点 </p>
+
+<p class="definition"> <a class="el" href="_collision_information_8h_source.html">CollisionInformation.h</a> の <a class="el" href="_collision_information_8h_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1d317027ee7d0b53e64a9241d6396b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d317027ee7d0b53e64a9241d6396b9d">&#9670;&nbsp;</a></span>my_object_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_object.html">CollisionObject</a>* CollisionInformation::my_object_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>自分の衝突オブジェクト </p>
+
+<p class="definition"> <a class="el" href="_collision_information_8h_source.html">CollisionInformation.h</a> の <a class="el" href="_collision_information_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a957182758520f6f3e3cbca3228d44262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a957182758520f6f3e3cbca3228d44262">&#9670;&nbsp;</a></span>my_shape_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_object_1_1_shape.html">CollisionObject::Shape</a>* CollisionInformation::my_shape_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>自分の衝突形状 </p>
+
+<p class="definition"> <a class="el" href="_collision_information_8h_source.html">CollisionInformation.h</a> の <a class="el" href="_collision_information_8h_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae918ce35491184faf3adba28c5c98774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae918ce35491184faf3adba28c5c98774">&#9670;&nbsp;</a></span>nesting_vector_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> CollisionInformation::nesting_vector_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>めり込みベクトル </p>
+
+<p class="definition"> <a class="el" href="_collision_information_8h_source.html">CollisionInformation.h</a> の <a class="el" href="_collision_information_8h_source.html#l00044">44</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad5a230826a7a53a916bea3116dee807d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a230826a7a53a916bea3116dee807d">&#9670;&nbsp;</a></span>opponent_base_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_base.html">CollisionBase</a>* CollisionInformation::opponent_base_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>相手の衝突基底クラス </p>
+
+<p class="definition"> <a class="el" href="_collision_information_8h_source.html">CollisionInformation.h</a> の <a class="el" href="_collision_information_8h_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0050ea8230d1d6ec83d2859ac71be20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0050ea8230d1d6ec83d2859ac71be20f">&#9670;&nbsp;</a></span>opponent_object_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_object.html">CollisionObject</a>* CollisionInformation::opponent_object_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>相手の衝突オブジェクト </p>
+
+<p class="definition"> <a class="el" href="_collision_information_8h_source.html">CollisionInformation.h</a> の <a class="el" href="_collision_information_8h_source.html#l00047">47</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab09b1a156c939f009f7c72be1dcfa917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab09b1a156c939f009f7c72be1dcfa917">&#9670;&nbsp;</a></span>opponent_shape_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_object_1_1_shape.html">CollisionObject::Shape</a>* CollisionInformation::opponent_shape_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>相手の衝突形状 </p>
+
+<p class="definition"> <a class="el" href="_collision_information_8h_source.html">CollisionInformation.h</a> の <a class="el" href="_collision_information_8h_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Collision/<a class="el" href="_collision_information_8h_source.html">CollisionInformation.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Collision/Source/<a class="el" href="_collision_information_8cpp_source.html">CollisionInformation.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_collision_information.html">CollisionInformation</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: Transform クラス</title>
+<title>BalloonWorld: Transform クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -97,98 +97,202 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>変形Class  
+ <a href="class_transform.html#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_transform_8h_source.html">Transform.h</a>&gt;</code></p>
+<div class="dynheader">
+Transform 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_transform__coll__graph.png" border="0" usemap="#_transform_coll__map" alt="Collaboration graph"/></div>
+<map name="_transform_coll__map" id="_transform_coll__map">
+<area shape="rect" id="node2" href="class_matrix.html" title="行列Class " alt="" coords="54,304,113,331"/>
+<area shape="rect" id="node4" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="148,81,224,108"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1ed223415917a6b33e5fd7af132f6b9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a1ed223415917a6b33e5fd7af132f6b9c">getpPosition</a> ()</td></tr>
+<tr class="memdesc:a1ed223415917a6b33e5fd7af132f6b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標取得関数  <a href="#a1ed223415917a6b33e5fd7af132f6b9c">[詳解]</a><br /></td></tr>
+<tr class="separator:a1ed223415917a6b33e5fd7af132f6b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a821bfab91b10a072eac81efdc741d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#ac1a821bfab91b10a072eac81efdc741d">getpScale</a> ()</td></tr>
+<tr class="memdesc:ac1a821bfab91b10a072eac81efdc741d"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡縮取得関数  <a href="#ac1a821bfab91b10a072eac81efdc741d">[詳解]</a><br /></td></tr>
+<tr class="separator:ac1a821bfab91b10a072eac81efdc741d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64af2387c413b75c26ef343104a56db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#ab64af2387c413b75c26ef343104a56db">setInitAngle</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> value)</td></tr>
+<tr class="memdesc:ab64af2387c413b75c26ef343104a56db"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期角度取得関数  <a href="#ab64af2387c413b75c26ef343104a56db">[詳解]</a><br /></td></tr>
+<tr class="separator:ab64af2387c413b75c26ef343104a56db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7b2731c46624ea54126e36fe1d0dd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a0f7b2731c46624ea54126e36fe1d0dd1">setAddQuaternion</a> (<a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a> value)</td></tr>
+<tr class="memdesc:a0f7b2731c46624ea54126e36fe1d0dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加用クォータニオン設定関数  <a href="#a0f7b2731c46624ea54126e36fe1d0dd1">[詳解]</a><br /></td></tr>
+<tr class="separator:a0f7b2731c46624ea54126e36fe1d0dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85ecb6a9d972caf0ab7d2e58ad2753b7"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a85ecb6a9d972caf0ab7d2e58ad2753b7">getpAnglePitch</a> ()</td></tr>
+<tr class="memdesc:a85ecb6a9d972caf0ab7d2e58ad2753b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pitch角度取得関数  <a href="#a85ecb6a9d972caf0ab7d2e58ad2753b7">[詳解]</a><br /></td></tr>
+<tr class="separator:a85ecb6a9d972caf0ab7d2e58ad2753b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69600cd68c0a99518efec7da592e4841"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a69600cd68c0a99518efec7da592e4841">getpAngleYaw</a> ()</td></tr>
+<tr class="memdesc:a69600cd68c0a99518efec7da592e4841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yaw角度取得関数  <a href="#a69600cd68c0a99518efec7da592e4841">[詳解]</a><br /></td></tr>
+<tr class="separator:a69600cd68c0a99518efec7da592e4841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f056b8f90affed5e251e68a93331d4"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#aa1f056b8f90affed5e251e68a93331d4">getpAngleRoll</a> ()</td></tr>
+<tr class="memdesc:aa1f056b8f90affed5e251e68a93331d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roll角度取得関数  <a href="#aa1f056b8f90affed5e251e68a93331d4">[詳解]</a><br /></td></tr>
+<tr class="separator:aa1f056b8f90affed5e251e68a93331d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf052a769af0793916a25c88d00640c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#aadf052a769af0793916a25c88d00640c">getpAngleYawPitchRoll</a> ()</td></tr>
+<tr class="memdesc:aadf052a769af0793916a25c88d00640c"><td class="mdescLeft">&#160;</td><td class="mdescRight">YawPitchRoll角度取得関数  <a href="#aadf052a769af0793916a25c88d00640c">[詳解]</a><br /></td></tr>
+<tr class="separator:aadf052a769af0793916a25c88d00640c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812895ad4ebc4c713ece357167733418"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a812895ad4ebc4c713ece357167733418">getpLookAtSpeed</a> ()</td></tr>
+<tr class="memdesc:a812895ad4ebc4c713ece357167733418"><td class="mdescLeft">&#160;</td><td class="mdescRight">向く速度取得関数  <a href="#a812895ad4ebc4c713ece357167733418">[詳解]</a><br /></td></tr>
+<tr class="separator:a812895ad4ebc4c713ece357167733418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a90095a66990f9e17b22c141dbe1379"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a7a90095a66990f9e17b22c141dbe1379">setLookAtVector</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> look_at_vector)</td></tr>
+<tr class="memdesc:a7a90095a66990f9e17b22c141dbe1379"><td class="mdescLeft">&#160;</td><td class="mdescRight">向くベクトル設定関数  <a href="#a7a90095a66990f9e17b22c141dbe1379">[詳解]</a><br /></td></tr>
+<tr class="separator:a7a90095a66990f9e17b22c141dbe1379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d0352ed37603f7a80a8562ade5bcbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#aa2d0352ed37603f7a80a8562ade5bcbe">setTargetQuaternion</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> axis, float angle)</td></tr>
+<tr class="memdesc:aa2d0352ed37603f7a80a8562ade5bcbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">ターゲットクォータニオン設定関数  <a href="#aa2d0352ed37603f7a80a8562ade5bcbe">[詳解]</a><br /></td></tr>
+<tr class="separator:aa2d0352ed37603f7a80a8562ade5bcbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa01e95eff5d3bb0a2df9d81faa229143"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#aa01e95eff5d3bb0a2df9d81faa229143">getpForward</a> ()</td></tr>
+<tr class="memdesc:aa01e95eff5d3bb0a2df9d81faa229143"><td class="mdescLeft">&#160;</td><td class="mdescRight">前ベクトル取得関数  <a href="#aa01e95eff5d3bb0a2df9d81faa229143">[詳解]</a><br /></td></tr>
+<tr class="separator:aa01e95eff5d3bb0a2df9d81faa229143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98796d7ad6726567b5b12ab65254a79d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a98796d7ad6726567b5b12ab65254a79d">getpUp</a> ()</td></tr>
+<tr class="memdesc:a98796d7ad6726567b5b12ab65254a79d"><td class="mdescLeft">&#160;</td><td class="mdescRight">上ベクトル取得関数  <a href="#a98796d7ad6726567b5b12ab65254a79d">[詳解]</a><br /></td></tr>
+<tr class="separator:a98796d7ad6726567b5b12ab65254a79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636334048ae8fb50455ec8fd290668d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a636334048ae8fb50455ec8fd290668d6">getpRight</a> ()</td></tr>
+<tr class="memdesc:a636334048ae8fb50455ec8fd290668d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">右ベクトル取得関数  <a href="#a636334048ae8fb50455ec8fd290668d6">[詳解]</a><br /></td></tr>
+<tr class="separator:a636334048ae8fb50455ec8fd290668d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a825ad9edaf799a83076cbb9f78852649"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a825ad9edaf799a83076cbb9f78852649">getpPositionMatrix</a> ()</td></tr>
+<tr class="memdesc:a825ad9edaf799a83076cbb9f78852649"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標行列取得関数  <a href="#a825ad9edaf799a83076cbb9f78852649">[詳解]</a><br /></td></tr>
+<tr class="separator:a825ad9edaf799a83076cbb9f78852649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7b44f1e97d83f2f810e231bae2de2b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#ad7b44f1e97d83f2f810e231bae2de2b5">getpScaleMatrix</a> ()</td></tr>
+<tr class="memdesc:ad7b44f1e97d83f2f810e231bae2de2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡縮行列取得関数  <a href="#ad7b44f1e97d83f2f810e231bae2de2b5">[詳解]</a><br /></td></tr>
+<tr class="separator:ad7b44f1e97d83f2f810e231bae2de2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0ea9094ccda77809978208614772447"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#af0ea9094ccda77809978208614772447">getpRotationMatrix</a> ()</td></tr>
+<tr class="memdesc:af0ea9094ccda77809978208614772447"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転行列取得関数  <a href="#af0ea9094ccda77809978208614772447">[詳解]</a><br /></td></tr>
+<tr class="separator:af0ea9094ccda77809978208614772447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d30e9aa1c2d1fff96996b6368a7f610"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a5d30e9aa1c2d1fff96996b6368a7f610">getpNoInitRotationMatrix</a> ()</td></tr>
+<tr class="memdesc:a5d30e9aa1c2d1fff96996b6368a7f610"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期回転無し回転行列取得関数  <a href="#a5d30e9aa1c2d1fff96996b6368a7f610">[詳解]</a><br /></td></tr>
+<tr class="separator:a5d30e9aa1c2d1fff96996b6368a7f610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af172f4f0dfb057d1ee473d1314787352"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#af172f4f0dfb057d1ee473d1314787352">getpInverseMatrix</a> ()</td></tr>
+<tr class="memdesc:af172f4f0dfb057d1ee473d1314787352"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆行列取得関数  <a href="#af172f4f0dfb057d1ee473d1314787352">[詳解]</a><br /></td></tr>
+<tr class="separator:af172f4f0dfb057d1ee473d1314787352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78b6b021ca4cc1641f934160befb39dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a78b6b021ca4cc1641f934160befb39dd">setInverseMatrix</a> (<a class="el" href="class_matrix.html">Matrix</a> *value)</td></tr>
+<tr class="memdesc:a78b6b021ca4cc1641f934160befb39dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆行列設定関数  <a href="#a78b6b021ca4cc1641f934160befb39dd">[詳解]</a><br /></td></tr>
+<tr class="separator:a78b6b021ca4cc1641f934160befb39dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee502a42628072064f2b3d2060f2d53f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#aee502a42628072064f2b3d2060f2d53f">getpTransposeMatrix</a> ()</td></tr>
+<tr class="memdesc:aee502a42628072064f2b3d2060f2d53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">転置行列取得関数  <a href="#aee502a42628072064f2b3d2060f2d53f">[詳解]</a><br /></td></tr>
+<tr class="separator:aee502a42628072064f2b3d2060f2d53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a710f94248ae113eb6b28849a01f3fedc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a710f94248ae113eb6b28849a01f3fedc">setTransposeMatrix</a> (<a class="el" href="class_matrix.html">Matrix</a> *value, bool is_position_off=false)</td></tr>
+<tr class="memdesc:a710f94248ae113eb6b28849a01f3fedc"><td class="mdescLeft">&#160;</td><td class="mdescRight">転置行列設定関数  <a href="#a710f94248ae113eb6b28849a01f3fedc">[詳解]</a><br /></td></tr>
+<tr class="separator:a710f94248ae113eb6b28849a01f3fedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58114e02f195f91f9bb807d49c34fe32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a58114e02f195f91f9bb807d49c34fe32">getpWorldMatrix</a> ()</td></tr>
+<tr class="memdesc:a58114e02f195f91f9bb807d49c34fe32"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド行列取得関数  <a href="#a58114e02f195f91f9bb807d49c34fe32">[詳解]</a><br /></td></tr>
+<tr class="separator:a58114e02f195f91f9bb807d49c34fe32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17fb2c084b43710345a261438ae67b7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a17fb2c084b43710345a261438ae67b7c">getpNoInitRotationWorldMatrix</a> ()</td></tr>
+<tr class="memdesc:a17fb2c084b43710345a261438ae67b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期回転無しワールド行列取得関数  <a href="#a17fb2c084b43710345a261438ae67b7c">[詳解]</a><br /></td></tr>
+<tr class="separator:a17fb2c084b43710345a261438ae67b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa08ca4266efabc768973cdeea51945ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#aa08ca4266efabc768973cdeea51945ab">Transform</a> ()</td></tr>
+<tr class="memdesc:aa08ca4266efabc768973cdeea51945ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#aa08ca4266efabc768973cdeea51945ab">[詳解]</a><br /></td></tr>
 <tr class="separator:aa08ca4266efabc768973cdeea51945ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa72e286c069850db80927b0e6554cd3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#aa72e286c069850db80927b0e6554cd3e">~Transform</a> ()</td></tr>
+<tr class="memdesc:aa72e286c069850db80927b0e6554cd3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="#aa72e286c069850db80927b0e6554cd3e">[詳解]</a><br /></td></tr>
 <tr class="separator:aa72e286c069850db80927b0e6554cd3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addff6461a77b9f5c5249e46deb5c2c19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#addff6461a77b9f5c5249e46deb5c2c19">GetPosition</a> ()</td></tr>
-<tr class="separator:addff6461a77b9f5c5249e46deb5c2c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accedf33a4ddbdcf2d4fc4274f85bf818"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#accedf33a4ddbdcf2d4fc4274f85bf818">GetScale</a> ()</td></tr>
-<tr class="separator:accedf33a4ddbdcf2d4fc4274f85bf818"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c4966ea0a5d6cafa79c430e31bf0dff"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a8c4966ea0a5d6cafa79c430e31bf0dff">GetAnglePitch</a> ()</td></tr>
-<tr class="separator:a8c4966ea0a5d6cafa79c430e31bf0dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8be9cd3526cc18d64e47b55f4c527dd8"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a8be9cd3526cc18d64e47b55f4c527dd8">GetAngleYaw</a> ()</td></tr>
-<tr class="separator:a8be9cd3526cc18d64e47b55f4c527dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a124d6afb5dd0a86952c99f1cec72e394"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a124d6afb5dd0a86952c99f1cec72e394">GetAngleRoll</a> ()</td></tr>
-<tr class="separator:a124d6afb5dd0a86952c99f1cec72e394"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bd5cddc216e7fafe12e5b605cb780ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a1bd5cddc216e7fafe12e5b605cb780ea">GetAngleYawPitchRoll</a> ()</td></tr>
-<tr class="separator:a1bd5cddc216e7fafe12e5b605cb780ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6f7342cb4eca555c02a85c999d499dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#ab6f7342cb4eca555c02a85c999d499dc">SetLookAtSpeed</a> (float look_at_speed)</td></tr>
-<tr class="separator:ab6f7342cb4eca555c02a85c999d499dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79fdb2cb4eb1e4abf48e0f9fd74707ba"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a79fdb2cb4eb1e4abf48e0f9fd74707ba">GetLookAtSpeed</a> ()</td></tr>
-<tr class="separator:a79fdb2cb4eb1e4abf48e0f9fd74707ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14b7b06632d6a47e99dc67aecbd7acc7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a14b7b06632d6a47e99dc67aecbd7acc7">GetLookAtChangeAmount</a> ()</td></tr>
-<tr class="separator:a14b7b06632d6a47e99dc67aecbd7acc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39b78acbdbf3ee98cad0c4e640988745"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a39b78acbdbf3ee98cad0c4e640988745">SetLookAtVector</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> look_at_vector)</td></tr>
-<tr class="separator:a39b78acbdbf3ee98cad0c4e640988745"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8cdb5ca9995d9c124f1890d84c92ab4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#ac8cdb5ca9995d9c124f1890d84c92ab4">SetTargetQuaternion</a> (<a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a> axis, float angle)</td></tr>
-<tr class="separator:ac8cdb5ca9995d9c124f1890d84c92ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe5350bb1558256115e14c0669611acd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#afe5350bb1558256115e14c0669611acd">UpdateAxisVector</a> ()</td></tr>
-<tr class="separator:afe5350bb1558256115e14c0669611acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25e4832e15334d74ff847f0ff0b3564f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a25e4832e15334d74ff847f0ff0b3564f">GetForawrd</a> ()</td></tr>
-<tr class="separator:a25e4832e15334d74ff847f0ff0b3564f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f5700481ae42556f763726947feaf36"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a9f5700481ae42556f763726947feaf36">GetUp</a> ()</td></tr>
-<tr class="separator:a9f5700481ae42556f763726947feaf36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57d1da919d8df7d2452149c4bbade4d2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a57d1da919d8df7d2452149c4bbade4d2">GetRight</a> ()</td></tr>
-<tr class="separator:a57d1da919d8df7d2452149c4bbade4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad300be34dddc6109ca142452e65aa77d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_axis_vector.html">AxisVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#ad300be34dddc6109ca142452e65aa77d">GetAxisVector</a> ()</td></tr>
-<tr class="separator:ad300be34dddc6109ca142452e65aa77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1a2dcb4a9d37dd71c203ec248535887"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#af1a2dcb4a9d37dd71c203ec248535887">UpdateWorldMatrixSRT</a> ()</td></tr>
-<tr class="separator:af1a2dcb4a9d37dd71c203ec248535887"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d56e19fba7f44d5f938d62481846fbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a3d56e19fba7f44d5f938d62481846fbc">UpdateWorldMatrixISRT</a> ()</td></tr>
-<tr class="separator:a3d56e19fba7f44d5f938d62481846fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d2e5da24fb1c8015f5bb9a6c0a7a7de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a3d2e5da24fb1c8015f5bb9a6c0a7a7de">UpdateInverseMatrix</a> (const <a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *matrix)</td></tr>
-<tr class="separator:a3d2e5da24fb1c8015f5bb9a6c0a7a7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a486ae5501b5081b22ee053f787e0e4a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a486ae5501b5081b22ee053f787e0e4a2">UpdateTransposeMatrix</a> (const <a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *matrix)</td></tr>
-<tr class="separator:a486ae5501b5081b22ee053f787e0e4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a053037b225e6fb11e680cc60df15dd45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a053037b225e6fb11e680cc60df15dd45">TransposeMatrixTranslationOff</a> ()</td></tr>
-<tr class="separator:a053037b225e6fb11e680cc60df15dd45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19538fe991e76eb8146295e6f5f1ed99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a19538fe991e76eb8146295e6f5f1ed99">getpWorldMatrix</a> ()</td></tr>
-<tr class="separator:a19538fe991e76eb8146295e6f5f1ed99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5a4f96871b6c1bfde9b2a6b7b0d6953"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix_extend.html">MatrixExtend</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#ac5a4f96871b6c1bfde9b2a6b7b0d6953">getpMatrixExtend</a> ()</td></tr>
-<tr class="separator:ac5a4f96871b6c1bfde9b2a6b7b0d6953"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af02515be1947506212ca1c23223ce0b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#af02515be1947506212ca1c23223ce0b3">UpdateAxisVector_WorldMatrixSRT</a> ()</td></tr>
-<tr class="separator:af02515be1947506212ca1c23223ce0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73a20f2b8baad21ba74a2b1c6d8a1ab2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a73a20f2b8baad21ba74a2b1c6d8a1ab2">UpdateAxisVector_WorldMatrixISRT</a> ()</td></tr>
-<tr class="separator:a73a20f2b8baad21ba74a2b1c6d8a1ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b911801aa231c13922c0e11032b8d5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a4b911801aa231c13922c0e11032b8d5a">Init</a> ()</td></tr>
+<tr class="memdesc:a4b911801aa231c13922c0e11032b8d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a4b911801aa231c13922c0e11032b8d5a">[詳解]</a><br /></td></tr>
+<tr class="separator:a4b911801aa231c13922c0e11032b8d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3b15a0b011f21a849ca1648ed1c581"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#acb3b15a0b011f21a849ca1648ed1c581">ResetAddQuaternion</a> ()</td></tr>
+<tr class="memdesc:acb3b15a0b011f21a849ca1648ed1c581"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加用クォータニオンリセット関数  <a href="#acb3b15a0b011f21a849ca1648ed1c581">[詳解]</a><br /></td></tr>
+<tr class="separator:acb3b15a0b011f21a849ca1648ed1c581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba4a9bc17c9a61f2c6a43bc32a251cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#afba4a9bc17c9a61f2c6a43bc32a251cc">AddParentMatrixToWorldMatrix</a> (<a class="el" href="class_matrix.html">Matrix</a> *parent_matrix)</td></tr>
+<tr class="memdesc:afba4a9bc17c9a61f2c6a43bc32a251cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド行列に親行列追加関数  <a href="#afba4a9bc17c9a61f2c6a43bc32a251cc">[詳解]</a><br /></td></tr>
+<tr class="separator:afba4a9bc17c9a61f2c6a43bc32a251cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a4882eb3c4d7afb243b9911c666b52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a81a4882eb3c4d7afb243b9911c666b52">CreateWorldMatrix</a> ()</td></tr>
+<tr class="memdesc:a81a4882eb3c4d7afb243b9911c666b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド行列作成関数  <a href="#a81a4882eb3c4d7afb243b9911c666b52">[詳解]</a><br /></td></tr>
+<tr class="separator:a81a4882eb3c4d7afb243b9911c666b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e42d4a1bd35070277b49a48ef5c4fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a26e42d4a1bd35070277b49a48ef5c4fd">CreateWorldMatrixPlusInverse</a> ()</td></tr>
+<tr class="memdesc:a26e42d4a1bd35070277b49a48ef5c4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆行列付きワールド行列作成関数  <a href="#a26e42d4a1bd35070277b49a48ef5c4fd">[詳解]</a><br /></td></tr>
+<tr class="separator:a26e42d4a1bd35070277b49a48ef5c4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d2df9c3ffffa21e2df60ce2f531bca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a49d2df9c3ffffa21e2df60ce2f531bca">CreateWorldMatrixPlusTranspose</a> ()</td></tr>
+<tr class="memdesc:a49d2df9c3ffffa21e2df60ce2f531bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">転置行列付きワールド行列作成関数  <a href="#a49d2df9c3ffffa21e2df60ce2f531bca">[詳解]</a><br /></td></tr>
+<tr class="separator:a49d2df9c3ffffa21e2df60ce2f531bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 非公開メンバ関数</h2></td></tr>
 <tr class="memitem:a7884cb828ace5c921e7138d83c43d689"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a7884cb828ace5c921e7138d83c43d689">CreateQuaternion</a> ()</td></tr>
+<tr class="memdesc:a7884cb828ace5c921e7138d83c43d689"><td class="mdescLeft">&#160;</td><td class="mdescRight">クォータニオン作成関数  <a href="#a7884cb828ace5c921e7138d83c43d689">[詳解]</a><br /></td></tr>
 <tr class="separator:a7884cb828ace5c921e7138d83c43d689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf47943b2583b4cb31a54881b5ef8eca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#aaf47943b2583b4cb31a54881b5ef8eca">ReflectMatrix</a> ()</td></tr>
+<tr class="memdesc:aaf47943b2583b4cb31a54881b5ef8eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列反映関数  <a href="#aaf47943b2583b4cb31a54881b5ef8eca">[詳解]</a><br /></td></tr>
+<tr class="separator:aaf47943b2583b4cb31a54881b5ef8eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f5c4e0e8a7aae115f37a2cdd0a745d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a2f5c4e0e8a7aae115f37a2cdd0a745d7">CalculateWorldMatrix</a> ()</td></tr>
+<tr class="memdesc:a2f5c4e0e8a7aae115f37a2cdd0a745d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド行列算出関数  <a href="#a2f5c4e0e8a7aae115f37a2cdd0a745d7">[詳解]</a><br /></td></tr>
+<tr class="separator:a2f5c4e0e8a7aae115f37a2cdd0a745d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab12dc73e0dcce2bc8e7129f0affe2775"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#ab12dc73e0dcce2bc8e7129f0affe2775">CalculateWorldMatrixPlusInverse</a> ()</td></tr>
+<tr class="memdesc:ab12dc73e0dcce2bc8e7129f0affe2775"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆行列付きワールド行列算出関数  <a href="#ab12dc73e0dcce2bc8e7129f0affe2775">[詳解]</a><br /></td></tr>
+<tr class="separator:ab12dc73e0dcce2bc8e7129f0affe2775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7413dc6aa2d071de0c5842e5351acd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a2f7413dc6aa2d071de0c5842e5351acd">CalculateWorldMatrixPlusTranspose</a> ()</td></tr>
+<tr class="memdesc:a2f7413dc6aa2d071de0c5842e5351acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">転置列付きワールド行列算出関数  <a href="#a2f7413dc6aa2d071de0c5842e5351acd">[詳解]</a><br /></td></tr>
+<tr class="separator:a2f7413dc6aa2d071de0c5842e5351acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 非公開変数類</h2></td></tr>
 <tr class="memitem:aa36f8a9ae39411699f7ff77f017f618a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#aa36f8a9ae39411699f7ff77f017f618a">position_</a></td></tr>
+<tr class="memdesc:aa36f8a9ae39411699f7ff77f017f618a"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標  <a href="#aa36f8a9ae39411699f7ff77f017f618a">[詳解]</a><br /></td></tr>
 <tr class="separator:aa36f8a9ae39411699f7ff77f017f618a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade54d2d37f01b20758b0ce11def76104"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#ade54d2d37f01b20758b0ce11def76104">scale_</a></td></tr>
+<tr class="memdesc:ade54d2d37f01b20758b0ce11def76104"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡縮  <a href="#ade54d2d37f01b20758b0ce11def76104">[詳解]</a><br /></td></tr>
 <tr class="separator:ade54d2d37f01b20758b0ce11def76104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0637721b2a1f2e10dca46caa9a0d77d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#ac0637721b2a1f2e10dca46caa9a0d77d">init_quaternion_</a></td></tr>
+<tr class="memdesc:ac0637721b2a1f2e10dca46caa9a0d77d"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期値クォータニオン  <a href="#ac0637721b2a1f2e10dca46caa9a0d77d">[詳解]</a><br /></td></tr>
+<tr class="separator:ac0637721b2a1f2e10dca46caa9a0d77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00d46dfb43b1e60b4f6ca8728d6aff54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a00d46dfb43b1e60b4f6ca8728d6aff54">now_quaternion_</a></td></tr>
+<tr class="memdesc:a00d46dfb43b1e60b4f6ca8728d6aff54"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在用クォータニオン  <a href="#a00d46dfb43b1e60b4f6ca8728d6aff54">[詳解]</a><br /></td></tr>
 <tr class="separator:a00d46dfb43b1e60b4f6ca8728d6aff54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a646ffca2f737bca6b3ad183b4ce54a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a8a646ffca2f737bca6b3ad183b4ce54a">add_quaternion_</a></td></tr>
+<tr class="memdesc:a8a646ffca2f737bca6b3ad183b4ce54a"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加用クォータニオン  <a href="#a8a646ffca2f737bca6b3ad183b4ce54a">[詳解]</a><br /></td></tr>
+<tr class="separator:a8a646ffca2f737bca6b3ad183b4ce54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9985a4b70b9af742c9f26f47784ba7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#ac9985a4b70b9af742c9f26f47784ba7b">yaw_pitch_roll_quaternion_</a></td></tr>
+<tr class="memdesc:ac9985a4b70b9af742c9f26f47784ba7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">YawPitchRollクォータニオン  <a href="#ac9985a4b70b9af742c9f26f47784ba7b">[詳解]</a><br /></td></tr>
 <tr class="separator:ac9985a4b70b9af742c9f26f47784ba7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a725d32ecbcf8da99d63bb6296d9cd123"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a725d32ecbcf8da99d63bb6296d9cd123">yaw_pitch_roll_</a></td></tr>
-<tr class="separator:a725d32ecbcf8da99d63bb6296d9cd123"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52fa2db52356033f42908fde94f9cb28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a52fa2db52356033f42908fde94f9cb28">old_target_quaternion_</a></td></tr>
-<tr class="separator:a52fa2db52356033f42908fde94f9cb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb5b22818929f01f4765a39f2da01579"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#acb5b22818929f01f4765a39f2da01579">target_quaternion_</a></td></tr>
+<tr class="memdesc:acb5b22818929f01f4765a39f2da01579"><td class="mdescLeft">&#160;</td><td class="mdescRight">ターゲットクォータニオン  <a href="#acb5b22818929f01f4765a39f2da01579">[詳解]</a><br /></td></tr>
 <tr class="separator:acb5b22818929f01f4765a39f2da01579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52fa2db52356033f42908fde94f9cb28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a52fa2db52356033f42908fde94f9cb28">old_target_quaternion_</a></td></tr>
+<tr class="memdesc:a52fa2db52356033f42908fde94f9cb28"><td class="mdescLeft">&#160;</td><td class="mdescRight">古いターゲットクォータニオン  <a href="#a52fa2db52356033f42908fde94f9cb28">[詳解]</a><br /></td></tr>
+<tr class="separator:a52fa2db52356033f42908fde94f9cb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf33e8171e9803bebe3aba14dbedc90e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#acf33e8171e9803bebe3aba14dbedc90e">yaw_pitch_roll_angle_</a></td></tr>
+<tr class="memdesc:acf33e8171e9803bebe3aba14dbedc90e"><td class="mdescLeft">&#160;</td><td class="mdescRight">YawPitchRoll角度  <a href="#acf33e8171e9803bebe3aba14dbedc90e">[詳解]</a><br /></td></tr>
+<tr class="separator:acf33e8171e9803bebe3aba14dbedc90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a762490e0b35915244f767d618bb875b4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a762490e0b35915244f767d618bb875b4">look_at_speed_</a></td></tr>
+<tr class="memdesc:a762490e0b35915244f767d618bb875b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">向く速度  <a href="#a762490e0b35915244f767d618bb875b4">[詳解]</a><br /></td></tr>
 <tr class="separator:a762490e0b35915244f767d618bb875b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acda35632e3895b925eaae4625c564b5f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#acda35632e3895b925eaae4625c564b5f">look_at_change_amount_</a></td></tr>
+<tr class="memdesc:acda35632e3895b925eaae4625c564b5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">向く変化量  <a href="#acda35632e3895b925eaae4625c564b5f">[詳解]</a><br /></td></tr>
 <tr class="separator:acda35632e3895b925eaae4625c564b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a150c78be6568eaf017165ff5c90d6928"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix_extend.html">MatrixExtend</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a150c78be6568eaf017165ff5c90d6928">matrix_extend_</a></td></tr>
-<tr class="separator:a150c78be6568eaf017165ff5c90d6928"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bde97ec180664c5587c445737c04cbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_axis_vector.html">AxisVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a2bde97ec180664c5587c445737c04cbe">axis_vector_</a></td></tr>
-<tr class="separator:a2bde97ec180664c5587c445737c04cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52dc8d953e340e21ecd0a56fb5cb5a09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a52dc8d953e340e21ecd0a56fb5cb5a09">position_matrix_</a></td></tr>
+<tr class="memdesc:a52dc8d953e340e21ecd0a56fb5cb5a09"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標行列  <a href="#a52dc8d953e340e21ecd0a56fb5cb5a09">[詳解]</a><br /></td></tr>
+<tr class="separator:a52dc8d953e340e21ecd0a56fb5cb5a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a052a5c220aac57fdb9f8c879f613de84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a052a5c220aac57fdb9f8c879f613de84">scale_matrix_</a></td></tr>
+<tr class="memdesc:a052a5c220aac57fdb9f8c879f613de84"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡縮行列  <a href="#a052a5c220aac57fdb9f8c879f613de84">[詳解]</a><br /></td></tr>
+<tr class="separator:a052a5c220aac57fdb9f8c879f613de84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e41c4d959a094c8dc1b2178fcb4fc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a58e41c4d959a094c8dc1b2178fcb4fc2">rotation_matrix_</a></td></tr>
+<tr class="memdesc:a58e41c4d959a094c8dc1b2178fcb4fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転行列  <a href="#a58e41c4d959a094c8dc1b2178fcb4fc2">[詳解]</a><br /></td></tr>
+<tr class="separator:a58e41c4d959a094c8dc1b2178fcb4fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e893bc920666b3a4295cdf383441198"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a0e893bc920666b3a4295cdf383441198">no_init_rotation_matrix_</a></td></tr>
+<tr class="memdesc:a0e893bc920666b3a4295cdf383441198"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期回転無し回転行列  <a href="#a0e893bc920666b3a4295cdf383441198">[詳解]</a><br /></td></tr>
+<tr class="separator:a0e893bc920666b3a4295cdf383441198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b1d18a3f04fa8b38e6c8c1cd6d51a51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a0b1d18a3f04fa8b38e6c8c1cd6d51a51">inverse_matrix_</a></td></tr>
+<tr class="memdesc:a0b1d18a3f04fa8b38e6c8c1cd6d51a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆行列  <a href="#a0b1d18a3f04fa8b38e6c8c1cd6d51a51">[詳解]</a><br /></td></tr>
+<tr class="separator:a0b1d18a3f04fa8b38e6c8c1cd6d51a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc32fce01f3c1ab82fed2f4b6dca1871"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#abc32fce01f3c1ab82fed2f4b6dca1871">transpose_matrix_</a></td></tr>
+<tr class="memdesc:abc32fce01f3c1ab82fed2f4b6dca1871"><td class="mdescLeft">&#160;</td><td class="mdescRight">転置行列  <a href="#abc32fce01f3c1ab82fed2f4b6dca1871">[詳解]</a><br /></td></tr>
+<tr class="separator:abc32fce01f3c1ab82fed2f4b6dca1871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a429ea1108d116f0b099b7a8fc8b477"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a3a429ea1108d116f0b099b7a8fc8b477">world_matrix_</a></td></tr>
+<tr class="memdesc:a3a429ea1108d116f0b099b7a8fc8b477"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド行列  <a href="#a3a429ea1108d116f0b099b7a8fc8b477">[詳解]</a><br /></td></tr>
+<tr class="separator:a3a429ea1108d116f0b099b7a8fc8b477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e621ceb673d8e8546831d536d9b47e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transform.html#a73e621ceb673d8e8546831d536d9b47e">no_init_rotation_world_matrix_</a></td></tr>
+<tr class="memdesc:a73e621ceb673d8e8546831d536d9b47e"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期回転無しワールド行列  <a href="#a73e621ceb673d8e8546831d536d9b47e">[詳解]</a><br /></td></tr>
+<tr class="separator:a73e621ceb673d8e8546831d536d9b47e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+<div class="textblock"><p>変形Class </p>
+<p>オブジェクトの変形を表すClass </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00017">17</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="aa08ca4266efabc768973cdeea51945ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa08ca4266efabc768973cdeea51945ab">&#9670;&nbsp;</a></span>Transform()</h2>
@@ -205,7 +309,15 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00032">32</a> 行目に定義があります。</p>
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00239">239</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -224,11 +336,170 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00054">54</a> 行目に定義があります。</p>
+<p>デストラクタ </p>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00267">267</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
+<a id="afba4a9bc17c9a61f2c6a43bc32a251cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba4a9bc17c9a61f2c6a43bc32a251cc">&#9670;&nbsp;</a></span>AddParentMatrixToWorldMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transform::AddParentMatrixToWorldMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>parent_matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ワールド行列に親行列追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent_matrix</td><td>親の行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00310">310</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2f5c4e0e8a7aae115f37a2cdd0a745d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f5c4e0e8a7aae115f37a2cdd0a745d7">&#9670;&nbsp;</a></span>CalculateWorldMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transform::CalculateWorldMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ワールド行列算出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00389">389</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab12dc73e0dcce2bc8e7129f0affe2775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab12dc73e0dcce2bc8e7129f0affe2775">&#9670;&nbsp;</a></span>CalculateWorldMatrixPlusInverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transform::CalculateWorldMatrixPlusInverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>逆行列付きワールド行列算出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00400">400</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2f7413dc6aa2d071de0c5842e5351acd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f7413dc6aa2d071de0c5842e5351acd">&#9670;&nbsp;</a></span>CalculateWorldMatrixPlusTranspose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transform::CalculateWorldMatrixPlusTranspose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>転置列付きワールド行列算出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00413">413</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="a7884cb828ace5c921e7138d83c43d689"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7884cb828ace5c921e7138d83c43d689">&#9670;&nbsp;</a></span>CreateQuaternion()</h2>
 
@@ -252,12 +523,752 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00241">241</a> 行目に定義があります。</p>
+<p>クォータニオン作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00344">344</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a8c4966ea0a5d6cafa79c430e31bf0dff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c4966ea0a5d6cafa79c430e31bf0dff">&#9670;&nbsp;</a></span>GetAnglePitch()</h2>
+<a id="a81a4882eb3c4d7afb243b9911c666b52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a4882eb3c4d7afb243b9911c666b52">&#9670;&nbsp;</a></span>CreateWorldMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transform::CreateWorldMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ワールド行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00317">317</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a26e42d4a1bd35070277b49a48ef5c4fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26e42d4a1bd35070277b49a48ef5c4fd">&#9670;&nbsp;</a></span>CreateWorldMatrixPlusInverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transform::CreateWorldMatrixPlusInverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>逆行列付きワールド行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00326">326</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a49d2df9c3ffffa21e2df60ce2f531bca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d2df9c3ffffa21e2df60ce2f531bca">&#9670;&nbsp;</a></span>CreateWorldMatrixPlusTranspose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transform::CreateWorldMatrixPlusTranspose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>転置行列付きワールド行列作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00335">335</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a85ecb6a9d972caf0ab7d2e58ad2753b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85ecb6a9d972caf0ab7d2e58ad2753b7">&#9670;&nbsp;</a></span>getpAnglePitch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * Transform::getpAnglePitch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pitch角度取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float*</td><td>Pitch角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00053">53</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa1f056b8f90affed5e251e68a93331d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f056b8f90affed5e251e68a93331d4">&#9670;&nbsp;</a></span>getpAngleRoll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * Transform::getpAngleRoll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Roll角度取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float*</td><td>Roll角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00067">67</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a69600cd68c0a99518efec7da592e4841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69600cd68c0a99518efec7da592e4841">&#9670;&nbsp;</a></span>getpAngleYaw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * Transform::getpAngleYaw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Yaw角度取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float*</td><td>Yaw角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00060">60</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aadf052a769af0793916a25c88d00640c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadf052a769af0793916a25c88d00640c">&#9670;&nbsp;</a></span>getpAngleYawPitchRoll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Transform::getpAngleYawPitchRoll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>YawPitchRoll角度取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>YawPitchRoll角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00074">74</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa01e95eff5d3bb0a2df9d81faa229143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa01e95eff5d3bb0a2df9d81faa229143">&#9670;&nbsp;</a></span>getpForward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Transform::getpForward </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>前ベクトル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>前ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00142">142</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af172f4f0dfb057d1ee473d1314787352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af172f4f0dfb057d1ee473d1314787352">&#9670;&nbsp;</a></span>getpInverseMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> * Transform::getpInverseMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>逆行列取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Matrix*</td><td>逆行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00192">192</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a812895ad4ebc4c713ece357167733418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a812895ad4ebc4c713ece357167733418">&#9670;&nbsp;</a></span>getpLookAtSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * Transform::getpLookAtSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>向く速度取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float*</td><td>向く速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00081">81</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5d30e9aa1c2d1fff96996b6368a7f610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d30e9aa1c2d1fff96996b6368a7f610">&#9670;&nbsp;</a></span>getpNoInitRotationMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> * Transform::getpNoInitRotationMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期回転無し回転行列取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Matrix*</td><td>拡縮行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00185">185</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a17fb2c084b43710345a261438ae67b7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17fb2c084b43710345a261438ae67b7c">&#9670;&nbsp;</a></span>getpNoInitRotationWorldMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> * Transform::getpNoInitRotationWorldMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期回転無しワールド行列取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Matrix*</td><td>初期回転無しワールド行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00229">229</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1ed223415917a6b33e5fd7af132f6b9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ed223415917a6b33e5fd7af132f6b9c">&#9670;&nbsp;</a></span>getpPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Transform::getpPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>座標取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a825ad9edaf799a83076cbb9f78852649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a825ad9edaf799a83076cbb9f78852649">&#9670;&nbsp;</a></span>getpPositionMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> * Transform::getpPositionMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>座標行列取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Matrix*</td><td>座標行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00163">163</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a636334048ae8fb50455ec8fd290668d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636334048ae8fb50455ec8fd290668d6">&#9670;&nbsp;</a></span>getpRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Transform::getpRight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>右ベクトル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>右ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00156">156</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af0ea9094ccda77809978208614772447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ea9094ccda77809978208614772447">&#9670;&nbsp;</a></span>getpRotationMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> * Transform::getpRotationMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>回転行列取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Matrix*</td><td>拡縮行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00178">178</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac1a821bfab91b10a072eac81efdc741d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1a821bfab91b10a072eac81efdc741d">&#9670;&nbsp;</a></span>getpScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Transform::getpScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拡縮取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00027">27</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad7b44f1e97d83f2f810e231bae2de2b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7b44f1e97d83f2f810e231bae2de2b5">&#9670;&nbsp;</a></span>getpScaleMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> * Transform::getpScaleMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拡縮行列取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Matrix*</td><td>拡縮行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00171">171</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aee502a42628072064f2b3d2060f2d53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee502a42628072064f2b3d2060f2d53f">&#9670;&nbsp;</a></span>getpTransposeMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> * Transform::getpTransposeMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>転置行列取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Matrix*</td><td>転置行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00207">207</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a98796d7ad6726567b5b12ab65254a79d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98796d7ad6726567b5b12ab65254a79d">&#9670;&nbsp;</a></span>getpUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Transform::getpUp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上ベクトル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>上ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00149">149</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a58114e02f195f91f9bb807d49c34fe32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58114e02f195f91f9bb807d49c34fe32">&#9670;&nbsp;</a></span>getpWorldMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> * Transform::getpWorldMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ワールド行列取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Matrix*</td><td>ワールド行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00222">222</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4b911801aa231c13922c0e11032b8d5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b911801aa231c13922c0e11032b8d5a">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transform::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00273">273</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aaf47943b2583b4cb31a54881b5ef8eca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf47943b2583b4cb31a54881b5ef8eca">&#9670;&nbsp;</a></span>ReflectMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -266,7 +1277,7 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float* Transform::GetAnglePitch </td>
+          <td class="memname">void Transform::ReflectMatrix </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -274,402 +1285,172 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00055">55</a> 行目に定義があります。</p>
+<p>行列反映関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00371">371</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a124d6afb5dd0a86952c99f1cec72e394"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a124d6afb5dd0a86952c99f1cec72e394">&#9670;&nbsp;</a></span>GetAngleRoll()</h2>
+<a id="acb3b15a0b011f21a849ca1648ed1c581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb3b15a0b011f21a849ca1648ed1c581">&#9670;&nbsp;</a></span>ResetAddQuaternion()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float* Transform::GetAngleRoll </td>
+          <td class="memname">void Transform::ResetAddQuaternion </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00057">57</a> 行目に定義があります。</p>
+<p>追加用クォータニオンリセット関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00302">302</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a8be9cd3526cc18d64e47b55f4c527dd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8be9cd3526cc18d64e47b55f4c527dd8">&#9670;&nbsp;</a></span>GetAngleYaw()</h2>
+<a id="a0f7b2731c46624ea54126e36fe1d0dd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7b2731c46624ea54126e36fe1d0dd1">&#9670;&nbsp;</a></span>setAddQuaternion()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float* Transform::GetAngleYaw </td>
+          <td class="memname">void Transform::setAddQuaternion </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00056">56</a> 行目に定義があります。</p>
+<p>追加用クォータニオン設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>追加用クォータニオン </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00045">45</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a1bd5cddc216e7fafe12e5b605cb780ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bd5cddc216e7fafe12e5b605cb780ea">&#9670;&nbsp;</a></span>GetAngleYawPitchRoll()</h2>
+<a id="ab64af2387c413b75c26ef343104a56db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64af2387c413b75c26ef343104a56db">&#9670;&nbsp;</a></span>setInitAngle()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a>* Transform::GetAngleYawPitchRoll </td>
+          <td class="memname">void Transform::setInitAngle </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00058">58</a> 行目に定義があります。</p>
+<p>初期角度取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ad300be34dddc6109ca142452e65aa77d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad300be34dddc6109ca142452e65aa77d">&#9670;&nbsp;</a></span>GetAxisVector()</h2>
+<a id="a78b6b021ca4cc1641f934160befb39dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78b6b021ca4cc1641f934160befb39dd">&#9670;&nbsp;</a></span>setInverseMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_axis_vector.html">AxisVector</a>* Transform::GetAxisVector </td>
+          <td class="memname">void Transform::setInverseMatrix </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00071">71</a> 行目に定義があります。</p>
+<p>逆行列設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>逆行列にしたい行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00199">199</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a25e4832e15334d74ff847f0ff0b3564f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25e4832e15334d74ff847f0ff0b3564f">&#9670;&nbsp;</a></span>GetForawrd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="class_vector3_d.html">Vector3D</a>* Transform::GetForawrd </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00068">68</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a14b7b06632d6a47e99dc67aecbd7acc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14b7b06632d6a47e99dc67aecbd7acc7">&#9670;&nbsp;</a></span>GetLookAtChangeAmount()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Transform::GetLookAtChangeAmount </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00062">62</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a79fdb2cb4eb1e4abf48e0f9fd74707ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79fdb2cb4eb1e4abf48e0f9fd74707ba">&#9670;&nbsp;</a></span>GetLookAtSpeed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Transform::GetLookAtSpeed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00061">61</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ac5a4f96871b6c1bfde9b2a6b7b0d6953"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5a4f96871b6c1bfde9b2a6b7b0d6953">&#9670;&nbsp;</a></span>getpMatrixExtend()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_matrix_extend.html">MatrixExtend</a>* Transform::getpMatrixExtend </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00080">80</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="addff6461a77b9f5c5249e46deb5c2c19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addff6461a77b9f5c5249e46deb5c2c19">&#9670;&nbsp;</a></span>GetPosition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a>* Transform::GetPosition </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00049">49</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a19538fe991e76eb8146295e6f5f1ed99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19538fe991e76eb8146295e6f5f1ed99">&#9670;&nbsp;</a></span>getpWorldMatrix()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a>* Transform::getpWorldMatrix </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00079">79</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a57d1da919d8df7d2452149c4bbade4d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57d1da919d8df7d2452149c4bbade4d2">&#9670;&nbsp;</a></span>GetRight()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="class_vector3_d.html">Vector3D</a>* Transform::GetRight </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00070">70</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="accedf33a4ddbdcf2d4fc4274f85bf818"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accedf33a4ddbdcf2d4fc4274f85bf818">&#9670;&nbsp;</a></span>GetScale()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a>* Transform::GetScale </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00052">52</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a9f5700481ae42556f763726947feaf36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f5700481ae42556f763726947feaf36">&#9670;&nbsp;</a></span>GetUp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="class_vector3_d.html">Vector3D</a>* Transform::GetUp </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00069">69</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ab6f7342cb4eca555c02a85c999d499dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6f7342cb4eca555c02a85c999d499dc">&#9670;&nbsp;</a></span>SetLookAtSpeed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Transform::SetLookAtSpeed </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>look_at_speed</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00060">60</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a39b78acbdbf3ee98cad0c4e640988745"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39b78acbdbf3ee98cad0c4e640988745">&#9670;&nbsp;</a></span>SetLookAtVector()</h2>
+<a id="a7a90095a66990f9e17b22c141dbe1379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a90095a66990f9e17b22c141dbe1379">&#9670;&nbsp;</a></span>setLookAtVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Transform::SetLookAtVector </td>
+          <td class="memname">void Transform::setLookAtVector </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
           <td class="paramname"><em>look_at_vector</em></td><td>)</td>
@@ -678,20 +1459,34 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
       </table>
 </div><div class="memdoc">
 
+<p>向くベクトル設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">look_at_vector</td><td>向くベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00088">88</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ac8cdb5ca9995d9c124f1890d84c92ab4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8cdb5ca9995d9c124f1890d84c92ab4">&#9670;&nbsp;</a></span>SetTargetQuaternion()</h2>
+<a id="aa2d0352ed37603f7a80a8562ade5bcbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2d0352ed37603f7a80a8562ade5bcbe">&#9670;&nbsp;</a></span>setTargetQuaternion()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Transform::SetTargetQuaternion </td>
+          <td class="memname">void Transform::setTargetQuaternion </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
           <td class="paramname"><em>axis</em>, </td>
         </tr>
         <tr>
@@ -708,191 +1503,73 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00126">126</a> 行目に定義があります。</p>
+<p>ターゲットクォータニオン設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>軸 </td></tr>
+    <tr><td class="paramname">angle</td><td>角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00127">127</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a053037b225e6fb11e680cc60df15dd45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a053037b225e6fb11e680cc60df15dd45">&#9670;&nbsp;</a></span>TransposeMatrixTranslationOff()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Transform::TransposeMatrixTranslationOff </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00078">78</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="afe5350bb1558256115e14c0669611acd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe5350bb1558256115e14c0669611acd">&#9670;&nbsp;</a></span>UpdateAxisVector()</h2>
+<a id="a710f94248ae113eb6b28849a01f3fedc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a710f94248ae113eb6b28849a01f3fedc">&#9670;&nbsp;</a></span>setTransposeMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Transform::UpdateAxisVector </td>
+          <td class="memname">void Transform::setTransposeMatrix </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00067">67</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a73a20f2b8baad21ba74a2b1c6d8a1ab2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73a20f2b8baad21ba74a2b1c6d8a1ab2">&#9670;&nbsp;</a></span>UpdateAxisVector_WorldMatrixISRT()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void Transform::UpdateAxisVector_WorldMatrixISRT </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_position_off</em> = <code>false</code>&#160;</td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00218">218</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="af02515be1947506212ca1c23223ce0b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af02515be1947506212ca1c23223ce0b3">&#9670;&nbsp;</a></span>UpdateAxisVector_WorldMatrixSRT()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void Transform::UpdateAxisVector_WorldMatrixSRT </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
           <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00195">195</a> 行目に定義があります。</p>
+<p>転置行列設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>転置行列にしたい行列 </td></tr>
+    <tr><td class="paramname">is_position_off</td><td>平行移動OFFフラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-</div>
-</div>
-<a id="a3d2e5da24fb1c8015f5bb9a6c0a7a7de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d2e5da24fb1c8015f5bb9a6c0a7a7de">&#9670;&nbsp;</a></span>UpdateInverseMatrix()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Transform::UpdateInverseMatrix </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td>
-          <td class="paramname"><em>matrix</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00076">76</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a486ae5501b5081b22ee053f787e0e4a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a486ae5501b5081b22ee053f787e0e4a2">&#9670;&nbsp;</a></span>UpdateTransposeMatrix()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Transform::UpdateTransposeMatrix </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td>
-          <td class="paramname"><em>matrix</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00077">77</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a3d56e19fba7f44d5f938d62481846fbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d56e19fba7f44d5f938d62481846fbc">&#9670;&nbsp;</a></span>UpdateWorldMatrixISRT()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Transform::UpdateWorldMatrixISRT </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00171">171</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="af1a2dcb4a9d37dd71c203ec248535887"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1a2dcb4a9d37dd71c203ec248535887">&#9670;&nbsp;</a></span>UpdateWorldMatrixSRT()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Transform::UpdateWorldMatrixSRT </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00147">147</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_transform_8cpp_source.html">Transform.cpp</a> の <a class="el" href="_transform_8cpp_source.html#l00214">214</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">メンバ詳解</h2>
-<a id="a2bde97ec180664c5587c445737c04cbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bde97ec180664c5587c445737c04cbe">&#9670;&nbsp;</a></span>axis_vector_</h2>
+<a id="a8a646ffca2f737bca6b3ad183b4ce54a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a646ffca2f737bca6b3ad183b4ce54a">&#9670;&nbsp;</a></span>add_quaternion_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -901,7 +1578,7 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_axis_vector.html">AxisVector</a> Transform::axis_vector_</td>
+          <td class="memname"><a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a> Transform::add_quaternion_</td>
         </tr>
       </table>
   </td>
@@ -911,7 +1588,61 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00114">114</a> 行目に定義があります。</p>
+<p>追加用クォータニオン </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00027">27</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac0637721b2a1f2e10dca46caa9a0d77d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0637721b2a1f2e10dca46caa9a0d77d">&#9670;&nbsp;</a></span>init_quaternion_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a> Transform::init_quaternion_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期値クォータニオン </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00025">25</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0b1d18a3f04fa8b38e6c8c1cd6d51a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b1d18a3f04fa8b38e6c8c1cd6d51a51">&#9670;&nbsp;</a></span>inverse_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Transform::inverse_matrix_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>逆行列 </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00038">38</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -935,7 +1666,9 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00108">108</a> 行目に定義があります。</p>
+<p>向く変化量 </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00033">33</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -959,12 +1692,14 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00107">107</a> 行目に定義があります。</p>
+<p>向く速度 </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00032">32</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a150c78be6568eaf017165ff5c90d6928"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a150c78be6568eaf017165ff5c90d6928">&#9670;&nbsp;</a></span>matrix_extend_</h2>
+<a id="a0e893bc920666b3a4295cdf383441198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e893bc920666b3a4295cdf383441198">&#9670;&nbsp;</a></span>no_init_rotation_matrix_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -973,7 +1708,7 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_matrix_extend.html">MatrixExtend</a> Transform::matrix_extend_</td>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Transform::no_init_rotation_matrix_</td>
         </tr>
       </table>
   </td>
@@ -983,7 +1718,35 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00111">111</a> 行目に定義があります。</p>
+<p>初期回転無し回転行列 </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a73e621ceb673d8e8546831d536d9b47e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e621ceb673d8e8546831d536d9b47e">&#9670;&nbsp;</a></span>no_init_rotation_world_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Transform::no_init_rotation_world_matrix_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期回転無しワールド行列 </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00041">41</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1007,7 +1770,9 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00102">102</a> 行目に定義があります。</p>
+<p>現在用クォータニオン </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00026">26</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1031,7 +1796,9 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00105">105</a> 行目に定義があります。</p>
+<p>古いターゲットクォータニオン </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00030">30</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1055,7 +1822,61 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00096">96</a> 行目に定義があります。</p>
+<p>座標 </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00023">23</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a52dc8d953e340e21ecd0a56fb5cb5a09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52dc8d953e340e21ecd0a56fb5cb5a09">&#9670;&nbsp;</a></span>position_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Transform::position_matrix_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>座標行列 </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a58e41c4d959a094c8dc1b2178fcb4fc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e41c4d959a094c8dc1b2178fcb4fc2">&#9670;&nbsp;</a></span>rotation_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Transform::rotation_matrix_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>回転行列 </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00036">36</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1079,7 +1900,35 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00099">99</a> 行目に定義があります。</p>
+<p>拡縮 </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00024">24</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a052a5c220aac57fdb9f8c879f613de84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a052a5c220aac57fdb9f8c879f613de84">&#9670;&nbsp;</a></span>scale_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Transform::scale_matrix_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>拡縮行列 </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00035">35</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1103,12 +1952,14 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00106">106</a> 行目に定義があります。</p>
+<p>ターゲットクォータニオン </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00029">29</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a725d32ecbcf8da99d63bb6296d9cd123"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a725d32ecbcf8da99d63bb6296d9cd123">&#9670;&nbsp;</a></span>yaw_pitch_roll_</h2>
+<a id="abc32fce01f3c1ab82fed2f4b6dca1871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc32fce01f3c1ab82fed2f4b6dca1871">&#9670;&nbsp;</a></span>transpose_matrix_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1117,7 +1968,7 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Transform::yaw_pitch_roll_</td>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Transform::transpose_matrix_</td>
         </tr>
       </table>
   </td>
@@ -1127,7 +1978,61 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00104">104</a> 行目に定義があります。</p>
+<p>転置行列 </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00039">39</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3a429ea1108d116f0b099b7a8fc8b477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a429ea1108d116f0b099b7a8fc8b477">&#9670;&nbsp;</a></span>world_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Transform::world_matrix_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ワールド行列 </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00040">40</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acf33e8171e9803bebe3aba14dbedc90e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf33e8171e9803bebe3aba14dbedc90e">&#9670;&nbsp;</a></span>yaw_pitch_roll_angle_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Transform::yaw_pitch_roll_angle_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>YawPitchRoll角度 </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00031">31</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1151,13 +2056,15 @@ $(document).ready(function(){initNavTree('class_transform.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00103">103</a> 行目に定義があります。</p>
+<p>YawPitchRollクォータニオン </p>
+
+<p class="definition"> <a class="el" href="_transform_8h_source.html">Transform.h</a> の <a class="el" href="_transform_8h_source.html#l00028">28</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Vector/Transform/<a class="el" href="_transform_8h_source.html">Transform.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Vector/Transform/<a class="el" href="_transform_8cpp_source.html">Transform.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Tool/<a class="el" href="_transform_8h_source.html">Transform.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Tool/Source/<a class="el" href="_transform_8cpp_source.html">Transform.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

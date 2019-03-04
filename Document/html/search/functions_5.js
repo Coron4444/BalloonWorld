@@ -1,15 +1,12 @@
 var searchData=
 [
   ['effect',['Effect',['../class_effekseer_1_1_effect.html#ac36d4aa804244d12a64ad8e2f9681ed0',1,'Effekseer::Effect']]],
-  ['effectfile',['EffectFile',['../class_effect_file.html#a7c3363080d705db79fada75691d4a9c8',1,'EffectFile']]],
   ['effectloader',['EffectLoader',['../class_effekseer_1_1_effect_loader.html#a38e316829c64864d3a0cac68cd7724a0',1,'Effekseer::EffectLoader']]],
   ['effectnode',['EffectNode',['../class_effekseer_1_1_effect_node.html#aba9378c17ee790783c2d2add7ec4c16c',1,'Effekseer::EffectNode']]],
-  ['effekseerarray',['EffekseerArray',['../class_effekseer_array.html#ae598c1486d263356b63ba8d08a3afc20',1,'EffekseerArray']]],
-  ['effekseermanager',['EffekseerManager',['../class_effekseer_manager.html#a4338611775d36aaef84ddb178b7f13ce',1,'EffekseerManager::EffekseerManager()=delete'],['../class_effekseer_manager.html#ab6e170775c5ba410dc03b59eda589688',1,'EffekseerManager::EffekseerManager(const EffekseerManager &amp;class_name)=delete']]],
-  ['effekseerobject',['EffekseerObject',['../class_effekseer_object.html#a8e1e081f62efa87b31e00bcfd9cf1a45',1,'EffekseerObject']]],
-  ['eliminationofnesting',['EliminationOfNesting',['../class_collision_base.html#a257660ba9ad63f8c92137fdd24ad46cb',1,'CollisionBase']]],
+  ['effekseermanager',['EffekseerManager',['../class_effekseer_manager.html#acdc424090c46bb80cb0a70bae7245c01',1,'EffekseerManager']]],
+  ['eliminationofnesting',['EliminationOfNesting',['../class_collision_calculation.html#a4e468d6ff8add6b08f0b65d3e7128411',1,'CollisionCalculation']]],
   ['empty',['empty',['../class_im_vector.html#aa53e48a5272f4bad1099368769514ff1',1,'ImVector::empty()'],['../struct_im_gui_text_filter_1_1_text_range.html#ab8d74e3b0ce63997746828e4b8ae3bbf',1,'ImGuiTextFilter::TextRange::empty()'],['../struct_im_gui_text_buffer.html#afdef38ae725bb5495f0143170fa902c8',1,'ImGuiTextBuffer::empty()']]],
-  ['end',['end',['../class_im_vector.html#a947fbc3b1d8c1997e51ae6caab440379',1,'ImVector::end()'],['../class_im_vector.html#a06efa87357864d1c130f0f400eeccf8d',1,'ImVector::end() const'],['../struct_im_gui_text_filter_1_1_text_range.html#aa5d60286f4c35bfdde82219ff079de9e',1,'ImGuiTextFilter::TextRange::end()'],['../struct_im_gui_text_buffer.html#a2fc30ad0d384f98dfcea722f798d91f2',1,'ImGuiTextBuffer::end()'],['../struct_im_gui_list_clipper.html#a3e6aec0db317985319a78513fc2c8068',1,'ImGuiListClipper::End()'],['../namespace_im_gui.html#a5479d93794a004c67ceb6d13f37c8254',1,'ImGui::End()']]],
+  ['end',['end',['../class_im_vector.html#a947fbc3b1d8c1997e51ae6caab440379',1,'ImVector::end()'],['../class_im_vector.html#a06efa87357864d1c130f0f400eeccf8d',1,'ImVector::end() const'],['../struct_im_gui_text_filter_1_1_text_range.html#aa5d60286f4c35bfdde82219ff079de9e',1,'ImGuiTextFilter::TextRange::end()'],['../struct_im_gui_text_buffer.html#a2fc30ad0d384f98dfcea722f798d91f2',1,'ImGuiTextBuffer::end()'],['../class_interpolation.html#a9c63d39c9245a28228784ebff60ae4b1',1,'Interpolation::end()'],['../struct_im_gui_list_clipper.html#a3e6aec0db317985319a78513fc2c8068',1,'ImGuiListClipper::End()'],['../namespace_im_gui.html#a5479d93794a004c67ceb6d13f37c8254',1,'ImGui::End()']]],
   ['endchild',['EndChild',['../namespace_im_gui.html#af8de559a88c1442d6df8c1b04c86e997',1,'ImGui']]],
   ['endchildframe',['EndChildFrame',['../namespace_im_gui.html#ac4bd9024554b5074805bc0ce3076c514',1,'ImGui']]],
   ['endcolumns',['EndColumns',['../namespace_im_gui.html#af93bed3bce5475fe4d525d744f16aa20',1,'ImGui']]],
@@ -28,5 +25,6 @@ var searchData=
   ['exampleappconsole',['ExampleAppConsole',['../struct_example_app_console.html#a405521e6aa8f97954b67315baf8d6147',1,'ExampleAppConsole']]],
   ['execcommand',['ExecCommand',['../struct_example_app_console.html#aa1e8bf1f3795cbc41597e1ff081c6589',1,'ExampleAppConsole']]],
   ['exists',['Exists',['../class_effekseer_1_1_manager.html#ad95297e9170c9f9874eb6bf951aa5dc0',1,'Effekseer::Manager']]],
-  ['expand',['Expand',['../struct_im_rect.html#af33a7424c3341d08acd69da30c27c753',1,'ImRect::Expand(const float amount)'],['../struct_im_rect.html#ac0b0b88fe65725b4694cd7d91d42d382',1,'ImRect::Expand(const ImVec2 &amp;amount)']]]
+  ['expand',['Expand',['../struct_im_rect.html#af33a7424c3341d08acd69da30c27c753',1,'ImRect::Expand(const float amount)'],['../struct_im_rect.html#ac0b0b88fe65725b4694cd7d91d42d382',1,'ImRect::Expand(const ImVec2 &amp;amount)']]],
+  ['exportdata',['ExportData',['../class_md_bin_data.html#aa9e3d4f176e966533640206296a222cd',1,'MdBinData']]]
 ];

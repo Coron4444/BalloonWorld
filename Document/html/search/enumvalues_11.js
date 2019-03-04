@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wireframe',['Wireframe',['../namespace_effekseer.html#ad1b82893021dd8e3697e46c1aa544092a33e42d0f3b166a4c405127e4412fbef2',1,'Effekseer']]]
+  ['up',['UP',['../class_controller.html#a08e36bbdccc56ce55cdbd5dcc0f438d4afbaedde498cdead4f2780217646e9ba1',1,'Controller']]]
 ];

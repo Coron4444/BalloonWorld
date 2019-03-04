@@ -11,38 +11,87 @@ O\+B\+B\+Class
 
 
 
-O\+BB の継承関係図\nopagebreak
+O\+BB 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=184pt]{class_o_b_b__inherit__graph}
+\includegraphics[width=350pt]{class_o_b_b__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_o_b_b_ae2e378f96e4b3899e133ce50b91155a8}{getp\+Position}} ()
-\begin{DoxyCompactList}\small\item\em 座標ポインタ取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_o_b_b_a831280fe9affdea9bd5c4c6f28d4a9cc}{getp\+Length}} ()
-\begin{DoxyCompactList}\small\item\em 各辺のポインタ取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_axis_vector}{Axis\+Vector}} $\ast$ \mbox{\hyperlink{class_o_b_b_a19f4a5e3a412d748cc49f47e1f66faab}{getp\+Axis\+Vector}} ()
-\begin{DoxyCompactList}\small\item\em 軸ベクトルポインタ取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_a7879aad21978ea9dfc5f50a608349b27}{get\+Right\+Vector}} ()
-\begin{DoxyCompactList}\small\item\em 右ベクトル取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_a73da06fa4dbebb2b59dc3168971c8d5d}{get\+Up\+Vector}} ()
-\begin{DoxyCompactList}\small\item\em 上ベクトル取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_a4d839b676caebf6ba4361bb9166e97d3}{get\+Forward\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em 座標取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_axis}{Axis}} $\ast$ \mbox{\hyperlink{class_o_b_b_a4a9ca4f8a93f761eef0b75709a8903a2}{getp\+Axis}} ()
+\begin{DoxyCompactList}\small\item\em 軸取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_b_b_a72a04d773f08608f2cd3542f505dee94}{set\+Axis}} (\mbox{\hyperlink{class_axis}{Axis}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 軸設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_o_b_b_a57d13d599712dae38ae6bad1ee564541}{getp\+Forward}} ()
 \begin{DoxyCompactList}\small\item\em 前ベクトル取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_ab0452e841ab2c1362b2e6365b27cea97}{get\+Right\+Vector\+Half}} ()
-\begin{DoxyCompactList}\small\item\em 右ベクトルの半分取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_a510542bc5071eb9bd174d69ffa64f023}{get\+Up\+Vector\+Half}} ()
-\begin{DoxyCompactList}\small\item\em 上ベクトルの半分取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_a00b6038bdcc374d3acd9ef4d002b59d0}{get\+Forward\+Vector\+Half}} ()
-\begin{DoxyCompactList}\small\item\em 前ベクトルの半分取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_o_b_b_af752af068c6fc1787f06556b6a71c929}{O\+BB}} ()
-\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_b_b_add9c062d91d4226f7cabf484e104d259}{set\+Forward}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} value)
+\begin{DoxyCompactList}\small\item\em 前ベクトル設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_o_b_b_ac955d385e7348aae70f3bb2d3c6a48e9}{getp\+Up}} ()
+\begin{DoxyCompactList}\small\item\em 上ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_o_b_b_a37cef2f1f73bd19c417fead561ec6bf0}{getp\+Right}} ()
+\begin{DoxyCompactList}\small\item\em 右ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_o_b_b_a831280fe9affdea9bd5c4c6f28d4a9cc}{getp\+Length}} ()
+\begin{DoxyCompactList}\small\item\em 各辺の取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_ac2cdb5afcc71053f5e6275bac95920bc}{get\+Right\+Length\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em 右長さベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_a9c08e8f3b799170efd244b4e700482c2}{get\+Up\+Length\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em 上長さベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_a94b2f93f025e4684c414c7fa1d0447ee}{get\+Forward\+Length\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em 前長さベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_a9603eb8bafea12e725a99e1a0c5b8464}{get\+Right\+Length\+Vector\+Half}} ()
+\begin{DoxyCompactList}\small\item\em 右長さベクトルの半分取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_a570ab6551e9995c67db27fe85b081611}{get\+Up\+Length\+Vector\+Half}} ()
+\begin{DoxyCompactList}\small\item\em 上長さベクトルの半分取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_a08f76bee35b5b5bac44432ccc9571b33}{get\+Forward\+Length\+Vector\+Half}} ()
+\begin{DoxyCompactList}\small\item\em 前長さベクトルの半分取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane}{Plane}} $\ast$ \mbox{\hyperlink{class_o_b_b_a1298de54379efa036a1b85bbec1be814}{getp\+Plane\+Right}} ()
+\begin{DoxyCompactList}\small\item\em 右方向平面取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane}{Plane}} $\ast$ \mbox{\hyperlink{class_o_b_b_a99c9311cfe163c7691852af267f28b79}{getp\+Plane\+Up}} ()
+\begin{DoxyCompactList}\small\item\em 上方向平面取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane}{Plane}} $\ast$ \mbox{\hyperlink{class_o_b_b_abd61bbe178f1331e4ed4eaef760b6c7a}{getp\+Plane\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em 前方向平面取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane}{Plane}} $\ast$ \mbox{\hyperlink{class_o_b_b_ae00c6a4fc8db4f51358d38b5c2a65a46}{getp\+Plane\+Inverse\+Right}} ()
+\begin{DoxyCompactList}\small\item\em 逆右方向平面取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane}{Plane}} $\ast$ \mbox{\hyperlink{class_o_b_b_a77460cf252dfd060d4376451b6f1ad1e}{getp\+Plane\+Inverse\+Up}} ()
+\begin{DoxyCompactList}\small\item\em 逆上方向平面取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane}{Plane}} $\ast$ \mbox{\hyperlink{class_o_b_b_a276db72b9b373f2fe15be1113c048fb2}{getp\+Plane\+Inverse\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em 逆前方向平面取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_b_b_aa95ab77e0c88faf68db43ed7f6b0ea5a}{$\sim$\+O\+BB}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_o_b_b_ae5d7ba6a226b2da4271ffd16d478d800}{Init}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} position, \mbox{\hyperlink{class_vector3_d}{Vector3D}} length)
-\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_b_b_af9b3e9a2d810f5b37cf849a3804d7bc7}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_b_b_a5e298111d87b16034c6d0f3753ee8eb9}{Rotation\+AxisX}} (float radian)
+\begin{DoxyCompactList}\small\item\em X軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_b_b_a8add6096a19079f1eb89d881d5dd355b}{Rotation\+AxisY}} (float radian)
+\begin{DoxyCompactList}\small\item\em Y軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_b_b_a364e56977bd0bd6a9f1e62ea700dfc09}{Rotation\+AxisZ}} (float radian)
+\begin{DoxyCompactList}\small\item\em Z軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_b_b_ae89c47a2d25ac3637cd8cc85fcb69413}{Rotation\+Axis\+Forward}} (float radian)
+\begin{DoxyCompactList}\small\item\em 前ベクトル軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_b_b_ab0919b09423e3761a5a804a12d71580d}{Rotation\+Axis\+Up}} (float radian)
+\begin{DoxyCompactList}\small\item\em 上ベクトル軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_b_b_a09c39baa440c9cb9f10af2abc92e9e71}{Rotation\+Axis\+Right}} (float radian)
+\begin{DoxyCompactList}\small\item\em 右ベクトル軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_b_b_a3a3470e7813457b75948626d4a24e8e0}{Rotation\+Axis\+Any}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} axis, float radian)
+\begin{DoxyCompactList}\small\item\em 任意軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_b_b_ab08a8afd6b8d5c140e25d6f9665c9bf5}{Rotation\+Matrix}} (\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$matrix)
+\begin{DoxyCompactList}\small\item\em 行列回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_b_b_a1501af5476ba75dbc4a85b4746352326}{Rotation\+Quaternion}} (\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$quaternion)
+\begin{DoxyCompactList}\small\item\em クォータニオン回転回転関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_o_b_b_a638080ada1be9bef353359358dba23bc}{Calculation\+Min\+And\+Max}} () override
+\begin{DoxyCompactList}\small\item\em 最小値と最大値算出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_b_b_ac3f9bb13d4d941435bf53b3e2b070431}{Calculation\+Plane}} ()
+\begin{DoxyCompactList}\small\item\em 平面算出関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,10 +99,25 @@ void \mbox{\hyperlink{class_o_b_b_ae5d7ba6a226b2da4271ffd16d478d800}{Init}} (\mb
 \begin{DoxyCompactList}\small\item\em 座標 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_a04dc4d7036d26215f9c33a7cad633947}{length\+\_\+}}
 \begin{DoxyCompactList}\small\item\em 各辺の長さ \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_axis_vector}{Axis\+Vector}} \mbox{\hyperlink{class_o_b_b_ab002fad8cf0a9a08fc50407dc849aab1}{axis\+\_\+}}
+\mbox{\hyperlink{class_axis}{Axis}} \mbox{\hyperlink{class_o_b_b_ab8d2349b189dd942a55e49a61fc10809}{axis\+\_\+}}
 \begin{DoxyCompactList}\small\item\em 軸ベクトル \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_o_b_b_ae2bb48bafa38fdf30f0e383da193152c}{math\+\_\+vector\+\_\+}}
-\begin{DoxyCompactList}\small\item\em 計算用ベクトル \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_plane}{Plane}} \mbox{\hyperlink{class_o_b_b_a349ccbb93fc24f5e43761848550143eb}{plane\+\_\+right\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 右方向平面 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane}{Plane}} \mbox{\hyperlink{class_o_b_b_a0105639f79e695f0510b2b097df78b18}{plane\+\_\+up\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 上方向平面 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane}{Plane}} \mbox{\hyperlink{class_o_b_b_a6fe78664c499603f588bd095938593fe}{plane\+\_\+forward\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 前方向平面 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane}{Plane}} \mbox{\hyperlink{class_o_b_b_ad9e12a6f33e83e29f1cbe440dbcc07cb}{plane\+\_\+inverse\+\_\+right\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 逆右方向平面 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane}{Plane}} \mbox{\hyperlink{class_o_b_b_a8c2a3115a77a13ab42e802a0aa2b1d46}{plane\+\_\+inverse\+\_\+up\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 逆上方向平面 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane}{Plane}} \mbox{\hyperlink{class_o_b_b_a67a81b0cc4d008b029b885364a1beb28}{plane\+\_\+inverse\+\_\+forward\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 逆前方向平面 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_o_b_b_a1ca2ca983bccd4a2789519a44b71ceaf}{M\+A\+X\+\_\+\+P\+O\+I\+N\+T\+\_\+\+N\+UM}} = 8
+\begin{DoxyCompactList}\small\item\em 最大点数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{その他の継承メンバ}
 
 
@@ -62,20 +126,20 @@ O\+B\+B\+Class
 
 O\+B\+Bの\+Class 
 
- O\+B\+B.\+h の 27 行目に定義があります。
+ O\+B\+B.\+h の 25 行目に定義があります。
 
 
 
 \subsection{構築子と解体子}
-\mbox{\Hypertarget{class_o_b_b_af752af068c6fc1787f06556b6a71c929}\label{class_o_b_b_af752af068c6fc1787f06556b6a71c929}} 
-\index{O\+BB@{O\+BB}!O\+BB@{O\+BB}}
-\index{O\+BB@{O\+BB}!O\+BB@{O\+BB}}
-\subsubsection{\texorpdfstring{O\+B\+B()}{OBB()}}
-{\footnotesize\ttfamily O\+B\+B\+::\+O\+BB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_o_b_b_aa95ab77e0c88faf68db43ed7f6b0ea5a}\label{class_o_b_b_aa95ab77e0c88faf68db43ed7f6b0ea5a}} 
+\index{O\+BB@{O\+BB}!````~O\+BB@{$\sim$\+O\+BB}}
+\index{````~O\+BB@{$\sim$\+O\+BB}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{$\sim$\+O\+B\+B()}{~OBB()}}
+{\footnotesize\ttfamily O\+B\+B\+::$\sim$\+O\+BB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-コンストラクタ 
+デストラクタ 
 
 
 \begin{DoxyParams}{引数}
@@ -84,16 +148,140 @@ O\+B\+Bの\+Class
 \end{DoxyParams}
 
 
- O\+B\+B.\+cpp の 92 行目に定義があります。
+ O\+B\+B.\+cpp の 169 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_o_b_b_a4d839b676caebf6ba4361bb9166e97d3}\label{class_o_b_b_a4d839b676caebf6ba4361bb9166e97d3}} 
-\index{O\+BB@{O\+BB}!get\+Forward\+Vector@{get\+Forward\+Vector}}
-\index{get\+Forward\+Vector@{get\+Forward\+Vector}!O\+BB@{O\+BB}}
-\subsubsection{\texorpdfstring{get\+Forward\+Vector()}{getForwardVector()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} O\+B\+B\+::get\+Forward\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_o_b_b_a638080ada1be9bef353359358dba23bc}\label{class_o_b_b_a638080ada1be9bef353359358dba23bc}} 
+\index{O\+BB@{O\+BB}!Calculation\+Min\+And\+Max@{Calculation\+Min\+And\+Max}}
+\index{Calculation\+Min\+And\+Max@{Calculation\+Min\+And\+Max}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{Calculation\+Min\+And\+Max()}{CalculationMinAndMax()}}
+{\footnotesize\ttfamily void O\+B\+B\+::\+Calculation\+Min\+And\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+最小値と最大値算出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_shape_base_ad227c2f83038d7c05bc6b1d510cb4000}{Collision\+Shape\+Base}}を実装しています。
+
+
+
+ O\+B\+B.\+cpp の 263 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_ac3f9bb13d4d941435bf53b3e2b070431}\label{class_o_b_b_ac3f9bb13d4d941435bf53b3e2b070431}} 
+\index{O\+BB@{O\+BB}!Calculation\+Plane@{Calculation\+Plane}}
+\index{Calculation\+Plane@{Calculation\+Plane}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{Calculation\+Plane()}{CalculationPlane()}}
+{\footnotesize\ttfamily void O\+B\+B\+::\+Calculation\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+平面算出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 293 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a94b2f93f025e4684c414c7fa1d0447ee}\label{class_o_b_b_a94b2f93f025e4684c414c7fa1d0447ee}} 
+\index{O\+BB@{O\+BB}!get\+Forward\+Length\+Vector@{get\+Forward\+Length\+Vector}}
+\index{get\+Forward\+Length\+Vector@{get\+Forward\+Length\+Vector}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{get\+Forward\+Length\+Vector()}{getForwardLengthVector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} O\+B\+B\+::get\+Forward\+Length\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+前長さベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 前長さベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 94 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a08f76bee35b5b5bac44432ccc9571b33}\label{class_o_b_b_a08f76bee35b5b5bac44432ccc9571b33}} 
+\index{O\+BB@{O\+BB}!get\+Forward\+Length\+Vector\+Half@{get\+Forward\+Length\+Vector\+Half}}
+\index{get\+Forward\+Length\+Vector\+Half@{get\+Forward\+Length\+Vector\+Half}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{get\+Forward\+Length\+Vector\+Half()}{getForwardLengthVectorHalf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} O\+B\+B\+::get\+Forward\+Length\+Vector\+Half (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+前長さベクトルの半分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 前長さベクトルの半分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 117 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a4a9ca4f8a93f761eef0b75709a8903a2}\label{class_o_b_b_a4a9ca4f8a93f761eef0b75709a8903a2}} 
+\index{O\+BB@{O\+BB}!getp\+Axis@{getp\+Axis}}
+\index{getp\+Axis@{getp\+Axis}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{getp\+Axis()}{getpAxis()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_axis}{Axis}} $\ast$ O\+B\+B\+::getp\+Axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+軸取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Axis$\ast$} & 軸 \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a57d13d599712dae38ae6bad1ee564541}\label{class_o_b_b_a57d13d599712dae38ae6bad1ee564541}} 
+\index{O\+BB@{O\+BB}!getp\+Forward@{getp\+Forward}}
+\index{getp\+Forward@{getp\+Forward}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{getp\+Forward()}{getpForward()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ O\+B\+B\+::getp\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -106,60 +294,12 @@ O\+B\+Bの\+Class
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 前ベクトル \\
+{\em Vector3\+D$\ast$} & 前ベクトル \\
 \hline
 \end{DoxyRetVals}
 
 
- O\+B\+B.\+cpp の 59 行目に定義があります。
-
-\mbox{\Hypertarget{class_o_b_b_a00b6038bdcc374d3acd9ef4d002b59d0}\label{class_o_b_b_a00b6038bdcc374d3acd9ef4d002b59d0}} 
-\index{O\+BB@{O\+BB}!get\+Forward\+Vector\+Half@{get\+Forward\+Vector\+Half}}
-\index{get\+Forward\+Vector\+Half@{get\+Forward\+Vector\+Half}!O\+BB@{O\+BB}}
-\subsubsection{\texorpdfstring{get\+Forward\+Vector\+Half()}{getForwardVectorHalf()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} O\+B\+B\+::get\+Forward\+Vector\+Half (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-前ベクトルの半分取得関数 
-
-
-\begin{DoxyParams}{引数}
-{\em void} & なし \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyRetVals}{戻り値}
-{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 前ベクトルの半分 \\
-\hline
-\end{DoxyRetVals}
-
-
- O\+B\+B.\+cpp の 82 行目に定義があります。
-
-\mbox{\Hypertarget{class_o_b_b_a19f4a5e3a412d748cc49f47e1f66faab}\label{class_o_b_b_a19f4a5e3a412d748cc49f47e1f66faab}} 
-\index{O\+BB@{O\+BB}!getp\+Axis\+Vector@{getp\+Axis\+Vector}}
-\index{getp\+Axis\+Vector@{getp\+Axis\+Vector}!O\+BB@{O\+BB}}
-\subsubsection{\texorpdfstring{getp\+Axis\+Vector()}{getpAxisVector()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_axis_vector}{Axis\+Vector}} $\ast$ O\+B\+B\+::getp\+Axis\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-軸ベクトルポインタ取得関数 
-
-
-\begin{DoxyParams}{引数}
-{\em void} & なし \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyRetVals}{戻り値}
-{\em Vector3\+D$\ast$} & 軸ベクトルポインタ \\
-\hline
-\end{DoxyRetVals}
-
-
- O\+B\+B.\+cpp の 34 行目に定義があります。
+ O\+B\+B.\+cpp の 41 行目に定義があります。
 
 \mbox{\Hypertarget{class_o_b_b_a831280fe9affdea9bd5c4c6f28d4a9cc}\label{class_o_b_b_a831280fe9affdea9bd5c4c6f28d4a9cc}} 
 \index{O\+BB@{O\+BB}!getp\+Length@{getp\+Length}}
@@ -169,7 +309,7 @@ O\+B\+Bの\+Class
 
 
 
-各辺のポインタ取得関数 
+各辺の取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -178,12 +318,156 @@ O\+B\+Bの\+Class
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Vector3\+D$\ast$} & 各辺の長さポインタ \\
+{\em Vector3\+D$\ast$} & 各辺の長さ \\
 \hline
 \end{DoxyRetVals}
 
 
- O\+B\+B.\+cpp の 27 行目に定義があります。
+ O\+B\+B.\+cpp の 69 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_abd61bbe178f1331e4ed4eaef760b6c7a}\label{class_o_b_b_abd61bbe178f1331e4ed4eaef760b6c7a}} 
+\index{O\+BB@{O\+BB}!getp\+Plane\+Forward@{getp\+Plane\+Forward}}
+\index{getp\+Plane\+Forward@{getp\+Plane\+Forward}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{getp\+Plane\+Forward()}{getpPlaneForward()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} $\ast$ O\+B\+B\+::getp\+Plane\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+前方向平面取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Plane$\ast$} & 前方向平面 \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 138 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a276db72b9b373f2fe15be1113c048fb2}\label{class_o_b_b_a276db72b9b373f2fe15be1113c048fb2}} 
+\index{O\+BB@{O\+BB}!getp\+Plane\+Inverse\+Forward@{getp\+Plane\+Inverse\+Forward}}
+\index{getp\+Plane\+Inverse\+Forward@{getp\+Plane\+Inverse\+Forward}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{getp\+Plane\+Inverse\+Forward()}{getpPlaneInverseForward()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} $\ast$ O\+B\+B\+::getp\+Plane\+Inverse\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+逆前方向平面取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Plane$\ast$} & 逆前方向平面 \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 159 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_ae00c6a4fc8db4f51358d38b5c2a65a46}\label{class_o_b_b_ae00c6a4fc8db4f51358d38b5c2a65a46}} 
+\index{O\+BB@{O\+BB}!getp\+Plane\+Inverse\+Right@{getp\+Plane\+Inverse\+Right}}
+\index{getp\+Plane\+Inverse\+Right@{getp\+Plane\+Inverse\+Right}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{getp\+Plane\+Inverse\+Right()}{getpPlaneInverseRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} $\ast$ O\+B\+B\+::getp\+Plane\+Inverse\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+逆右方向平面取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Plane$\ast$} & 逆右方向平面 \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 145 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a77460cf252dfd060d4376451b6f1ad1e}\label{class_o_b_b_a77460cf252dfd060d4376451b6f1ad1e}} 
+\index{O\+BB@{O\+BB}!getp\+Plane\+Inverse\+Up@{getp\+Plane\+Inverse\+Up}}
+\index{getp\+Plane\+Inverse\+Up@{getp\+Plane\+Inverse\+Up}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{getp\+Plane\+Inverse\+Up()}{getpPlaneInverseUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} $\ast$ O\+B\+B\+::getp\+Plane\+Inverse\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+逆上方向平面取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Plane$\ast$} & 逆上方向平面 \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 152 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a1298de54379efa036a1b85bbec1be814}\label{class_o_b_b_a1298de54379efa036a1b85bbec1be814}} 
+\index{O\+BB@{O\+BB}!getp\+Plane\+Right@{getp\+Plane\+Right}}
+\index{getp\+Plane\+Right@{getp\+Plane\+Right}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{getp\+Plane\+Right()}{getpPlaneRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} $\ast$ O\+B\+B\+::getp\+Plane\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+右方向平面取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Plane$\ast$} & 右方向平面 \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 124 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a99c9311cfe163c7691852af267f28b79}\label{class_o_b_b_a99c9311cfe163c7691852af267f28b79}} 
+\index{O\+BB@{O\+BB}!getp\+Plane\+Up@{getp\+Plane\+Up}}
+\index{getp\+Plane\+Up@{getp\+Plane\+Up}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{getp\+Plane\+Up()}{getpPlaneUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} $\ast$ O\+B\+B\+::getp\+Plane\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+上方向平面取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Plane$\ast$} & 上方向平面 \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 131 行目に定義があります。
 
 \mbox{\Hypertarget{class_o_b_b_ae2e378f96e4b3899e133ce50b91155a8}\label{class_o_b_b_ae2e378f96e4b3899e133ce50b91155a8}} 
 \index{O\+BB@{O\+BB}!getp\+Position@{getp\+Position}}
@@ -193,7 +477,7 @@ O\+B\+Bの\+Class
 
 
 
-座標ポインタ取得関数 
+座標取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -202,18 +486,18 @@ O\+B\+Bの\+Class
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Vector3\+D$\ast$} & 座標ポインタ \\
+{\em Vector3\+D$\ast$} & 座標 \\
 \hline
 \end{DoxyRetVals}
 
 
  O\+B\+B.\+cpp の 20 行目に定義があります。
 
-\mbox{\Hypertarget{class_o_b_b_a7879aad21978ea9dfc5f50a608349b27}\label{class_o_b_b_a7879aad21978ea9dfc5f50a608349b27}} 
-\index{O\+BB@{O\+BB}!get\+Right\+Vector@{get\+Right\+Vector}}
-\index{get\+Right\+Vector@{get\+Right\+Vector}!O\+BB@{O\+BB}}
-\subsubsection{\texorpdfstring{get\+Right\+Vector()}{getRightVector()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} O\+B\+B\+::get\+Right\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_o_b_b_a37cef2f1f73bd19c417fead561ec6bf0}\label{class_o_b_b_a37cef2f1f73bd19c417fead561ec6bf0}} 
+\index{O\+BB@{O\+BB}!getp\+Right@{getp\+Right}}
+\index{getp\+Right@{getp\+Right}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{getp\+Right()}{getpRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ O\+B\+B\+::getp\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -226,42 +510,18 @@ O\+B\+Bの\+Class
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 右ベクトル \\
+{\em Vector3\+D$\ast$} & 右ベクトル \\
 \hline
 \end{DoxyRetVals}
 
 
- O\+B\+B.\+cpp の 41 行目に定義があります。
+ O\+B\+B.\+cpp の 62 行目に定義があります。
 
-\mbox{\Hypertarget{class_o_b_b_ab0452e841ab2c1362b2e6365b27cea97}\label{class_o_b_b_ab0452e841ab2c1362b2e6365b27cea97}} 
-\index{O\+BB@{O\+BB}!get\+Right\+Vector\+Half@{get\+Right\+Vector\+Half}}
-\index{get\+Right\+Vector\+Half@{get\+Right\+Vector\+Half}!O\+BB@{O\+BB}}
-\subsubsection{\texorpdfstring{get\+Right\+Vector\+Half()}{getRightVectorHalf()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} O\+B\+B\+::get\+Right\+Vector\+Half (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-右ベクトルの半分取得関数 
-
-
-\begin{DoxyParams}{引数}
-{\em void} & なし \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyRetVals}{戻り値}
-{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 右ベクトルの半分 \\
-\hline
-\end{DoxyRetVals}
-
-
- O\+B\+B.\+cpp の 68 行目に定義があります。
-
-\mbox{\Hypertarget{class_o_b_b_a73da06fa4dbebb2b59dc3168971c8d5d}\label{class_o_b_b_a73da06fa4dbebb2b59dc3168971c8d5d}} 
-\index{O\+BB@{O\+BB}!get\+Up\+Vector@{get\+Up\+Vector}}
-\index{get\+Up\+Vector@{get\+Up\+Vector}!O\+BB@{O\+BB}}
-\subsubsection{\texorpdfstring{get\+Up\+Vector()}{getUpVector()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} O\+B\+B\+::get\+Up\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_o_b_b_ac955d385e7348aae70f3bb2d3c6a48e9}\label{class_o_b_b_ac955d385e7348aae70f3bb2d3c6a48e9}} 
+\index{O\+BB@{O\+BB}!getp\+Up@{getp\+Up}}
+\index{getp\+Up@{getp\+Up}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{getp\+Up()}{getpUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ O\+B\+B\+::getp\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -274,22 +534,22 @@ O\+B\+Bの\+Class
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 上ベクトル \\
+{\em Vector3\+D$\ast$} & 上ベクトル \\
 \hline
 \end{DoxyRetVals}
 
 
- O\+B\+B.\+cpp の 50 行目に定義があります。
+ O\+B\+B.\+cpp の 55 行目に定義があります。
 
-\mbox{\Hypertarget{class_o_b_b_a510542bc5071eb9bd174d69ffa64f023}\label{class_o_b_b_a510542bc5071eb9bd174d69ffa64f023}} 
-\index{O\+BB@{O\+BB}!get\+Up\+Vector\+Half@{get\+Up\+Vector\+Half}}
-\index{get\+Up\+Vector\+Half@{get\+Up\+Vector\+Half}!O\+BB@{O\+BB}}
-\subsubsection{\texorpdfstring{get\+Up\+Vector\+Half()}{getUpVectorHalf()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} O\+B\+B\+::get\+Up\+Vector\+Half (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_o_b_b_ac2cdb5afcc71053f5e6275bac95920bc}\label{class_o_b_b_ac2cdb5afcc71053f5e6275bac95920bc}} 
+\index{O\+BB@{O\+BB}!get\+Right\+Length\+Vector@{get\+Right\+Length\+Vector}}
+\index{get\+Right\+Length\+Vector@{get\+Right\+Length\+Vector}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{get\+Right\+Length\+Vector()}{getRightLengthVector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} O\+B\+B\+::get\+Right\+Length\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-上ベクトルの半分取得関数 
+右長さベクトル取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -298,12 +558,84 @@ O\+B\+Bの\+Class
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 上ベクトルの半分 \\
+{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 右長さベクトル \\
 \hline
 \end{DoxyRetVals}
 
 
- O\+B\+B.\+cpp の 75 行目に定義があります。
+ O\+B\+B.\+cpp の 76 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a9603eb8bafea12e725a99e1a0c5b8464}\label{class_o_b_b_a9603eb8bafea12e725a99e1a0c5b8464}} 
+\index{O\+BB@{O\+BB}!get\+Right\+Length\+Vector\+Half@{get\+Right\+Length\+Vector\+Half}}
+\index{get\+Right\+Length\+Vector\+Half@{get\+Right\+Length\+Vector\+Half}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{get\+Right\+Length\+Vector\+Half()}{getRightLengthVectorHalf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} O\+B\+B\+::get\+Right\+Length\+Vector\+Half (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+右長さベクトルの半分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 右長さベクトルの半分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 103 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a9c08e8f3b799170efd244b4e700482c2}\label{class_o_b_b_a9c08e8f3b799170efd244b4e700482c2}} 
+\index{O\+BB@{O\+BB}!get\+Up\+Length\+Vector@{get\+Up\+Length\+Vector}}
+\index{get\+Up\+Length\+Vector@{get\+Up\+Length\+Vector}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{get\+Up\+Length\+Vector()}{getUpLengthVector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} O\+B\+B\+::get\+Up\+Length\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+上長さベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 上長さベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 85 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a570ab6551e9995c67db27fe85b081611}\label{class_o_b_b_a570ab6551e9995c67db27fe85b081611}} 
+\index{O\+BB@{O\+BB}!get\+Up\+Length\+Vector\+Half@{get\+Up\+Length\+Vector\+Half}}
+\index{get\+Up\+Length\+Vector\+Half@{get\+Up\+Length\+Vector\+Half}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{get\+Up\+Length\+Vector\+Half()}{getUpLengthVectorHalf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} O\+B\+B\+::get\+Up\+Length\+Vector\+Half (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+上長さベクトルの半分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 上長さベクトルの半分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 110 行目に定義があります。
 
 \mbox{\Hypertarget{class_o_b_b_ae5d7ba6a226b2da4271ffd16d478d800}\label{class_o_b_b_ae5d7ba6a226b2da4271ffd16d478d800}} 
 \index{O\+BB@{O\+BB}!Init@{Init}}
@@ -316,10 +648,10 @@ O\+B\+Bの\+Class
 初期化関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em position} & 座標 \\
+\begin{DoxyParams}{引数}
+{\em position} & 座標 \\
 \hline
-\mbox{\tt in}  & {\em length} & 各辺の長さ \\
+{\em length} & 各辺の長さ \\
 \hline
 \end{DoxyParams}
 
@@ -329,16 +661,308 @@ O\+B\+Bの\+Class
 \end{DoxyRetVals}
 
 
- O\+B\+B.\+cpp の 99 行目に定義があります。
+ O\+B\+B.\+cpp の 175 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a3a3470e7813457b75948626d4a24e8e0}\label{class_o_b_b_a3a3470e7813457b75948626d4a24e8e0}} 
+\index{O\+BB@{O\+BB}!Rotation\+Axis\+Any@{Rotation\+Axis\+Any}}
+\index{Rotation\+Axis\+Any@{Rotation\+Axis\+Any}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Any()}{RotationAxisAny()}}
+{\footnotesize\ttfamily void O\+B\+B\+::\+Rotation\+Axis\+Any (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{axis,  }\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+任意軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 241 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_ae89c47a2d25ac3637cd8cc85fcb69413}\label{class_o_b_b_ae89c47a2d25ac3637cd8cc85fcb69413}} 
+\index{O\+BB@{O\+BB}!Rotation\+Axis\+Forward@{Rotation\+Axis\+Forward}}
+\index{Rotation\+Axis\+Forward@{Rotation\+Axis\+Forward}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Forward()}{RotationAxisForward()}}
+{\footnotesize\ttfamily void O\+B\+B\+::\+Rotation\+Axis\+Forward (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+前ベクトル軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 220 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a09c39baa440c9cb9f10af2abc92e9e71}\label{class_o_b_b_a09c39baa440c9cb9f10af2abc92e9e71}} 
+\index{O\+BB@{O\+BB}!Rotation\+Axis\+Right@{Rotation\+Axis\+Right}}
+\index{Rotation\+Axis\+Right@{Rotation\+Axis\+Right}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Right()}{RotationAxisRight()}}
+{\footnotesize\ttfamily void O\+B\+B\+::\+Rotation\+Axis\+Right (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+右ベクトル軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 234 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_ab0919b09423e3761a5a804a12d71580d}\label{class_o_b_b_ab0919b09423e3761a5a804a12d71580d}} 
+\index{O\+BB@{O\+BB}!Rotation\+Axis\+Up@{Rotation\+Axis\+Up}}
+\index{Rotation\+Axis\+Up@{Rotation\+Axis\+Up}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Up()}{RotationAxisUp()}}
+{\footnotesize\ttfamily void O\+B\+B\+::\+Rotation\+Axis\+Up (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+上ベクトル軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 227 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a5e298111d87b16034c6d0f3753ee8eb9}\label{class_o_b_b_a5e298111d87b16034c6d0f3753ee8eb9}} 
+\index{O\+BB@{O\+BB}!Rotation\+AxisX@{Rotation\+AxisX}}
+\index{Rotation\+AxisX@{Rotation\+AxisX}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+X()}{RotationAxisX()}}
+{\footnotesize\ttfamily void O\+B\+B\+::\+Rotation\+AxisX (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+X軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 199 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a8add6096a19079f1eb89d881d5dd355b}\label{class_o_b_b_a8add6096a19079f1eb89d881d5dd355b}} 
+\index{O\+BB@{O\+BB}!Rotation\+AxisY@{Rotation\+AxisY}}
+\index{Rotation\+AxisY@{Rotation\+AxisY}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Y()}{RotationAxisY()}}
+{\footnotesize\ttfamily void O\+B\+B\+::\+Rotation\+AxisY (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+Y軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 206 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a364e56977bd0bd6a9f1e62ea700dfc09}\label{class_o_b_b_a364e56977bd0bd6a9f1e62ea700dfc09}} 
+\index{O\+BB@{O\+BB}!Rotation\+AxisZ@{Rotation\+AxisZ}}
+\index{Rotation\+AxisZ@{Rotation\+AxisZ}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Z()}{RotationAxisZ()}}
+{\footnotesize\ttfamily void O\+B\+B\+::\+Rotation\+AxisZ (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+Z軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 213 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_ab08a8afd6b8d5c140e25d6f9665c9bf5}\label{class_o_b_b_ab08a8afd6b8d5c140e25d6f9665c9bf5}} 
+\index{O\+BB@{O\+BB}!Rotation\+Matrix@{Rotation\+Matrix}}
+\index{Rotation\+Matrix@{Rotation\+Matrix}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{Rotation\+Matrix()}{RotationMatrix()}}
+{\footnotesize\ttfamily void O\+B\+B\+::\+Rotation\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$}]{matrix }\end{DoxyParamCaption})}
+
+
+
+行列回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em matrix} & 行列 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 248 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a1501af5476ba75dbc4a85b4746352326}\label{class_o_b_b_a1501af5476ba75dbc4a85b4746352326}} 
+\index{O\+BB@{O\+BB}!Rotation\+Quaternion@{Rotation\+Quaternion}}
+\index{Rotation\+Quaternion@{Rotation\+Quaternion}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{Rotation\+Quaternion()}{RotationQuaternion()}}
+{\footnotesize\ttfamily void O\+B\+B\+::\+Rotation\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$}]{quaternion }\end{DoxyParamCaption})}
+
+
+
+クォータニオン回転回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em quaternion} & クォータニオン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 256 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a72a04d773f08608f2cd3542f505dee94}\label{class_o_b_b_a72a04d773f08608f2cd3542f505dee94}} 
+\index{O\+BB@{O\+BB}!set\+Axis@{set\+Axis}}
+\index{set\+Axis@{set\+Axis}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{set\+Axis()}{setAxis()}}
+{\footnotesize\ttfamily void O\+B\+B\+::set\+Axis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_axis}{Axis}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+軸設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 軸 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_add9c062d91d4226f7cabf484e104d259}\label{class_o_b_b_add9c062d91d4226f7cabf484e104d259}} 
+\index{O\+BB@{O\+BB}!set\+Forward@{set\+Forward}}
+\index{set\+Forward@{set\+Forward}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{set\+Forward()}{setForward()}}
+{\footnotesize\ttfamily void O\+B\+B\+::set\+Forward (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{value }\end{DoxyParamCaption})}
+
+
+
+前ベクトル設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 前ベクトル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ O\+B\+B.\+cpp の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_af9b3e9a2d810f5b37cf849a3804d7bc7}\label{class_o_b_b_af9b3e9a2d810f5b37cf849a3804d7bc7}} 
+\index{O\+BB@{O\+BB}!Update@{Update}}
+\index{Update@{Update}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void O\+B\+B\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_shape_base_a7aaa0f4de4e208f168f78e3445313929}{Collision\+Shape\+Base}}を実装しています。
+
+
+
+ O\+B\+B.\+cpp の 188 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
-\mbox{\Hypertarget{class_o_b_b_ab002fad8cf0a9a08fc50407dc849aab1}\label{class_o_b_b_ab002fad8cf0a9a08fc50407dc849aab1}} 
+\mbox{\Hypertarget{class_o_b_b_ab8d2349b189dd942a55e49a61fc10809}\label{class_o_b_b_ab8d2349b189dd942a55e49a61fc10809}} 
 \index{O\+BB@{O\+BB}!axis\+\_\+@{axis\+\_\+}}
 \index{axis\+\_\+@{axis\+\_\+}!O\+BB@{O\+BB}}
 \subsubsection{\texorpdfstring{axis\+\_\+}{axis\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_axis_vector}{Axis\+Vector}} O\+B\+B\+::axis\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_axis}{Axis}} O\+B\+B\+::axis\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -346,7 +970,7 @@ O\+B\+Bの\+Class
 
 
 
- O\+B\+B.\+h の 35 行目に定義があります。
+ O\+B\+B.\+h の 40 行目に定義があります。
 
 \mbox{\Hypertarget{class_o_b_b_a04dc4d7036d26215f9c33a7cad633947}\label{class_o_b_b_a04dc4d7036d26215f9c33a7cad633947}} 
 \index{O\+BB@{O\+BB}!length\+\_\+@{length\+\_\+}}
@@ -360,21 +984,105 @@ O\+B\+Bの\+Class
 
 
 
- O\+B\+B.\+h の 34 行目に定義があります。
+ O\+B\+B.\+h の 39 行目に定義があります。
 
-\mbox{\Hypertarget{class_o_b_b_ae2bb48bafa38fdf30f0e383da193152c}\label{class_o_b_b_ae2bb48bafa38fdf30f0e383da193152c}} 
-\index{O\+BB@{O\+BB}!math\+\_\+vector\+\_\+@{math\+\_\+vector\+\_\+}}
-\index{math\+\_\+vector\+\_\+@{math\+\_\+vector\+\_\+}!O\+BB@{O\+BB}}
-\subsubsection{\texorpdfstring{math\+\_\+vector\+\_\+}{math\_vector\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} O\+B\+B\+::math\+\_\+vector\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-計算用ベクトル 
+\mbox{\Hypertarget{class_o_b_b_a1ca2ca983bccd4a2789519a44b71ceaf}\label{class_o_b_b_a1ca2ca983bccd4a2789519a44b71ceaf}} 
+\index{O\+BB@{O\+BB}!M\+A\+X\+\_\+\+P\+O\+I\+N\+T\+\_\+\+N\+UM@{M\+A\+X\+\_\+\+P\+O\+I\+N\+T\+\_\+\+N\+UM}}
+\index{M\+A\+X\+\_\+\+P\+O\+I\+N\+T\+\_\+\+N\+UM@{M\+A\+X\+\_\+\+P\+O\+I\+N\+T\+\_\+\+N\+UM}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+P\+O\+I\+N\+T\+\_\+\+N\+UM}{MAX\_POINT\_NUM}}
+{\footnotesize\ttfamily const int O\+B\+B\+::\+M\+A\+X\+\_\+\+P\+O\+I\+N\+T\+\_\+\+N\+UM = 8\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
- O\+B\+B.\+h の 36 行目に定義があります。
+最大点数 
+
+
+
+ O\+B\+B.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a6fe78664c499603f588bd095938593fe}\label{class_o_b_b_a6fe78664c499603f588bd095938593fe}} 
+\index{O\+BB@{O\+BB}!plane\+\_\+forward\+\_\+@{plane\+\_\+forward\+\_\+}}
+\index{plane\+\_\+forward\+\_\+@{plane\+\_\+forward\+\_\+}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{plane\+\_\+forward\+\_\+}{plane\_forward\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} O\+B\+B\+::plane\+\_\+forward\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+前方向平面 
+
+
+
+ O\+B\+B.\+h の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a67a81b0cc4d008b029b885364a1beb28}\label{class_o_b_b_a67a81b0cc4d008b029b885364a1beb28}} 
+\index{O\+BB@{O\+BB}!plane\+\_\+inverse\+\_\+forward\+\_\+@{plane\+\_\+inverse\+\_\+forward\+\_\+}}
+\index{plane\+\_\+inverse\+\_\+forward\+\_\+@{plane\+\_\+inverse\+\_\+forward\+\_\+}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{plane\+\_\+inverse\+\_\+forward\+\_\+}{plane\_inverse\_forward\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} O\+B\+B\+::plane\+\_\+inverse\+\_\+forward\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+逆前方向平面 
+
+
+
+ O\+B\+B.\+h の 46 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_ad9e12a6f33e83e29f1cbe440dbcc07cb}\label{class_o_b_b_ad9e12a6f33e83e29f1cbe440dbcc07cb}} 
+\index{O\+BB@{O\+BB}!plane\+\_\+inverse\+\_\+right\+\_\+@{plane\+\_\+inverse\+\_\+right\+\_\+}}
+\index{plane\+\_\+inverse\+\_\+right\+\_\+@{plane\+\_\+inverse\+\_\+right\+\_\+}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{plane\+\_\+inverse\+\_\+right\+\_\+}{plane\_inverse\_right\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} O\+B\+B\+::plane\+\_\+inverse\+\_\+right\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+逆右方向平面 
+
+
+
+ O\+B\+B.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a8c2a3115a77a13ab42e802a0aa2b1d46}\label{class_o_b_b_a8c2a3115a77a13ab42e802a0aa2b1d46}} 
+\index{O\+BB@{O\+BB}!plane\+\_\+inverse\+\_\+up\+\_\+@{plane\+\_\+inverse\+\_\+up\+\_\+}}
+\index{plane\+\_\+inverse\+\_\+up\+\_\+@{plane\+\_\+inverse\+\_\+up\+\_\+}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{plane\+\_\+inverse\+\_\+up\+\_\+}{plane\_inverse\_up\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} O\+B\+B\+::plane\+\_\+inverse\+\_\+up\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+逆上方向平面 
+
+
+
+ O\+B\+B.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a349ccbb93fc24f5e43761848550143eb}\label{class_o_b_b_a349ccbb93fc24f5e43761848550143eb}} 
+\index{O\+BB@{O\+BB}!plane\+\_\+right\+\_\+@{plane\+\_\+right\+\_\+}}
+\index{plane\+\_\+right\+\_\+@{plane\+\_\+right\+\_\+}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{plane\+\_\+right\+\_\+}{plane\_right\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} O\+B\+B\+::plane\+\_\+right\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+右方向平面 
+
+
+
+ O\+B\+B.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_o_b_b_a0105639f79e695f0510b2b097df78b18}\label{class_o_b_b_a0105639f79e695f0510b2b097df78b18}} 
+\index{O\+BB@{O\+BB}!plane\+\_\+up\+\_\+@{plane\+\_\+up\+\_\+}}
+\index{plane\+\_\+up\+\_\+@{plane\+\_\+up\+\_\+}!O\+BB@{O\+BB}}
+\subsubsection{\texorpdfstring{plane\+\_\+up\+\_\+}{plane\_up\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} O\+B\+B\+::plane\+\_\+up\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+上方向平面 
+
+
+
+ O\+B\+B.\+h の 42 行目に定義があります。
 
 \mbox{\Hypertarget{class_o_b_b_ab05a884fc030d7a3cf7b355880d9194c}\label{class_o_b_b_ab05a884fc030d7a3cf7b355880d9194c}} 
 \index{O\+BB@{O\+BB}!position\+\_\+@{position\+\_\+}}
@@ -388,11 +1096,11 @@ O\+B\+Bの\+Class
 
 
 
- O\+B\+B.\+h の 33 行目に定義があります。
+ O\+B\+B.\+h の 38 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+O\+B\+B/\mbox{\hyperlink{_o_b_b_8h}{O\+B\+B.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+O\+B\+B/\mbox{\hyperlink{_o_b_b_8cpp}{O\+B\+B.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\mbox{\hyperlink{_o_b_b_8h}{O\+B\+B.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\+Source/\mbox{\hyperlink{_o_b_b_8cpp}{O\+B\+B.\+cpp}}\end{DoxyCompactItemize}

@@ -2,59 +2,75 @@
 \label{class_limited_pointer_array}\index{Limited\+Pointer\+Array$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+U\+M $>$@{Limited\+Pointer\+Array$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+U\+M $>$}}
 
 
+有限ポインター配列\+Class(template)  
+
+
+
+
 {\ttfamily \#include $<$Limited\+Pointer\+Array.\+h$>$}
 
+
+
+Limited\+Pointer\+Array$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$ 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{class_limited_pointer_array__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
+Type \mbox{\hyperlink{class_limited_pointer_array_ae331bf4564035b62b9e8f08ff989be54}{get\+Object}} (unsigned index)
+\begin{DoxyCompactList}\small\item\em オブジェクト取得関数 \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_limited_pointer_array_a847bfd3ca0f9fd58de3b0a53848fec75}{get\+End\+Index}} ()
+\begin{DoxyCompactList}\small\item\em 末尾インデックス取得関数 \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_limited_pointer_array_ae56197ccd1db87ce3a8d566918e74b25}{get\+Array\+Num}} ()
+\begin{DoxyCompactList}\small\item\em 配列数取得関数 \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_limited_pointer_array_a827d116137d25f41e2e893ad66b20366}{get\+Index}} (Type object)
+\begin{DoxyCompactList}\small\item\em インデックス取得関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_limited_pointer_array_acab3e47d77fcd7ed7735a735e1aaf8f9}{Limited\+Pointer\+Array}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_limited_pointer_array_a57eb08357204668710021965425f4f46}{Add\+To\+Array}} (Type object)
-\item 
+\begin{DoxyCompactList}\small\item\em 配列に追加関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_limited_pointer_array_a7cf64a1731ab6d0d63182b6c223fae0b}{Overwrite\+Array}} (Type old\+\_\+object, Type new\+\_\+object)
-\item 
+\begin{DoxyCompactList}\small\item\em 配列の上書き関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_limited_pointer_array_a6c46bb77df04a9e1226025f8c48e26cb}{Overwrite\+Array\+And\+Release\+Old\+Object}} (Type old\+\_\+object, Type new\+\_\+object)
-\item 
-void \mbox{\hyperlink{class_limited_pointer_array_ae5a41fe945c1ee5ea73116b823011a8c}{Reset\+Array}} ()
-\item 
-void \mbox{\hyperlink{class_limited_pointer_array_a5e34faa11f4b901153f85428027aa21e}{Release\+Object\+And\+Reset\+Array}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 配列の上書きと解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_limited_pointer_array_a762f1dd92e84cdd1fedbc0e45d72fc3c}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_limited_pointer_array_af93d94163b061eb06337a2ead743d958}{Release\+Object\+And\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em 登録オブジェクトの解放と配列のリセット関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_limited_pointer_array_a02cfaed541d27980883ec9eb90ad3813}{Delete\+From\+Array}} (Type object)
-\item 
-void \mbox{\hyperlink{class_limited_pointer_array_a1093a96cb123b3fed52bdfcea1055f33}{Sort\+Array}} ()
-\item 
-void \mbox{\hyperlink{class_limited_pointer_array_a32dd58543bee490df6dcea079ebe4586}{Delete\+From\+Array\+And\+Sort\+Array}} (Type object)
-\item 
+\begin{DoxyCompactList}\small\item\em 配列から削除関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_limited_pointer_array_ab74449f9eacc2e3df53ab35678f680c5}{Sort}} ()
+\begin{DoxyCompactList}\small\item\em ソート関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_limited_pointer_array_a2265f07827e70c2b154e8af1a4007efd}{Delete\+From\+Array\+And\+Sort}} (Type object)
+\begin{DoxyCompactList}\small\item\em 配列からの削除とソート関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_limited_pointer_array_a0d33dc5dd8ed01bb00accd6378aa1b47}{Sort\+The\+Two\+Object}} (unsigned index0, unsigned index1)
-\item 
-Type \mbox{\hyperlink{class_limited_pointer_array_aae48443929a3766e602eb96f515c3a34}{Get\+Array\+Object}} (unsigned index)
-\item 
-unsigned \mbox{\hyperlink{class_limited_pointer_array_a4c070b87cde4d2ea173aa28918af6223}{Get\+End\+Pointer}} ()
-\item 
-unsigned \mbox{\hyperlink{class_limited_pointer_array_a404c188412a49f58ecacabd41c974de2}{Get\+Array\+Num}} ()
-\item 
-unsigned \mbox{\hyperlink{class_limited_pointer_array_a2b9d42b57662f29f357b2faf1793aa66}{Get\+Index\+Num}} (Type object)
-\item 
+\begin{DoxyCompactList}\small\item\em 配列の2つのオブジェクトを並び替え関数 \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_limited_pointer_array_a8bd3a7ea969f307c35934a1bf2803b40}{Is\+Max}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 登録数が最大か判定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 Type \mbox{\hyperlink{class_limited_pointer_array_a80e958d7818fc6ee0e757b56abc937a4}{array\+\_\+}} \mbox{[}A\+R\+R\+A\+Y\+\_\+\+N\+UM\mbox{]}
-\item 
-unsigned \mbox{\hyperlink{class_limited_pointer_array_a7da38a8f2ea9a4b030f64f0e8adc27e8}{end\+\_\+pointer\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 配列 \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_limited_pointer_array_a43624d44d694257ed3f1a49b74b543a3}{end\+\_\+index\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em 末尾インデックス \end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ Type, unsigned $>$ \mbox{\hyperlink{class_limited_pointer_array_a4f3ca120f5fc23ee3db798cb701d61a0}{registration\+\_\+map\+\_\+}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 登録マップ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
 \subsubsection*{template$<$class Type, unsigned A\+R\+R\+A\+Y\+\_\+\+N\+UM = 100000$>$\newline
 class Limited\+Pointer\+Array$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+U\+M $>$}
 
+有限ポインター配列\+Class(template) 
 
+有限数のポインターを確保した配列\+Class(template) 
 
- Limited\+Pointer\+Array.\+h の 33 行目に定義があります。
+ Limited\+Pointer\+Array.\+h の 18 行目に定義があります。
 
 
 
@@ -68,7 +84,21 @@ class Limited\+Pointer\+Array$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+U\+M $>$}
 
 
 
- Limited\+Pointer\+Array.\+h の 38 行目に定義があります。
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 95 行目に定義があります。
 
 
 
@@ -82,7 +112,21 @@ void \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ 
 
 
 
- Limited\+Pointer\+Array.\+h の 56 行目に定義があります。
+配列に追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object} & 追加オブジェクト \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 113 行目に定義があります。
 
 \mbox{\Hypertarget{class_limited_pointer_array_a02cfaed541d27980883ec9eb90ad3813}\label{class_limited_pointer_array_a02cfaed541d27980883ec9eb90ad3813}} 
 \index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Delete\+From\+Array@{Delete\+From\+Array}}
@@ -93,62 +137,146 @@ void \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ 
 
 
 
- Limited\+Pointer\+Array.\+h の 167 行目に定義があります。
+配列から削除関数 
 
-\mbox{\Hypertarget{class_limited_pointer_array_a32dd58543bee490df6dcea079ebe4586}\label{class_limited_pointer_array_a32dd58543bee490df6dcea079ebe4586}} 
-\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Delete\+From\+Array\+And\+Sort\+Array@{Delete\+From\+Array\+And\+Sort\+Array}}
-\index{Delete\+From\+Array\+And\+Sort\+Array@{Delete\+From\+Array\+And\+Sort\+Array}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
-\subsubsection{\texorpdfstring{Delete\+From\+Array\+And\+Sort\+Array()}{DeleteFromArrayAndSortArray()}}
+
+\begin{DoxyParams}{引数}
+{\em object} & 削除オブジェクト \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 245 行目に定義があります。
+
+\mbox{\Hypertarget{class_limited_pointer_array_a2265f07827e70c2b154e8af1a4007efd}\label{class_limited_pointer_array_a2265f07827e70c2b154e8af1a4007efd}} 
+\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Delete\+From\+Array\+And\+Sort@{Delete\+From\+Array\+And\+Sort}}
+\index{Delete\+From\+Array\+And\+Sort@{Delete\+From\+Array\+And\+Sort}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
+\subsubsection{\texorpdfstring{Delete\+From\+Array\+And\+Sort()}{DeleteFromArrayAndSort()}}
 {\footnotesize\ttfamily template$<$class Type, unsigned A\+R\+R\+A\+Y\+\_\+\+N\+UM = 100000$>$ \\
-void \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::Delete\+From\+Array\+And\+Sort\+Array (\begin{DoxyParamCaption}\item[{Type}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::Delete\+From\+Array\+And\+Sort (\begin{DoxyParamCaption}\item[{Type}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
- Limited\+Pointer\+Array.\+h の 208 行目に定義があります。
+配列からの削除とソート関数 
 
-\mbox{\Hypertarget{class_limited_pointer_array_a404c188412a49f58ecacabd41c974de2}\label{class_limited_pointer_array_a404c188412a49f58ecacabd41c974de2}} 
-\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Get\+Array\+Num@{Get\+Array\+Num}}
-\index{Get\+Array\+Num@{Get\+Array\+Num}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
-\subsubsection{\texorpdfstring{Get\+Array\+Num()}{GetArrayNum()}}
+
+\begin{DoxyParams}{引数}
+{\em object} & 削除オブジェクト \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 296 行目に定義があります。
+
+\mbox{\Hypertarget{class_limited_pointer_array_ae56197ccd1db87ce3a8d566918e74b25}\label{class_limited_pointer_array_ae56197ccd1db87ce3a8d566918e74b25}} 
+\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!get\+Array\+Num@{get\+Array\+Num}}
+\index{get\+Array\+Num@{get\+Array\+Num}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
+\subsubsection{\texorpdfstring{get\+Array\+Num()}{getArrayNum()}}
 {\footnotesize\ttfamily template$<$class Type, unsigned A\+R\+R\+A\+Y\+\_\+\+N\+UM = 100000$>$ \\
-unsigned \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::Get\+Array\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+unsigned \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::get\+Array\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
- Limited\+Pointer\+Array.\+h の 282 行目に定義があります。
+配列数取得関数 
 
-\mbox{\Hypertarget{class_limited_pointer_array_aae48443929a3766e602eb96f515c3a34}\label{class_limited_pointer_array_aae48443929a3766e602eb96f515c3a34}} 
-\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Get\+Array\+Object@{Get\+Array\+Object}}
-\index{Get\+Array\+Object@{Get\+Array\+Object}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
-\subsubsection{\texorpdfstring{Get\+Array\+Object()}{GetArrayObject()}}
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 61 行目に定義があります。
+
+\mbox{\Hypertarget{class_limited_pointer_array_a847bfd3ca0f9fd58de3b0a53848fec75}\label{class_limited_pointer_array_a847bfd3ca0f9fd58de3b0a53848fec75}} 
+\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!get\+End\+Index@{get\+End\+Index}}
+\index{get\+End\+Index@{get\+End\+Index}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
+\subsubsection{\texorpdfstring{get\+End\+Index()}{getEndIndex()}}
 {\footnotesize\ttfamily template$<$class Type, unsigned A\+R\+R\+A\+Y\+\_\+\+N\+UM = 100000$>$ \\
-Type \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::Get\+Array\+Object (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+unsigned \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::get\+End\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
- Limited\+Pointer\+Array.\+h の 268 行目に定義があります。
+末尾インデックス取得関数 
 
-\mbox{\Hypertarget{class_limited_pointer_array_a4c070b87cde4d2ea173aa28918af6223}\label{class_limited_pointer_array_a4c070b87cde4d2ea173aa28918af6223}} 
-\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Get\+End\+Pointer@{Get\+End\+Pointer}}
-\index{Get\+End\+Pointer@{Get\+End\+Pointer}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
-\subsubsection{\texorpdfstring{Get\+End\+Pointer()}{GetEndPointer()}}
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_limited_pointer_array_a827d116137d25f41e2e893ad66b20366}\label{class_limited_pointer_array_a827d116137d25f41e2e893ad66b20366}} 
+\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!get\+Index@{get\+Index}}
+\index{get\+Index@{get\+Index}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
+\subsubsection{\texorpdfstring{get\+Index()}{getIndex()}}
 {\footnotesize\ttfamily template$<$class Type, unsigned A\+R\+R\+A\+Y\+\_\+\+N\+UM = 100000$>$ \\
-unsigned \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::Get\+End\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+unsigned \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::get\+Index (\begin{DoxyParamCaption}\item[{Type}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
- Limited\+Pointer\+Array.\+h の 276 行目に定義があります。
+インデックス取得関数 
 
-\mbox{\Hypertarget{class_limited_pointer_array_a2b9d42b57662f29f357b2faf1793aa66}\label{class_limited_pointer_array_a2b9d42b57662f29f357b2faf1793aa66}} 
-\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Get\+Index\+Num@{Get\+Index\+Num}}
-\index{Get\+Index\+Num@{Get\+Index\+Num}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
-\subsubsection{\texorpdfstring{Get\+Index\+Num()}{GetIndexNum()}}
+
+\begin{DoxyParams}{引数}
+{\em object} & オブジェクト \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 72 行目に定義があります。
+
+\mbox{\Hypertarget{class_limited_pointer_array_ae331bf4564035b62b9e8f08ff989be54}\label{class_limited_pointer_array_ae331bf4564035b62b9e8f08ff989be54}} 
+\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!get\+Object@{get\+Object}}
+\index{get\+Object@{get\+Object}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
+\subsubsection{\texorpdfstring{get\+Object()}{getObject()}}
 {\footnotesize\ttfamily template$<$class Type, unsigned A\+R\+R\+A\+Y\+\_\+\+N\+UM = 100000$>$ \\
-unsigned \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::Get\+Index\+Num (\begin{DoxyParamCaption}\item[{Type}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+Type \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::get\+Object (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
- Limited\+Pointer\+Array.\+h の 288 行目に定義があります。
+オブジェクト取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 39 行目に定義があります。
 
 \mbox{\Hypertarget{class_limited_pointer_array_a8bd3a7ea969f307c35934a1bf2803b40}\label{class_limited_pointer_array_a8bd3a7ea969f307c35934a1bf2803b40}} 
 \index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Is\+Max@{Is\+Max}}
@@ -159,7 +287,21 @@ bool \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ 
 
 
 
- Limited\+Pointer\+Array.\+h の 304 行目に定義があります。
+登録数が最大か判定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 登録数が最大ならtrue \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 359 行目に定義があります。
 
 \mbox{\Hypertarget{class_limited_pointer_array_a7cf64a1731ab6d0d63182b6c223fae0b}\label{class_limited_pointer_array_a7cf64a1731ab6d0d63182b6c223fae0b}} 
 \index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Overwrite\+Array@{Overwrite\+Array}}
@@ -170,7 +312,23 @@ void \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ 
 
 
 
- Limited\+Pointer\+Array.\+h の 85 行目に定義があります。
+配列の上書き関数 
+
+
+\begin{DoxyParams}{引数}
+{\em old\+\_\+object} & 古いオブジェクト \\
+\hline
+{\em new\+\_\+object} & 新規オブジェクト \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 146 行目に定義があります。
 
 \mbox{\Hypertarget{class_limited_pointer_array_a6c46bb77df04a9e1226025f8c48e26cb}\label{class_limited_pointer_array_a6c46bb77df04a9e1226025f8c48e26cb}} 
 \index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Overwrite\+Array\+And\+Release\+Old\+Object@{Overwrite\+Array\+And\+Release\+Old\+Object}}
@@ -181,40 +339,98 @@ void \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ 
 
 
 
- Limited\+Pointer\+Array.\+h の 108 行目に定義があります。
+配列の上書きと解放関数 
 
-\mbox{\Hypertarget{class_limited_pointer_array_a5e34faa11f4b901153f85428027aa21e}\label{class_limited_pointer_array_a5e34faa11f4b901153f85428027aa21e}} 
-\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Release\+Object\+And\+Reset\+Array@{Release\+Object\+And\+Reset\+Array}}
-\index{Release\+Object\+And\+Reset\+Array@{Release\+Object\+And\+Reset\+Array}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
-\subsubsection{\texorpdfstring{Release\+Object\+And\+Reset\+Array()}{ReleaseObjectAndResetArray()}}
+
+\begin{DoxyParams}{引数}
+{\em old\+\_\+object} & 古いオブジェクト \\
+\hline
+{\em new\+\_\+object} & 新規オブジェクト \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 173 行目に定義があります。
+
+\mbox{\Hypertarget{class_limited_pointer_array_af93d94163b061eb06337a2ead743d958}\label{class_limited_pointer_array_af93d94163b061eb06337a2ead743d958}} 
+\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Release\+Object\+And\+Reset@{Release\+Object\+And\+Reset}}
+\index{Release\+Object\+And\+Reset@{Release\+Object\+And\+Reset}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
+\subsubsection{\texorpdfstring{Release\+Object\+And\+Reset()}{ReleaseObjectAndReset()}}
 {\footnotesize\ttfamily template$<$class Type, unsigned A\+R\+R\+A\+Y\+\_\+\+N\+UM = 100000$>$ \\
-void \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::Release\+Object\+And\+Reset\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::Release\+Object\+And\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
- Limited\+Pointer\+Array.\+h の 150 行目に定義があります。
+登録オブジェクトの解放と配列のリセット関数 
 
-\mbox{\Hypertarget{class_limited_pointer_array_ae5a41fe945c1ee5ea73116b823011a8c}\label{class_limited_pointer_array_ae5a41fe945c1ee5ea73116b823011a8c}} 
-\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Reset\+Array@{Reset\+Array}}
-\index{Reset\+Array@{Reset\+Array}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
-\subsubsection{\texorpdfstring{Reset\+Array()}{ResetArray()}}
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 223 行目に定義があります。
+
+\mbox{\Hypertarget{class_limited_pointer_array_a762f1dd92e84cdd1fedbc0e45d72fc3c}\label{class_limited_pointer_array_a762f1dd92e84cdd1fedbc0e45d72fc3c}} 
+\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Reset@{Reset}}
+\index{Reset@{Reset}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
 {\footnotesize\ttfamily template$<$class Type, unsigned A\+R\+R\+A\+Y\+\_\+\+N\+UM = 100000$>$ \\
-void \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::Reset\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
- Limited\+Pointer\+Array.\+h の 134 行目に定義があります。
+リセット関数 
 
-\mbox{\Hypertarget{class_limited_pointer_array_a1093a96cb123b3fed52bdfcea1055f33}\label{class_limited_pointer_array_a1093a96cb123b3fed52bdfcea1055f33}} 
-\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Sort\+Array@{Sort\+Array}}
-\index{Sort\+Array@{Sort\+Array}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
-\subsubsection{\texorpdfstring{Sort\+Array()}{SortArray()}}
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 202 行目に定義があります。
+
+\mbox{\Hypertarget{class_limited_pointer_array_ab74449f9eacc2e3df53ab35678f680c5}\label{class_limited_pointer_array_ab74449f9eacc2e3df53ab35678f680c5}} 
+\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Sort@{Sort}}
+\index{Sort@{Sort}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
+\subsubsection{\texorpdfstring{Sort()}{Sort()}}
 {\footnotesize\ttfamily template$<$class Type, unsigned A\+R\+R\+A\+Y\+\_\+\+N\+UM = 100000$>$ \\
-void \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::Sort\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::Sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
- Limited\+Pointer\+Array.\+h の 179 行目に定義があります。
+ソート関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 262 行目に定義があります。
 
 \mbox{\Hypertarget{class_limited_pointer_array_a0d33dc5dd8ed01bb00accd6378aa1b47}\label{class_limited_pointer_array_a0d33dc5dd8ed01bb00accd6378aa1b47}} 
 \index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!Sort\+The\+Two\+Object@{Sort\+The\+Two\+Object}}
@@ -225,7 +441,23 @@ void \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ 
 
 
 
- Limited\+Pointer\+Array.\+h の 246 行目に定義があります。
+配列の2つのオブジェクトを並び替え関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index0} & インデックス0 \\
+\hline
+{\em index0} & インデックス1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Limited\+Pointer\+Array.\+h の 340 行目に定義があります。
 
 
 
@@ -239,18 +471,26 @@ Type \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ 
 
 
 
- Limited\+Pointer\+Array.\+h の 314 行目に定義があります。
+配列 
 
-\mbox{\Hypertarget{class_limited_pointer_array_a7da38a8f2ea9a4b030f64f0e8adc27e8}\label{class_limited_pointer_array_a7da38a8f2ea9a4b030f64f0e8adc27e8}} 
-\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!end\+\_\+pointer\+\_\+@{end\+\_\+pointer\+\_\+}}
-\index{end\+\_\+pointer\+\_\+@{end\+\_\+pointer\+\_\+}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
-\subsubsection{\texorpdfstring{end\+\_\+pointer\+\_\+}{end\_pointer\_}}
+
+
+ Limited\+Pointer\+Array.\+h の 24 行目に定義があります。
+
+\mbox{\Hypertarget{class_limited_pointer_array_a43624d44d694257ed3f1a49b74b543a3}\label{class_limited_pointer_array_a43624d44d694257ed3f1a49b74b543a3}} 
+\index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!end\+\_\+index\+\_\+@{end\+\_\+index\+\_\+}}
+\index{end\+\_\+index\+\_\+@{end\+\_\+index\+\_\+}!Limited\+Pointer\+Array@{Limited\+Pointer\+Array}}
+\subsubsection{\texorpdfstring{end\+\_\+index\+\_\+}{end\_index\_}}
 {\footnotesize\ttfamily template$<$class Type, unsigned A\+R\+R\+A\+Y\+\_\+\+N\+UM = 100000$>$ \\
-unsigned \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::end\+\_\+pointer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+unsigned \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ Type, A\+R\+R\+A\+Y\+\_\+\+N\+UM $>$\+::end\+\_\+index\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Limited\+Pointer\+Array.\+h の 315 行目に定義があります。
+末尾インデックス 
+
+
+
+ Limited\+Pointer\+Array.\+h の 25 行目に定義があります。
 
 \mbox{\Hypertarget{class_limited_pointer_array_a4f3ca120f5fc23ee3db798cb701d61a0}\label{class_limited_pointer_array_a4f3ca120f5fc23ee3db798cb701d61a0}} 
 \index{Limited\+Pointer\+Array@{Limited\+Pointer\+Array}!registration\+\_\+map\+\_\+@{registration\+\_\+map\+\_\+}}
@@ -261,10 +501,14 @@ std\+::unordered\+\_\+map$<$Type, unsigned$>$ \mbox{\hyperlink{class_limited_poi
 
 
 
- Limited\+Pointer\+Array.\+h の 316 行目に定義があります。
+登録マップ 
+
+
+
+ Limited\+Pointer\+Array.\+h の 26 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Limited\+Pointer\+Array/\mbox{\hyperlink{_limited_pointer_array_8h}{Limited\+Pointer\+Array.\+h}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_limited_pointer_array_8h}{Limited\+Pointer\+Array.\+h}}\end{DoxyCompactItemize}

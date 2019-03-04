@@ -1,0 +1,309 @@
+\hypertarget{class_scaffold}{}\section{Scaffold クラス}
+\label{class_scaffold}\index{Scaffold@{Scaffold}}
+
+
+足場\+Class  
+
+
+
+
+{\ttfamily \#include $<$Scaffold.\+h$>$}
+
+
+
+Scaffold 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scaffold__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scaffold_a690990d17bc8f44a4f0d675d7f6bbd1f}{set\+Position}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} value)
+\begin{DoxyCompactList}\small\item\em 座標設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scaffold_a4527e7788208160d95369672f5cc4e25}{set\+Scale}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} value)
+\begin{DoxyCompactList}\small\item\em 拡縮設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} $\ast$ \mbox{\hyperlink{class_scaffold_aafdfc19bcd0080b91dfbb2432b86a93d}{getp\+Color}} ()
+\begin{DoxyCompactList}\small\item\em 色取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scaffold_ae30cf2eeec8239b53aedaf3aa4c7606c}{set\+Color}} (\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} value)
+\begin{DoxyCompactList}\small\item\em 色設定関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_scaffold_a57ebf7f07d9e8fc6bf941eb2c720f001}{get\+Score}} ()
+\begin{DoxyCompactList}\small\item\em スコア取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scaffold_a6e5a9d4c75b48b31e265c30e2c9712a4}{set\+Score}} (int value)
+\begin{DoxyCompactList}\small\item\em スコア設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scaffold_a7781f0c0fcde243975f1077540e0b981}{Init}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$collision)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scaffold_a0799d380645a9d4e92dfd90f6bb6f9e9}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_scaffold_ada7fa88a4cd38eb3a0fc73b7f6200259}{color\+\_\+}} = \{1.\+0f, 1.\+0f, 1.\+0f, 1.\+0f\}
+\begin{DoxyCompactList}\small\item\em 色 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_scaffold_a83570adc2d88e3047f70c070a82381bf}{score\+\_\+}} = 0
+\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_scaffold_a23fdba623ffbf08d9c7d082fa5951e45}{S\+C\+A\+LE}}
+\begin{DoxyCompactList}\small\item\em 拡縮 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+足場\+Class 
+
+足場の\+Class 
+
+ Scaffold.\+h の 24 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_scaffold_aafdfc19bcd0080b91dfbb2432b86a93d}\label{class_scaffold_aafdfc19bcd0080b91dfbb2432b86a93d}} 
+\index{Scaffold@{Scaffold}!getp\+Color@{getp\+Color}}
+\index{getp\+Color@{getp\+Color}!Scaffold@{Scaffold}}
+\subsubsection{\texorpdfstring{getp\+Color()}{getpColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} $\ast$ Scaffold\+::getp\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+色取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em X\+Color4$\ast$} & 色 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scaffold.\+cpp の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_scaffold_a57ebf7f07d9e8fc6bf941eb2c720f001}\label{class_scaffold_a57ebf7f07d9e8fc6bf941eb2c720f001}} 
+\index{Scaffold@{Scaffold}!get\+Score@{get\+Score}}
+\index{get\+Score@{get\+Score}!Scaffold@{Scaffold}}
+\subsubsection{\texorpdfstring{get\+Score()}{getScore()}}
+{\footnotesize\ttfamily int Scaffold\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+スコア取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & スコア \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scaffold.\+cpp の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_scaffold_a7781f0c0fcde243975f1077540e0b981}\label{class_scaffold_a7781f0c0fcde243975f1077540e0b981}} 
+\index{Scaffold@{Scaffold}!Init@{Init}}
+\index{Init@{Init}!Scaffold@{Scaffold}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Scaffold\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$}]{collision }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$collision} & 衝突基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scaffold.\+cpp の 74 行目に定義があります。
+
+\mbox{\Hypertarget{class_scaffold_ae30cf2eeec8239b53aedaf3aa4c7606c}\label{class_scaffold_ae30cf2eeec8239b53aedaf3aa4c7606c}} 
+\index{Scaffold@{Scaffold}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!Scaffold@{Scaffold}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}}
+{\footnotesize\ttfamily void Scaffold\+::set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}}]{value }\end{DoxyParamCaption})}
+
+
+
+色設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 色 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scaffold.\+cpp の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_scaffold_a690990d17bc8f44a4f0d675d7f6bbd1f}\label{class_scaffold_a690990d17bc8f44a4f0d675d7f6bbd1f}} 
+\index{Scaffold@{Scaffold}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Scaffold@{Scaffold}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Scaffold\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{value }\end{DoxyParamCaption})}
+
+
+
+座標設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 座標 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scaffold.\+cpp の 25 行目に定義があります。
+
+\mbox{\Hypertarget{class_scaffold_a4527e7788208160d95369672f5cc4e25}\label{class_scaffold_a4527e7788208160d95369672f5cc4e25}} 
+\index{Scaffold@{Scaffold}!set\+Scale@{set\+Scale}}
+\index{set\+Scale@{set\+Scale}!Scaffold@{Scaffold}}
+\subsubsection{\texorpdfstring{set\+Scale()}{setScale()}}
+{\footnotesize\ttfamily void Scaffold\+::set\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{value }\end{DoxyParamCaption})}
+
+
+
+拡縮設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 拡縮 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scaffold.\+cpp の 33 行目に定義があります。
+
+\mbox{\Hypertarget{class_scaffold_a6e5a9d4c75b48b31e265c30e2c9712a4}\label{class_scaffold_a6e5a9d4c75b48b31e265c30e2c9712a4}} 
+\index{Scaffold@{Scaffold}!set\+Score@{set\+Score}}
+\index{set\+Score@{set\+Score}!Scaffold@{Scaffold}}
+\subsubsection{\texorpdfstring{set\+Score()}{setScore()}}
+{\footnotesize\ttfamily void Scaffold\+::set\+Score (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+スコア設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & スコア \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Scaffold.\+cpp の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_scaffold_a0799d380645a9d4e92dfd90f6bb6f9e9}\label{class_scaffold_a0799d380645a9d4e92dfd90f6bb6f9e9}} 
+\index{Scaffold@{Scaffold}!Update@{Update}}
+\index{Update@{Update}!Scaffold@{Scaffold}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Scaffold\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_aeeb51b7e7aa41fd0b16f8f7c016bdb55}{Game\+Object\+Null}}を再実装しています。
+
+
+
+ Scaffold.\+cpp の 82 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_scaffold_ada7fa88a4cd38eb3a0fc73b7f6200259}\label{class_scaffold_ada7fa88a4cd38eb3a0fc73b7f6200259}} 
+\index{Scaffold@{Scaffold}!color\+\_\+@{color\+\_\+}}
+\index{color\+\_\+@{color\+\_\+}!Scaffold@{Scaffold}}
+\subsubsection{\texorpdfstring{color\+\_\+}{color\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Scaffold\+::color\+\_\+ = \{1.\+0f, 1.\+0f, 1.\+0f, 1.\+0f\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+色 
+
+
+
+ Scaffold.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_scaffold_a23fdba623ffbf08d9c7d082fa5951e45}\label{class_scaffold_a23fdba623ffbf08d9c7d082fa5951e45}} 
+\index{Scaffold@{Scaffold}!S\+C\+A\+LE@{S\+C\+A\+LE}}
+\index{S\+C\+A\+LE@{S\+C\+A\+LE}!Scaffold@{Scaffold}}
+\subsubsection{\texorpdfstring{S\+C\+A\+LE}{SCALE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Scaffold\+::\+S\+C\+A\+LE\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+拡縮 
+
+
+
+ Scaffold.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_scaffold_a83570adc2d88e3047f70c070a82381bf}\label{class_scaffold_a83570adc2d88e3047f70c070a82381bf}} 
+\index{Scaffold@{Scaffold}!score\+\_\+@{score\+\_\+}}
+\index{score\+\_\+@{score\+\_\+}!Scaffold@{Scaffold}}
+\subsubsection{\texorpdfstring{score\+\_\+}{score\_}}
+{\footnotesize\ttfamily int Scaffold\+::score\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ Scaffold.\+h の 38 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Scaffold/\mbox{\hyperlink{_scaffold_8h}{Scaffold.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Scaffold/\+Source/\mbox{\hyperlink{_scaffold_8cpp}{Scaffold.\+cpp}}\end{DoxyCompactItemize}

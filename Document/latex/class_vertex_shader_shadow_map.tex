@@ -1,0 +1,177 @@
+\hypertarget{class_vertex_shader_shadow_map}{}\section{Vertex\+Shader\+Shadow\+Map クラス}
+\label{class_vertex_shader_shadow_map}\index{Vertex\+Shader\+Shadow\+Map@{Vertex\+Shader\+Shadow\+Map}}
+
+
+シャドウマップ頂点シェーダー\+Class  
+
+
+
+
+{\ttfamily \#include $<$Vertex\+Shader\+Shadow\+Map.\+h$>$}
+
+
+
+Vertex\+Shader\+Shadow\+Map 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_vertex_shader_shadow_map__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_vertex_shader_shadow_map_ad05ff60e979b3d2af8603a118cb51185}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_shader_shadow_map_a5b36c3531d6116c609c8a62bc4ffd95d}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_shader_shadow_map_a49f6120c2ca0200ca4d8bcb05cfae4d8}{Object\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)
+\begin{DoxyCompactList}\small\item\em オブジェクト設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_vertex_shader_shadow_map_a5b3069ce052a5de3e19ea578d8bdb950}{math\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 計算用行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \mbox{\hyperlink{class_vertex_shader_shadow_map_a3520e12e1b04f87f1f8e2c90e637e8d0}{P\+A\+TH}} = \char`\"{}resource/H\+L\+SL/Effect/Vertex\+Shader/Shadow\+Map.\+vsh\char`\"{}
+\begin{DoxyCompactList}\small\item\em ファイルパス \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+シャドウマップ頂点シェーダー\+Class 
+
+シャドウマップの頂点シェーダー\+Class 
+
+ Vertex\+Shader\+Shadow\+Map.\+h の 26 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_vertex_shader_shadow_map_ad05ff60e979b3d2af8603a118cb51185}\label{class_vertex_shader_shadow_map_ad05ff60e979b3d2af8603a118cb51185}} 
+\index{Vertex\+Shader\+Shadow\+Map@{Vertex\+Shader\+Shadow\+Map}!Init@{Init}}
+\index{Init@{Init}!Vertex\+Shader\+Shadow\+Map@{Vertex\+Shader\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Shadow\+Map\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_a4d79b358dab49c840345d74823a16840}{Vertex\+Shader\+Null}}を再実装しています。
+
+
+
+ Vertex\+Shader\+Shadow\+Map.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_shadow_map_a49f6120c2ca0200ca4d8bcb05cfae4d8}\label{class_vertex_shader_shadow_map_a49f6120c2ca0200ca4d8bcb05cfae4d8}} 
+\index{Vertex\+Shader\+Shadow\+Map@{Vertex\+Shader\+Shadow\+Map}!Object\+Setting@{Object\+Setting}}
+\index{Object\+Setting@{Object\+Setting}!Vertex\+Shader\+Shadow\+Map@{Vertex\+Shader\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{Object\+Setting()}{ObjectSetting()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Shadow\+Map\+::\+Object\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+オブジェクト設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_aae3231bb3fa5df2578ba89701867ffb3}{Vertex\+Shader\+Null}}を再実装しています。
+
+
+
+ Vertex\+Shader\+Shadow\+Map.\+cpp の 46 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_shadow_map_a5b36c3531d6116c609c8a62bc4ffd95d}\label{class_vertex_shader_shadow_map_a5b36c3531d6116c609c8a62bc4ffd95d}} 
+\index{Vertex\+Shader\+Shadow\+Map@{Vertex\+Shader\+Shadow\+Map}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Vertex\+Shader\+Shadow\+Map@{Vertex\+Shader\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Shadow\+Map\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_adf758f295d2803c6d8bd7e05e461abec}{Vertex\+Shader\+Null}}を再実装しています。
+
+
+
+ Vertex\+Shader\+Shadow\+Map.\+cpp の 38 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_vertex_shader_shadow_map_a5b3069ce052a5de3e19ea578d8bdb950}\label{class_vertex_shader_shadow_map_a5b3069ce052a5de3e19ea578d8bdb950}} 
+\index{Vertex\+Shader\+Shadow\+Map@{Vertex\+Shader\+Shadow\+Map}!math\+\_\+matrix\+\_\+@{math\+\_\+matrix\+\_\+}}
+\index{math\+\_\+matrix\+\_\+@{math\+\_\+matrix\+\_\+}!Vertex\+Shader\+Shadow\+Map@{Vertex\+Shader\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{math\+\_\+matrix\+\_\+}{math\_matrix\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Vertex\+Shader\+Shadow\+Map\+::math\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+計算用行列 
+
+
+
+ Vertex\+Shader\+Shadow\+Map.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_shadow_map_a3520e12e1b04f87f1f8e2c90e637e8d0}\label{class_vertex_shader_shadow_map_a3520e12e1b04f87f1f8e2c90e637e8d0}} 
+\index{Vertex\+Shader\+Shadow\+Map@{Vertex\+Shader\+Shadow\+Map}!P\+A\+TH@{P\+A\+TH}}
+\index{P\+A\+TH@{P\+A\+TH}!Vertex\+Shader\+Shadow\+Map@{Vertex\+Shader\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{P\+A\+TH}{PATH}}
+{\footnotesize\ttfamily const char $\ast$ Vertex\+Shader\+Shadow\+Map\+::\+P\+A\+TH = \char`\"{}resource/H\+L\+SL/Effect/Vertex\+Shader/Shadow\+Map.\+vsh\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+ファイルパス 
+
+
+
+ Vertex\+Shader\+Shadow\+Map.\+h の 32 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Vertex\+Shader/\mbox{\hyperlink{_vertex_shader_shadow_map_8h}{Vertex\+Shader\+Shadow\+Map.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Vertex\+Shader/\+Source/\mbox{\hyperlink{_vertex_shader_shadow_map_8cpp}{Vertex\+Shader\+Shadow\+Map.\+cpp}}\end{DoxyCompactItemize}

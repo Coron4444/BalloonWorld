@@ -2,7 +2,7 @@
 \label{class_collision_pair_check}\index{Collision\+Pair\+Check@{Collision\+Pair\+Check}}
 
 
-衝突ペア判定\+Class  
+衝突ペア判定\+Class(static)  
 
 
 
@@ -37,11 +37,11 @@ static bool \mbox{\hyperlink{class_collision_pair_check_a9f1819e873a51fcf50a7dbb
 
 
 \subsection{詳解}
-衝突ペア判定\+Class 
+衝突ペア判定\+Class(static) 
 
 衝突基底クラスのペアを判定する\+Class(static) 
 
- Collision\+Pair\+Check.\+h の 28 行目に定義があります。
+ Collision\+Pair\+Check.\+h の 24 行目に定義があります。
 
 
 
@@ -72,10 +72,10 @@ static bool \mbox{\hyperlink{class_collision_pair_check_a9f1819e873a51fcf50a7dbb
 衝突基底クラスペア判定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em $\ast$collision0} & 衝突基底クラス \\
+\begin{DoxyParams}{引数}
+{\em $\ast$collision0} & 衝突基底クラス \\
 \hline
-\mbox{\tt in}  & {\em $\ast$collision1} & 衝突基底クラス \\
+{\em $\ast$collision1} & 衝突基底クラス \\
 \hline
 \end{DoxyParams}
 
@@ -98,10 +98,10 @@ static bool \mbox{\hyperlink{class_collision_pair_check_a9f1819e873a51fcf50a7dbb
 ペア判定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em $\ast$collision0} & 衝突基底クラス \\
+\begin{DoxyParams}{引数}
+{\em $\ast$collision0} & 衝突基底クラス \\
 \hline
-\mbox{\tt in}  & {\em $\ast$collision1} & 衝突基底クラス \\
+{\em $\ast$collision1} & 衝突基底クラス \\
 \hline
 \end{DoxyParams}
 
@@ -124,12 +124,12 @@ static bool \mbox{\hyperlink{class_collision_pair_check_a9f1819e873a51fcf50a7dbb
 指定した衝突タイプの検索関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em type} & 衝突基底クラスタイプ \\
+\begin{DoxyParams}{引数}
+{\em type} & 衝突基底クラスタイプ \\
 \hline
-\mbox{\tt in}  & {\em $\ast$collision0} & 衝突基底クラス \\
+{\em $\ast$collision0} & 衝突基底クラス \\
 \hline
-\mbox{\tt in}  & {\em $\ast$collision1} & 衝突基底クラス \\
+{\em $\ast$collision1} & 衝突基底クラス \\
 \hline
 \end{DoxyParams}
 
@@ -158,17 +158,17 @@ static bool \mbox{\hyperlink{class_collision_pair_check_a9f1819e873a51fcf50a7dbb
 指定したコンポーネントの逆を返す関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em age\+\_\+component} & 指定する衝突基底クラスポインタ \\
+\begin{DoxyParams}{引数}
+{\em $\ast$age\+\_\+component} & 指定する衝突基底クラス \\
 \hline
-\mbox{\tt in}  & {\em collision0} & 衝突基底クラスポインタ \\
+{\em $\ast$collision0} & 衝突基底クラス \\
 \hline
-\mbox{\tt in}  & {\em collision1} & 衝突基底クラスポインタ \\
+{\em $\ast$collision1} & 衝突基底クラス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Collision\+Base$\ast$} & 指定した衝突基底クラスポインタの逆の衝突基底クラスポインタ \\
+{\em Collision\+Base$\ast$} & 指定した衝突基底クラスポインタの逆の衝突基底クラス \\
 \hline
 \end{DoxyRetVals}
 
@@ -186,8 +186,8 @@ static bool \mbox{\hyperlink{class_collision_pair_check_a9f1819e873a51fcf50a7dbb
 プレイヤーのペアリスト関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em $\ast$collision} & 衝突基底クラス \\
+\begin{DoxyParams}{引数}
+{\em $\ast$collision} & 衝突基底クラス \\
 \hline
 \end{DoxyParams}
 
@@ -203,5 +203,5 @@ static bool \mbox{\hyperlink{class_collision_pair_check_a9f1819e873a51fcf50a7dbb
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Collision\+Manager/\+Collision\+Pair\+Check/\mbox{\hyperlink{_collision_pair_check_8h}{Collision\+Pair\+Check.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Collision\+Manager/\+Collision\+Pair\+Check/\mbox{\hyperlink{_collision_pair_check_8cpp}{Collision\+Pair\+Check.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Manager/\mbox{\hyperlink{_collision_pair_check_8h}{Collision\+Pair\+Check.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Manager/\+Source/\mbox{\hyperlink{_collision_pair_check_8cpp}{Collision\+Pair\+Check.\+cpp}}\end{DoxyCompactItemize}

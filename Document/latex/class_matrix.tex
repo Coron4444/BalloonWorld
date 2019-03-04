@@ -1,0 +1,1918 @@
+\hypertarget{class_matrix}{}\section{Matrix クラス}
+\label{class_matrix}\index{Matrix@{Matrix}}
+
+
+行列\+Class  
+
+
+
+
+{\ttfamily \#include $<$Matrix.\+h$>$}
+
+
+
+Matrix 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{class_matrix__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_matrix_aae88110e606dea36cd7d01057edbe567}{get11}} () const
+\begin{DoxyCompactList}\small\item\em 11成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a702141355d7a4161432299224844b193}{set11}} (float value)
+\begin{DoxyCompactList}\small\item\em 11成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_abcea3af9d2b4a775a4850e7e061149a6}{get12}} () const
+\begin{DoxyCompactList}\small\item\em 12成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a16351455b43031ca0aaf27dceb3b65b4}{set12}} (float value)
+\begin{DoxyCompactList}\small\item\em 12成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_a921bc8b3e2f3e373fe2728075caf462f}{get13}} () const
+\begin{DoxyCompactList}\small\item\em 13成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a0aa865228e8713575ccba777c0a1a059}{set13}} (float value)
+\begin{DoxyCompactList}\small\item\em 13成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_a2e5886125fced6427695c51f99bfbd98}{get14}} () const
+\begin{DoxyCompactList}\small\item\em 14成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a289a3908210e92d94534d30dc0b12476}{set14}} (float value)
+\begin{DoxyCompactList}\small\item\em 14成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_a15690e89cfa1b92622e0351241866155}{get21}} () const
+\begin{DoxyCompactList}\small\item\em 21成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a05f282ddbc60accffe4f1577a93c4d01}{set21}} (float value)
+\begin{DoxyCompactList}\small\item\em 21成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_a428eda049627bc475ab5eedecb24e5b8}{get22}} () const
+\begin{DoxyCompactList}\small\item\em 22成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a56eee3be58eefa236f75cbf7872e4dbc}{set22}} (float value)
+\begin{DoxyCompactList}\small\item\em 22成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_adda10197b722e22d6779726975be976c}{get23}} () const
+\begin{DoxyCompactList}\small\item\em 23成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a765ef911f6d3345b05f6bda8f2330595}{set23}} (float value)
+\begin{DoxyCompactList}\small\item\em 23成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_a4655f6764dfb0f9afeb6a9f6055adb93}{get24}} () const
+\begin{DoxyCompactList}\small\item\em 24成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a99120cc734398118f0708daa95ca545b}{set24}} (float value)
+\begin{DoxyCompactList}\small\item\em 24成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_ad6b745b0d0b3602fb3bb2bcadba85bad}{get31}} () const
+\begin{DoxyCompactList}\small\item\em 31成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a625ed38d8c5e8d20cdd399a5afd61c45}{set31}} (float value)
+\begin{DoxyCompactList}\small\item\em 31成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_a99786d344646aacf1391118e1968850b}{get32}} () const
+\begin{DoxyCompactList}\small\item\em 32成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a3cc8c6612366d92b7b8a81f7f802f50c}{set32}} (float value)
+\begin{DoxyCompactList}\small\item\em 32成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_a82d71b38d75c903207dc314262c910ad}{get33}} () const
+\begin{DoxyCompactList}\small\item\em 33成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_ae4817d20e03fe01105b6e4957d49060e}{set33}} (float value)
+\begin{DoxyCompactList}\small\item\em 33成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_a544b0203b2d6656f45696f2c8f1af8cc}{get34}} () const
+\begin{DoxyCompactList}\small\item\em 34成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a7114f1252d78581637cbb5b06cff9b33}{set34}} (float value)
+\begin{DoxyCompactList}\small\item\em 34成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_a2afc1d50f54fc6f4a7088e4b6f016d84}{get41}} () const
+\begin{DoxyCompactList}\small\item\em 41成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_ae649f42548ca5617d8d1d47252a786f2}{set41}} (float value)
+\begin{DoxyCompactList}\small\item\em 41成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_a99f94d1870205989ca96695a430bd6d6}{get42}} () const
+\begin{DoxyCompactList}\small\item\em 42成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a397c7b3f9292c224f86cdf0cb4d8e46d}{set42}} (float value)
+\begin{DoxyCompactList}\small\item\em 42成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_aa72989c74eeeb117ba6dc4b8cc7af619}{get43}} () const
+\begin{DoxyCompactList}\small\item\em 43成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a724ee3aa5cfc17cea02fe474d807c0cc}{set43}} (float value)
+\begin{DoxyCompactList}\small\item\em 43成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_matrix_a891abd390e49f286709c5962877395d8}{get44}} () const
+\begin{DoxyCompactList}\small\item\em 44成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a1cea9dbd57d0ad3583243af3559917ad}{set44}} (float value)
+\begin{DoxyCompactList}\small\item\em 44成分設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_matrix_af715d6df123065b56f602ea7db05238d}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em 座標取得取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_matrix_a8872d3d34f938dd920cfd2e81a33c9cb}{getp\+Right}} ()
+\begin{DoxyCompactList}\small\item\em 右ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_matrix_aed95f652a1365e3bb908c2ea07ed7884}{getp\+Up}} ()
+\begin{DoxyCompactList}\small\item\em 上ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_matrix_a384555a3c303692932b15eef7b3abf3e}{getp\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em 前ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_matrix_a8b8b21659e1239a4a5b4361bc72f1fad}{getp\+Default\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em 既定前ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_matrix_a34bf031354bde8182be09f1b7805a320}{getp\+Default\+Up}} ()
+\begin{DoxyCompactList}\small\item\em 既定上ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_matrix_a0096877aa292e1e8801deb912e1c8245}{getp\+Default\+Right}} ()
+\begin{DoxyCompactList}\small\item\em 既定右ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_matrix_aa2f78f6d34450195fec250fee6172afd}{operator$\ast$}} (const \mbox{\hyperlink{class_matrix}{Matrix}} \&matrix) const
+\begin{DoxyCompactList}\small\item\em $\ast$演算子 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix_a2dba13c45127354c9f75ef576f49269b}{Matrix}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix_aec226891d64369eb1a1051ad96bf03da}{Matrix}} (const float $\ast$value)
+\begin{DoxyCompactList}\small\item\em 単一floatコンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix_acf565e5e85611da8b1559604021fa71e}{Matrix}} (const \mbox{\hyperlink{_vector3_d_8h_afe61185afc2bf3856c12613d99eede01}{Float16}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 単一float16コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix_a2b1fedfb1b076d4ae504d2c61019871f}{Matrix}} (const \mbox{\hyperlink{class_matrix}{Matrix}} \&matrix)
+\begin{DoxyCompactList}\small\item\em 行列コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix_a3f698b5ae393f6f8395c323e4701686c}{Matrix}} (float value11, float value12, float value13, float value14, float value21, float value22, float value23, float value24, float value31, float value32, float value33, float value34, float value41, float value42, float value43, float value44)
+\begin{DoxyCompactList}\small\item\em 複数floatコンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix_a9b1c3627f573d78a2f08623fdfef990f}{$\sim$\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_ab37ebbd9de3da47ebdcf332cebcc0cc0}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_aef12300dcca7a1256e8437dcc6619b56}{Create\+Position}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$position)
+\begin{DoxyCompactList}\small\item\em 座標行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a334baeec0ce11d8766a3e5679aa0ebca}{Create\+Scale}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$scale)
+\begin{DoxyCompactList}\small\item\em 拡縮行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_abac995d9979d7f308e824cdfc17ce5df}{Create\+Rotation\+AxisX}} (float radian)
+\begin{DoxyCompactList}\small\item\em X軸回転行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a3ccd2f99d93caa2bbabd34f6db9ab309}{Create\+Rotation\+AxisY}} (float radian)
+\begin{DoxyCompactList}\small\item\em Z軸回転行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a5b4832fd2246c43250b138980e446f72}{Create\+Rotation\+AxisZ}} (float radian)
+\begin{DoxyCompactList}\small\item\em Z軸回転行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a4e451875514019630942739f04294132}{Create\+Rotation\+Axis\+Any}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} axis, float radian)
+\begin{DoxyCompactList}\small\item\em 任意軸回転行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a5f5948efdd6c0f7c03ba8546f1e9cc4b}{Create\+Rotation\+Quaternion}} (\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$quaternion)
+\begin{DoxyCompactList}\small\item\em 回転行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a6609563c41e6da8df1f9153507b24a76}{Create\+World}} (\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$scale, \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$rotation, \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$position)
+\begin{DoxyCompactList}\small\item\em ワールド行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_ab0de7031b10ae5993e26627839daf93f}{Create\+View}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$position, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$gazing\+\_\+point, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$up)
+\begin{DoxyCompactList}\small\item\em ビュー行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a5c861c39a10a7069acc017ce7d51cfd1}{Create\+Projection\+Perspective\+Fov\+LH}} (float angle\+\_\+of\+\_\+view, float screen\+\_\+width, float screen\+\_\+height, float near\+\_\+clip, float far\+\_\+clip)
+\begin{DoxyCompactList}\small\item\em 左手座標系透視投影プロジェクション行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a8d7f6955eb684d33317130ec2380cfa5}{Create\+Projection\+Ortho}} (float angle\+\_\+of\+\_\+view, float screen\+\_\+width, float screen\+\_\+height, float near\+\_\+clip, float far\+\_\+clip)
+\begin{DoxyCompactList}\small\item\em 正射影プロジェクション行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_aac15c1a7a0fa2eac0b67e35a39668403}{Create\+Projection2D}} (float screen\+\_\+width, float screen\+\_\+height)
+\begin{DoxyCompactList}\small\item\em 2\+Dプロジェクション行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a9b351172385ed7b14f21840ed654490e}{Change\+Inverse}} ()
+\begin{DoxyCompactList}\small\item\em 逆行列化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_aed98c9d04ddadd3697c382dcddf3a4f0}{Change\+Transpose}} (bool is\+\_\+position\+\_\+off=false)
+\begin{DoxyCompactList}\small\item\em 転置行列化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a9bfa12d6b05ca2748def870d24356946}{Add\+Parent\+Matrix}} (\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$matrix)
+\begin{DoxyCompactList}\small\item\em 親行列追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a85469d633691b3c3d8a3cfb260dd1d48}{Add\+Child\+Matrix}} (\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$matrix)
+\begin{DoxyCompactList}\small\item\em 子行列追加関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_matrix_a57e542a9008a8ceb9a7608debb318d04}{Create\+Axis}} ()
+\begin{DoxyCompactList}\small\item\em 軸作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_acdd474fde033edf1fd95f643888e8b22}{Create\+View\+Axis}} ()
+\begin{DoxyCompactList}\small\item\em ビュー軸作成関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_matrix_a49474d6852e69b73066efa3c0bf648ac}{right\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 右ベクトル \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_matrix_a1b63002dc85564fe623cd0ad5646cc2e}{up\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 上ベクトル \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_matrix_a2759a4a1b7542efd88f2c7c91886cdb7}{forward\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 前ベクトル \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_matrix_ac376ec9634c70db2366247a1133416b9}{default\+\_\+right\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 既定右ベクトル \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_matrix_ac48c2c66fab401482576b039d1260233}{default\+\_\+up\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 既定上ベクトル \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_matrix_a15c25940156b22911e7e5e240ca49a16}{default\+\_\+forward\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 既定前ベクトル \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_matrix_adacba7656f6f241250c339c062196803}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT}}
+\begin{DoxyCompactList}\small\item\em 既定右ベクトル \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_matrix_a464c6648a8d6a336250e11f9cf8c67bf}{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP}}
+\begin{DoxyCompactList}\small\item\em 既定上ベクトル \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_matrix_a0a58999357e3a835da86f223d62ba086}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD}}
+\begin{DoxyCompactList}\small\item\em 既定前ベクトル \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+行列\+Class 
+
+行列の\+Class 
+
+ Matrix.\+h の 24 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_matrix_a2dba13c45127354c9f75ef576f49269b}\label{class_matrix_a2dba13c45127354c9f75ef576f49269b}} 
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily Matrix\+::\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Matrix.\+cpp の 286 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_aec226891d64369eb1a1051ad96bf03da}\label{class_matrix_aec226891d64369eb1a1051ad96bf03da}} 
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Matrix\+::\+Matrix (\begin{DoxyParamCaption}\item[{const float $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+単一floatコンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 成分 \\
+\hline
+\end{DoxyParams}
+
+
+ Matrix.\+cpp の 298 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_acf565e5e85611da8b1559604021fa71e}\label{class_matrix_acf565e5e85611da8b1559604021fa71e}} 
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Matrix\+::\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3_d_8h_afe61185afc2bf3856c12613d99eede01}{Float16}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+単一float16コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 成分 \\
+\hline
+\end{DoxyParams}
+
+
+ Matrix.\+cpp の 312 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a2b1fedfb1b076d4ae504d2c61019871f}\label{class_matrix_a2b1fedfb1b076d4ae504d2c61019871f}} 
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Matrix\+::\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_matrix}{Matrix}} \&}]{matrix }\end{DoxyParamCaption})}
+
+
+
+行列コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em matrix} & 行列 \\
+\hline
+\end{DoxyParams}
+
+
+ Matrix.\+cpp の 325 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a3f698b5ae393f6f8395c323e4701686c}\label{class_matrix_a3f698b5ae393f6f8395c323e4701686c}} 
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Matrix\+::\+Matrix (\begin{DoxyParamCaption}\item[{float}]{value11,  }\item[{float}]{value12,  }\item[{float}]{value13,  }\item[{float}]{value14,  }\item[{float}]{value21,  }\item[{float}]{value22,  }\item[{float}]{value23,  }\item[{float}]{value24,  }\item[{float}]{value31,  }\item[{float}]{value32,  }\item[{float}]{value33,  }\item[{float}]{value34,  }\item[{float}]{value41,  }\item[{float}]{value42,  }\item[{float}]{value43,  }\item[{float}]{value44 }\end{DoxyParamCaption})}
+
+
+
+複数floatコンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em value11} & 11成分 \\
+\hline
+{\em value12} & 12成分 \\
+\hline
+{\em value13} & 13成分 \\
+\hline
+{\em value14} & 14成分 \\
+\hline
+{\em value21} & 21成分 \\
+\hline
+{\em value22} & 22成分 \\
+\hline
+{\em value23} & 23成分 \\
+\hline
+{\em value24} & 24成分 \\
+\hline
+{\em value31} & 31成分 \\
+\hline
+{\em value32} & 32成分 \\
+\hline
+{\em value33} & 33成分 \\
+\hline
+{\em value34} & 34成分 \\
+\hline
+{\em value41} & 41成分 \\
+\hline
+{\em value42} & 42成分 \\
+\hline
+{\em value43} & 43成分 \\
+\hline
+{\em value44} & 44成分 \\
+\hline
+\end{DoxyParams}
+
+
+ Matrix.\+cpp の 338 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a9b1c3627f573d78a2f08623fdfef990f}\label{class_matrix_a9b1c3627f573d78a2f08623fdfef990f}} 
+\index{Matrix@{Matrix}!````~Matrix@{$\sim$\+Matrix}}
+\index{````~Matrix@{$\sim$\+Matrix}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{$\sim$\+Matrix()}{~Matrix()}}
+{\footnotesize\ttfamily Matrix\+::$\sim$\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+デストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em matrix} & 行列 \\
+\hline
+\end{DoxyParams}
+
+
+ Matrix.\+cpp の 355 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_matrix_a85469d633691b3c3d8a3cfb260dd1d48}\label{class_matrix_a85469d633691b3c3d8a3cfb260dd1d48}} 
+\index{Matrix@{Matrix}!Add\+Child\+Matrix@{Add\+Child\+Matrix}}
+\index{Add\+Child\+Matrix@{Add\+Child\+Matrix}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Add\+Child\+Matrix()}{AddChildMatrix()}}
+{\footnotesize\ttfamily void Matrix\+::\+Add\+Child\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$}]{matrix }\end{DoxyParamCaption})}
+
+
+
+子行列追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em matrix} & 子行列 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 510 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a9bfa12d6b05ca2748def870d24356946}\label{class_matrix_a9bfa12d6b05ca2748def870d24356946}} 
+\index{Matrix@{Matrix}!Add\+Parent\+Matrix@{Add\+Parent\+Matrix}}
+\index{Add\+Parent\+Matrix@{Add\+Parent\+Matrix}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Add\+Parent\+Matrix()}{AddParentMatrix()}}
+{\footnotesize\ttfamily void Matrix\+::\+Add\+Parent\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$}]{matrix }\end{DoxyParamCaption})}
+
+
+
+親行列追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em matrix} & 親行列 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 502 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a9b351172385ed7b14f21840ed654490e}\label{class_matrix_a9b351172385ed7b14f21840ed654490e}} 
+\index{Matrix@{Matrix}!Change\+Inverse@{Change\+Inverse}}
+\index{Change\+Inverse@{Change\+Inverse}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Change\+Inverse()}{ChangeInverse()}}
+{\footnotesize\ttfamily void Matrix\+::\+Change\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+逆行列化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 482 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_aed98c9d04ddadd3697c382dcddf3a4f0}\label{class_matrix_aed98c9d04ddadd3697c382dcddf3a4f0}} 
+\index{Matrix@{Matrix}!Change\+Transpose@{Change\+Transpose}}
+\index{Change\+Transpose@{Change\+Transpose}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Change\+Transpose()}{ChangeTranspose()}}
+{\footnotesize\ttfamily void Matrix\+::\+Change\+Transpose (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+position\+\_\+off = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+転置行列化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em is\+\_\+position\+\_\+off} & 平行移動\+O\+F\+Fフラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 490 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a57e542a9008a8ceb9a7608debb318d04}\label{class_matrix_a57e542a9008a8ceb9a7608debb318d04}} 
+\index{Matrix@{Matrix}!Create\+Axis@{Create\+Axis}}
+\index{Create\+Axis@{Create\+Axis}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+Axis()}{CreateAxis()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+Axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+軸作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 518 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_aef12300dcca7a1256e8437dcc6619b56}\label{class_matrix_aef12300dcca7a1256e8437dcc6619b56}} 
+\index{Matrix@{Matrix}!Create\+Position@{Create\+Position}}
+\index{Create\+Position@{Create\+Position}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+Position()}{CreatePosition()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{position }\end{DoxyParamCaption})}
+
+
+
+座標行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$position} & 座標 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 375 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_aac15c1a7a0fa2eac0b67e35a39668403}\label{class_matrix_aac15c1a7a0fa2eac0b67e35a39668403}} 
+\index{Matrix@{Matrix}!Create\+Projection2D@{Create\+Projection2D}}
+\index{Create\+Projection2D@{Create\+Projection2D}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+Projection2\+D()}{CreateProjection2D()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+Projection2D (\begin{DoxyParamCaption}\item[{float}]{screen\+\_\+width,  }\item[{float}]{screen\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+2\+Dプロジェクション行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em screen\+\_\+width} & スクリーン幅 \\
+\hline
+{\em screen\+\_\+height} & スクリーン高さ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 469 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a8d7f6955eb684d33317130ec2380cfa5}\label{class_matrix_a8d7f6955eb684d33317130ec2380cfa5}} 
+\index{Matrix@{Matrix}!Create\+Projection\+Ortho@{Create\+Projection\+Ortho}}
+\index{Create\+Projection\+Ortho@{Create\+Projection\+Ortho}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+Projection\+Ortho()}{CreateProjectionOrtho()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+Projection\+Ortho (\begin{DoxyParamCaption}\item[{float}]{angle\+\_\+of\+\_\+view,  }\item[{float}]{screen\+\_\+width,  }\item[{float}]{screen\+\_\+height,  }\item[{float}]{near\+\_\+clip,  }\item[{float}]{far\+\_\+clip }\end{DoxyParamCaption})}
+
+
+
+正射影プロジェクション行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em angle\+\_\+of\+\_\+view} & 画角 \\
+\hline
+{\em screen\+\_\+width} & スクリーン幅 \\
+\hline
+{\em screen\+\_\+height} & スクリーン高さ \\
+\hline
+{\em near\+\_\+clip} & ニアクリップ \\
+\hline
+{\em far\+\_\+clip} & ファークリップ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 459 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a5c861c39a10a7069acc017ce7d51cfd1}\label{class_matrix_a5c861c39a10a7069acc017ce7d51cfd1}} 
+\index{Matrix@{Matrix}!Create\+Projection\+Perspective\+Fov\+LH@{Create\+Projection\+Perspective\+Fov\+LH}}
+\index{Create\+Projection\+Perspective\+Fov\+LH@{Create\+Projection\+Perspective\+Fov\+LH}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+Projection\+Perspective\+Fov\+L\+H()}{CreateProjectionPerspectiveFovLH()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+Projection\+Perspective\+Fov\+LH (\begin{DoxyParamCaption}\item[{float}]{angle\+\_\+of\+\_\+view,  }\item[{float}]{screen\+\_\+width,  }\item[{float}]{screen\+\_\+height,  }\item[{float}]{near\+\_\+clip,  }\item[{float}]{far\+\_\+clip }\end{DoxyParamCaption})}
+
+
+
+左手座標系透視投影プロジェクション行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em angle\+\_\+of\+\_\+view} & 画角 \\
+\hline
+{\em screen\+\_\+width} & スクリーン幅 \\
+\hline
+{\em screen\+\_\+height} & スクリーン高さ \\
+\hline
+{\em near\+\_\+clip} & ニアクリップ \\
+\hline
+{\em far\+\_\+clip} & ファークリップ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 448 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a4e451875514019630942739f04294132}\label{class_matrix_a4e451875514019630942739f04294132}} 
+\index{Matrix@{Matrix}!Create\+Rotation\+Axis\+Any@{Create\+Rotation\+Axis\+Any}}
+\index{Create\+Rotation\+Axis\+Any@{Create\+Rotation\+Axis\+Any}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+Rotation\+Axis\+Any()}{CreateRotationAxisAny()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+Rotation\+Axis\+Any (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{axis,  }\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+任意軸回転行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em axis} & 軸 \\
+\hline
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 415 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_abac995d9979d7f308e824cdfc17ce5df}\label{class_matrix_abac995d9979d7f308e824cdfc17ce5df}} 
+\index{Matrix@{Matrix}!Create\+Rotation\+AxisX@{Create\+Rotation\+AxisX}}
+\index{Create\+Rotation\+AxisX@{Create\+Rotation\+AxisX}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+Rotation\+Axis\+X()}{CreateRotationAxisX()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+Rotation\+AxisX (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+X軸回転行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 391 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a3ccd2f99d93caa2bbabd34f6db9ab309}\label{class_matrix_a3ccd2f99d93caa2bbabd34f6db9ab309}} 
+\index{Matrix@{Matrix}!Create\+Rotation\+AxisY@{Create\+Rotation\+AxisY}}
+\index{Create\+Rotation\+AxisY@{Create\+Rotation\+AxisY}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+Rotation\+Axis\+Y()}{CreateRotationAxisY()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+Rotation\+AxisY (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+Z軸回転行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 399 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a5b4832fd2246c43250b138980e446f72}\label{class_matrix_a5b4832fd2246c43250b138980e446f72}} 
+\index{Matrix@{Matrix}!Create\+Rotation\+AxisZ@{Create\+Rotation\+AxisZ}}
+\index{Create\+Rotation\+AxisZ@{Create\+Rotation\+AxisZ}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+Rotation\+Axis\+Z()}{CreateRotationAxisZ()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+Rotation\+AxisZ (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+Z軸回転行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 407 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a5f5948efdd6c0f7c03ba8546f1e9cc4b}\label{class_matrix_a5f5948efdd6c0f7c03ba8546f1e9cc4b}} 
+\index{Matrix@{Matrix}!Create\+Rotation\+Quaternion@{Create\+Rotation\+Quaternion}}
+\index{Create\+Rotation\+Quaternion@{Create\+Rotation\+Quaternion}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+Rotation\+Quaternion()}{CreateRotationQuaternion()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+Rotation\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$}]{quaternion }\end{DoxyParamCaption})}
+
+
+
+回転行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$quaternion} & クォータニオン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 423 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a334baeec0ce11d8766a3e5679aa0ebca}\label{class_matrix_a334baeec0ce11d8766a3e5679aa0ebca}} 
+\index{Matrix@{Matrix}!Create\+Scale@{Create\+Scale}}
+\index{Create\+Scale@{Create\+Scale}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+Scale()}{CreateScale()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{scale }\end{DoxyParamCaption})}
+
+
+
+拡縮行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$scale} & 拡縮 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 383 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_ab0de7031b10ae5993e26627839daf93f}\label{class_matrix_ab0de7031b10ae5993e26627839daf93f}} 
+\index{Matrix@{Matrix}!Create\+View@{Create\+View}}
+\index{Create\+View@{Create\+View}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+View()}{CreateView()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{position,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{gazing\+\_\+point,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{up }\end{DoxyParamCaption})}
+
+
+
+ビュー行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$position} & 座標 \\
+\hline
+{\em $\ast$gazing\+\_\+point} & 注視点 \\
+\hline
+{\em $\ast$up} & 上方向 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 440 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_acdd474fde033edf1fd95f643888e8b22}\label{class_matrix_acdd474fde033edf1fd95f643888e8b22}} 
+\index{Matrix@{Matrix}!Create\+View\+Axis@{Create\+View\+Axis}}
+\index{Create\+View\+Axis@{Create\+View\+Axis}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+View\+Axis()}{CreateViewAxis()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+View\+Axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ビュー軸作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 531 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a6609563c41e6da8df1f9153507b24a76}\label{class_matrix_a6609563c41e6da8df1f9153507b24a76}} 
+\index{Matrix@{Matrix}!Create\+World@{Create\+World}}
+\index{Create\+World@{Create\+World}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Create\+World()}{CreateWorld()}}
+{\footnotesize\ttfamily void Matrix\+::\+Create\+World (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$}]{scale,  }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$}]{rotation,  }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$}]{position }\end{DoxyParamCaption})}
+
+
+
+ワールド行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$scale} & 拡縮行列 \\
+\hline
+{\em $\ast$rotation} & 回転行列 \\
+\hline
+{\em $\ast$position} & 座標行列 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 431 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_aae88110e606dea36cd7d01057edbe567}\label{class_matrix_aae88110e606dea36cd7d01057edbe567}} 
+\index{Matrix@{Matrix}!get11@{get11}}
+\index{get11@{get11}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get11()}{get11()}}
+{\footnotesize\ttfamily float Matrix\+::get11 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+11成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 11成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 29 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_abcea3af9d2b4a775a4850e7e061149a6}\label{class_matrix_abcea3af9d2b4a775a4850e7e061149a6}} 
+\index{Matrix@{Matrix}!get12@{get12}}
+\index{get12@{get12}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get12()}{get12()}}
+{\footnotesize\ttfamily float Matrix\+::get12 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+12成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 12成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a921bc8b3e2f3e373fe2728075caf462f}\label{class_matrix_a921bc8b3e2f3e373fe2728075caf462f}} 
+\index{Matrix@{Matrix}!get13@{get13}}
+\index{get13@{get13}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get13()}{get13()}}
+{\footnotesize\ttfamily float Matrix\+::get13 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+13成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 13成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 53 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a2e5886125fced6427695c51f99bfbd98}\label{class_matrix_a2e5886125fced6427695c51f99bfbd98}} 
+\index{Matrix@{Matrix}!get14@{get14}}
+\index{get14@{get14}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get14()}{get14()}}
+{\footnotesize\ttfamily float Matrix\+::get14 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+14成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 14成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 65 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a15690e89cfa1b92622e0351241866155}\label{class_matrix_a15690e89cfa1b92622e0351241866155}} 
+\index{Matrix@{Matrix}!get21@{get21}}
+\index{get21@{get21}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get21()}{get21()}}
+{\footnotesize\ttfamily float Matrix\+::get21 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+21成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 21成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 77 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a428eda049627bc475ab5eedecb24e5b8}\label{class_matrix_a428eda049627bc475ab5eedecb24e5b8}} 
+\index{Matrix@{Matrix}!get22@{get22}}
+\index{get22@{get22}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get22()}{get22()}}
+{\footnotesize\ttfamily float Matrix\+::get22 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+22成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 22成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 89 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_adda10197b722e22d6779726975be976c}\label{class_matrix_adda10197b722e22d6779726975be976c}} 
+\index{Matrix@{Matrix}!get23@{get23}}
+\index{get23@{get23}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get23()}{get23()}}
+{\footnotesize\ttfamily float Matrix\+::get23 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+23成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 23成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 101 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a4655f6764dfb0f9afeb6a9f6055adb93}\label{class_matrix_a4655f6764dfb0f9afeb6a9f6055adb93}} 
+\index{Matrix@{Matrix}!get24@{get24}}
+\index{get24@{get24}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get24()}{get24()}}
+{\footnotesize\ttfamily float Matrix\+::get24 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+24成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 24成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 113 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_ad6b745b0d0b3602fb3bb2bcadba85bad}\label{class_matrix_ad6b745b0d0b3602fb3bb2bcadba85bad}} 
+\index{Matrix@{Matrix}!get31@{get31}}
+\index{get31@{get31}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get31()}{get31()}}
+{\footnotesize\ttfamily float Matrix\+::get31 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+31成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 31成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 125 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a99786d344646aacf1391118e1968850b}\label{class_matrix_a99786d344646aacf1391118e1968850b}} 
+\index{Matrix@{Matrix}!get32@{get32}}
+\index{get32@{get32}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get32()}{get32()}}
+{\footnotesize\ttfamily float Matrix\+::get32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+32成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 32成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 137 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a82d71b38d75c903207dc314262c910ad}\label{class_matrix_a82d71b38d75c903207dc314262c910ad}} 
+\index{Matrix@{Matrix}!get33@{get33}}
+\index{get33@{get33}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get33()}{get33()}}
+{\footnotesize\ttfamily float Matrix\+::get33 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+33成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 33成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 149 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a544b0203b2d6656f45696f2c8f1af8cc}\label{class_matrix_a544b0203b2d6656f45696f2c8f1af8cc}} 
+\index{Matrix@{Matrix}!get34@{get34}}
+\index{get34@{get34}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get34()}{get34()}}
+{\footnotesize\ttfamily float Matrix\+::get34 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+34成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 34成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 161 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a2afc1d50f54fc6f4a7088e4b6f016d84}\label{class_matrix_a2afc1d50f54fc6f4a7088e4b6f016d84}} 
+\index{Matrix@{Matrix}!get41@{get41}}
+\index{get41@{get41}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get41()}{get41()}}
+{\footnotesize\ttfamily float Matrix\+::get41 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+41成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 41成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 173 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a99f94d1870205989ca96695a430bd6d6}\label{class_matrix_a99f94d1870205989ca96695a430bd6d6}} 
+\index{Matrix@{Matrix}!get42@{get42}}
+\index{get42@{get42}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get42()}{get42()}}
+{\footnotesize\ttfamily float Matrix\+::get42 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+42成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 42成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 185 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_aa72989c74eeeb117ba6dc4b8cc7af619}\label{class_matrix_aa72989c74eeeb117ba6dc4b8cc7af619}} 
+\index{Matrix@{Matrix}!get43@{get43}}
+\index{get43@{get43}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get43()}{get43()}}
+{\footnotesize\ttfamily float Matrix\+::get43 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+43成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 43成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 197 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a891abd390e49f286709c5962877395d8}\label{class_matrix_a891abd390e49f286709c5962877395d8}} 
+\index{Matrix@{Matrix}!get44@{get44}}
+\index{get44@{get44}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get44()}{get44()}}
+{\footnotesize\ttfamily float Matrix\+::get44 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+44成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 44成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 209 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a8b8b21659e1239a4a5b4361bc72f1fad}\label{class_matrix_a8b8b21659e1239a4a5b4361bc72f1fad}} 
+\index{Matrix@{Matrix}!getp\+Default\+Forward@{getp\+Default\+Forward}}
+\index{getp\+Default\+Forward@{getp\+Default\+Forward}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{getp\+Default\+Forward()}{getpDefaultForward()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Matrix\+::getp\+Default\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+既定前ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 既定前ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 264 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a0096877aa292e1e8801deb912e1c8245}\label{class_matrix_a0096877aa292e1e8801deb912e1c8245}} 
+\index{Matrix@{Matrix}!getp\+Default\+Right@{getp\+Default\+Right}}
+\index{getp\+Default\+Right@{getp\+Default\+Right}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{getp\+Default\+Right()}{getpDefaultRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Matrix\+::getp\+Default\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+既定右ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 既定右ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 250 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a34bf031354bde8182be09f1b7805a320}\label{class_matrix_a34bf031354bde8182be09f1b7805a320}} 
+\index{Matrix@{Matrix}!getp\+Default\+Up@{getp\+Default\+Up}}
+\index{getp\+Default\+Up@{getp\+Default\+Up}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{getp\+Default\+Up()}{getpDefaultUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Matrix\+::getp\+Default\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+既定上ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 既定上ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 257 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a384555a3c303692932b15eef7b3abf3e}\label{class_matrix_a384555a3c303692932b15eef7b3abf3e}} 
+\index{Matrix@{Matrix}!getp\+Forward@{getp\+Forward}}
+\index{getp\+Forward@{getp\+Forward}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{getp\+Forward()}{getpForward()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Matrix\+::getp\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+前ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 前ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 243 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_af715d6df123065b56f602ea7db05238d}\label{class_matrix_af715d6df123065b56f602ea7db05238d}} 
+\index{Matrix@{Matrix}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Matrix\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+座標取得取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 座標 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 222 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a8872d3d34f938dd920cfd2e81a33c9cb}\label{class_matrix_a8872d3d34f938dd920cfd2e81a33c9cb}} 
+\index{Matrix@{Matrix}!getp\+Right@{getp\+Right}}
+\index{getp\+Right@{getp\+Right}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{getp\+Right()}{getpRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Matrix\+::getp\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+右ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 右ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 229 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_aed95f652a1365e3bb908c2ea07ed7884}\label{class_matrix_aed95f652a1365e3bb908c2ea07ed7884}} 
+\index{Matrix@{Matrix}!getp\+Up@{getp\+Up}}
+\index{getp\+Up@{getp\+Up}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{getp\+Up()}{getpUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Matrix\+::getp\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+上ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 上ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 236 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_ab37ebbd9de3da47ebdcf332cebcc0cc0}\label{class_matrix_ab37ebbd9de3da47ebdcf332cebcc0cc0}} 
+\index{Matrix@{Matrix}!Init@{Init}}
+\index{Init@{Init}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Matrix\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 361 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_aa2f78f6d34450195fec250fee6172afd}\label{class_matrix_aa2f78f6d34450195fec250fee6172afd}} 
+\index{Matrix@{Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Matrix\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_matrix}{Matrix}} \&}]{matrix }\end{DoxyParamCaption}) const}
+
+
+
+$\ast$演算子 
+
+
+\begin{DoxyParams}{引数}
+{\em \&matrix} & 行列 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_matrix}{Matrix}}} & 乗算後の行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 274 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a702141355d7a4161432299224844b193}\label{class_matrix_a702141355d7a4161432299224844b193}} 
+\index{Matrix@{Matrix}!set11@{set11}}
+\index{set11@{set11}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set11()}{set11()}}
+{\footnotesize\ttfamily void Matrix\+::set11 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+11成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 11成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a16351455b43031ca0aaf27dceb3b65b4}\label{class_matrix_a16351455b43031ca0aaf27dceb3b65b4}} 
+\index{Matrix@{Matrix}!set12@{set12}}
+\index{set12@{set12}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set12()}{set12()}}
+{\footnotesize\ttfamily void Matrix\+::set12 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+12成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 12成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 47 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a0aa865228e8713575ccba777c0a1a059}\label{class_matrix_a0aa865228e8713575ccba777c0a1a059}} 
+\index{Matrix@{Matrix}!set13@{set13}}
+\index{set13@{set13}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set13()}{set13()}}
+{\footnotesize\ttfamily void Matrix\+::set13 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+13成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 13成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 59 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a289a3908210e92d94534d30dc0b12476}\label{class_matrix_a289a3908210e92d94534d30dc0b12476}} 
+\index{Matrix@{Matrix}!set14@{set14}}
+\index{set14@{set14}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set14()}{set14()}}
+{\footnotesize\ttfamily void Matrix\+::set14 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+14成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 14成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 71 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a05f282ddbc60accffe4f1577a93c4d01}\label{class_matrix_a05f282ddbc60accffe4f1577a93c4d01}} 
+\index{Matrix@{Matrix}!set21@{set21}}
+\index{set21@{set21}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set21()}{set21()}}
+{\footnotesize\ttfamily void Matrix\+::set21 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+21成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 21成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 83 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a56eee3be58eefa236f75cbf7872e4dbc}\label{class_matrix_a56eee3be58eefa236f75cbf7872e4dbc}} 
+\index{Matrix@{Matrix}!set22@{set22}}
+\index{set22@{set22}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set22()}{set22()}}
+{\footnotesize\ttfamily void Matrix\+::set22 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+22成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 22成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 95 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a765ef911f6d3345b05f6bda8f2330595}\label{class_matrix_a765ef911f6d3345b05f6bda8f2330595}} 
+\index{Matrix@{Matrix}!set23@{set23}}
+\index{set23@{set23}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set23()}{set23()}}
+{\footnotesize\ttfamily void Matrix\+::set23 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+23成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 23成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 107 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a99120cc734398118f0708daa95ca545b}\label{class_matrix_a99120cc734398118f0708daa95ca545b}} 
+\index{Matrix@{Matrix}!set24@{set24}}
+\index{set24@{set24}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set24()}{set24()}}
+{\footnotesize\ttfamily void Matrix\+::set24 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+24成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 24成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 119 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a625ed38d8c5e8d20cdd399a5afd61c45}\label{class_matrix_a625ed38d8c5e8d20cdd399a5afd61c45}} 
+\index{Matrix@{Matrix}!set31@{set31}}
+\index{set31@{set31}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set31()}{set31()}}
+{\footnotesize\ttfamily void Matrix\+::set31 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+31成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 31成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 131 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a3cc8c6612366d92b7b8a81f7f802f50c}\label{class_matrix_a3cc8c6612366d92b7b8a81f7f802f50c}} 
+\index{Matrix@{Matrix}!set32@{set32}}
+\index{set32@{set32}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set32()}{set32()}}
+{\footnotesize\ttfamily void Matrix\+::set32 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+32成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 32成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 143 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_ae4817d20e03fe01105b6e4957d49060e}\label{class_matrix_ae4817d20e03fe01105b6e4957d49060e}} 
+\index{Matrix@{Matrix}!set33@{set33}}
+\index{set33@{set33}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set33()}{set33()}}
+{\footnotesize\ttfamily void Matrix\+::set33 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+33成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 33成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 155 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a7114f1252d78581637cbb5b06cff9b33}\label{class_matrix_a7114f1252d78581637cbb5b06cff9b33}} 
+\index{Matrix@{Matrix}!set34@{set34}}
+\index{set34@{set34}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set34()}{set34()}}
+{\footnotesize\ttfamily void Matrix\+::set34 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+34成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 34成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 167 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_ae649f42548ca5617d8d1d47252a786f2}\label{class_matrix_ae649f42548ca5617d8d1d47252a786f2}} 
+\index{Matrix@{Matrix}!set41@{set41}}
+\index{set41@{set41}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set41()}{set41()}}
+{\footnotesize\ttfamily void Matrix\+::set41 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+41成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 41成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 179 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a397c7b3f9292c224f86cdf0cb4d8e46d}\label{class_matrix_a397c7b3f9292c224f86cdf0cb4d8e46d}} 
+\index{Matrix@{Matrix}!set42@{set42}}
+\index{set42@{set42}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set42()}{set42()}}
+{\footnotesize\ttfamily void Matrix\+::set42 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+42成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 42成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 191 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a724ee3aa5cfc17cea02fe474d807c0cc}\label{class_matrix_a724ee3aa5cfc17cea02fe474d807c0cc}} 
+\index{Matrix@{Matrix}!set43@{set43}}
+\index{set43@{set43}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set43()}{set43()}}
+{\footnotesize\ttfamily void Matrix\+::set43 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+43成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 43成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 203 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a1cea9dbd57d0ad3583243af3559917ad}\label{class_matrix_a1cea9dbd57d0ad3583243af3559917ad}} 
+\index{Matrix@{Matrix}!set44@{set44}}
+\index{set44@{set44}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{set44()}{set44()}}
+{\footnotesize\ttfamily void Matrix\+::set44 (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+44成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 44成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix.\+cpp の 215 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_matrix_a0a58999357e3a835da86f223d62ba086}\label{class_matrix_a0a58999357e3a835da86f223d62ba086}} 
+\index{Matrix@{Matrix}!D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD}{DEFAULT\_FORWARD}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Matrix\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+既定前ベクトル 
+
+
+
+ Matrix.\+h の 32 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a15c25940156b22911e7e5e240ca49a16}\label{class_matrix_a15c25940156b22911e7e5e240ca49a16}} 
+\index{Matrix@{Matrix}!default\+\_\+forward\+\_\+@{default\+\_\+forward\+\_\+}}
+\index{default\+\_\+forward\+\_\+@{default\+\_\+forward\+\_\+}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{default\+\_\+forward\+\_\+}{default\_forward\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Matrix\+::default\+\_\+forward\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+既定前ベクトル 
+
+
+
+ Matrix.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_adacba7656f6f241250c339c062196803}\label{class_matrix_adacba7656f6f241250c339c062196803}} 
+\index{Matrix@{Matrix}!D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT}{DEFAULT\_RIGHT}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Matrix\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+既定右ベクトル 
+
+
+
+ Matrix.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_ac376ec9634c70db2366247a1133416b9}\label{class_matrix_ac376ec9634c70db2366247a1133416b9}} 
+\index{Matrix@{Matrix}!default\+\_\+right\+\_\+@{default\+\_\+right\+\_\+}}
+\index{default\+\_\+right\+\_\+@{default\+\_\+right\+\_\+}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{default\+\_\+right\+\_\+}{default\_right\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Matrix\+::default\+\_\+right\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+既定右ベクトル 
+
+
+
+ Matrix.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a464c6648a8d6a336250e11f9cf8c67bf}\label{class_matrix_a464c6648a8d6a336250e11f9cf8c67bf}} 
+\index{Matrix@{Matrix}!D\+E\+F\+A\+U\+L\+T\+\_\+\+UP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP}{DEFAULT\_UP}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Matrix\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+UP\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+既定上ベクトル 
+
+
+
+ Matrix.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_ac48c2c66fab401482576b039d1260233}\label{class_matrix_ac48c2c66fab401482576b039d1260233}} 
+\index{Matrix@{Matrix}!default\+\_\+up\+\_\+@{default\+\_\+up\+\_\+}}
+\index{default\+\_\+up\+\_\+@{default\+\_\+up\+\_\+}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{default\+\_\+up\+\_\+}{default\_up\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Matrix\+::default\+\_\+up\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+既定上ベクトル 
+
+
+
+ Matrix.\+h の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a2759a4a1b7542efd88f2c7c91886cdb7}\label{class_matrix_a2759a4a1b7542efd88f2c7c91886cdb7}} 
+\index{Matrix@{Matrix}!forward\+\_\+@{forward\+\_\+}}
+\index{forward\+\_\+@{forward\+\_\+}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{forward\+\_\+}{forward\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Matrix\+::forward\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+前ベクトル 
+
+
+
+ Matrix.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a49474d6852e69b73066efa3c0bf648ac}\label{class_matrix_a49474d6852e69b73066efa3c0bf648ac}} 
+\index{Matrix@{Matrix}!right\+\_\+@{right\+\_\+}}
+\index{right\+\_\+@{right\+\_\+}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{right\+\_\+}{right\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Matrix\+::right\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+右ベクトル 
+
+
+
+ Matrix.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_a1b63002dc85564fe623cd0ad5646cc2e}\label{class_matrix_a1b63002dc85564fe623cd0ad5646cc2e}} 
+\index{Matrix@{Matrix}!up\+\_\+@{up\+\_\+}}
+\index{up\+\_\+@{up\+\_\+}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{up\+\_\+}{up\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Matrix\+::up\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+上ベクトル 
+
+
+
+ Matrix.\+h の 40 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_matrix_8h}{Matrix.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\+Source/\mbox{\hyperlink{_matrix_8cpp}{Matrix.\+cpp}}\end{DoxyCompactItemize}

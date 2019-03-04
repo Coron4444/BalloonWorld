@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: ShaderBase クラス</title>
+<title>BalloonWorld: ShaderBase クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -89,6 +89,7 @@ $(document).ready(function(){initNavTree('class_shader_base.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
 <a href="#pri-attribs">非公開変数類</a> &#124;
 <a href="class_shader_base-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
@@ -96,70 +97,89 @@ $(document).ready(function(){initNavTree('class_shader_base.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>シェーダー基底クラス  
+<p>シェーダーBaseClass  
  <a href="class_shader_base.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a>&gt;</code></p>
 <div class="dynheader">
-ShaderBase の継承関係図</div>
+ShaderBase 連携図</div>
 <div class="dyncontent">
-<div class="center"><img src="class_shader_base__inherit__graph.png" border="0" usemap="#_shader_base_inherit__map" alt="Inheritance graph"/></div>
-<map name="_shader_base_inherit__map" id="_shader_base_inherit__map">
-<area shape="rect" id="node2" href="class_pixel_shader_base.html" title="ピクセルシェーダー基底クラス " alt="" coords="51,80,174,107"/>
-<area shape="rect" id="node5" href="class_vertex_shader_base.html" title="頂点シェーダー基底クラス " alt="" coords="225,80,355,107"/>
-<area shape="rect" id="node3" href="class_pixel_shader_null.html" title="空白ピクセルシェーダークラス " alt="" coords="49,155,163,181"/>
-<area shape="rect" id="node4" href="class_pixel_shader_bump_mapping.html" title="バンプマッピングピクセルシェーダークラス " alt="" coords="5,229,180,256"/>
-<area shape="rect" id="node6" href="class_vertex_shader_null.html" title="空白頂点シェーダークラス " alt="" coords="235,155,358,181"/>
-<area shape="rect" id="node7" href="class_vertex_shader_bump_mapping.html" title="バンプマッピング頂点シェーダークラス " alt="" coords="205,229,389,256"/>
-<area shape="rect" id="node8" href="class_vertex_shader_fixed.html" title="固定機能頂点シェーダークラス " alt="" coords="413,229,546,256"/>
+<div class="center"><img src="class_shader_base__coll__graph.png" border="0" usemap="#_shader_base_coll__map" alt="Collaboration graph"/></div>
+<map name="_shader_base_coll__map" id="_shader_base_coll__map">
+<area shape="rect" id="node2" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="5,587,136,613"/>
+<area shape="rect" id="node3" href="class_camera.html" title="カメラClass " alt="" coords="307,468,373,495"/>
+<area shape="rect" id="node4" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="336,587,443,613"/>
+<area shape="rect" id="node5" href="class_matrix.html" title="行列Class " alt="" coords="311,297,369,323"/>
+<area shape="rect" id="node7" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="154,81,230,108"/>
+<area shape="rect" id="node9" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="41,468,148,495"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
+<tr class="memitem:a89f6e1ba14f7db57248c794356f9b076"><td class="memItemLeft" align="right" valign="top">LPD3DXCONSTANTTABLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a89f6e1ba14f7db57248c794356f9b076">getpConstantTable</a> ()</td></tr>
+<tr class="memdesc:a89f6e1ba14f7db57248c794356f9b076"><td class="mdescLeft">&#160;</td><td class="mdescRight">定数テーブル取得関数  <a href="#a89f6e1ba14f7db57248c794356f9b076">[詳解]</a><br /></td></tr>
+<tr class="separator:a89f6e1ba14f7db57248c794356f9b076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa16d631f799060854de36a024dcfce48"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DDEVICE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#aa16d631f799060854de36a024dcfce48">getpDevice</a> ()</td></tr>
+<tr class="memdesc:aa16d631f799060854de36a024dcfce48"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイス取得関数  <a href="#aa16d631f799060854de36a024dcfce48">[詳解]</a><br /></td></tr>
+<tr class="separator:aa16d631f799060854de36a024dcfce48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7637faa8fe5aa027dc91e00cfee26f33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a7637faa8fe5aa027dc91e00cfee26f33">getpDrawCommonData</a> ()</td></tr>
+<tr class="memdesc:a7637faa8fe5aa027dc91e00cfee26f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ取得関数  <a href="#a7637faa8fe5aa027dc91e00cfee26f33">[詳解]</a><br /></td></tr>
+<tr class="separator:a7637faa8fe5aa027dc91e00cfee26f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbffa59fae48651c11489de37a88b190"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#abbffa59fae48651c11489de37a88b190">setDrawCommonData</a> (<a class="el" href="class_draw_common_data.html">DrawCommonData</a> *value)</td></tr>
+<tr class="memdesc:abbffa59fae48651c11489de37a88b190"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ設定関数  <a href="#abbffa59fae48651c11489de37a88b190">[詳解]</a><br /></td></tr>
+<tr class="separator:abbffa59fae48651c11489de37a88b190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7c2337128ca825093ab3a47bce4084"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a3b7c2337128ca825093ab3a47bce4084">~ShaderBase</a> ()=0</td></tr>
+<tr class="memdesc:a3b7c2337128ca825093ab3a47bce4084"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ関数  <a href="#a3b7c2337128ca825093ab3a47bce4084">[詳解]</a><br /></td></tr>
+<tr class="separator:a3b7c2337128ca825093ab3a47bce4084"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9622b2f5e0184a78d3af82820dc5113d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a9622b2f5e0184a78d3af82820dc5113d">Init</a> ()=0</td></tr>
 <tr class="memdesc:a9622b2f5e0184a78d3af82820dc5113d"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a9622b2f5e0184a78d3af82820dc5113d">[詳解]</a><br /></td></tr>
 <tr class="separator:a9622b2f5e0184a78d3af82820dc5113d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a784edfa81bec4d08a257ed4f02c61222"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a784edfa81bec4d08a257ed4f02c61222">Uninit</a> ()=0</td></tr>
 <tr class="memdesc:a784edfa81bec4d08a257ed4f02c61222"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#a784edfa81bec4d08a257ed4f02c61222">[詳解]</a><br /></td></tr>
 <tr class="separator:a784edfa81bec4d08a257ed4f02c61222"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af45063254b80602db8626360d643baee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#af45063254b80602db8626360d643baee">SetShader</a> ()=0</td></tr>
-<tr class="memdesc:af45063254b80602db8626360d643baee"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダー設定関数  <a href="#af45063254b80602db8626360d643baee">[詳解]</a><br /></td></tr>
-<tr class="separator:af45063254b80602db8626360d643baee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef6fa922223d71fbec81464ebbfaf687"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#aef6fa922223d71fbec81464ebbfaf687">CommonSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index)=0</td></tr>
-<tr class="memdesc:aef6fa922223d71fbec81464ebbfaf687"><td class="mdescLeft">&#160;</td><td class="mdescRight">共通設定関数  <a href="#aef6fa922223d71fbec81464ebbfaf687">[詳解]</a><br /></td></tr>
-<tr class="separator:aef6fa922223d71fbec81464ebbfaf687"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac78c78ede3b8e48cf28b739b97456620"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#ac78c78ede3b8e48cf28b739b97456620">SpecificSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index, unsigned mesh_index)=0</td></tr>
-<tr class="memdesc:ac78c78ede3b8e48cf28b739b97456620"><td class="mdescLeft">&#160;</td><td class="mdescRight">固有設定関数  <a href="#ac78c78ede3b8e48cf28b739b97456620">[詳解]</a><br /></td></tr>
-<tr class="separator:ac78c78ede3b8e48cf28b739b97456620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a054bc5e129619ec976740e0698ef9a8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a054bc5e129619ec976740e0698ef9a8b">ObjectSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index)=0</td></tr>
+<tr class="memdesc:a054bc5e129619ec976740e0698ef9a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト設定関数  <a href="#a054bc5e129619ec976740e0698ef9a8b">[詳解]</a><br /></td></tr>
+<tr class="separator:a054bc5e129619ec976740e0698ef9a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04f6ce27a707f4040e8abe48f9840951"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a04f6ce27a707f4040e8abe48f9840951">MeshSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index, unsigned mesh_index)=0</td></tr>
+<tr class="memdesc:a04f6ce27a707f4040e8abe48f9840951"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ設定関数  <a href="#a04f6ce27a707f4040e8abe48f9840951">[詳解]</a><br /></td></tr>
+<tr class="separator:a04f6ce27a707f4040e8abe48f9840951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e5b6f343821648409d50653e0105e2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a78e5b6f343821648409d50653e0105e2">ShaderSetToDevice</a> ()=0</td></tr>
+<tr class="memdesc:a78e5b6f343821648409d50653e0105e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスにシェーダー設定関数  <a href="#a78e5b6f343821648409d50653e0105e2">[詳解]</a><br /></td></tr>
+<tr class="separator:a78e5b6f343821648409d50653e0105e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
 <tr class="memitem:ac6e791440374f97592cfb4cb36f4fa55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#ac6e791440374f97592cfb4cb36f4fa55">ShaderCompile</a> (const char *file_name, const char *entry_function, const char *version, LPD3DXBUFFER *compiled_code)</td></tr>
 <tr class="memdesc:ac6e791440374f97592cfb4cb36f4fa55"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダーコンパイル関数  <a href="#ac6e791440374f97592cfb4cb36f4fa55">[詳解]</a><br /></td></tr>
 <tr class="separator:ac6e791440374f97592cfb4cb36f4fa55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaac3419f1fce5bf12973e827daadbf8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#aaac3419f1fce5bf12973e827daadbf8c">InitDevice</a> ()</td></tr>
-<tr class="memdesc:aaac3419f1fce5bf12973e827daadbf8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスの初期化関数  <a href="#aaac3419f1fce5bf12973e827daadbf8c">[詳解]</a><br /></td></tr>
+<tr class="memdesc:aaac3419f1fce5bf12973e827daadbf8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイス初期化関数  <a href="#aaac3419f1fce5bf12973e827daadbf8c">[詳解]</a><br /></td></tr>
 <tr class="separator:aaac3419f1fce5bf12973e827daadbf8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4601ff3d20f01800ffd676d3db8d9289"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DDEVICE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a4601ff3d20f01800ffd676d3db8d9289">GetDevice</a> ()</td></tr>
-<tr class="separator:a4601ff3d20f01800ffd676d3db8d9289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85a5c17b56b6ffa29f7784ab42696d7c"><td class="memItemLeft" align="right" valign="top">LPD3DXCONSTANTTABLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a85a5c17b56b6ffa29f7784ab42696d7c">GetConstantTable</a> ()</td></tr>
-<tr class="separator:a85a5c17b56b6ffa29f7784ab42696d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b6fc2252b39598f36e91aec1a207e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a30b6fc2252b39598f36e91aec1a207e7">ReleaseConstantTable</a> ()</td></tr>
+<tr class="memdesc:a30b6fc2252b39598f36e91aec1a207e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">定数テーブル解放関数  <a href="#a30b6fc2252b39598f36e91aec1a207e7">[詳解]</a><br /></td></tr>
+<tr class="separator:a30b6fc2252b39598f36e91aec1a207e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 非公開変数類</h2></td></tr>
-<tr class="memitem:a15e4a4c1c1148433b9a0c60a7c32a366"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DDEVICE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a15e4a4c1c1148433b9a0c60a7c32a366">device_</a> = nullptr</td></tr>
-<tr class="memdesc:a15e4a4c1c1148433b9a0c60a7c32a366"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイス  <a href="#a15e4a4c1c1148433b9a0c60a7c32a366">[詳解]</a><br /></td></tr>
-<tr class="separator:a15e4a4c1c1148433b9a0c60a7c32a366"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b6b2a5920dd57ac463040224fb64b68"><td class="memItemLeft" align="right" valign="top">LPD3DXCONSTANTTABLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a9b6b2a5920dd57ac463040224fb64b68">constant_table_</a> = nullptr</td></tr>
 <tr class="memdesc:a9b6b2a5920dd57ac463040224fb64b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">定数テーブル  <a href="#a9b6b2a5920dd57ac463040224fb64b68">[詳解]</a><br /></td></tr>
 <tr class="separator:a9b6b2a5920dd57ac463040224fb64b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15e4a4c1c1148433b9a0c60a7c32a366"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DDEVICE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a15e4a4c1c1148433b9a0c60a7c32a366">device_</a> = nullptr</td></tr>
+<tr class="memdesc:a15e4a4c1c1148433b9a0c60a7c32a366"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイス  <a href="#a15e4a4c1c1148433b9a0c60a7c32a366">[詳解]</a><br /></td></tr>
+<tr class="separator:a15e4a4c1c1148433b9a0c60a7c32a366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35b31a286a2d5df521f504e3d883da02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_base.html#a35b31a286a2d5df521f504e3d883da02">common_data_</a> = nullptr</td></tr>
+<tr class="memdesc:a35b31a286a2d5df521f504e3d883da02"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ  <a href="#a35b31a286a2d5df521f504e3d883da02">[詳解]</a><br /></td></tr>
+<tr class="separator:a35b31a286a2d5df521f504e3d883da02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>シェーダー基底クラス </p>
-<p>シェーダー基底クラス </p>
+<div class="textblock"><p>シェーダーBaseClass </p>
+<p>シェーダーのBaseClass </p>
 
-<p class="definition"> <a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a> の <a class="el" href="_shader_base_8h_source.html#l00030">30</a> 行目に定義があります。</p>
-</div><h2 class="groupheader">関数詳解</h2>
-<a id="aef6fa922223d71fbec81464ebbfaf687"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef6fa922223d71fbec81464ebbfaf687">&#9670;&nbsp;</a></span>CommonSetting()</h2>
+<p class="definition"> <a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a> の <a class="el" href="_shader_base_8h_source.html#l00026">26</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a3b7c2337128ca825093ab3a47bce4084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7c2337128ca825093ab3a47bce4084">&#9670;&nbsp;</a></span>~ShaderBase()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +188,291 @@ ShaderBase の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void ShaderBase::CommonSetting </td>
+          <td class="memname">ShaderBase::~ShaderBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デストラクタ関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_shader_base_8cpp_source.html">ShaderBase.cpp</a> の <a class="el" href="_shader_base_8cpp_source.html#l00051">51</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a89f6e1ba14f7db57248c794356f9b076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f6e1ba14f7db57248c794356f9b076">&#9670;&nbsp;</a></span>getpConstantTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPD3DXCONSTANTTABLE ShaderBase::getpConstantTable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定数テーブル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">LPD3DXCONSTANTTABLE</td><td>定数テーブル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_shader_base_8cpp_source.html">ShaderBase.cpp</a> の <a class="el" href="_shader_base_8cpp_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa16d631f799060854de36a024dcfce48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa16d631f799060854de36a024dcfce48">&#9670;&nbsp;</a></span>getpDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPDIRECT3DDEVICE9 ShaderBase::getpDevice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デバイス取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">LPDIRECT3DDEVICE9</td><td>デバイス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_shader_base_8cpp_source.html">ShaderBase.cpp</a> の <a class="el" href="_shader_base_8cpp_source.html#l00027">27</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7637faa8fe5aa027dc91e00cfee26f33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7637faa8fe5aa027dc91e00cfee26f33">&#9670;&nbsp;</a></span>getpDrawCommonData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> * ShaderBase::getpDrawCommonData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画共通データ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>描画共通データ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_shader_base_8cpp_source.html">ShaderBase.cpp</a> の <a class="el" href="_shader_base_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9622b2f5e0184a78d3af82820dc5113d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9622b2f5e0184a78d3af82820dc5113d">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ShaderBase::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_vertex_shader_bump_mapping.html#a6c0f59d1f29fd883943a66bfe61b6b03">VertexShaderBumpMapping</a>, <a class="el" href="class_vertex_shader_animated_default.html#a974cb247b42cb1c9288a9de9ed9048e9">VertexShaderAnimatedDefault</a>, <a class="el" href="class_vertex_shader_blinn_phong.html#a565b15a20d6c73d8b8e0c7dcc3078464">VertexShaderBlinnPhong</a>, <a class="el" href="class_vertex_shader_cook_torrance.html#afab2193c27ca9cdc8490585743cd7ca3">VertexShaderCookTorrance</a>, <a class="el" href="class_vertex_shader_default.html#afdf5dbbc83e9007fa85ed345e228d304">VertexShaderDefault</a>, <a class="el" href="class_vertex_shader_default_shadow.html#ad0033ccbf57a28ab9879313d3f300338">VertexShaderDefaultShadow</a>, <a class="el" href="class_vertex_shader_shadow_map.html#ad05ff60e979b3d2af8603a118cb51185">VertexShaderShadowMap</a>, <a class="el" href="class_pixel_shader_default.html#a74187e4e936d79947753bf4028a411bf">PixelShaderDefault</a>, <a class="el" href="class_pixel_shader_default_shadow.html#a22be67e887bcad8d9b6725cbae7e3abc">PixelShaderDefaultShadow</a>, <a class="el" href="class_pixel_shader_shadow_map.html#a4e68df44391fdd93985ad7b361828f99">PixelShaderShadowMap</a>, <a class="el" href="class_pixel_shader_blinn_phong.html#af02b6b6659975f0285aebced953c567a">PixelShaderBlinnPhong</a>, <a class="el" href="class_pixel_shader_bump_mapping.html#ab7807b7c56242e965ddb23e66e1a5d9e">PixelShaderBumpMapping</a>, <a class="el" href="class_pixel_shader_cook_torrance.html#aed6d21d6560d11fede08e596f49716d5">PixelShaderCookTorrance</a>, <a class="el" href="class_vertex_shader_fixed.html#ae829ff736b33c45543804059255125b6">VertexShaderFixed</a>, <a class="el" href="class_pixel_shader_null.html#a5318be2bf26892c385d863e3e8409571">PixelShaderNull</a>, <a class="el" href="class_vertex_shader_null.html#a4d79b358dab49c840345d74823a16840">VertexShaderNull</a> (計16項目)で実装されています。</p>
+
+</div>
+</div>
+<a id="aaac3419f1fce5bf12973e827daadbf8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaac3419f1fce5bf12973e827daadbf8c">&#9670;&nbsp;</a></span>InitDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderBase::InitDevice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デバイス初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_shader_base_8cpp_source.html">ShaderBase.cpp</a> の <a class="el" href="_shader_base_8cpp_source.html#l00098">98</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a04f6ce27a707f4040e8abe48f9840951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04f6ce27a707f4040e8abe48f9840951">&#9670;&nbsp;</a></span>MeshSetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ShaderBase::MeshSetting </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mesh_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>メッシュ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+    <tr><td class="paramname">*camera</td><td>カメラ </td></tr>
+    <tr><td class="paramname">object_index</td><td>描画オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_vertex_shader_bump_mapping.html#aea3347e35f823d5272b4adcd2ca9724a">VertexShaderBumpMapping</a>, <a class="el" href="class_vertex_shader_animated_default.html#ad19fa307106654c4e8337db832018cc6">VertexShaderAnimatedDefault</a>, <a class="el" href="class_vertex_shader_blinn_phong.html#a5a5e76dcd64d4da2b2d3a4d9b1f4af21">VertexShaderBlinnPhong</a>, <a class="el" href="class_vertex_shader_cook_torrance.html#a56c481293790c7269d6973e2ddae97f2">VertexShaderCookTorrance</a>, <a class="el" href="class_vertex_shader_default.html#a9ad7c52aa9f82f9cb0d2c60fde2bac4a">VertexShaderDefault</a>, <a class="el" href="class_vertex_shader_default_shadow.html#ae30039c4431a79ffd56609f599c72058">VertexShaderDefaultShadow</a>, <a class="el" href="class_pixel_shader_default.html#a18985aa792820858e214f141643119c4">PixelShaderDefault</a>, <a class="el" href="class_pixel_shader_default_shadow.html#adec247949dea3a73545f602641a99103">PixelShaderDefaultShadow</a>, <a class="el" href="class_pixel_shader_blinn_phong.html#a5b4b61a3d51610d6a41dfb3b25704421">PixelShaderBlinnPhong</a>, <a class="el" href="class_pixel_shader_bump_mapping.html#ac1ff541401f121f7bd15b6e11cab997f">PixelShaderBumpMapping</a>, <a class="el" href="class_pixel_shader_cook_torrance.html#a0e658d9792cc15730c800db5a509fad9">PixelShaderCookTorrance</a>, <a class="el" href="class_vertex_shader_fixed.html#ab6e2024e01390866d778aa6db4085ac4">VertexShaderFixed</a>, <a class="el" href="class_pixel_shader_null.html#a89b6f0558a969478b06af52bb8e6ee16">PixelShaderNull</a>, <a class="el" href="class_vertex_shader_null.html#a7bd853b15ab81cec44f1b6a1ea70a3a9">VertexShaderNull</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a054bc5e129619ec976740e0698ef9a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a054bc5e129619ec976740e0698ef9a8b">&#9670;&nbsp;</a></span>ObjectSetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ShaderBase::ObjectSetting </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
           <td class="paramname"><em>draw</em>, </td>
@@ -198,20 +502,28 @@ ShaderBase の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p>共通設定関数 </p>
+<p>オブジェクト設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">draw</td><td>: 描画基底クラス camera : カメラ object_index : 描画オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+    <tr><td class="paramname">*camera</td><td>カメラ </td></tr>
+    <tr><td class="paramname">object_index</td><td>描画オブジェクトインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
   </table>
   </dd>
 </dl>
 
-<p><a class="el" href="class_vertex_shader_bump_mapping.html#a7979584d035fff86d386c99617a8dd2c">VertexShaderBumpMapping</a>, <a class="el" href="class_pixel_shader_bump_mapping.html#af62a2b40930533a3bae17319f876705d">PixelShaderBumpMapping</a>, <a class="el" href="class_vertex_shader_fixed.html#a82bf2829b6fd0df26faedcbf650ba08d">VertexShaderFixed</a>, <a class="el" href="class_pixel_shader_null.html#a99c712ab174da29ba26a893820b64799">PixelShaderNull</a>, <a class="el" href="class_vertex_shader_null.html#a95f1a66045fb39c42cf0566f1990b6a1">VertexShaderNull</a>で実装されています。</p>
+<p><a class="el" href="class_vertex_shader_bump_mapping.html#a29aa8761a52dbd79b7cd3063027e67db">VertexShaderBumpMapping</a>, <a class="el" href="class_vertex_shader_animated_default.html#a43d82c0666bffa49704eda4eb1f549d3">VertexShaderAnimatedDefault</a>, <a class="el" href="class_vertex_shader_blinn_phong.html#ac1a1ee4254b6b44a680b31c2ee42f44f">VertexShaderBlinnPhong</a>, <a class="el" href="class_vertex_shader_cook_torrance.html#ac58b40e7b64d3460c66fac23bd067789">VertexShaderCookTorrance</a>, <a class="el" href="class_vertex_shader_default.html#aaf5f5716a2ec33bf374ae7b7f16e5c8b">VertexShaderDefault</a>, <a class="el" href="class_vertex_shader_default_shadow.html#ab86431938f31721d1c5d6fe60ebe2f92">VertexShaderDefaultShadow</a>, <a class="el" href="class_vertex_shader_shadow_map.html#a49f6120c2ca0200ca4d8bcb05cfae4d8">VertexShaderShadowMap</a>, <a class="el" href="class_pixel_shader_default.html#ae70580bd12afdbf654122bdb4dce85d0">PixelShaderDefault</a>, <a class="el" href="class_pixel_shader_default_shadow.html#ac7e4f76ddef588b97dd898c31023be37">PixelShaderDefaultShadow</a>, <a class="el" href="class_pixel_shader_blinn_phong.html#a772f7d20219ce7a563a8e608306f0ca1">PixelShaderBlinnPhong</a>, <a class="el" href="class_pixel_shader_bump_mapping.html#a03839e7482a4a53ff1dc18ab288fec05">PixelShaderBumpMapping</a>, <a class="el" href="class_pixel_shader_cook_torrance.html#a2eff8f1808d5c7686599949537e7fdc4">PixelShaderCookTorrance</a>, <a class="el" href="class_vertex_shader_fixed.html#abe7cdb76b7da899680b1079344631cef">VertexShaderFixed</a>, <a class="el" href="class_pixel_shader_null.html#a488bde4a2c9a9c45c4ec0ad42487d3b1">PixelShaderNull</a>, <a class="el" href="class_vertex_shader_null.html#aae3231bb3fa5df2578ba89701867ffb3">VertexShaderNull</a> (計15項目)で実装されています。</p>
 
 </div>
 </div>
-<a id="a85a5c17b56b6ffa29f7784ab42696d7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85a5c17b56b6ffa29f7784ab42696d7c">&#9670;&nbsp;</a></span>GetConstantTable()</h2>
+<a id="a30b6fc2252b39598f36e91aec1a207e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30b6fc2252b39598f36e91aec1a207e7">&#9670;&nbsp;</a></span>ReleaseConstantTable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,7 +532,7 @@ ShaderBase の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">LPD3DXCONSTANTTABLE ShaderBase::GetConstantTable </td>
+          <td class="memname">void ShaderBase::ReleaseConstantTable </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -228,126 +540,60 @@ ShaderBase の継承関係図</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a> の <a class="el" href="_shader_base_8h_source.html#l00142">142</a> 行目に定義があります。</p>
+<p>定数テーブル解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_shader_base_8cpp_source.html">ShaderBase.cpp</a> の <a class="el" href="_shader_base_8cpp_source.html#l00111">111</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a4601ff3d20f01800ffd676d3db8d9289"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4601ff3d20f01800ffd676d3db8d9289">&#9670;&nbsp;</a></span>GetDevice()</h2>
+<a id="abbffa59fae48651c11489de37a88b190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbffa59fae48651c11489de37a88b190">&#9670;&nbsp;</a></span>setDrawCommonData()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">LPDIRECT3DDEVICE9 ShaderBase::GetDevice </td>
+          <td class="memname">void ShaderBase::setDrawCommonData </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a> の <a class="el" href="_shader_base_8h_source.html#l00141">141</a> 行目に定義があります。</p>
+<p>描画共通データ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*value</td><td>描画共通データ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-</div>
-</div>
-<a id="a9622b2f5e0184a78d3af82820dc5113d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9622b2f5e0184a78d3af82820dc5113d">&#9670;&nbsp;</a></span>Init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ShaderBase::Init </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>初期化関数 </p>
-
-<p><a class="el" href="class_vertex_shader_bump_mapping.html#a6c0f59d1f29fd883943a66bfe61b6b03">VertexShaderBumpMapping</a>, <a class="el" href="class_pixel_shader_bump_mapping.html#ab7807b7c56242e965ddb23e66e1a5d9e">PixelShaderBumpMapping</a>, <a class="el" href="class_vertex_shader_fixed.html#ae829ff736b33c45543804059255125b6">VertexShaderFixed</a>, <a class="el" href="class_pixel_shader_null.html#abfd7a6a986da09061a55d31024219eba">PixelShaderNull</a>, <a class="el" href="class_vertex_shader_null.html#af30eb8057fe0537bc6ade214647b6fb5">VertexShaderNull</a>で実装されています。</p>
-
-</div>
-</div>
-<a id="aaac3419f1fce5bf12973e827daadbf8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaac3419f1fce5bf12973e827daadbf8c">&#9670;&nbsp;</a></span>InitDevice()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ShaderBase::InitDevice </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>デバイスの初期化関数 </p>
-
-<p class="definition"> <a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a> の <a class="el" href="_shader_base_8h_source.html#l00129">129</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="af45063254b80602db8626360d643baee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af45063254b80602db8626360d643baee">&#9670;&nbsp;</a></span>SetShader()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ShaderBase::SetShader </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>シェーダー設定関数 </p>
-
-<p><a class="el" href="class_pixel_shader_base.html#a73f41bda5cbb9309ad415cdc471954a2">PixelShaderBase</a>, <a class="el" href="class_vertex_shader_base.html#a9f93697c5668852850f0a7b7ef7cb67f">VertexShaderBase</a>で実装されています。</p>
+<p class="definition"> <a class="el" href="_shader_base_8cpp_source.html">ShaderBase.cpp</a> の <a class="el" href="_shader_base_8cpp_source.html#l00041">41</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -392,7 +638,7 @@ ShaderBase の継承関係図</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -400,18 +646,26 @@ ShaderBase の継承関係図</div>
 <p>シェーダーコンパイル関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>: ファイル名 entry_function : エントリ関数名 version : シェーダーバージョン compiled_code : コンパイル済みコード </td></tr>
+    <tr><td class="paramname">*file_name</td><td>: ファイル名 </td></tr>
+    <tr><td class="paramname">*entry_function</td><td>: エントリ関数名 </td></tr>
+    <tr><td class="paramname">*version</td><td>: シェーダーバージョン </td></tr>
+    <tr><td class="paramname">*compiled_code</td><td>: コンパイル済みコード </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>コンパイル成功ならtrue </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>コンパイル成功ならtrue </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a> の <a class="el" href="_shader_base_8h_source.html#l00095">95</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_shader_base_8cpp_source.html">ShaderBase.cpp</a> の <a class="el" href="_shader_base_8cpp_source.html#l00058">58</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ac78c78ede3b8e48cf28b739b97456620"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac78c78ede3b8e48cf28b739b97456620">&#9670;&nbsp;</a></span>SpecificSetting()</h2>
+<a id="a78e5b6f343821648409d50653e0105e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e5b6f343821648409d50653e0105e2">&#9670;&nbsp;</a></span>ShaderSetToDevice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -420,33 +674,10 @@ ShaderBase の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void ShaderBase::SpecificSetting </td>
+          <td class="memname">virtual void ShaderBase::ShaderSetToDevice </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
-          <td class="paramname"><em>draw</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
-          <td class="paramname"><em>camera</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>object_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>mesh_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -456,15 +687,21 @@ ShaderBase の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p>固有設定関数 </p>
+<p>デバイスにシェーダー設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">draw</td><td>: 描画基底クラス camera : カメラ object_index : 描画オブジェクトインデックス mesh_index : メッシュインデックス </td></tr>
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
   </table>
   </dd>
 </dl>
 
-<p><a class="el" href="class_vertex_shader_bump_mapping.html#ad81d57336763441c4071f967b57dbce1">VertexShaderBumpMapping</a>, <a class="el" href="class_pixel_shader_bump_mapping.html#afa80c2404b490a444d54cc47c681ca8f">PixelShaderBumpMapping</a>, <a class="el" href="class_vertex_shader_fixed.html#a87523c320f6f6767d59d7b24265db7ec">VertexShaderFixed</a>, <a class="el" href="class_pixel_shader_null.html#a8dd0194b5a22da5261ab35233a7cfdcd">PixelShaderNull</a>, <a class="el" href="class_vertex_shader_null.html#aa2234c6ea083e3c0233d59f222145992">VertexShaderNull</a>で実装されています。</p>
+<p><a class="el" href="class_pixel_shader_base.html#a6cb7e981ff245b27a30f1943c28f2229">PixelShaderBase</a>, <a class="el" href="class_vertex_shader_base.html#a72c88a06560f530be7cb04923a916904">VertexShaderBase</a>で実装されています。</p>
 
 </div>
 </div>
@@ -492,12 +729,50 @@ ShaderBase の継承関係図</div>
 </div><div class="memdoc">
 
 <p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p><a class="el" href="class_vertex_shader_bump_mapping.html#abed4e0aa9655fa7a7a21e03d00e7c0e5">VertexShaderBumpMapping</a>, <a class="el" href="class_pixel_shader_bump_mapping.html#a004f731db6dab6b59949baed4a5a32d7">PixelShaderBumpMapping</a>, <a class="el" href="class_vertex_shader_fixed.html#a49f630aee4757c8fd8bae886f22dfeb0">VertexShaderFixed</a>, <a class="el" href="class_pixel_shader_null.html#ae5ee2fa95e5da787918ccbd1877cd0ef">PixelShaderNull</a>, <a class="el" href="class_vertex_shader_null.html#a16334df4ac02db3dd63f042622032301">VertexShaderNull</a>で実装されています。</p>
+<p><a class="el" href="class_vertex_shader_bump_mapping.html#abed4e0aa9655fa7a7a21e03d00e7c0e5">VertexShaderBumpMapping</a>, <a class="el" href="class_vertex_shader_animated_default.html#a683f221e9b70d13fdb63e7b8fb15f31c">VertexShaderAnimatedDefault</a>, <a class="el" href="class_vertex_shader_blinn_phong.html#a26af54fcf9adccbe449a65d7a078c02f">VertexShaderBlinnPhong</a>, <a class="el" href="class_vertex_shader_cook_torrance.html#ab2cc9cc8ed675abc5f1194a82bc8d405">VertexShaderCookTorrance</a>, <a class="el" href="class_vertex_shader_default.html#a8091b23a7742804b4e9d8de4bee17f44">VertexShaderDefault</a>, <a class="el" href="class_vertex_shader_default_shadow.html#aee16a04757ab1698d76bdca43834c633">VertexShaderDefaultShadow</a>, <a class="el" href="class_vertex_shader_shadow_map.html#a5b36c3531d6116c609c8a62bc4ffd95d">VertexShaderShadowMap</a>, <a class="el" href="class_pixel_shader_default.html#af195bc2ba2e5f7352d4b762b20825d95">PixelShaderDefault</a>, <a class="el" href="class_pixel_shader_default_shadow.html#abd9b03c980fed91c4fc14bbab244adbd">PixelShaderDefaultShadow</a>, <a class="el" href="class_pixel_shader_shadow_map.html#aa95a200a1bf5bd91ffaa526a647818f1">PixelShaderShadowMap</a>, <a class="el" href="class_pixel_shader_blinn_phong.html#a50450f0ad9c6c0ad011361ee153088af">PixelShaderBlinnPhong</a>, <a class="el" href="class_pixel_shader_bump_mapping.html#a004f731db6dab6b59949baed4a5a32d7">PixelShaderBumpMapping</a>, <a class="el" href="class_pixel_shader_cook_torrance.html#af2af86383b1724d1bf1364533a07fc5a">PixelShaderCookTorrance</a>, <a class="el" href="class_vertex_shader_fixed.html#a49f630aee4757c8fd8bae886f22dfeb0">VertexShaderFixed</a>, <a class="el" href="class_pixel_shader_null.html#adca4c44cd25c90a5ebd75b459f5e641e">PixelShaderNull</a>, <a class="el" href="class_vertex_shader_null.html#adf758f295d2803c6d8bd7e05e461abec">VertexShaderNull</a> (計16項目)で実装されています。</p>
 
 </div>
 </div>
 <h2 class="groupheader">メンバ詳解</h2>
+<a id="a35b31a286a2d5df521f504e3d883da02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35b31a286a2d5df521f504e3d883da02">&#9670;&nbsp;</a></span>common_data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_draw_common_data.html">DrawCommonData</a>* ShaderBase::common_data_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画共通データ </p>
+
+<p class="definition"> <a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a> の <a class="el" href="_shader_base_8h_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="a9b6b2a5920dd57ac463040224fb64b68"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b6b2a5920dd57ac463040224fb64b68">&#9670;&nbsp;</a></span>constant_table_</h2>
 
@@ -520,7 +795,7 @@ ShaderBase の継承関係図</div>
 
 <p>定数テーブル </p>
 
-<p class="definition"> <a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a> の <a class="el" href="_shader_base_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a> の <a class="el" href="_shader_base_8h_source.html#l00032">32</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -546,12 +821,13 @@ ShaderBase の継承関係図</div>
 
 <p>デバイス </p>
 
-<p class="definition"> <a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a> の <a class="el" href="_shader_base_8h_source.html#l00036">36</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a> の <a class="el" href="_shader_base_8h_source.html#l00033">33</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/DrawManager/Shader/ShaderBase/<a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/Shader/<a class="el" href="_shader_base_8h_source.html">ShaderBase.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/Shader/Source/<a class="el" href="_shader_base_8cpp_source.html">ShaderBase.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -2,116 +2,141 @@
 \label{class_score}\index{Score@{Score}}
 
 
+スコア\+Class  
+
+
+
+
 {\ttfamily \#include $<$Score.\+h$>$}
 
 
 
-Score の継承関係図\nopagebreak
+Score 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=174pt]{class_score__inherit__graph}
+\includegraphics[width=350pt]{class_score__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_score_a7d461a8b72ddfd00213858286d702486}{Init}} (\mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$update\+\_\+component, \mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw\+\_\+component, \mbox{\hyperlink{class_game_scene}{Game\+Scene}} $\ast$game\+\_\+scene)
-\item 
-void \mbox{\hyperlink{class_score_a605e163dc59ccc4d19a3cb6b5db813b8}{Uninit}} () override
-\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_score_ad01d461a2b6ca345858b2ae0a3d81cc1}{Reset}} () override
-\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{公開変数類}
+int \mbox{\hyperlink{class_score_a8627c93270c188a3fd28a25b1d07a9e7}{get\+Score}} ()
+\begin{DoxyCompactList}\small\item\em スコア取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_score_a11cc65a5d91bb14d62a364150565972d}{set\+Score}} (int value)
+\begin{DoxyCompactList}\small\item\em スコア設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_score_ab75a9a16b40fc6e424740db1ff6f1917}{Init}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_numbers}{Numbers}} $\ast$ \mbox{\hyperlink{class_score_a5d178c5581627f1fa4c06f95f9558dcd}{score\+\_\+num\+\_\+}}
-\item 
-\mbox{\hyperlink{class_game_scene}{Game\+Scene}} $\ast$ \mbox{\hyperlink{class_score_ada5a957b01fbed0c1bb52cea4e1bcbc4}{game\+\_\+scene\+\_\+}}
-\end{DoxyCompactItemize}
+int \mbox{\hyperlink{class_score_acaeda7737ddfbd4401adf960d3975d74}{score\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em スコア \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
+スコア\+Class 
 
+スコアの\+Class 
 
- Score.\+h の 31 行目に定義があります。
+ Score.\+h の 24 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_score_a7d461a8b72ddfd00213858286d702486}\label{class_score_a7d461a8b72ddfd00213858286d702486}} 
+\mbox{\Hypertarget{class_score_a8627c93270c188a3fd28a25b1d07a9e7}\label{class_score_a8627c93270c188a3fd28a25b1d07a9e7}} 
+\index{Score@{Score}!get\+Score@{get\+Score}}
+\index{get\+Score@{get\+Score}!Score@{Score}}
+\subsubsection{\texorpdfstring{get\+Score()}{getScore()}}
+{\footnotesize\ttfamily int Score\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+スコア取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & スコア \\
+\hline
+\end{DoxyRetVals}
+
+
+ Score.\+cpp の 20 行目に定義があります。
+
+\mbox{\Hypertarget{class_score_ab75a9a16b40fc6e424740db1ff6f1917}\label{class_score_ab75a9a16b40fc6e424740db1ff6f1917}} 
 \index{Score@{Score}!Init@{Init}}
 \index{Init@{Init}!Score@{Score}}
 \subsubsection{\texorpdfstring{Init()}{Init()}}
-{\footnotesize\ttfamily void Score\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$}]{update\+\_\+component,  }\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw\+\_\+component,  }\item[{\mbox{\hyperlink{class_game_scene}{Game\+Scene}} $\ast$}]{game\+\_\+scene }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Score\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw }\end{DoxyParamCaption})}
 
 
 
- Score.\+cpp の 33 行目に定義があります。
-
-\mbox{\Hypertarget{class_score_ad01d461a2b6ca345858b2ae0a3d81cc1}\label{class_score_ad01d461a2b6ca345858b2ae0a3d81cc1}} 
-\index{Score@{Score}!Reset@{Reset}}
-\index{Reset@{Reset}!Score@{Score}}
-\subsubsection{\texorpdfstring{Reset()}{Reset()}}
-{\footnotesize\ttfamily void Score\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+\end{DoxyParams}
 
-リセット関数 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Score.\+cpp の 37 行目に定義があります。
 
-\mbox{\hyperlink{class_game_object_base_a85c59554f734bcb09f1a1e18d9517dce}{Game\+Object\+Base}}を実装しています。
-
-
-
- Score.\+cpp の 70 行目に定義があります。
-
-\mbox{\Hypertarget{class_score_a605e163dc59ccc4d19a3cb6b5db813b8}\label{class_score_a605e163dc59ccc4d19a3cb6b5db813b8}} 
-\index{Score@{Score}!Uninit@{Uninit}}
-\index{Uninit@{Uninit}!Score@{Score}}
-\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
-{\footnotesize\ttfamily void Score\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_score_a11cc65a5d91bb14d62a364150565972d}\label{class_score_a11cc65a5d91bb14d62a364150565972d}} 
+\index{Score@{Score}!set\+Score@{set\+Score}}
+\index{set\+Score@{set\+Score}!Score@{Score}}
+\subsubsection{\texorpdfstring{set\+Score()}{setScore()}}
+{\footnotesize\ttfamily void Score\+::set\+Score (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
 
 
 
-終了関数 
+スコア設定関数 
 
 
+\begin{DoxyParams}{引数}
+{\em value} & スコア \\
+\hline
+\end{DoxyParams}
 
-\mbox{\hyperlink{class_game_object_base_a97e1bc277d7b1c0156d4735de29a022c}{Game\+Object\+Base}}を再実装しています。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
-
- Score.\+cpp の 56 行目に定義があります。
+ Score.\+cpp の 27 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
-\mbox{\Hypertarget{class_score_ada5a957b01fbed0c1bb52cea4e1bcbc4}\label{class_score_ada5a957b01fbed0c1bb52cea4e1bcbc4}} 
-\index{Score@{Score}!game\+\_\+scene\+\_\+@{game\+\_\+scene\+\_\+}}
-\index{game\+\_\+scene\+\_\+@{game\+\_\+scene\+\_\+}!Score@{Score}}
-\subsubsection{\texorpdfstring{game\+\_\+scene\+\_\+}{game\_scene\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_game_scene}{Game\+Scene}}$\ast$ Score\+::game\+\_\+scene\+\_\+}
+\mbox{\Hypertarget{class_score_acaeda7737ddfbd4401adf960d3975d74}\label{class_score_acaeda7737ddfbd4401adf960d3975d74}} 
+\index{Score@{Score}!score\+\_\+@{score\+\_\+}}
+\index{score\+\_\+@{score\+\_\+}!Score@{Score}}
+\subsubsection{\texorpdfstring{score\+\_\+}{score\_}}
+{\footnotesize\ttfamily int Score\+::score\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Score.\+h の 47 行目に定義があります。
-
-\mbox{\Hypertarget{class_score_a5d178c5581627f1fa4c06f95f9558dcd}\label{class_score_a5d178c5581627f1fa4c06f95f9558dcd}} 
-\index{Score@{Score}!score\+\_\+num\+\_\+@{score\+\_\+num\+\_\+}}
-\index{score\+\_\+num\+\_\+@{score\+\_\+num\+\_\+}!Score@{Score}}
-\subsubsection{\texorpdfstring{score\+\_\+num\+\_\+}{score\_num\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_numbers}{Numbers}}$\ast$ Score\+::score\+\_\+num\+\_\+}
+スコア 
 
 
 
- Score.\+h の 46 行目に定義があります。
+ Score.\+h の 30 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/2\+D/\+U\+I/\+Score/\mbox{\hyperlink{_score_8h}{Score.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/2\+D/\+U\+I/\+Score/\mbox{\hyperlink{_score_8cpp}{Score.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/2\+D/\+Score/\mbox{\hyperlink{_score_8h}{Score.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/2\+D/\+Score/\+Source/\mbox{\hyperlink{_score_8cpp}{Score.\+cpp}}\end{DoxyCompactItemize}

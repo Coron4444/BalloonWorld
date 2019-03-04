@@ -1,0 +1,193 @@
+//================================================================================
+//!	@file	 CookTorrance.psh
+//!	@brief	 クック・トランスの金属反射PixelShader
+//! @details 
+//!	@author  Kai Araki									@date 2019/02/17
+//================================================================================
+
+
+
+//****************************************
+// グローバル変数
+//****************************************
+// ディレクショナルライトベクトル(プログラム上で正規化済みが渡される)
+float4 DIRECTIONAL_LIGHT_VECTOR = {1.0f, 0.0f, 0.0f, 1.0f};
+
+// カメラ座標
+float3 CAMERA_POSITION = {0.0f, 0.0f, 0.0f};
+
+// ディヒューズテクスチャ
+texture DIFFUSE_TEXTURE;
+
+
+
+//****************************************
+// サンプラ
+//****************************************
+sampler DIFFUSE_SAMPLER = sampler_state
+{
+    Texture = <DIFFUSE_TEXTURE>;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+    MipFilter = NONE;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
+
+
+
+//************************************************************														   
+//! @brief   インプットStruct
+//!
+//! @details インプットのStruct
+//************************************************************
+struct Input
+{
+    float4 color_       : COLOR0;    //!< 色
+    float3 ps_position_ : TEXCOORD0; //!< PS用座標
+    float3 ps_normal_   : TEXCOORD1; //!< PS用法線
+    float2 ps_uv_       : TEXCOORD2; //!< PS用UV
+};
+
+
+
+//****************************************
+// 関数宣言
+//****************************************
+void CalculateBeckmannDistributionFunction(Input input, float dot_normal_half, inout float beckmann);
+void CalculateFresnel(Input input, float dot_light_half, inout float fresnel0, inout float fresnel1);
+void CalculateMetalColor(float4 light_color, inout float4 metal_color);
+
+
+
+//--------------------------------------------------
+//! @brief エントリー関数
+//! @details
+//! @param input     入力データ 
+//! @param out_color 出力色
+//! @retval void なし
+//--------------------------------------------------
+void MainPixelShader(Input input, out float4 out_color : COLOR0)
+{
+    // 出力データ初期化
+    out_color = (float4)0.0f;
+
+    // 法線を正規化
+    input.ps_normal_ = normalize(input.ps_normal_);
+
+    // ディレクショナルライトベクトルを反転
+    float3 inverse_light_vector = -DIRECTIONAL_LIGHT_VECTOR;
+
+    // 逆視線ベクトルの作成
+    float3 inverse_gaze_vector = normalize(CAMERA_POSITION - input.ps_position_);
+
+    // ハーフベクトル作成
+    float3 half_vector = normalize(inverse_light_vector + inverse_gaze_vector);
+
+    // 各種角度(cosΘ)の算出
+    float dot_normal_gaze = dot(input.ps_normal_, inverse_gaze_vector);
+    float dot_normal_half = dot(input.ps_normal_, half_vector);
+    float dot_normal_light = dot(input.ps_normal_, inverse_light_vector);
+    float dot_eye_half = dot(inverse_gaze_vector, half_vector);
+    float dot_light_half = dot(inverse_light_vector, half_vector);
+
+    // Beckmann分布関数の算出
+    float beckmann;
+    CalculateBeckmannDistributionFunction(input, dot_normal_half, beckmann);
+
+    // 幾何減衰率の算出
+    float geometric_decay_rate = min(1, min((2 * dot_normal_half * dot_normal_gaze)
+                                             / dot_eye_half, (2 * dot_normal_half * dot_normal_light)
+                                             / dot_eye_half));
+
+    // フレネル反射係数算出
+    float fresnel0;
+    float fresnel1;
+    CalculateFresnel(input, dot_light_half, fresnel0, fresnel1);
+
+    // 金属色算出
+    float4 light_color = {0.3f, 0.3f, 1.0f, 1.0f}; // 入射光の色
+    float4 metal_color;
+    CalculateMetalColor(light_color, metal_color);
+
+    // カラーシフトの比率算出
+    float color_shift_ratio = metal_color + (light_color - metal_color) 
+                              * max(0, fresnel0 - fresnel1) / (1 - fresnel1);
+
+    // 色算出
+    input.color_ = input.color_ * tex2D(DIFFUSE_SAMPLER, input.ps_uv_);
+    out_color = input.color_ + color_shift_ratio
+                * max(0, beckmann * geometric_decay_rate * (fresnel0 / dot_normal_gaze));
+}
+
+
+
+//--------------------------------------------------
+//! @brief Beckmann分布関数(マイクロファセット分布関数の一つ)算出関数
+//! @details
+//! @param input           入力データ 
+//! @param dot_normal_half 法線とハーフベクトルの内積 
+//! @param beckmann        Beckmann分布関数
+//! @retval void なし
+//--------------------------------------------------
+void CalculateBeckmannDistributionFunction(Input input, float dot_normal_half,
+                                           inout float beckmann)
+{
+    // 荒さ
+    const float roughness = 0.3f;
+    
+    // Beckmann分布関数の算出
+    float squaring_dot_normal_half = dot_normal_half * dot_normal_half;
+    beckmann = exp(-(1 - squaring_dot_normal_half)
+                   / (squaring_dot_normal_half * roughness * roughness))
+				   / (4 * roughness * roughness * squaring_dot_normal_half
+                      * squaring_dot_normal_half);
+}
+
+
+
+//--------------------------------------------------
+//! @brief フレネル反射係数算出関数
+//! @details
+//! @param input           入力データ 
+//! @param dot_light_half  ディレクショナルライトベクトルとハーフベクトルの内積 
+//! @param fresnel0        フレネル反射係数
+//! @param fresnel1        視線とほぼ同じ向きからライトを当てた時のフレネル反射係数
+//! @retval void なし
+//--------------------------------------------------
+void CalculateFresnel(Input input, float dot_light_half,
+                      inout float fresnel0, inout float fresnel1)
+{
+    // 屈折率(これを上げると中心からの色の領域が広くなる)
+    const float refraction = 5.0f;
+
+    // フレネル反射係数算出
+    float g = (refraction * refraction) + (dot_light_half * dot_light_half) - 1;
+    float g_plus_c = g + dot_light_half;
+    float g_minus_c = g - dot_light_half;
+    float cg_plus_cc_minus_1 = dot_light_half * g_plus_c - 1;
+    float cg_minus_cc_plus_1 = dot_light_half * g_minus_c + 1;
+    fresnel0 = 0.5f * ((g_minus_c * g_minus_c) * (1 + (cg_plus_cc_minus_1 * cg_plus_cc_minus_1)
+                       / (cg_minus_cc_plus_1 * cg_minus_cc_plus_1)) / (g_plus_c * g_plus_c));
+	
+	// 視線とほぼ同じ向きからライトを当てた時のフレネル反射係数算出
+    fresnel1 = ((refraction - 1) * (refraction - 1)) / ((refraction + 1) * (refraction + 1));
+}
+
+
+
+//--------------------------------------------------
+//! @brief 金属色算出関数
+//! @details
+//! @param light_color ライト色
+//! @param metal_color 金属色
+//! @retval void なし
+//--------------------------------------------------
+void CalculateMetalColor(float4 light_color, inout float4 metal_color)
+{
+    // 正面からlight_colorの色の光が当たったときの鏡面反射色
+    metal_color.r = 0.9f * light_color.r;
+    metal_color.g = 0.8f * light_color.g;
+    metal_color.b = 0.3f * light_color.b;
+    metal_color.a = 1.0f;
+}

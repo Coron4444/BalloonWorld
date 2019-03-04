@@ -1,0 +1,935 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: SoundManager クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_sound_manager.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="#pri-static-attribs">静的非公開変数類</a> &#124;
+<a href="class_sound_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">SoundManager クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>サウンドマネージャClass(Singleton)  
+ <a href="class_sound_manager.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_sound_manager_8h_source.html">SoundManager.h</a>&gt;</code></p>
+<div class="dynheader">
+SoundManager 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sound_manager__coll__graph.png" border="0" usemap="#_sound_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="_sound_manager_coll__map" id="_sound_manager_coll__map">
+<area shape="rect" id="node2" href="struct_sound_manager_1_1_parameter.html" title="パラメーターClass " alt="" coords="5,5,183,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sound_manager_1_1_parameter.html">Parameter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">パラメーターClass  <a href="struct_sound_manager_1_1_parameter.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a0b81fc2281f062cd6489ab281fc3be1d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1d">Type</a> { <br />
+&#160;&#160;<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1dab50339a10e1de285ac99d4c3990b8693">Type::NONE</a> = -1, 
+<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1dabb113fd8addf2b80497f56343b87a4a1">Type::BGM_TITLE</a>, 
+<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1dafd151491d529c86a03961aa65be07bda">Type::BGM_TUTORIAL</a>, 
+<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1daa16edf1402bd0c56eb91f437a096c368">Type::BGM_STAGE</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1dafa79f994bbe8139a1d752291a42d8135">Type::BGM_RESULT</a>, 
+<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1dae04f1d7a32c6fe24adabf473441900e1">Type::SE_KETEI</a>, 
+<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1dac94690b4396e2c7c416a27602ce41b52">Type::SE_CURSOR</a>, 
+<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1daa0aa7d03adf4a0b627a19b077fe4f66d">Type::SE_SCORE_UP</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1da92887653300fa9de03d87e5510cde654">Type::SE_DAMAGE</a>, 
+<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1da6d3e1e9d4e7f27446d2de186c58925b9">Type::SE_OPEN</a>, 
+<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1da066cbf7d13eef9bc518463a7b8fdff75">Type::SE_CLOSE</a>, 
+<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1da2a94f4efeaa1cf0309447d10e517dc90">Type::SE_CLEAR</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1da8d352a6b65951ba1398253a29d991907">Type::SE_PURGE</a>, 
+<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5">Type::MAX</a>
+<br />
+ }</td></tr>
+<tr class="separator:a0b81fc2281f062cd6489ab281fc3be1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab6f67ebd0f3a3555b334870c46c6d52b"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#ab6f67ebd0f3a3555b334870c46c6d52b">Init</a> (HWND hWnd)</td></tr>
+<tr class="memdesc:ab6f67ebd0f3a3555b334870c46c6d52b"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#ab6f67ebd0f3a3555b334870c46c6d52b">[詳解]</a><br /></td></tr>
+<tr class="separator:ab6f67ebd0f3a3555b334870c46c6d52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61543e2532817e5116fa4f7808545921"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a61543e2532817e5116fa4f7808545921">Uninit</a> ()</td></tr>
+<tr class="memdesc:a61543e2532817e5116fa4f7808545921"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#a61543e2532817e5116fa4f7808545921">[詳解]</a><br /></td></tr>
+<tr class="separator:a61543e2532817e5116fa4f7808545921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190f088a8f9c95b596ec61ccc323f86c"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a190f088a8f9c95b596ec61ccc323f86c">PlayOrStop</a> (<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1d">Type</a> type)</td></tr>
+<tr class="memdesc:a190f088a8f9c95b596ec61ccc323f86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">再生or停止関数  <a href="#a190f088a8f9c95b596ec61ccc323f86c">[詳解]</a><br /></td></tr>
+<tr class="separator:a190f088a8f9c95b596ec61ccc323f86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ace4d5c214d5a97f749e2c76e2c18d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a97ace4d5c214d5a97f749e2c76e2c18d">Stop</a> (<a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1d">Type</a> type)</td></tr>
+<tr class="memdesc:a97ace4d5c214d5a97f749e2c76e2c18d"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止関数  <a href="#a97ace4d5c214d5a97f749e2c76e2c18d">[詳解]</a><br /></td></tr>
+<tr class="separator:a97ace4d5c214d5a97f749e2c76e2c18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59093ea4593b0f9036f976db929aecb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a59093ea4593b0f9036f976db929aecb1">AllStop</a> ()</td></tr>
+<tr class="memdesc:a59093ea4593b0f9036f976db929aecb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止関数  <a href="#a59093ea4593b0f9036f976db929aecb1">[詳解]</a><br /></td></tr>
+<tr class="separator:a59093ea4593b0f9036f976db929aecb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae46d05e32c52587ff3988f5ef81c1cbe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_sound_manager.html">SoundManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#ae46d05e32c52587ff3988f5ef81c1cbe">getpInstance</a> ()</td></tr>
+<tr class="memdesc:ae46d05e32c52587ff3988f5ef81c1cbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス取得関数  <a href="#ae46d05e32c52587ff3988f5ef81c1cbe">[詳解]</a><br /></td></tr>
+<tr class="separator:ae46d05e32c52587ff3988f5ef81c1cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5761e23b2658ba177703c40088f5e43e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a5761e23b2658ba177703c40088f5e43e">ReleaseInstance</a> ()</td></tr>
+<tr class="memdesc:a5761e23b2658ba177703c40088f5e43e"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス解放関数  <a href="#a5761e23b2658ba177703c40088f5e43e">[詳解]</a><br /></td></tr>
+<tr class="separator:a5761e23b2658ba177703c40088f5e43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:abcc1fbf3488be5788a42c9a4fe56df35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#abcc1fbf3488be5788a42c9a4fe56df35">SoundManager</a> ()</td></tr>
+<tr class="memdesc:abcc1fbf3488be5788a42c9a4fe56df35"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#abcc1fbf3488be5788a42c9a4fe56df35">[詳解]</a><br /></td></tr>
+<tr class="separator:abcc1fbf3488be5788a42c9a4fe56df35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f26a5ddca358c60772b40e99b181836"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a1f26a5ddca358c60772b40e99b181836">CheckChunk</a> (HANDLE file_handle, DWORD format, DWORD *chunk_size, DWORD *chunk_data_position)</td></tr>
+<tr class="memdesc:a1f26a5ddca358c60772b40e99b181836"><td class="mdescLeft">&#160;</td><td class="mdescRight">チャンクチェック関数  <a href="#a1f26a5ddca358c60772b40e99b181836">[詳解]</a><br /></td></tr>
+<tr class="separator:a1f26a5ddca358c60772b40e99b181836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89826acbdcf32a9ec1110f3e805892e1"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a89826acbdcf32a9ec1110f3e805892e1">ReadChunk</a> (HANDLE file_handle, void *buffer, DWORD buffer_size, DWORD buffer_offset)</td></tr>
+<tr class="memdesc:a89826acbdcf32a9ec1110f3e805892e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">チャンク読み込み関数  <a href="#a89826acbdcf32a9ec1110f3e805892e1">[詳解]</a><br /></td></tr>
+<tr class="separator:a89826acbdcf32a9ec1110f3e805892e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d6b47ad5f72114d2cae83b2ef7b350"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a64d6b47ad5f72114d2cae83b2ef7b350">SoundManager</a> (const <a class="el" href="class_sound_manager.html">SoundManager</a> &amp;class_name)=delete</td></tr>
+<tr class="separator:a64d6b47ad5f72114d2cae83b2ef7b350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22fd4008f3e0c4f5e0e4480e3f89baed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sound_manager.html">SoundManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a22fd4008f3e0c4f5e0e4480e3f89baed">operator=</a> (const <a class="el" href="class_sound_manager.html">SoundManager</a> &amp;class_name)=delete</td></tr>
+<tr class="separator:a22fd4008f3e0c4f5e0e4480e3f89baed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a61e40cffb2fea01e0840134e10bd8e69"><td class="memItemLeft" align="right" valign="top">IXAudio2 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a61e40cffb2fea01e0840134e10bd8e69">x_audio_</a> = nullptr</td></tr>
+<tr class="memdesc:a61e40cffb2fea01e0840134e10bd8e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">XAudio2オブジェクトインターフェイス  <a href="#a61e40cffb2fea01e0840134e10bd8e69">[詳解]</a><br /></td></tr>
+<tr class="separator:a61e40cffb2fea01e0840134e10bd8e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96f7bde6fb880cb242434707cd769e64"><td class="memItemLeft" align="right" valign="top">IXAudio2MasteringVoice *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a96f7bde6fb880cb242434707cd769e64">mastering_voice_</a> = nullptr</td></tr>
+<tr class="memdesc:a96f7bde6fb880cb242434707cd769e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">マスターボイス  <a href="#a96f7bde6fb880cb242434707cd769e64">[詳解]</a><br /></td></tr>
+<tr class="separator:a96f7bde6fb880cb242434707cd769e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48fc88576a4066e7739138a3c4a0cd47"><td class="memItemLeft" align="right" valign="top">IXAudio2SourceVoice *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a48fc88576a4066e7739138a3c4a0cd47">source_voice_</a> [(int) <a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5">Type::MAX</a>] = {nullptr}</td></tr>
+<tr class="memdesc:a48fc88576a4066e7739138a3c4a0cd47"><td class="mdescLeft">&#160;</td><td class="mdescRight">ソースボイス  <a href="#a48fc88576a4066e7739138a3c4a0cd47">[詳解]</a><br /></td></tr>
+<tr class="separator:a48fc88576a4066e7739138a3c4a0cd47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab519873998a45c15e8cf74881d3ee6ca"><td class="memItemLeft" align="right" valign="top">BYTE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#ab519873998a45c15e8cf74881d3ee6ca">data_audio_</a> [(int) <a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5">Type::MAX</a>] = {nullptr}</td></tr>
+<tr class="memdesc:ab519873998a45c15e8cf74881d3ee6ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">オーディオデータ  <a href="#ab519873998a45c15e8cf74881d3ee6ca">[詳解]</a><br /></td></tr>
+<tr class="separator:ab519873998a45c15e8cf74881d3ee6ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa95190cc70cca6b516bed20f22f2f0ba"><td class="memItemLeft" align="right" valign="top">DWORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#aa95190cc70cca6b516bed20f22f2f0ba">size_audio_</a> [(int) <a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5">Type::MAX</a>] = {0}</td></tr>
+<tr class="memdesc:aa95190cc70cca6b516bed20f22f2f0ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">オーディオデータサイズ  <a href="#aa95190cc70cca6b516bed20f22f2f0ba">[詳解]</a><br /></td></tr>
+<tr class="separator:aa95190cc70cca6b516bed20f22f2f0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静的非公開変数類</h2></td></tr>
+<tr class="memitem:aaa51d88b702313608c25be96945d7bc6"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_sound_manager_1_1_parameter.html">Parameter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#aaa51d88b702313608c25be96945d7bc6">PARAMETER_ARRAY</a> [(int) <a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5">Type::MAX</a>]</td></tr>
+<tr class="memdesc:aaa51d88b702313608c25be96945d7bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">パラメーター配列  <a href="#aaa51d88b702313608c25be96945d7bc6">[詳解]</a><br /></td></tr>
+<tr class="separator:aaa51d88b702313608c25be96945d7bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b056c7a340bb57b317533d34f679743"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_sound_manager.html">SoundManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_manager.html#a9b056c7a340bb57b317533d34f679743">instance_</a> = nullptr</td></tr>
+<tr class="memdesc:a9b056c7a340bb57b317533d34f679743"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス  <a href="#a9b056c7a340bb57b317533d34f679743">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b056c7a340bb57b317533d34f679743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>サウンドマネージャClass(Singleton) </p>
+<p>サウンドのマネージャClass(Singleton) </p>
+
+<p class="definition"> <a class="el" href="_sound_manager_8h_source.html">SoundManager.h</a> の <a class="el" href="_sound_manager_8h_source.html#l00024">24</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a0b81fc2281f062cd6489ab281fc3be1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b81fc2281f062cd6489ab281fc3be1d">&#9670;&nbsp;</a></span>Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1d">SoundManager::Type</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1dab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1dabb113fd8addf2b80497f56343b87a4a1"></a>BGM_TITLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1dafd151491d529c86a03961aa65be07bda"></a>BGM_TUTORIAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1daa16edf1402bd0c56eb91f437a096c368"></a>BGM_STAGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1dafa79f994bbe8139a1d752291a42d8135"></a>BGM_RESULT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1dae04f1d7a32c6fe24adabf473441900e1"></a>SE_KETEI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1dac94690b4396e2c7c416a27602ce41b52"></a>SE_CURSOR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1daa0aa7d03adf4a0b627a19b077fe4f66d"></a>SE_SCORE_UP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1da92887653300fa9de03d87e5510cde654"></a>SE_DAMAGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1da6d3e1e9d4e7f27446d2de186c58925b9"></a>SE_OPEN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1da066cbf7d13eef9bc518463a7b8fdff75"></a>SE_CLOSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1da2a94f4efeaa1cf0309447d10e517dc90"></a>SE_CLEAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1da8d352a6b65951ba1398253a29d991907"></a>SE_PURGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5"></a>MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="_sound_manager_8h_source.html">SoundManager.h</a> の <a class="el" href="_sound_manager_8h_source.html#l00050">50</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="abcc1fbf3488be5788a42c9a4fe56df35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc1fbf3488be5788a42c9a4fe56df35">&#9670;&nbsp;</a></span>SoundManager() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SoundManager::SoundManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_sound_manager_8cpp_source.html">SoundManager.cpp</a> の <a class="el" href="_sound_manager_8cpp_source.html#l00072">72</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a64d6b47ad5f72114d2cae83b2ef7b350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d6b47ad5f72114d2cae83b2ef7b350">&#9670;&nbsp;</a></span>SoundManager() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SoundManager::SoundManager </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_sound_manager.html">SoundManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>class_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a59093ea4593b0f9036f976db929aecb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59093ea4593b0f9036f976db929aecb1">&#9670;&nbsp;</a></span>AllStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager::AllStop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_sound_manager_8cpp_source.html">SoundManager.cpp</a> の <a class="el" href="_sound_manager_8cpp_source.html#l00305">305</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1f26a5ddca358c60772b40e99b181836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f26a5ddca358c60772b40e99b181836">&#9670;&nbsp;</a></span>CheckChunk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HRESULT SoundManager::CheckChunk </td>
+          <td>(</td>
+          <td class="paramtype">HANDLE&#160;</td>
+          <td class="paramname"><em>file_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD *&#160;</td>
+          <td class="paramname"><em>chunk_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD *&#160;</td>
+          <td class="paramname"><em>chunk_data_position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>チャンクチェック関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_handle</td><td>ファイルハンドル </td></tr>
+    <tr><td class="paramname">format</td><td>フォーマット </td></tr>
+    <tr><td class="paramname">chunk_size</td><td>チャンクサイズ </td></tr>
+    <tr><td class="paramname">chunk_data_position</td><td>チャンクデータの場所 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HRESULT</td><td>エラーチェック用 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_sound_manager_8cpp_source.html">SoundManager.cpp</a> の <a class="el" href="_sound_manager_8cpp_source.html#l00320">320</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae46d05e32c52587ff3988f5ef81c1cbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46d05e32c52587ff3988f5ef81c1cbe">&#9670;&nbsp;</a></span>getpInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sound_manager.html">SoundManager</a> * SoundManager::getpInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンス取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SoundManager*</td><td>インスタンス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_sound_manager_8cpp_source.html">SoundManager.cpp</a> の <a class="el" href="_sound_manager_8cpp_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab6f67ebd0f3a3555b334870c46c6d52b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f67ebd0f3a3555b334870c46c6d52b">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HRESULT SoundManager::Init </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hWnd</td><td>ウィンドウハンドル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HRESULT</td><td>エラーチェック用 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_sound_manager_8cpp_source.html">SoundManager.cpp</a> の <a class="el" href="_sound_manager_8cpp_source.html#l00078">78</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a22fd4008f3e0c4f5e0e4480e3f89baed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22fd4008f3e0c4f5e0e4480e3f89baed">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sound_manager.html">SoundManager</a>&amp; SoundManager::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_sound_manager.html">SoundManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>class_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a190f088a8f9c95b596ec61ccc323f86c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190f088a8f9c95b596ec61ccc323f86c">&#9670;&nbsp;</a></span>PlayOrStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HRESULT SoundManager::PlayOrStop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1d">Type</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>再生or停止関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>サウンドタイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HRESULT</td><td>エラーチェック用 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_sound_manager_8cpp_source.html">SoundManager.cpp</a> の <a class="el" href="_sound_manager_8cpp_source.html#l00253">253</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a89826acbdcf32a9ec1110f3e805892e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89826acbdcf32a9ec1110f3e805892e1">&#9670;&nbsp;</a></span>ReadChunk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HRESULT SoundManager::ReadChunk </td>
+          <td>(</td>
+          <td class="paramtype">HANDLE&#160;</td>
+          <td class="paramname"><em>file_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD&#160;</td>
+          <td class="paramname"><em>buffer_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD&#160;</td>
+          <td class="paramname"><em>buffer_offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>チャンク読み込み関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_handle</td><td>ファイルハンドル </td></tr>
+    <tr><td class="paramname">buffer</td><td>読み込み先バッファ </td></tr>
+    <tr><td class="paramname">buffer_size</td><td>読み込み先バッファのサイズ </td></tr>
+    <tr><td class="paramname">buffer_offset</td><td>読み込み先バッファのオフセット </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HRESULT</td><td>エラーチェック用 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_sound_manager_8cpp_source.html">SoundManager.cpp</a> の <a class="el" href="_sound_manager_8cpp_source.html#l00388">388</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5761e23b2658ba177703c40088f5e43e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5761e23b2658ba177703c40088f5e43e">&#9670;&nbsp;</a></span>ReleaseInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager::ReleaseInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンス解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_sound_manager_8cpp_source.html">SoundManager.cpp</a> の <a class="el" href="_sound_manager_8cpp_source.html#l00062">62</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a97ace4d5c214d5a97f749e2c76e2c18d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97ace4d5c214d5a97f749e2c76e2c18d">&#9670;&nbsp;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager::Stop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1d">Type</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>サウンドタイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_sound_manager_8cpp_source.html">SoundManager.cpp</a> の <a class="el" href="_sound_manager_8cpp_source.html#l00287">287</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a61543e2532817e5116fa4f7808545921"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61543e2532817e5116fa4f7808545921">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_sound_manager_8cpp_source.html">SoundManager.cpp</a> の <a class="el" href="_sound_manager_8cpp_source.html#l00216">216</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="ab519873998a45c15e8cf74881d3ee6ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab519873998a45c15e8cf74881d3ee6ca">&#9670;&nbsp;</a></span>data_audio_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BYTE* SoundManager::data_audio_[(int) <a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5">Type::MAX</a>] = {nullptr}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オーディオデータ </p>
+
+<p class="definition"> <a class="el" href="_sound_manager_8h_source.html">SoundManager.h</a> の <a class="el" href="_sound_manager_8h_source.html#l00116">116</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9b056c7a340bb57b317533d34f679743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b056c7a340bb57b317533d34f679743">&#9670;&nbsp;</a></span>instance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sound_manager.html">SoundManager</a> * SoundManager::instance_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンス </p>
+
+<p class="definition"> <a class="el" href="_sound_manager_8h_source.html">SoundManager.h</a> の <a class="el" href="_sound_manager_8h_source.html#l00080">80</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a96f7bde6fb880cb242434707cd769e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96f7bde6fb880cb242434707cd769e64">&#9670;&nbsp;</a></span>mastering_voice_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IXAudio2MasteringVoice* SoundManager::mastering_voice_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マスターボイス </p>
+
+<p class="definition"> <a class="el" href="_sound_manager_8h_source.html">SoundManager.h</a> の <a class="el" href="_sound_manager_8h_source.html#l00114">114</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aaa51d88b702313608c25be96945d7bc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa51d88b702313608c25be96945d7bc6">&#9670;&nbsp;</a></span>PARAMETER_ARRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_sound_manager_1_1_parameter.html">SoundManager::Parameter</a> SoundManager::PARAMETER_ARRAY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">=</div><div class="line">{</div><div class="line">    {<span class="stringliteral">&quot;resource/Music/BGM/Title.wav&quot;</span>, -1},</div><div class="line">    {<span class="stringliteral">&quot;resource/Music/BGM/Tutorial.wav&quot;</span>, -1},</div><div class="line">    {<span class="stringliteral">&quot;resource/Music/BGM/Stage.wav&quot;</span>, -1},</div><div class="line">    {<span class="stringliteral">&quot;resource/Music/BGM/Result.wav&quot;</span>, -1},</div><div class="line">    {<span class="stringliteral">&quot;resource/Music/SE/01_Ketei.wav&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;resource/Music/SE/02_Cursor.wav&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;resource/Music/SE/03_ScoreUp.wav&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;resource/Music/SE/04_Damage.wav&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;resource/Music/SE/05_Open.wav&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;resource/Music/SE/06_Close.wav&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;resource/Music/SE/07_Clear.wav&quot;</span>, 0},</div><div class="line">    {<span class="stringliteral">&quot;resource/Music/SE/08_Purge.wav&quot;</span>, 0},</div><div class="line">}</div></div><!-- fragment -->
+<p>パラメーター配列 </p>
+
+<p class="definition"> <a class="el" href="_sound_manager_8h_source.html">SoundManager.h</a> の <a class="el" href="_sound_manager_8h_source.html#l00073">73</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa95190cc70cca6b516bed20f22f2f0ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa95190cc70cca6b516bed20f22f2f0ba">&#9670;&nbsp;</a></span>size_audio_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DWORD SoundManager::size_audio_[(int) <a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5">Type::MAX</a>] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オーディオデータサイズ </p>
+
+<p class="definition"> <a class="el" href="_sound_manager_8h_source.html">SoundManager.h</a> の <a class="el" href="_sound_manager_8h_source.html#l00117">117</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a48fc88576a4066e7739138a3c4a0cd47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48fc88576a4066e7739138a3c4a0cd47">&#9670;&nbsp;</a></span>source_voice_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IXAudio2SourceVoice* SoundManager::source_voice_[(int) <a class="el" href="class_sound_manager.html#a0b81fc2281f062cd6489ab281fc3be1da26a4b44a837bf97b972628509912b4a5">Type::MAX</a>] = {nullptr}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ソースボイス </p>
+
+<p class="definition"> <a class="el" href="_sound_manager_8h_source.html">SoundManager.h</a> の <a class="el" href="_sound_manager_8h_source.html#l00115">115</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a61e40cffb2fea01e0840134e10bd8e69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61e40cffb2fea01e0840134e10bd8e69">&#9670;&nbsp;</a></span>x_audio_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IXAudio2* SoundManager::x_audio_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>XAudio2オブジェクトインターフェイス </p>
+
+<p class="definition"> <a class="el" href="_sound_manager_8h_source.html">SoundManager.h</a> の <a class="el" href="_sound_manager_8h_source.html#l00113">113</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Resource/Sound/<a class="el" href="_sound_manager_8h_source.html">SoundManager.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Resource/Sound/Source/<a class="el" href="_sound_manager_8cpp_source.html">SoundManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_sound_manager.html">SoundManager</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -2,67 +2,93 @@
 \label{class_model_x_manager}\index{Model\+X\+Manager@{Model\+X\+Manager}}
 
 
+Xモデルマネージャ\+Class(\+Singleton)  
+
+
+
+
 {\ttfamily \#include $<$Model\+X\+Manager.\+h$>$}
 
+
+
+Model\+X\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{class_model_x_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ \mbox{\hyperlink{class_model_x_manager_ab4c3b09885b975da1e42644b5335472f}{getp\+Object}} (const std\+::string $\ast$key\+\_\+name, const std\+::string $\ast$file\+\_\+path=nullptr)
+\begin{DoxyCompactList}\small\item\em オブジェクト取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_x_manager_a77fcb11b4229352c68e61736935a7ece}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_x_manager_aac833fc6c1ad4c491f9e68b7e5d5af99}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_x_manager_ab7182ee338b307e32c26f110bb651c4b}{Release\+From\+The\+Map}} (std\+::string $\ast$key\+\_\+name)
+\begin{DoxyCompactList}\small\item\em マップから解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{class_model_x_manager_a8d7965d9eaa41fcf0297eebea287ee82}{Init\+All\+Data}} ()
-\item 
-static void \mbox{\hyperlink{class_model_x_manager_a8096a9ed1b19c41270df944aa855015a}{Init\+Share\+Data}} ()
-\item 
-static void \mbox{\hyperlink{class_model_x_manager_a9bed6cb5ffcd2cbfec6c405e21af362e}{Init\+Unique\+Data}} ()
-\item 
-static void \mbox{\hyperlink{class_model_x_manager_a915bf3c57058e235d91db06f3fe5f538}{Uninit\+All\+Data}} ()
-\item 
-static void \mbox{\hyperlink{class_model_x_manager_a9e3d0dc8addebebc87f450cde6c5e659}{Uninit\+Share\+Data}} ()
-\item 
-static void \mbox{\hyperlink{class_model_x_manager_a7dde269502f40b7d1208c8e0f84b13f0}{Uninit\+Unique\+Data}} ()
-\item 
-static \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ \mbox{\hyperlink{class_model_x_manager_a395565622dff14d4ff80bf64611f9a36}{Add\+Share\+Data}} (const std\+::string $\ast$key\+\_\+name, const std\+::string $\ast$file\+\_\+path=nullptr)
-\item 
-static \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ \mbox{\hyperlink{class_model_x_manager_a0a0cd728e7b92de6c18e96026708d97b}{Add\+Unique\+Data}} (const std\+::string $\ast$key\+\_\+name, const std\+::string $\ast$file\+\_\+path=nullptr)
-\item 
-static \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ \mbox{\hyperlink{class_model_x_manager_a70cc89b8314e5e91b74770606c734c97}{Get\+Model\+X\+Object}} (const std\+::string $\ast$key\+\_\+name)
-\end{DoxyCompactItemize}
+static \mbox{\hyperlink{class_model_x_manager}{Model\+X\+Manager}} $\ast$ \mbox{\hyperlink{class_model_x_manager_a141baa9d96bf528ffced9a884b3b5828}{getp\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス取得関数 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_model_x_manager_aa53b75de4f147652a5abb61c66eaa4bd}{Release\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_model_x_manager_a4e3620210fca89770bf08b9ec1265357}{Model\+X\+Manager}} ()=delete
-\item 
+\mbox{\hyperlink{class_model_x_manager_aa9add853f72deb575e332f39c3373624}{Model\+X\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_model_x_manager_a7c152c72ec36cb12a6ae2007f84c6405}{Create\+File\+Path}} (const std\+::string $\ast$key\+\_\+name, const std\+::string $\ast$file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em フルパス生成関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_model_x_manager_a6df03f9aef72a490b755955e70f12685}{Model\+X\+Manager}} (const \mbox{\hyperlink{class_model_x_manager}{Model\+X\+Manager}} \&class\+\_\+name)=delete
 \item 
 \mbox{\hyperlink{class_model_x_manager}{Model\+X\+Manager}} \& \mbox{\hyperlink{class_model_x_manager_adc65f6b4b9b06b4a20923245606175d8}{operator=}} (const \mbox{\hyperlink{class_model_x_manager}{Model\+X\+Manager}} \&class\+\_\+name)=delete
 \end{DoxyCompactItemize}
-\subsection*{静的非公開メンバ関数}
+\subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-static std\+::string \mbox{\hyperlink{class_model_x_manager_a2d367047714442f8a928e4360d11b773}{Make\+File\+Path}} (const std\+::string $\ast$key\+\_\+name, const std\+::string $\ast$file\+\_\+path)
-\end{DoxyCompactItemize}
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ $>$ \mbox{\hyperlink{class_model_x_manager_ac3a90eea2890ea233f6f8c909f705e16}{object\+\_\+map\+\_\+}}
+\begin{DoxyCompactList}\small\item\em オブジェクトマップ \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-static const std\+::string \mbox{\hyperlink{class_model_x_manager_a745ad339e5fc73cec28d205881a969f8}{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH}} = \char`\"{}resource/ModelX/\char`\"{}
-\item 
-static std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ $>$ \mbox{\hyperlink{class_model_x_manager_ad76c3a0fa42d0e562487f27c20096a12}{share\+\_\+model\+\_\+map\+\_\+}}
-\item 
-static std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ $>$ \mbox{\hyperlink{class_model_x_manager_a77ce902ab239fbb67a9fbbbb87929079}{unique\+\_\+model\+\_\+map\+\_\+}}
-\end{DoxyCompactItemize}
+static const std\+::string \mbox{\hyperlink{class_model_x_manager_a745ad339e5fc73cec28d205881a969f8}{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH}} = \char`\"{}Resource/ModelX/\char`\"{}
+\begin{DoxyCompactList}\small\item\em 既定パス \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_model_x_manager}{Model\+X\+Manager}} $\ast$ \mbox{\hyperlink{class_model_x_manager_a8631ef7e11e9c92e3af008acfceb35d7}{instance\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em インスタンス \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
+Xモデルマネージャ\+Class(\+Singleton) 
 
+Xモデルのマネージャ\+Class(\+Singleton) 
 
- Model\+X\+Manager.\+h の 33 行目に定義があります。
+ Model\+X\+Manager.\+h の 24 行目に定義があります。
 
 
 
 \subsection{構築子と解体子}
-\mbox{\Hypertarget{class_model_x_manager_a4e3620210fca89770bf08b9ec1265357}\label{class_model_x_manager_a4e3620210fca89770bf08b9ec1265357}} 
+\mbox{\Hypertarget{class_model_x_manager_aa9add853f72deb575e332f39c3373624}\label{class_model_x_manager_aa9add853f72deb575e332f39c3373624}} 
 \index{Model\+X\+Manager@{Model\+X\+Manager}!Model\+X\+Manager@{Model\+X\+Manager}}
 \index{Model\+X\+Manager@{Model\+X\+Manager}!Model\+X\+Manager@{Model\+X\+Manager}}
 \subsubsection{\texorpdfstring{Model\+X\+Manager()}{ModelXManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Model\+X\+Manager\+::\+Model\+X\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+{\footnotesize\ttfamily Model\+X\+Manager\+::\+Model\+X\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Model\+X\+Manager.\+cpp の 85 行目に定義があります。
 
 \mbox{\Hypertarget{class_model_x_manager_a6df03f9aef72a490b755955e70f12685}\label{class_model_x_manager_a6df03f9aef72a490b755955e70f12685}} 
 \index{Model\+X\+Manager@{Model\+X\+Manager}!Model\+X\+Manager@{Model\+X\+Manager}}
@@ -73,75 +99,103 @@ static std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_model_
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_model_x_manager_a395565622dff14d4ff80bf64611f9a36}\label{class_model_x_manager_a395565622dff14d4ff80bf64611f9a36}} 
-\index{Model\+X\+Manager@{Model\+X\+Manager}!Add\+Share\+Data@{Add\+Share\+Data}}
-\index{Add\+Share\+Data@{Add\+Share\+Data}!Model\+X\+Manager@{Model\+X\+Manager}}
-\subsubsection{\texorpdfstring{Add\+Share\+Data()}{AddShareData()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ Model\+X\+Manager\+::\+Add\+Share\+Data (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{key\+\_\+name,  }\item[{const std\+::string $\ast$}]{file\+\_\+path = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_model_x_manager_a7c152c72ec36cb12a6ae2007f84c6405}\label{class_model_x_manager_a7c152c72ec36cb12a6ae2007f84c6405}} 
+\index{Model\+X\+Manager@{Model\+X\+Manager}!Create\+File\+Path@{Create\+File\+Path}}
+\index{Create\+File\+Path@{Create\+File\+Path}!Model\+X\+Manager@{Model\+X\+Manager}}
+\subsubsection{\texorpdfstring{Create\+File\+Path()}{CreateFilePath()}}
+{\footnotesize\ttfamily std\+::string Model\+X\+Manager\+::\+Create\+File\+Path (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{key\+\_\+name,  }\item[{const std\+::string $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Model\+X\+Manager.\+cpp の 161 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_manager_a0a0cd728e7b92de6c18e96026708d97b}\label{class_model_x_manager_a0a0cd728e7b92de6c18e96026708d97b}} 
-\index{Model\+X\+Manager@{Model\+X\+Manager}!Add\+Unique\+Data@{Add\+Unique\+Data}}
-\index{Add\+Unique\+Data@{Add\+Unique\+Data}!Model\+X\+Manager@{Model\+X\+Manager}}
-\subsubsection{\texorpdfstring{Add\+Unique\+Data()}{AddUniqueData()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ Model\+X\+Manager\+::\+Add\+Unique\+Data (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{key\+\_\+name,  }\item[{const std\+::string $\ast$}]{file\+\_\+path = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+フルパス生成関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$key\+\_\+name} & キー名 \\
+\hline
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+\end{DoxyParams}
 
- Model\+X\+Manager.\+cpp の 183 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_manager_a70cc89b8314e5e91b74770606c734c97}\label{class_model_x_manager_a70cc89b8314e5e91b74770606c734c97}} 
-\index{Model\+X\+Manager@{Model\+X\+Manager}!Get\+Model\+X\+Object@{Get\+Model\+X\+Object}}
-\index{Get\+Model\+X\+Object@{Get\+Model\+X\+Object}!Model\+X\+Manager@{Model\+X\+Manager}}
-\subsubsection{\texorpdfstring{Get\+Model\+X\+Object()}{GetModelXObject()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ Model\+X\+Manager\+::\+Get\+Model\+X\+Object (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{key\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\begin{DoxyRetVals}{戻り値}
+{\em std\+::string} & フルパス \\
+\hline
+\end{DoxyRetVals}
 
 
+ Model\+X\+Manager.\+cpp の 125 行目に定義があります。
 
- Model\+X\+Manager.\+cpp の 205 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_manager_a8d7965d9eaa41fcf0297eebea287ee82}\label{class_model_x_manager_a8d7965d9eaa41fcf0297eebea287ee82}} 
-\index{Model\+X\+Manager@{Model\+X\+Manager}!Init\+All\+Data@{Init\+All\+Data}}
-\index{Init\+All\+Data@{Init\+All\+Data}!Model\+X\+Manager@{Model\+X\+Manager}}
-\subsubsection{\texorpdfstring{Init\+All\+Data()}{InitAllData()}}
-{\footnotesize\ttfamily void Model\+X\+Manager\+::\+Init\+All\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_model_x_manager_a141baa9d96bf528ffced9a884b3b5828}\label{class_model_x_manager_a141baa9d96bf528ffced9a884b3b5828}} 
+\index{Model\+X\+Manager@{Model\+X\+Manager}!getp\+Instance@{getp\+Instance}}
+\index{getp\+Instance@{getp\+Instance}!Model\+X\+Manager@{Model\+X\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Instance()}{getpInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_x_manager}{Model\+X\+Manager}} $\ast$ Model\+X\+Manager\+::getp\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
- Model\+X\+Manager.\+cpp の 55 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_manager_a8096a9ed1b19c41270df944aa855015a}\label{class_model_x_manager_a8096a9ed1b19c41270df944aa855015a}} 
-\index{Model\+X\+Manager@{Model\+X\+Manager}!Init\+Share\+Data@{Init\+Share\+Data}}
-\index{Init\+Share\+Data@{Init\+Share\+Data}!Model\+X\+Manager@{Model\+X\+Manager}}
-\subsubsection{\texorpdfstring{Init\+Share\+Data()}{InitShareData()}}
-{\footnotesize\ttfamily void Model\+X\+Manager\+::\+Init\+Share\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+インスタンス取得関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Model\+X\+Manager.\+cpp の 70 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_manager_a9bed6cb5ffcd2cbfec6c405e21af362e}\label{class_model_x_manager_a9bed6cb5ffcd2cbfec6c405e21af362e}} 
-\index{Model\+X\+Manager@{Model\+X\+Manager}!Init\+Unique\+Data@{Init\+Unique\+Data}}
-\index{Init\+Unique\+Data@{Init\+Unique\+Data}!Model\+X\+Manager@{Model\+X\+Manager}}
-\subsubsection{\texorpdfstring{Init\+Unique\+Data()}{InitUniqueData()}}
-{\footnotesize\ttfamily void Model\+X\+Manager\+::\+Init\+Unique\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\begin{DoxyRetVals}{戻り値}
+{\em Model\+X\+Manager$\ast$} & インスタンス \\
+\hline
+\end{DoxyRetVals}
 
 
+ Model\+X\+Manager.\+cpp の 34 行目に定義があります。
 
- Model\+X\+Manager.\+cpp の 84 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_manager_a2d367047714442f8a928e4360d11b773}\label{class_model_x_manager_a2d367047714442f8a928e4360d11b773}} 
-\index{Model\+X\+Manager@{Model\+X\+Manager}!Make\+File\+Path@{Make\+File\+Path}}
-\index{Make\+File\+Path@{Make\+File\+Path}!Model\+X\+Manager@{Model\+X\+Manager}}
-\subsubsection{\texorpdfstring{Make\+File\+Path()}{MakeFilePath()}}
-{\footnotesize\ttfamily std\+::string Model\+X\+Manager\+::\+Make\+File\+Path (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{key\+\_\+name,  }\item[{const std\+::string $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+\mbox{\Hypertarget{class_model_x_manager_ab4c3b09885b975da1e42644b5335472f}\label{class_model_x_manager_ab4c3b09885b975da1e42644b5335472f}} 
+\index{Model\+X\+Manager@{Model\+X\+Manager}!getp\+Object@{getp\+Object}}
+\index{getp\+Object@{getp\+Object}!Model\+X\+Manager@{Model\+X\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Object()}{getpObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ Model\+X\+Manager\+::getp\+Object (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{key\+\_\+name,  }\item[{const std\+::string $\ast$}]{file\+\_\+path = {\ttfamily nullptr} }\end{DoxyParamCaption})}
 
 
 
- Model\+X\+Manager.\+cpp の 226 行目に定義があります。
+オブジェクト取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Model\+X\+Object$\ast$} & オブジェクト \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Manager.\+cpp の 58 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_manager_a77fcb11b4229352c68e61736935a7ece}\label{class_model_x_manager_a77fcb11b4229352c68e61736935a7ece}} 
+\index{Model\+X\+Manager@{Model\+X\+Manager}!Init@{Init}}
+\index{Init@{Init}!Model\+X\+Manager@{Model\+X\+Manager}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Model\+X\+Manager\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Manager.\+cpp の 91 行目に定義があります。
 
 \mbox{\Hypertarget{class_model_x_manager_adc65f6b4b9b06b4a20923245606175d8}\label{class_model_x_manager_adc65f6b4b9b06b4a20923245606175d8}} 
 \index{Model\+X\+Manager@{Model\+X\+Manager}!operator=@{operator=}}
@@ -149,35 +203,79 @@ static std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_model_
 \subsubsection{\texorpdfstring{operator=()}{operator=()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_model_x_manager}{Model\+X\+Manager}}\& Model\+X\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_model_x_manager}{Model\+X\+Manager}} \&}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
 
-\mbox{\Hypertarget{class_model_x_manager_a915bf3c57058e235d91db06f3fe5f538}\label{class_model_x_manager_a915bf3c57058e235d91db06f3fe5f538}} 
-\index{Model\+X\+Manager@{Model\+X\+Manager}!Uninit\+All\+Data@{Uninit\+All\+Data}}
-\index{Uninit\+All\+Data@{Uninit\+All\+Data}!Model\+X\+Manager@{Model\+X\+Manager}}
-\subsubsection{\texorpdfstring{Uninit\+All\+Data()}{UninitAllData()}}
-{\footnotesize\ttfamily void Model\+X\+Manager\+::\+Uninit\+All\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_model_x_manager_ab7182ee338b307e32c26f110bb651c4b}\label{class_model_x_manager_ab7182ee338b307e32c26f110bb651c4b}} 
+\index{Model\+X\+Manager@{Model\+X\+Manager}!Release\+From\+The\+Map@{Release\+From\+The\+Map}}
+\index{Release\+From\+The\+Map@{Release\+From\+The\+Map}!Model\+X\+Manager@{Model\+X\+Manager}}
+\subsubsection{\texorpdfstring{Release\+From\+The\+Map()}{ReleaseFromTheMap()}}
+{\footnotesize\ttfamily void Model\+X\+Manager\+::\+Release\+From\+The\+Map (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{key\+\_\+name }\end{DoxyParamCaption})}
 
 
 
- Model\+X\+Manager.\+cpp の 98 行目に定義があります。
+マップから解放関数 
 
-\mbox{\Hypertarget{class_model_x_manager_a9e3d0dc8addebebc87f450cde6c5e659}\label{class_model_x_manager_a9e3d0dc8addebebc87f450cde6c5e659}} 
-\index{Model\+X\+Manager@{Model\+X\+Manager}!Uninit\+Share\+Data@{Uninit\+Share\+Data}}
-\index{Uninit\+Share\+Data@{Uninit\+Share\+Data}!Model\+X\+Manager@{Model\+X\+Manager}}
-\subsubsection{\texorpdfstring{Uninit\+Share\+Data()}{UninitShareData()}}
-{\footnotesize\ttfamily void Model\+X\+Manager\+::\+Uninit\+Share\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+\begin{DoxyParams}{引数}
+{\em $\ast$key\+\_\+name} & キー名 \\
+\hline
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
  Model\+X\+Manager.\+cpp の 113 行目に定義があります。
 
-\mbox{\Hypertarget{class_model_x_manager_a7dde269502f40b7d1208c8e0f84b13f0}\label{class_model_x_manager_a7dde269502f40b7d1208c8e0f84b13f0}} 
-\index{Model\+X\+Manager@{Model\+X\+Manager}!Uninit\+Unique\+Data@{Uninit\+Unique\+Data}}
-\index{Uninit\+Unique\+Data@{Uninit\+Unique\+Data}!Model\+X\+Manager@{Model\+X\+Manager}}
-\subsubsection{\texorpdfstring{Uninit\+Unique\+Data()}{UninitUniqueData()}}
-{\footnotesize\ttfamily void Model\+X\+Manager\+::\+Uninit\+Unique\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_model_x_manager_aa53b75de4f147652a5abb61c66eaa4bd}\label{class_model_x_manager_aa53b75de4f147652a5abb61c66eaa4bd}} 
+\index{Model\+X\+Manager@{Model\+X\+Manager}!Release\+Instance@{Release\+Instance}}
+\index{Release\+Instance@{Release\+Instance}!Model\+X\+Manager@{Model\+X\+Manager}}
+\subsubsection{\texorpdfstring{Release\+Instance()}{ReleaseInstance()}}
+{\footnotesize\ttfamily void Model\+X\+Manager\+::\+Release\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
- Model\+X\+Manager.\+cpp の 137 行目に定義があります。
+インスタンス解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Manager.\+cpp の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_manager_aac833fc6c1ad4c491f9e68b7e5d5af99}\label{class_model_x_manager_aac833fc6c1ad4c491f9e68b7e5d5af99}} 
+\index{Model\+X\+Manager@{Model\+X\+Manager}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Model\+X\+Manager@{Model\+X\+Manager}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Model\+X\+Manager\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Model\+X\+Manager.\+cpp の 99 行目に定義があります。
 
 
 
@@ -186,35 +284,47 @@ static std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_model_
 \index{Model\+X\+Manager@{Model\+X\+Manager}!D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH@{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH}}
 \index{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH@{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH}!Model\+X\+Manager@{Model\+X\+Manager}}
 \subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH}{DEFAULT\_PATH}}
-{\footnotesize\ttfamily const std\+::string Model\+X\+Manager\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH = \char`\"{}resource/ModelX/\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily const std\+::string Model\+X\+Manager\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+TH = \char`\"{}Resource/ModelX/\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+既定パス 
+
+
+
+ Model\+X\+Manager.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_model_x_manager_a8631ef7e11e9c92e3af008acfceb35d7}\label{class_model_x_manager_a8631ef7e11e9c92e3af008acfceb35d7}} 
+\index{Model\+X\+Manager@{Model\+X\+Manager}!instance\+\_\+@{instance\+\_\+}}
+\index{instance\+\_\+@{instance\+\_\+}!Model\+X\+Manager@{Model\+X\+Manager}}
+\subsubsection{\texorpdfstring{instance\+\_\+}{instance\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_x_manager}{Model\+X\+Manager}} $\ast$ Model\+X\+Manager\+::instance\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+インスタンス 
 
 
 
  Model\+X\+Manager.\+h の 37 行目に定義があります。
 
-\mbox{\Hypertarget{class_model_x_manager_ad76c3a0fa42d0e562487f27c20096a12}\label{class_model_x_manager_ad76c3a0fa42d0e562487f27c20096a12}} 
-\index{Model\+X\+Manager@{Model\+X\+Manager}!share\+\_\+model\+\_\+map\+\_\+@{share\+\_\+model\+\_\+map\+\_\+}}
-\index{share\+\_\+model\+\_\+map\+\_\+@{share\+\_\+model\+\_\+map\+\_\+}!Model\+X\+Manager@{Model\+X\+Manager}}
-\subsubsection{\texorpdfstring{share\+\_\+model\+\_\+map\+\_\+}{share\_model\_map\_}}
-{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ $>$ Model\+X\+Manager\+::share\+\_\+model\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+\mbox{\Hypertarget{class_model_x_manager_ac3a90eea2890ea233f6f8c909f705e16}\label{class_model_x_manager_ac3a90eea2890ea233f6f8c909f705e16}} 
+\index{Model\+X\+Manager@{Model\+X\+Manager}!object\+\_\+map\+\_\+@{object\+\_\+map\+\_\+}}
+\index{object\+\_\+map\+\_\+@{object\+\_\+map\+\_\+}!Model\+X\+Manager@{Model\+X\+Manager}}
+\subsubsection{\texorpdfstring{object\+\_\+map\+\_\+}{object\_map\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}}$\ast$$>$ Model\+X\+Manager\+::object\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Model\+X\+Manager.\+h の 80 行目に定義があります。
-
-\mbox{\Hypertarget{class_model_x_manager_a77ce902ab239fbb67a9fbbbb87929079}\label{class_model_x_manager_a77ce902ab239fbb67a9fbbbb87929079}} 
-\index{Model\+X\+Manager@{Model\+X\+Manager}!unique\+\_\+model\+\_\+map\+\_\+@{unique\+\_\+model\+\_\+map\+\_\+}}
-\index{unique\+\_\+model\+\_\+map\+\_\+@{unique\+\_\+model\+\_\+map\+\_\+}!Model\+X\+Manager@{Model\+X\+Manager}}
-\subsubsection{\texorpdfstring{unique\+\_\+model\+\_\+map\+\_\+}{unique\_model\_map\_}}
-{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ $>$ Model\+X\+Manager\+::unique\+\_\+model\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+オブジェクトマップ 
 
 
 
- Model\+X\+Manager.\+h の 81 行目に定義があります。
+ Model\+X\+Manager.\+h の 70 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/05\+\_\+\+Resource/\+Model\+X/\+Model\+X\+Manager/\mbox{\hyperlink{_model_x_manager_8h}{Model\+X\+Manager.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/05\+\_\+\+Resource/\+Model\+X/\+Model\+X\+Manager/\mbox{\hyperlink{_model_x_manager_8cpp}{Model\+X\+Manager.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Model\+X/\+Model\+X\+Manager/\mbox{\hyperlink{_model_x_manager_8h}{Model\+X\+Manager.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Model\+X/\+Model\+X\+Manager/\+Source/\mbox{\hyperlink{_model_x_manager_8cpp}{Model\+X\+Manager.\+cpp}}\end{DoxyCompactItemize}

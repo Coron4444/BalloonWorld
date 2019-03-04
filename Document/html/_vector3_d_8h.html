@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Vector/Vector3D.h ファイル</title>
+<title>BalloonWorld: C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Tool/Vector3D.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -89,20 +89,21 @@ $(document).ready(function(){initNavTree('_vector3_d_8h.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">クラス</a> &#124;
-<a href="#typedef-members">型定義</a> &#124;
-<a href="#func-members">関数</a>  </div>
+<a href="#typedef-members">型定義</a>  </div>
   <div class="headertitle">
 <div class="title">Vector3D.h ファイル</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;math.h&gt;</code><br />
-<code>#include &lt;d3dx9.h&gt;</code><br />
-</div>
+
+<p>3DベクトルClass  
+<a href="#details">[詳解]</a></p>
+
 <p><a href="_vector3_d_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector3_d.html">Vector3D</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">3DベクトルClass  <a href="class_vector3_d.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -119,23 +120,18 @@ $(document).ready(function(){initNavTree('_vector3_d_8h.html','');});
 <tr class="separator:afe61185afc2bf3856c12613d99eede01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ee38c9c46d9851e33a9a1113328dafc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_vector3_d_8h.html#a3ee38c9c46d9851e33a9a1113328dafc">Quaternion</a> = D3DXQUATERNION</td></tr>
 <tr class="separator:a3ee38c9c46d9851e33a9a1113328dafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a032295cd9fb1b711757c90667278e744"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> = D3DXMATRIX</td></tr>
-<tr class="separator:a032295cd9fb1b711757c90667278e744"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c2339f516cf07ce4753b8a99fab3791"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_vector3_d_8h.html#a9c2339f516cf07ce4753b8a99fab3791">Color4</a> = D3DCOLOR</td></tr>
 <tr class="separator:a9c2339f516cf07ce4753b8a99fab3791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a680c30c4a07d86fe763c7e01169cd6cc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a> = D3DXCOLOR</td></tr>
 <tr class="separator:a680c30c4a07d86fe763c7e01169cd6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-関数</h2></td></tr>
-<tr class="memitem:a8b0cdafb4964973d6daa41a3058d1ff1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_vector3_d_8h.html#a8b0cdafb4964973d6daa41a3058d1ff1">Point3_Dot</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> vector1, <a class="el" href="class_vector3_d.html">Vector3D</a> vector2, <a class="el" href="class_vector3_d.html">Vector3D</a> vector3)</td></tr>
-<tr class="separator:a8b0cdafb4964973d6daa41a3058d1ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaadf214b288ef79251c169437abacabd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_vector3_d_8h.html#aaadf214b288ef79251c169437abacabd">Point3_Cross</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> vector1, <a class="el" href="class_vector3_d.html">Vector3D</a> vector2, <a class="el" href="class_vector3_d.html">Vector3D</a> vector3)</td></tr>
-<tr class="separator:aaadf214b288ef79251c169437abacabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7b2c371eae601b49a78b23e68ffc0a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_vector3_d_8h.html#ab7b2c371eae601b49a78b23e68ffc0a2">IsObtuseAngle</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> point0, <a class="el" href="class_vector3_d.html">Vector3D</a> point1, <a class="el" href="class_vector3_d.html">Vector3D</a> point2)</td></tr>
-<tr class="separator:ab7b2c371eae601b49a78b23e68ffc0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">型定義詳解</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>3DベクトルClass </p>
+<dl class="section author"><dt>著者</dt><dd>Kai Araki </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2017/11/21 </dd></dl>
+
+<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> に定義があります。</p>
+</div><h2 class="groupheader">型定義詳解</h2>
 <a id="a9c2339f516cf07ce4753b8a99fab3791"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c2339f516cf07ce4753b8a99fab3791">&#9670;&nbsp;</a></span>Color4</h2>
 
@@ -148,7 +144,7 @@ $(document).ready(function(){initNavTree('_vector3_d_8h.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00038">38</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00021">21</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -164,23 +160,7 @@ $(document).ready(function(){initNavTree('_vector3_d_8h.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00035">35</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a032295cd9fb1b711757c90667278e744"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a032295cd9fb1b711757c90667278e744">&#9670;&nbsp;</a></span>MATRIX</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> =  D3DXMATRIX</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00019">19</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -196,7 +176,7 @@ $(document).ready(function(){initNavTree('_vector3_d_8h.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00036">36</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00020">20</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -212,7 +192,7 @@ $(document).ready(function(){initNavTree('_vector3_d_8h.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00015">15</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -228,7 +208,7 @@ $(document).ready(function(){initNavTree('_vector3_d_8h.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00016">16</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -244,7 +224,7 @@ $(document).ready(function(){initNavTree('_vector3_d_8h.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00017">17</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -260,7 +240,7 @@ $(document).ready(function(){initNavTree('_vector3_d_8h.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00034">34</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00018">18</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -276,140 +256,7 @@ $(document).ready(function(){initNavTree('_vector3_d_8h.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00039">39</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<h2 class="groupheader">関数詳解</h2>
-<a id="ab7b2c371eae601b49a78b23e68ffc0a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7b2c371eae601b49a78b23e68ffc0a2">&#9670;&nbsp;</a></span>IsObtuseAngle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool IsObtuseAngle </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
-          <td class="paramname"><em>point0</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
-          <td class="paramname"><em>point1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
-          <td class="paramname"><em>point2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00486">486</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="aaadf214b288ef79251c169437abacabd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaadf214b288ef79251c169437abacabd">&#9670;&nbsp;</a></span>Point3_Cross()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="_vector3_d_8h.html#ab16f59e4393f29a01ec8b9bbbabbe65d">Vec3</a> Point3_Cross </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
-          <td class="paramname"><em>vector1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
-          <td class="paramname"><em>vector2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
-          <td class="paramname"><em>vector3</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00466">466</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a8b0cdafb4964973d6daa41a3058d1ff1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b0cdafb4964973d6daa41a3058d1ff1">&#9670;&nbsp;</a></span>Point3_Dot()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Point3_Dot </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
-          <td class="paramname"><em>vector1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
-          <td class="paramname"><em>vector2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
-          <td class="paramname"><em>vector3</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00446">446</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a> の <a class="el" href="_vector3_d_8h_source.html#l00022">22</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -418,7 +265,7 @@ $(document).ready(function(){initNavTree('_vector3_d_8h.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_48bb4aacea20c6a8378e1408d864b090.html">04_Tool</a></li><li class="navelem"><a class="el" href="dir_e5c1ae2f1092e95ef2033dbd3d9e326c.html">Vector</a></li><li class="navelem"><a class="el" href="_vector3_d_8h.html">Vector3D.h</a></li>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_b45bb414237523d3953b384861a4c0d0.html">Framework</a></li><li class="navelem"><a class="el" href="dir_a9de774c8f4bf8ca99a50ebaa8865440.html">Tool</a></li><li class="navelem"><a class="el" href="_vector3_d_8h.html">Vector3D.h</a></li>
     <li class="footer">構築:
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>

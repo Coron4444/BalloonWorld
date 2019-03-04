@@ -2,24 +2,33 @@
 \label{class_coin_collision}\index{Coin\+Collision@{Coin\+Collision}}
 
 
+コイン衝突\+Class  
+
+
+
+
 {\ttfamily \#include $<$Coin\+Collision.\+h$>$}
 
 
 
-Coin\+Collision の継承関係図\nopagebreak
+Coin\+Collision 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=169pt]{class_coin_collision__inherit__graph}
+\includegraphics[width=350pt]{class_coin_collision__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開型}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{class_coin_collision_ade7912345747f522fd895e87621ce049}{Object\+Tag}} \{ \mbox{\hyperlink{class_coin_collision_ade7912345747f522fd895e87621ce049aa520033eb3664c6f516082c22efd5d17}{N\+O\+NE}} = -\/1, 
-\mbox{\hyperlink{class_coin_collision_ade7912345747f522fd895e87621ce049a003d6865c3e811586f2b96d25c4b6375}{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+BB}}, 
-\mbox{\hyperlink{class_coin_collision_ade7912345747f522fd895e87621ce049ab3dfdeacfa9cf71c167dfb2faec4612f}{S\+U\+B\+S\+T\+A\+N\+CE}}, 
-\mbox{\hyperlink{class_coin_collision_ade7912345747f522fd895e87621ce049afe668be7d8cc9606f4c5be2220c38281}{M\+AX}}
+enum \mbox{\hyperlink{class_coin_collision_ade7912345747f522fd895e87621ce049}{Object\+Tag}} \{ \mbox{\hyperlink{class_coin_collision_ade7912345747f522fd895e87621ce049ab50339a10e1de285ac99d4c3990b8693}{Object\+Tag\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_coin_collision_ade7912345747f522fd895e87621ce049a186495f7da296bf880df3a22a492b378}{Object\+Tag\+::\+M\+A\+IN}}, 
+\mbox{\hyperlink{class_coin_collision_ade7912345747f522fd895e87621ce049a26a4b44a837bf97b972628509912b4a5}{Object\+Tag\+::\+M\+AX}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_coin_collision_a2b0f28f5b989cbf699624ae25f0e019b}{Shape\+Tag}} \{ \mbox{\hyperlink{class_coin_collision_a2b0f28f5b989cbf699624ae25f0e019bab50339a10e1de285ac99d4c3990b8693}{Shape\+Tag\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_coin_collision_a2b0f28f5b989cbf699624ae25f0e019ba186495f7da296bf880df3a22a492b378}{Shape\+Tag\+::\+M\+A\+IN}}, 
+\mbox{\hyperlink{class_coin_collision_a2b0f28f5b989cbf699624ae25f0e019ba26a4b44a837bf97b972628509912b4a5}{Shape\+Tag\+::\+M\+AX}}
  \}
 \end{DoxyCompactItemize}
 \subsection*{公開メンバ関数}
@@ -27,40 +36,28 @@ enum \mbox{\hyperlink{class_coin_collision_ade7912345747f522fd895e87621ce049}{Ob
 \item 
 void \mbox{\hyperlink{class_coin_collision_a4119a7decab2410a4ada3568ad0c132d}{Init}} () override
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_coin_collision_aa852afdcdbedcf82809df9c7fd99be9e}{Uninit}} () override
-\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_coin_collision_a981fd9b1b8c688a757a456a56d80501b}{Update}} () override
 \begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_collision_objects}{Collision\+Objects}} $\ast$ \mbox{\hyperlink{class_coin_collision_a6a110ab9ad9acd6942a5725380443151}{collision\+\_\+objects\+\_\+}}
-\item 
-\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$ \mbox{\hyperlink{class_coin_collision_ac604781e9ab6194c06bf9ca7f426bd95}{bounding\+\_\+obb\+\_\+}}
-\item 
-\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$ \mbox{\hyperlink{class_coin_collision_a255c792770274eebf85df921467e6f1c}{substance\+\_\+}}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$ \mbox{\hyperlink{class_coin_collision_ae561b628ea89a9872af41b00aca39599}{collision\+\_\+object\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 衝突オブジェクト \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_b_b}{O\+BB}} $\ast$ \mbox{\hyperlink{class_coin_collision_a3fa890c6034808e8243a925563c0286f}{main\+\_\+obb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em メイン\+O\+BB \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-static const float \mbox{\hyperlink{class_coin_collision_a4477f2cf482af3295f6bc457b1c55d7d}{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+R\+I\+G\+HT}} = 1.\+0f
-\item 
-static const float \mbox{\hyperlink{class_coin_collision_ab8bfe7f01de3527c12fa57169630c9dd}{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+UP}} = 1.\+0f
-\item 
-static const float \mbox{\hyperlink{class_coin_collision_ae8d9f9859d5399026f24ada82b545dc7}{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+F\+O\+R\+W\+A\+RD}} = 1.\+0f
-\item 
-static const float \mbox{\hyperlink{class_coin_collision_aa8f9e6be6e1b384fb5db936f2f3fe29d}{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+I\+G\+HT}} = 1.\+0f
-\item 
-static const float \mbox{\hyperlink{class_coin_collision_a5d8b3e5d27c1f87758fa721041c5a45a}{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+UP}} = 1.\+0f
-\item 
-static const float \mbox{\hyperlink{class_coin_collision_a44cb9f131326f39e4d7072c07d5023ac}{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+F\+O\+R\+W\+A\+RD}} = 1.\+0f
-\end{DoxyCompactItemize}
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_coin_collision_a299c091838df79818786dc9b781a2114}{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}}
+\begin{DoxyCompactList}\small\item\em メイン\+O\+B\+B長さ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
+コイン衝突\+Class 
 
+コインの衝突\+Class 
 
- Coin\+Collision.\+h の 33 行目に定義があります。
+ Coin\+Collision.\+h の 24 行目に定義があります。
 
 
 
@@ -69,29 +66,49 @@ static const float \mbox{\hyperlink{class_coin_collision_a44cb9f131326f39e4d7072
 \index{Coin\+Collision@{Coin\+Collision}!Object\+Tag@{Object\+Tag}}
 \index{Object\+Tag@{Object\+Tag}!Coin\+Collision@{Coin\+Collision}}
 \subsubsection{\texorpdfstring{Object\+Tag}{ObjectTag}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{class_coin_collision_ade7912345747f522fd895e87621ce049}{Coin\+Collision\+::\+Object\+Tag}}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_coin_collision_ade7912345747f522fd895e87621ce049}{Coin\+Collision\+::\+Object\+Tag}}\hspace{0.3cm}{\ttfamily [strong]}}
 
 \begin{DoxyEnumFields}{列挙値}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Coin\+Collision@{Coin\+Collision}}\index{Coin\+Collision@{Coin\+Collision}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_coin_collision_ade7912345747f522fd895e87621ce049aa520033eb3664c6f516082c22efd5d17}\label{class_coin_collision_ade7912345747f522fd895e87621ce049aa520033eb3664c6f516082c22efd5d17}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Coin\+Collision@{Coin\+Collision}}\index{Coin\+Collision@{Coin\+Collision}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_coin_collision_ade7912345747f522fd895e87621ce049ab50339a10e1de285ac99d4c3990b8693}\label{class_coin_collision_ade7912345747f522fd895e87621ce049ab50339a10e1de285ac99d4c3990b8693}} 
 N\+O\+NE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+BB@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+BB}!Coin\+Collision@{Coin\+Collision}}\index{Coin\+Collision@{Coin\+Collision}!B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+BB@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+BB}}}\mbox{\Hypertarget{class_coin_collision_ade7912345747f522fd895e87621ce049a003d6865c3e811586f2b96d25c4b6375}\label{class_coin_collision_ade7912345747f522fd895e87621ce049a003d6865c3e811586f2b96d25c4b6375}} 
-B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+BB&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+IN@{M\+A\+IN}!Coin\+Collision@{Coin\+Collision}}\index{Coin\+Collision@{Coin\+Collision}!M\+A\+IN@{M\+A\+IN}}}\mbox{\Hypertarget{class_coin_collision_ade7912345747f522fd895e87621ce049a186495f7da296bf880df3a22a492b378}\label{class_coin_collision_ade7912345747f522fd895e87621ce049a186495f7da296bf880df3a22a492b378}} 
+M\+A\+IN&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+U\+B\+S\+T\+A\+N\+CE@{S\+U\+B\+S\+T\+A\+N\+CE}!Coin\+Collision@{Coin\+Collision}}\index{Coin\+Collision@{Coin\+Collision}!S\+U\+B\+S\+T\+A\+N\+CE@{S\+U\+B\+S\+T\+A\+N\+CE}}}\mbox{\Hypertarget{class_coin_collision_ade7912345747f522fd895e87621ce049ab3dfdeacfa9cf71c167dfb2faec4612f}\label{class_coin_collision_ade7912345747f522fd895e87621ce049ab3dfdeacfa9cf71c167dfb2faec4612f}} 
-S\+U\+B\+S\+T\+A\+N\+CE&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Coin\+Collision@{Coin\+Collision}}\index{Coin\+Collision@{Coin\+Collision}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_coin_collision_ade7912345747f522fd895e87621ce049afe668be7d8cc9606f4c5be2220c38281}\label{class_coin_collision_ade7912345747f522fd895e87621ce049afe668be7d8cc9606f4c5be2220c38281}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Coin\+Collision@{Coin\+Collision}}\index{Coin\+Collision@{Coin\+Collision}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_coin_collision_ade7912345747f522fd895e87621ce049a26a4b44a837bf97b972628509912b4a5}\label{class_coin_collision_ade7912345747f522fd895e87621ce049a26a4b44a837bf97b972628509912b4a5}} 
 M\+AX&\\
 \hline
 
 \end{DoxyEnumFields}
 
 
- Coin\+Collision.\+h の 49 行目に定義があります。
+ Coin\+Collision.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_coin_collision_a2b0f28f5b989cbf699624ae25f0e019b}\label{class_coin_collision_a2b0f28f5b989cbf699624ae25f0e019b}} 
+\index{Coin\+Collision@{Coin\+Collision}!Shape\+Tag@{Shape\+Tag}}
+\index{Shape\+Tag@{Shape\+Tag}!Coin\+Collision@{Coin\+Collision}}
+\subsubsection{\texorpdfstring{Shape\+Tag}{ShapeTag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_coin_collision_a2b0f28f5b989cbf699624ae25f0e019b}{Coin\+Collision\+::\+Shape\+Tag}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Coin\+Collision@{Coin\+Collision}}\index{Coin\+Collision@{Coin\+Collision}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_coin_collision_a2b0f28f5b989cbf699624ae25f0e019bab50339a10e1de285ac99d4c3990b8693}\label{class_coin_collision_a2b0f28f5b989cbf699624ae25f0e019bab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+IN@{M\+A\+IN}!Coin\+Collision@{Coin\+Collision}}\index{Coin\+Collision@{Coin\+Collision}!M\+A\+IN@{M\+A\+IN}}}\mbox{\Hypertarget{class_coin_collision_a2b0f28f5b989cbf699624ae25f0e019ba186495f7da296bf880df3a22a492b378}\label{class_coin_collision_a2b0f28f5b989cbf699624ae25f0e019ba186495f7da296bf880df3a22a492b378}} 
+M\+A\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Coin\+Collision@{Coin\+Collision}}\index{Coin\+Collision@{Coin\+Collision}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_coin_collision_a2b0f28f5b989cbf699624ae25f0e019ba26a4b44a837bf97b972628509912b4a5}\label{class_coin_collision_a2b0f28f5b989cbf699624ae25f0e019ba26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Coin\+Collision.\+h の 37 行目に定義があります。
 
 
 
@@ -122,35 +139,7 @@ M\+AX&\\
 
 
 
- Coin\+Collision.\+cpp の 49 行目に定義があります。
-
-\mbox{\Hypertarget{class_coin_collision_aa852afdcdbedcf82809df9c7fd99be9e}\label{class_coin_collision_aa852afdcdbedcf82809df9c7fd99be9e}} 
-\index{Coin\+Collision@{Coin\+Collision}!Uninit@{Uninit}}
-\index{Uninit@{Uninit}!Coin\+Collision@{Coin\+Collision}}
-\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
-{\footnotesize\ttfamily void Coin\+Collision\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-終了関数 
-
-
-\begin{DoxyParams}{引数}
-{\em void} & なし \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyRetVals}{戻り値}
-{\em void} & なし \\
-\hline
-\end{DoxyRetVals}
-
-
-\mbox{\hyperlink{class_collision_null_aafac3fdab43845465fd1e0198c423ccf}{Collision\+Null}}を再実装しています。
-
-
-
- Coin\+Collision.\+cpp の 92 行目に定義があります。
+ Coin\+Collision.\+cpp の 27 行目に定義があります。
 
 \mbox{\Hypertarget{class_coin_collision_a981fd9b1b8c688a757a456a56d80501b}\label{class_coin_collision_a981fd9b1b8c688a757a456a56d80501b}} 
 \index{Coin\+Collision@{Coin\+Collision}!Update@{Update}}
@@ -178,104 +167,56 @@ M\+AX&\\
 
 
 
- Coin\+Collision.\+cpp の 106 行目に定義があります。
+ Coin\+Collision.\+cpp の 46 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
-\mbox{\Hypertarget{class_coin_collision_ac604781e9ab6194c06bf9ca7f426bd95}\label{class_coin_collision_ac604781e9ab6194c06bf9ca7f426bd95}} 
-\index{Coin\+Collision@{Coin\+Collision}!bounding\+\_\+obb\+\_\+@{bounding\+\_\+obb\+\_\+}}
-\index{bounding\+\_\+obb\+\_\+@{bounding\+\_\+obb\+\_\+}!Coin\+Collision@{Coin\+Collision}}
-\subsubsection{\texorpdfstring{bounding\+\_\+obb\+\_\+}{bounding\_obb\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_object}{Collision\+Object}}$\ast$ Coin\+Collision\+::bounding\+\_\+obb\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_coin_collision_ae561b628ea89a9872af41b00aca39599}\label{class_coin_collision_ae561b628ea89a9872af41b00aca39599}} 
+\index{Coin\+Collision@{Coin\+Collision}!collision\+\_\+object\+\_\+@{collision\+\_\+object\+\_\+}}
+\index{collision\+\_\+object\+\_\+@{collision\+\_\+object\+\_\+}!Coin\+Collision@{Coin\+Collision}}
+\subsubsection{\texorpdfstring{collision\+\_\+object\+\_\+}{collision\_object\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_object}{Collision\+Object}}$\ast$ Coin\+Collision\+::collision\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Coin\+Collision.\+h の 71 行目に定義があります。
-
-\mbox{\Hypertarget{class_coin_collision_ae8d9f9859d5399026f24ada82b545dc7}\label{class_coin_collision_ae8d9f9859d5399026f24ada82b545dc7}} 
-\index{Coin\+Collision@{Coin\+Collision}!B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+F\+O\+R\+W\+A\+RD@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+F\+O\+R\+W\+A\+RD}}
-\index{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+F\+O\+R\+W\+A\+RD@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+F\+O\+R\+W\+A\+RD}!Coin\+Collision@{Coin\+Collision}}
-\subsubsection{\texorpdfstring{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+F\+O\+R\+W\+A\+RD}{BOUNDING\_OBB\_FORWARD}}
-{\footnotesize\ttfamily const float Coin\+Collision\+::\+B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+F\+O\+R\+W\+A\+RD = 1.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+衝突オブジェクト 
 
 
 
- Coin\+Collision.\+h の 40 行目に定義があります。
+ Coin\+Collision.\+h の 56 行目に定義があります。
 
-\mbox{\Hypertarget{class_coin_collision_a4477f2cf482af3295f6bc457b1c55d7d}\label{class_coin_collision_a4477f2cf482af3295f6bc457b1c55d7d}} 
-\index{Coin\+Collision@{Coin\+Collision}!B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+R\+I\+G\+HT@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+R\+I\+G\+HT}}
-\index{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+R\+I\+G\+HT@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+R\+I\+G\+HT}!Coin\+Collision@{Coin\+Collision}}
-\subsubsection{\texorpdfstring{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+R\+I\+G\+HT}{BOUNDING\_OBB\_RIGHT}}
-{\footnotesize\ttfamily const float Coin\+Collision\+::\+B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+R\+I\+G\+HT = 1.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
- Coin\+Collision.\+h の 38 行目に定義があります。
-
-\mbox{\Hypertarget{class_coin_collision_ab8bfe7f01de3527c12fa57169630c9dd}\label{class_coin_collision_ab8bfe7f01de3527c12fa57169630c9dd}} 
-\index{Coin\+Collision@{Coin\+Collision}!B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+UP@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+UP}}
-\index{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+UP@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+UP}!Coin\+Collision@{Coin\+Collision}}
-\subsubsection{\texorpdfstring{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+UP}{BOUNDING\_OBB\_UP}}
-{\footnotesize\ttfamily const float Coin\+Collision\+::\+B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+O\+B\+B\+\_\+\+UP = 1.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+\mbox{\Hypertarget{class_coin_collision_a3fa890c6034808e8243a925563c0286f}\label{class_coin_collision_a3fa890c6034808e8243a925563c0286f}} 
+\index{Coin\+Collision@{Coin\+Collision}!main\+\_\+obb\+\_\+@{main\+\_\+obb\+\_\+}}
+\index{main\+\_\+obb\+\_\+@{main\+\_\+obb\+\_\+}!Coin\+Collision@{Coin\+Collision}}
+\subsubsection{\texorpdfstring{main\+\_\+obb\+\_\+}{main\_obb\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_b_b}{O\+BB}}$\ast$ Coin\+Collision\+::main\+\_\+obb\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Coin\+Collision.\+h の 39 行目に定義があります。
-
-\mbox{\Hypertarget{class_coin_collision_a6a110ab9ad9acd6942a5725380443151}\label{class_coin_collision_a6a110ab9ad9acd6942a5725380443151}} 
-\index{Coin\+Collision@{Coin\+Collision}!collision\+\_\+objects\+\_\+@{collision\+\_\+objects\+\_\+}}
-\index{collision\+\_\+objects\+\_\+@{collision\+\_\+objects\+\_\+}!Coin\+Collision@{Coin\+Collision}}
-\subsubsection{\texorpdfstring{collision\+\_\+objects\+\_\+}{collision\_objects\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_objects}{Collision\+Objects}}$\ast$ Coin\+Collision\+::collision\+\_\+objects\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+メイン\+O\+BB 
 
 
 
- Coin\+Collision.\+h の 70 行目に定義があります。
+ Coin\+Collision.\+h の 57 行目に定義があります。
 
-\mbox{\Hypertarget{class_coin_collision_a255c792770274eebf85df921467e6f1c}\label{class_coin_collision_a255c792770274eebf85df921467e6f1c}} 
-\index{Coin\+Collision@{Coin\+Collision}!substance\+\_\+@{substance\+\_\+}}
-\index{substance\+\_\+@{substance\+\_\+}!Coin\+Collision@{Coin\+Collision}}
-\subsubsection{\texorpdfstring{substance\+\_\+}{substance\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_object}{Collision\+Object}}$\ast$ Coin\+Collision\+::substance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Coin\+Collision.\+h の 72 行目に定義があります。
-
-\mbox{\Hypertarget{class_coin_collision_a44cb9f131326f39e4d7072c07d5023ac}\label{class_coin_collision_a44cb9f131326f39e4d7072c07d5023ac}} 
-\index{Coin\+Collision@{Coin\+Collision}!S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+F\+O\+R\+W\+A\+RD@{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+F\+O\+R\+W\+A\+RD}}
-\index{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+F\+O\+R\+W\+A\+RD@{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+F\+O\+R\+W\+A\+RD}!Coin\+Collision@{Coin\+Collision}}
-\subsubsection{\texorpdfstring{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+F\+O\+R\+W\+A\+RD}{SUBSTANCE\_FORWARD}}
-{\footnotesize\ttfamily const float Coin\+Collision\+::\+S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+F\+O\+R\+W\+A\+RD = 1.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+\mbox{\Hypertarget{class_coin_collision_a299c091838df79818786dc9b781a2114}\label{class_coin_collision_a299c091838df79818786dc9b781a2114}} 
+\index{Coin\+Collision@{Coin\+Collision}!M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}}
+\index{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}!Coin\+Collision@{Coin\+Collision}}
+\subsubsection{\texorpdfstring{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}{MAIN\_OBB\_LENGTH}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Coin\+Collision\+::\+M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
- Coin\+Collision.\+h の 44 行目に定義があります。
-
-\mbox{\Hypertarget{class_coin_collision_aa8f9e6be6e1b384fb5db936f2f3fe29d}\label{class_coin_collision_aa8f9e6be6e1b384fb5db936f2f3fe29d}} 
-\index{Coin\+Collision@{Coin\+Collision}!S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+I\+G\+HT@{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+I\+G\+HT}}
-\index{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+I\+G\+HT@{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+I\+G\+HT}!Coin\+Collision@{Coin\+Collision}}
-\subsubsection{\texorpdfstring{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+I\+G\+HT}{SUBSTANCE\_RIGHT}}
-{\footnotesize\ttfamily const float Coin\+Collision\+::\+S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+R\+I\+G\+HT = 1.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+メイン\+O\+B\+B長さ 
 
 
 
- Coin\+Collision.\+h の 42 行目に定義があります。
-
-\mbox{\Hypertarget{class_coin_collision_a5d8b3e5d27c1f87758fa721041c5a45a}\label{class_coin_collision_a5d8b3e5d27c1f87758fa721041c5a45a}} 
-\index{Coin\+Collision@{Coin\+Collision}!S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+UP@{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+UP}}
-\index{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+UP@{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+UP}!Coin\+Collision@{Coin\+Collision}}
-\subsubsection{\texorpdfstring{S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+UP}{SUBSTANCE\_UP}}
-{\footnotesize\ttfamily const float Coin\+Collision\+::\+S\+U\+B\+S\+T\+A\+N\+C\+E\+\_\+\+UP = 1.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
- Coin\+Collision.\+h の 43 行目に定義があります。
+ Coin\+Collision.\+h の 49 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Coin/\+Coin\+Collision/\mbox{\hyperlink{_coin_collision_8h}{Coin\+Collision.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Coin/\+Coin\+Collision/\mbox{\hyperlink{_coin_collision_8cpp}{Coin\+Collision.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Coin/\mbox{\hyperlink{_coin_collision_8h}{Coin\+Collision.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Coin/\+Source/\mbox{\hyperlink{_coin_collision_8cpp}{Coin\+Collision.\+cpp}}\end{DoxyCompactItemize}

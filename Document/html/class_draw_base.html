@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: DrawBase クラス</title>
+<title>BalloonWorld: DrawBase クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -101,28 +101,31 @@ $(document).ready(function(){initNavTree('class_draw_base.html','');});
 
 <p><code>#include &lt;<a class="el" href="_draw_base_8h_source.html">DrawBase.h</a>&gt;</code></p>
 <div class="dynheader">
-DrawBase の継承関係図</div>
+DrawBase 連携図</div>
 <div class="dyncontent">
-<div class="center"><img src="class_draw_base__inherit__graph.png" border="0" usemap="#_draw_base_inherit__map" alt="Inheritance graph"/></div>
-<map name="_draw_base_inherit__map" id="_draw_base_inherit__map">
-<area shape="rect" id="node3" href="class_draw_null.html" title="空白描画Class " alt="" coords="301,385,375,412"/>
-<area shape="rect" id="node2" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="5,385,124,412"/>
-<area shape="rect" id="node4" href="class_clear_logo_draw.html" title="クリアロゴ描画クラス " alt="" coords="449,5,559,32"/>
-<area shape="rect" id="node5" href="class_coin_draw.html" title="コインロゴ描画Class " alt="" coords="465,56,543,83"/>
-<area shape="rect" id="node6" href="class_enemy_draw.html" title="敵描画クラス " alt="" coords="458,107,550,133"/>
-<area shape="rect" id="node7" href="class_fade.html" title="フェードクラス " alt="" coords="479,157,529,184"/>
-<area shape="rect" id="node8" href="class_failure_logo_draw.html" title="失敗ロゴ描画クラス " alt="" coords="445,208,563,235"/>
-<area shape="rect" id="node9" href="class_field_draw.html" title="地面描画クラス " alt="" coords="465,259,543,285"/>
-<area shape="rect" id="node10" href="class_goal_draw.html" title="ゴール描画クラス " alt="" coords="465,309,543,336"/>
-<area shape="rect" id="node11" href="class_number_draw.html" title="数字描画クラス " alt="" coords="456,360,552,387"/>
-<area shape="rect" id="node12" href="class_player_draw.html" title="プレイヤー描画クラス " alt="" coords="460,411,548,437"/>
-<area shape="rect" id="node13" href="class_push_space_logo_draw.html" title="プッシュスペースロゴ描画クラス " alt="" coords="431,461,577,488"/>
-<area shape="rect" id="node14" href="class_render_texture.html" title="フェードクラス " alt="" coords="451,512,557,539"/>
-<area shape="rect" id="node15" href="class_score_draw.html" title="スコア描画クラス " alt="" coords="461,563,547,589"/>
-<area shape="rect" id="node16" href="class_sky_dome_draw.html" title="プレイヤー描画クラス " alt="" coords="450,613,558,640"/>
-<area shape="rect" id="node17" href="class_stencil_shadow_test_draw.html" title="ステンシルシャドウ描画クラス " alt="" coords="423,664,585,691"/>
-<area shape="rect" id="node18" href="class_title_logo_draw.html" title="タイトルロゴ描画クラス " alt="" coords="453,715,555,741"/>
-<area shape="rect" id="node19" href="class_tutorial_logo_draw.html" title="チュートリアルロゴ描画クラス " alt="" coords="443,765,565,792"/>
+<div class="center"><img src="class_draw_base__coll__graph.png" border="0" usemap="#_draw_base_coll__map" alt="Collaboration graph"/></div>
+<map name="_draw_base_coll__map" id="_draw_base_coll__map">
+<area shape="rect" id="node3" href="class_game_object_base.html" title="ゲームオブジェクトBaseClass " alt="" coords="1547,389,1672,416"/>
+<area shape="rect" id="node2" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="1805,320,1924,347"/>
+<area shape="rect" id="node4" href="class_collision_base.html" title="衝突BaseClass " alt="" coords="1973,380,2075,407"/>
+<area shape="rect" id="node15" href="class_physics.html" title="物理Class " alt="" coords="1830,452,1899,479"/>
+<area shape="rect" id="node6" href="class_collision_object.html" title="衝突オブジェクトClass " alt="" coords="2216,552,2325,579"/>
+<area shape="rect" id="node5" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject *,\l ARRAY_NUM \&gt;" alt="" coords="2506,405,2642,461"/>
+<area shape="rect" id="node11" href="class_object_of_tree.html" title="ObjectOfTree\&lt; CollisionObject *\&gt;" alt="" coords="2467,547,2681,573"/>
+<area shape="rect" id="node7" href="class_a_a_b_b.html" title="AABBClass " alt="" coords="741,671,800,697"/>
+<area shape="rect" id="node8" href="class_collision_shape_base.html" title="衝突形状BaseClass " alt="" coords="364,653,503,680"/>
+<area shape="rect" id="node14" href="class_collision_object_1_1_shape.html" title="衝突形状Class " alt="" coords="693,604,848,631"/>
+<area shape="rect" id="node9" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="107,496,183,523"/>
+<area shape="rect" id="node16" href="class_transform.html" title="変形Class " alt="" coords="731,411,810,437"/>
+<area shape="rect" id="node17" href="class_matrix.html" title="行列Class " alt="" coords="404,191,463,217"/>
+<area shape="rect" id="node21" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="1033,203,1164,229"/>
+<area shape="rect" id="node22" href="class_camera.html" title="カメラClass " alt="" coords="737,251,804,277"/>
+<area shape="rect" id="node12" href="class_space_of_tree.html" title="SpaceOfTree\&lt; CollisionObject *\&gt;" alt="" coords="2839,547,3052,573"/>
+<area shape="rect" id="node13" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject::Shape\l *, ARRAY_NUM \&gt;" alt="" coords="1188,559,1355,615"/>
+<area shape="rect" id="node19" href="class_draw_order_list.html" title="描画注文リストClass " alt="" coords="1047,79,1151,105"/>
+<area shape="rect" id="node20" href="class_bit_flag.html" title="ビットフラグClass " alt="" coords="739,5,802,32"/>
+<area shape="rect" id="node23" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="1045,275,1152,301"/>
+<area shape="rect" id="node24" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="717,160,824,187"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
@@ -134,46 +137,58 @@ DrawBase の継承関係図</div>
 <tr class="memitem:add488139aed539e7ccd19492702b4bee"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#add488139aed539e7ccd19492702b4bee">getMeshNum</a> (unsigned object_index)=0</td></tr>
 <tr class="memdesc:add488139aed539e7ccd19492702b4bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ数取得関数  <a href="#add488139aed539e7ccd19492702b4bee">[詳解]</a><br /></td></tr>
 <tr class="separator:add488139aed539e7ccd19492702b4bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60fc3148b2679e4ea7723d2af0c37283"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a60fc3148b2679e4ea7723d2af0c37283">getpMatrix</a> (unsigned object_index)=0</td></tr>
-<tr class="memdesc:a60fc3148b2679e4ea7723d2af0c37283"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列ポインタ取得関数  <a href="#a60fc3148b2679e4ea7723d2af0c37283">[詳解]</a><br /></td></tr>
+<tr class="memitem:a9420d7257415446e8cddd1a22f139dd3"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a9420d7257415446e8cddd1a22f139dd3">getBoneNum</a> (unsigned object_index, unsigned mesh_index)=0</td></tr>
+<tr class="memdesc:a9420d7257415446e8cddd1a22f139dd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボーン数取得関数  <a href="#a9420d7257415446e8cddd1a22f139dd3">[詳解]</a><br /></td></tr>
+<tr class="separator:a9420d7257415446e8cddd1a22f139dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60fc3148b2679e4ea7723d2af0c37283"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_matrix_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a60fc3148b2679e4ea7723d2af0c37283">getpMatrix</a> (unsigned object_index)=0</td></tr>
+<tr class="memdesc:a60fc3148b2679e4ea7723d2af0c37283"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド行列取得関数  <a href="#a60fc3148b2679e4ea7723d2af0c37283">[詳解]</a><br /></td></tr>
 <tr class="separator:a60fc3148b2679e4ea7723d2af0c37283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea44fcf0b1281ec4caa7ad3f2f898950"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_matrix_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#aea44fcf0b1281ec4caa7ad3f2f898950">getpBoneMatrix</a> (unsigned object_index, unsigned mesh_index, unsigned bone_index)=0</td></tr>
+<tr class="memdesc:aea44fcf0b1281ec4caa7ad3f2f898950"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボーン行列取得関数  <a href="#aea44fcf0b1281ec4caa7ad3f2f898950">[詳解]</a><br /></td></tr>
+<tr class="separator:aea44fcf0b1281ec4caa7ad3f2f898950"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a940543b482e934624637f3c6b4d17f96"><td class="memItemLeft" align="right" valign="top">virtual D3DMATERIAL9 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a940543b482e934624637f3c6b4d17f96">getpMaterial</a> (unsigned object_index, unsigned mesh_index)=0</td></tr>
-<tr class="memdesc:a940543b482e934624637f3c6b4d17f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルポインタ取得関数  <a href="#a940543b482e934624637f3c6b4d17f96">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a940543b482e934624637f3c6b4d17f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル取得関数  <a href="#a940543b482e934624637f3c6b4d17f96">[詳解]</a><br /></td></tr>
 <tr class="separator:a940543b482e934624637f3c6b4d17f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f50a030778dbfca5ae45bb7908e0d58"><td class="memItemLeft" align="right" valign="top">virtual LPDIRECT3DTEXTURE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a9f50a030778dbfca5ae45bb7908e0d58">getpDecaleTexture</a> (unsigned object_index, unsigned mesh_index)=0</td></tr>
-<tr class="memdesc:a9f50a030778dbfca5ae45bb7908e0d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">デカールテクスチャポインタ取得関数  <a href="#a9f50a030778dbfca5ae45bb7908e0d58">[詳解]</a><br /></td></tr>
-<tr class="separator:a9f50a030778dbfca5ae45bb7908e0d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96e94272903d6b663463e0f49246d959"><td class="memItemLeft" align="right" valign="top">virtual LPDIRECT3DTEXTURE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a96e94272903d6b663463e0f49246d959">getpDiffuseTexture</a> (unsigned object_index, unsigned mesh_index)=0</td></tr>
+<tr class="memdesc:a96e94272903d6b663463e0f49246d959"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディヒューズテクスチャ取得関数  <a href="#a96e94272903d6b663463e0f49246d959">[詳解]</a><br /></td></tr>
+<tr class="separator:a96e94272903d6b663463e0f49246d959"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76c3b910b495fcf69aacf6164ca90c7d"><td class="memItemLeft" align="right" valign="top">virtual LPDIRECT3DTEXTURE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a76c3b910b495fcf69aacf6164ca90c7d">getpNormalTexture</a> (unsigned object_index, unsigned mesh_index)=0</td></tr>
-<tr class="memdesc:a76c3b910b495fcf69aacf6164ca90c7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">法線テクスチャポインタ取得関数  <a href="#a76c3b910b495fcf69aacf6164ca90c7d">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a76c3b910b495fcf69aacf6164ca90c7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">法線テクスチャ取得関数  <a href="#a76c3b910b495fcf69aacf6164ca90c7d">[詳解]</a><br /></td></tr>
 <tr class="separator:a76c3b910b495fcf69aacf6164ca90c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5fe522d4bbce381e6fe8e5601b69e9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_order_list.html">DrawOrderList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#af5fe522d4bbce381e6fe8e5601b69e9f">getpDrawOrderList</a> ()</td></tr>
-<tr class="memdesc:af5fe522d4bbce381e6fe8e5601b69e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画注文リストポインタ取得関数  <a href="#af5fe522d4bbce381e6fe8e5601b69e9f">[詳解]</a><br /></td></tr>
+<tr class="memdesc:af5fe522d4bbce381e6fe8e5601b69e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画注文リスト取得関数  <a href="#af5fe522d4bbce381e6fe8e5601b69e9f">[詳解]</a><br /></td></tr>
 <tr class="separator:af5fe522d4bbce381e6fe8e5601b69e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac55a0cbcb51067ec9a3515530bb3f7de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#ac55a0cbcb51067ec9a3515530bb3f7de">getpDrawCommonData</a> ()</td></tr>
+<tr class="memdesc:ac55a0cbcb51067ec9a3515530bb3f7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ取得関数  <a href="#ac55a0cbcb51067ec9a3515530bb3f7de">[詳解]</a><br /></td></tr>
+<tr class="separator:ac55a0cbcb51067ec9a3515530bb3f7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75591fe15951811f294dc964a7894214"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a75591fe15951811f294dc964a7894214">setDrawCommonData</a> (<a class="el" href="class_draw_common_data.html">DrawCommonData</a> *value)</td></tr>
+<tr class="memdesc:a75591fe15951811f294dc964a7894214"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ設定関数  <a href="#a75591fe15951811f294dc964a7894214">[詳解]</a><br /></td></tr>
+<tr class="separator:a75591fe15951811f294dc964a7894214"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af276fa23e7c5f51a4fdeab016456a992"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#af276fa23e7c5f51a4fdeab016456a992">~DrawBase</a> ()=0</td></tr>
 <tr class="memdesc:af276fa23e7c5f51a4fdeab016456a992"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="#af276fa23e7c5f51a4fdeab016456a992">[詳解]</a><br /></td></tr>
 <tr class="separator:af276fa23e7c5f51a4fdeab016456a992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a408080106630a1146d7af0bb46a4d8d1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a408080106630a1146d7af0bb46a4d8d1">Draw</a> (unsigned object_index, unsigned mesh_index)=0</td></tr>
 <tr class="memdesc:a408080106630a1146d7af0bb46a4d8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画関数  <a href="#a408080106630a1146d7af0bb46a4d8d1">[詳解]</a><br /></td></tr>
 <tr class="separator:a408080106630a1146d7af0bb46a4d8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3978252914ddde12197ea4577356bf25"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a3978252914ddde12197ea4577356bf25">SettingBeforeDrawing</a> (<a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index)=0</td></tr>
-<tr class="memdesc:a3978252914ddde12197ea4577356bf25"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画前設定関数  <a href="#a3978252914ddde12197ea4577356bf25">[詳解]</a><br /></td></tr>
-<tr class="separator:a3978252914ddde12197ea4577356bf25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe64f27b0bbf8c45da7aa0de4c3f3d65"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#afe64f27b0bbf8c45da7aa0de4c3f3d65">SettingAfterDrawing</a> (<a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index)=0</td></tr>
-<tr class="memdesc:afe64f27b0bbf8c45da7aa0de4c3f3d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画後設定関数  <a href="#afe64f27b0bbf8c45da7aa0de4c3f3d65">[詳解]</a><br /></td></tr>
-<tr class="separator:afe64f27b0bbf8c45da7aa0de4c3f3d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa18abd488181eed72822f92a0f2521fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#aa18abd488181eed72822f92a0f2521fe">LimitedChangeCameraType</a> (<a class="el" href="class_camera.html">Camera</a> *camera, <a class="el" href="class_camera.html#a3b0a1f58deca679ac665f61c480d1dcb">Camera::Type</a> type)</td></tr>
-<tr class="memdesc:aa18abd488181eed72822f92a0f2521fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">限定カメラタイプ変更関数  <a href="#aa18abd488181eed72822f92a0f2521fe">[詳解]</a><br /></td></tr>
-<tr class="separator:aa18abd488181eed72822f92a0f2521fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48b144e61928b7658c7a849017e40c79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a48b144e61928b7658c7a849017e40c79">RevivalCameraType</a> (<a class="el" href="class_camera.html">Camera</a> *camera)</td></tr>
-<tr class="memdesc:a48b144e61928b7658c7a849017e40c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラタイプ復活関数  <a href="#a48b144e61928b7658c7a849017e40c79">[詳解]</a><br /></td></tr>
-<tr class="separator:a48b144e61928b7658c7a849017e40c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf55f6b67735e0bff42d749f43826c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a9bf55f6b67735e0bff42d749f43826c1">ObjectSettingBefore</a> (unsigned object_index)=0</td></tr>
+<tr class="memdesc:a9bf55f6b67735e0bff42d749f43826c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト前設定関数  <a href="#a9bf55f6b67735e0bff42d749f43826c1">[詳解]</a><br /></td></tr>
+<tr class="separator:a9bf55f6b67735e0bff42d749f43826c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1592d0f04fb49289758008dcff4e7a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#ab1592d0f04fb49289758008dcff4e7a0">ObjectSettingAfter</a> (unsigned object_index)=0</td></tr>
+<tr class="memdesc:ab1592d0f04fb49289758008dcff4e7a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト後設定関数  <a href="#ab1592d0f04fb49289758008dcff4e7a0">[詳解]</a><br /></td></tr>
+<tr class="separator:ab1592d0f04fb49289758008dcff4e7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_component_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_component_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_component_base.html">ComponentBase</a> に属する継承公開メンバ関数</td></tr>
 <tr class="memitem:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#ab9517b92e45e084b1cc450c147e16642">getpGameObject</a> ()</td></tr>
-<tr class="memdesc:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクトポインタ取得関数  <a href="class_component_base.html#ab9517b92e45e084b1cc450c147e16642">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクト取得関数  <a href="class_component_base.html#ab9517b92e45e084b1cc450c147e16642">[詳解]</a><br /></td></tr>
 <tr class="separator:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#ae671317076d3c89ba0793ae2cd34d5ea">setGameObject</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *value)</td></tr>
-<tr class="memdesc:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクトポインタ設定関数  <a href="class_component_base.html#ae671317076d3c89ba0793ae2cd34d5ea">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクト設定関数  <a href="class_component_base.html#ae671317076d3c89ba0793ae2cd34d5ea">[詳解]</a><br /></td></tr>
 <tr class="separator:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f289382f4dd0187a6f355e06c5c08e inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#a36f289382f4dd0187a6f355e06c5c08e">getIsEnable</a> ()</td></tr>
+<tr class="memdesc:a36f289382f4dd0187a6f355e06c5c08e inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効フラグ取得関数  <a href="class_component_base.html#a36f289382f4dd0187a6f355e06c5c08e">[詳解]</a><br /></td></tr>
+<tr class="separator:a36f289382f4dd0187a6f355e06c5c08e inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded407119b125a269d272647fc4c4639 inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#aded407119b125a269d272647fc4c4639">setIsEnable</a> (bool value)</td></tr>
+<tr class="memdesc:aded407119b125a269d272647fc4c4639 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効フラグ取得関数  <a href="class_component_base.html#aded407119b125a269d272647fc4c4639">[詳解]</a><br /></td></tr>
+<tr class="separator:aded407119b125a269d272647fc4c4639 inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80a37e33ecca2471b2186fba1aaf2cdd inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#a80a37e33ecca2471b2186fba1aaf2cdd">~ComponentBase</a> ()=0</td></tr>
 <tr class="memdesc:a80a37e33ecca2471b2186fba1aaf2cdd inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="class_component_base.html#a80a37e33ecca2471b2186fba1aaf2cdd">[詳解]</a><br /></td></tr>
 <tr class="separator:a80a37e33ecca2471b2186fba1aaf2cdd inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,18 +201,21 @@ DrawBase の継承関係図</div>
 <tr class="memitem:a58e66d65bc8f3cd5ab67b4b2deab4fc2 inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#a58e66d65bc8f3cd5ab67b4b2deab4fc2">Update</a> ()=0</td></tr>
 <tr class="memdesc:a58e66d65bc8f3cd5ab67b4b2deab4fc2 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="class_component_base.html#a58e66d65bc8f3cd5ab67b4b2deab4fc2">[詳解]</a><br /></td></tr>
 <tr class="separator:a58e66d65bc8f3cd5ab67b4b2deab4fc2 inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a484df9edcbe83b1a98aacc55b50bfdda inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#a484df9edcbe83b1a98aacc55b50bfdda">Reset</a> ()=0</td></tr>
+<tr class="memdesc:a484df9edcbe83b1a98aacc55b50bfdda inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">リセット関数  <a href="class_component_base.html#a484df9edcbe83b1a98aacc55b50bfdda">[詳解]</a><br /></td></tr>
+<tr class="separator:a484df9edcbe83b1a98aacc55b50bfdda inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36ae7d27ad9d756fa245bad443020407 inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#a36ae7d27ad9d756fa245bad443020407">DebugDisplay</a> ()=0</td></tr>
 <tr class="memdesc:a36ae7d27ad9d756fa245bad443020407 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ表示関数  <a href="class_component_base.html#a36ae7d27ad9d756fa245bad443020407">[詳解]</a><br /></td></tr>
 <tr class="separator:a36ae7d27ad9d756fa245bad443020407 inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 非公開変数類</h2></td></tr>
-<tr class="memitem:a6ebc8dc96176ddd3bd984b3d54739adb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_order_list.html">DrawOrderList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a6ebc8dc96176ddd3bd984b3d54739adb">draw_order_list_</a></td></tr>
-<tr class="memdesc:a6ebc8dc96176ddd3bd984b3d54739adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画注文リスト  <a href="#a6ebc8dc96176ddd3bd984b3d54739adb">[詳解]</a><br /></td></tr>
-<tr class="separator:a6ebc8dc96176ddd3bd984b3d54739adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8be4980756a0af7cc76dfe455c492d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera.html#a3b0a1f58deca679ac665f61c480d1dcb">Camera::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#aa8be4980756a0af7cc76dfe455c492d4">save_camera_type_</a> = Camera::Type::NONE</td></tr>
-<tr class="memdesc:aa8be4980756a0af7cc76dfe455c492d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラタイプ保存用  <a href="#aa8be4980756a0af7cc76dfe455c492d4">[詳解]</a><br /></td></tr>
-<tr class="separator:aa8be4980756a0af7cc76dfe455c492d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68325df7021177f7ca82a18511e1328f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_order_list.html">DrawOrderList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a68325df7021177f7ca82a18511e1328f">order_list_</a></td></tr>
+<tr class="memdesc:a68325df7021177f7ca82a18511e1328f"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画注文リスト  <a href="#a68325df7021177f7ca82a18511e1328f">[詳解]</a><br /></td></tr>
+<tr class="separator:a68325df7021177f7ca82a18511e1328f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e99e97b203c9cffa794b65df77539a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a44e99e97b203c9cffa794b65df77539a">common_data_</a> = nullptr</td></tr>
+<tr class="memdesc:a44e99e97b203c9cffa794b65df77539a"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ  <a href="#a44e99e97b203c9cffa794b65df77539a">[詳解]</a><br /></td></tr>
+<tr class="separator:a44e99e97b203c9cffa794b65df77539a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>描画BaseClass </p>
@@ -236,7 +254,7 @@ DrawBase の継承関係図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_draw_base_8cpp_source.html">DrawBase.cpp</a> の <a class="el" href="_draw_base_8cpp_source.html#l00029">29</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_draw_base_8cpp_source.html">DrawBase.cpp</a> の <a class="el" href="_draw_base_8cpp_source.html#l00042">42</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -278,8 +296,8 @@ DrawBase の継承関係図</div>
 <p>描画関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
   </table>
   </dd>
 </dl>
@@ -290,7 +308,60 @@ DrawBase の継承関係図</div>
   </dd>
 </dl>
 
-<p><a class="el" href="class_draw_null.html#a72ac0b7dc40b1469582419dcc5b0e114">DrawNull</a>, <a class="el" href="class_fade.html#a84a9e688650ac500e03cde74ff0210b8">Fade</a>, <a class="el" href="class_goal_draw.html#a554c826d7a4534ee489dfe18edf7ee0e">GoalDraw</a>, <a class="el" href="class_tutorial_logo_draw.html#aa808cfb8bc59d58bbd698a195603429f">TutorialLogoDraw</a>, <a class="el" href="class_stencil_shadow_test_draw.html#abb5f9445b7d94c213a3751fa57e36643">StencilShadowTestDraw</a>, <a class="el" href="class_render_texture.html#a529ab829c676470ae5764b42cba9efb0">RenderTexture</a>, <a class="el" href="class_coin_draw.html#ac7d91fecb6845cebe276eb81a4953563">CoinDraw</a>, <a class="el" href="class_player_draw.html#a8b9e8caa6bea7295f58a0aaddeb9458b">PlayerDraw</a>, <a class="el" href="class_clear_logo_draw.html#ab018f370071f370ae7016d8ee402c456">ClearLogoDraw</a>, <a class="el" href="class_failure_logo_draw.html#a8ee20e1697bbbaf7f41c18334830488a">FailureLogoDraw</a>, <a class="el" href="class_push_space_logo_draw.html#a647dddefc43d66cb3c720ee8fbb6a783">PushSpaceLogoDraw</a>, <a class="el" href="class_title_logo_draw.html#a01e4cb21d580bac86a226fa2e35bf4a3">TitleLogoDraw</a>, <a class="el" href="class_field_draw.html#a1915497654d079074dbd3e058db06a78">FieldDraw</a>, <a class="el" href="class_sky_dome_draw.html#a42364ea42618cbab588d55050edfe95a">SkyDomeDraw</a>, <a class="el" href="class_enemy_draw.html#a20a23c1c5fd5e510d15e8ca27aabd821">EnemyDraw</a>, <a class="el" href="class_number_draw.html#a15e4e602b3f9372349d0b6ff9e4fc423">NumberDraw</a>, <a class="el" href="class_score_draw.html#a799e71943140a264cedba6002308b976">ScoreDraw</a> (計17項目)で実装されています。</p>
+<p><a class="el" href="class_fade.html#a84a9e688650ac500e03cde74ff0210b8">Fade</a>, <a class="el" href="class_draw_null.html#a72ac0b7dc40b1469582419dcc5b0e114">DrawNull</a>, <a class="el" href="class_player_draw.html#a8b9e8caa6bea7295f58a0aaddeb9458b">PlayerDraw</a>, <a class="el" href="class_clear_logo_draw.html#ab018f370071f370ae7016d8ee402c456">ClearLogoDraw</a>, <a class="el" href="class_score_draw.html#a799e71943140a264cedba6002308b976">ScoreDraw</a>, <a class="el" href="class_time_draw.html#a1d5bd7b20e71eb37f3f0b225079cc9b3">TimeDraw</a>, <a class="el" href="class_balloon_num_draw.html#ae4477e10f6ac54beb64b1f2f85f6d2d1">BalloonNumDraw</a>, <a class="el" href="class_pause_draw.html#a84a0b8965acd5d9a6021d4a4776a770f">PauseDraw</a>, <a class="el" href="class_push_space_logo_draw.html#a647dddefc43d66cb3c720ee8fbb6a783">PushSpaceLogoDraw</a>, <a class="el" href="class_balloon_draw.html#aff3ee0684a7c027878915e332ca895ee">BalloonDraw</a>, <a class="el" href="class_coin_draw.html#ac7d91fecb6845cebe276eb81a4953563">CoinDraw</a>, <a class="el" href="class_stencil_shadow_test_draw.html#abb5f9445b7d94c213a3751fa57e36643">StencilShadowTestDraw</a>, <a class="el" href="class_tutorial_logo_draw.html#aa808cfb8bc59d58bbd698a195603429f">TutorialLogoDraw</a>, <a class="el" href="class_failure_logo_draw.html#a8ee20e1697bbbaf7f41c18334830488a">FailureLogoDraw</a>, <a class="el" href="class_title_logo_draw.html#a01e4cb21d580bac86a226fa2e35bf4a3">TitleLogoDraw</a>, <a class="el" href="class_field_draw.html#a1915497654d079074dbd3e058db06a78">FieldDraw</a>, <a class="el" href="class_sky_dome_draw.html#a42364ea42618cbab588d55050edfe95a">SkyDomeDraw</a>, <a class="el" href="class_goal_draw.html#a554c826d7a4534ee489dfe18edf7ee0e">GoalDraw</a>, <a class="el" href="class_render_texture_polygon.html#a95e688cae107312649c1fb7965e2ba6b">RenderTexturePolygon</a>, <a class="el" href="class_scaffold_draw.html#ae70204344a061ff43744a116da64b013">ScaffoldDraw</a>, <a class="el" href="class_needle_draw.html#a9fb9ee239ee432f2fc3235acbd24647c">NeedleDraw</a>, <a class="el" href="class_start_block_draw.html#a280430a290cf9ea32117f0c460a0f775">StartBlockDraw</a>, <a class="el" href="class_enemy_draw.html#a20a23c1c5fd5e510d15e8ca27aabd821">EnemyDraw</a> (計23項目)で実装されています。</p>
+
+</div>
+</div>
+<a id="a9420d7257415446e8cddd1a22f139dd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9420d7257415446e8cddd1a22f139dd3">&#9670;&nbsp;</a></span>getBoneNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned DrawBase::getBoneNum </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mesh_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ボーン数取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">unsigned</td><td>ボーン数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_player_draw.html#a716aeac1dca9a44c97bc2ea42e55d6f6">PlayerDraw</a>, <a class="el" href="class_draw_null.html#a74aee63e6146b7256b80610abfb3eabb">DrawNull</a>で実装されています。</p>
 
 </div>
 </div>
@@ -321,7 +392,7 @@ DrawBase の継承関係図</div>
 <p>メッシュ数取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
   </table>
   </dd>
 </dl>
@@ -332,7 +403,7 @@ DrawBase の継承関係図</div>
   </dd>
 </dl>
 
-<p><a class="el" href="class_stencil_shadow_test_draw.html#a285b3045ff5cc34b6b2b991cca434bb3">StencilShadowTestDraw</a>, <a class="el" href="class_goal_draw.html#ac80c8da78cda7b15a4ce46f7d7057622">GoalDraw</a>, <a class="el" href="class_coin_draw.html#a8ebedf2582d53b40016ebd3f0e82c38e">CoinDraw</a>, <a class="el" href="class_tutorial_logo_draw.html#a0e56784e25f1f83e6ff167280b801aad">TutorialLogoDraw</a>, <a class="el" href="class_player_draw.html#ac618153d70492f73299c58a50d565431">PlayerDraw</a>, <a class="el" href="class_clear_logo_draw.html#a257f34e6f8325580f7df835f20d2ebb4">ClearLogoDraw</a>, <a class="el" href="class_failure_logo_draw.html#a45bb5d0965ca73b06ae0836f27f9b0e3">FailureLogoDraw</a>, <a class="el" href="class_push_space_logo_draw.html#abaa66b6e3c46aa03bae21bad271eebc0">PushSpaceLogoDraw</a>, <a class="el" href="class_title_logo_draw.html#a20a0e0c3569e49eb421ab4b5a65777cd">TitleLogoDraw</a>, <a class="el" href="class_field_draw.html#a0894ddd73716f0db8ceed4b7d89f23fd">FieldDraw</a>, <a class="el" href="class_sky_dome_draw.html#a6b281bafa71c058ee83c373ad978e3bb">SkyDomeDraw</a>, <a class="el" href="class_enemy_draw.html#a1d8a943e4b625795bbd5ae614cc38ed1">EnemyDraw</a>, <a class="el" href="class_number_draw.html#abcd88040b2b6d5dd7d21e8cfd50b1682">NumberDraw</a>, <a class="el" href="class_draw_null.html#a4c566a37d27fac3dcf76c7970443f375">DrawNull</a>で実装されています。</p>
+<p><a class="el" href="class_balloon_draw.html#ab6d1aa381df255809889d9f646154dc5">BalloonDraw</a>, <a class="el" href="class_pause_draw.html#ab6de445e905a481df0292de7fb1880fc">PauseDraw</a>, <a class="el" href="class_stencil_shadow_test_draw.html#a285b3045ff5cc34b6b2b991cca434bb3">StencilShadowTestDraw</a>, <a class="el" href="class_player_draw.html#ac618153d70492f73299c58a50d565431">PlayerDraw</a>, <a class="el" href="class_tutorial_logo_draw.html#a0e56784e25f1f83e6ff167280b801aad">TutorialLogoDraw</a>, <a class="el" href="class_push_space_logo_draw.html#abaa66b6e3c46aa03bae21bad271eebc0">PushSpaceLogoDraw</a>, <a class="el" href="class_coin_draw.html#a8ebedf2582d53b40016ebd3f0e82c38e">CoinDraw</a>, <a class="el" href="class_failure_logo_draw.html#a45bb5d0965ca73b06ae0836f27f9b0e3">FailureLogoDraw</a>, <a class="el" href="class_title_logo_draw.html#a20a0e0c3569e49eb421ab4b5a65777cd">TitleLogoDraw</a>, <a class="el" href="class_goal_draw.html#ac80c8da78cda7b15a4ce46f7d7057622">GoalDraw</a>, <a class="el" href="class_field_draw.html#a0894ddd73716f0db8ceed4b7d89f23fd">FieldDraw</a>, <a class="el" href="class_needle_draw.html#a904f0aa7550f450f4b7bb2845c863e23">NeedleDraw</a>, <a class="el" href="class_sky_dome_draw.html#a6b281bafa71c058ee83c373ad978e3bb">SkyDomeDraw</a>, <a class="el" href="class_enemy_draw.html#a1d8a943e4b625795bbd5ae614cc38ed1">EnemyDraw</a>, <a class="el" href="class_scaffold_draw.html#a5cbec566b4f66a0c87eca20e88c81b19">ScaffoldDraw</a>, <a class="el" href="class_start_block_draw.html#a15cefedde4eab371fa2229d86c54455d">StartBlockDraw</a>, <a class="el" href="class_draw_null.html#a4c566a37d27fac3dcf76c7970443f375">DrawNull</a> (計17項目)で実装されています。</p>
 
 </div>
 </div>
@@ -373,12 +444,12 @@ DrawBase の継承関係図</div>
   </dd>
 </dl>
 
-<p><a class="el" href="class_stencil_shadow_test_draw.html#ad93f1c8a60a701d185108896c58dd578">StencilShadowTestDraw</a>, <a class="el" href="class_draw_null.html#a8bddfa6ee87e47b2ecbbe6803b088e37">DrawNull</a>で実装されています。</p>
+<p><a class="el" href="class_clear_logo_draw.html#ad58068c5cfa0236b559e3a5b526b22d7">ClearLogoDraw</a>, <a class="el" href="class_score_draw.html#a15a6210aebf09d1472c4e4194950456c">ScoreDraw</a>, <a class="el" href="class_time_draw.html#aea19327b7f9a50a9e634fbb56d430222">TimeDraw</a>, <a class="el" href="class_balloon_num_draw.html#ac9fbbdb35976d81abb6d4b9ce0c128f3">BalloonNumDraw</a>, <a class="el" href="class_balloon_draw.html#a979518a6cc85aa355f680336953b5e46">BalloonDraw</a>, <a class="el" href="class_pause_draw.html#a44936b777c942619b85106d7aa4dda14">PauseDraw</a>, <a class="el" href="class_stencil_shadow_test_draw.html#ad93f1c8a60a701d185108896c58dd578">StencilShadowTestDraw</a>, <a class="el" href="class_draw_null.html#a8bddfa6ee87e47b2ecbbe6803b088e37">DrawNull</a>で実装されています。</p>
 
 </div>
 </div>
-<a id="a9f50a030778dbfca5ae45bb7908e0d58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f50a030778dbfca5ae45bb7908e0d58">&#9670;&nbsp;</a></span>getpDecaleTexture()</h2>
+<a id="aea44fcf0b1281ec4caa7ad3f2f898950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea44fcf0b1281ec4caa7ad3f2f898950">&#9670;&nbsp;</a></span>getpBoneMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -387,7 +458,67 @@ DrawBase の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual LPDIRECT3DTEXTURE9 DrawBase::getpDecaleTexture </td>
+          <td class="memname">virtual <a class="el" href="_matrix_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a>* DrawBase::getpBoneMatrix </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mesh_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>bone_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ボーン行列取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+    <tr><td class="paramname">bone_index</td><td>ボーンインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">MATRIX*</td><td>ボーン行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_player_draw.html#a94e34d6503076f1686302fa376da1c09">PlayerDraw</a>, <a class="el" href="class_draw_null.html#a9843abd940623bf84bbb0931f7e21af6">DrawNull</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a96e94272903d6b663463e0f49246d959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e94272903d6b663463e0f49246d959">&#9670;&nbsp;</a></span>getpDiffuseTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual LPDIRECT3DTEXTURE9 DrawBase::getpDiffuseTexture </td>
           <td>(</td>
           <td class="paramtype">unsigned&#160;</td>
           <td class="paramname"><em>object_index</em>, </td>
@@ -411,22 +542,55 @@ DrawBase の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p>デカールテクスチャポインタ取得関数 </p>
+<p>ディヒューズテクスチャ取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">LPDIRECT3DTEXTURE9</td><td>デカールテクスチャポインタ </td></tr>
+    <tr><td class="paramname">LPDIRECT3DTEXTURE9</td><td>ディヒューズテクスチャ </td></tr>
   </table>
   </dd>
 </dl>
 
-<p><a class="el" href="class_stencil_shadow_test_draw.html#a58f3699fa7ced20625edca807698aa85">StencilShadowTestDraw</a>, <a class="el" href="class_coin_draw.html#af99db1c0db2ed6b3ba429f23cd44279b">CoinDraw</a>, <a class="el" href="class_tutorial_logo_draw.html#abf06755b745dc62341a817a58d377659">TutorialLogoDraw</a>, <a class="el" href="class_player_draw.html#ae69b46285241f390fbf62f6af2b5340d">PlayerDraw</a>, <a class="el" href="class_clear_logo_draw.html#ae67f9779fb2f9aa05d55c2167a36ddb0">ClearLogoDraw</a>, <a class="el" href="class_failure_logo_draw.html#a29a9642997edb92eeec83e8bd6b1ddee">FailureLogoDraw</a>, <a class="el" href="class_push_space_logo_draw.html#abfba58752543d8b2ccfe1e4003032dd3">PushSpaceLogoDraw</a>, <a class="el" href="class_title_logo_draw.html#a15ca49711182673a20439200dd8bc119">TitleLogoDraw</a>, <a class="el" href="class_field_draw.html#a77cef7390fbe8fc68c0b325f4fcc839f">FieldDraw</a>, <a class="el" href="class_sky_dome_draw.html#a99ec8e0a5aea708b66cf07c79a6449d1">SkyDomeDraw</a>, <a class="el" href="class_draw_null.html#a87d21f70b6fed637a6e23029f29818c1">DrawNull</a>, <a class="el" href="class_number_draw.html#a77d155c00ac4637154e62904556de05a">NumberDraw</a>で実装されています。</p>
+<p><a class="el" href="class_fade.html#ab971b8bb17f81d73e0405291a6512a39">Fade</a>, <a class="el" href="class_player_draw.html#a3abcf6fb159e94ca4e5785b572e0af11">PlayerDraw</a>, <a class="el" href="class_clear_logo_draw.html#adbf4078e91bef05bf5a366adcda744a3">ClearLogoDraw</a>, <a class="el" href="class_pause_draw.html#a191f46de3bb829ab30fca52f902c1df9">PauseDraw</a>, <a class="el" href="class_score_draw.html#a8736a0044e8a2a6258c396bfed4d1ce8">ScoreDraw</a>, <a class="el" href="class_time_draw.html#ac844c99a6d5cdcad9c541779a0e99b22">TimeDraw</a>, <a class="el" href="class_stencil_shadow_test_draw.html#a5c74550a8e0eccf29f3c93e5027e492e">StencilShadowTestDraw</a>, <a class="el" href="class_balloon_num_draw.html#a1bf5721e82b99cdfd5550262f560da95">BalloonNumDraw</a>, <a class="el" href="class_draw_null.html#a98cc7cd43b19d9d70cc621d23d89286f">DrawNull</a>, <a class="el" href="class_tutorial_logo_draw.html#a80a3858068af2dcbd1ffc7e59c212924">TutorialLogoDraw</a>, <a class="el" href="class_push_space_logo_draw.html#a0b4de9ad688997090ab6ab4925e1f5d8">PushSpaceLogoDraw</a>, <a class="el" href="class_coin_draw.html#a38a4143f2e93a5b16d33ec94a188f4f6">CoinDraw</a>, <a class="el" href="class_failure_logo_draw.html#a3247b4c8de4cb8a8af0ca9dfaf85018b">FailureLogoDraw</a>, <a class="el" href="class_title_logo_draw.html#a4e3da42496afc69f31731e8abfb27380">TitleLogoDraw</a>, <a class="el" href="class_field_draw.html#a8e4ea02d9efb9895a0172c29a91d0fb2">FieldDraw</a>, <a class="el" href="class_sky_dome_draw.html#aaa9db229fadd7d4c041afa5436a584af">SkyDomeDraw</a> (計16項目)で実装されています。</p>
+
+</div>
+</div>
+<a id="ac55a0cbcb51067ec9a3515530bb3f7de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac55a0cbcb51067ec9a3515530bb3f7de">&#9670;&nbsp;</a></span>getpDrawCommonData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> * DrawBase::getpDrawCommonData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画共通データ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">DrawCommonData*</td><td>描画共通データ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_draw_base_8cpp_source.html">DrawBase.cpp</a> の <a class="el" href="_draw_base_8cpp_source.html#l00026">26</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -445,7 +609,7 @@ DrawBase の継承関係図</div>
       </table>
 </div><div class="memdoc">
 
-<p>描画注文リストポインタ取得関数 </p>
+<p>描画注文リスト取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">void</td><td>なし </td></tr>
@@ -454,7 +618,7 @@ DrawBase の継承関係図</div>
 </dl>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">DrawOrderList*</td><td>描画注文リストポインタ </td></tr>
+    <tr><td class="paramname">DrawOrderList*</td><td>描画注文リスト </td></tr>
   </table>
   </dd>
 </dl>
@@ -497,22 +661,22 @@ DrawBase の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p>マテリアルポインタ取得関数 </p>
+<p>マテリアル取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">D3DMATERIAL9*</td><td>マテリアルポインタ </td></tr>
+    <tr><td class="paramname">D3DMATERIAL9*</td><td>マテリアル </td></tr>
   </table>
   </dd>
 </dl>
 
-<p><a class="el" href="class_fade.html#a69db8b97a493082644fbd82c9ef3d1aa">Fade</a>, <a class="el" href="class_stencil_shadow_test_draw.html#aacdc680646f832451ea575f1da1eec9a">StencilShadowTestDraw</a>, <a class="el" href="class_render_texture.html#a1defe8bfacccf91dc7479a977e70578c">RenderTexture</a>, <a class="el" href="class_goal_draw.html#ae7f45a84006809475aba8d9ce1b1f8a5">GoalDraw</a>, <a class="el" href="class_coin_draw.html#ad62dd6a9dd468342849a0c6ad5f8a5dd">CoinDraw</a>, <a class="el" href="class_tutorial_logo_draw.html#acbd9aefdbd4450188e561fb5e5dcd64f">TutorialLogoDraw</a>, <a class="el" href="class_player_draw.html#acb94ea7611a99698507321e44b7e9acb">PlayerDraw</a>, <a class="el" href="class_clear_logo_draw.html#a6273330249f20ddcde3a2ab97c1bdca2">ClearLogoDraw</a>, <a class="el" href="class_failure_logo_draw.html#a60b0cd983365acdad363cdaf8ebdef46">FailureLogoDraw</a>, <a class="el" href="class_push_space_logo_draw.html#a4dc41e6b1afece431f3c321145abe541">PushSpaceLogoDraw</a>, <a class="el" href="class_title_logo_draw.html#aafb35175c0ffe60c7a3facf7f9cda2f2">TitleLogoDraw</a>, <a class="el" href="class_field_draw.html#a5ed29c14e0013513d72f79f8651db805">FieldDraw</a>, <a class="el" href="class_sky_dome_draw.html#a45d3e8d70753af83c84c7a7c9193459f">SkyDomeDraw</a>, <a class="el" href="class_enemy_draw.html#a3f2885da84533364daaaac4a801fbc46">EnemyDraw</a>, <a class="el" href="class_number_draw.html#a4e1a672907ee288fc0c2c6caecdf3904">NumberDraw</a>, <a class="el" href="class_draw_null.html#a0c1efe55fea325ad277594be6fe1e938">DrawNull</a> (計16項目)で実装されています。</p>
+<p><a class="el" href="class_player_draw.html#acb94ea7611a99698507321e44b7e9acb">PlayerDraw</a>, <a class="el" href="class_fade.html#adbd049cfdaf165670d1b97b03151a5cd">Fade</a>, <a class="el" href="class_balloon_draw.html#aa84c8479ee1a6e95376b7fc0c82e5173">BalloonDraw</a>, <a class="el" href="class_clear_logo_draw.html#a6273330249f20ddcde3a2ab97c1bdca2">ClearLogoDraw</a>, <a class="el" href="class_pause_draw.html#afa2566700e81ce898e874ce71a8943d5">PauseDraw</a>, <a class="el" href="class_score_draw.html#a89a4917ed27a9d89cfa3e3acfaecacc2">ScoreDraw</a>, <a class="el" href="class_time_draw.html#a32e9166df2da094b6b8c6cfc9dd73872">TimeDraw</a>, <a class="el" href="class_stencil_shadow_test_draw.html#aacdc680646f832451ea575f1da1eec9a">StencilShadowTestDraw</a>, <a class="el" href="class_balloon_num_draw.html#aa517d5cd0ff871f61145d916f6056922">BalloonNumDraw</a>, <a class="el" href="class_draw_null.html#a0c1efe55fea325ad277594be6fe1e938">DrawNull</a>, <a class="el" href="class_tutorial_logo_draw.html#acbd9aefdbd4450188e561fb5e5dcd64f">TutorialLogoDraw</a>, <a class="el" href="class_push_space_logo_draw.html#a4dc41e6b1afece431f3c321145abe541">PushSpaceLogoDraw</a>, <a class="el" href="class_coin_draw.html#ad62dd6a9dd468342849a0c6ad5f8a5dd">CoinDraw</a>, <a class="el" href="class_failure_logo_draw.html#a60b0cd983365acdad363cdaf8ebdef46">FailureLogoDraw</a>, <a class="el" href="class_title_logo_draw.html#aafb35175c0ffe60c7a3facf7f9cda2f2">TitleLogoDraw</a>, <a class="el" href="class_goal_draw.html#ae7f45a84006809475aba8d9ce1b1f8a5">GoalDraw</a>, <a class="el" href="class_field_draw.html#a5ed29c14e0013513d72f79f8651db805">FieldDraw</a>, <a class="el" href="class_needle_draw.html#aff38ea3f7201eb584e81ae9d6b9328cf">NeedleDraw</a>, <a class="el" href="class_sky_dome_draw.html#a45d3e8d70753af83c84c7a7c9193459f">SkyDomeDraw</a>, <a class="el" href="class_enemy_draw.html#a3f2885da84533364daaaac4a801fbc46">EnemyDraw</a>, <a class="el" href="class_scaffold_draw.html#a22d8838f68a92b3307008ba952ad718d">ScaffoldDraw</a>, <a class="el" href="class_start_block_draw.html#a42d2c4f04609ba09359470fc38113bbf">StartBlockDraw</a>, <a class="el" href="class_render_texture_polygon.html#a86dac06a0a8c8cc64ade472011745fa3">RenderTexturePolygon</a> (計23項目)で実装されています。</p>
 
 </div>
 </div>
@@ -526,7 +690,7 @@ DrawBase の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a>* DrawBase::getpMatrix </td>
+          <td class="memname">virtual <a class="el" href="_matrix_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a>* DrawBase::getpMatrix </td>
           <td>(</td>
           <td class="paramtype">unsigned&#160;</td>
           <td class="paramname"><em>object_index</em></td><td>)</td>
@@ -540,21 +704,21 @@ DrawBase の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p>行列ポインタ取得関数 </p>
+<p>ワールド行列取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">MATRIX*</td><td>行列ポインタ </td></tr>
+    <tr><td class="paramname">MATRIX*</td><td>ワールド行列 </td></tr>
   </table>
   </dd>
 </dl>
 
-<p><a class="el" href="class_fade.html#a2e41a31f9801476e63d2082804375e96">Fade</a>, <a class="el" href="class_stencil_shadow_test_draw.html#a8ab105b75d673adc52698a8401c6525c">StencilShadowTestDraw</a>, <a class="el" href="class_goal_draw.html#a536a23c043576f9032e6651d7644d038">GoalDraw</a>, <a class="el" href="class_coin_draw.html#ad8cbbe87f4cf4428214f50492c731f5f">CoinDraw</a>, <a class="el" href="class_render_texture.html#adafb7e9aeea3c298cbfcc71e35ed9457">RenderTexture</a>, <a class="el" href="class_tutorial_logo_draw.html#aade531190180c385c266f5698f99735d">TutorialLogoDraw</a>, <a class="el" href="class_player_draw.html#a334e94f368f6bd571da866d69333f313">PlayerDraw</a>, <a class="el" href="class_clear_logo_draw.html#abcbd0cd8663e0262bcdd83356516082b">ClearLogoDraw</a>, <a class="el" href="class_failure_logo_draw.html#a6e6fb80dc21af9318d659bc3fa71c0b5">FailureLogoDraw</a>, <a class="el" href="class_push_space_logo_draw.html#a9e0875967651293ef97713477334bc2e">PushSpaceLogoDraw</a>, <a class="el" href="class_title_logo_draw.html#a34fa4366f1ff190a08a36f8e402f6941">TitleLogoDraw</a>, <a class="el" href="class_field_draw.html#ad399978201f737f4c0dd2b3990fa6b34">FieldDraw</a>, <a class="el" href="class_sky_dome_draw.html#accbc05d1bbde9ad9d6b7180d91e9ed89">SkyDomeDraw</a>, <a class="el" href="class_enemy_draw.html#afbb8ac19041abda280ece7737103dc66">EnemyDraw</a>, <a class="el" href="class_number_draw.html#a2ea44b362c3a018faf46905d0f755410">NumberDraw</a>, <a class="el" href="class_score_draw.html#adb995c83624c2eab8b8a15d1182df5b8">ScoreDraw</a>, <a class="el" href="class_draw_null.html#a9aac059eb3b5d1f77e8bd3aa0647cff9">DrawNull</a> (計17項目)で実装されています。</p>
+<p><a class="el" href="class_fade.html#a468f87b671026f883443d6cdceeb95c6">Fade</a>, <a class="el" href="class_player_draw.html#a334e94f368f6bd571da866d69333f313">PlayerDraw</a>, <a class="el" href="class_balloon_draw.html#ab98a9333dcdf57c0ede287444b7cbabb">BalloonDraw</a>, <a class="el" href="class_clear_logo_draw.html#abcbd0cd8663e0262bcdd83356516082b">ClearLogoDraw</a>, <a class="el" href="class_pause_draw.html#a36622378926e01e7a401b6e201cb4f16">PauseDraw</a>, <a class="el" href="class_score_draw.html#adb995c83624c2eab8b8a15d1182df5b8">ScoreDraw</a>, <a class="el" href="class_time_draw.html#a3624fef571681cf4861891aa073338a0">TimeDraw</a>, <a class="el" href="class_stencil_shadow_test_draw.html#a8ab105b75d673adc52698a8401c6525c">StencilShadowTestDraw</a>, <a class="el" href="class_balloon_num_draw.html#a9a337ac248ebb73dc32ef407221a6478">BalloonNumDraw</a>, <a class="el" href="class_tutorial_logo_draw.html#aade531190180c385c266f5698f99735d">TutorialLogoDraw</a>, <a class="el" href="class_push_space_logo_draw.html#a9e0875967651293ef97713477334bc2e">PushSpaceLogoDraw</a>, <a class="el" href="class_coin_draw.html#ad8cbbe87f4cf4428214f50492c731f5f">CoinDraw</a>, <a class="el" href="class_failure_logo_draw.html#a6e6fb80dc21af9318d659bc3fa71c0b5">FailureLogoDraw</a>, <a class="el" href="class_title_logo_draw.html#a34fa4366f1ff190a08a36f8e402f6941">TitleLogoDraw</a>, <a class="el" href="class_goal_draw.html#a536a23c043576f9032e6651d7644d038">GoalDraw</a>, <a class="el" href="class_field_draw.html#ad399978201f737f4c0dd2b3990fa6b34">FieldDraw</a>, <a class="el" href="class_needle_draw.html#a7ae74f52a190793745b5339a6be559d7">NeedleDraw</a>, <a class="el" href="class_sky_dome_draw.html#accbc05d1bbde9ad9d6b7180d91e9ed89">SkyDomeDraw</a>, <a class="el" href="class_draw_null.html#a9aac059eb3b5d1f77e8bd3aa0647cff9">DrawNull</a>, <a class="el" href="class_enemy_draw.html#afbb8ac19041abda280ece7737103dc66">EnemyDraw</a>, <a class="el" href="class_scaffold_draw.html#a337aafb07b51a215f7f25ab67202b102">ScaffoldDraw</a>, <a class="el" href="class_start_block_draw.html#a062b7069d21ec07630f6c8aeea532401">StartBlockDraw</a>, <a class="el" href="class_render_texture_polygon.html#a76ab48dff0a23ee4db47da598f4d6a70">RenderTexturePolygon</a> (計23項目)で実装されています。</p>
 
 </div>
 </div>
@@ -592,17 +756,17 @@ DrawBase の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p>法線テクスチャポインタ取得関数 </p>
+<p>法線テクスチャ取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">RendererInterface*</td><td>法線テクスチャポインタ </td></tr>
+    <tr><td class="paramname">RendererInterface*</td><td>法線テクスチャ </td></tr>
   </table>
   </dd>
 </dl>
@@ -611,87 +775,8 @@ DrawBase の継承関係図</div>
 
 </div>
 </div>
-<a id="aa18abd488181eed72822f92a0f2521fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa18abd488181eed72822f92a0f2521fe">&#9670;&nbsp;</a></span>LimitedChangeCameraType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DrawBase::LimitedChangeCameraType </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
-          <td class="paramname"><em>camera</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_camera.html#a3b0a1f58deca679ac665f61c480d1dcb">Camera::Type</a>&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>限定カメラタイプ変更関数 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">camera</td><td>カメラ </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>　 カメラタイプ </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>戻り値</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">void</td><td>なし </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="_draw_base_8cpp_source.html">DrawBase.cpp</a> の <a class="el" href="_draw_base_8cpp_source.html#l00035">35</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a48b144e61928b7658c7a849017e40c79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48b144e61928b7658c7a849017e40c79">&#9670;&nbsp;</a></span>RevivalCameraType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DrawBase::RevivalCameraType </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
-          <td class="paramname"><em>camera</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>カメラタイプ復活関数 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">camera</td><td>カメラ </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>戻り値</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">void</td><td>なし </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="_draw_base_8cpp_source.html">DrawBase.cpp</a> の <a class="el" href="_draw_base_8cpp_source.html#l00043">43</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="afe64f27b0bbf8c45da7aa0de4c3f3d65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe64f27b0bbf8c45da7aa0de4c3f3d65">&#9670;&nbsp;</a></span>SettingAfterDrawing()</h2>
+<a id="ab1592d0f04fb49289758008dcff4e7a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1592d0f04fb49289758008dcff4e7a0">&#9670;&nbsp;</a></span>ObjectSettingAfter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -700,21 +785,11 @@ DrawBase の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void DrawBase::SettingAfterDrawing </td>
+          <td class="memname">virtual void DrawBase::ObjectSettingAfter </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
-          <td class="paramname"><em>camera</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>object_index</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>object_index</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -724,11 +799,10 @@ DrawBase の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p>描画後設定関数 </p>
+<p>オブジェクト後設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">camera</td><td>カメラ </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
   </table>
   </dd>
 </dl>
@@ -739,12 +813,12 @@ DrawBase の継承関係図</div>
   </dd>
 </dl>
 
-<p><a class="el" href="class_draw_null.html#a3600d14d2ce10f4281723567f97c08be">DrawNull</a>, <a class="el" href="class_stencil_shadow_test_draw.html#a68917115d3f151ed91ce297924ee5bbb">StencilShadowTestDraw</a>で実装されています。</p>
+<p><a class="el" href="class_draw_null.html#a5b4466ae238e46cffe4a10fd253caf17">DrawNull</a>, <a class="el" href="class_stencil_shadow_test_draw.html#a11fa9d700ca8db585b6f0b0be779d1ab">StencilShadowTestDraw</a>で実装されています。</p>
 
 </div>
 </div>
-<a id="a3978252914ddde12197ea4577356bf25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3978252914ddde12197ea4577356bf25">&#9670;&nbsp;</a></span>SettingBeforeDrawing()</h2>
+<a id="a9bf55f6b67735e0bff42d749f43826c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bf55f6b67735e0bff42d749f43826c1">&#9670;&nbsp;</a></span>ObjectSettingBefore()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -753,21 +827,11 @@ DrawBase の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void DrawBase::SettingBeforeDrawing </td>
+          <td class="memname">virtual void DrawBase::ObjectSettingBefore </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
-          <td class="paramname"><em>camera</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>object_index</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>object_index</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -777,11 +841,10 @@ DrawBase の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p>描画前設定関数 </p>
+<p>オブジェクト前設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">camera</td><td>カメラ </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
   </table>
   </dd>
 </dl>
@@ -792,13 +855,47 @@ DrawBase の継承関係図</div>
   </dd>
 </dl>
 
-<p><a class="el" href="class_draw_null.html#a3baf78b024837c8ebb2471e7505db6ea">DrawNull</a>, <a class="el" href="class_stencil_shadow_test_draw.html#a0f697b6dad67048c7f8916a53cca6b1c">StencilShadowTestDraw</a>, <a class="el" href="class_coin_draw.html#a66c03acd675ac1820977cb21015abfdb">CoinDraw</a>で実装されています。</p>
+<p><a class="el" href="class_draw_null.html#ac79a0adfc83537d5e677851463bb3028">DrawNull</a>, <a class="el" href="class_stencil_shadow_test_draw.html#ab798b88896ba3f0b3de057dff49823be">StencilShadowTestDraw</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a75591fe15951811f294dc964a7894214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75591fe15951811f294dc964a7894214">&#9670;&nbsp;</a></span>setDrawCommonData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawBase::setDrawCommonData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画共通データ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>描画共通データ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_draw_base_8cpp_source.html">DrawBase.cpp</a> の <a class="el" href="_draw_base_8cpp_source.html#l00032">32</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">メンバ詳解</h2>
-<a id="a6ebc8dc96176ddd3bd984b3d54739adb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ebc8dc96176ddd3bd984b3d54739adb">&#9670;&nbsp;</a></span>draw_order_list_</h2>
+<a id="a44e99e97b203c9cffa794b65df77539a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44e99e97b203c9cffa794b65df77539a">&#9670;&nbsp;</a></span>common_data_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -807,7 +904,33 @@ DrawBase の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_draw_order_list.html">DrawOrderList</a> DrawBase::draw_order_list_</td>
+          <td class="memname"><a class="el" href="class_draw_common_data.html">DrawCommonData</a>* DrawBase::common_data_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画共通データ </p>
+
+<p class="definition"> <a class="el" href="_draw_base_8h_source.html">DrawBase.h</a> の <a class="el" href="_draw_base_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a68325df7021177f7ca82a18511e1328f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68325df7021177f7ca82a18511e1328f">&#9670;&nbsp;</a></span>order_list_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_draw_order_list.html">DrawOrderList</a> DrawBase::order_list_</td>
         </tr>
       </table>
   </td>
@@ -823,35 +946,9 @@ DrawBase の継承関係図</div>
 
 </div>
 </div>
-<a id="aa8be4980756a0af7cc76dfe455c492d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8be4980756a0af7cc76dfe455c492d4">&#9670;&nbsp;</a></span>save_camera_type_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_camera.html#a3b0a1f58deca679ac665f61c480d1dcb">Camera::Type</a> DrawBase::save_camera_type_ = Camera::Type::NONE</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>カメラタイプ保存用 </p>
-
-<p class="definition"> <a class="el" href="_draw_base_8h_source.html">DrawBase.h</a> の <a class="el" href="_draw_base_8h_source.html#l00035">35</a> 行目に定義があります。</p>
-
-</div>
-</div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Component/Draw/DrawBase/<a class="el" href="_draw_base_8h_source.html">DrawBase.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Component/Draw/DrawBase/<a class="el" href="_draw_base_8cpp_source.html">DrawBase.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/<a class="el" href="_draw_base_8h_source.html">DrawBase.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/Source/<a class="el" href="_draw_base_8cpp_source.html">DrawBase.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

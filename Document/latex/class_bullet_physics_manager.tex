@@ -1,0 +1,738 @@
+\hypertarget{class_bullet_physics_manager}{}\section{Bullet\+Physics\+Manager クラス}
+\label{class_bullet_physics_manager}\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+
+
+バレットフィジックスマネージャ\+Class(\+Singleton)  
+
+
+
+
+{\ttfamily \#include $<$Bullet\+Physics\+Manager.\+h$>$}
+
+
+
+Bullet\+Physics\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bullet_physics_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_bullet_physics_manager_ad36b472d89cdd03e1037359fae2c1a37}{set\+Debug}} (bool value)
+\begin{DoxyCompactList}\small\item\em デバッグ設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_a6a5ed244e2925464f48c221fd5af68e4}{getp\+Object\+Sphere}} (float mass, \mbox{\hyperlink{class_vector3_d}{Vector3D}} inertia, \mbox{\hyperlink{class_vector3_d}{Vector3D}} position, \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} quaternion, float radius)
+\begin{DoxyCompactList}\small\item\em 球オブジェクト取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_ab155f9a649643701d9ee7f88027c5616}{getp\+Object\+O\+BB}} (float mass, \mbox{\hyperlink{class_vector3_d}{Vector3D}} inertia, \mbox{\hyperlink{class_vector3_d}{Vector3D}} position, \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} quaternion, \mbox{\hyperlink{class_vector3_d}{Vector3D}} edge\+\_\+half\+\_\+length)
+\begin{DoxyCompactList}\small\item\em O\+B\+Bオブジェクト取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_aa923016c3a46597009f0b399dee189ec}{getp\+Object\+Capsule}} (float mass, \mbox{\hyperlink{class_vector3_d}{Vector3D}} inertia, \mbox{\hyperlink{class_vector3_d}{Vector3D}} position, \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} quaternion, float radius, float height)
+\begin{DoxyCompactList}\small\item\em カプセルオブジェクト取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}} $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_a5e68fcd1f23812a7c87708266ee20353}{set\+Constraint\+Point\+To\+Point}} (\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$bullet\+\_\+object0, \mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$bullet\+\_\+object1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} point0, \mbox{\hyperlink{class_vector3_d}{Vector3D}} point1)
+\begin{DoxyCompactList}\small\item\em ポイントとポイントの拘束設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}} $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_a7f022644ccafde7e87497f90b1efec07}{set\+Constraint\+Hinge}} (\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$bullet\+\_\+object0, \mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$bullet\+\_\+object1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} point0, \mbox{\hyperlink{class_vector3_d}{Vector3D}} point1, float angle\+\_\+min, float angle\+\_\+max, \mbox{\hyperlink{class_vector3_d}{Vector3D}} axis=\{0.\+0f, 1.\+0f, 0.\+0f\})
+\begin{DoxyCompactList}\small\item\em 1つの軸を回転する拘束初期化関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}} $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_a0c57ac980c9c2e6b582fa7033bd55848}{set\+Constraint\+Universal}} (\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$bullet\+\_\+object0, \mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$bullet\+\_\+object1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} anchor, float angle\+\_\+min0, float angle\+\_\+min1, float angle\+\_\+max0, float angle\+\_\+max1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} axis0=\{1.\+0f, 0.\+0f, 0.\+0f\}, Vector3\+D axis1=\{0.\+0f, 0.\+0f, 1.\+0f\})
+\begin{DoxyCompactList}\small\item\em 接続点とそれを中心とした2軸の拘束設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_manager_a9e68a60ba0017f5479cf3a21ce4a5703}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_manager_a2c7c91e5ceec246a87e61e156920022c}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_manager_ae3798b00a0e8b169a07d05614cb7de58}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_manager_aeebd0a40ebc6ce33aafc9cf1ad89fd19}{Draw\+Debug}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$camera)
+\begin{DoxyCompactList}\small\item\em デバッグ表示関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_manager_a33ae1074dd25ea32dcc7e5c402231b11}{Release\+From\+The\+Object\+List}} (\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em オブジェクトリストから解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_manager_a1984c226e0d77dfdf677070d659664de}{Release\+From\+The\+Constraint\+List}} (\mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}} $\ast$constraint)
+\begin{DoxyCompactList}\small\item\em 拘束リストから解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_bullet_physics_manager}{Bullet\+Physics\+Manager}} $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_a7ac6a8bba52b259931695ae85ded80d1}{getp\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス取得関数 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_bullet_physics_manager_a10b55190182029ac95365e4f52dd1758}{Release\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bullet_physics_manager_afb44166d940d7c4cf0fbdd9ea35a81f6}{Bullet\+Physics\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bullet_physics_manager_a58a76106be19bb7bd11be0642281742a}{Bullet\+Physics\+Manager}} (const \mbox{\hyperlink{class_bullet_physics_manager}{Bullet\+Physics\+Manager}} \&class\+\_\+name)=delete
+\item 
+\mbox{\hyperlink{class_bullet_physics_manager}{Bullet\+Physics\+Manager}} \& \mbox{\hyperlink{class_bullet_physics_manager_a179d9a6da3f1b96efbe091419968b53c}{operator=}} (const \mbox{\hyperlink{class_bullet_physics_manager}{Bullet\+Physics\+Manager}} \&class\+\_\+name)=delete
+\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+bt\+Default\+Collision\+Configuration $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_afb7550b9dfffd2731572aada4f0af008}{configuration\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 衝突計算の設定 \end{DoxyCompactList}\item 
+bt\+Collision\+Dispatcher $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_a07ff9dde66b009362afeed24a8dab84c}{dispatcher\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 衝突計算の設定 \end{DoxyCompactList}\item 
+bt\+Dbvt\+Broadphase $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_a991c738496cfd117c9a7f43f6bcf4003}{broadphase\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em ブロードフェーズ法(衝突する可能性のあるオブジェクトの検出) \end{DoxyCompactList}\item 
+bt\+Sequential\+Impulse\+Constraint\+Solver $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_ab6bcf584643b13be7d96e266fc183ebe}{solver\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 拘束ソルバ(オブジェクトの重なり解消などの設定) \end{DoxyCompactList}\item 
+bt\+Dynamics\+World $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_acd0e088adad3c0cc032fea67a2bcef10}{dynamics\+\_\+world\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em Bulletワールド \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bullet_physics_debug}{Bullet\+Physics\+Debug}} $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_a055f728a5094a128f7ba2e6c8ec75433}{debug\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em デバッグ表示 \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$ $>$ \mbox{\hyperlink{class_bullet_physics_manager_aeb28861b2291675a67cd710611b33244}{object\+\_\+}}
+\begin{DoxyCompactList}\small\item\em オブジェクトリスト \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}} $\ast$ $>$ \mbox{\hyperlink{class_bullet_physics_manager_a216431f03ee96997473e19b6dbbef01c}{constraint\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 拘束 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const bt\+Vector3 \mbox{\hyperlink{class_bullet_physics_manager_a50d93547f618b581928fb0328f30e1f4}{D\+E\+F\+U\+L\+T\+\_\+\+G\+R\+A\+V\+I\+TY}}
+\begin{DoxyCompactList}\small\item\em デフォルトの重力値 \end{DoxyCompactList}\item 
+static const bt\+Scalar \mbox{\hyperlink{class_bullet_physics_manager_a77df988ab75c091f8d56b8ffb41e9012}{T\+I\+M\+E\+\_\+\+S\+T\+EP}} = 1.\+0f / 60.\+0f
+\begin{DoxyCompactList}\small\item\em 更新すると進む秒数 \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{class_bullet_physics_manager_aaccc2256165c4d9f2aa9630ac6ca20f6}{M\+A\+X\+\_\+\+S\+U\+B\+\_\+\+S\+T\+EP}} = 10
+\begin{DoxyCompactList}\small\item\em 更新の細かさ \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_bullet_physics_manager}{Bullet\+Physics\+Manager}} $\ast$ \mbox{\hyperlink{class_bullet_physics_manager_ad26c2767666f071dc1b39fba7138cd20}{instance\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em インスタンス \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+バレットフィジックスマネージャ\+Class(\+Singleton) 
+
+バレットフィジックスのマネージャ\+Class(\+Singleton) 
+
+ Bullet\+Physics\+Manager.\+h の 40 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_bullet_physics_manager_afb44166d940d7c4cf0fbdd9ea35a81f6}\label{class_bullet_physics_manager_afb44166d940d7c4cf0fbdd9ea35a81f6}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{Bullet\+Physics\+Manager()}{BulletPhysicsManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Bullet\+Physics\+Manager\+::\+Bullet\+Physics\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 184 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a58a76106be19bb7bd11be0642281742a}\label{class_bullet_physics_manager_a58a76106be19bb7bd11be0642281742a}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{Bullet\+Physics\+Manager()}{BulletPhysicsManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bullet\+Physics\+Manager\+::\+Bullet\+Physics\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bullet_physics_manager}{Bullet\+Physics\+Manager}} \&}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_bullet_physics_manager_aeebd0a40ebc6ce33aafc9cf1ad89fd19}\label{class_bullet_physics_manager_aeebd0a40ebc6ce33aafc9cf1ad89fd19}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!Draw\+Debug@{Draw\+Debug}}
+\index{Draw\+Debug@{Draw\+Debug}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{Draw\+Debug()}{DrawDebug()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Manager\+::\+Draw\+Debug (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})}
+
+
+
+デバッグ表示関数 
+
+
+\begin{DoxyParams}{引数}
+{\em camera} & カメラ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 255 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a7ac6a8bba52b259931695ae85ded80d1}\label{class_bullet_physics_manager_a7ac6a8bba52b259931695ae85ded80d1}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!getp\+Instance@{getp\+Instance}}
+\index{getp\+Instance@{getp\+Instance}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Instance()}{getpInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_manager}{Bullet\+Physics\+Manager}} $\ast$ Bullet\+Physics\+Manager\+::getp\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+インスタンス取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Bullet\+Physics\+Manager$\ast$} & インスタンス \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_aa923016c3a46597009f0b399dee189ec}\label{class_bullet_physics_manager_aa923016c3a46597009f0b399dee189ec}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!getp\+Object\+Capsule@{getp\+Object\+Capsule}}
+\index{getp\+Object\+Capsule@{getp\+Object\+Capsule}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Object\+Capsule()}{getpObjectCapsule()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$ Bullet\+Physics\+Manager\+::getp\+Object\+Capsule (\begin{DoxyParamCaption}\item[{float}]{mass,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{inertia,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{position,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}}}]{quaternion,  }\item[{float}]{radius,  }\item[{float}]{height }\end{DoxyParamCaption})}
+
+
+
+カプセルオブジェクト取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em mass} & 質量 \\
+\hline
+{\em inertia} & 慣性モーメント \\
+\hline
+{\em position} & 座標 \\
+\hline
+{\em quaternion} & クォータニオン \\
+\hline
+{\em radius} & 半径 \\
+\hline
+{\em height} & 高さ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Bullet\+Physics\+Object$\ast$} & 球オブジェクト \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 107 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_ab155f9a649643701d9ee7f88027c5616}\label{class_bullet_physics_manager_ab155f9a649643701d9ee7f88027c5616}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!getp\+Object\+O\+BB@{getp\+Object\+O\+BB}}
+\index{getp\+Object\+O\+BB@{getp\+Object\+O\+BB}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Object\+O\+B\+B()}{getpObjectOBB()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$ Bullet\+Physics\+Manager\+::getp\+Object\+O\+BB (\begin{DoxyParamCaption}\item[{float}]{mass,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{inertia,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{position,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}}}]{quaternion,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{edge\+\_\+half\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+O\+B\+Bオブジェクト取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em mass} & 質量 \\
+\hline
+{\em inertia} & 慣性モーメント \\
+\hline
+{\em position} & 座標 \\
+\hline
+{\em quaternion} & クォータニオン \\
+\hline
+{\em edge\+\_\+half\+\_\+length} & 辺の半分の長さ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Bullet\+Physics\+Object$\ast$} & O\+B\+Bオブジェクト \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 91 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a6a5ed244e2925464f48c221fd5af68e4}\label{class_bullet_physics_manager_a6a5ed244e2925464f48c221fd5af68e4}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!getp\+Object\+Sphere@{getp\+Object\+Sphere}}
+\index{getp\+Object\+Sphere@{getp\+Object\+Sphere}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Object\+Sphere()}{getpObjectSphere()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$ Bullet\+Physics\+Manager\+::getp\+Object\+Sphere (\begin{DoxyParamCaption}\item[{float}]{mass,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{inertia,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{position,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}}}]{quaternion,  }\item[{float}]{radius }\end{DoxyParamCaption})}
+
+
+
+球オブジェクト取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em mass} & 質量 \\
+\hline
+{\em inertia} & 慣性モーメント \\
+\hline
+{\em position} & 座標 \\
+\hline
+{\em quaternion} & クォータニオン \\
+\hline
+{\em radius} & 半径 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Bullet\+Physics\+Object$\ast$} & 球オブジェクト \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 75 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a9e68a60ba0017f5479cf3a21ce4a5703}\label{class_bullet_physics_manager_a9e68a60ba0017f5479cf3a21ce4a5703}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!Init@{Init}}
+\index{Init@{Init}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Manager\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 190 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a179d9a6da3f1b96efbe091419968b53c}\label{class_bullet_physics_manager_a179d9a6da3f1b96efbe091419968b53c}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!operator=@{operator=}}
+\index{operator=@{operator=}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_manager}{Bullet\+Physics\+Manager}}\& Bullet\+Physics\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bullet_physics_manager}{Bullet\+Physics\+Manager}} \&}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a1984c226e0d77dfdf677070d659664de}\label{class_bullet_physics_manager_a1984c226e0d77dfdf677070d659664de}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!Release\+From\+The\+Constraint\+List@{Release\+From\+The\+Constraint\+List}}
+\index{Release\+From\+The\+Constraint\+List@{Release\+From\+The\+Constraint\+List}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{Release\+From\+The\+Constraint\+List()}{ReleaseFromTheConstraintList()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Manager\+::\+Release\+From\+The\+Constraint\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}} $\ast$}]{constraint }\end{DoxyParamCaption})}
+
+
+
+拘束リストから解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$constraint} & 拘束自身のポインタ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 276 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a33ae1074dd25ea32dcc7e5c402231b11}\label{class_bullet_physics_manager_a33ae1074dd25ea32dcc7e5c402231b11}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!Release\+From\+The\+Object\+List@{Release\+From\+The\+Object\+List}}
+\index{Release\+From\+The\+Object\+List@{Release\+From\+The\+Object\+List}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{Release\+From\+The\+Object\+List()}{ReleaseFromTheObjectList()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Manager\+::\+Release\+From\+The\+Object\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+オブジェクトリストから解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$object} & オブジェクト自身のポインタ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 264 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a10b55190182029ac95365e4f52dd1758}\label{class_bullet_physics_manager_a10b55190182029ac95365e4f52dd1758}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!Release\+Instance@{Release\+Instance}}
+\index{Release\+Instance@{Release\+Instance}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{Release\+Instance()}{ReleaseInstance()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Manager\+::\+Release\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+インスタンス解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a7f022644ccafde7e87497f90b1efec07}\label{class_bullet_physics_manager_a7f022644ccafde7e87497f90b1efec07}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!set\+Constraint\+Hinge@{set\+Constraint\+Hinge}}
+\index{set\+Constraint\+Hinge@{set\+Constraint\+Hinge}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{set\+Constraint\+Hinge()}{setConstraintHinge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}} $\ast$ Bullet\+Physics\+Manager\+::set\+Constraint\+Hinge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$}]{bullet\+\_\+object0,  }\item[{\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$}]{bullet\+\_\+object1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{point0,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{point1,  }\item[{float}]{angle\+\_\+min,  }\item[{float}]{angle\+\_\+max,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{axis = {\ttfamily \{0.0f,~1.0f,~0.0f\}} }\end{DoxyParamCaption})}
+
+
+
+1つの軸を回転する拘束初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em bullet\+\_\+object0} & オブジェクト0 \\
+\hline
+{\em bullet\+\_\+object1} & オブジェクト1 \\
+\hline
+{\em point0} & ポイント0(ローカル座標) \\
+\hline
+{\em point1} & ポイント1(ローカル座標) \\
+\hline
+{\em angle\+\_\+min} & 最小角度1(1.\+0f$\sim$0.0fで1.0fに近いほど自由が利く) \\
+\hline
+{\em angle\+\_\+max} & 最大角度0(1.\+0f$\sim$0.0fで1.0fに近いほど自由が利く) \\
+\hline
+{\em axis} & 回転軸 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 139 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a5e68fcd1f23812a7c87708266ee20353}\label{class_bullet_physics_manager_a5e68fcd1f23812a7c87708266ee20353}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!set\+Constraint\+Point\+To\+Point@{set\+Constraint\+Point\+To\+Point}}
+\index{set\+Constraint\+Point\+To\+Point@{set\+Constraint\+Point\+To\+Point}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{set\+Constraint\+Point\+To\+Point()}{setConstraintPointToPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}} $\ast$ Bullet\+Physics\+Manager\+::set\+Constraint\+Point\+To\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$}]{bullet\+\_\+object0,  }\item[{\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$}]{bullet\+\_\+object1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{point0,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{point1 }\end{DoxyParamCaption})}
+
+
+
+ポイントとポイントの拘束設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em bullet\+\_\+object0} & オブジェクト0 \\
+\hline
+{\em bullet\+\_\+object1} & オブジェクト1 \\
+\hline
+{\em point0} & ポイント0 \\
+\hline
+{\em point1} & ポイント1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Bullet\+Physics\+Constraint$\ast$} & 拘束 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 121 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a0c57ac980c9c2e6b582fa7033bd55848}\label{class_bullet_physics_manager_a0c57ac980c9c2e6b582fa7033bd55848}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!set\+Constraint\+Universal@{set\+Constraint\+Universal}}
+\index{set\+Constraint\+Universal@{set\+Constraint\+Universal}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{set\+Constraint\+Universal()}{setConstraintUniversal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}} $\ast$ Bullet\+Physics\+Manager\+::set\+Constraint\+Universal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$}]{bullet\+\_\+object0,  }\item[{\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$}]{bullet\+\_\+object1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{anchor,  }\item[{float}]{angle\+\_\+min0,  }\item[{float}]{angle\+\_\+min1,  }\item[{float}]{angle\+\_\+max0,  }\item[{float}]{angle\+\_\+max1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{axis0 = {\ttfamily \{1.0f,~0.0f,~0.0f\}},  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{axis1 = {\ttfamily \{0.0f,~0.0f,~1.0f\}} }\end{DoxyParamCaption})}
+
+
+
+接続点とそれを中心とした2軸の拘束設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$bullet\+\_\+object0} & オブジェクト0 \\
+\hline
+{\em $\ast$bullet\+\_\+object1} & オブジェクト1 \\
+\hline
+{\em anchor} & 接続点(ワールド座標) \\
+\hline
+{\em angle\+\_\+min0} & 最小角度0(1.\+0f$\sim$0.0fで1.0fに近いほど自由が利く) \\
+\hline
+{\em angle\+\_\+min1} & 最小角度1(1.\+0f$\sim$0.0fで1.0fに近いほど自由が利く) \\
+\hline
+{\em angle\+\_\+max0} & 最大角度0(1.\+0f$\sim$0.0fで1.0fに近いほど自由が利く) \\
+\hline
+{\em angle\+\_\+max1} & 最大角度1(1.\+0f$\sim$0.0fで1.0fに近いほど自由が利く) \\
+\hline
+{\em axis0} & 回転軸0 \\
+\hline
+{\em axis1} & 回転軸1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Bullet\+Physics\+Constraint$\ast$} & 拘束 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 159 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_ad36b472d89cdd03e1037359fae2c1a37}\label{class_bullet_physics_manager_ad36b472d89cdd03e1037359fae2c1a37}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!set\+Debug@{set\+Debug}}
+\index{set\+Debug@{set\+Debug}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{set\+Debug()}{setDebug()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Manager\+::set\+Debug (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+デバッグ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & デバッグフラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 61 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a2c7c91e5ceec246a87e61e156920022c}\label{class_bullet_physics_manager_a2c7c91e5ceec246a87e61e156920022c}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Manager\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 214 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_ae3798b00a0e8b169a07d05614cb7de58}\label{class_bullet_physics_manager_ae3798b00a0e8b169a07d05614cb7de58}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!Update@{Update}}
+\index{Update@{Update}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Manager.\+cpp の 248 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_bullet_physics_manager_a991c738496cfd117c9a7f43f6bcf4003}\label{class_bullet_physics_manager_a991c738496cfd117c9a7f43f6bcf4003}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!broadphase\+\_\+@{broadphase\+\_\+}}
+\index{broadphase\+\_\+@{broadphase\+\_\+}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{broadphase\+\_\+}{broadphase\_}}
+{\footnotesize\ttfamily bt\+Dbvt\+Broadphase$\ast$ Bullet\+Physics\+Manager\+::broadphase\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ブロードフェーズ法(衝突する可能性のあるオブジェクトの検出) 
+
+
+
+ Bullet\+Physics\+Manager.\+h の 90 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_afb7550b9dfffd2731572aada4f0af008}\label{class_bullet_physics_manager_afb7550b9dfffd2731572aada4f0af008}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!configuration\+\_\+@{configuration\+\_\+}}
+\index{configuration\+\_\+@{configuration\+\_\+}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{configuration\+\_\+}{configuration\_}}
+{\footnotesize\ttfamily bt\+Default\+Collision\+Configuration$\ast$ Bullet\+Physics\+Manager\+::configuration\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+衝突計算の設定 
+
+
+
+ Bullet\+Physics\+Manager.\+h の 88 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a216431f03ee96997473e19b6dbbef01c}\label{class_bullet_physics_manager_a216431f03ee96997473e19b6dbbef01c}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!constraint\+\_\+@{constraint\+\_\+}}
+\index{constraint\+\_\+@{constraint\+\_\+}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{constraint\+\_\+}{constraint\_}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{class_bullet_physics_constraint}{Bullet\+Physics\+Constraint}}$\ast$$>$ Bullet\+Physics\+Manager\+::constraint\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+拘束 
+
+
+
+ Bullet\+Physics\+Manager.\+h の 95 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a055f728a5094a128f7ba2e6c8ec75433}\label{class_bullet_physics_manager_a055f728a5094a128f7ba2e6c8ec75433}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!debug\+\_\+@{debug\+\_\+}}
+\index{debug\+\_\+@{debug\+\_\+}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{debug\+\_\+}{debug\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_debug}{Bullet\+Physics\+Debug}}$\ast$ Bullet\+Physics\+Manager\+::debug\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+デバッグ表示 
+
+
+
+ Bullet\+Physics\+Manager.\+h の 93 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a50d93547f618b581928fb0328f30e1f4}\label{class_bullet_physics_manager_a50d93547f618b581928fb0328f30e1f4}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!D\+E\+F\+U\+L\+T\+\_\+\+G\+R\+A\+V\+I\+TY@{D\+E\+F\+U\+L\+T\+\_\+\+G\+R\+A\+V\+I\+TY}}
+\index{D\+E\+F\+U\+L\+T\+\_\+\+G\+R\+A\+V\+I\+TY@{D\+E\+F\+U\+L\+T\+\_\+\+G\+R\+A\+V\+I\+TY}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{D\+E\+F\+U\+L\+T\+\_\+\+G\+R\+A\+V\+I\+TY}{DEFULT\_GRAVITY}}
+{\footnotesize\ttfamily const bt\+Vector3 Bullet\+Physics\+Manager\+::\+D\+E\+F\+U\+L\+T\+\_\+\+G\+R\+A\+V\+I\+TY\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+デフォルトの重力値 
+
+
+
+ Bullet\+Physics\+Manager.\+h の 46 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a07ff9dde66b009362afeed24a8dab84c}\label{class_bullet_physics_manager_a07ff9dde66b009362afeed24a8dab84c}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!dispatcher\+\_\+@{dispatcher\+\_\+}}
+\index{dispatcher\+\_\+@{dispatcher\+\_\+}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{dispatcher\+\_\+}{dispatcher\_}}
+{\footnotesize\ttfamily bt\+Collision\+Dispatcher$\ast$ Bullet\+Physics\+Manager\+::dispatcher\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+衝突計算の設定 
+
+
+
+ Bullet\+Physics\+Manager.\+h の 89 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_acd0e088adad3c0cc032fea67a2bcef10}\label{class_bullet_physics_manager_acd0e088adad3c0cc032fea67a2bcef10}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!dynamics\+\_\+world\+\_\+@{dynamics\+\_\+world\+\_\+}}
+\index{dynamics\+\_\+world\+\_\+@{dynamics\+\_\+world\+\_\+}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{dynamics\+\_\+world\+\_\+}{dynamics\_world\_}}
+{\footnotesize\ttfamily bt\+Dynamics\+World$\ast$ Bullet\+Physics\+Manager\+::dynamics\+\_\+world\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Bulletワールド 
+
+
+
+ Bullet\+Physics\+Manager.\+h の 92 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_ad26c2767666f071dc1b39fba7138cd20}\label{class_bullet_physics_manager_ad26c2767666f071dc1b39fba7138cd20}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!instance\+\_\+@{instance\+\_\+}}
+\index{instance\+\_\+@{instance\+\_\+}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{instance\+\_\+}{instance\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_manager}{Bullet\+Physics\+Manager}} $\ast$ Bullet\+Physics\+Manager\+::instance\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+インスタンス 
+
+
+
+ Bullet\+Physics\+Manager.\+h の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_aaccc2256165c4d9f2aa9630ac6ca20f6}\label{class_bullet_physics_manager_aaccc2256165c4d9f2aa9630ac6ca20f6}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!M\+A\+X\+\_\+\+S\+U\+B\+\_\+\+S\+T\+EP@{M\+A\+X\+\_\+\+S\+U\+B\+\_\+\+S\+T\+EP}}
+\index{M\+A\+X\+\_\+\+S\+U\+B\+\_\+\+S\+T\+EP@{M\+A\+X\+\_\+\+S\+U\+B\+\_\+\+S\+T\+EP}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+S\+U\+B\+\_\+\+S\+T\+EP}{MAX\_SUB\_STEP}}
+{\footnotesize\ttfamily const int Bullet\+Physics\+Manager\+::\+M\+A\+X\+\_\+\+S\+U\+B\+\_\+\+S\+T\+EP = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+更新の細かさ 
+
+
+
+ Bullet\+Physics\+Manager.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_aeb28861b2291675a67cd710611b33244}\label{class_bullet_physics_manager_aeb28861b2291675a67cd710611b33244}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!object\+\_\+@{object\+\_\+}}
+\index{object\+\_\+@{object\+\_\+}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{object\+\_\+}{object\_}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}}$\ast$$>$ Bullet\+Physics\+Manager\+::object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+オブジェクトリスト 
+
+
+
+ Bullet\+Physics\+Manager.\+h の 94 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_ab6bcf584643b13be7d96e266fc183ebe}\label{class_bullet_physics_manager_ab6bcf584643b13be7d96e266fc183ebe}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!solver\+\_\+@{solver\+\_\+}}
+\index{solver\+\_\+@{solver\+\_\+}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{solver\+\_\+}{solver\_}}
+{\footnotesize\ttfamily bt\+Sequential\+Impulse\+Constraint\+Solver$\ast$ Bullet\+Physics\+Manager\+::solver\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+拘束ソルバ(オブジェクトの重なり解消などの設定) 
+
+
+
+ Bullet\+Physics\+Manager.\+h の 91 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_manager_a77df988ab75c091f8d56b8ffb41e9012}\label{class_bullet_physics_manager_a77df988ab75c091f8d56b8ffb41e9012}} 
+\index{Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}!T\+I\+M\+E\+\_\+\+S\+T\+EP@{T\+I\+M\+E\+\_\+\+S\+T\+EP}}
+\index{T\+I\+M\+E\+\_\+\+S\+T\+EP@{T\+I\+M\+E\+\_\+\+S\+T\+EP}!Bullet\+Physics\+Manager@{Bullet\+Physics\+Manager}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+\_\+\+S\+T\+EP}{TIME\_STEP}}
+{\footnotesize\ttfamily const bt\+Scalar Bullet\+Physics\+Manager\+::\+T\+I\+M\+E\+\_\+\+S\+T\+EP = 1.\+0f / 60.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+更新すると進む秒数 
+
+
+
+ Bullet\+Physics\+Manager.\+h の 47 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Bullet\+Physics/\+Bullet\+Physics\+Manager/\mbox{\hyperlink{_bullet_physics_manager_8h}{Bullet\+Physics\+Manager.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Bullet\+Physics/\+Bullet\+Physics\+Manager/\+Source/\mbox{\hyperlink{_bullet_physics_manager_8cpp}{Bullet\+Physics\+Manager.\+cpp}}\end{DoxyCompactItemize}

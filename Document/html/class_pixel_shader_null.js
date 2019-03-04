@@ -1,7 +1,7 @@
 var class_pixel_shader_null =
 [
-    [ "CommonSetting", "class_pixel_shader_null.html#a99c712ab174da29ba26a893820b64799", null ],
-    [ "Init", "class_pixel_shader_null.html#abfd7a6a986da09061a55d31024219eba", null ],
-    [ "SpecificSetting", "class_pixel_shader_null.html#a8dd0194b5a22da5261ab35233a7cfdcd", null ],
-    [ "Uninit", "class_pixel_shader_null.html#ae5ee2fa95e5da787918ccbd1877cd0ef", null ]
+    [ "Init", "class_pixel_shader_null.html#a5318be2bf26892c385d863e3e8409571", null ],
+    [ "MeshSetting", "class_pixel_shader_null.html#a89b6f0558a969478b06af52bb8e6ee16", null ],
+    [ "ObjectSetting", "class_pixel_shader_null.html#a488bde4a2c9a9c45c4ec0ad42487d3b1", null ],
+    [ "Uninit", "class_pixel_shader_null.html#adca4c44cd25c90a5ebd75b459f5e641e", null ]
 ];

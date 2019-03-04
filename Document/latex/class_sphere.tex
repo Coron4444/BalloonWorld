@@ -11,26 +11,33 @@
 
 
 
-Sphere の継承関係図\nopagebreak
+Sphere 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=184pt]{class_sphere__inherit__graph}
+\includegraphics[width=258pt]{class_sphere__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_sphere_ad1885bd0628ecd509ea2a61918875bd1}{getp\+Position}} ()
-\begin{DoxyCompactList}\small\item\em 座標ポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 座標取得関数 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_sphere_a330dd34c7c7b6dfff106c4c71ec80028}{get\+Radius}} ()
 \begin{DoxyCompactList}\small\item\em 半径取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_sphere_ad813f5d3e9da96cf1111aedec4ec9b5f}{set\+Radius}} (float value)
 \begin{DoxyCompactList}\small\item\em 半径設定関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_sphere_a890a63ff583cb88e7ec4e840b4ef5eb9}{Sphere}} ()
-\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sphere_a569c071e50a3e11f678630ee1a17737e}{$\sim$\+Sphere}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_sphere_aa0c93894c5dad170bd65f1cec3493c37}{Init}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} position, float radius)
-\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sphere_a5e72970f207683a3cf5fe430f6a62e15}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_sphere_a651b659cec38a3a93a4be589f25899d7}{Calculation\+Min\+And\+Max}} () override
+\begin{DoxyCompactList}\small\item\em 最小値と最大値算出関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,15 +58,15 @@ float \mbox{\hyperlink{class_sphere_ac2924d9ad22bfad1ed1914c069c188dc}{radius\+\
 
 
 \subsection{構築子と解体子}
-\mbox{\Hypertarget{class_sphere_a890a63ff583cb88e7ec4e840b4ef5eb9}\label{class_sphere_a890a63ff583cb88e7ec4e840b4ef5eb9}} 
-\index{Sphere@{Sphere}!Sphere@{Sphere}}
-\index{Sphere@{Sphere}!Sphere@{Sphere}}
-\subsubsection{\texorpdfstring{Sphere()}{Sphere()}}
-{\footnotesize\ttfamily Sphere\+::\+Sphere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_sphere_a569c071e50a3e11f678630ee1a17737e}\label{class_sphere_a569c071e50a3e11f678630ee1a17737e}} 
+\index{Sphere@{Sphere}!````~Sphere@{$\sim$\+Sphere}}
+\index{````~Sphere@{$\sim$\+Sphere}!Sphere@{Sphere}}
+\subsubsection{\texorpdfstring{$\sim$\+Sphere()}{~Sphere()}}
+{\footnotesize\ttfamily Sphere\+::$\sim$\+Sphere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-コンストラクタ 
+デストラクタ 
 
 
 \begin{DoxyParams}{引数}
@@ -73,15 +80,15 @@ float \mbox{\hyperlink{class_sphere_ac2924d9ad22bfad1ed1914c069c188dc}{radius\+\
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_sphere_ad1885bd0628ecd509ea2a61918875bd1}\label{class_sphere_ad1885bd0628ecd509ea2a61918875bd1}} 
-\index{Sphere@{Sphere}!getp\+Position@{getp\+Position}}
-\index{getp\+Position@{getp\+Position}!Sphere@{Sphere}}
-\subsubsection{\texorpdfstring{getp\+Position()}{getpPosition()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Sphere\+::getp\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_sphere_a651b659cec38a3a93a4be589f25899d7}\label{class_sphere_a651b659cec38a3a93a4be589f25899d7}} 
+\index{Sphere@{Sphere}!Calculation\+Min\+And\+Max@{Calculation\+Min\+And\+Max}}
+\index{Calculation\+Min\+And\+Max@{Calculation\+Min\+And\+Max}!Sphere@{Sphere}}
+\subsubsection{\texorpdfstring{Calculation\+Min\+And\+Max()}{CalculationMinAndMax()}}
+{\footnotesize\ttfamily void Sphere\+::\+Calculation\+Min\+And\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
 
 
 
-座標ポインタ取得関数 
+最小値と最大値算出関数 
 
 
 \begin{DoxyParams}{引数}
@@ -90,7 +97,35 @@ float \mbox{\hyperlink{class_sphere_ac2924d9ad22bfad1ed1914c069c188dc}{radius\+\
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Vector3\+D$\ast$} & 座標ポインタ \\
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_shape_base_ad227c2f83038d7c05bc6b1d510cb4000}{Collision\+Shape\+Base}}を実装しています。
+
+
+
+ Sphere.\+cpp の 69 行目に定義があります。
+
+\mbox{\Hypertarget{class_sphere_ad1885bd0628ecd509ea2a61918875bd1}\label{class_sphere_ad1885bd0628ecd509ea2a61918875bd1}} 
+\index{Sphere@{Sphere}!getp\+Position@{getp\+Position}}
+\index{getp\+Position@{getp\+Position}!Sphere@{Sphere}}
+\subsubsection{\texorpdfstring{getp\+Position()}{getpPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Sphere\+::getp\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+座標取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 座標 \\
 \hline
 \end{DoxyRetVals}
 
@@ -132,10 +167,10 @@ float \mbox{\hyperlink{class_sphere_ac2924d9ad22bfad1ed1914c069c188dc}{radius\+\
 初期化関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em position} & 始点座標 \\
+\begin{DoxyParams}{引数}
+{\em position} & 始点座標 \\
 \hline
-\mbox{\tt in}  & {\em radius} & 半径 \\
+{\em radius} & 半径 \\
 \hline
 \end{DoxyParams}
 
@@ -145,7 +180,7 @@ float \mbox{\hyperlink{class_sphere_ac2924d9ad22bfad1ed1914c069c188dc}{radius\+\
 \end{DoxyRetVals}
 
 
- Sphere.\+cpp の 51 行目に定義があります。
+ Sphere.\+cpp の 50 行目に定義があります。
 
 \mbox{\Hypertarget{class_sphere_ad813f5d3e9da96cf1111aedec4ec9b5f}\label{class_sphere_ad813f5d3e9da96cf1111aedec4ec9b5f}} 
 \index{Sphere@{Sphere}!set\+Radius@{set\+Radius}}
@@ -158,8 +193,8 @@ float \mbox{\hyperlink{class_sphere_ac2924d9ad22bfad1ed1914c069c188dc}{radius\+\
 半径設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & 半径 \\
+\begin{DoxyParams}{引数}
+{\em value} & 半径 \\
 \hline
 \end{DoxyParams}
 
@@ -170,6 +205,34 @@ float \mbox{\hyperlink{class_sphere_ac2924d9ad22bfad1ed1914c069c188dc}{radius\+\
 
 
  Sphere.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_sphere_a5e72970f207683a3cf5fe430f6a62e15}\label{class_sphere_a5e72970f207683a3cf5fe430f6a62e15}} 
+\index{Sphere@{Sphere}!Update@{Update}}
+\index{Update@{Update}!Sphere@{Sphere}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Sphere\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_shape_base_a7aaa0f4de4e208f168f78e3445313929}{Collision\+Shape\+Base}}を実装しています。
+
+
+
+ Sphere.\+cpp の 62 行目に定義があります。
 
 
 
@@ -206,5 +269,5 @@ float \mbox{\hyperlink{class_sphere_ac2924d9ad22bfad1ed1914c069c188dc}{radius\+\
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+Sphere/\mbox{\hyperlink{_sphere_8h}{Sphere.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+Sphere/\mbox{\hyperlink{_sphere_8cpp}{Sphere.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\mbox{\hyperlink{_sphere_8h}{Sphere.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\+Source/\mbox{\hyperlink{_sphere_8cpp}{Sphere.\+cpp}}\end{DoxyCompactItemize}

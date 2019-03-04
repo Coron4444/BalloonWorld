@@ -1,0 +1,210 @@
+\hypertarget{class_bit_flag}{}\section{Bit\+Flag クラス}
+\label{class_bit_flag}\index{Bit\+Flag@{Bit\+Flag}}
+
+
+ビットフラグ\+Class  
+
+
+
+
+{\ttfamily \#include $<$Bit\+Flag.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{class_bit_flag_a1d7f83056b377f8f43097bb86b025bee}{get\+Flag}} ()
+\begin{DoxyCompactList}\small\item\em フラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bit_flag_a3052dd5ee44269665e0ae3ddea4c1c28}{set\+Flag}} (unsigned value)
+\begin{DoxyCompactList}\small\item\em フラグ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bit_flag_a54519ca6c7daed4a5a3bb1e89d271901}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em フラグリセット関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bit_flag_aa164c8084a8e7d3fadd983f330824a2e}{Release}} (unsigned flag)
+\begin{DoxyCompactList}\small\item\em フラグ解放関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_bit_flag_a17f2da0c09d9055a14df21ea4cce01f3}{Check\+Any}} (unsigned flag)
+\begin{DoxyCompactList}\small\item\em 任意一致フラグ確認関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_bit_flag_abfb42d46682425d99275ac15c51a02f4}{Check\+All}} (unsigned flag)
+\begin{DoxyCompactList}\small\item\em 完全一致フラグ確認関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{class_bit_flag_a028f7ae93ca40f24eefaef58aad615bc}{flag\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em フラグ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+ビットフラグ\+Class 
+
+ビット単位のフラグ\+Class 
+
+ Bit\+Flag.\+h の 17 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_bit_flag_abfb42d46682425d99275ac15c51a02f4}\label{class_bit_flag_abfb42d46682425d99275ac15c51a02f4}} 
+\index{Bit\+Flag@{Bit\+Flag}!Check\+All@{Check\+All}}
+\index{Check\+All@{Check\+All}!Bit\+Flag@{Bit\+Flag}}
+\subsubsection{\texorpdfstring{Check\+All()}{CheckAll()}}
+{\footnotesize\ttfamily bool Bit\+Flag\+::\+Check\+All (\begin{DoxyParamCaption}\item[{unsigned}]{flag }\end{DoxyParamCaption})}
+
+
+
+完全一致フラグ確認関数 
+
+
+\begin{DoxyParams}{引数}
+{\em flag} & フラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 全てのフラグが立っていればtrue \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bit\+Flag.\+cpp の 60 行目に定義があります。
+
+\mbox{\Hypertarget{class_bit_flag_a17f2da0c09d9055a14df21ea4cce01f3}\label{class_bit_flag_a17f2da0c09d9055a14df21ea4cce01f3}} 
+\index{Bit\+Flag@{Bit\+Flag}!Check\+Any@{Check\+Any}}
+\index{Check\+Any@{Check\+Any}!Bit\+Flag@{Bit\+Flag}}
+\subsubsection{\texorpdfstring{Check\+Any()}{CheckAny()}}
+{\footnotesize\ttfamily bool Bit\+Flag\+::\+Check\+Any (\begin{DoxyParamCaption}\item[{unsigned}]{flag }\end{DoxyParamCaption})}
+
+
+
+任意一致フラグ確認関数 
+
+
+\begin{DoxyParams}{引数}
+{\em flag} & フラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & どれか一つでもフラグが立っていればtrue \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bit\+Flag.\+cpp の 53 行目に定義があります。
+
+\mbox{\Hypertarget{class_bit_flag_a1d7f83056b377f8f43097bb86b025bee}\label{class_bit_flag_a1d7f83056b377f8f43097bb86b025bee}} 
+\index{Bit\+Flag@{Bit\+Flag}!get\+Flag@{get\+Flag}}
+\index{get\+Flag@{get\+Flag}!Bit\+Flag@{Bit\+Flag}}
+\subsubsection{\texorpdfstring{get\+Flag()}{getFlag()}}
+{\footnotesize\ttfamily unsigned Bit\+Flag\+::get\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & フラグ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bit\+Flag.\+cpp の 22 行目に定義があります。
+
+\mbox{\Hypertarget{class_bit_flag_aa164c8084a8e7d3fadd983f330824a2e}\label{class_bit_flag_aa164c8084a8e7d3fadd983f330824a2e}} 
+\index{Bit\+Flag@{Bit\+Flag}!Release@{Release}}
+\index{Release@{Release}!Bit\+Flag@{Bit\+Flag}}
+\subsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Bit\+Flag\+::\+Release (\begin{DoxyParamCaption}\item[{unsigned}]{flag }\end{DoxyParamCaption})}
+
+
+
+フラグ解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em flag} & フラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bit\+Flag.\+cpp の 46 行目に定義があります。
+
+\mbox{\Hypertarget{class_bit_flag_a54519ca6c7daed4a5a3bb1e89d271901}\label{class_bit_flag_a54519ca6c7daed4a5a3bb1e89d271901}} 
+\index{Bit\+Flag@{Bit\+Flag}!Reset@{Reset}}
+\index{Reset@{Reset}!Bit\+Flag@{Bit\+Flag}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Bit\+Flag\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+フラグリセット関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bit\+Flag.\+cpp の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_bit_flag_a3052dd5ee44269665e0ae3ddea4c1c28}\label{class_bit_flag_a3052dd5ee44269665e0ae3ddea4c1c28}} 
+\index{Bit\+Flag@{Bit\+Flag}!set\+Flag@{set\+Flag}}
+\index{set\+Flag@{set\+Flag}!Bit\+Flag@{Bit\+Flag}}
+\subsubsection{\texorpdfstring{set\+Flag()}{setFlag()}}
+{\footnotesize\ttfamily void Bit\+Flag\+::set\+Flag (\begin{DoxyParamCaption}\item[{unsigned}]{value }\end{DoxyParamCaption})}
+
+
+
+フラグ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & フラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bit\+Flag.\+cpp の 29 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_bit_flag_a028f7ae93ca40f24eefaef58aad615bc}\label{class_bit_flag_a028f7ae93ca40f24eefaef58aad615bc}} 
+\index{Bit\+Flag@{Bit\+Flag}!flag\+\_\+@{flag\+\_\+}}
+\index{flag\+\_\+@{flag\+\_\+}!Bit\+Flag@{Bit\+Flag}}
+\subsubsection{\texorpdfstring{flag\+\_\+}{flag\_}}
+{\footnotesize\ttfamily unsigned Bit\+Flag\+::flag\+\_\+ = 0}
+
+
+
+フラグ 
+
+
+
+ Bit\+Flag.\+h の 23 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_bit_flag_8h}{Bit\+Flag.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\+Source/\mbox{\hyperlink{_bit_flag_8cpp}{Bit\+Flag.\+cpp}}\end{DoxyCompactItemize}

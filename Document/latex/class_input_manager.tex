@@ -1,0 +1,328 @@
+\hypertarget{class_input_manager}{}\section{Input\+Manager クラス}
+\label{class_input_manager}\index{Input\+Manager@{Input\+Manager}}
+
+
+インプットマネージャ\+Class(\+Singleton)  
+
+
+
+
+{\ttfamily \#include $<$Input\+Manager.\+h$>$}
+
+
+
+Input\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{class_input_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controller}{Controller}} $\ast$ \mbox{\hyperlink{class_input_manager_a8b782bf1947449448181a9cf0194c3bc}{getp\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em コントローラー取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_keyboard}{Keyboard}} $\ast$ \mbox{\hyperlink{class_input_manager_a2914fd5b823ad5b41e8ee5b0f605b6d6}{getp\+Keyboard}} ()
+\begin{DoxyCompactList}\small\item\em キーボード取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_manager_ab888da1f3f6cec99d27362276757b12b}{Init}} (H\+I\+N\+S\+T\+A\+N\+CE h\+Instance, H\+W\+ND h\+Wnd)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_manager_adbed7acd819d7c75a97c728028b067d5}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_manager_aa5480931dba2720e7d80dd00a53adae0}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_input_manager}{Input\+Manager}} $\ast$ \mbox{\hyperlink{class_input_manager_a0d02e30524633768b3cfa0ea94dac228}{getp\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス取得関数 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_input_manager_a6bc6f6dd42c2ec560b4d1f1bdca528cb}{Release\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_manager_a8be46886da639b26d67181c29dab6d6c}{Input\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_input_manager_ae633f27688024e06b3d780778636c002}{Input\+Manager}} (const \mbox{\hyperlink{class_input_manager}{Input\+Manager}} \&class\+\_\+name)=delete
+\item 
+\mbox{\hyperlink{class_input_manager}{Input\+Manager}} \& \mbox{\hyperlink{class_input_manager_a4b1d021f5dcd4e029f5210b7dd99fa36}{operator=}} (const \mbox{\hyperlink{class_input_manager}{Input\+Manager}} \&class\+\_\+name)=delete
+\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controller}{Controller}} $\ast$ \mbox{\hyperlink{class_input_manager_ae0edcd4021e3dba96411944cb4d246d5}{controller\+\_\+}}
+\begin{DoxyCompactList}\small\item\em コントローラー \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_keyboard}{Keyboard}} $\ast$ \mbox{\hyperlink{class_input_manager_ae9f8c95ddea7d37cb564a7395bcfa65c}{keyboard\+\_\+}}
+\begin{DoxyCompactList}\small\item\em キーボード \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_input_manager}{Input\+Manager}} $\ast$ \mbox{\hyperlink{class_input_manager_af02cbb6e283b9aff50fa94f120f0e1db}{instance\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em インスタンス \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+インプットマネージャ\+Class(\+Singleton) 
+
+インプットマネージャ\+Class(\+Singleton) 
+
+ Input\+Manager.\+h の 25 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_input_manager_a8be46886da639b26d67181c29dab6d6c}\label{class_input_manager_a8be46886da639b26d67181c29dab6d6c}} 
+\index{Input\+Manager@{Input\+Manager}!Input\+Manager@{Input\+Manager}}
+\index{Input\+Manager@{Input\+Manager}!Input\+Manager@{Input\+Manager}}
+\subsubsection{\texorpdfstring{Input\+Manager()}{InputManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Input\+Manager\+::\+Input\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Input\+Manager.\+cpp の 68 行目に定義があります。
+
+\mbox{\Hypertarget{class_input_manager_ae633f27688024e06b3d780778636c002}\label{class_input_manager_ae633f27688024e06b3d780778636c002}} 
+\index{Input\+Manager@{Input\+Manager}!Input\+Manager@{Input\+Manager}}
+\index{Input\+Manager@{Input\+Manager}!Input\+Manager@{Input\+Manager}}
+\subsubsection{\texorpdfstring{Input\+Manager()}{InputManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Input\+Manager\+::\+Input\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_input_manager}{Input\+Manager}} \&}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_input_manager_a8b782bf1947449448181a9cf0194c3bc}\label{class_input_manager_a8b782bf1947449448181a9cf0194c3bc}} 
+\index{Input\+Manager@{Input\+Manager}!getp\+Controller@{getp\+Controller}}
+\index{getp\+Controller@{getp\+Controller}!Input\+Manager@{Input\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Controller()}{getpController()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_controller}{Controller}} $\ast$ Input\+Manager\+::getp\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コントローラー取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Controller$\ast$} & コントローラー \\
+\hline
+\end{DoxyRetVals}
+
+
+ Input\+Manager.\+cpp の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_input_manager_a0d02e30524633768b3cfa0ea94dac228}\label{class_input_manager_a0d02e30524633768b3cfa0ea94dac228}} 
+\index{Input\+Manager@{Input\+Manager}!getp\+Instance@{getp\+Instance}}
+\index{getp\+Instance@{getp\+Instance}!Input\+Manager@{Input\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Instance()}{getpInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_input_manager}{Input\+Manager}} $\ast$ Input\+Manager\+::getp\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+インスタンス取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Input\+Manager$\ast$} & インスタンス \\
+\hline
+\end{DoxyRetVals}
+
+
+ Input\+Manager.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_input_manager_a2914fd5b823ad5b41e8ee5b0f605b6d6}\label{class_input_manager_a2914fd5b823ad5b41e8ee5b0f605b6d6}} 
+\index{Input\+Manager@{Input\+Manager}!getp\+Keyboard@{getp\+Keyboard}}
+\index{getp\+Keyboard@{getp\+Keyboard}!Input\+Manager@{Input\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Keyboard()}{getpKeyboard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_keyboard}{Keyboard}} $\ast$ Input\+Manager\+::getp\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+キーボード取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Keyboard$\ast$} & キーボード \\
+\hline
+\end{DoxyRetVals}
+
+
+ Input\+Manager.\+cpp の 58 行目に定義があります。
+
+\mbox{\Hypertarget{class_input_manager_ab888da1f3f6cec99d27362276757b12b}\label{class_input_manager_ab888da1f3f6cec99d27362276757b12b}} 
+\index{Input\+Manager@{Input\+Manager}!Init@{Init}}
+\index{Init@{Init}!Input\+Manager@{Input\+Manager}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Input\+Manager\+::\+Init (\begin{DoxyParamCaption}\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Instance,  }\item[{H\+W\+ND}]{h\+Wnd }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em h\+Instance} & インスタンスハンドル \\
+\hline
+{\em h\+Wnd} & ウィンドウハンドル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Input\+Manager.\+cpp の 74 行目に定義があります。
+
+\mbox{\Hypertarget{class_input_manager_a4b1d021f5dcd4e029f5210b7dd99fa36}\label{class_input_manager_a4b1d021f5dcd4e029f5210b7dd99fa36}} 
+\index{Input\+Manager@{Input\+Manager}!operator=@{operator=}}
+\index{operator=@{operator=}!Input\+Manager@{Input\+Manager}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_input_manager}{Input\+Manager}}\& Input\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_input_manager}{Input\+Manager}} \&}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_input_manager_a6bc6f6dd42c2ec560b4d1f1bdca528cb}\label{class_input_manager_a6bc6f6dd42c2ec560b4d1f1bdca528cb}} 
+\index{Input\+Manager@{Input\+Manager}!Release\+Instance@{Release\+Instance}}
+\index{Release\+Instance@{Release\+Instance}!Input\+Manager@{Input\+Manager}}
+\subsubsection{\texorpdfstring{Release\+Instance()}{ReleaseInstance()}}
+{\footnotesize\ttfamily void Input\+Manager\+::\+Release\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+インスタンス解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Input\+Manager.\+cpp の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_input_manager_adbed7acd819d7c75a97c728028b067d5}\label{class_input_manager_adbed7acd819d7c75a97c728028b067d5}} 
+\index{Input\+Manager@{Input\+Manager}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Input\+Manager@{Input\+Manager}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Input\+Manager\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Input\+Manager.\+cpp の 84 行目に定義があります。
+
+\mbox{\Hypertarget{class_input_manager_aa5480931dba2720e7d80dd00a53adae0}\label{class_input_manager_aa5480931dba2720e7d80dd00a53adae0}} 
+\index{Input\+Manager@{Input\+Manager}!Update@{Update}}
+\index{Update@{Update}!Input\+Manager@{Input\+Manager}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Input\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Input\+Manager.\+cpp の 92 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_input_manager_ae0edcd4021e3dba96411944cb4d246d5}\label{class_input_manager_ae0edcd4021e3dba96411944cb4d246d5}} 
+\index{Input\+Manager@{Input\+Manager}!controller\+\_\+@{controller\+\_\+}}
+\index{controller\+\_\+@{controller\+\_\+}!Input\+Manager@{Input\+Manager}}
+\subsubsection{\texorpdfstring{controller\+\_\+}{controller\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_controller}{Controller}}$\ast$ Input\+Manager\+::controller\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+コントローラー 
+
+
+
+ Input\+Manager.\+h の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_input_manager_af02cbb6e283b9aff50fa94f120f0e1db}\label{class_input_manager_af02cbb6e283b9aff50fa94f120f0e1db}} 
+\index{Input\+Manager@{Input\+Manager}!instance\+\_\+@{instance\+\_\+}}
+\index{instance\+\_\+@{instance\+\_\+}!Input\+Manager@{Input\+Manager}}
+\subsubsection{\texorpdfstring{instance\+\_\+}{instance\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_input_manager}{Input\+Manager}} $\ast$ Input\+Manager\+::instance\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+インスタンス 
+
+
+
+ Input\+Manager.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_input_manager_ae9f8c95ddea7d37cb564a7395bcfa65c}\label{class_input_manager_ae9f8c95ddea7d37cb564a7395bcfa65c}} 
+\index{Input\+Manager@{Input\+Manager}!keyboard\+\_\+@{keyboard\+\_\+}}
+\index{keyboard\+\_\+@{keyboard\+\_\+}!Input\+Manager@{Input\+Manager}}
+\subsubsection{\texorpdfstring{keyboard\+\_\+}{keyboard\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_keyboard}{Keyboard}}$\ast$ Input\+Manager\+::keyboard\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+キーボード 
+
+
+
+ Input\+Manager.\+h の 65 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Input/\+Input\+Manager/\mbox{\hyperlink{_input_manager_8h}{Input\+Manager.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Input/\+Input\+Manager/\+Source/\mbox{\hyperlink{_input_manager_8cpp}{Input\+Manager.\+cpp}}\end{DoxyCompactItemize}

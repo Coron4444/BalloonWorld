@@ -11,32 +11,41 @@
 
 
 
-Cylinder の継承関係図\nopagebreak
+Cylinder 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=184pt]{class_cylinder__inherit__graph}
+\includegraphics[width=247pt]{class_cylinder__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_line_segment}{Line\+Segment}} $\ast$ \mbox{\hyperlink{class_cylinder_af6e950f09496e5aac060a3f297da3ae2}{getp\+Line\+Segment}} ()
-\begin{DoxyCompactList}\small\item\em 線分ポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 線分取得関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_cylinder_abf7bd0ec7c85488de892601bc9e23e94}{getp\+Position}} ()
-\begin{DoxyCompactList}\small\item\em 座標ポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 座標取得関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_cylinder_a81a0ee46547b6c2e4e10fc821389f377}{getp\+Vector}} ()
-\begin{DoxyCompactList}\small\item\em 方向ポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 方向取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cylinder_aaf5a9d7cf018efb1e200a1e4ccb41a20}{set\+Vector}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} value)
+\begin{DoxyCompactList}\small\item\em 方向設定関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_cylinder_af36a39d5a18d1a837d9880a00447d87b}{get\+Add\+Vector\+To\+Position}} ()
 \begin{DoxyCompactList}\small\item\em 方向ベクトル加算済み座標取得関数 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_cylinder_a54bd26ac60e885bdca9a101fcc998711}{get\+Radius}} ()
 \begin{DoxyCompactList}\small\item\em 半径取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cylinder_a3baa0a5587c54b7a92f170ce52d0f658}{set\+Radius}} (float value)
 \begin{DoxyCompactList}\small\item\em 半径設定関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_cylinder_a01dc978cb576f834b9545e43d4dad2a2}{Cylinder}} ()
-\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cylinder_a05ab556f0ae3cd6e99d9d1f3caca80b3}{$\sim$\+Cylinder}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cylinder_ab7d8167ece18b76e324a06482d22dacb}{Init}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} position, \mbox{\hyperlink{class_vector3_d}{Vector3D}} vector, float radius)
-\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cylinder_a7b835c069d873b53d57fd01b9f44bacd}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cylinder_ac8fb25627ff41e9ae265cd80bfbde03a}{Calculation\+Min\+And\+Max}} () override
+\begin{DoxyCompactList}\small\item\em 最小値と最大値算出関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
@@ -57,15 +66,15 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 
 
 \subsection{構築子と解体子}
-\mbox{\Hypertarget{class_cylinder_a01dc978cb576f834b9545e43d4dad2a2}\label{class_cylinder_a01dc978cb576f834b9545e43d4dad2a2}} 
-\index{Cylinder@{Cylinder}!Cylinder@{Cylinder}}
-\index{Cylinder@{Cylinder}!Cylinder@{Cylinder}}
-\subsubsection{\texorpdfstring{Cylinder()}{Cylinder()}}
-{\footnotesize\ttfamily Cylinder\+::\+Cylinder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_cylinder_a05ab556f0ae3cd6e99d9d1f3caca80b3}\label{class_cylinder_a05ab556f0ae3cd6e99d9d1f3caca80b3}} 
+\index{Cylinder@{Cylinder}!````~Cylinder@{$\sim$\+Cylinder}}
+\index{````~Cylinder@{$\sim$\+Cylinder}!Cylinder@{Cylinder}}
+\subsubsection{\texorpdfstring{$\sim$\+Cylinder()}{~Cylinder()}}
+{\footnotesize\ttfamily Cylinder\+::$\sim$\+Cylinder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-コンストラクタ 
+デストラクタ 
 
 
 \begin{DoxyParams}{引数}
@@ -74,11 +83,39 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 \end{DoxyParams}
 
 
- Cylinder.\+cpp の 65 行目に定義があります。
+ Cylinder.\+cpp の 72 行目に定義があります。
 
 
 
 \subsection{関数詳解}
+\mbox{\Hypertarget{class_cylinder_ac8fb25627ff41e9ae265cd80bfbde03a}\label{class_cylinder_ac8fb25627ff41e9ae265cd80bfbde03a}} 
+\index{Cylinder@{Cylinder}!Calculation\+Min\+And\+Max@{Calculation\+Min\+And\+Max}}
+\index{Calculation\+Min\+And\+Max@{Calculation\+Min\+And\+Max}!Cylinder@{Cylinder}}
+\subsubsection{\texorpdfstring{Calculation\+Min\+And\+Max()}{CalculationMinAndMax()}}
+{\footnotesize\ttfamily void Cylinder\+::\+Calculation\+Min\+And\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+最小値と最大値算出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_shape_base_ad227c2f83038d7c05bc6b1d510cb4000}{Collision\+Shape\+Base}}を実装しています。
+
+
+
+ Cylinder.\+cpp の 100 行目に定義があります。
+
 \mbox{\Hypertarget{class_cylinder_af36a39d5a18d1a837d9880a00447d87b}\label{class_cylinder_af36a39d5a18d1a837d9880a00447d87b}} 
 \index{Cylinder@{Cylinder}!get\+Add\+Vector\+To\+Position@{get\+Add\+Vector\+To\+Position}}
 \index{get\+Add\+Vector\+To\+Position@{get\+Add\+Vector\+To\+Position}!Cylinder@{Cylinder}}
@@ -101,7 +138,7 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 \end{DoxyRetVals}
 
 
- Cylinder.\+cpp の 41 行目に定義があります。
+ Cylinder.\+cpp の 48 行目に定義があります。
 
 \mbox{\Hypertarget{class_cylinder_af6e950f09496e5aac060a3f297da3ae2}\label{class_cylinder_af6e950f09496e5aac060a3f297da3ae2}} 
 \index{Cylinder@{Cylinder}!getp\+Line\+Segment@{getp\+Line\+Segment}}
@@ -111,7 +148,7 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 
 
 
-線分ポインタ取得関数 
+線分取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -120,7 +157,7 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Line\+Segment$\ast$} & 線分ポインタ \\
+{\em Line\+Segment$\ast$} & 線分 \\
 \hline
 \end{DoxyRetVals}
 
@@ -135,7 +172,7 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 
 
 
-座標ポインタ取得関数 
+座標取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -144,7 +181,7 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Vector3\+D$\ast$} & 座標ポインタ \\
+{\em Vector3\+D$\ast$} & 座標 \\
 \hline
 \end{DoxyRetVals}
 
@@ -159,7 +196,7 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 
 
 
-方向ポインタ取得関数 
+方向取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -168,7 +205,7 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Vector3\+D$\ast$} & 方向ポインタ \\
+{\em Vector3\+D$\ast$} & 方向 \\
 \hline
 \end{DoxyRetVals}
 
@@ -197,7 +234,7 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 \end{DoxyRetVals}
 
 
- Cylinder.\+cpp の 48 行目に定義があります。
+ Cylinder.\+cpp の 55 行目に定義があります。
 
 \mbox{\Hypertarget{class_cylinder_ab7d8167ece18b76e324a06482d22dacb}\label{class_cylinder_ab7d8167ece18b76e324a06482d22dacb}} 
 \index{Cylinder@{Cylinder}!Init@{Init}}
@@ -210,12 +247,12 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 初期化関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em position} & 始点座標 \\
+\begin{DoxyParams}{引数}
+{\em position} & 始点座標 \\
 \hline
-\mbox{\tt in}  & {\em vector} & 方向 \\
+{\em vector} & 方向 \\
 \hline
-\mbox{\tt in}  & {\em radius} & 半径 \\
+{\em radius} & 半径 \\
 \hline
 \end{DoxyParams}
 
@@ -225,7 +262,7 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 \end{DoxyRetVals}
 
 
- Cylinder.\+cpp の 72 行目に定義があります。
+ Cylinder.\+cpp の 78 行目に定義があります。
 
 \mbox{\Hypertarget{class_cylinder_a3baa0a5587c54b7a92f170ce52d0f658}\label{class_cylinder_a3baa0a5587c54b7a92f170ce52d0f658}} 
 \index{Cylinder@{Cylinder}!set\+Radius@{set\+Radius}}
@@ -238,8 +275,8 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 半径設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & 半径 \\
+\begin{DoxyParams}{引数}
+{\em value} & 半径 \\
 \hline
 \end{DoxyParams}
 
@@ -249,7 +286,59 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 \end{DoxyRetVals}
 
 
- Cylinder.\+cpp の 55 行目に定義があります。
+ Cylinder.\+cpp の 62 行目に定義があります。
+
+\mbox{\Hypertarget{class_cylinder_aaf5a9d7cf018efb1e200a1e4ccb41a20}\label{class_cylinder_aaf5a9d7cf018efb1e200a1e4ccb41a20}} 
+\index{Cylinder@{Cylinder}!set\+Vector@{set\+Vector}}
+\index{set\+Vector@{set\+Vector}!Cylinder@{Cylinder}}
+\subsubsection{\texorpdfstring{set\+Vector()}{setVector()}}
+{\footnotesize\ttfamily void Cylinder\+::set\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{value }\end{DoxyParamCaption})}
+
+
+
+方向設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 方向 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Cylinder.\+cpp の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_cylinder_a7b835c069d873b53d57fd01b9f44bacd}\label{class_cylinder_a7b835c069d873b53d57fd01b9f44bacd}} 
+\index{Cylinder@{Cylinder}!Update@{Update}}
+\index{Update@{Update}!Cylinder@{Cylinder}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Cylinder\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_shape_base_a7aaa0f4de4e208f168f78e3445313929}{Collision\+Shape\+Base}}を実装しています。
+
+
+
+ Cylinder.\+cpp の 92 行目に定義があります。
 
 
 
@@ -286,5 +375,5 @@ float \mbox{\hyperlink{class_cylinder_abba752e07b11b7bfd8fcce64a6d9b678}{radius\
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+Cylinder/\mbox{\hyperlink{_cylinder_8h}{Cylinder.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+Cylinder/\mbox{\hyperlink{_cylinder_8cpp}{Cylinder.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\mbox{\hyperlink{_cylinder_8h}{Cylinder.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\+Source/\mbox{\hyperlink{_cylinder_8cpp}{Cylinder.\+cpp}}\end{DoxyCompactItemize}

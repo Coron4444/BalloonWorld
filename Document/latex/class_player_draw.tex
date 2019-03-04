@@ -2,7 +2,7 @@
 \label{class_player_draw}\index{Player\+Draw@{Player\+Draw}}
 
 
-プレイヤー描画クラス  
+プレイヤー描画\+Class  
 
 
 
@@ -11,39 +11,51 @@
 
 
 
-Player\+Draw の継承関係図\nopagebreak
+Player\+Draw 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=169pt]{class_player_draw__inherit__graph}
+\includegraphics[width=350pt]{class_player_draw__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
+unsigned \mbox{\hyperlink{class_player_draw_ac618153d70492f73299c58a50d565431}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_player_draw_a716aeac1dca9a44c97bc2ea42e55d6f6}{get\+Bone\+Num}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ボーン数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_player_draw_a334e94f368f6bd571da866d69333f313}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ワールド行列取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_player_draw_a94e34d6503076f1686302fa376da1c09}{getp\+Bone\+Matrix}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index, unsigned bone\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ボーン行列取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_player_draw_acb94ea7611a99698507321e44b7e9acb}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアル取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_player_draw_a3abcf6fb159e94ca4e5785b572e0af11}{getp\+Diffuse\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ディヒューズテクスチャ取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_player_draw_a231aa618a0bf71311b61897ccf7191b8}{getp\+Normal\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 法線テクスチャ取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_player_draw_ad79a0fbeb618e0913822b573e5d0be68}{Init}} () override
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_player_draw_a917b2947914287f23d87ca75cd68f553}{Uninit}} () override
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_draw_aa16d0fb9345c08df3b3a626128707cf7}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_player_draw_a8b9e8caa6bea7295f58a0aaddeb9458b}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
-unsigned \mbox{\hyperlink{class_player_draw_ac618153d70492f73299c58a50d565431}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_player_draw_a334e94f368f6bd571da866d69333f313}{getp\+Matrix}} (unsigned object\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em 行列ポインタ取得関数 \end{DoxyCompactList}\item 
-D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_player_draw_acb94ea7611a99698507321e44b7e9acb}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em マテリアルポインタ取得関数 \end{DoxyCompactList}\item 
-L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_player_draw_ae69b46285241f390fbf62f6af2b5340d}{getp\+Decale\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em デカールテクスチャポインタ取得関数 \end{DoxyCompactList}\item 
-L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_player_draw_a231aa618a0bf71311b61897ccf7191b8}{getp\+Normal\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em 法線テクスチャポインタ取得関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ \mbox{\hyperlink{class_player_draw_a01943b6dec9856ef843f7afc0f8b4c02}{player\+\_\+model\+\_\+}}
+\mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}} $\ast$ \mbox{\hyperlink{class_player_draw_a01943b6dec9856ef843f7afc0f8b4c02}{player\+\_\+model\+\_\+}} = nullptr
 \begin{DoxyCompactList}\small\item\em モデルオブジェクト \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_player_draw_ac106fde46e38f5ac7f33de5cc5f6fd76}{normal\+\_\+texture\+\_\+}} \mbox{[}2\mbox{]}
-\begin{DoxyCompactList}\small\item\em テクスチャオブジェクト \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em テクスチャオブジェクト \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_object}{Md\+Bin\+Object}} $\ast$ \mbox{\hyperlink{class_player_draw_a0f426ae7d3d5b8699acafe4a332f4d58}{test\+\_\+object\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em テスト用オブジェクト \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_draw_ae564ede28dfea0197d94f7f7dc61b5d1}{pattern\+\_\+num\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{class_player}{Player}} $\ast$ \mbox{\hyperlink{class_player_draw_a40bb1d6e9b121df5178d3efc8d9cf03c}{player\+\_\+}} = nullptr
+\end{DoxyCompactItemize}
 \subsection*{静的非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
@@ -58,11 +70,11 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 \subsection{詳解}
-プレイヤー描画クラス 
+プレイヤー描画\+Class 
 
-プレイヤーの描画クラス 
+プレイヤーの描画\+Class 
 
- Player\+Draw.\+h の 31 行目に定義があります。
+ Player\+Draw.\+h の 33 行目に定義があります。
 
 
 
@@ -79,16 +91,53 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 \begin{DoxyParams}{引数}
-{\em object\+\_\+index} & \+: オブジェクトインデックス mesh\+\_\+index \+: メッシュインデックス \\
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
 \mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
 
 
 
- Player\+Draw.\+cpp の 69 行目に定義があります。
+ Player\+Draw.\+cpp の 156 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_a716aeac1dca9a44c97bc2ea42e55d6f6}\label{class_player_draw_a716aeac1dca9a44c97bc2ea42e55d6f6}} 
+\index{Player\+Draw@{Player\+Draw}!get\+Bone\+Num@{get\+Bone\+Num}}
+\index{get\+Bone\+Num@{get\+Bone\+Num}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{get\+Bone\+Num()}{getBoneNum()}}
+{\footnotesize\ttfamily unsigned Player\+Draw\+::get\+Bone\+Num (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+ボーン数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & ボーン数 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a74aee63e6146b7256b80610abfb3eabb}{Draw\+Null}}を再実装しています。
+
+
+
+ Player\+Draw.\+cpp の 43 行目に定義があります。
 
 \mbox{\Hypertarget{class_player_draw_ac618153d70492f73299c58a50d565431}\label{class_player_draw_ac618153d70492f73299c58a50d565431}} 
 \index{Player\+Draw@{Player\+Draw}!get\+Mesh\+Num@{get\+Mesh\+Num}}
@@ -101,8 +150,8 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 メッシュ数取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
@@ -116,37 +165,69 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 
- Player\+Draw.\+cpp の 82 行目に定義があります。
+ Player\+Draw.\+cpp の 33 行目に定義があります。
 
-\mbox{\Hypertarget{class_player_draw_ae69b46285241f390fbf62f6af2b5340d}\label{class_player_draw_ae69b46285241f390fbf62f6af2b5340d}} 
-\index{Player\+Draw@{Player\+Draw}!getp\+Decale\+Texture@{getp\+Decale\+Texture}}
-\index{getp\+Decale\+Texture@{getp\+Decale\+Texture}!Player\+Draw@{Player\+Draw}}
-\subsubsection{\texorpdfstring{getp\+Decale\+Texture()}{getpDecaleTexture()}}
-{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Player\+Draw\+::getp\+Decale\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-デカールテクスチャポインタ取得関数 
+\mbox{\Hypertarget{class_player_draw_a94e34d6503076f1686302fa376da1c09}\label{class_player_draw_a94e34d6503076f1686302fa376da1c09}} 
+\index{Player\+Draw@{Player\+Draw}!getp\+Bone\+Matrix@{getp\+Bone\+Matrix}}
+\index{getp\+Bone\+Matrix@{getp\+Bone\+Matrix}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Bone\+Matrix()}{getpBoneMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Player\+Draw\+::getp\+Bone\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index,  }\item[{unsigned}]{bone\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+
+ボーン行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+{\em bone\+\_\+index} & ボーンインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & デカールテクスチャポインタ \\
+{\em M\+A\+T\+R\+I\+X$\ast$} & ボーン行列 \\
 \hline
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_draw_null_a87d21f70b6fed637a6e23029f29818c1}{Draw\+Null}}を再実装しています。
+\mbox{\hyperlink{class_draw_null_a9843abd940623bf84bbb0931f7e21af6}{Draw\+Null}}を再実装しています。
 
 
 
- Player\+Draw.\+cpp の 118 行目に定義があります。
+ Player\+Draw.\+cpp の 60 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_a3abcf6fb159e94ca4e5785b572e0af11}\label{class_player_draw_a3abcf6fb159e94ca4e5785b572e0af11}} 
+\index{Player\+Draw@{Player\+Draw}!getp\+Diffuse\+Texture@{getp\+Diffuse\+Texture}}
+\index{getp\+Diffuse\+Texture@{getp\+Diffuse\+Texture}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Diffuse\+Texture()}{getpDiffuseTexture()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Player\+Draw\+::getp\+Diffuse\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+ディヒューズテクスチャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & ディヒューズテクスチャ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a98cc7cd43b19d9d70cc621d23d89286f}{Draw\+Null}}を再実装しています。
+
+
+
+ Player\+Draw.\+cpp の 81 行目に定義があります。
 
 \mbox{\Hypertarget{class_player_draw_acb94ea7611a99698507321e44b7e9acb}\label{class_player_draw_acb94ea7611a99698507321e44b7e9acb}} 
 \index{Player\+Draw@{Player\+Draw}!getp\+Material@{getp\+Material}}
@@ -156,18 +237,18 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 
-マテリアルポインタ取得関数 
+マテリアル取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアルポインタ \\
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
 \hline
 \end{DoxyRetVals}
 
@@ -176,26 +257,26 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 
- Player\+Draw.\+cpp の 106 行目に定義があります。
+ Player\+Draw.\+cpp の 71 行目に定義があります。
 
 \mbox{\Hypertarget{class_player_draw_a334e94f368f6bd571da866d69333f313}\label{class_player_draw_a334e94f368f6bd571da866d69333f313}} 
 \index{Player\+Draw@{Player\+Draw}!getp\+Matrix@{getp\+Matrix}}
 \index{getp\+Matrix@{getp\+Matrix}!Player\+Draw@{Player\+Draw}}
 \subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Player\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Player\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-行列ポインタ取得関数 
+ワールド行列取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em M\+A\+T\+R\+I\+X$\ast$} & 行列ポインタ \\
+{\em M\+A\+T\+R\+I\+X$\ast$} & ワールド行列 \\
 \hline
 \end{DoxyRetVals}
 
@@ -204,7 +285,7 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 
- Player\+Draw.\+cpp の 94 行目に定義があります。
+ Player\+Draw.\+cpp の 51 行目に定義があります。
 
 \mbox{\Hypertarget{class_player_draw_a231aa618a0bf71311b61897ccf7191b8}\label{class_player_draw_a231aa618a0bf71311b61897ccf7191b8}} 
 \index{Player\+Draw@{Player\+Draw}!getp\+Normal\+Texture@{getp\+Normal\+Texture}}
@@ -214,18 +295,18 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 
-法線テクスチャポインタ取得関数 
+法線テクスチャ取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Renderer\+Interface$\ast$} & 法線テクスチャポインタ \\
+{\em Renderer\+Interface$\ast$} & 法線テクスチャ \\
 \hline
 \end{DoxyRetVals}
 
@@ -234,7 +315,7 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 
- Player\+Draw.\+cpp の 130 行目に定義があります。
+ Player\+Draw.\+cpp の 91 行目に定義があります。
 
 \mbox{\Hypertarget{class_player_draw_ad79a0fbeb618e0913822b573e5d0be68}\label{class_player_draw_ad79a0fbeb618e0913822b573e5d0be68}} 
 \index{Player\+Draw@{Player\+Draw}!Init@{Init}}
@@ -247,12 +328,22 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
 
 \mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
 
 
 
- Player\+Draw.\+cpp の 35 行目に定義があります。
+ Player\+Draw.\+cpp の 103 行目に定義があります。
 
 \mbox{\Hypertarget{class_player_draw_a917b2947914287f23d87ca75cd68f553}\label{class_player_draw_a917b2947914287f23d87ca75cd68f553}} 
 \index{Player\+Draw@{Player\+Draw}!Uninit@{Uninit}}
@@ -265,12 +356,50 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
 
 \mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
 
 
 
- Player\+Draw.\+cpp の 59 行目に定義があります。
+ Player\+Draw.\+cpp の 132 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_aa16d0fb9345c08df3b3a626128707cf7}\label{class_player_draw_aa16d0fb9345c08df3b3a626128707cf7}} 
+\index{Player\+Draw@{Player\+Draw}!Update@{Update}}
+\index{Update@{Update}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+Draw\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_ad32a508d269de7eda8ad24ea72230464}{Draw\+Null}}を再実装しています。
+
+
+
+ Player\+Draw.\+cpp の 148 行目に定義があります。
 
 
 
@@ -287,7 +416,7 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 
- Player\+Draw.\+h の 38 行目に定義があります。
+ Player\+Draw.\+h の 39 行目に定義があります。
 
 \mbox{\Hypertarget{class_player_draw_ac106fde46e38f5ac7f33de5cc5f6fd76}\label{class_player_draw_ac106fde46e38f5ac7f33de5cc5f6fd76}} 
 \index{Player\+Draw@{Player\+Draw}!normal\+\_\+texture\+\_\+@{normal\+\_\+texture\+\_\+}}
@@ -301,7 +430,7 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 
- Player\+Draw.\+h の 49 行目に定義があります。
+ Player\+Draw.\+h の 50 行目に定義があります。
 
 \mbox{\Hypertarget{class_player_draw_a509edc24db83efdfeda88f12d1d6cc8c}\label{class_player_draw_a509edc24db83efdfeda88f12d1d6cc8c}} 
 \index{Player\+Draw@{Player\+Draw}!N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+M\+O\+D\+EL@{N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+M\+O\+D\+EL}}
@@ -315,7 +444,7 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 
- Player\+Draw.\+h の 40 行目に定義があります。
+ Player\+Draw.\+h の 41 行目に定義があります。
 
 \mbox{\Hypertarget{class_player_draw_aa64bacc93024e21558e2dd9227937bdb}\label{class_player_draw_aa64bacc93024e21558e2dd9227937bdb}} 
 \index{Player\+Draw@{Player\+Draw}!N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+W\+O\+RD@{N\+O\+R\+M\+A\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+W\+O\+RD}}
@@ -329,13 +458,33 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 
- Player\+Draw.\+h の 41 行目に定義があります。
+ Player\+Draw.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_ae564ede28dfea0197d94f7f7dc61b5d1}\label{class_player_draw_ae564ede28dfea0197d94f7f7dc61b5d1}} 
+\index{Player\+Draw@{Player\+Draw}!pattern\+\_\+num\+\_\+@{pattern\+\_\+num\+\_\+}}
+\index{pattern\+\_\+num\+\_\+@{pattern\+\_\+num\+\_\+}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{pattern\+\_\+num\+\_\+}{pattern\_num\_}}
+{\footnotesize\ttfamily int Player\+Draw\+::pattern\+\_\+num\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ Player\+Draw.\+h の 52 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_a40bb1d6e9b121df5178d3efc8d9cf03c}\label{class_player_draw_a40bb1d6e9b121df5178d3efc8d9cf03c}} 
+\index{Player\+Draw@{Player\+Draw}!player\+\_\+@{player\+\_\+}}
+\index{player\+\_\+@{player\+\_\+}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{player\+\_\+}{player\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}}$\ast$ Player\+Draw\+::player\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ Player\+Draw.\+h の 53 行目に定義があります。
 
 \mbox{\Hypertarget{class_player_draw_a01943b6dec9856ef843f7afc0f8b4c02}\label{class_player_draw_a01943b6dec9856ef843f7afc0f8b4c02}} 
 \index{Player\+Draw@{Player\+Draw}!player\+\_\+model\+\_\+@{player\+\_\+model\+\_\+}}
 \index{player\+\_\+model\+\_\+@{player\+\_\+model\+\_\+}!Player\+Draw@{Player\+Draw}}
 \subsubsection{\texorpdfstring{player\+\_\+model\+\_\+}{player\_model\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}}$\ast$ Player\+Draw\+::player\+\_\+model\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_x_object}{Model\+X\+Object}}$\ast$ Player\+Draw\+::player\+\_\+model\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -343,7 +492,21 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 
- Player\+Draw.\+h の 48 行目に定義があります。
+ Player\+Draw.\+h の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_draw_a0f426ae7d3d5b8699acafe4a332f4d58}\label{class_player_draw_a0f426ae7d3d5b8699acafe4a332f4d58}} 
+\index{Player\+Draw@{Player\+Draw}!test\+\_\+object\+\_\+@{test\+\_\+object\+\_\+}}
+\index{test\+\_\+object\+\_\+@{test\+\_\+object\+\_\+}!Player\+Draw@{Player\+Draw}}
+\subsubsection{\texorpdfstring{test\+\_\+object\+\_\+}{test\_object\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_object}{Md\+Bin\+Object}}$\ast$ Player\+Draw\+::test\+\_\+object\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+テスト用オブジェクト 
+
+
+
+ Player\+Draw.\+h の 51 行目に定義があります。
 
 \mbox{\Hypertarget{class_player_draw_a808cb174528d55fb35a35b161e262e16}\label{class_player_draw_a808cb174528d55fb35a35b161e262e16}} 
 \index{Player\+Draw@{Player\+Draw}!T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH@{T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+TH}}
@@ -357,11 +520,11 @@ static const std\+::string \mbox{\hyperlink{class_player_draw_aa64bacc93024e2155
 
 
 
- Player\+Draw.\+h の 39 行目に定義があります。
+ Player\+Draw.\+h の 40 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Player/\+Player\+Draw/\mbox{\hyperlink{_player_draw_8h}{Player\+Draw.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Player/\+Player\+Draw/\mbox{\hyperlink{_player_draw_8cpp}{Player\+Draw.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Player/\mbox{\hyperlink{_player_draw_8h}{Player\+Draw.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Player/\+Source/\mbox{\hyperlink{_player_draw_8cpp}{Player\+Draw.\+cpp}}\end{DoxyCompactItemize}

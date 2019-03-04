@@ -9,6 +9,15 @@
 
 {\ttfamily \#include $<$Renderer.\+h$>$}
 
+
+
+Renderer 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_renderer__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{公開型}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,7 +34,7 @@ enum \mbox{\hyperlink{class_renderer_ab5a9379ccadcf2b3394c61cf8c835fec}{M\+O\+DE
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_renderer_interface}{Renderer\+Interface}} $\ast$ \mbox{\hyperlink{class_renderer_a1c49b796eff197f77ef3f75757f7d468}{getp\+Renderer}} ()
-\begin{DoxyCompactList}\small\item\em レンダラーポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em レンダラー取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_renderer_a02e3c483b2c9d8024e51639a06159066}{set\+Renderer}} (\mbox{\hyperlink{class_renderer_factory_interface}{Renderer\+Factory\+Interface}} $\ast$factory, \mbox{\hyperlink{class_renderer_ab5a9379ccadcf2b3394c61cf8c835fec}{M\+O\+DE}} mode)
 \begin{DoxyCompactList}\small\item\em レンダラー設定関数 \end{DoxyCompactList}\item 
 {\footnotesize template$<$class Type $>$ }\\void \mbox{\hyperlink{class_renderer_ae7155d5c9df23afd21082c08931a2e72}{get\+Interface}} (Type $\ast$$\ast$out\+\_\+pointer)
@@ -36,8 +45,10 @@ bool \mbox{\hyperlink{class_renderer_a8d576add80187f5be3f24ec6a8108100}{Init}} (
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_renderer_ae865246d6a04d467ac22458f6f5f69d4}{Uninit}} ()
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_renderer_af420951c9c163f1151bd6600df204cee}{Draw\+Begin}} ()
+bool \mbox{\hyperlink{class_renderer_a15d1b99317779905ba4b529d871a1845}{Draw\+Begin}} (\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} clear\+\_\+color=\{0.\+123f, 0.\+25f, 0.\+75f, 1.\+0f\})
 \begin{DoxyCompactList}\small\item\em 描画開始関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_renderer_abd9c45a64a141b0b7bbba2dde96e6180}{No\+Clear\+Draw\+Begin}} ()
+\begin{DoxyCompactList}\small\item\em クリア無描画開始関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_renderer_a0393849bd4178a33861780bf07b0deee}{Draw\+End}} (bool is\+\_\+begin\+\_\+scene)
 \begin{DoxyCompactList}\small\item\em 描画終了関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_renderer_a1dac4baae1fa79166442b0778a9c8728}{Present}} ()
@@ -46,7 +57,7 @@ void \mbox{\hyperlink{class_renderer_a1dac4baae1fa79166442b0778a9c8728}{Present}
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{class_renderer}{Renderer}} $\ast$ \mbox{\hyperlink{class_renderer_a995648604452c47b494de005b30de863}{getp\+Instance}} ()
-\begin{DoxyCompactList}\small\item\em インスタンスポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em インスタンス取得関数 \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_renderer_aa7ac523172faaf376ecddaed4bdc0781}{Release\+Instance}} ()
 \begin{DoxyCompactList}\small\item\em インスタンス解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開メンバ関数}
@@ -121,7 +132,7 @@ M\+AX&\\
 \index{Renderer@{Renderer}!Renderer@{Renderer}}
 \index{Renderer@{Renderer}!Renderer@{Renderer}}
 \subsubsection{\texorpdfstring{Renderer()}{Renderer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Renderer\+::\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily Renderer\+::\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -134,7 +145,7 @@ M\+AX&\\
 \end{DoxyParams}
 
 
- Renderer.\+h の 229 行目に定義があります。
+ Renderer.\+cpp の 74 行目に定義があります。
 
 \mbox{\Hypertarget{class_renderer_a1e7732f4c952f3c13d9bb03a7510b7aa}\label{class_renderer_a1e7732f4c952f3c13d9bb03a7510b7aa}} 
 \index{Renderer@{Renderer}!Renderer@{Renderer}}
@@ -145,11 +156,11 @@ M\+AX&\\
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_renderer_af420951c9c163f1151bd6600df204cee}\label{class_renderer_af420951c9c163f1151bd6600df204cee}} 
+\mbox{\Hypertarget{class_renderer_a15d1b99317779905ba4b529d871a1845}\label{class_renderer_a15d1b99317779905ba4b529d871a1845}} 
 \index{Renderer@{Renderer}!Draw\+Begin@{Draw\+Begin}}
 \index{Draw\+Begin@{Draw\+Begin}!Renderer@{Renderer}}
 \subsubsection{\texorpdfstring{Draw\+Begin()}{DrawBegin()}}
-{\footnotesize\ttfamily bool Renderer\+::\+Draw\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Renderer\+::\+Draw\+Begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}}]{clear\+\_\+color = {\ttfamily \{0.123f,~0.25f,~0.75f,~1.0f\}} }\end{DoxyParamCaption})}
 
 
 
@@ -157,7 +168,7 @@ M\+AX&\\
 
 
 \begin{DoxyParams}{引数}
-{\em void} & なし \\
+{\em clear\+\_\+color} & クリア色 \\
 \hline
 \end{DoxyParams}
 
@@ -167,7 +178,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Renderer.\+cpp の 96 行目に定義があります。
+ Renderer.\+cpp の 100 行目に定義があります。
 
 \mbox{\Hypertarget{class_renderer_a0393849bd4178a33861780bf07b0deee}\label{class_renderer_a0393849bd4178a33861780bf07b0deee}} 
 \index{Renderer@{Renderer}!Draw\+End@{Draw\+End}}
@@ -180,8 +191,8 @@ M\+AX&\\
 描画終了関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em is\+\_\+begin\+\_\+scene} & 描画開始成功フラグ \\
+\begin{DoxyParams}{引数}
+{\em is\+\_\+begin\+\_\+scene} & 描画開始成功フラグ \\
 \hline
 \end{DoxyParams}
 
@@ -191,7 +202,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Renderer.\+cpp の 104 行目に定義があります。
+ Renderer.\+cpp の 116 行目に定義があります。
 
 \mbox{\Hypertarget{class_renderer_a0f82c27d785abaee2d8014ad56eddeba}\label{class_renderer_a0f82c27d785abaee2d8014ad56eddeba}} 
 \index{Renderer@{Renderer}!get\+Device@{get\+Device}}
@@ -205,8 +216,8 @@ void Renderer\+::get\+Device (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast$}]
 デバイス取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt out}  & {\em out\+\_\+pointer} & 取得用ポインタ \\
+\begin{DoxyParams}{引数}
+{\em $\ast$$\ast$out\+\_\+pointer} & 取得用 \\
 \hline
 \end{DoxyParams}
 
@@ -230,8 +241,8 @@ void Renderer\+::get\+Interface (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast
 インターフェース取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt out}  & {\em out\+\_\+pointer} & 取得用ポインタ \\
+\begin{DoxyParams}{引数}
+{\em $\ast$$\ast$out\+\_\+pointer} & 取得用 \\
 \hline
 \end{DoxyParams}
 
@@ -251,7 +262,7 @@ void Renderer\+::get\+Interface (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast
 
 
 
-インスタンスポインタ取得関数 
+インスタンス取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -260,12 +271,12 @@ void Renderer\+::get\+Interface (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Renderer$\ast$} & レンダラーインスタンスポインタ \\
+{\em Renderer$\ast$} & レンダラーインスタンス \\
 \hline
 \end{DoxyRetVals}
 
 
- Renderer.\+cpp の 31 行目に定義があります。
+ Renderer.\+cpp の 29 行目に定義があります。
 
 \mbox{\Hypertarget{class_renderer_a1c49b796eff197f77ef3f75757f7d468}\label{class_renderer_a1c49b796eff197f77ef3f75757f7d468}} 
 \index{Renderer@{Renderer}!getp\+Renderer@{getp\+Renderer}}
@@ -275,7 +286,7 @@ void Renderer\+::get\+Interface (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast
 
 
 
-レンダラーポインタ取得関数 
+レンダラー取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -284,12 +295,12 @@ void Renderer\+::get\+Interface (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Renderer\+Interface$\ast$} & レンダラーポインタ \\
+{\em Renderer\+Interface$\ast$} & レンダラー \\
 \hline
 \end{DoxyRetVals}
 
 
- Renderer.\+cpp の 55 行目に定義があります。
+ Renderer.\+cpp の 53 行目に定義があります。
 
 \mbox{\Hypertarget{class_renderer_a8d576add80187f5be3f24ec6a8108100}\label{class_renderer_a8d576add80187f5be3f24ec6a8108100}} 
 \index{Renderer@{Renderer}!Init@{Init}}
@@ -302,16 +313,16 @@ void Renderer\+::get\+Interface (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast
 初期化関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em h\+Instance} & インスタンスハンドル \\
+\begin{DoxyParams}{引数}
+{\em h\+Instance} & インスタンスハンドル \\
 \hline
-\mbox{\tt in}  & {\em h\+Wnd} & Windowsハンドル \\
+{\em h\+Wnd} & Windowsハンドル \\
 \hline
-\mbox{\tt in}  & {\em is\+\_\+full\+\_\+screen} & フルスクリーンフラグ \\
+{\em is\+\_\+full\+\_\+screen} & フルスクリーンフラグ \\
 \hline
-\mbox{\tt in}  & {\em window\+\_\+width} & ウィンドウ幅 \\
+{\em window\+\_\+width} & ウィンドウ幅 \\
 \hline
-\mbox{\tt in}  & {\em window\+\_\+height} & ウィンドウ高さ \\
+{\em window\+\_\+height} & ウィンドウ高さ \\
 \hline
 \end{DoxyParams}
 
@@ -321,7 +332,31 @@ void Renderer\+::get\+Interface (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast
 \end{DoxyRetVals}
 
 
- Renderer.\+cpp の 76 行目に定義があります。
+ Renderer.\+cpp の 80 行目に定義があります。
+
+\mbox{\Hypertarget{class_renderer_abd9c45a64a141b0b7bbba2dde96e6180}\label{class_renderer_abd9c45a64a141b0b7bbba2dde96e6180}} 
+\index{Renderer@{Renderer}!No\+Clear\+Draw\+Begin@{No\+Clear\+Draw\+Begin}}
+\index{No\+Clear\+Draw\+Begin@{No\+Clear\+Draw\+Begin}!Renderer@{Renderer}}
+\subsubsection{\texorpdfstring{No\+Clear\+Draw\+Begin()}{NoClearDrawBegin()}}
+{\footnotesize\ttfamily bool Renderer\+::\+No\+Clear\+Draw\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+クリア無描画開始関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 描画開始成功の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Renderer.\+cpp の 108 行目に定義があります。
 
 \mbox{\Hypertarget{class_renderer_ab80abe5f35a095f221f8c43916900d66}\label{class_renderer_ab80abe5f35a095f221f8c43916900d66}} 
 \index{Renderer@{Renderer}!operator=@{operator=}}
@@ -351,7 +386,7 @@ void Renderer\+::get\+Interface (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast
 \end{DoxyRetVals}
 
 
- Renderer.\+cpp の 112 行目に定義があります。
+ Renderer.\+cpp の 124 行目に定義があります。
 
 \mbox{\Hypertarget{class_renderer_aa7ac523172faaf376ecddaed4bdc0781}\label{class_renderer_aa7ac523172faaf376ecddaed4bdc0781}} 
 \index{Renderer@{Renderer}!Release\+Instance@{Release\+Instance}}
@@ -375,7 +410,7 @@ void Renderer\+::get\+Interface (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast
 \end{DoxyRetVals}
 
 
- Renderer.\+cpp の 45 行目に定義があります。
+ Renderer.\+cpp の 43 行目に定義があります。
 
 \mbox{\Hypertarget{class_renderer_a02e3c483b2c9d8024e51639a06159066}\label{class_renderer_a02e3c483b2c9d8024e51639a06159066}} 
 \index{Renderer@{Renderer}!set\+Renderer@{set\+Renderer}}
@@ -388,10 +423,10 @@ void Renderer\+::get\+Interface (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast
 レンダラー設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em factory} & レンダラーファクトリー \\
+\begin{DoxyParams}{引数}
+{\em $\ast$factory} & レンダラーファクトリー \\
 \hline
-\mbox{\tt in}  & {\em mode} & レンダラーモード \\
+{\em $\ast$mode} & レンダラーモード \\
 \hline
 \end{DoxyParams}
 
@@ -401,7 +436,7 @@ void Renderer\+::get\+Interface (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast
 \end{DoxyRetVals}
 
 
- Renderer.\+cpp の 60 行目に定義があります。
+ Renderer.\+cpp の 58 行目に定義があります。
 
 \mbox{\Hypertarget{class_renderer_ae865246d6a04d467ac22458f6f5f69d4}\label{class_renderer_ae865246d6a04d467ac22458f6f5f69d4}} 
 \index{Renderer@{Renderer}!Uninit@{Uninit}}
@@ -425,7 +460,7 @@ void Renderer\+::get\+Interface (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast
 \end{DoxyRetVals}
 
 
- Renderer.\+cpp の 85 行目に定義があります。
+ Renderer.\+cpp の 89 行目に定義があります。
 
 
 
@@ -476,5 +511,5 @@ void Renderer\+::get\+Interface (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/01\+\_\+\+Main/\+Renderer/\mbox{\hyperlink{_renderer_8h}{Renderer.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/01\+\_\+\+Main/\+Renderer/\mbox{\hyperlink{_renderer_8cpp}{Renderer.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Renderer/\mbox{\hyperlink{_renderer_8h}{Renderer.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Renderer/\+Source/\mbox{\hyperlink{_renderer_8cpp}{Renderer.\+cpp}}\end{DoxyCompactItemize}

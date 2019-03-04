@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: Physics クラス</title>
+<title>BalloonWorld: Physics クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -98,110 +98,203 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>物理Class  
+ <a href="class_physics.html#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_physics_8h_source.html">Physics.h</a>&gt;</code></p>
+<div class="dynheader">
+Physics 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_physics__coll__graph.png" border="0" usemap="#_physics_coll__map" alt="Collaboration graph"/></div>
+<map name="_physics_coll__map" id="_physics_coll__map">
+<area shape="rect" id="node2" href="class_game_object_base.html" title="ゲームオブジェクトBaseClass " alt="" coords="1036,552,1161,579"/>
+<area shape="rect" id="node4" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="1379,535,1497,561"/>
+<area shape="rect" id="node3" href="class_collision_base.html" title="衝突BaseClass " alt="" coords="1612,524,1713,551"/>
+<area shape="rect" id="node6" href="class_collision_object.html" title="衝突オブジェクトClass " alt="" coords="1855,685,1964,712"/>
+<area shape="rect" id="node15" href="class_draw_base.html" title="描画BaseClass " alt="" coords="1622,583,1703,609"/>
+<area shape="rect" id="node5" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject *,\l ARRAY_NUM \&gt;" alt="" coords="2145,539,2281,595"/>
+<area shape="rect" id="node11" href="class_object_of_tree.html" title="ObjectOfTree\&lt; CollisionObject *\&gt;" alt="" coords="2105,685,2320,712"/>
+<area shape="rect" id="node7" href="class_a_a_b_b.html" title="AABBClass " alt="" coords="741,700,800,727"/>
+<area shape="rect" id="node8" href="class_collision_shape_base.html" title="衝突形状BaseClass " alt="" coords="364,755,503,781"/>
+<area shape="rect" id="node14" href="class_collision_object_1_1_shape.html" title="衝突形状Class " alt="" coords="693,761,848,788"/>
+<area shape="rect" id="node9" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="107,536,183,563"/>
+<area shape="rect" id="node18" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="1033,269,1164,296"/>
+<area shape="rect" id="node19" href="class_camera.html" title="カメラClass " alt="" coords="737,327,804,353"/>
+<area shape="rect" id="node21" href="class_matrix.html" title="行列Class " alt="" coords="404,205,463,232"/>
+<area shape="rect" id="node24" href="class_transform.html" title="変形Class " alt="" coords="731,517,810,544"/>
+<area shape="rect" id="node12" href="class_space_of_tree.html" title="SpaceOfTree\&lt; CollisionObject *\&gt;" alt="" coords="2477,685,2691,712"/>
+<area shape="rect" id="node13" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject::Shape\l *, ARRAY_NUM \&gt;" alt="" coords="1188,747,1355,803"/>
+<area shape="rect" id="node16" href="class_draw_order_list.html" title="描画注文リストClass " alt="" coords="1386,648,1490,675"/>
+<area shape="rect" id="node17" href="class_bit_flag.html" title="ビットフラグClass " alt="" coords="1067,648,1130,675"/>
+<area shape="rect" id="node20" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="1045,340,1152,367"/>
+<area shape="rect" id="node23" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="717,236,824,263"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a2e4cab77c53c0acf5273bd4986f8423d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a2e4cab77c53c0acf5273bd4986f8423d">Physics</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *game_object)</td></tr>
-<tr class="separator:a2e4cab77c53c0acf5273bd4986f8423d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a045c3788e28059d3920136499942490f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a045c3788e28059d3920136499942490f">~Physics</a> ()</td></tr>
-<tr class="separator:a045c3788e28059d3920136499942490f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7d1579ed7e0f97726ca7117f479c45"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a9f7d1579ed7e0f97726ca7117f479c45">getIsEnable</a> ()</td></tr>
+<tr class="memdesc:a9f7d1579ed7e0f97726ca7117f479c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効フラグ取得関数  <a href="#a9f7d1579ed7e0f97726ca7117f479c45">[詳解]</a><br /></td></tr>
+<tr class="separator:a9f7d1579ed7e0f97726ca7117f479c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ae1ceeab958b0a86cb7e570e5e405b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a7ae1ceeab958b0a86cb7e570e5e405b5">setIsEnable</a> (bool value)</td></tr>
+<tr class="memdesc:a7ae1ceeab958b0a86cb7e570e5e405b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効フラグ設定関数  <a href="#a7ae1ceeab958b0a86cb7e570e5e405b5">[詳解]</a><br /></td></tr>
+<tr class="separator:a7ae1ceeab958b0a86cb7e570e5e405b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8362e2d029415bc93b25b0891cc8a3d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a8362e2d029415bc93b25b0891cc8a3d8">setGameObject</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *value)</td></tr>
+<tr class="memdesc:a8362e2d029415bc93b25b0891cc8a3d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクト設定関数  <a href="#a8362e2d029415bc93b25b0891cc8a3d8">[詳解]</a><br /></td></tr>
+<tr class="separator:a8362e2d029415bc93b25b0891cc8a3d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41b427ec429632a13db548bb5cc6642e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a41b427ec429632a13db548bb5cc6642e">getpAcceleration</a> ()</td></tr>
+<tr class="memdesc:a41b427ec429632a13db548bb5cc6642e"><td class="mdescLeft">&#160;</td><td class="mdescRight">加速度取得関数  <a href="#a41b427ec429632a13db548bb5cc6642e">[詳解]</a><br /></td></tr>
+<tr class="separator:a41b427ec429632a13db548bb5cc6642e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6025f297e751c71a3c54260007c175ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a6025f297e751c71a3c54260007c175ee">getpVelocity</a> ()</td></tr>
+<tr class="memdesc:a6025f297e751c71a3c54260007c175ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度取得関数  <a href="#a6025f297e751c71a3c54260007c175ee">[詳解]</a><br /></td></tr>
+<tr class="separator:a6025f297e751c71a3c54260007c175ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47edf04cb497a621940b3dfc5e9e6993"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a47edf04cb497a621940b3dfc5e9e6993">getMaxHorizontalVelocity</a> ()</td></tr>
+<tr class="memdesc:a47edf04cb497a621940b3dfc5e9e6993"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大水平速度取得関数  <a href="#a47edf04cb497a621940b3dfc5e9e6993">[詳解]</a><br /></td></tr>
+<tr class="separator:a47edf04cb497a621940b3dfc5e9e6993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8108eeaa958c99543fe2ec3e21b240"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a4e8108eeaa958c99543fe2ec3e21b240">setMaxHorizontalVelocity</a> (float value)</td></tr>
+<tr class="memdesc:a4e8108eeaa958c99543fe2ec3e21b240"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大水平速度設定関数  <a href="#a4e8108eeaa958c99543fe2ec3e21b240">[詳解]</a><br /></td></tr>
+<tr class="separator:a4e8108eeaa958c99543fe2ec3e21b240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d556fa40945e73ca6d4d6931b743ad"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a80d556fa40945e73ca6d4d6931b743ad">getMaxVerticalVelocity</a> ()</td></tr>
+<tr class="memdesc:a80d556fa40945e73ca6d4d6931b743ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大垂直速度取得関数  <a href="#a80d556fa40945e73ca6d4d6931b743ad">[詳解]</a><br /></td></tr>
+<tr class="separator:a80d556fa40945e73ca6d4d6931b743ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a96fd4d918235e89384320519eae0f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a6a96fd4d918235e89384320519eae0f5">setMaxVerticalVelocity</a> (float value)</td></tr>
+<tr class="memdesc:a6a96fd4d918235e89384320519eae0f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大垂直速度設定関数  <a href="#a6a96fd4d918235e89384320519eae0f5">[詳解]</a><br /></td></tr>
+<tr class="separator:a6a96fd4d918235e89384320519eae0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ce827465a471657b4f4e8973e9f2138"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a4ce827465a471657b4f4e8973e9f2138">getMass</a> ()</td></tr>
+<tr class="memdesc:a4ce827465a471657b4f4e8973e9f2138"><td class="mdescLeft">&#160;</td><td class="mdescRight">質量取得関数  <a href="#a4ce827465a471657b4f4e8973e9f2138">[詳解]</a><br /></td></tr>
+<tr class="separator:a4ce827465a471657b4f4e8973e9f2138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab852c1bb08fcd4f364c2650cadfe1eda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#ab852c1bb08fcd4f364c2650cadfe1eda">setMass</a> (float value)</td></tr>
+<tr class="memdesc:ab852c1bb08fcd4f364c2650cadfe1eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">質量設定関数  <a href="#ab852c1bb08fcd4f364c2650cadfe1eda">[詳解]</a><br /></td></tr>
+<tr class="separator:ab852c1bb08fcd4f364c2650cadfe1eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad85a3df693d588f8ff528566c5218533"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#ad85a3df693d588f8ff528566c5218533">getFriction</a> ()</td></tr>
+<tr class="memdesc:ad85a3df693d588f8ff528566c5218533"><td class="mdescLeft">&#160;</td><td class="mdescRight">摩擦力取得関数  <a href="#ad85a3df693d588f8ff528566c5218533">[詳解]</a><br /></td></tr>
+<tr class="separator:ad85a3df693d588f8ff528566c5218533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a293e9ef38e53b79692c4a9d4a60b13ed"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a293e9ef38e53b79692c4a9d4a60b13ed">getMyFriction</a> ()</td></tr>
+<tr class="memdesc:a293e9ef38e53b79692c4a9d4a60b13ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の摩擦力取得関数  <a href="#a293e9ef38e53b79692c4a9d4a60b13ed">[詳解]</a><br /></td></tr>
+<tr class="separator:a293e9ef38e53b79692c4a9d4a60b13ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a848d75133a2c2f46a73c8439f29297c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a848d75133a2c2f46a73c8439f29297c5">setMyFriction</a> (float value)</td></tr>
+<tr class="memdesc:a848d75133a2c2f46a73c8439f29297c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の摩擦力設定関数  <a href="#a848d75133a2c2f46a73c8439f29297c5">[詳解]</a><br /></td></tr>
+<tr class="separator:a848d75133a2c2f46a73c8439f29297c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa061352341f5c53745433672be775bb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#afa061352341f5c53745433672be775bb">getBounciness</a> ()</td></tr>
+<tr class="memdesc:afa061352341f5c53745433672be775bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">反発力取得関数  <a href="#afa061352341f5c53745433672be775bb">[詳解]</a><br /></td></tr>
+<tr class="separator:afa061352341f5c53745433672be775bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25433df081fc471e1e5d475f718f116b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a25433df081fc471e1e5d475f718f116b">getMyBounciness</a> ()</td></tr>
+<tr class="memdesc:a25433df081fc471e1e5d475f718f116b"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の反発力取得関数  <a href="#a25433df081fc471e1e5d475f718f116b">[詳解]</a><br /></td></tr>
+<tr class="separator:a25433df081fc471e1e5d475f718f116b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e23a9b6f9888b22d3043ea8463fbd37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a4e23a9b6f9888b22d3043ea8463fbd37">setMyBounciness</a> (float value)</td></tr>
+<tr class="memdesc:a4e23a9b6f9888b22d3043ea8463fbd37"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の反発力設定関数  <a href="#a4e23a9b6f9888b22d3043ea8463fbd37">[詳解]</a><br /></td></tr>
+<tr class="separator:a4e23a9b6f9888b22d3043ea8463fbd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a4f2372930e737b61a73b2a41067158"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a7a4f2372930e737b61a73b2a41067158">getIsGravity</a> ()</td></tr>
+<tr class="memdesc:a7a4f2372930e737b61a73b2a41067158"><td class="mdescLeft">&#160;</td><td class="mdescRight">重力フラグ取得関数  <a href="#a7a4f2372930e737b61a73b2a41067158">[詳解]</a><br /></td></tr>
+<tr class="separator:a7a4f2372930e737b61a73b2a41067158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f8eac3abc26f0255b5ec7dc67c11db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#af5f8eac3abc26f0255b5ec7dc67c11db">setIsGravity</a> (float value)</td></tr>
+<tr class="memdesc:af5f8eac3abc26f0255b5ec7dc67c11db"><td class="mdescLeft">&#160;</td><td class="mdescRight">重力フラグ設定関数  <a href="#af5f8eac3abc26f0255b5ec7dc67c11db">[詳解]</a><br /></td></tr>
+<tr class="separator:af5f8eac3abc26f0255b5ec7dc67c11db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad378ed29224e1bc00fd08ddc6122478"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#aad378ed29224e1bc00fd08ddc6122478">setOnTheGround</a> ()</td></tr>
+<tr class="memdesc:aad378ed29224e1bc00fd08ddc6122478"><td class="mdescLeft">&#160;</td><td class="mdescRight">地面に乗っているフラグ設定関数  <a href="#aad378ed29224e1bc00fd08ddc6122478">[詳解]</a><br /></td></tr>
+<tr class="separator:aad378ed29224e1bc00fd08ddc6122478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b2ebc0a344f04f48d227c72f0d0fbda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a4b2ebc0a344f04f48d227c72f0d0fbda">Physics</a> ()</td></tr>
+<tr class="memdesc:a4b2ebc0a344f04f48d227c72f0d0fbda"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#a4b2ebc0a344f04f48d227c72f0d0fbda">[詳解]</a><br /></td></tr>
+<tr class="separator:a4b2ebc0a344f04f48d227c72f0d0fbda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13bf3e9de07a12afc3c0a4012e00d0a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a13bf3e9de07a12afc3c0a4012e00d0a1">Update</a> ()</td></tr>
+<tr class="memdesc:a13bf3e9de07a12afc3c0a4012e00d0a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#a13bf3e9de07a12afc3c0a4012e00d0a1">[詳解]</a><br /></td></tr>
 <tr class="separator:a13bf3e9de07a12afc3c0a4012e00d0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee9ce4604f63dbdcab07ded4d0174989"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#aee9ce4604f63dbdcab07ded4d0174989">GetAcceleration</a> ()</td></tr>
-<tr class="separator:aee9ce4604f63dbdcab07ded4d0174989"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e33f600575e7ee5ad348d695a9eb45e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a8e33f600575e7ee5ad348d695a9eb45e">GetVelocity</a> ()</td></tr>
-<tr class="separator:a8e33f600575e7ee5ad348d695a9eb45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd9e36bb94e921a41818f261df4205d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#afd9e36bb94e921a41818f261df4205d0">SetMaxVelocity</a> (float max_velocity)</td></tr>
-<tr class="separator:afd9e36bb94e921a41818f261df4205d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ee3b82e3e1588fee1727e582c824467"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a0ee3b82e3e1588fee1727e582c824467">GetMaxVelocity</a> ()</td></tr>
-<tr class="separator:a0ee3b82e3e1588fee1727e582c824467"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a6eac8c5f6d7db0baef290710825085"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a7a6eac8c5f6d7db0baef290710825085">SetMass</a> (float mass)</td></tr>
-<tr class="separator:a7a6eac8c5f6d7db0baef290710825085"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80a377efcd573cff3484d91c9f5512e4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a80a377efcd573cff3484d91c9f5512e4">GetMass</a> ()</td></tr>
-<tr class="separator:a80a377efcd573cff3484d91c9f5512e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77e9a04f034ccad4fec996832fb7ce63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a77e9a04f034ccad4fec996832fb7ce63">AddFriction</a> (float friction)</td></tr>
+<tr class="memdesc:a77e9a04f034ccad4fec996832fb7ce63"><td class="mdescLeft">&#160;</td><td class="mdescRight">摩擦力追加関数  <a href="#a77e9a04f034ccad4fec996832fb7ce63">[詳解]</a><br /></td></tr>
 <tr class="separator:a77e9a04f034ccad4fec996832fb7ce63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee1fe26db953d0712b2a26ce9d1db0d9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#aee1fe26db953d0712b2a26ce9d1db0d9">GetFriction</a> ()</td></tr>
-<tr class="separator:aee1fe26db953d0712b2a26ce9d1db0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e3c9825aa4129a2212c1c61d0cd6ecb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a0e3c9825aa4129a2212c1c61d0cd6ecb">SetMyFriction</a> (float my_friction)</td></tr>
-<tr class="separator:a0e3c9825aa4129a2212c1c61d0cd6ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50ad9d79f3b42a209a05f57557f294f0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a50ad9d79f3b42a209a05f57557f294f0">GetMyFriction</a> ()</td></tr>
-<tr class="separator:a50ad9d79f3b42a209a05f57557f294f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af88191e5605a97952caefd19319b05f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#af88191e5605a97952caefd19319b05f9">AddBounciness</a> (float bounciness)</td></tr>
+<tr class="memdesc:af88191e5605a97952caefd19319b05f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">反発力追加関数  <a href="#af88191e5605a97952caefd19319b05f9">[詳解]</a><br /></td></tr>
 <tr class="separator:af88191e5605a97952caefd19319b05f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5126745b31c45267ae516cc09a82fb5d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a5126745b31c45267ae516cc09a82fb5d">GetBounciness</a> ()</td></tr>
-<tr class="separator:a5126745b31c45267ae516cc09a82fb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a662185709961c64615c51ac5f32ab2ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a662185709961c64615c51ac5f32ab2ff">SetMyBounciness</a> (float bounciness)</td></tr>
-<tr class="separator:a662185709961c64615c51ac5f32ab2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd6312afafb3faed57ba6450ed9ab9a6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#acd6312afafb3faed57ba6450ed9ab9a6">GetMyBounciness</a> ()</td></tr>
-<tr class="separator:acd6312afafb3faed57ba6450ed9ab9a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f4c3f73eb1d2669ccc449b0d74f9d32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a6f4c3f73eb1d2669ccc449b0d74f9d32">SetGravity</a> (bool is_gravity)</td></tr>
-<tr class="separator:a6f4c3f73eb1d2669ccc449b0d74f9d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a666e85a519fcb5f350a1f42273842f4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a666e85a519fcb5f350a1f42273842f4d">IsGravity</a> ()</td></tr>
-<tr class="separator:a666e85a519fcb5f350a1f42273842f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e132f82ecc7f24200ec72213e2dc0c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a4e132f82ecc7f24200ec72213e2dc0c6">SetOnTheGround</a> ()</td></tr>
-<tr class="separator:a4e132f82ecc7f24200ec72213e2dc0c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 非公開メンバ関数</h2></td></tr>
 <tr class="memitem:a7ba30ff9f5a0a0a12616ed861f68a20f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a7ba30ff9f5a0a0a12616ed861f68a20f">Reset</a> ()</td></tr>
+<tr class="memdesc:a7ba30ff9f5a0a0a12616ed861f68a20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">リセット関数  <a href="#a7ba30ff9f5a0a0a12616ed861f68a20f">[詳解]</a><br /></td></tr>
 <tr class="separator:a7ba30ff9f5a0a0a12616ed861f68a20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a122041053c2c4e69cdf6dc92076e1d79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a122041053c2c4e69cdf6dc92076e1d79">UpdateAcceleration</a> ()</td></tr>
+<tr class="memdesc:a122041053c2c4e69cdf6dc92076e1d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">加速度更新関数  <a href="#a122041053c2c4e69cdf6dc92076e1d79">[詳解]</a><br /></td></tr>
 <tr class="separator:a122041053c2c4e69cdf6dc92076e1d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd74d6413b1fd6c77007edf51ea9db4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#abd74d6413b1fd6c77007edf51ea9db4b">UpdateVelocity</a> ()</td></tr>
+<tr class="memdesc:abd74d6413b1fd6c77007edf51ea9db4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度更新関数  <a href="#abd74d6413b1fd6c77007edf51ea9db4b">[詳解]</a><br /></td></tr>
 <tr class="separator:abd74d6413b1fd6c77007edf51ea9db4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a481f06d777c1b1f52dc2c06c71e93932"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a481f06d777c1b1f52dc2c06c71e93932">UpdatePosition</a> ()</td></tr>
+<tr class="memdesc:a481f06d777c1b1f52dc2c06c71e93932"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標更新関数  <a href="#a481f06d777c1b1f52dc2c06c71e93932">[詳解]</a><br /></td></tr>
 <tr class="separator:a481f06d777c1b1f52dc2c06c71e93932"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac52e3e0cccd6268aa592d1e5f098a685"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#ac52e3e0cccd6268aa592d1e5f098a685">SetGravity</a> ()</td></tr>
-<tr class="separator:ac52e3e0cccd6268aa592d1e5f098a685"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bb34919242bdb3472e574b7e024b7e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a5bb34919242bdb3472e574b7e024b7e7">SetGround</a> ()</td></tr>
-<tr class="separator:a5bb34919242bdb3472e574b7e024b7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fb75ffa48210f4e01ab5a199626a3d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a5fb75ffa48210f4e01ab5a199626a3d5">AddGravity</a> ()</td></tr>
+<tr class="memdesc:a5fb75ffa48210f4e01ab5a199626a3d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">重力追加関数  <a href="#a5fb75ffa48210f4e01ab5a199626a3d5">[詳解]</a><br /></td></tr>
+<tr class="separator:a5fb75ffa48210f4e01ab5a199626a3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085300405839f6de506bfe5d0a57fdd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a085300405839f6de506bfe5d0a57fdd5">UpdateGround</a> ()</td></tr>
+<tr class="memdesc:a085300405839f6de506bfe5d0a57fdd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">地面更新関数  <a href="#a085300405839f6de506bfe5d0a57fdd5">[詳解]</a><br /></td></tr>
+<tr class="separator:a085300405839f6de506bfe5d0a57fdd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6ad00988f0aa878285b930121d4748c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#af6ad00988f0aa878285b930121d4748c">CheckVelocityMinMax</a> ()</td></tr>
+<tr class="memdesc:af6ad00988f0aa878285b930121d4748c"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度の最小値・最大値チェック関数  <a href="#af6ad00988f0aa878285b930121d4748c">[詳解]</a><br /></td></tr>
 <tr class="separator:af6ad00988f0aa878285b930121d4748c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 非公開変数類</h2></td></tr>
+<tr class="memitem:aa1ce0627c339b93ca16d3db4ccbdbd18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#aa1ce0627c339b93ca16d3db4ccbdbd18">is_enable_</a> = true</td></tr>
+<tr class="memdesc:aa1ce0627c339b93ca16d3db4ccbdbd18"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効フラグ  <a href="#aa1ce0627c339b93ca16d3db4ccbdbd18">[詳解]</a><br /></td></tr>
+<tr class="separator:aa1ce0627c339b93ca16d3db4ccbdbd18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43e626ecc90d765a7cbd4c561b19331a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a43e626ecc90d765a7cbd4c561b19331a">game_object_</a></td></tr>
+<tr class="memdesc:a43e626ecc90d765a7cbd4c561b19331a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクト  <a href="#a43e626ecc90d765a7cbd4c561b19331a">[詳解]</a><br /></td></tr>
 <tr class="separator:a43e626ecc90d765a7cbd4c561b19331a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e87f3c364d5d0b8d3fb228237f3ff56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a8e87f3c364d5d0b8d3fb228237f3ff56">acceleration_</a></td></tr>
+<tr class="memdesc:a8e87f3c364d5d0b8d3fb228237f3ff56"><td class="mdescLeft">&#160;</td><td class="mdescRight">加速度  <a href="#a8e87f3c364d5d0b8d3fb228237f3ff56">[詳解]</a><br /></td></tr>
 <tr class="separator:a8e87f3c364d5d0b8d3fb228237f3ff56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9818c603a813d8f70254812f43e67b3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a9818c603a813d8f70254812f43e67b3e">velocity_</a></td></tr>
+<tr class="memdesc:a9818c603a813d8f70254812f43e67b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度  <a href="#a9818c603a813d8f70254812f43e67b3e">[詳解]</a><br /></td></tr>
 <tr class="separator:a9818c603a813d8f70254812f43e67b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28b0e36d5eec30e1e9ccb1a51c5c6363"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a28b0e36d5eec30e1e9ccb1a51c5c6363">max_velocity_</a></td></tr>
-<tr class="separator:a28b0e36d5eec30e1e9ccb1a51c5c6363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed07971c58b56acb606ece7caa03068"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a0ed07971c58b56acb606ece7caa03068">max_horizontal_velocity_</a></td></tr>
+<tr class="memdesc:a0ed07971c58b56acb606ece7caa03068"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大水平速度  <a href="#a0ed07971c58b56acb606ece7caa03068">[詳解]</a><br /></td></tr>
+<tr class="separator:a0ed07971c58b56acb606ece7caa03068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5018fa4a3e2e72533e669112e6aebbc4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a5018fa4a3e2e72533e669112e6aebbc4">max_vertical_velocity_</a></td></tr>
+<tr class="memdesc:a5018fa4a3e2e72533e669112e6aebbc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大垂直速度  <a href="#a5018fa4a3e2e72533e669112e6aebbc4">[詳解]</a><br /></td></tr>
+<tr class="separator:a5018fa4a3e2e72533e669112e6aebbc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68f81110a54f8ed24ac94b6cd33c3ae0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a68f81110a54f8ed24ac94b6cd33c3ae0">mass_</a></td></tr>
+<tr class="memdesc:a68f81110a54f8ed24ac94b6cd33c3ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">質量  <a href="#a68f81110a54f8ed24ac94b6cd33c3ae0">[詳解]</a><br /></td></tr>
 <tr class="separator:a68f81110a54f8ed24ac94b6cd33c3ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63b2e282267a28f0a160b98d56fa40b6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a63b2e282267a28f0a160b98d56fa40b6">friction_</a></td></tr>
+<tr class="memdesc:a63b2e282267a28f0a160b98d56fa40b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">摩擦  <a href="#a63b2e282267a28f0a160b98d56fa40b6">[詳解]</a><br /></td></tr>
 <tr class="separator:a63b2e282267a28f0a160b98d56fa40b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25f0db16668c86e90babbf9233b57511"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a25f0db16668c86e90babbf9233b57511">my_friction_</a></td></tr>
+<tr class="memdesc:a25f0db16668c86e90babbf9233b57511"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の摩擦  <a href="#a25f0db16668c86e90babbf9233b57511">[詳解]</a><br /></td></tr>
 <tr class="separator:a25f0db16668c86e90babbf9233b57511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a302b8ad7552303570fa1cfd070bb8588"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a302b8ad7552303570fa1cfd070bb8588">bounciness_</a></td></tr>
+<tr class="memdesc:a302b8ad7552303570fa1cfd070bb8588"><td class="mdescLeft">&#160;</td><td class="mdescRight">反発力  <a href="#a302b8ad7552303570fa1cfd070bb8588">[詳解]</a><br /></td></tr>
 <tr class="separator:a302b8ad7552303570fa1cfd070bb8588"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a04fea3f4790f2dfc2301940b8ccb6b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a6a04fea3f4790f2dfc2301940b8ccb6b">my_bounciness_</a></td></tr>
+<tr class="memdesc:a6a04fea3f4790f2dfc2301940b8ccb6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の反発力  <a href="#a6a04fea3f4790f2dfc2301940b8ccb6b">[詳解]</a><br /></td></tr>
 <tr class="separator:a6a04fea3f4790f2dfc2301940b8ccb6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab49b5561a800bec8abcb3d35b1125c4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#ab49b5561a800bec8abcb3d35b1125c4e">is_gravity_</a></td></tr>
+<tr class="memdesc:ab49b5561a800bec8abcb3d35b1125c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">重力フラグ  <a href="#ab49b5561a800bec8abcb3d35b1125c4e">[詳解]</a><br /></td></tr>
 <tr class="separator:ab49b5561a800bec8abcb3d35b1125c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af292ed854ca107f1a09a79931b10c3fa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#af292ed854ca107f1a09a79931b10c3fa">gravity_acceleration_</a></td></tr>
+<tr class="memdesc:af292ed854ca107f1a09a79931b10c3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">重力加速度  <a href="#af292ed854ca107f1a09a79931b10c3fa">[詳解]</a><br /></td></tr>
 <tr class="separator:af292ed854ca107f1a09a79931b10c3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadfeac1807906f025d97143ba1c0f323"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#aadfeac1807906f025d97143ba1c0f323">gravity_direction_</a></td></tr>
+<tr class="memdesc:aadfeac1807906f025d97143ba1c0f323"><td class="mdescLeft">&#160;</td><td class="mdescRight">重力ベクトル  <a href="#aadfeac1807906f025d97143ba1c0f323">[詳解]</a><br /></td></tr>
 <tr class="separator:aadfeac1807906f025d97143ba1c0f323"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07a6416cab35698692378441c1750c4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a07a6416cab35698692378441c1750c4c">is_on_tha_ground_</a></td></tr>
+<tr class="memdesc:a07a6416cab35698692378441c1750c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">地面に乗っているフラグ  <a href="#a07a6416cab35698692378441c1750c4c">[詳解]</a><br /></td></tr>
 <tr class="separator:a07a6416cab35698692378441c1750c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a863e16866ca69201a22365e480b7c74f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a863e16866ca69201a22365e480b7c74f">is_landing_</a></td></tr>
+<tr class="memdesc:a863e16866ca69201a22365e480b7c74f"><td class="mdescLeft">&#160;</td><td class="mdescRight">着地したフラグ  <a href="#a863e16866ca69201a22365e480b7c74f">[詳解]</a><br /></td></tr>
 <tr class="separator:a863e16866ca69201a22365e480b7c74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 静的非公開変数類</h2></td></tr>
 <tr class="memitem:a84ba24f3a5b31888a654c6750fb24faf"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a84ba24f3a5b31888a654c6750fb24faf">VELOCITY_MIN</a> = 0.0001f</td></tr>
+<tr class="memdesc:a84ba24f3a5b31888a654c6750fb24faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">最低速度  <a href="#a84ba24f3a5b31888a654c6750fb24faf">[詳解]</a><br /></td></tr>
 <tr class="separator:a84ba24f3a5b31888a654c6750fb24faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00039">39</a> 行目に定義があります。</p>
+<div class="textblock"><p>物理Class </p>
+<p>物理の計算Class </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00031">31</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
-<a id="a2e4cab77c53c0acf5273bd4986f8423d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e4cab77c53c0acf5273bd4986f8423d">&#9670;&nbsp;</a></span>Physics()</h2>
+<a id="a4b2ebc0a344f04f48d227c72f0d0fbda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b2ebc0a344f04f48d227c72f0d0fbda">&#9670;&nbsp;</a></span>Physics()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,33 +302,21 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
         <tr>
           <td class="memname">Physics::Physics </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td>
-          <td class="paramname"><em>game_object</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00045">45</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a045c3788e28059d3920136499942490f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a045c3788e28059d3920136499942490f">&#9670;&nbsp;</a></span>~Physics()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Physics::~Physics </td>
-          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00070">70</a> 行目に定義があります。</p>
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00173">173</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -245,9 +326,6 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Physics::AddBounciness </td>
@@ -257,14 +335,23 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00083">83</a> 行目に定義があります。</p>
+<p>反発力追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00209">209</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -273,9 +360,6 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Physics::AddFriction </td>
@@ -285,14 +369,64 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+<p>摩擦力追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00202">202</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5fb75ffa48210f4e01ab5a199626a3d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fb75ffa48210f4e01ab5a199626a3d5">&#9670;&nbsp;</a></span>AddGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics::AddGravity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00077">77</a> 行目に定義があります。</p>
+<p>重力追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00268">268</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -319,250 +453,384 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00244">244</a> 行目に定義があります。</p>
+<p>速度の最小値・最大値チェック関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00306">306</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aee9ce4604f63dbdcab07ded4d0174989"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee9ce4604f63dbdcab07ded4d0174989">&#9670;&nbsp;</a></span>GetAcceleration()</h2>
+<a id="afa061352341f5c53745433672be775bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa061352341f5c53745433672be775bb">&#9670;&nbsp;</a></span>getBounciness()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a>* Physics::GetAcceleration </td>
+          <td class="memname">float Physics::getBounciness </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00065">65</a> 行目に定義があります。</p>
+<p>反発力取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>反発力 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00128">128</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a5126745b31c45267ae516cc09a82fb5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5126745b31c45267ae516cc09a82fb5d">&#9670;&nbsp;</a></span>GetBounciness()</h2>
+<a id="ad85a3df693d588f8ff528566c5218533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad85a3df693d588f8ff528566c5218533">&#9670;&nbsp;</a></span>getFriction()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Physics::GetBounciness </td>
+          <td class="memname">float Physics::getFriction </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00084">84</a> 行目に定義があります。</p>
+<p>摩擦力取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>摩擦力 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00107">107</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aee1fe26db953d0712b2a26ce9d1db0d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee1fe26db953d0712b2a26ce9d1db0d9">&#9670;&nbsp;</a></span>GetFriction()</h2>
+<a id="a9f7d1579ed7e0f97726ca7117f479c45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f7d1579ed7e0f97726ca7117f479c45">&#9670;&nbsp;</a></span>getIsEnable()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Physics::GetFriction </td>
+          <td class="memname">bool Physics::getIsEnable </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00078">78</a> 行目に定義があります。</p>
+<p>有効フラグ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">value</td><td>有効フラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00030">30</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a80a377efcd573cff3484d91c9f5512e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80a377efcd573cff3484d91c9f5512e4">&#9670;&nbsp;</a></span>GetMass()</h2>
+<a id="a7a4f2372930e737b61a73b2a41067158"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a4f2372930e737b61a73b2a41067158">&#9670;&nbsp;</a></span>getIsGravity()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Physics::GetMass </td>
+          <td class="memname">bool Physics::getIsGravity </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00074">74</a> 行目に定義があります。</p>
+<p>重力フラグ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>重力フラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00149">149</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a0ee3b82e3e1588fee1727e582c824467"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ee3b82e3e1588fee1727e582c824467">&#9670;&nbsp;</a></span>GetMaxVelocity()</h2>
+<a id="a4ce827465a471657b4f4e8973e9f2138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ce827465a471657b4f4e8973e9f2138">&#9670;&nbsp;</a></span>getMass()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Physics::GetMaxVelocity </td>
+          <td class="memname">float Physics::getMass </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00070">70</a> 行目に定義があります。</p>
+<p>質量取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>質量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00093">93</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="acd6312afafb3faed57ba6450ed9ab9a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd6312afafb3faed57ba6450ed9ab9a6">&#9670;&nbsp;</a></span>GetMyBounciness()</h2>
+<a id="a47edf04cb497a621940b3dfc5e9e6993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47edf04cb497a621940b3dfc5e9e6993">&#9670;&nbsp;</a></span>getMaxHorizontalVelocity()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Physics::GetMyBounciness </td>
+          <td class="memname">float Physics::getMaxHorizontalVelocity </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00086">86</a> 行目に定義があります。</p>
+<p>最大水平速度取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>最大水平速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00065">65</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a50ad9d79f3b42a209a05f57557f294f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50ad9d79f3b42a209a05f57557f294f0">&#9670;&nbsp;</a></span>GetMyFriction()</h2>
+<a id="a80d556fa40945e73ca6d4d6931b743ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d556fa40945e73ca6d4d6931b743ad">&#9670;&nbsp;</a></span>getMaxVerticalVelocity()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Physics::GetMyFriction </td>
+          <td class="memname">float Physics::getMaxVerticalVelocity </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00080">80</a> 行目に定義があります。</p>
+<p>最大垂直速度取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>最大垂直速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00079">79</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a8e33f600575e7ee5ad348d695a9eb45e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e33f600575e7ee5ad348d695a9eb45e">&#9670;&nbsp;</a></span>GetVelocity()</h2>
+<a id="a25433df081fc471e1e5d475f718f116b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25433df081fc471e1e5d475f718f116b">&#9670;&nbsp;</a></span>getMyBounciness()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a>* Physics::GetVelocity </td>
+          <td class="memname">float Physics::getMyBounciness </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00068">68</a> 行目に定義があります。</p>
+<p>自分の反発力取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>自分の反発力 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00135">135</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a666e85a519fcb5f350a1f42273842f4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a666e85a519fcb5f350a1f42273842f4d">&#9670;&nbsp;</a></span>IsGravity()</h2>
+<a id="a293e9ef38e53b79692c4a9d4a60b13ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a293e9ef38e53b79692c4a9d4a60b13ed">&#9670;&nbsp;</a></span>getMyFriction()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Physics::IsGravity </td>
+          <td class="memname">float Physics::getMyFriction </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00090">90</a> 行目に定義があります。</p>
+<p>自分の摩擦力取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float</td><td>自分の摩擦力 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00114">114</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a41b427ec429632a13db548bb5cc6642e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41b427ec429632a13db548bb5cc6642e">&#9670;&nbsp;</a></span>getpAcceleration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Physics::getpAcceleration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>加速度取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>加速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00051">51</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6025f297e751c71a3c54260007c175ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6025f297e751c71a3c54260007c175ee">&#9670;&nbsp;</a></span>getpVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> * Physics::getpVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>速度取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Vector3D*</td><td>速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00058">58</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -589,228 +857,326 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00106">106</a> 行目に定義があります。</p>
+<p>リセット関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00216">216</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a6f4c3f73eb1d2669ccc449b0d74f9d32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f4c3f73eb1d2669ccc449b0d74f9d32">&#9670;&nbsp;</a></span>SetGravity() <span class="overload">[1/2]</span></h2>
+<a id="a8362e2d029415bc93b25b0891cc8a3d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8362e2d029415bc93b25b0891cc8a3d8">&#9670;&nbsp;</a></span>setGameObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Physics::SetGravity </td>
+          <td class="memname">void Physics::setGameObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ゲームオブジェクト設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*value</td><td>ゲームオブジェクト </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00044">44</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7ae1ceeab958b0a86cb7e570e5e405b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ae1ceeab958b0a86cb7e570e5e405b5">&#9670;&nbsp;</a></span>setIsEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics::setIsEnable </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>is_gravity</em></td><td>)</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00089">89</a> 行目に定義があります。</p>
+<p>有効フラグ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>有効フラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00037">37</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ac52e3e0cccd6268aa592d1e5f098a685"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac52e3e0cccd6268aa592d1e5f098a685">&#9670;&nbsp;</a></span>SetGravity() <span class="overload">[2/2]</span></h2>
+<a id="af5f8eac3abc26f0255b5ec7dc67c11db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5f8eac3abc26f0255b5ec7dc67c11db">&#9670;&nbsp;</a></span>setIsGravity()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Physics::SetGravity </td>
+          <td class="memname">void Physics::setIsGravity </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>重力フラグ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>重力フラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00156">156</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab852c1bb08fcd4f364c2650cadfe1eda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab852c1bb08fcd4f364c2650cadfe1eda">&#9670;&nbsp;</a></span>setMass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics::setMass </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>質量設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>質量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00100">100</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4e8108eeaa958c99543fe2ec3e21b240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e8108eeaa958c99543fe2ec3e21b240">&#9670;&nbsp;</a></span>setMaxHorizontalVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics::setMaxHorizontalVelocity </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最大水平速度設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>最大水平速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00072">72</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6a96fd4d918235e89384320519eae0f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a96fd4d918235e89384320519eae0f5">&#9670;&nbsp;</a></span>setMaxVerticalVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics::setMaxVerticalVelocity </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最大垂直速度設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>最大垂直速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00086">86</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4e23a9b6f9888b22d3043ea8463fbd37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e23a9b6f9888b22d3043ea8463fbd37">&#9670;&nbsp;</a></span>setMyBounciness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics::setMyBounciness </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自分の反発力設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>自分の反発力 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00142">142</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a848d75133a2c2f46a73c8439f29297c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a848d75133a2c2f46a73c8439f29297c5">&#9670;&nbsp;</a></span>setMyFriction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics::setMyFriction </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自分の摩擦力設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>自分の摩擦力 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00121">121</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aad378ed29224e1bc00fd08ddc6122478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad378ed29224e1bc00fd08ddc6122478">&#9670;&nbsp;</a></span>setOnTheGround()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics::setOnTheGround </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00192">192</a> 行目に定義があります。</p>
+<p>地面に乗っているフラグ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-</div>
-</div>
-<a id="a5bb34919242bdb3472e574b7e024b7e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bb34919242bdb3472e574b7e024b7e7">&#9670;&nbsp;</a></span>SetGround()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Physics::SetGround </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00212">212</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a7a6eac8c5f6d7db0baef290710825085"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a6eac8c5f6d7db0baef290710825085">&#9670;&nbsp;</a></span>SetMass()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Physics::SetMass </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>mass</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00073">73</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="afd9e36bb94e921a41818f261df4205d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd9e36bb94e921a41818f261df4205d0">&#9670;&nbsp;</a></span>SetMaxVelocity()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Physics::SetMaxVelocity </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>max_velocity</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00069">69</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a662185709961c64615c51ac5f32ab2ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a662185709961c64615c51ac5f32ab2ff">&#9670;&nbsp;</a></span>SetMyBounciness()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Physics::SetMyBounciness </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>bounciness</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00085">85</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a0e3c9825aa4129a2212c1c61d0cd6ecb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e3c9825aa4129a2212c1c61d0cd6ecb">&#9670;&nbsp;</a></span>SetMyFriction()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Physics::SetMyFriction </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>my_friction</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00079">79</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a4e132f82ecc7f24200ec72213e2dc0c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e132f82ecc7f24200ec72213e2dc0c6">&#9670;&nbsp;</a></span>SetOnTheGround()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Physics::SetOnTheGround </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00093">93</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00163">163</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -829,7 +1195,21 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00083">83</a> 行目に定義があります。</p>
+<p>更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00192">192</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -856,7 +1236,62 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00129">129</a> 行目に定義があります。</p>
+<p>加速度更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00226">226</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a085300405839f6de506bfe5d0a57fdd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a085300405839f6de506bfe5d0a57fdd5">&#9670;&nbsp;</a></span>UpdateGround()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics::UpdateGround </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地面更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00280">280</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -883,7 +1318,21 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00175">175</a> 行目に定義があります。</p>
+<p>座標更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00257">257</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -910,7 +1359,21 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00146">146</a> 行目に定義があります。</p>
+<p>速度更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_physics_8cpp_source.html">Physics.cpp</a> の <a class="el" href="_physics_8cpp_source.html#l00234">234</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -935,7 +1398,9 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00113">113</a> 行目に定義があります。</p>
+<p>加速度 </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00046">46</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -959,7 +1424,9 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00127">127</a> 行目に定義があります。</p>
+<p>反発力 </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00053">53</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -983,7 +1450,9 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00123">123</a> 行目に定義があります。</p>
+<p>摩擦 </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00051">51</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1007,7 +1476,9 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00110">110</a> 行目に定義があります。</p>
+<p>ゲームオブジェクト </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00045">45</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1031,7 +1502,9 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00132">132</a> 行目に定義があります。</p>
+<p>重力加速度 </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00056">56</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1055,7 +1528,35 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00133">133</a> 行目に定義があります。</p>
+<p>重力ベクトル </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00057">57</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa1ce0627c339b93ca16d3db4ccbdbd18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1ce0627c339b93ca16d3db4ccbdbd18">&#9670;&nbsp;</a></span>is_enable_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Physics::is_enable_ = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>有効フラグ </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00044">44</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1079,7 +1580,9 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00131">131</a> 行目に定義があります。</p>
+<p>重力フラグ </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00055">55</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1103,7 +1606,9 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00137">137</a> 行目に定義があります。</p>
+<p>着地したフラグ </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00059">59</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1127,7 +1632,9 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00136">136</a> 行目に定義があります。</p>
+<p>地面に乗っているフラグ </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00058">58</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1151,12 +1658,14 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00120">120</a> 行目に定義があります。</p>
+<p>質量 </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00050">50</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a28b0e36d5eec30e1e9ccb1a51c5c6363"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28b0e36d5eec30e1e9ccb1a51c5c6363">&#9670;&nbsp;</a></span>max_velocity_</h2>
+<a id="a0ed07971c58b56acb606ece7caa03068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed07971c58b56acb606ece7caa03068">&#9670;&nbsp;</a></span>max_horizontal_velocity_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1165,7 +1674,7 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Physics::max_velocity_</td>
+          <td class="memname">float Physics::max_horizontal_velocity_</td>
         </tr>
       </table>
   </td>
@@ -1175,7 +1684,35 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00117">117</a> 行目に定義があります。</p>
+<p>最大水平速度 </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5018fa4a3e2e72533e669112e6aebbc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5018fa4a3e2e72533e669112e6aebbc4">&#9670;&nbsp;</a></span>max_vertical_velocity_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Physics::max_vertical_velocity_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最大垂直速度 </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00049">49</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1199,7 +1736,9 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00128">128</a> 行目に定義があります。</p>
+<p>自分の反発力 </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00054">54</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1223,7 +1762,9 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00124">124</a> 行目に定義があります。</p>
+<p>自分の摩擦 </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00052">52</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1247,7 +1788,9 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00116">116</a> 行目に定義があります。</p>
+<p>速度 </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00047">47</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1271,13 +1814,15 @@ $(document).ready(function(){initNavTree('class_physics.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+<p>最低速度 </p>
+
+<p class="definition"> <a class="el" href="_physics_8h_source.html">Physics.h</a> の <a class="el" href="_physics_8h_source.html#l00037">37</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Vector/Physics/<a class="el" href="_physics_8h_source.html">Physics.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Vector/Physics/<a class="el" href="_physics_8cpp_source.html">Physics.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Tool/<a class="el" href="_physics_8h_source.html">Physics.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Tool/Source/<a class="el" href="_physics_8cpp_source.html">Physics.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
