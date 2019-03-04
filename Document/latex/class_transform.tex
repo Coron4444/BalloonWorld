@@ -2,101 +2,151 @@
 \label{class_transform}\index{Transform@{Transform}}
 
 
+変形\+Class  
+
+
+
+
 {\ttfamily \#include $<$Transform.\+h$>$}
 
+
+
+Transform 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_transform__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_transform_a1ed223415917a6b33e5fd7af132f6b9c}{getp\+Position}} ()
+\begin{DoxyCompactList}\small\item\em 座標取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_transform_ac1a821bfab91b10a072eac81efdc741d}{getp\+Scale}} ()
+\begin{DoxyCompactList}\small\item\em 拡縮取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_ab64af2387c413b75c26ef343104a56db}{set\+Init\+Angle}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} value)
+\begin{DoxyCompactList}\small\item\em 初期角度取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_a0f7b2731c46624ea54126e36fe1d0dd1}{set\+Add\+Quaternion}} (\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} value)
+\begin{DoxyCompactList}\small\item\em 追加用クォータニオン設定関数 \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{class_transform_a85ecb6a9d972caf0ab7d2e58ad2753b7}{getp\+Angle\+Pitch}} ()
+\begin{DoxyCompactList}\small\item\em Pitch角度取得関数 \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{class_transform_a69600cd68c0a99518efec7da592e4841}{getp\+Angle\+Yaw}} ()
+\begin{DoxyCompactList}\small\item\em Yaw角度取得関数 \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{class_transform_aa1f056b8f90affed5e251e68a93331d4}{getp\+Angle\+Roll}} ()
+\begin{DoxyCompactList}\small\item\em Roll角度取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_transform_aadf052a769af0793916a25c88d00640c}{getp\+Angle\+Yaw\+Pitch\+Roll}} ()
+\begin{DoxyCompactList}\small\item\em Yaw\+Pitch\+Roll角度取得関数 \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{class_transform_a812895ad4ebc4c713ece357167733418}{getp\+Look\+At\+Speed}} ()
+\begin{DoxyCompactList}\small\item\em 向く速度取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_a7a90095a66990f9e17b22c141dbe1379}{set\+Look\+At\+Vector}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} look\+\_\+at\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em 向くベクトル設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_aa2d0352ed37603f7a80a8562ade5bcbe}{set\+Target\+Quaternion}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} axis, float angle)
+\begin{DoxyCompactList}\small\item\em ターゲットクォータニオン設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_transform_aa01e95eff5d3bb0a2df9d81faa229143}{getp\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em 前ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_transform_a98796d7ad6726567b5b12ab65254a79d}{getp\+Up}} ()
+\begin{DoxyCompactList}\small\item\em 上ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_transform_a636334048ae8fb50455ec8fd290668d6}{getp\+Right}} ()
+\begin{DoxyCompactList}\small\item\em 右ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ \mbox{\hyperlink{class_transform_a825ad9edaf799a83076cbb9f78852649}{getp\+Position\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 座標行列取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ \mbox{\hyperlink{class_transform_ad7b44f1e97d83f2f810e231bae2de2b5}{getp\+Scale\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 拡縮行列取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ \mbox{\hyperlink{class_transform_af0ea9094ccda77809978208614772447}{getp\+Rotation\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 回転行列取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ \mbox{\hyperlink{class_transform_a5d30e9aa1c2d1fff96996b6368a7f610}{getp\+No\+Init\+Rotation\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 初期回転無し回転行列取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ \mbox{\hyperlink{class_transform_af172f4f0dfb057d1ee473d1314787352}{getp\+Inverse\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 逆行列取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_a78b6b021ca4cc1641f934160befb39dd}{set\+Inverse\+Matrix}} (\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 逆行列設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ \mbox{\hyperlink{class_transform_aee502a42628072064f2b3d2060f2d53f}{getp\+Transpose\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 転置行列取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_a710f94248ae113eb6b28849a01f3fedc}{set\+Transpose\+Matrix}} (\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$value, bool is\+\_\+position\+\_\+off=false)
+\begin{DoxyCompactList}\small\item\em 転置行列設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ \mbox{\hyperlink{class_transform_a58114e02f195f91f9bb807d49c34fe32}{getp\+World\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em ワールド行列取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ \mbox{\hyperlink{class_transform_a17fb2c084b43710345a261438ae67b7c}{getp\+No\+Init\+Rotation\+World\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 初期回転無しワールド行列取得関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_transform_aa08ca4266efabc768973cdeea51945ab}{Transform}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_transform_aa72e286c069850db80927b0e6554cd3e}{$\sim$\+Transform}} ()
-\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_transform_addff6461a77b9f5c5249e46deb5c2c19}{Get\+Position}} ()
-\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_transform_accedf33a4ddbdcf2d4fc4274f85bf818}{Get\+Scale}} ()
-\item 
-float $\ast$ \mbox{\hyperlink{class_transform_a8c4966ea0a5d6cafa79c430e31bf0dff}{Get\+Angle\+Pitch}} ()
-\item 
-float $\ast$ \mbox{\hyperlink{class_transform_a8be9cd3526cc18d64e47b55f4c527dd8}{Get\+Angle\+Yaw}} ()
-\item 
-float $\ast$ \mbox{\hyperlink{class_transform_a124d6afb5dd0a86952c99f1cec72e394}{Get\+Angle\+Roll}} ()
-\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_transform_a1bd5cddc216e7fafe12e5b605cb780ea}{Get\+Angle\+Yaw\+Pitch\+Roll}} ()
-\item 
-void \mbox{\hyperlink{class_transform_ab6f7342cb4eca555c02a85c999d499dc}{Set\+Look\+At\+Speed}} (float look\+\_\+at\+\_\+speed)
-\item 
-float \mbox{\hyperlink{class_transform_a79fdb2cb4eb1e4abf48e0f9fd74707ba}{Get\+Look\+At\+Speed}} ()
-\item 
-float \mbox{\hyperlink{class_transform_a14b7b06632d6a47e99dc67aecbd7acc7}{Get\+Look\+At\+Change\+Amount}} ()
-\item 
-void \mbox{\hyperlink{class_transform_a39b78acbdbf3ee98cad0c4e640988745}{Set\+Look\+At\+Vector}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} look\+\_\+at\+\_\+vector)
-\item 
-void \mbox{\hyperlink{class_transform_ac8cdb5ca9995d9c124f1890d84c92ab4}{Set\+Target\+Quaternion}} (\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} axis, float angle)
-\item 
-void \mbox{\hyperlink{class_transform_afe5350bb1558256115e14c0669611acd}{Update\+Axis\+Vector}} ()
-\item 
-const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_transform_a25e4832e15334d74ff847f0ff0b3564f}{Get\+Forawrd}} ()
-\item 
-const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_transform_a9f5700481ae42556f763726947feaf36}{Get\+Up}} ()
-\item 
-const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_transform_a57d1da919d8df7d2452149c4bbade4d2}{Get\+Right}} ()
-\item 
-\mbox{\hyperlink{class_axis_vector}{Axis\+Vector}} $\ast$ \mbox{\hyperlink{class_transform_ad300be34dddc6109ca142452e65aa77d}{Get\+Axis\+Vector}} ()
-\item 
-void \mbox{\hyperlink{class_transform_af1a2dcb4a9d37dd71c203ec248535887}{Update\+World\+Matrix\+S\+RT}} ()
-\item 
-void \mbox{\hyperlink{class_transform_a3d56e19fba7f44d5f938d62481846fbc}{Update\+World\+Matrix\+I\+S\+RT}} ()
-\item 
-void \mbox{\hyperlink{class_transform_a3d2e5da24fb1c8015f5bb9a6c0a7a7de}{Update\+Inverse\+Matrix}} (const \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$matrix)
-\item 
-void \mbox{\hyperlink{class_transform_a486ae5501b5081b22ee053f787e0e4a2}{Update\+Transpose\+Matrix}} (const \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$matrix)
-\item 
-void \mbox{\hyperlink{class_transform_a053037b225e6fb11e680cc60df15dd45}{Transpose\+Matrix\+Translation\+Off}} ()
-\item 
-\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_transform_a19538fe991e76eb8146295e6f5f1ed99}{getp\+World\+Matrix}} ()
-\item 
-\mbox{\hyperlink{class_matrix_extend}{Matrix\+Extend}} $\ast$ \mbox{\hyperlink{class_transform_ac5a4f96871b6c1bfde9b2a6b7b0d6953}{getp\+Matrix\+Extend}} ()
-\item 
-void \mbox{\hyperlink{class_transform_af02515be1947506212ca1c23223ce0b3}{Update\+Axis\+Vector\+\_\+\+World\+Matrix\+S\+RT}} ()
-\item 
-void \mbox{\hyperlink{class_transform_a73a20f2b8baad21ba74a2b1c6d8a1ab2}{Update\+Axis\+Vector\+\_\+\+World\+Matrix\+I\+S\+RT}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_a4b911801aa231c13922c0e11032b8d5a}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_acb3b15a0b011f21a849ca1648ed1c581}{Reset\+Add\+Quaternion}} ()
+\begin{DoxyCompactList}\small\item\em 追加用クォータニオンリセット関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_afba4a9bc17c9a61f2c6a43bc32a251cc}{Add\+Parent\+Matrix\+To\+World\+Matrix}} (\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$parent\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em ワールド行列に親行列追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_a81a4882eb3c4d7afb243b9911c666b52}{Create\+World\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em ワールド行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_a26e42d4a1bd35070277b49a48ef5c4fd}{Create\+World\+Matrix\+Plus\+Inverse}} ()
+\begin{DoxyCompactList}\small\item\em 逆行列付きワールド行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_a49d2df9c3ffffa21e2df60ce2f531bca}{Create\+World\+Matrix\+Plus\+Transpose}} ()
+\begin{DoxyCompactList}\small\item\em 転置行列付きワールド行列作成関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_transform_a7884cb828ace5c921e7138d83c43d689}{Create\+Quaternion}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em クォータニオン作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_aaf47943b2583b4cb31a54881b5ef8eca}{Reflect\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 行列反映関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_a2f5c4e0e8a7aae115f37a2cdd0a745d7}{Calculate\+World\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em ワールド行列算出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_ab12dc73e0dcce2bc8e7129f0affe2775}{Calculate\+World\+Matrix\+Plus\+Inverse}} ()
+\begin{DoxyCompactList}\small\item\em 逆行列付きワールド行列算出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_a2f7413dc6aa2d071de0c5842e5351acd}{Calculate\+World\+Matrix\+Plus\+Transpose}} ()
+\begin{DoxyCompactList}\small\item\em 転置列付きワールド行列算出関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_transform_aa36f8a9ae39411699f7ff77f017f618a}{position\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 座標 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_transform_ade54d2d37f01b20758b0ce11def76104}{scale\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 拡縮 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} \mbox{\hyperlink{class_transform_ac0637721b2a1f2e10dca46caa9a0d77d}{init\+\_\+quaternion\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 初期値クォータニオン \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} \mbox{\hyperlink{class_transform_a00d46dfb43b1e60b4f6ca8728d6aff54}{now\+\_\+quaternion\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 現在用クォータニオン \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} \mbox{\hyperlink{class_transform_a8a646ffca2f737bca6b3ad183b4ce54a}{add\+\_\+quaternion\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 追加用クォータニオン \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} \mbox{\hyperlink{class_transform_ac9985a4b70b9af742c9f26f47784ba7b}{yaw\+\_\+pitch\+\_\+roll\+\_\+quaternion\+\_\+}}
-\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_transform_a725d32ecbcf8da99d63bb6296d9cd123}{yaw\+\_\+pitch\+\_\+roll\+\_\+}}
-\item 
-\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} \mbox{\hyperlink{class_transform_a52fa2db52356033f42908fde94f9cb28}{old\+\_\+target\+\_\+quaternion\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em Yaw\+Pitch\+Rollクォータニオン \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} \mbox{\hyperlink{class_transform_acb5b22818929f01f4765a39f2da01579}{target\+\_\+quaternion\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em ターゲットクォータニオン \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} \mbox{\hyperlink{class_transform_a52fa2db52356033f42908fde94f9cb28}{old\+\_\+target\+\_\+quaternion\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 古いターゲットクォータニオン \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_transform_acf33e8171e9803bebe3aba14dbedc90e}{yaw\+\_\+pitch\+\_\+roll\+\_\+angle\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Yaw\+Pitch\+Roll角度 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_transform_a762490e0b35915244f767d618bb875b4}{look\+\_\+at\+\_\+speed\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 向く速度 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_transform_acda35632e3895b925eaae4625c564b5f}{look\+\_\+at\+\_\+change\+\_\+amount\+\_\+}}
-\item 
-\mbox{\hyperlink{class_matrix_extend}{Matrix\+Extend}} \mbox{\hyperlink{class_transform_a150c78be6568eaf017165ff5c90d6928}{matrix\+\_\+extend\+\_\+}}
-\item 
-\mbox{\hyperlink{class_axis_vector}{Axis\+Vector}} \mbox{\hyperlink{class_transform_a2bde97ec180664c5587c445737c04cbe}{axis\+\_\+vector\+\_\+}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 向く変化量 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_transform_a52dc8d953e340e21ecd0a56fb5cb5a09}{position\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 座標行列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_transform_a052a5c220aac57fdb9f8c879f613de84}{scale\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 拡縮行列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_transform_a58e41c4d959a094c8dc1b2178fcb4fc2}{rotation\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 回転行列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_transform_a0e893bc920666b3a4295cdf383441198}{no\+\_\+init\+\_\+rotation\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 初期回転無し回転行列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_transform_a0b1d18a3f04fa8b38e6c8c1cd6d51a51}{inverse\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 逆行列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_transform_abc32fce01f3c1ab82fed2f4b6dca1871}{transpose\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 転置行列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_transform_a3a429ea1108d116f0b099b7a8fc8b477}{world\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em ワールド行列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_transform_a73e621ceb673d8e8546831d536d9b47e}{no\+\_\+init\+\_\+rotation\+\_\+world\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 初期回転無しワールド行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
+変形\+Class 
 
+オブジェクトの変形を表す\+Class 
 
- Transform.\+h の 31 行目に定義があります。
+ Transform.\+h の 17 行目に定義があります。
 
 
 
@@ -109,7 +159,16 @@ float \mbox{\hyperlink{class_transform_acda35632e3895b925eaae4625c564b5f}{look\+
 
 
 
- Transform.\+cpp の 32 行目に定義があります。
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Transform.\+cpp の 239 行目に定義があります。
 
 \mbox{\Hypertarget{class_transform_aa72e286c069850db80927b0e6554cd3e}\label{class_transform_aa72e286c069850db80927b0e6554cd3e}} 
 \index{Transform@{Transform}!````~Transform@{$\sim$\+Transform}}
@@ -119,11 +178,111 @@ float \mbox{\hyperlink{class_transform_acda35632e3895b925eaae4625c564b5f}{look\+
 
 
 
- Transform.\+cpp の 54 行目に定義があります。
+デストラクタ 
+
+
+
+ Transform.\+cpp の 267 行目に定義があります。
 
 
 
 \subsection{関数詳解}
+\mbox{\Hypertarget{class_transform_afba4a9bc17c9a61f2c6a43bc32a251cc}\label{class_transform_afba4a9bc17c9a61f2c6a43bc32a251cc}} 
+\index{Transform@{Transform}!Add\+Parent\+Matrix\+To\+World\+Matrix@{Add\+Parent\+Matrix\+To\+World\+Matrix}}
+\index{Add\+Parent\+Matrix\+To\+World\+Matrix@{Add\+Parent\+Matrix\+To\+World\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Add\+Parent\+Matrix\+To\+World\+Matrix()}{AddParentMatrixToWorldMatrix()}}
+{\footnotesize\ttfamily void Transform\+::\+Add\+Parent\+Matrix\+To\+World\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$}]{parent\+\_\+matrix }\end{DoxyParamCaption})}
+
+
+
+ワールド行列に親行列追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em parent\+\_\+matrix} & 親の行列 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 310 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a2f5c4e0e8a7aae115f37a2cdd0a745d7}\label{class_transform_a2f5c4e0e8a7aae115f37a2cdd0a745d7}} 
+\index{Transform@{Transform}!Calculate\+World\+Matrix@{Calculate\+World\+Matrix}}
+\index{Calculate\+World\+Matrix@{Calculate\+World\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Calculate\+World\+Matrix()}{CalculateWorldMatrix()}}
+{\footnotesize\ttfamily void Transform\+::\+Calculate\+World\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ワールド行列算出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 389 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_ab12dc73e0dcce2bc8e7129f0affe2775}\label{class_transform_ab12dc73e0dcce2bc8e7129f0affe2775}} 
+\index{Transform@{Transform}!Calculate\+World\+Matrix\+Plus\+Inverse@{Calculate\+World\+Matrix\+Plus\+Inverse}}
+\index{Calculate\+World\+Matrix\+Plus\+Inverse@{Calculate\+World\+Matrix\+Plus\+Inverse}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Calculate\+World\+Matrix\+Plus\+Inverse()}{CalculateWorldMatrixPlusInverse()}}
+{\footnotesize\ttfamily void Transform\+::\+Calculate\+World\+Matrix\+Plus\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+逆行列付きワールド行列算出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 400 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a2f7413dc6aa2d071de0c5842e5351acd}\label{class_transform_a2f7413dc6aa2d071de0c5842e5351acd}} 
+\index{Transform@{Transform}!Calculate\+World\+Matrix\+Plus\+Transpose@{Calculate\+World\+Matrix\+Plus\+Transpose}}
+\index{Calculate\+World\+Matrix\+Plus\+Transpose@{Calculate\+World\+Matrix\+Plus\+Transpose}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Calculate\+World\+Matrix\+Plus\+Transpose()}{CalculateWorldMatrixPlusTranspose()}}
+{\footnotesize\ttfamily void Transform\+::\+Calculate\+World\+Matrix\+Plus\+Transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+転置列付きワールド行列算出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 413 行目に定義があります。
+
 \mbox{\Hypertarget{class_transform_a7884cb828ace5c921e7138d83c43d689}\label{class_transform_a7884cb828ace5c921e7138d83c43d689}} 
 \index{Transform@{Transform}!Create\+Quaternion@{Create\+Quaternion}}
 \index{Create\+Quaternion@{Create\+Quaternion}!Transform@{Transform}}
@@ -132,270 +291,790 @@ float \mbox{\hyperlink{class_transform_acda35632e3895b925eaae4625c564b5f}{look\+
 
 
 
- Transform.\+cpp の 241 行目に定義があります。
+クォータニオン作成関数 
 
-\mbox{\Hypertarget{class_transform_a8c4966ea0a5d6cafa79c430e31bf0dff}\label{class_transform_a8c4966ea0a5d6cafa79c430e31bf0dff}} 
-\index{Transform@{Transform}!Get\+Angle\+Pitch@{Get\+Angle\+Pitch}}
-\index{Get\+Angle\+Pitch@{Get\+Angle\+Pitch}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Get\+Angle\+Pitch()}{GetAnglePitch()}}
-{\footnotesize\ttfamily float$\ast$ Transform\+::\+Get\+Angle\+Pitch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
- Transform.\+h の 55 行目に定義があります。
 
-\mbox{\Hypertarget{class_transform_a124d6afb5dd0a86952c99f1cec72e394}\label{class_transform_a124d6afb5dd0a86952c99f1cec72e394}} 
-\index{Transform@{Transform}!Get\+Angle\+Roll@{Get\+Angle\+Roll}}
-\index{Get\+Angle\+Roll@{Get\+Angle\+Roll}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Get\+Angle\+Roll()}{GetAngleRoll()}}
-{\footnotesize\ttfamily float$\ast$ Transform\+::\+Get\+Angle\+Roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+ Transform.\+cpp の 344 行目に定義があります。
 
+\mbox{\Hypertarget{class_transform_a81a4882eb3c4d7afb243b9911c666b52}\label{class_transform_a81a4882eb3c4d7afb243b9911c666b52}} 
+\index{Transform@{Transform}!Create\+World\+Matrix@{Create\+World\+Matrix}}
+\index{Create\+World\+Matrix@{Create\+World\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Create\+World\+Matrix()}{CreateWorldMatrix()}}
+{\footnotesize\ttfamily void Transform\+::\+Create\+World\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
- Transform.\+h の 57 行目に定義があります。
 
-\mbox{\Hypertarget{class_transform_a8be9cd3526cc18d64e47b55f4c527dd8}\label{class_transform_a8be9cd3526cc18d64e47b55f4c527dd8}} 
-\index{Transform@{Transform}!Get\+Angle\+Yaw@{Get\+Angle\+Yaw}}
-\index{Get\+Angle\+Yaw@{Get\+Angle\+Yaw}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Get\+Angle\+Yaw()}{GetAngleYaw()}}
-{\footnotesize\ttfamily float$\ast$ Transform\+::\+Get\+Angle\+Yaw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+ワールド行列作成関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Transform.\+h の 56 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\Hypertarget{class_transform_a1bd5cddc216e7fafe12e5b605cb780ea}\label{class_transform_a1bd5cddc216e7fafe12e5b605cb780ea}} 
-\index{Transform@{Transform}!Get\+Angle\+Yaw\+Pitch\+Roll@{Get\+Angle\+Yaw\+Pitch\+Roll}}
-\index{Get\+Angle\+Yaw\+Pitch\+Roll@{Get\+Angle\+Yaw\+Pitch\+Roll}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Get\+Angle\+Yaw\+Pitch\+Roll()}{GetAngleYawPitchRoll()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}}$\ast$ Transform\+::\+Get\+Angle\+Yaw\+Pitch\+Roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+ Transform.\+cpp の 317 行目に定義があります。
 
+\mbox{\Hypertarget{class_transform_a26e42d4a1bd35070277b49a48ef5c4fd}\label{class_transform_a26e42d4a1bd35070277b49a48ef5c4fd}} 
+\index{Transform@{Transform}!Create\+World\+Matrix\+Plus\+Inverse@{Create\+World\+Matrix\+Plus\+Inverse}}
+\index{Create\+World\+Matrix\+Plus\+Inverse@{Create\+World\+Matrix\+Plus\+Inverse}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Create\+World\+Matrix\+Plus\+Inverse()}{CreateWorldMatrixPlusInverse()}}
+{\footnotesize\ttfamily void Transform\+::\+Create\+World\+Matrix\+Plus\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
- Transform.\+h の 58 行目に定義があります。
 
-\mbox{\Hypertarget{class_transform_ad300be34dddc6109ca142452e65aa77d}\label{class_transform_ad300be34dddc6109ca142452e65aa77d}} 
-\index{Transform@{Transform}!Get\+Axis\+Vector@{Get\+Axis\+Vector}}
-\index{Get\+Axis\+Vector@{Get\+Axis\+Vector}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Get\+Axis\+Vector()}{GetAxisVector()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_axis_vector}{Axis\+Vector}}$\ast$ Transform\+::\+Get\+Axis\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+逆行列付きワールド行列作成関数 
 
 
- Transform.\+h の 71 行目に定義があります。
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
-\mbox{\Hypertarget{class_transform_a25e4832e15334d74ff847f0ff0b3564f}\label{class_transform_a25e4832e15334d74ff847f0ff0b3564f}} 
-\index{Transform@{Transform}!Get\+Forawrd@{Get\+Forawrd}}
-\index{Get\+Forawrd@{Get\+Forawrd}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Get\+Forawrd()}{GetForawrd()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}}$\ast$ Transform\+::\+Get\+Forawrd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Transform.\+cpp の 326 行目に定義があります。
 
- Transform.\+h の 68 行目に定義があります。
+\mbox{\Hypertarget{class_transform_a49d2df9c3ffffa21e2df60ce2f531bca}\label{class_transform_a49d2df9c3ffffa21e2df60ce2f531bca}} 
+\index{Transform@{Transform}!Create\+World\+Matrix\+Plus\+Transpose@{Create\+World\+Matrix\+Plus\+Transpose}}
+\index{Create\+World\+Matrix\+Plus\+Transpose@{Create\+World\+Matrix\+Plus\+Transpose}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Create\+World\+Matrix\+Plus\+Transpose()}{CreateWorldMatrixPlusTranspose()}}
+{\footnotesize\ttfamily void Transform\+::\+Create\+World\+Matrix\+Plus\+Transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_transform_a14b7b06632d6a47e99dc67aecbd7acc7}\label{class_transform_a14b7b06632d6a47e99dc67aecbd7acc7}} 
-\index{Transform@{Transform}!Get\+Look\+At\+Change\+Amount@{Get\+Look\+At\+Change\+Amount}}
-\index{Get\+Look\+At\+Change\+Amount@{Get\+Look\+At\+Change\+Amount}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Get\+Look\+At\+Change\+Amount()}{GetLookAtChangeAmount()}}
-{\footnotesize\ttfamily float Transform\+::\+Get\+Look\+At\+Change\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+転置行列付きワールド行列作成関数 
 
- Transform.\+h の 62 行目に定義があります。
 
-\mbox{\Hypertarget{class_transform_a79fdb2cb4eb1e4abf48e0f9fd74707ba}\label{class_transform_a79fdb2cb4eb1e4abf48e0f9fd74707ba}} 
-\index{Transform@{Transform}!Get\+Look\+At\+Speed@{Get\+Look\+At\+Speed}}
-\index{Get\+Look\+At\+Speed@{Get\+Look\+At\+Speed}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Get\+Look\+At\+Speed()}{GetLookAtSpeed()}}
-{\footnotesize\ttfamily float Transform\+::\+Get\+Look\+At\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
- Transform.\+h の 61 行目に定義があります。
+ Transform.\+cpp の 335 行目に定義があります。
 
-\mbox{\Hypertarget{class_transform_ac5a4f96871b6c1bfde9b2a6b7b0d6953}\label{class_transform_ac5a4f96871b6c1bfde9b2a6b7b0d6953}} 
-\index{Transform@{Transform}!getp\+Matrix\+Extend@{getp\+Matrix\+Extend}}
-\index{getp\+Matrix\+Extend@{getp\+Matrix\+Extend}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{getp\+Matrix\+Extend()}{getpMatrixExtend()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix_extend}{Matrix\+Extend}}$\ast$ Transform\+::getp\+Matrix\+Extend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_transform_a85ecb6a9d972caf0ab7d2e58ad2753b7}\label{class_transform_a85ecb6a9d972caf0ab7d2e58ad2753b7}} 
+\index{Transform@{Transform}!getp\+Angle\+Pitch@{getp\+Angle\+Pitch}}
+\index{getp\+Angle\+Pitch@{getp\+Angle\+Pitch}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Angle\+Pitch()}{getpAnglePitch()}}
+{\footnotesize\ttfamily float $\ast$ Transform\+::getp\+Angle\+Pitch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Transform.\+h の 80 行目に定義があります。
+Pitch角度取得関数 
 
-\mbox{\Hypertarget{class_transform_addff6461a77b9f5c5249e46deb5c2c19}\label{class_transform_addff6461a77b9f5c5249e46deb5c2c19}} 
-\index{Transform@{Transform}!Get\+Position@{Get\+Position}}
-\index{Get\+Position@{Get\+Position}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Get\+Position()}{GetPosition()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}}$\ast$ Transform\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em float$\ast$} & Pitch角度 \\
+\hline
+\end{DoxyRetVals}
 
- Transform.\+h の 49 行目に定義があります。
 
-\mbox{\Hypertarget{class_transform_a19538fe991e76eb8146295e6f5f1ed99}\label{class_transform_a19538fe991e76eb8146295e6f5f1ed99}} 
-\index{Transform@{Transform}!getp\+World\+Matrix@{getp\+World\+Matrix}}
-\index{getp\+World\+Matrix@{getp\+World\+Matrix}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{getp\+World\+Matrix()}{getpWorldMatrix()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}}$\ast$ Transform\+::getp\+World\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+ Transform.\+cpp の 53 行目に定義があります。
 
+\mbox{\Hypertarget{class_transform_aa1f056b8f90affed5e251e68a93331d4}\label{class_transform_aa1f056b8f90affed5e251e68a93331d4}} 
+\index{Transform@{Transform}!getp\+Angle\+Roll@{getp\+Angle\+Roll}}
+\index{getp\+Angle\+Roll@{getp\+Angle\+Roll}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Angle\+Roll()}{getpAngleRoll()}}
+{\footnotesize\ttfamily float $\ast$ Transform\+::getp\+Angle\+Roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
- Transform.\+h の 79 行目に定義があります。
 
-\mbox{\Hypertarget{class_transform_a57d1da919d8df7d2452149c4bbade4d2}\label{class_transform_a57d1da919d8df7d2452149c4bbade4d2}} 
-\index{Transform@{Transform}!Get\+Right@{Get\+Right}}
-\index{Get\+Right@{Get\+Right}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Get\+Right()}{GetRight()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}}$\ast$ Transform\+::\+Get\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+Roll角度取得関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Transform.\+h の 70 行目に定義があります。
-
-\mbox{\Hypertarget{class_transform_accedf33a4ddbdcf2d4fc4274f85bf818}\label{class_transform_accedf33a4ddbdcf2d4fc4274f85bf818}} 
-\index{Transform@{Transform}!Get\+Scale@{Get\+Scale}}
-\index{Get\+Scale@{Get\+Scale}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Get\+Scale()}{GetScale()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}}$\ast$ Transform\+::\+Get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- Transform.\+h の 52 行目に定義があります。
-
-\mbox{\Hypertarget{class_transform_a9f5700481ae42556f763726947feaf36}\label{class_transform_a9f5700481ae42556f763726947feaf36}} 
-\index{Transform@{Transform}!Get\+Up@{Get\+Up}}
-\index{Get\+Up@{Get\+Up}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Get\+Up()}{GetUp()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}}$\ast$ Transform\+::\+Get\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- Transform.\+h の 69 行目に定義があります。
-
-\mbox{\Hypertarget{class_transform_ab6f7342cb4eca555c02a85c999d499dc}\label{class_transform_ab6f7342cb4eca555c02a85c999d499dc}} 
-\index{Transform@{Transform}!Set\+Look\+At\+Speed@{Set\+Look\+At\+Speed}}
-\index{Set\+Look\+At\+Speed@{Set\+Look\+At\+Speed}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Set\+Look\+At\+Speed()}{SetLookAtSpeed()}}
-{\footnotesize\ttfamily void Transform\+::\+Set\+Look\+At\+Speed (\begin{DoxyParamCaption}\item[{float}]{look\+\_\+at\+\_\+speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- Transform.\+h の 60 行目に定義があります。
-
-\mbox{\Hypertarget{class_transform_a39b78acbdbf3ee98cad0c4e640988745}\label{class_transform_a39b78acbdbf3ee98cad0c4e640988745}} 
-\index{Transform@{Transform}!Set\+Look\+At\+Vector@{Set\+Look\+At\+Vector}}
-\index{Set\+Look\+At\+Vector@{Set\+Look\+At\+Vector}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Set\+Look\+At\+Vector()}{SetLookAtVector()}}
-{\footnotesize\ttfamily void Transform\+::\+Set\+Look\+At\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{look\+\_\+at\+\_\+vector }\end{DoxyParamCaption})}
-
-
-
- Transform.\+cpp の 88 行目に定義があります。
-
-\mbox{\Hypertarget{class_transform_ac8cdb5ca9995d9c124f1890d84c92ab4}\label{class_transform_ac8cdb5ca9995d9c124f1890d84c92ab4}} 
-\index{Transform@{Transform}!Set\+Target\+Quaternion@{Set\+Target\+Quaternion}}
-\index{Set\+Target\+Quaternion@{Set\+Target\+Quaternion}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Set\+Target\+Quaternion()}{SetTargetQuaternion()}}
-{\footnotesize\ttfamily void Transform\+::\+Set\+Target\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}}}]{axis,  }\item[{float}]{angle }\end{DoxyParamCaption})}
-
-
-
- Transform.\+cpp の 126 行目に定義があります。
-
-\mbox{\Hypertarget{class_transform_a053037b225e6fb11e680cc60df15dd45}\label{class_transform_a053037b225e6fb11e680cc60df15dd45}} 
-\index{Transform@{Transform}!Transpose\+Matrix\+Translation\+Off@{Transpose\+Matrix\+Translation\+Off}}
-\index{Transpose\+Matrix\+Translation\+Off@{Transpose\+Matrix\+Translation\+Off}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Transpose\+Matrix\+Translation\+Off()}{TransposeMatrixTranslationOff()}}
-{\footnotesize\ttfamily void Transform\+::\+Transpose\+Matrix\+Translation\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- Transform.\+h の 78 行目に定義があります。
-
-\mbox{\Hypertarget{class_transform_afe5350bb1558256115e14c0669611acd}\label{class_transform_afe5350bb1558256115e14c0669611acd}} 
-\index{Transform@{Transform}!Update\+Axis\+Vector@{Update\+Axis\+Vector}}
-\index{Update\+Axis\+Vector@{Update\+Axis\+Vector}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Update\+Axis\+Vector()}{UpdateAxisVector()}}
-{\footnotesize\ttfamily void Transform\+::\+Update\+Axis\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
+\begin{DoxyRetVals}{戻り値}
+{\em float$\ast$} & Roll角度 \\
+\hline
+\end{DoxyRetVals}
 
 
  Transform.\+cpp の 67 行目に定義があります。
 
-\mbox{\Hypertarget{class_transform_a73a20f2b8baad21ba74a2b1c6d8a1ab2}\label{class_transform_a73a20f2b8baad21ba74a2b1c6d8a1ab2}} 
-\index{Transform@{Transform}!Update\+Axis\+Vector\+\_\+\+World\+Matrix\+I\+S\+RT@{Update\+Axis\+Vector\+\_\+\+World\+Matrix\+I\+S\+RT}}
-\index{Update\+Axis\+Vector\+\_\+\+World\+Matrix\+I\+S\+RT@{Update\+Axis\+Vector\+\_\+\+World\+Matrix\+I\+S\+RT}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Update\+Axis\+Vector\+\_\+\+World\+Matrix\+I\+S\+R\+T()}{UpdateAxisVector\_WorldMatrixISRT()}}
-{\footnotesize\ttfamily void Transform\+::\+Update\+Axis\+Vector\+\_\+\+World\+Matrix\+I\+S\+RT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_transform_a69600cd68c0a99518efec7da592e4841}\label{class_transform_a69600cd68c0a99518efec7da592e4841}} 
+\index{Transform@{Transform}!getp\+Angle\+Yaw@{getp\+Angle\+Yaw}}
+\index{getp\+Angle\+Yaw@{getp\+Angle\+Yaw}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Angle\+Yaw()}{getpAngleYaw()}}
+{\footnotesize\ttfamily float $\ast$ Transform\+::getp\+Angle\+Yaw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Transform.\+cpp の 218 行目に定義があります。
-
-\mbox{\Hypertarget{class_transform_af02515be1947506212ca1c23223ce0b3}\label{class_transform_af02515be1947506212ca1c23223ce0b3}} 
-\index{Transform@{Transform}!Update\+Axis\+Vector\+\_\+\+World\+Matrix\+S\+RT@{Update\+Axis\+Vector\+\_\+\+World\+Matrix\+S\+RT}}
-\index{Update\+Axis\+Vector\+\_\+\+World\+Matrix\+S\+RT@{Update\+Axis\+Vector\+\_\+\+World\+Matrix\+S\+RT}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Update\+Axis\+Vector\+\_\+\+World\+Matrix\+S\+R\+T()}{UpdateAxisVector\_WorldMatrixSRT()}}
-{\footnotesize\ttfamily void Transform\+::\+Update\+Axis\+Vector\+\_\+\+World\+Matrix\+S\+RT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Yaw角度取得関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Transform.\+cpp の 195 行目に定義があります。
-
-\mbox{\Hypertarget{class_transform_a3d2e5da24fb1c8015f5bb9a6c0a7a7de}\label{class_transform_a3d2e5da24fb1c8015f5bb9a6c0a7a7de}} 
-\index{Transform@{Transform}!Update\+Inverse\+Matrix@{Update\+Inverse\+Matrix}}
-\index{Update\+Inverse\+Matrix@{Update\+Inverse\+Matrix}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Update\+Inverse\+Matrix()}{UpdateInverseMatrix()}}
-{\footnotesize\ttfamily void Transform\+::\+Update\+Inverse\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em float$\ast$} & Yaw角度 \\
+\hline
+\end{DoxyRetVals}
 
 
+ Transform.\+cpp の 60 行目に定義があります。
 
- Transform.\+h の 76 行目に定義があります。
-
-\mbox{\Hypertarget{class_transform_a486ae5501b5081b22ee053f787e0e4a2}\label{class_transform_a486ae5501b5081b22ee053f787e0e4a2}} 
-\index{Transform@{Transform}!Update\+Transpose\+Matrix@{Update\+Transpose\+Matrix}}
-\index{Update\+Transpose\+Matrix@{Update\+Transpose\+Matrix}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Update\+Transpose\+Matrix()}{UpdateTransposeMatrix()}}
-{\footnotesize\ttfamily void Transform\+::\+Update\+Transpose\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_transform_aadf052a769af0793916a25c88d00640c}\label{class_transform_aadf052a769af0793916a25c88d00640c}} 
+\index{Transform@{Transform}!getp\+Angle\+Yaw\+Pitch\+Roll@{getp\+Angle\+Yaw\+Pitch\+Roll}}
+\index{getp\+Angle\+Yaw\+Pitch\+Roll@{getp\+Angle\+Yaw\+Pitch\+Roll}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Angle\+Yaw\+Pitch\+Roll()}{getpAngleYawPitchRoll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Transform\+::getp\+Angle\+Yaw\+Pitch\+Roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Transform.\+h の 77 行目に定義があります。
+Yaw\+Pitch\+Roll角度取得関数 
 
-\mbox{\Hypertarget{class_transform_a3d56e19fba7f44d5f938d62481846fbc}\label{class_transform_a3d56e19fba7f44d5f938d62481846fbc}} 
-\index{Transform@{Transform}!Update\+World\+Matrix\+I\+S\+RT@{Update\+World\+Matrix\+I\+S\+RT}}
-\index{Update\+World\+Matrix\+I\+S\+RT@{Update\+World\+Matrix\+I\+S\+RT}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Update\+World\+Matrix\+I\+S\+R\+T()}{UpdateWorldMatrixISRT()}}
-{\footnotesize\ttfamily void Transform\+::\+Update\+World\+Matrix\+I\+S\+RT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & Yaw\+Pitch\+Roll角度 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 74 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_aa01e95eff5d3bb0a2df9d81faa229143}\label{class_transform_aa01e95eff5d3bb0a2df9d81faa229143}} 
+\index{Transform@{Transform}!getp\+Forward@{getp\+Forward}}
+\index{getp\+Forward@{getp\+Forward}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Forward()}{getpForward()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Transform\+::getp\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+前ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 前ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 142 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_af172f4f0dfb057d1ee473d1314787352}\label{class_transform_af172f4f0dfb057d1ee473d1314787352}} 
+\index{Transform@{Transform}!getp\+Inverse\+Matrix@{getp\+Inverse\+Matrix}}
+\index{getp\+Inverse\+Matrix@{getp\+Inverse\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Inverse\+Matrix()}{getpInverseMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ Transform\+::getp\+Inverse\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+逆行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Matrix$\ast$} & 逆行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 192 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a812895ad4ebc4c713ece357167733418}\label{class_transform_a812895ad4ebc4c713ece357167733418}} 
+\index{Transform@{Transform}!getp\+Look\+At\+Speed@{getp\+Look\+At\+Speed}}
+\index{getp\+Look\+At\+Speed@{getp\+Look\+At\+Speed}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Look\+At\+Speed()}{getpLookAtSpeed()}}
+{\footnotesize\ttfamily float $\ast$ Transform\+::getp\+Look\+At\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+向く速度取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float$\ast$} & 向く速度 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 81 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a5d30e9aa1c2d1fff96996b6368a7f610}\label{class_transform_a5d30e9aa1c2d1fff96996b6368a7f610}} 
+\index{Transform@{Transform}!getp\+No\+Init\+Rotation\+Matrix@{getp\+No\+Init\+Rotation\+Matrix}}
+\index{getp\+No\+Init\+Rotation\+Matrix@{getp\+No\+Init\+Rotation\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+No\+Init\+Rotation\+Matrix()}{getpNoInitRotationMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ Transform\+::getp\+No\+Init\+Rotation\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期回転無し回転行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Matrix$\ast$} & 拡縮行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 185 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a17fb2c084b43710345a261438ae67b7c}\label{class_transform_a17fb2c084b43710345a261438ae67b7c}} 
+\index{Transform@{Transform}!getp\+No\+Init\+Rotation\+World\+Matrix@{getp\+No\+Init\+Rotation\+World\+Matrix}}
+\index{getp\+No\+Init\+Rotation\+World\+Matrix@{getp\+No\+Init\+Rotation\+World\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+No\+Init\+Rotation\+World\+Matrix()}{getpNoInitRotationWorldMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ Transform\+::getp\+No\+Init\+Rotation\+World\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期回転無しワールド行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Matrix$\ast$} & 初期回転無しワールド行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 229 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a1ed223415917a6b33e5fd7af132f6b9c}\label{class_transform_a1ed223415917a6b33e5fd7af132f6b9c}} 
+\index{Transform@{Transform}!getp\+Position@{getp\+Position}}
+\index{getp\+Position@{getp\+Position}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Position()}{getpPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Transform\+::getp\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+座標取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 座標 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 20 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a825ad9edaf799a83076cbb9f78852649}\label{class_transform_a825ad9edaf799a83076cbb9f78852649}} 
+\index{Transform@{Transform}!getp\+Position\+Matrix@{getp\+Position\+Matrix}}
+\index{getp\+Position\+Matrix@{getp\+Position\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Position\+Matrix()}{getpPositionMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ Transform\+::getp\+Position\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+座標行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Matrix$\ast$} & 座標行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 163 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a636334048ae8fb50455ec8fd290668d6}\label{class_transform_a636334048ae8fb50455ec8fd290668d6}} 
+\index{Transform@{Transform}!getp\+Right@{getp\+Right}}
+\index{getp\+Right@{getp\+Right}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Right()}{getpRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Transform\+::getp\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+右ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 右ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 156 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_af0ea9094ccda77809978208614772447}\label{class_transform_af0ea9094ccda77809978208614772447}} 
+\index{Transform@{Transform}!getp\+Rotation\+Matrix@{getp\+Rotation\+Matrix}}
+\index{getp\+Rotation\+Matrix@{getp\+Rotation\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Rotation\+Matrix()}{getpRotationMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ Transform\+::getp\+Rotation\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+回転行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Matrix$\ast$} & 拡縮行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 178 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_ac1a821bfab91b10a072eac81efdc741d}\label{class_transform_ac1a821bfab91b10a072eac81efdc741d}} 
+\index{Transform@{Transform}!getp\+Scale@{getp\+Scale}}
+\index{getp\+Scale@{getp\+Scale}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Scale()}{getpScale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Transform\+::getp\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+拡縮取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 座標 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_ad7b44f1e97d83f2f810e231bae2de2b5}\label{class_transform_ad7b44f1e97d83f2f810e231bae2de2b5}} 
+\index{Transform@{Transform}!getp\+Scale\+Matrix@{getp\+Scale\+Matrix}}
+\index{getp\+Scale\+Matrix@{getp\+Scale\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Scale\+Matrix()}{getpScaleMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ Transform\+::getp\+Scale\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+拡縮行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Matrix$\ast$} & 拡縮行列 \\
+\hline
+\end{DoxyRetVals}
 
 
  Transform.\+cpp の 171 行目に定義があります。
 
-\mbox{\Hypertarget{class_transform_af1a2dcb4a9d37dd71c203ec248535887}\label{class_transform_af1a2dcb4a9d37dd71c203ec248535887}} 
-\index{Transform@{Transform}!Update\+World\+Matrix\+S\+RT@{Update\+World\+Matrix\+S\+RT}}
-\index{Update\+World\+Matrix\+S\+RT@{Update\+World\+Matrix\+S\+RT}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{Update\+World\+Matrix\+S\+R\+T()}{UpdateWorldMatrixSRT()}}
-{\footnotesize\ttfamily void Transform\+::\+Update\+World\+Matrix\+S\+RT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_transform_aee502a42628072064f2b3d2060f2d53f}\label{class_transform_aee502a42628072064f2b3d2060f2d53f}} 
+\index{Transform@{Transform}!getp\+Transpose\+Matrix@{getp\+Transpose\+Matrix}}
+\index{getp\+Transpose\+Matrix@{getp\+Transpose\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Transpose\+Matrix()}{getpTransposeMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ Transform\+::getp\+Transpose\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Transform.\+cpp の 147 行目に定義があります。
+転置行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Matrix$\ast$} & 転置行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 207 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a98796d7ad6726567b5b12ab65254a79d}\label{class_transform_a98796d7ad6726567b5b12ab65254a79d}} 
+\index{Transform@{Transform}!getp\+Up@{getp\+Up}}
+\index{getp\+Up@{getp\+Up}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+Up()}{getpUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Transform\+::getp\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+上ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 上ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 149 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a58114e02f195f91f9bb807d49c34fe32}\label{class_transform_a58114e02f195f91f9bb807d49c34fe32}} 
+\index{Transform@{Transform}!getp\+World\+Matrix@{getp\+World\+Matrix}}
+\index{getp\+World\+Matrix@{getp\+World\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{getp\+World\+Matrix()}{getpWorldMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ Transform\+::getp\+World\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ワールド行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Matrix$\ast$} & ワールド行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 222 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a4b911801aa231c13922c0e11032b8d5a}\label{class_transform_a4b911801aa231c13922c0e11032b8d5a}} 
+\index{Transform@{Transform}!Init@{Init}}
+\index{Init@{Init}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Transform\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 273 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_aaf47943b2583b4cb31a54881b5ef8eca}\label{class_transform_aaf47943b2583b4cb31a54881b5ef8eca}} 
+\index{Transform@{Transform}!Reflect\+Matrix@{Reflect\+Matrix}}
+\index{Reflect\+Matrix@{Reflect\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Reflect\+Matrix()}{ReflectMatrix()}}
+{\footnotesize\ttfamily void Transform\+::\+Reflect\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+行列反映関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 371 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_acb3b15a0b011f21a849ca1648ed1c581}\label{class_transform_acb3b15a0b011f21a849ca1648ed1c581}} 
+\index{Transform@{Transform}!Reset\+Add\+Quaternion@{Reset\+Add\+Quaternion}}
+\index{Reset\+Add\+Quaternion@{Reset\+Add\+Quaternion}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Reset\+Add\+Quaternion()}{ResetAddQuaternion()}}
+{\footnotesize\ttfamily void Transform\+::\+Reset\+Add\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+追加用クォータニオンリセット関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 302 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a0f7b2731c46624ea54126e36fe1d0dd1}\label{class_transform_a0f7b2731c46624ea54126e36fe1d0dd1}} 
+\index{Transform@{Transform}!set\+Add\+Quaternion@{set\+Add\+Quaternion}}
+\index{set\+Add\+Quaternion@{set\+Add\+Quaternion}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{set\+Add\+Quaternion()}{setAddQuaternion()}}
+{\footnotesize\ttfamily void Transform\+::set\+Add\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}}}]{value }\end{DoxyParamCaption})}
+
+
+
+追加用クォータニオン設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 追加用クォータニオン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_ab64af2387c413b75c26ef343104a56db}\label{class_transform_ab64af2387c413b75c26ef343104a56db}} 
+\index{Transform@{Transform}!set\+Init\+Angle@{set\+Init\+Angle}}
+\index{set\+Init\+Angle@{set\+Init\+Angle}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{set\+Init\+Angle()}{setInitAngle()}}
+{\footnotesize\ttfamily void Transform\+::set\+Init\+Angle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{value }\end{DoxyParamCaption})}
+
+
+
+初期角度取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a78b6b021ca4cc1641f934160befb39dd}\label{class_transform_a78b6b021ca4cc1641f934160befb39dd}} 
+\index{Transform@{Transform}!set\+Inverse\+Matrix@{set\+Inverse\+Matrix}}
+\index{set\+Inverse\+Matrix@{set\+Inverse\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{set\+Inverse\+Matrix()}{setInverseMatrix()}}
+{\footnotesize\ttfamily void Transform\+::set\+Inverse\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+逆行列設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 逆行列にしたい行列 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 199 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a7a90095a66990f9e17b22c141dbe1379}\label{class_transform_a7a90095a66990f9e17b22c141dbe1379}} 
+\index{Transform@{Transform}!set\+Look\+At\+Vector@{set\+Look\+At\+Vector}}
+\index{set\+Look\+At\+Vector@{set\+Look\+At\+Vector}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{set\+Look\+At\+Vector()}{setLookAtVector()}}
+{\footnotesize\ttfamily void Transform\+::set\+Look\+At\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{look\+\_\+at\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+向くベクトル設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em look\+\_\+at\+\_\+vector} & 向くベクトル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 88 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_aa2d0352ed37603f7a80a8562ade5bcbe}\label{class_transform_aa2d0352ed37603f7a80a8562ade5bcbe}} 
+\index{Transform@{Transform}!set\+Target\+Quaternion@{set\+Target\+Quaternion}}
+\index{set\+Target\+Quaternion@{set\+Target\+Quaternion}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{set\+Target\+Quaternion()}{setTargetQuaternion()}}
+{\footnotesize\ttfamily void Transform\+::set\+Target\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{axis,  }\item[{float}]{angle }\end{DoxyParamCaption})}
+
+
+
+ターゲットクォータニオン設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em axis} & 軸 \\
+\hline
+{\em angle} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 127 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a710f94248ae113eb6b28849a01f3fedc}\label{class_transform_a710f94248ae113eb6b28849a01f3fedc}} 
+\index{Transform@{Transform}!set\+Transpose\+Matrix@{set\+Transpose\+Matrix}}
+\index{set\+Transpose\+Matrix@{set\+Transpose\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{set\+Transpose\+Matrix()}{setTransposeMatrix()}}
+{\footnotesize\ttfamily void Transform\+::set\+Transpose\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$}]{value,  }\item[{bool}]{is\+\_\+position\+\_\+off = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+転置行列設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 転置行列にしたい行列 \\
+\hline
+{\em is\+\_\+position\+\_\+off} & 平行移動\+O\+F\+Fフラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Transform.\+cpp の 214 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
-\mbox{\Hypertarget{class_transform_a2bde97ec180664c5587c445737c04cbe}\label{class_transform_a2bde97ec180664c5587c445737c04cbe}} 
-\index{Transform@{Transform}!axis\+\_\+vector\+\_\+@{axis\+\_\+vector\+\_\+}}
-\index{axis\+\_\+vector\+\_\+@{axis\+\_\+vector\+\_\+}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{axis\+\_\+vector\+\_\+}{axis\_vector\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_axis_vector}{Axis\+Vector}} Transform\+::axis\+\_\+vector\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_transform_a8a646ffca2f737bca6b3ad183b4ce54a}\label{class_transform_a8a646ffca2f737bca6b3ad183b4ce54a}} 
+\index{Transform@{Transform}!add\+\_\+quaternion\+\_\+@{add\+\_\+quaternion\+\_\+}}
+\index{add\+\_\+quaternion\+\_\+@{add\+\_\+quaternion\+\_\+}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{add\+\_\+quaternion\+\_\+}{add\_quaternion\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} Transform\+::add\+\_\+quaternion\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Transform.\+h の 114 行目に定義があります。
+追加用クォータニオン 
+
+
+
+ Transform.\+h の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_ac0637721b2a1f2e10dca46caa9a0d77d}\label{class_transform_ac0637721b2a1f2e10dca46caa9a0d77d}} 
+\index{Transform@{Transform}!init\+\_\+quaternion\+\_\+@{init\+\_\+quaternion\+\_\+}}
+\index{init\+\_\+quaternion\+\_\+@{init\+\_\+quaternion\+\_\+}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{init\+\_\+quaternion\+\_\+}{init\_quaternion\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} Transform\+::init\+\_\+quaternion\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+初期値クォータニオン 
+
+
+
+ Transform.\+h の 25 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a0b1d18a3f04fa8b38e6c8c1cd6d51a51}\label{class_transform_a0b1d18a3f04fa8b38e6c8c1cd6d51a51}} 
+\index{Transform@{Transform}!inverse\+\_\+matrix\+\_\+@{inverse\+\_\+matrix\+\_\+}}
+\index{inverse\+\_\+matrix\+\_\+@{inverse\+\_\+matrix\+\_\+}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{inverse\+\_\+matrix\+\_\+}{inverse\_matrix\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Transform\+::inverse\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+逆行列 
+
+
+
+ Transform.\+h の 38 行目に定義があります。
 
 \mbox{\Hypertarget{class_transform_acda35632e3895b925eaae4625c564b5f}\label{class_transform_acda35632e3895b925eaae4625c564b5f}} 
 \index{Transform@{Transform}!look\+\_\+at\+\_\+change\+\_\+amount\+\_\+@{look\+\_\+at\+\_\+change\+\_\+amount\+\_\+}}
@@ -405,7 +1084,11 @@ float \mbox{\hyperlink{class_transform_acda35632e3895b925eaae4625c564b5f}{look\+
 
 
 
- Transform.\+h の 108 行目に定義があります。
+向く変化量 
+
+
+
+ Transform.\+h の 33 行目に定義があります。
 
 \mbox{\Hypertarget{class_transform_a762490e0b35915244f767d618bb875b4}\label{class_transform_a762490e0b35915244f767d618bb875b4}} 
 \index{Transform@{Transform}!look\+\_\+at\+\_\+speed\+\_\+@{look\+\_\+at\+\_\+speed\+\_\+}}
@@ -415,17 +1098,39 @@ float \mbox{\hyperlink{class_transform_acda35632e3895b925eaae4625c564b5f}{look\+
 
 
 
- Transform.\+h の 107 行目に定義があります。
-
-\mbox{\Hypertarget{class_transform_a150c78be6568eaf017165ff5c90d6928}\label{class_transform_a150c78be6568eaf017165ff5c90d6928}} 
-\index{Transform@{Transform}!matrix\+\_\+extend\+\_\+@{matrix\+\_\+extend\+\_\+}}
-\index{matrix\+\_\+extend\+\_\+@{matrix\+\_\+extend\+\_\+}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{matrix\+\_\+extend\+\_\+}{matrix\_extend\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix_extend}{Matrix\+Extend}} Transform\+::matrix\+\_\+extend\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+向く速度 
 
 
 
- Transform.\+h の 111 行目に定義があります。
+ Transform.\+h の 32 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a0e893bc920666b3a4295cdf383441198}\label{class_transform_a0e893bc920666b3a4295cdf383441198}} 
+\index{Transform@{Transform}!no\+\_\+init\+\_\+rotation\+\_\+matrix\+\_\+@{no\+\_\+init\+\_\+rotation\+\_\+matrix\+\_\+}}
+\index{no\+\_\+init\+\_\+rotation\+\_\+matrix\+\_\+@{no\+\_\+init\+\_\+rotation\+\_\+matrix\+\_\+}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{no\+\_\+init\+\_\+rotation\+\_\+matrix\+\_\+}{no\_init\_rotation\_matrix\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Transform\+::no\+\_\+init\+\_\+rotation\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+初期回転無し回転行列 
+
+
+
+ Transform.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a73e621ceb673d8e8546831d536d9b47e}\label{class_transform_a73e621ceb673d8e8546831d536d9b47e}} 
+\index{Transform@{Transform}!no\+\_\+init\+\_\+rotation\+\_\+world\+\_\+matrix\+\_\+@{no\+\_\+init\+\_\+rotation\+\_\+world\+\_\+matrix\+\_\+}}
+\index{no\+\_\+init\+\_\+rotation\+\_\+world\+\_\+matrix\+\_\+@{no\+\_\+init\+\_\+rotation\+\_\+world\+\_\+matrix\+\_\+}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{no\+\_\+init\+\_\+rotation\+\_\+world\+\_\+matrix\+\_\+}{no\_init\_rotation\_world\_matrix\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Transform\+::no\+\_\+init\+\_\+rotation\+\_\+world\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+初期回転無しワールド行列 
+
+
+
+ Transform.\+h の 41 行目に定義があります。
 
 \mbox{\Hypertarget{class_transform_a00d46dfb43b1e60b4f6ca8728d6aff54}\label{class_transform_a00d46dfb43b1e60b4f6ca8728d6aff54}} 
 \index{Transform@{Transform}!now\+\_\+quaternion\+\_\+@{now\+\_\+quaternion\+\_\+}}
@@ -435,7 +1140,11 @@ float \mbox{\hyperlink{class_transform_acda35632e3895b925eaae4625c564b5f}{look\+
 
 
 
- Transform.\+h の 102 行目に定義があります。
+現在用クォータニオン 
+
+
+
+ Transform.\+h の 26 行目に定義があります。
 
 \mbox{\Hypertarget{class_transform_a52fa2db52356033f42908fde94f9cb28}\label{class_transform_a52fa2db52356033f42908fde94f9cb28}} 
 \index{Transform@{Transform}!old\+\_\+target\+\_\+quaternion\+\_\+@{old\+\_\+target\+\_\+quaternion\+\_\+}}
@@ -445,7 +1154,11 @@ float \mbox{\hyperlink{class_transform_acda35632e3895b925eaae4625c564b5f}{look\+
 
 
 
- Transform.\+h の 105 行目に定義があります。
+古いターゲットクォータニオン 
+
+
+
+ Transform.\+h の 30 行目に定義があります。
 
 \mbox{\Hypertarget{class_transform_aa36f8a9ae39411699f7ff77f017f618a}\label{class_transform_aa36f8a9ae39411699f7ff77f017f618a}} 
 \index{Transform@{Transform}!position\+\_\+@{position\+\_\+}}
@@ -455,7 +1168,39 @@ float \mbox{\hyperlink{class_transform_acda35632e3895b925eaae4625c564b5f}{look\+
 
 
 
- Transform.\+h の 96 行目に定義があります。
+座標 
+
+
+
+ Transform.\+h の 23 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a52dc8d953e340e21ecd0a56fb5cb5a09}\label{class_transform_a52dc8d953e340e21ecd0a56fb5cb5a09}} 
+\index{Transform@{Transform}!position\+\_\+matrix\+\_\+@{position\+\_\+matrix\+\_\+}}
+\index{position\+\_\+matrix\+\_\+@{position\+\_\+matrix\+\_\+}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{position\+\_\+matrix\+\_\+}{position\_matrix\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Transform\+::position\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+座標行列 
+
+
+
+ Transform.\+h の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a58e41c4d959a094c8dc1b2178fcb4fc2}\label{class_transform_a58e41c4d959a094c8dc1b2178fcb4fc2}} 
+\index{Transform@{Transform}!rotation\+\_\+matrix\+\_\+@{rotation\+\_\+matrix\+\_\+}}
+\index{rotation\+\_\+matrix\+\_\+@{rotation\+\_\+matrix\+\_\+}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{rotation\+\_\+matrix\+\_\+}{rotation\_matrix\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Transform\+::rotation\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+回転行列 
+
+
+
+ Transform.\+h の 36 行目に定義があります。
 
 \mbox{\Hypertarget{class_transform_ade54d2d37f01b20758b0ce11def76104}\label{class_transform_ade54d2d37f01b20758b0ce11def76104}} 
 \index{Transform@{Transform}!scale\+\_\+@{scale\+\_\+}}
@@ -465,7 +1210,25 @@ float \mbox{\hyperlink{class_transform_acda35632e3895b925eaae4625c564b5f}{look\+
 
 
 
- Transform.\+h の 99 行目に定義があります。
+拡縮 
+
+
+
+ Transform.\+h の 24 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a052a5c220aac57fdb9f8c879f613de84}\label{class_transform_a052a5c220aac57fdb9f8c879f613de84}} 
+\index{Transform@{Transform}!scale\+\_\+matrix\+\_\+@{scale\+\_\+matrix\+\_\+}}
+\index{scale\+\_\+matrix\+\_\+@{scale\+\_\+matrix\+\_\+}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{scale\+\_\+matrix\+\_\+}{scale\_matrix\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Transform\+::scale\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+拡縮行列 
+
+
+
+ Transform.\+h の 35 行目に定義があります。
 
 \mbox{\Hypertarget{class_transform_acb5b22818929f01f4765a39f2da01579}\label{class_transform_acb5b22818929f01f4765a39f2da01579}} 
 \index{Transform@{Transform}!target\+\_\+quaternion\+\_\+@{target\+\_\+quaternion\+\_\+}}
@@ -475,17 +1238,53 @@ float \mbox{\hyperlink{class_transform_acda35632e3895b925eaae4625c564b5f}{look\+
 
 
 
- Transform.\+h の 106 行目に定義があります。
-
-\mbox{\Hypertarget{class_transform_a725d32ecbcf8da99d63bb6296d9cd123}\label{class_transform_a725d32ecbcf8da99d63bb6296d9cd123}} 
-\index{Transform@{Transform}!yaw\+\_\+pitch\+\_\+roll\+\_\+@{yaw\+\_\+pitch\+\_\+roll\+\_\+}}
-\index{yaw\+\_\+pitch\+\_\+roll\+\_\+@{yaw\+\_\+pitch\+\_\+roll\+\_\+}!Transform@{Transform}}
-\subsubsection{\texorpdfstring{yaw\+\_\+pitch\+\_\+roll\+\_\+}{yaw\_pitch\_roll\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Transform\+::yaw\+\_\+pitch\+\_\+roll\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+ターゲットクォータニオン 
 
 
 
- Transform.\+h の 104 行目に定義があります。
+ Transform.\+h の 29 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_abc32fce01f3c1ab82fed2f4b6dca1871}\label{class_transform_abc32fce01f3c1ab82fed2f4b6dca1871}} 
+\index{Transform@{Transform}!transpose\+\_\+matrix\+\_\+@{transpose\+\_\+matrix\+\_\+}}
+\index{transpose\+\_\+matrix\+\_\+@{transpose\+\_\+matrix\+\_\+}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{transpose\+\_\+matrix\+\_\+}{transpose\_matrix\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Transform\+::transpose\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+転置行列 
+
+
+
+ Transform.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_a3a429ea1108d116f0b099b7a8fc8b477}\label{class_transform_a3a429ea1108d116f0b099b7a8fc8b477}} 
+\index{Transform@{Transform}!world\+\_\+matrix\+\_\+@{world\+\_\+matrix\+\_\+}}
+\index{world\+\_\+matrix\+\_\+@{world\+\_\+matrix\+\_\+}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{world\+\_\+matrix\+\_\+}{world\_matrix\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Transform\+::world\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ワールド行列 
+
+
+
+ Transform.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_transform_acf33e8171e9803bebe3aba14dbedc90e}\label{class_transform_acf33e8171e9803bebe3aba14dbedc90e}} 
+\index{Transform@{Transform}!yaw\+\_\+pitch\+\_\+roll\+\_\+angle\+\_\+@{yaw\+\_\+pitch\+\_\+roll\+\_\+angle\+\_\+}}
+\index{yaw\+\_\+pitch\+\_\+roll\+\_\+angle\+\_\+@{yaw\+\_\+pitch\+\_\+roll\+\_\+angle\+\_\+}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{yaw\+\_\+pitch\+\_\+roll\+\_\+angle\+\_\+}{yaw\_pitch\_roll\_angle\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Transform\+::yaw\+\_\+pitch\+\_\+roll\+\_\+angle\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Yaw\+Pitch\+Roll角度 
+
+
+
+ Transform.\+h の 31 行目に定義があります。
 
 \mbox{\Hypertarget{class_transform_ac9985a4b70b9af742c9f26f47784ba7b}\label{class_transform_ac9985a4b70b9af742c9f26f47784ba7b}} 
 \index{Transform@{Transform}!yaw\+\_\+pitch\+\_\+roll\+\_\+quaternion\+\_\+@{yaw\+\_\+pitch\+\_\+roll\+\_\+quaternion\+\_\+}}
@@ -495,11 +1294,15 @@ float \mbox{\hyperlink{class_transform_acda35632e3895b925eaae4625c564b5f}{look\+
 
 
 
- Transform.\+h の 103 行目に定義があります。
+Yaw\+Pitch\+Rollクォータニオン 
+
+
+
+ Transform.\+h の 28 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Vector/\+Transform/\mbox{\hyperlink{_transform_8h}{Transform.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Vector/\+Transform/\mbox{\hyperlink{_transform_8cpp}{Transform.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_transform_8h}{Transform.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\+Source/\mbox{\hyperlink{_transform_8cpp}{Transform.\+cpp}}\end{DoxyCompactItemize}

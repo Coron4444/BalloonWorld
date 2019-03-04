@@ -1,0 +1,332 @@
+\hypertarget{class_random}{}\section{Random クラス}
+\label{class_random}\index{Random@{Random}}
+
+
+ランダム\+Class(\+Singleton)  
+
+
+
+
+{\ttfamily \#include $<$Random.\+h$>$}
+
+
+
+Random 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{class_random__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_random_a7aac570ca0e486704a9c7f27ea884fe6}{get\+Int}} (int min, int max)
+\begin{DoxyCompactList}\small\item\em Int型乱数値取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_random_a7c208cfc4a9859dbf23bd45e73e26ffa}{get\+Float}} (float min, float max)
+\begin{DoxyCompactList}\small\item\em Float型乱数値取得関数 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_random_a90608f1db0e83ce6dcf7a5df43bce02e}{get\+Double}} (double min, double max)
+\begin{DoxyCompactList}\small\item\em Double型乱数値取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_random_a9feade8fc8026ed3e7aad3b1cdd9b55a}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_random_a3bf09c7188122af5008037b46390c3e7}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_random}{Random}} $\ast$ \mbox{\hyperlink{class_random_a96dbaee553997a71a331fb0b335aa72d}{getp\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス取得関数 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_random_aad4d635b6fddc21bedf7458b0ce49636}{Release\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンス解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_random_acb76b49c3903a3c4fb67fd216341f08d}{Random}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_random_a6ae0395173fd90135e5f4fc643532f1f}{Random}} (const \mbox{\hyperlink{class_random}{Random}} \&class\+\_\+name)=delete
+\item 
+\mbox{\hyperlink{class_random}{Random}} \& \mbox{\hyperlink{class_random_a233dc764071ecf4e95619ea86f7edf61}{operator=}} (const \mbox{\hyperlink{class_random}{Random}} \&class\+\_\+name)=delete
+\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+std\+::random\+\_\+device \mbox{\hyperlink{class_random_a9dec4a6da7decaf52f9e972f63cc679c}{seed\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 完全ランダムシード \end{DoxyCompactList}\item 
+std\+::mt19937 \mbox{\hyperlink{class_random_a149a0bd07119c7e33a4b838be0c53da9}{mersenne\+\_\+twister\+\_\+}}
+\begin{DoxyCompactList}\small\item\em メルセンヌツイスター乱数生成器 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_random}{Random}} $\ast$ \mbox{\hyperlink{class_random_a7fda13c77002515c81152b21b6d92e9e}{instance\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em インスタンス \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+ランダム\+Class(\+Singleton) 
+
+ランダムの\+Class(\+Singleton) 
+
+ Random.\+h の 24 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_random_acb76b49c3903a3c4fb67fd216341f08d}\label{class_random_acb76b49c3903a3c4fb67fd216341f08d}} 
+\index{Random@{Random}!Random@{Random}}
+\index{Random@{Random}!Random@{Random}}
+\subsubsection{\texorpdfstring{Random()}{Random()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Random\+::\+Random (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Random.\+cpp の 78 行目に定義があります。
+
+\mbox{\Hypertarget{class_random_a6ae0395173fd90135e5f4fc643532f1f}\label{class_random_a6ae0395173fd90135e5f4fc643532f1f}} 
+\index{Random@{Random}!Random@{Random}}
+\index{Random@{Random}!Random@{Random}}
+\subsubsection{\texorpdfstring{Random()}{Random()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Random\+::\+Random (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_random}{Random}} \&}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_random_a90608f1db0e83ce6dcf7a5df43bce02e}\label{class_random_a90608f1db0e83ce6dcf7a5df43bce02e}} 
+\index{Random@{Random}!get\+Double@{get\+Double}}
+\index{get\+Double@{get\+Double}!Random@{Random}}
+\subsubsection{\texorpdfstring{get\+Double()}{getDouble()}}
+{\footnotesize\ttfamily double Random\+::get\+Double (\begin{DoxyParamCaption}\item[{double}]{min,  }\item[{double}]{max }\end{DoxyParamCaption})}
+
+
+
+Double型乱数値取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em min} & 最小値 \\
+\hline
+{\em max} & 最大値 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & int型乱数値 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Random.\+cpp の 67 行目に定義があります。
+
+\mbox{\Hypertarget{class_random_a7c208cfc4a9859dbf23bd45e73e26ffa}\label{class_random_a7c208cfc4a9859dbf23bd45e73e26ffa}} 
+\index{Random@{Random}!get\+Float@{get\+Float}}
+\index{get\+Float@{get\+Float}!Random@{Random}}
+\subsubsection{\texorpdfstring{get\+Float()}{getFloat()}}
+{\footnotesize\ttfamily float Random\+::get\+Float (\begin{DoxyParamCaption}\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})}
+
+
+
+Float型乱数値取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em min} & 最小値 \\
+\hline
+{\em max} & 最大値 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & int型乱数値 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Random.\+cpp の 59 行目に定義があります。
+
+\mbox{\Hypertarget{class_random_a7aac570ca0e486704a9c7f27ea884fe6}\label{class_random_a7aac570ca0e486704a9c7f27ea884fe6}} 
+\index{Random@{Random}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!Random@{Random}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int Random\+::get\+Int (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Int型乱数値取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em min} & 最小値 \\
+\hline
+{\em max} & 最大値 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & int型乱数値 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Random.\+cpp の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_random_a96dbaee553997a71a331fb0b335aa72d}\label{class_random_a96dbaee553997a71a331fb0b335aa72d}} 
+\index{Random@{Random}!getp\+Instance@{getp\+Instance}}
+\index{getp\+Instance@{getp\+Instance}!Random@{Random}}
+\subsubsection{\texorpdfstring{getp\+Instance()}{getpInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_random}{Random}} $\ast$ Random\+::getp\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+インスタンス取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Random$\ast$} & インスタンス \\
+\hline
+\end{DoxyRetVals}
+
+
+ Random.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_random_a9feade8fc8026ed3e7aad3b1cdd9b55a}\label{class_random_a9feade8fc8026ed3e7aad3b1cdd9b55a}} 
+\index{Random@{Random}!Init@{Init}}
+\index{Init@{Init}!Random@{Random}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Random\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Random.\+cpp の 84 行目に定義があります。
+
+\mbox{\Hypertarget{class_random_a233dc764071ecf4e95619ea86f7edf61}\label{class_random_a233dc764071ecf4e95619ea86f7edf61}} 
+\index{Random@{Random}!operator=@{operator=}}
+\index{operator=@{operator=}!Random@{Random}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_random}{Random}}\& Random\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_random}{Random}} \&}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_random_aad4d635b6fddc21bedf7458b0ce49636}\label{class_random_aad4d635b6fddc21bedf7458b0ce49636}} 
+\index{Random@{Random}!Release\+Instance@{Release\+Instance}}
+\index{Release\+Instance@{Release\+Instance}!Random@{Random}}
+\subsubsection{\texorpdfstring{Release\+Instance()}{ReleaseInstance()}}
+{\footnotesize\ttfamily void Random\+::\+Release\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+インスタンス解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Random.\+cpp の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_random_a3bf09c7188122af5008037b46390c3e7}\label{class_random_a3bf09c7188122af5008037b46390c3e7}} 
+\index{Random@{Random}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Random@{Random}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Random\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Random.\+cpp の 92 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_random_a7fda13c77002515c81152b21b6d92e9e}\label{class_random_a7fda13c77002515c81152b21b6d92e9e}} 
+\index{Random@{Random}!instance\+\_\+@{instance\+\_\+}}
+\index{instance\+\_\+@{instance\+\_\+}!Random@{Random}}
+\subsubsection{\texorpdfstring{instance\+\_\+}{instance\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_random}{Random}} $\ast$ Random\+::instance\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+インスタンス 
+
+
+
+ Random.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_random_a149a0bd07119c7e33a4b838be0c53da9}\label{class_random_a149a0bd07119c7e33a4b838be0c53da9}} 
+\index{Random@{Random}!mersenne\+\_\+twister\+\_\+@{mersenne\+\_\+twister\+\_\+}}
+\index{mersenne\+\_\+twister\+\_\+@{mersenne\+\_\+twister\+\_\+}!Random@{Random}}
+\subsubsection{\texorpdfstring{mersenne\+\_\+twister\+\_\+}{mersenne\_twister\_}}
+{\footnotesize\ttfamily std\+::mt19937 Random\+::mersenne\+\_\+twister\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+メルセンヌツイスター乱数生成器 
+
+
+
+ Random.\+h の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_random_a9dec4a6da7decaf52f9e972f63cc679c}\label{class_random_a9dec4a6da7decaf52f9e972f63cc679c}} 
+\index{Random@{Random}!seed\+\_\+@{seed\+\_\+}}
+\index{seed\+\_\+@{seed\+\_\+}!Random@{Random}}
+\subsubsection{\texorpdfstring{seed\+\_\+}{seed\_}}
+{\footnotesize\ttfamily std\+::random\+\_\+device Random\+::seed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+完全ランダムシード 
+
+
+
+ Random.\+h の 63 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_random_8h}{Random.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\+Source/\mbox{\hyperlink{_random_8cpp}{Random.\+cpp}}\end{DoxyCompactItemize}

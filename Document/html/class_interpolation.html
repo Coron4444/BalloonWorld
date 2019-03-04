@@ -1,0 +1,765 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: Interpolation&lt; Value, Distance, AddInfo, Strategy &gt; クラステンプレート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_interpolation.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="class_interpolation-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Interpolation&lt; Value, Distance, AddInfo, Strategy &gt; クラステンプレート</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>補間Class(Template)  
+ <a href="class_interpolation.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_interpolation_8h_source.html">Interpolation.h</a>&gt;</code></p>
+<div class="dynheader">
+Interpolation&lt; Value, Distance, AddInfo, Strategy &gt; 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_interpolation__coll__graph.png" border="0" usemap="#_interpolation_3_01_value_00_01_distance_00_01_add_info_00_01_strategy_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="_interpolation_3_01_value_00_01_distance_00_01_add_info_00_01_strategy_01_4_coll__map" id="_interpolation_3_01_value_00_01_distance_00_01_add_info_00_01_strategy_01_4_coll__map">
+<area shape="rect" id="node2" href="class_interpolation_element.html" title="補間要素Class(Template) " alt="" coords="9,5,199,47"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation_1_1_iterator__.html">Iterator_</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">補間コンテナイテレータClass  <a href="class_interpolation_1_1_iterator__.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a01e71544809483d7a2ee72fe0007bcb0"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_interpolation_element.html">InterpolationElement</a>&lt; Value, Distance, AddInfo &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a01e71544809483d7a2ee72fe0007bcb0">Element</a></td></tr>
+<tr class="separator:a01e71544809483d7a2ee72fe0007bcb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a066eb9906faf7f1d56ba68d00c6be64a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance &gt;::<a class="el" href="class_interpolation_1_1_iterator__.html">Iterator_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a066eb9906faf7f1d56ba68d00c6be64a">Iterator</a></td></tr>
+<tr class="separator:a066eb9906faf7f1d56ba68d00c6be64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1562562e0809978e58ec0703f383174b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_interpolation.html#a01e71544809483d7a2ee72fe0007bcb0">Element</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a1562562e0809978e58ec0703f383174b">getp2FirstPointer</a> ()</td></tr>
+<tr class="memdesc:a1562562e0809978e58ec0703f383174b"><td class="mdescLeft">&#160;</td><td class="mdescRight">最初のポインタ取得関数  <a href="#a1562562e0809978e58ec0703f383174b">[詳解]</a><br /></td></tr>
+<tr class="separator:a1562562e0809978e58ec0703f383174b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a023b5a27fc450db2b2f19c881243cab6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a023b5a27fc450db2b2f19c881243cab6">Interpolation</a> ()</td></tr>
+<tr class="memdesc:a023b5a27fc450db2b2f19c881243cab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#a023b5a27fc450db2b2f19c881243cab6">[詳解]</a><br /></td></tr>
+<tr class="separator:a023b5a27fc450db2b2f19c881243cab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71961e7c2738236a592b73d59cf0efd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a71961e7c2738236a592b73d59cf0efd6">~Interpolation</a> ()</td></tr>
+<tr class="memdesc:a71961e7c2738236a592b73d59cf0efd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="#a71961e7c2738236a592b73d59cf0efd6">[詳解]</a><br /></td></tr>
+<tr class="separator:a71961e7c2738236a592b73d59cf0efd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdf10ef9db1671ac8df2ef3b6add234f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#afdf10ef9db1671ac8df2ef3b6add234f">push_back</a> (Value &amp;value, Distance &amp;distance, AddInfo add_info=1.0)</td></tr>
+<tr class="memdesc:afdf10ef9db1671ac8df2ef3b6add234f"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加関数  <a href="#afdf10ef9db1671ac8df2ef3b6add234f">[詳解]</a><br /></td></tr>
+<tr class="separator:afdf10ef9db1671ac8df2ef3b6add234f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2058fcb997b38b8813e7de2e581a20f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a2058fcb997b38b8813e7de2e581a20f4">clear</a> ()</td></tr>
+<tr class="memdesc:a2058fcb997b38b8813e7de2e581a20f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリア関数  <a href="#a2058fcb997b38b8813e7de2e581a20f4">[詳解]</a><br /></td></tr>
+<tr class="separator:a2058fcb997b38b8813e7de2e581a20f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1c93d409027d14ca4c4373a81127dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_interpolation.html#a066eb9906faf7f1d56ba68d00c6be64a">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a3d1c93d409027d14ca4c4373a81127dc">begin</a> ()</td></tr>
+<tr class="memdesc:a3d1c93d409027d14ca4c4373a81127dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">始まりイテレータ関数  <a href="#a3d1c93d409027d14ca4c4373a81127dc">[詳解]</a><br /></td></tr>
+<tr class="separator:a3d1c93d409027d14ca4c4373a81127dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c63d39c9245a28228784ebff60ae4b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_interpolation.html#a066eb9906faf7f1d56ba68d00c6be64a">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a9c63d39c9245a28228784ebff60ae4b1">end</a> ()</td></tr>
+<tr class="memdesc:a9c63d39c9245a28228784ebff60ae4b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">終端イテレーター関数  <a href="#a9c63d39c9245a28228784ebff60ae4b1">[詳解]</a><br /></td></tr>
+<tr class="separator:a9c63d39c9245a28228784ebff60ae4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a578f14e07599bb0673af9006d21d8d94"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a578f14e07599bb0673af9006d21d8d94">size</a> ()</td></tr>
+<tr class="memdesc:a578f14e07599bb0673af9006d21d8d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">サイズ関数  <a href="#a578f14e07599bb0673af9006d21d8d94">[詳解]</a><br /></td></tr>
+<tr class="separator:a578f14e07599bb0673af9006d21d8d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1dc67b8338621f7504256d90e3980d0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a1dc67b8338621f7504256d90e3980d0c">AddArrayMemory</a> (size_t add_num)</td></tr>
+<tr class="memdesc:a1dc67b8338621f7504256d90e3980d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列メモリー追加関数  <a href="#a1dc67b8338621f7504256d90e3980d0c">[詳解]</a><br /></td></tr>
+<tr class="separator:a1dc67b8338621f7504256d90e3980d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cac60c99de2fbae3b89856caad53602"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a5cac60c99de2fbae3b89856caad53602">Rewrite</a> (<a class="el" href="class_interpolation.html#a01e71544809483d7a2ee72fe0007bcb0">Element</a> *new_element)</td></tr>
+<tr class="memdesc:a5cac60c99de2fbae3b89856caad53602"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列上書き関数  <a href="#a5cac60c99de2fbae3b89856caad53602">[詳解]</a><br /></td></tr>
+<tr class="separator:a5cac60c99de2fbae3b89856caad53602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a5652d5fc7f1968b7f11cd5a6b36bfb5a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a5652d5fc7f1968b7f11cd5a6b36bfb5a">size_</a></td></tr>
+<tr class="memdesc:a5652d5fc7f1968b7f11cd5a6b36bfb5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列数  <a href="#a5652d5fc7f1968b7f11cd5a6b36bfb5a">[詳解]</a><br /></td></tr>
+<tr class="separator:a5652d5fc7f1968b7f11cd5a6b36bfb5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf1221d1c0f8770231e61ad7b64a26d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_interpolation.html#a01e71544809483d7a2ee72fe0007bcb0">Element</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a2cf1221d1c0f8770231e61ad7b64a26d">element_</a></td></tr>
+<tr class="memdesc:a2cf1221d1c0f8770231e61ad7b64a26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素配列  <a href="#a2cf1221d1c0f8770231e61ad7b64a26d">[詳解]</a><br /></td></tr>
+<tr class="separator:a2cf1221d1c0f8770231e61ad7b64a26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d232d52cf5aa84d12d073fa400c129"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_interpolation.html#a01e71544809483d7a2ee72fe0007bcb0">Element</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interpolation.html#a28d232d52cf5aa84d12d073fa400c129">end_pointer_</a></td></tr>
+<tr class="memdesc:a28d232d52cf5aa84d12d073fa400c129"><td class="mdescLeft">&#160;</td><td class="mdescRight">終端ポインタ  <a href="#a28d232d52cf5aa84d12d073fa400c129">[詳解]</a><br /></td></tr>
+<tr class="separator:a28d232d52cf5aa84d12d073fa400c129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><h3>template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt;<br />
+class Interpolation&lt; Value, Distance, AddInfo, Strategy &gt;</h3>
+
+<p>補間Class(Template) </p>
+<p>補間要素のコンテナClass(Template)</p>
+<p>このコンテナで扱いたいValueには、</p>
+<p>各InterpolationStrategyで使用する、</p>
+<p>演算子のオーバーライドが必要です。 </p>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00220">220</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">型定義メンバ詳解</h2>
+<a id="a01e71544809483d7a2ee72fe0007bcb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01e71544809483d7a2ee72fe0007bcb0">&#9670;&nbsp;</a></span>Element</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_interpolation_element.html">InterpolationElement</a>&lt;Value, Distance, AddInfo&gt; <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::<a class="el" href="class_interpolation.html#a01e71544809483d7a2ee72fe0007bcb0">Element</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00226">226</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a066eb9906faf7f1d56ba68d00c6be64a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a066eb9906faf7f1d56ba68d00c6be64a">&#9670;&nbsp;</a></span>Iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_interpolation.html">Interpolation</a>&lt;Value, Distance&gt;::<a class="el" href="class_interpolation_1_1_iterator__.html">Iterator_</a> <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::<a class="el" href="class_interpolation.html#a066eb9906faf7f1d56ba68d00c6be64a">Iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00515">515</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a023b5a27fc450db2b2f19c881243cab6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a023b5a27fc450db2b2f19c881243cab6">&#9670;&nbsp;</a></span>Interpolation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::<a class="el" href="class_interpolation.html">Interpolation</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00552">552</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a71961e7c2738236a592b73d59cf0efd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71961e7c2738236a592b73d59cf0efd6">&#9670;&nbsp;</a></span>~Interpolation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::~<a class="el" href="class_interpolation.html">Interpolation</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00565">565</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a1dc67b8338621f7504256d90e3980d0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc67b8338621f7504256d90e3980d0c">&#9670;&nbsp;</a></span>AddArrayMemory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::AddArrayMemory </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>add_num</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>配列メモリー追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">add_num</td><td>追加数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00649">649</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3d1c93d409027d14ca4c4373a81127dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d1c93d409027d14ca4c4373a81127dc">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_interpolation.html#a066eb9906faf7f1d56ba68d00c6be64a">Iterator</a> <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>始まりイテレータ関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Iterator</td><td>始まりイテレータ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00613">613</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2058fcb997b38b8813e7de2e581a20f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2058fcb997b38b8813e7de2e581a20f4">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>クリア関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00594">594</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9c63d39c9245a28228784ebff60ae4b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c63d39c9245a28228784ebff60ae4b1">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_interpolation.html#a066eb9906faf7f1d56ba68d00c6be64a">Iterator</a> <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終端イテレーター関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Iterator</td><td>終端イテレータ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00625">625</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1562562e0809978e58ec0703f383174b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1562562e0809978e58ec0703f383174b">&#9670;&nbsp;</a></span>getp2FirstPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_interpolation.html#a01e71544809483d7a2ee72fe0007bcb0">Element</a>** <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::getp2FirstPointer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最初のポインタ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Element**</td><td>最初のポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00537">537</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afdf10ef9db1671ac8df2ef3b6add234f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdf10ef9db1671ac8df2ef3b6add234f">&#9670;&nbsp;</a></span>push_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::push_back </td>
+          <td>(</td>
+          <td class="paramtype">Value &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Distance &amp;&#160;</td>
+          <td class="paramname"><em>distance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AddInfo&#160;</td>
+          <td class="paramname"><em>add_info</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&amp;value</td><td>キー値 </td></tr>
+    <tr><td class="paramname">&amp;distance</td><td>補間距離 </td></tr>
+    <tr><td class="paramname">add_info</td><td>付加情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00579">579</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5cac60c99de2fbae3b89856caad53602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cac60c99de2fbae3b89856caad53602">&#9670;&nbsp;</a></span>Rewrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::Rewrite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_interpolation.html#a01e71544809483d7a2ee72fe0007bcb0">Element</a> *&#160;</td>
+          <td class="paramname"><em>new_element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>配列上書き関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_element</td><td>新規配列 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00673">673</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a578f14e07599bb0673af9006d21d8d94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a578f14e07599bb0673af9006d21d8d94">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>サイズ関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">size_t</td><td>サイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00637">637</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a2cf1221d1c0f8770231e61ad7b64a26d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf1221d1c0f8770231e61ad7b64a26d">&#9670;&nbsp;</a></span>element_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_interpolation.html#a01e71544809483d7a2ee72fe0007bcb0">Element</a>** <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::element_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>要素配列 </p>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00523">523</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a28d232d52cf5aa84d12d073fa400c129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28d232d52cf5aa84d12d073fa400c129">&#9670;&nbsp;</a></span>end_pointer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_interpolation.html#a01e71544809483d7a2ee72fe0007bcb0">Element</a>** <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::end_pointer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終端ポインタ </p>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00524">524</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5652d5fc7f1968b7f11cd5a6b36bfb5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5652d5fc7f1968b7f11cd5a6b36bfb5a">&#9670;&nbsp;</a></span>size_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value, class Distance = double, class AddInfo = double, class Strategy = LinerInterpolationStrategy&lt;Value, Distance, AddInfo&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_interpolation.html">Interpolation</a>&lt; Value, Distance, AddInfo, Strategy &gt;::size_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>配列数 </p>
+
+<p class="definition"> <a class="el" href="_interpolation_8h_source.html">Interpolation.h</a> の <a class="el" href="_interpolation_8h_source.html#l00522">522</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Tool/<a class="el" href="_interpolation_8h_source.html">Interpolation.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_interpolation.html">Interpolation</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

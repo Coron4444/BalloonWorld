@@ -18,15 +18,6 @@
 // 定数定義
 //****************************************
 const char* VertexShaderDefaultShadow::PATH = "resource/HLSL/Effect/VertexShader/DefaultShadow.vsh";
-const float VertexShaderDefaultShadow::OFF_SET_X = 0.5f + (0.5f / GameEngine::SCREEN_WIDTH);
-const float VertexShaderDefaultShadow::OFF_SET_Y = 0.5f + (0.5f / GameEngine::SCREEN_HEIGHT);
-const MATRIX VertexShaderDefaultShadow::TEXTURE_PROJECTION =
-{
-	0.5f, 0.0f, 0.0f, 0.0f,
-	0.0f, -0.5f, 0.0f, 0.0f,
-	0.0f, 0.0f, 0.0f, 0.0f,
-	OFF_SET_X, OFF_SET_Y, 0.0f, 1.0f,
-};
 
 
 
@@ -68,8 +59,6 @@ void VertexShaderDefaultShadow::ObjectSetting(DrawBase* draw, Camera* camera,
 	getpConstantTable()->SetMatrix(getpDevice(), "LIGHT_PROJECTION",
 								   getpDrawCommonData()->getpCameraShadowMap()
 								   ->getpProjectionMatrix());
-	getpConstantTable()->SetMatrix(getpDevice(), "TEXTURE_PROJECTION",
-								   &TEXTURE_PROJECTION);
 
 	// ディレクショナルライトベクトル(オブジェクトのローカル座標系へ変換し第入)
 	Vec4 light_vector = (Vec4)*getpDrawCommonData()

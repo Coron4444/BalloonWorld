@@ -119,6 +119,15 @@ void GameScene::Init()
 	stage_manager_->setPlayerCamera(camera);
 	((CameraState_HomingTarget*)camera_state)->setTargetObject(stage_manager_->getpPlayer());
 
+	camera = GameObjectManager::getpInstance()->getpDrawManager()
+		->getpCamera(DrawManager::RenderTargetType::SHADOW_MAP);
+
+	//*camera->getpGazingPoint() = *stage_manager_->getpPlayer()->getpTransform()->getpPosition();
+	//*camera->getpPosition() = {-5.0f, 450.0f, 0.0f};
+	//camera->CreateViewMatrix();
+	//camera->setNearClip(50.0f);
+	//camera->setFarClip(400.0f);
+
 	// UIİ’è
 	setAllUI();
 

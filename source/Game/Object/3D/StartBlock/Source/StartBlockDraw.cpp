@@ -55,6 +55,9 @@ void StartBlockDraw::Init()
 	getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_MAIN);
 	getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::COOK_TORRANCE);
 	getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::COOK_TORRANCE);
+	//getpDrawOrderList()->getpRenderTargetFlag()->setFlag(DrawOrderList::RENDER_TARGET_MAIN | DrawOrderList::RENDER_TARGET_SHADOW_MAP);
+	//getpDrawOrderList()->setVertexShaderType(ShaderManager::VertexShaderType::DEFAULT_SHADOW);
+	//getpDrawOrderList()->setPixelShaderType(ShaderManager::PixelShaderType::DEFAULT_SHADOW);
 
 	// キューブポリゴンの生成
 	cube_polygon_ = new CubePolygon();

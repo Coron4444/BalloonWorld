@@ -143,10 +143,10 @@ public:
 //====================
 // 変数
 //====================
-public:
-	static const float NEAR_CLIPPING_PLANE;		//!< 近面クリップ
-	static const float FAR_CLIPPING_PLANE;		//!< 遠面クリップ
-	static const float DEFAULT_ANGLE_OF_VIEW;	//!< 画角
+private:
+	static const float DEFAULT_ANGLE_OF_VIEW;	//!< 既定画角
+	static const float DEFAULT_NEAR_CLIP;		//!< 既定近面クリップ
+	static const float DEFAULT_FAR_CLIP;		//!< 既定遠面クリップ
 
 
 //====================
@@ -157,6 +157,8 @@ private:
 	Vector3D gazing_point_;				//!< 注視点
 	Vector3D up_;						//!< 上方向
 	float angle_of_view_;				//!< 画角
+	float near_clip_;					//!< 近面クリップ
+	float far_clip_;					//!< 遠面クリップ
 	Matrix view_;						//!< ビュー行列
 	Matrix view_2D_;					//!< ビュー行列(2D)
 	Matrix projection_perspective_;		//!< プロジェクション行列(透視投影)
@@ -208,7 +210,7 @@ public:
 	//! @param void なし
 	//! @retval float 画角
 	//----------------------------------------
-	float getAngleOfView();
+	float getAngleOfView() const;
 	
 	//----------------------------------------
 	//! @brief 画角設定関数
@@ -217,7 +219,39 @@ public:
 	//! @retval void なし
 	//----------------------------------------
 	void setAngleOfView(float value);
+
+	//----------------------------------------
+	//! @brief 近面クリップ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval float 近面クリップ
+	//----------------------------------------
+	float getNearClip() const;
+
+	//----------------------------------------
+	//! @brief 近面クリップ設定関数
+	//! @details
+	//! @param value 近面クリップ
+	//! @retval void なし
+	//----------------------------------------
+	void setNearClip(float value);
 	
+	//----------------------------------------
+	//! @brief 遠面クリップ取得関数
+	//! @details
+	//! @param void なし
+	//! @retval float 遠面クリップ
+	//----------------------------------------
+	float getFarClip() const;
+
+	//----------------------------------------
+	//! @brief 近面クリップ設定関数
+	//! @details
+	//! @param value 遠面クリップ
+	//! @retval void なし
+	//----------------------------------------
+	void setFarClip(float value);
+
 	//----------------------------------------
 	//! @brief ステート取得関数
 	//! @details
@@ -321,15 +355,21 @@ public:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
-	//! @param state        ステート
-	//! @param position     座標
-	//! @param gazing_point 注視点
-	//! @param up           上ベクトル
+	//! @param state         ステート
+	//! @param position      座標
+	//! @param gazing_point  注視点
+	//! @param up            上ベクトル
+	//! @param angle_of_view 画角
+	//! @param near_clip     近面クリップ
+	//! @param far_clip      遠面クリップ
 	//! @retval void なし
 	//----------------------------------------
 	void Init(State* state, Vector3D position = {0.0f, 0.0f, -10.0f},
 			  Vector3D gazing_point = {0.0f, 0.0f, 0.0f}, 
-			  Vector3D up = {0.0f, 1.0f, 0.0f});
+			  Vector3D up = {0.0f, 1.0f, 0.0f},
+			  float angle_of_view = DEFAULT_ANGLE_OF_VIEW,
+			  float near_clip = DEFAULT_NEAR_CLIP,
+			  float far_clip = DEFAULT_FAR_CLIP);
 
 	//----------------------------------------
 	//! @brief 初期化関数

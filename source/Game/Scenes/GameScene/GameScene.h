@@ -36,7 +36,7 @@ class BalloonNum;
 class GameScene : public SceneNull
 {
 //====================
-// •Ï”
+// —ñ‹“Œ^
 //====================
 public:
 	enum class State

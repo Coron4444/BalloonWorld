@@ -1,0 +1,472 @@
+\hypertarget{class_time_draw}{}\section{Time\+Draw クラス}
+\label{class_time_draw}\index{Time\+Draw@{Time\+Draw}}
+
+
+時間描画\+Class  
+
+
+
+
+{\ttfamily \#include $<$Time\+Draw.\+h$>$}
+
+
+
+Time\+Draw 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_time_draw__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual unsigned \mbox{\hyperlink{class_time_draw_aea19327b7f9a50a9e634fbb56d430222}{get\+Object\+Num}} () override
+\begin{DoxyCompactList}\small\item\em オブジェクト数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_time_draw_a3624fef571681cf4861891aa073338a0}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ワールド行列取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_time_draw_a32e9166df2da094b6b8c6cfc9dd73872}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアル取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_time_draw_ac844c99a6d5cdcad9c541779a0e99b22}{getp\+Diffuse\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ディヒューズテクスチャ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_draw_a6a7a80dfac7c27fab8476655348be36a}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_draw_abcfea17acdc56d251e680e926da001fc}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_draw_a2471360fb021ce38bec34dbe6f171b9f}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_draw_a1d5bd7b20e71eb37f3f0b225079cc9b3}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_time}{Time}} $\ast$ \mbox{\hyperlink{class_time_draw_a83b53ac1efa11c6737564a5490b10312}{time\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 時間 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_numbers_polygon}{Numbers\+Polygon}} $\ast$ \mbox{\hyperlink{class_time_draw_a5debc3ca2af05073560a1a3a30426d14}{numbers\+\_\+polygon\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 数字群ポリゴン \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}} $\ast$ \mbox{\hyperlink{class_time_draw_ab21ae68b078069640c8317325601ac75}{plane\+\_\+polygon\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 平面ポリゴン \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_time_draw_a1ea93191d534fba6d46e570c3ccd5396}{texture\+\_\+}}
+\begin{DoxyCompactList}\small\item\em テクスチャオブジェクト \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_time_draw_a927363821346555965ae3ee3b712b30e}{texture\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em テクスチャオブジェクト \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{class_time_draw_aead8e68c07b9995faef2044a37fa2b59}{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}} = \char`\"{}UI/Num.\+png\char`\"{}
+\begin{DoxyCompactList}\small\item\em テクスチャ名 \end{DoxyCompactList}\item 
+static const std\+::string \mbox{\hyperlink{class_time_draw_a2f3552278dcc90a9301b1cfca7be0d4f}{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2}} = \char`\"{}UI/Time.\+png\char`\"{}
+\begin{DoxyCompactList}\small\item\em テクスチャ名 \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{class_time_draw_a054b5ebf0f05c5fc80072491fac8d2f5}{T\+I\+M\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM}} = 2
+\begin{DoxyCompactList}\small\item\em 時間桁数 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}} \mbox{\hyperlink{class_time_draw_a72df1ddbe9ea6a326e2a4f2a950b0fe1}{T\+I\+M\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}
+\begin{DoxyCompactList}\small\item\em 時間座標 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}} \mbox{\hyperlink{class_time_draw_a2cc7a69141e165fb397b5e06caf7828e}{T\+I\+M\+E\+\_\+\+S\+C\+A\+LE}}
+\begin{DoxyCompactList}\small\item\em 時間拡縮 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_time_draw_a0c039a965f7340093780e72cbf79ddc0}{T\+I\+M\+E\+\_\+\+C\+O\+L\+OR}}
+\begin{DoxyCompactList}\small\item\em 時間色 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+時間描画\+Class 
+
+時間の描画\+Class 
+
+ Time\+Draw.\+h の 33 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_time_draw_a1d5bd7b20e71eb37f3f0b225079cc9b3}\label{class_time_draw_a1d5bd7b20e71eb37f3f0b225079cc9b3}} 
+\index{Time\+Draw@{Time\+Draw}!Draw@{Draw}}
+\index{Draw@{Draw}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Time\+Draw\+::\+Draw (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
+
+
+
+ Time\+Draw.\+cpp の 128 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_aea19327b7f9a50a9e634fbb56d430222}\label{class_time_draw_aea19327b7f9a50a9e634fbb56d430222}} 
+\index{Time\+Draw@{Time\+Draw}!get\+Object\+Num@{get\+Object\+Num}}
+\index{get\+Object\+Num@{get\+Object\+Num}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{get\+Object\+Num()}{getObjectNum()}}
+{\footnotesize\ttfamily unsigned Time\+Draw\+::get\+Object\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+オブジェクト数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & オブジェクト数 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a8bddfa6ee87e47b2ecbbe6803b088e37}{Draw\+Null}}を再実装しています。
+
+
+
+ Time\+Draw.\+cpp の 33 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_ac844c99a6d5cdcad9c541779a0e99b22}\label{class_time_draw_ac844c99a6d5cdcad9c541779a0e99b22}} 
+\index{Time\+Draw@{Time\+Draw}!getp\+Diffuse\+Texture@{getp\+Diffuse\+Texture}}
+\index{getp\+Diffuse\+Texture@{getp\+Diffuse\+Texture}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Diffuse\+Texture()}{getpDiffuseTexture()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Time\+Draw\+::getp\+Diffuse\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+ディヒューズテクスチャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & ディヒューズテクスチャ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a98cc7cd43b19d9d70cc621d23d89286f}{Draw\+Null}}を再実装しています。
+
+
+
+ Time\+Draw.\+cpp の 63 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_a32e9166df2da094b6b8c6cfc9dd73872}\label{class_time_draw_a32e9166df2da094b6b8c6cfc9dd73872}} 
+\index{Time\+Draw@{Time\+Draw}!getp\+Material@{getp\+Material}}
+\index{getp\+Material@{getp\+Material}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Material()}{getpMaterial()}}
+{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ Time\+Draw\+::getp\+Material (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+マテリアル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a0c1efe55fea325ad277594be6fe1e938}{Draw\+Null}}を再実装しています。
+
+
+
+ Time\+Draw.\+cpp の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_a3624fef571681cf4861891aa073338a0}\label{class_time_draw_a3624fef571681cf4861891aa073338a0}} 
+\index{Time\+Draw@{Time\+Draw}!getp\+Matrix@{getp\+Matrix}}
+\index{getp\+Matrix@{getp\+Matrix}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Time\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+ワールド行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & ワールド行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a9aac059eb3b5d1f77e8bd3aa0647cff9}{Draw\+Null}}を再実装しています。
+
+
+
+ Time\+Draw.\+cpp の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_a6a7a80dfac7c27fab8476655348be36a}\label{class_time_draw_a6a7a80dfac7c27fab8476655348be36a}} 
+\index{Time\+Draw@{Time\+Draw}!Init@{Init}}
+\index{Init@{Init}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Time\+Draw\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
+
+
+
+ Time\+Draw.\+cpp の 79 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_abcfea17acdc56d251e680e926da001fc}\label{class_time_draw_abcfea17acdc56d251e680e926da001fc}} 
+\index{Time\+Draw@{Time\+Draw}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Time\+Draw\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
+
+
+
+ Time\+Draw.\+cpp の 111 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_a2471360fb021ce38bec34dbe6f171b9f}\label{class_time_draw_a2471360fb021ce38bec34dbe6f171b9f}} 
+\index{Time\+Draw@{Time\+Draw}!Update@{Update}}
+\index{Update@{Update}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Time\+Draw\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_ad32a508d269de7eda8ad24ea72230464}{Draw\+Null}}を再実装しています。
+
+
+
+ Time\+Draw.\+cpp の 121 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_time_draw_a5debc3ca2af05073560a1a3a30426d14}\label{class_time_draw_a5debc3ca2af05073560a1a3a30426d14}} 
+\index{Time\+Draw@{Time\+Draw}!numbers\+\_\+polygon\+\_\+@{numbers\+\_\+polygon\+\_\+}}
+\index{numbers\+\_\+polygon\+\_\+@{numbers\+\_\+polygon\+\_\+}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{numbers\+\_\+polygon\+\_\+}{numbers\_polygon\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_numbers_polygon}{Numbers\+Polygon}}$\ast$ Time\+Draw\+::numbers\+\_\+polygon\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+数字群ポリゴン 
+
+
+
+ Time\+Draw.\+h の 52 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_ab21ae68b078069640c8317325601ac75}\label{class_time_draw_ab21ae68b078069640c8317325601ac75}} 
+\index{Time\+Draw@{Time\+Draw}!plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}}
+\index{plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{plane\+\_\+polygon\+\_\+}{plane\_polygon\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}}$\ast$ Time\+Draw\+::plane\+\_\+polygon\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+平面ポリゴン 
+
+
+
+ Time\+Draw.\+h の 53 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_a1ea93191d534fba6d46e570c3ccd5396}\label{class_time_draw_a1ea93191d534fba6d46e570c3ccd5396}} 
+\index{Time\+Draw@{Time\+Draw}!texture\+\_\+@{texture\+\_\+}}
+\index{texture\+\_\+@{texture\+\_\+}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{texture\+\_\+}{texture\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Time\+Draw\+::texture\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+テクスチャオブジェクト 
+
+
+
+ Time\+Draw.\+h の 54 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_a927363821346555965ae3ee3b712b30e}\label{class_time_draw_a927363821346555965ae3ee3b712b30e}} 
+\index{Time\+Draw@{Time\+Draw}!texture\+\_\+2@{texture\+\_\+2}}
+\index{texture\+\_\+2@{texture\+\_\+2}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{texture\+\_\+2}{texture\_2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Time\+Draw\+::texture\+\_\+2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+テクスチャオブジェクト 
+
+
+
+ Time\+Draw.\+h の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_aead8e68c07b9995faef2044a37fa2b59}\label{class_time_draw_aead8e68c07b9995faef2044a37fa2b59}} 
+\index{Time\+Draw@{Time\+Draw}!T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}}
+\index{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}{TEXTURE\_NAME}}
+{\footnotesize\ttfamily const std\+::string Time\+Draw\+::\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME = \char`\"{}UI/Num.\+png\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+テクスチャ名 
+
+
+
+ Time\+Draw.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_a2f3552278dcc90a9301b1cfca7be0d4f}\label{class_time_draw_a2f3552278dcc90a9301b1cfca7be0d4f}} 
+\index{Time\+Draw@{Time\+Draw}!T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2}}
+\index{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2}{TEXTURE\_NAME2}}
+{\footnotesize\ttfamily const std\+::string Time\+Draw\+::\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2 = \char`\"{}UI/Time.\+png\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+テクスチャ名 
+
+
+
+ Time\+Draw.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_a83b53ac1efa11c6737564a5490b10312}\label{class_time_draw_a83b53ac1efa11c6737564a5490b10312}} 
+\index{Time\+Draw@{Time\+Draw}!time\+\_\+@{time\+\_\+}}
+\index{time\+\_\+@{time\+\_\+}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{time\+\_\+}{time\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}}$\ast$ Time\+Draw\+::time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+時間 
+
+
+
+ Time\+Draw.\+h の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_a0c039a965f7340093780e72cbf79ddc0}\label{class_time_draw_a0c039a965f7340093780e72cbf79ddc0}} 
+\index{Time\+Draw@{Time\+Draw}!T\+I\+M\+E\+\_\+\+C\+O\+L\+OR@{T\+I\+M\+E\+\_\+\+C\+O\+L\+OR}}
+\index{T\+I\+M\+E\+\_\+\+C\+O\+L\+OR@{T\+I\+M\+E\+\_\+\+C\+O\+L\+OR}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+\_\+\+C\+O\+L\+OR}{TIME\_COLOR}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Time\+Draw\+::\+T\+I\+M\+E\+\_\+\+C\+O\+L\+OR\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+時間色 
+
+
+
+ Time\+Draw.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_a054b5ebf0f05c5fc80072491fac8d2f5}\label{class_time_draw_a054b5ebf0f05c5fc80072491fac8d2f5}} 
+\index{Time\+Draw@{Time\+Draw}!T\+I\+M\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM@{T\+I\+M\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM}}
+\index{T\+I\+M\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM@{T\+I\+M\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM}{TIME\_DIGITS\_NUM}}
+{\footnotesize\ttfamily const int Time\+Draw\+::\+T\+I\+M\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+時間桁数 
+
+
+
+ Time\+Draw.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_a72df1ddbe9ea6a326e2a4f2a950b0fe1}\label{class_time_draw_a72df1ddbe9ea6a326e2a4f2a950b0fe1}} 
+\index{Time\+Draw@{Time\+Draw}!T\+I\+M\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON@{T\+I\+M\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}
+\index{T\+I\+M\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON@{T\+I\+M\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON}{TIME\_POSITION}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}} Time\+Draw\+::\+T\+I\+M\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+時間座標 
+
+
+
+ Time\+Draw.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_draw_a2cc7a69141e165fb397b5e06caf7828e}\label{class_time_draw_a2cc7a69141e165fb397b5e06caf7828e}} 
+\index{Time\+Draw@{Time\+Draw}!T\+I\+M\+E\+\_\+\+S\+C\+A\+LE@{T\+I\+M\+E\+\_\+\+S\+C\+A\+LE}}
+\index{T\+I\+M\+E\+\_\+\+S\+C\+A\+LE@{T\+I\+M\+E\+\_\+\+S\+C\+A\+LE}!Time\+Draw@{Time\+Draw}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+\_\+\+S\+C\+A\+LE}{TIME\_SCALE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}} Time\+Draw\+::\+T\+I\+M\+E\+\_\+\+S\+C\+A\+LE\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+時間拡縮 
+
+
+
+ Time\+Draw.\+h の 43 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/2\+D/\+Time/\mbox{\hyperlink{_time_draw_8h}{Time\+Draw.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/2\+D/\+Time/\+Source/\mbox{\hyperlink{_time_draw_8cpp}{Time\+Draw.\+cpp}}\end{DoxyCompactItemize}

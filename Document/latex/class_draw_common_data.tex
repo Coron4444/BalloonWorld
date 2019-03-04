@@ -1,0 +1,335 @@
+\hypertarget{class_draw_common_data}{}\section{Draw\+Common\+Data クラス}
+\label{class_draw_common_data}\index{Draw\+Common\+Data@{Draw\+Common\+Data}}
+
+
+描画共通データ\+Class  
+
+
+
+
+{\ttfamily \#include $<$Draw\+Common\+Data.\+h$>$}
+
+
+
+Draw\+Common\+Data 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_draw_common_data__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_draw_common_data_a114bdbc03af787ffb0860e1ae9ec6ef9}{getp\+Directional\+Light\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em 拡散反射照明ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_render_texture}{Render\+Texture}} $\ast$ \mbox{\hyperlink{class_draw_common_data_ac61796a143057a2d0ab729be59287e7c}{getp\+Render\+Texture\+Main}} ()
+\begin{DoxyCompactList}\small\item\em メイン用レンダーテクスチャ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_render_texture}{Render\+Texture}} $\ast$ \mbox{\hyperlink{class_draw_common_data_a085ce497bd36164c253b1c3200287180}{getp\+Render\+Texture\+Shadow\+Map}} ()
+\begin{DoxyCompactList}\small\item\em シャドウマップ用レンダーテクスチャ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_render_texture}{Render\+Texture}} $\ast$ \mbox{\hyperlink{class_draw_common_data_a2b356433718b5027d3f50d8860a9d6ff}{getp\+Render\+Texture\+Motion\+Blur}} ()
+\begin{DoxyCompactList}\small\item\em モーションブラー用レンダーテクスチャ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera}{Camera}} $\ast$ \mbox{\hyperlink{class_draw_common_data_a08fceba2155d3a45a3004b0aba97ea2a}{getp\+Camera\+Shadow\+Map}} ()
+\begin{DoxyCompactList}\small\item\em シャドウマップ用カメラ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_draw_common_data_adc69a051e339523a6f0c5e1826694458}{set\+Camera\+Shadow\+Map}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em シャドウマップ用カメラ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_draw_common_data_ac111688b8426f23dd97b3fd31284fcb3}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_draw_common_data_af19ce43b8e3eb24da78a8fa7d98d4315}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_draw_common_data_ad08d5a1d1a3de33977a1b4a2d7776343}{directional\+\_\+light\+\_\+vector\+\_\+}} = \{0.\+5f, -\/1.\+0f, 0.\+8f\}
+\begin{DoxyCompactList}\small\item\em 拡散反射照明ベクトル \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_render_texture}{Render\+Texture}} \mbox{\hyperlink{class_draw_common_data_a8fb17a79685424132ee5da7093de352d}{main\+\_\+}}
+\begin{DoxyCompactList}\small\item\em メイン用レンダーテクスチャ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_render_texture}{Render\+Texture}} \mbox{\hyperlink{class_draw_common_data_a6cd0f6dae97b2058c9fff40b6a7cfc17}{shadow\+\_\+map\+\_\+}}
+\begin{DoxyCompactList}\small\item\em シャドウマップ用レンダーテクスチャ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_render_texture}{Render\+Texture}} \mbox{\hyperlink{class_draw_common_data_a5f035e541464571beb8d2e2350981aab}{motion\+\_\+blur\+\_\+}}
+\begin{DoxyCompactList}\small\item\em モーションブラー用レンダーテクスチャ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera}{Camera}} $\ast$ \mbox{\hyperlink{class_draw_common_data_a368fe7654d88cd5123429bd6a3f88d09}{camera\+\_\+shadow\+\_\+map\+\_\+}}
+\begin{DoxyCompactList}\small\item\em シャドウマップ用カメラ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+描画共通データ\+Class 
+
+描画の共通データ\+Class 
+
+ Draw\+Common\+Data.\+h の 32 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_draw_common_data_a08fceba2155d3a45a3004b0aba97ea2a}\label{class_draw_common_data_a08fceba2155d3a45a3004b0aba97ea2a}} 
+\index{Draw\+Common\+Data@{Draw\+Common\+Data}!getp\+Camera\+Shadow\+Map@{getp\+Camera\+Shadow\+Map}}
+\index{getp\+Camera\+Shadow\+Map@{getp\+Camera\+Shadow\+Map}!Draw\+Common\+Data@{Draw\+Common\+Data}}
+\subsubsection{\texorpdfstring{getp\+Camera\+Shadow\+Map()}{getpCameraShadowMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera}{Camera}} $\ast$ Draw\+Common\+Data\+::getp\+Camera\+Shadow\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+シャドウマップ用カメラ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Camera$\ast$} & シャドウマップ用カメラ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Draw\+Common\+Data.\+cpp の 47 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_common_data_a114bdbc03af787ffb0860e1ae9ec6ef9}\label{class_draw_common_data_a114bdbc03af787ffb0860e1ae9ec6ef9}} 
+\index{Draw\+Common\+Data@{Draw\+Common\+Data}!getp\+Directional\+Light\+Vector@{getp\+Directional\+Light\+Vector}}
+\index{getp\+Directional\+Light\+Vector@{getp\+Directional\+Light\+Vector}!Draw\+Common\+Data@{Draw\+Common\+Data}}
+\subsubsection{\texorpdfstring{getp\+Directional\+Light\+Vector()}{getpDirectionalLightVector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Draw\+Common\+Data\+::getp\+Directional\+Light\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+拡散反射照明ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 拡散反射照明ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Draw\+Common\+Data.\+cpp の 19 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_common_data_ac61796a143057a2d0ab729be59287e7c}\label{class_draw_common_data_ac61796a143057a2d0ab729be59287e7c}} 
+\index{Draw\+Common\+Data@{Draw\+Common\+Data}!getp\+Render\+Texture\+Main@{getp\+Render\+Texture\+Main}}
+\index{getp\+Render\+Texture\+Main@{getp\+Render\+Texture\+Main}!Draw\+Common\+Data@{Draw\+Common\+Data}}
+\subsubsection{\texorpdfstring{getp\+Render\+Texture\+Main()}{getpRenderTextureMain()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_render_texture}{Render\+Texture}} $\ast$ Draw\+Common\+Data\+::getp\+Render\+Texture\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+メイン用レンダーテクスチャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Render\+Texture$\ast$} & メイン用レンダーテクスチャ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Draw\+Common\+Data.\+cpp の 26 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_common_data_a2b356433718b5027d3f50d8860a9d6ff}\label{class_draw_common_data_a2b356433718b5027d3f50d8860a9d6ff}} 
+\index{Draw\+Common\+Data@{Draw\+Common\+Data}!getp\+Render\+Texture\+Motion\+Blur@{getp\+Render\+Texture\+Motion\+Blur}}
+\index{getp\+Render\+Texture\+Motion\+Blur@{getp\+Render\+Texture\+Motion\+Blur}!Draw\+Common\+Data@{Draw\+Common\+Data}}
+\subsubsection{\texorpdfstring{getp\+Render\+Texture\+Motion\+Blur()}{getpRenderTextureMotionBlur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_render_texture}{Render\+Texture}} $\ast$ Draw\+Common\+Data\+::getp\+Render\+Texture\+Motion\+Blur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+モーションブラー用レンダーテクスチャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Render\+Texture$\ast$} & モーションブラー用レンダーテクスチャ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Draw\+Common\+Data.\+cpp の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_common_data_a085ce497bd36164c253b1c3200287180}\label{class_draw_common_data_a085ce497bd36164c253b1c3200287180}} 
+\index{Draw\+Common\+Data@{Draw\+Common\+Data}!getp\+Render\+Texture\+Shadow\+Map@{getp\+Render\+Texture\+Shadow\+Map}}
+\index{getp\+Render\+Texture\+Shadow\+Map@{getp\+Render\+Texture\+Shadow\+Map}!Draw\+Common\+Data@{Draw\+Common\+Data}}
+\subsubsection{\texorpdfstring{getp\+Render\+Texture\+Shadow\+Map()}{getpRenderTextureShadowMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_render_texture}{Render\+Texture}} $\ast$ Draw\+Common\+Data\+::getp\+Render\+Texture\+Shadow\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+シャドウマップ用レンダーテクスチャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Render\+Texture$\ast$} & シャドウマップ用レンダーテクスチャ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Draw\+Common\+Data.\+cpp の 33 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_common_data_ac111688b8426f23dd97b3fd31284fcb3}\label{class_draw_common_data_ac111688b8426f23dd97b3fd31284fcb3}} 
+\index{Draw\+Common\+Data@{Draw\+Common\+Data}!Init@{Init}}
+\index{Init@{Init}!Draw\+Common\+Data@{Draw\+Common\+Data}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Draw\+Common\+Data\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Draw\+Common\+Data.\+cpp の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_common_data_adc69a051e339523a6f0c5e1826694458}\label{class_draw_common_data_adc69a051e339523a6f0c5e1826694458}} 
+\index{Draw\+Common\+Data@{Draw\+Common\+Data}!set\+Camera\+Shadow\+Map@{set\+Camera\+Shadow\+Map}}
+\index{set\+Camera\+Shadow\+Map@{set\+Camera\+Shadow\+Map}!Draw\+Common\+Data@{Draw\+Common\+Data}}
+\subsubsection{\texorpdfstring{set\+Camera\+Shadow\+Map()}{setCameraShadowMap()}}
+{\footnotesize\ttfamily void Draw\+Common\+Data\+::set\+Camera\+Shadow\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+シャドウマップ用カメラ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & シャドウマップ用カメラ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Draw\+Common\+Data.\+cpp の 54 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_common_data_af19ce43b8e3eb24da78a8fa7d98d4315}\label{class_draw_common_data_af19ce43b8e3eb24da78a8fa7d98d4315}} 
+\index{Draw\+Common\+Data@{Draw\+Common\+Data}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Draw\+Common\+Data@{Draw\+Common\+Data}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Draw\+Common\+Data\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Draw\+Common\+Data.\+cpp の 73 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_draw_common_data_a368fe7654d88cd5123429bd6a3f88d09}\label{class_draw_common_data_a368fe7654d88cd5123429bd6a3f88d09}} 
+\index{Draw\+Common\+Data@{Draw\+Common\+Data}!camera\+\_\+shadow\+\_\+map\+\_\+@{camera\+\_\+shadow\+\_\+map\+\_\+}}
+\index{camera\+\_\+shadow\+\_\+map\+\_\+@{camera\+\_\+shadow\+\_\+map\+\_\+}!Draw\+Common\+Data@{Draw\+Common\+Data}}
+\subsubsection{\texorpdfstring{camera\+\_\+shadow\+\_\+map\+\_\+}{camera\_shadow\_map\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera}{Camera}}$\ast$ Draw\+Common\+Data\+::camera\+\_\+shadow\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+シャドウマップ用カメラ 
+
+
+
+ Draw\+Common\+Data.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_common_data_ad08d5a1d1a3de33977a1b4a2d7776343}\label{class_draw_common_data_ad08d5a1d1a3de33977a1b4a2d7776343}} 
+\index{Draw\+Common\+Data@{Draw\+Common\+Data}!directional\+\_\+light\+\_\+vector\+\_\+@{directional\+\_\+light\+\_\+vector\+\_\+}}
+\index{directional\+\_\+light\+\_\+vector\+\_\+@{directional\+\_\+light\+\_\+vector\+\_\+}!Draw\+Common\+Data@{Draw\+Common\+Data}}
+\subsubsection{\texorpdfstring{directional\+\_\+light\+\_\+vector\+\_\+}{directional\_light\_vector\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Draw\+Common\+Data\+::directional\+\_\+light\+\_\+vector\+\_\+ = \{0.\+5f, -\/1.\+0f, 0.\+8f\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+拡散反射照明ベクトル 
+
+
+
+ Draw\+Common\+Data.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_common_data_a8fb17a79685424132ee5da7093de352d}\label{class_draw_common_data_a8fb17a79685424132ee5da7093de352d}} 
+\index{Draw\+Common\+Data@{Draw\+Common\+Data}!main\+\_\+@{main\+\_\+}}
+\index{main\+\_\+@{main\+\_\+}!Draw\+Common\+Data@{Draw\+Common\+Data}}
+\subsubsection{\texorpdfstring{main\+\_\+}{main\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_render_texture}{Render\+Texture}} Draw\+Common\+Data\+::main\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+メイン用レンダーテクスチャ 
+
+
+
+ Draw\+Common\+Data.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_common_data_a5f035e541464571beb8d2e2350981aab}\label{class_draw_common_data_a5f035e541464571beb8d2e2350981aab}} 
+\index{Draw\+Common\+Data@{Draw\+Common\+Data}!motion\+\_\+blur\+\_\+@{motion\+\_\+blur\+\_\+}}
+\index{motion\+\_\+blur\+\_\+@{motion\+\_\+blur\+\_\+}!Draw\+Common\+Data@{Draw\+Common\+Data}}
+\subsubsection{\texorpdfstring{motion\+\_\+blur\+\_\+}{motion\_blur\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_render_texture}{Render\+Texture}} Draw\+Common\+Data\+::motion\+\_\+blur\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+モーションブラー用レンダーテクスチャ 
+
+
+
+ Draw\+Common\+Data.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_common_data_a6cd0f6dae97b2058c9fff40b6a7cfc17}\label{class_draw_common_data_a6cd0f6dae97b2058c9fff40b6a7cfc17}} 
+\index{Draw\+Common\+Data@{Draw\+Common\+Data}!shadow\+\_\+map\+\_\+@{shadow\+\_\+map\+\_\+}}
+\index{shadow\+\_\+map\+\_\+@{shadow\+\_\+map\+\_\+}!Draw\+Common\+Data@{Draw\+Common\+Data}}
+\subsubsection{\texorpdfstring{shadow\+\_\+map\+\_\+}{shadow\_map\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_render_texture}{Render\+Texture}} Draw\+Common\+Data\+::shadow\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+シャドウマップ用レンダーテクスチャ 
+
+
+
+ Draw\+Common\+Data.\+h の 40 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\mbox{\hyperlink{_draw_common_data_8h}{Draw\+Common\+Data.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Source/\mbox{\hyperlink{_draw_common_data_8cpp}{Draw\+Common\+Data.\+cpp}}\end{DoxyCompactItemize}

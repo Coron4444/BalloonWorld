@@ -30,9 +30,6 @@ class VertexShaderDefaultShadow : public VertexShaderNull
 //====================
 private:
 	static const char* PATH;					//!< ファイルパス
-	static const float OFF_SET_X;				//!< X座標オフセット値
-	static const float OFF_SET_Y;				//!< Y座標オフセット値
-	static const MATRIX TEXTURE_PROJECTION;		//!< テクスチャ座標
 
 
 //====================

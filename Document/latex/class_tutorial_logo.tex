@@ -2,7 +2,7 @@
 \label{class_tutorial_logo}\index{Tutorial\+Logo@{Tutorial\+Logo}}
 
 
-チュートリアルロゴクラス  
+クリアロゴ\+Class  
 
 
 
@@ -11,53 +11,65 @@
 
 
 
-Tutorial\+Logo の継承関係図\nopagebreak
+Tutorial\+Logo 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=174pt]{class_tutorial_logo__inherit__graph}
+\includegraphics[width=350pt]{class_tutorial_logo__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
+unsigned \mbox{\hyperlink{class_tutorial_logo_ada533e278273685d3de1a29742a6b7f0}{get\+Logo\+Num}} ()
+\begin{DoxyCompactList}\small\item\em チュートリアルロゴ番号取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tutorial_logo_a6f21283935bf1deed19fec1412eabd72}{set\+Logo\+Num}} (unsigned value)
+\begin{DoxyCompactList}\small\item\em チュートリアルロゴ番号設定関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_tutorial_logo_a590f017a6b0532d08c1377b90b8fba3f}{Init}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw)
-\item 
-void \mbox{\hyperlink{class_tutorial_logo_a8e1f1dba47dadf7d1bb40f616324ffb5}{Uninit}} () override
-\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_tutorial_logo_a2c9e22c81cfeafbd34f50cc766a66cf1}{Reset}} () override
-\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\item 
-unsigned \mbox{\hyperlink{class_tutorial_logo_af4735bb34e06803ff13ae227fcf74e09}{Get\+Logo\+Num}} ()
-\item 
-void \mbox{\hyperlink{class_tutorial_logo_a18313074bc7242f5e8a9121414abd51d}{Set\+Logo\+Num}} (unsigned value)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 unsigned \mbox{\hyperlink{class_tutorial_logo_a8027b42e33a036e88277c4cd17fabdaa}{logo\+\_\+num\+\_\+}} = 0
-\begin{DoxyCompactList}\small\item\em チュートリアル \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em チュートリアルロゴ番号 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
-チュートリアルロゴクラス 
+クリアロゴ\+Class 
 
-チュートリアルロゴのクラス 
+クリアロゴの\+Class 
 
- Tutorial\+Logo.\+h の 26 行目に定義があります。
+ Tutorial\+Logo.\+h の 24 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_tutorial_logo_af4735bb34e06803ff13ae227fcf74e09}\label{class_tutorial_logo_af4735bb34e06803ff13ae227fcf74e09}} 
-\index{Tutorial\+Logo@{Tutorial\+Logo}!Get\+Logo\+Num@{Get\+Logo\+Num}}
-\index{Get\+Logo\+Num@{Get\+Logo\+Num}!Tutorial\+Logo@{Tutorial\+Logo}}
-\subsubsection{\texorpdfstring{Get\+Logo\+Num()}{GetLogoNum()}}
-{\footnotesize\ttfamily unsigned Tutorial\+Logo\+::\+Get\+Logo\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_tutorial_logo_ada533e278273685d3de1a29742a6b7f0}\label{class_tutorial_logo_ada533e278273685d3de1a29742a6b7f0}} 
+\index{Tutorial\+Logo@{Tutorial\+Logo}!get\+Logo\+Num@{get\+Logo\+Num}}
+\index{get\+Logo\+Num@{get\+Logo\+Num}!Tutorial\+Logo@{Tutorial\+Logo}}
+\subsubsection{\texorpdfstring{get\+Logo\+Num()}{getLogoNum()}}
+{\footnotesize\ttfamily unsigned Tutorial\+Logo\+::get\+Logo\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Tutorial\+Logo.\+h の 42 行目に定義があります。
+チュートリアルロゴ番号取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & チュートリアルロゴ番号 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Tutorial\+Logo.\+cpp の 20 行目に定義があります。
 
 \mbox{\Hypertarget{class_tutorial_logo_a590f017a6b0532d08c1377b90b8fba3f}\label{class_tutorial_logo_a590f017a6b0532d08c1377b90b8fba3f}} 
 \index{Tutorial\+Logo@{Tutorial\+Logo}!Init@{Init}}
@@ -67,7 +79,21 @@ unsigned \mbox{\hyperlink{class_tutorial_logo_a8027b42e33a036e88277c4cd17fabdaa}
 
 
 
- Tutorial\+Logo.\+cpp の 32 行目に定義があります。
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Tutorial\+Logo.\+cpp の 37 行目に定義があります。
 
 \mbox{\Hypertarget{class_tutorial_logo_a2c9e22c81cfeafbd34f50cc766a66cf1}\label{class_tutorial_logo_a2c9e22c81cfeafbd34f50cc766a66cf1}} 
 \index{Tutorial\+Logo@{Tutorial\+Logo}!Reset@{Reset}}
@@ -80,40 +106,46 @@ unsigned \mbox{\hyperlink{class_tutorial_logo_a8027b42e33a036e88277c4cd17fabdaa}
 リセット関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
-\mbox{\hyperlink{class_game_object_base_a85c59554f734bcb09f1a1e18d9517dce}{Game\+Object\+Base}}を実装しています。
-
-
-
- Tutorial\+Logo.\+cpp の 60 行目に定義があります。
-
-\mbox{\Hypertarget{class_tutorial_logo_a18313074bc7242f5e8a9121414abd51d}\label{class_tutorial_logo_a18313074bc7242f5e8a9121414abd51d}} 
-\index{Tutorial\+Logo@{Tutorial\+Logo}!Set\+Logo\+Num@{Set\+Logo\+Num}}
-\index{Set\+Logo\+Num@{Set\+Logo\+Num}!Tutorial\+Logo@{Tutorial\+Logo}}
-\subsubsection{\texorpdfstring{Set\+Logo\+Num()}{SetLogoNum()}}
-{\footnotesize\ttfamily void Tutorial\+Logo\+::\+Set\+Logo\+Num (\begin{DoxyParamCaption}\item[{unsigned}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
-
- Tutorial\+Logo.\+h の 43 行目に定義があります。
-
-\mbox{\Hypertarget{class_tutorial_logo_a8e1f1dba47dadf7d1bb40f616324ffb5}\label{class_tutorial_logo_a8e1f1dba47dadf7d1bb40f616324ffb5}} 
-\index{Tutorial\+Logo@{Tutorial\+Logo}!Uninit@{Uninit}}
-\index{Uninit@{Uninit}!Tutorial\+Logo@{Tutorial\+Logo}}
-\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
-{\footnotesize\ttfamily void Tutorial\+Logo\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\hyperlink{class_game_object_null_a26a748e17ea31b987249022562f5198c}{Game\+Object\+Null}}を再実装しています。
 
 
 
-終了関数 
+ Tutorial\+Logo.\+cpp の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_tutorial_logo_a6f21283935bf1deed19fec1412eabd72}\label{class_tutorial_logo_a6f21283935bf1deed19fec1412eabd72}} 
+\index{Tutorial\+Logo@{Tutorial\+Logo}!set\+Logo\+Num@{set\+Logo\+Num}}
+\index{set\+Logo\+Num@{set\+Logo\+Num}!Tutorial\+Logo@{Tutorial\+Logo}}
+\subsubsection{\texorpdfstring{set\+Logo\+Num()}{setLogoNum()}}
+{\footnotesize\ttfamily void Tutorial\+Logo\+::set\+Logo\+Num (\begin{DoxyParamCaption}\item[{unsigned}]{value }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{class_game_object_base_a97e1bc277d7b1c0156d4735de29a022c}{Game\+Object\+Base}}を再実装しています。
+チュートリアルロゴ番号設定関数 
 
 
+\begin{DoxyParams}{引数}
+{\em value} & チュートリアルロゴ番号 \\
+\hline
+\end{DoxyParams}
 
- Tutorial\+Logo.\+cpp の 46 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Tutorial\+Logo.\+cpp の 27 行目に定義があります。
 
 
 
@@ -126,15 +158,15 @@ unsigned \mbox{\hyperlink{class_tutorial_logo_a8027b42e33a036e88277c4cd17fabdaa}
 
 
 
-チュートリアル 
+チュートリアルロゴ番号 
 
 
 
- Tutorial\+Logo.\+h の 32 行目に定義があります。
+ Tutorial\+Logo.\+h の 30 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/2\+D/\+U\+I/\+Tutorial\+Logo/\mbox{\hyperlink{_tutorial_logo_8h}{Tutorial\+Logo.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/2\+D/\+U\+I/\+Tutorial\+Logo/\mbox{\hyperlink{_tutorial_logo_8cpp}{Tutorial\+Logo.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/2\+D/\+Tutorial\+Logo/\mbox{\hyperlink{_tutorial_logo_8h}{Tutorial\+Logo.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/2\+D/\+Tutorial\+Logo/\+Source/\mbox{\hyperlink{_tutorial_logo_8cpp}{Tutorial\+Logo.\+cpp}}\end{DoxyCompactItemize}

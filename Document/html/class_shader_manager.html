@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: ShaderManager クラス</title>
+<title>BalloonWorld: ShaderManager クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -98,109 +98,166 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>シェーダーマネージャークラス  
+<p>シェーダーマネージャClass  
  <a href="class_shader_manager.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a>&gt;</code></p>
+<div class="dynheader">
+ShaderManager 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_shader_manager__coll__graph.png" border="0" usemap="#_shader_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="_shader_manager_coll__map" id="_shader_manager_coll__map">
+<area shape="rect" id="node2" href="class_vertex_shader_base.html" title="頂点シェーダーBassClass " alt="" coords="152,765,283,792"/>
+<area shape="rect" id="node3" href="class_shader_base.html" title="シェーダーBaseClass " alt="" coords="156,676,249,703"/>
+<area shape="rect" id="node12" href="class_pixel_shader_base.html" title="ピクセルシェーダーBassClass " alt="" coords="5,765,128,792"/>
+<area shape="rect" id="node4" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="137,587,268,613"/>
+<area shape="rect" id="node5" href="class_camera.html" title="カメラClass " alt="" coords="439,468,505,495"/>
+<area shape="rect" id="node6" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="468,587,575,613"/>
+<area shape="rect" id="node7" href="class_matrix.html" title="行列Class " alt="" coords="443,297,501,323"/>
+<area shape="rect" id="node9" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="286,81,362,108"/>
+<area shape="rect" id="node11" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="173,468,280,495"/>
+<area shape="rect" id="node13" href="class_texture_object.html" title="テクスチャオブジェクトClass " alt="" coords="15,676,118,703"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 公開型</h2></td></tr>
-<tr class="memitem:a9b51e49d70eb3cc58f6d1f3994e8cfbd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a> { <a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbdaf0212c589f47f880608c317e6fcbdfab">VERTEX_NONE</a> = -1, 
-<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbda66ffcf3d89e817f5cad6b8f8eda5fd71">VERTEX_FIXED</a>, 
-<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbda6ecdb0c0fcd8c61e0c0d494a99e3a8d8">VERTEX_BUMP_MAPPING</a>, 
-<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbda2a90d8502c5060ffb7b4a7d1c1f0e940">VERTEX_MAX</a>
+<tr class="memitem:a9b51e49d70eb3cc58f6d1f3994e8cfbd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a> { <br />
+&#160;&#160;<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbdab50339a10e1de285ac99d4c3990b8693">VertexShaderType::NONE</a> = -1, 
+<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbdac6e6dc18b53b4c2681394b9d8aefcec7">VertexShaderType::FIXED</a>, 
+<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbdaf444cdeee40506a39576522e6e8d57e7">VertexShaderType::ANIMATED_DEFAULT</a>, 
+<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbdaf80d3ff63cd812f78f5a29ba2d16eb6a">VertexShaderType::BLINN_PHONG</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbda5c4b81b1405aff819dd62e30779f3971">VertexShaderType::BUMP_MAPPING</a>, 
+<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbda52a264ced6adec1e020fdc1f1c805bc2">VertexShaderType::COOK_TORRANCE</a>, 
+<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbda5b39c8b553c821e7cddc6da64b5bd2ee">VertexShaderType::DEFAULT</a>, 
+<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbdaa2a014751c249304425363067adf2782">VertexShaderType::DEFAULT_SHADOW</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbda5b266596cf5123fb91b9f8fe371dbb03">VertexShaderType::SHADOW_MAP</a>, 
+<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbda26a4b44a837bf97b972628509912b4a5">VertexShaderType::MAX</a>
+<br />
  }</td></tr>
 <tr class="separator:a9b51e49d70eb3cc58f6d1f3994e8cfbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d15d773b3c6a99dd7086c45c8b0be5f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a> { <a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fa73495baa0c47ac751cce0e3385fa80dd">PIXEL_NONE</a> = -1, 
-<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fa1c9cf819d7e5efbe184309a4702824f1">PIXEL_FIXED</a>, 
-<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fa3acd691a58d74a2ab3430e644c6ef0da">PIXEL_BUMP_MAPPING</a>, 
-<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fa9281ee100f356fae9f9432679705bb9e">PIXEL_MAX</a>
+<tr class="memitem:a7d15d773b3c6a99dd7086c45c8b0be5f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a> { <br />
+&#160;&#160;<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fab50339a10e1de285ac99d4c3990b8693">PixelShaderType::NONE</a> = -1, 
+<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fac6e6dc18b53b4c2681394b9d8aefcec7">PixelShaderType::FIXED</a>, 
+<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5faf80d3ff63cd812f78f5a29ba2d16eb6a">PixelShaderType::BLINN_PHONG</a>, 
+<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fa5c4b81b1405aff819dd62e30779f3971">PixelShaderType::BUMP_MAPPING</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fa52a264ced6adec1e020fdc1f1c805bc2">PixelShaderType::COOK_TORRANCE</a>, 
+<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fa5b39c8b553c821e7cddc6da64b5bd2ee">PixelShaderType::DEFAULT</a>, 
+<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5faa2a014751c249304425363067adf2782">PixelShaderType::DEFAULT_SHADOW</a>, 
+<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fa5b266596cf5123fb91b9f8fe371dbb03">PixelShaderType::SHADOW_MAP</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fa26a4b44a837bf97b972628509912b4a5">PixelShaderType::MAX</a>
+<br />
  }</td></tr>
 <tr class="separator:a7d15d773b3c6a99dd7086c45c8b0be5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a8e8fd62a28cc18addcd5ec6507a5dcb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a8e8fd62a28cc18addcd5ec6507a5dcb0">Init</a> ()</td></tr>
-<tr class="memdesc:a8e8fd62a28cc18addcd5ec6507a5dcb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a8e8fd62a28cc18addcd5ec6507a5dcb0">[詳解]</a><br /></td></tr>
-<tr class="separator:a8e8fd62a28cc18addcd5ec6507a5dcb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482286710edced4ec663dfe4e8ff6756"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a482286710edced4ec663dfe4e8ff6756">Init</a> (<a class="el" href="class_draw_common_data.html">DrawCommonData</a> *common_data)</td></tr>
+<tr class="memdesc:a482286710edced4ec663dfe4e8ff6756"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a482286710edced4ec663dfe4e8ff6756">[詳解]</a><br /></td></tr>
+<tr class="separator:a482286710edced4ec663dfe4e8ff6756"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc31a6bbe86e6b57edd7be0972f48ab1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#afc31a6bbe86e6b57edd7be0972f48ab1">Uninit</a> ()</td></tr>
 <tr class="memdesc:afc31a6bbe86e6b57edd7be0972f48ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#afc31a6bbe86e6b57edd7be0972f48ab1">[詳解]</a><br /></td></tr>
 <tr class="separator:afc31a6bbe86e6b57edd7be0972f48ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2caed4ae50c1ca784151d0f9e50c381"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#ad2caed4ae50c1ca784151d0f9e50c381">SetShader</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a> forced_vertex_type, <a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a> forced_pixel_type)</td></tr>
-<tr class="memdesc:ad2caed4ae50c1ca784151d0f9e50c381"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダー設定関数  <a href="#ad2caed4ae50c1ca784151d0f9e50c381">[詳解]</a><br /></td></tr>
-<tr class="separator:ad2caed4ae50c1ca784151d0f9e50c381"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cfff8f4aee59d9bc5162a5a6f4d07d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a6cfff8f4aee59d9bc5162a5a6f4d07d4">CommonSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, <a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a> forced_vertex_type, <a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a> forced_pixel_type, unsigned object_index)</td></tr>
-<tr class="memdesc:a6cfff8f4aee59d9bc5162a5a6f4d07d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">共通設定関数  <a href="#a6cfff8f4aee59d9bc5162a5a6f4d07d4">[詳解]</a><br /></td></tr>
-<tr class="separator:a6cfff8f4aee59d9bc5162a5a6f4d07d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af016392b9b0477d49165d753e9404ff4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#af016392b9b0477d49165d753e9404ff4">SpecificSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, <a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a> forced_vertex_type, <a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a> forced_pixel_type, unsigned object_index, unsigned mesh_index)</td></tr>
-<tr class="memdesc:af016392b9b0477d49165d753e9404ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">固有設定関数  <a href="#af016392b9b0477d49165d753e9404ff4">[詳解]</a><br /></td></tr>
-<tr class="separator:af016392b9b0477d49165d753e9404ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05693102a283c82768370e37919ffef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a05693102a283c82768370e37919ffef8">ShaderSetToDevice</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a> forced_vertex, <a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a> forced_pixel)</td></tr>
+<tr class="memdesc:a05693102a283c82768370e37919ffef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスにシェーダー設定関数  <a href="#a05693102a283c82768370e37919ffef8">[詳解]</a><br /></td></tr>
+<tr class="separator:a05693102a283c82768370e37919ffef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a401db6f6f5157833ddd3020892ad81b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a401db6f6f5157833ddd3020892ad81b4">ObjectSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index)</td></tr>
+<tr class="memdesc:a401db6f6f5157833ddd3020892ad81b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト設定関数  <a href="#a401db6f6f5157833ddd3020892ad81b4">[詳解]</a><br /></td></tr>
+<tr class="separator:a401db6f6f5157833ddd3020892ad81b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7551c1c791574973815dd47450ae9124"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a7551c1c791574973815dd47450ae9124">MeshSetting</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index, unsigned mesh_index)</td></tr>
+<tr class="memdesc:a7551c1c791574973815dd47450ae9124"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ設定関数  <a href="#a7551c1c791574973815dd47450ae9124">[詳解]</a><br /></td></tr>
+<tr class="separator:a7551c1c791574973815dd47450ae9124"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 非公開メンバ関数</h2></td></tr>
-<tr class="memitem:a9881e89daff32662e10f6ac48212ca06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a9881e89daff32662e10f6ac48212ca06">InitVertexShaders</a> ()</td></tr>
-<tr class="memdesc:a9881e89daff32662e10f6ac48212ca06"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダー初期化関数  <a href="#a9881e89daff32662e10f6ac48212ca06">[詳解]</a><br /></td></tr>
-<tr class="separator:a9881e89daff32662e10f6ac48212ca06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e1c2dc6c381081bc0e5ef1624b8e0f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a6e1c2dc6c381081bc0e5ef1624b8e0f0">InitPixelShaders</a> ()</td></tr>
-<tr class="memdesc:a6e1c2dc6c381081bc0e5ef1624b8e0f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダー初期化関数  <a href="#a6e1c2dc6c381081bc0e5ef1624b8e0f0">[詳解]</a><br /></td></tr>
-<tr class="separator:a6e1c2dc6c381081bc0e5ef1624b8e0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3b8f2931857016315e018041321f35a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#af3b8f2931857016315e018041321f35a">UninitVertexShaders</a> ()</td></tr>
-<tr class="memdesc:af3b8f2931857016315e018041321f35a"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダー終了関数  <a href="#af3b8f2931857016315e018041321f35a">[詳解]</a><br /></td></tr>
-<tr class="separator:af3b8f2931857016315e018041321f35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1edd1b68c7949022217f98bce8360d3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a1edd1b68c7949022217f98bce8360d3c">UninitPixelShaders</a> ()</td></tr>
-<tr class="memdesc:a1edd1b68c7949022217f98bce8360d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダー終了関数  <a href="#a1edd1b68c7949022217f98bce8360d3c">[詳解]</a><br /></td></tr>
-<tr class="separator:a1edd1b68c7949022217f98bce8360d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3661a079ae4e9e7e4d5da35f2171b41e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a3661a079ae4e9e7e4d5da35f2171b41e">SetVertexShader</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a> forced_vertex_type)</td></tr>
-<tr class="memdesc:a3661a079ae4e9e7e4d5da35f2171b41e"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダー設定関数  <a href="#a3661a079ae4e9e7e4d5da35f2171b41e">[詳解]</a><br /></td></tr>
-<tr class="separator:a3661a079ae4e9e7e4d5da35f2171b41e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c954293001a33fafff216ff719618d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a6c954293001a33fafff216ff719618d5">SetPixelShader</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a> forced_pixel_type)</td></tr>
-<tr class="memdesc:a6c954293001a33fafff216ff719618d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダー設定関数  <a href="#a6c954293001a33fafff216ff719618d5">[詳解]</a><br /></td></tr>
-<tr class="separator:a6c954293001a33fafff216ff719618d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a836c92ee48dfbf8b8c8085f9413027bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a836c92ee48dfbf8b8c8085f9413027bd">CommonSettingVertexShader</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, <a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a> forced_vertex_type, unsigned object_index)</td></tr>
-<tr class="memdesc:a836c92ee48dfbf8b8c8085f9413027bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダー共通設定関数  <a href="#a836c92ee48dfbf8b8c8085f9413027bd">[詳解]</a><br /></td></tr>
-<tr class="separator:a836c92ee48dfbf8b8c8085f9413027bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2b591958e1d22d746e5ed3d7941e4c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#ad2b591958e1d22d746e5ed3d7941e4c1">CommonSettingPixelShader</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, <a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a> forced_pixel_type, unsigned object_index)</td></tr>
-<tr class="memdesc:ad2b591958e1d22d746e5ed3d7941e4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダー共通設定関数  <a href="#ad2b591958e1d22d746e5ed3d7941e4c1">[詳解]</a><br /></td></tr>
-<tr class="separator:ad2b591958e1d22d746e5ed3d7941e4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2433c0715142fd310a497e080f7d0ddb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a2433c0715142fd310a497e080f7d0ddb">SpecificSettingVertexShader</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, <a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a> forced_vertex_type, unsigned object_index, unsigned mesh_index)</td></tr>
-<tr class="memdesc:a2433c0715142fd310a497e080f7d0ddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダー固有設定関数  <a href="#a2433c0715142fd310a497e080f7d0ddb">[詳解]</a><br /></td></tr>
-<tr class="separator:a2433c0715142fd310a497e080f7d0ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1158156785098fe426dd514e4c2a97c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a1158156785098fe426dd514e4c2a97c1">SpecificSettingPixelShader</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, <a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a> forced_pixel_type, unsigned object_index, unsigned mesh_index)</td></tr>
-<tr class="memdesc:a1158156785098fe426dd514e4c2a97c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダー固有設定関数  <a href="#a1158156785098fe426dd514e4c2a97c1">[詳解]</a><br /></td></tr>
-<tr class="separator:a1158156785098fe426dd514e4c2a97c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd660c22b7371684e2da37f0804b5ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a5bd660c22b7371684e2da37f0804b5ab">InitVertexShader</a> (<a class="el" href="class_draw_common_data.html">DrawCommonData</a> *common_data)</td></tr>
+<tr class="memdesc:a5bd660c22b7371684e2da37f0804b5ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダー初期化関数  <a href="#a5bd660c22b7371684e2da37f0804b5ab">[詳解]</a><br /></td></tr>
+<tr class="separator:a5bd660c22b7371684e2da37f0804b5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada9ec9598240ca169bbcbd7231714e27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#ada9ec9598240ca169bbcbd7231714e27">InitPixelShader</a> (<a class="el" href="class_draw_common_data.html">DrawCommonData</a> *common_data)</td></tr>
+<tr class="memdesc:ada9ec9598240ca169bbcbd7231714e27"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダー初期化関数  <a href="#ada9ec9598240ca169bbcbd7231714e27">[詳解]</a><br /></td></tr>
+<tr class="separator:ada9ec9598240ca169bbcbd7231714e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adadfecd2a6e9b79dec633c79ed256e18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#adadfecd2a6e9b79dec633c79ed256e18">UninitVertexShader</a> ()</td></tr>
+<tr class="memdesc:adadfecd2a6e9b79dec633c79ed256e18"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダー終了関数  <a href="#adadfecd2a6e9b79dec633c79ed256e18">[詳解]</a><br /></td></tr>
+<tr class="separator:adadfecd2a6e9b79dec633c79ed256e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae672bb32f27d16fac548a507666facc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#ae672bb32f27d16fac548a507666facc9">UninitPixelShader</a> ()</td></tr>
+<tr class="memdesc:ae672bb32f27d16fac548a507666facc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダー終了関数  <a href="#ae672bb32f27d16fac548a507666facc9">[詳解]</a><br /></td></tr>
+<tr class="separator:ae672bb32f27d16fac548a507666facc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ddde68576a7bbc3dd4411e2d0caef7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a49ddde68576a7bbc3dd4411e2d0caef7">VertexShaderSetToDevice</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw)</td></tr>
+<tr class="memdesc:a49ddde68576a7bbc3dd4411e2d0caef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスに頂点シェーダー設定関数  <a href="#a49ddde68576a7bbc3dd4411e2d0caef7">[詳解]</a><br /></td></tr>
+<tr class="separator:a49ddde68576a7bbc3dd4411e2d0caef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e58bb3a973eb2cf6aa01cafee045b11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a0e58bb3a973eb2cf6aa01cafee045b11">PixelShaderSetToDevice</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw)</td></tr>
+<tr class="memdesc:a0e58bb3a973eb2cf6aa01cafee045b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスにピクセルシェーダー設定関数  <a href="#a0e58bb3a973eb2cf6aa01cafee045b11">[詳解]</a><br /></td></tr>
+<tr class="separator:a0e58bb3a973eb2cf6aa01cafee045b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c7505114a88fdffa534737bb29ba6fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a8c7505114a88fdffa534737bb29ba6fa">ObjectSettingVertexShader</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index)</td></tr>
+<tr class="memdesc:a8c7505114a88fdffa534737bb29ba6fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダーのオブジェクト設定関数  <a href="#a8c7505114a88fdffa534737bb29ba6fa">[詳解]</a><br /></td></tr>
+<tr class="separator:a8c7505114a88fdffa534737bb29ba6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d970eb653aa67a9e7fc0b37ab05d73d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a4d970eb653aa67a9e7fc0b37ab05d73d">ObjectSettingPixelShader</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index)</td></tr>
+<tr class="memdesc:a4d970eb653aa67a9e7fc0b37ab05d73d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダーのオブジェクト設定関数  <a href="#a4d970eb653aa67a9e7fc0b37ab05d73d">[詳解]</a><br /></td></tr>
+<tr class="separator:a4d970eb653aa67a9e7fc0b37ab05d73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa54f11169f0b7357b136910a3177a177"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#aa54f11169f0b7357b136910a3177a177">MeshSettingVertexShader</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index, unsigned mesh_index)</td></tr>
+<tr class="memdesc:aa54f11169f0b7357b136910a3177a177"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダーのメッシュ設定関数  <a href="#aa54f11169f0b7357b136910a3177a177">[詳解]</a><br /></td></tr>
+<tr class="separator:aa54f11169f0b7357b136910a3177a177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1493f19d52f73e9fa274ddb4a628807e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a1493f19d52f73e9fa274ddb4a628807e">MeshSettingPixelShader</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index, unsigned mesh_index)</td></tr>
+<tr class="memdesc:a1493f19d52f73e9fa274ddb4a628807e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダーのメッシュ設定関数  <a href="#a1493f19d52f73e9fa274ddb4a628807e">[詳解]</a><br /></td></tr>
+<tr class="separator:a1493f19d52f73e9fa274ddb4a628807e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 非公開変数類</h2></td></tr>
-<tr class="memitem:a56ae173a708111646ae72973f623b036"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vertex_shader_base.html">VertexShaderBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a56ae173a708111646ae72973f623b036">vertex_shaders_</a> [<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbda2a90d8502c5060ffb7b4a7d1c1f0e940">VERTEX_MAX</a>] = {nullptr}</td></tr>
-<tr class="separator:a56ae173a708111646ae72973f623b036"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a236d319ea6fb7a9c7233b942fdf4f464"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_pixel_shader_base.html">PixelShaderBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a236d319ea6fb7a9c7233b942fdf4f464">pixel_shaders_</a> [<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fa9281ee100f356fae9f9432679705bb9e">PIXEL_MAX</a>] = {nullptr}</td></tr>
-<tr class="separator:a236d319ea6fb7a9c7233b942fdf4f464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd04862a480ada5dc9f50ec1604e7f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vertex_shader_base.html">VertexShaderBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#afdd04862a480ada5dc9f50ec1604e7f5">vertex_shader_</a> [(int) <a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbda26a4b44a837bf97b972628509912b4a5">VertexShaderType::MAX</a>] = {nullptr}</td></tr>
+<tr class="memdesc:afdd04862a480ada5dc9f50ec1604e7f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダー  <a href="#afdd04862a480ada5dc9f50ec1604e7f5">[詳解]</a><br /></td></tr>
+<tr class="separator:afdd04862a480ada5dc9f50ec1604e7f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad167380b7eed38c3f06e02f2f8eafe00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_pixel_shader_base.html">PixelShaderBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#ad167380b7eed38c3f06e02f2f8eafe00">pixel_shader_</a> [(int) <a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fa26a4b44a837bf97b972628509912b4a5">PixelShaderType::MAX</a>] = {nullptr}</td></tr>
+<tr class="memdesc:ad167380b7eed38c3f06e02f2f8eafe00"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダー  <a href="#ad167380b7eed38c3f06e02f2f8eafe00">[詳解]</a><br /></td></tr>
+<tr class="separator:ad167380b7eed38c3f06e02f2f8eafe00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab19a3d8d5ae1099c655d04e5e1218575"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#ab19a3d8d5ae1099c655d04e5e1218575">forced_vertex_</a></td></tr>
+<tr class="memdesc:ab19a3d8d5ae1099c655d04e5e1218575"><td class="mdescLeft">&#160;</td><td class="mdescRight">強制頂点シェーダータイプ  <a href="#ab19a3d8d5ae1099c655d04e5e1218575">[詳解]</a><br /></td></tr>
+<tr class="separator:ab19a3d8d5ae1099c655d04e5e1218575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e2deec42b20cc8a5d06987a0a74dc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shader_manager.html#a36e2deec42b20cc8a5d06987a0a74dc6">forced_pixel_</a></td></tr>
+<tr class="memdesc:a36e2deec42b20cc8a5d06987a0a74dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">強制ピクセルシェーダータイプ  <a href="#a36e2deec42b20cc8a5d06987a0a74dc6">[詳解]</a><br /></td></tr>
+<tr class="separator:a36e2deec42b20cc8a5d06987a0a74dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>シェーダーマネージャークラス </p>
-<p>シェーダーを管理するクラス </p>
+<div class="textblock"><p>シェーダーマネージャClass </p>
+<p>シェーダーのマネージャClass </p>
 
-<p class="definition"> <a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a> の <a class="el" href="_shader_manager_8h_source.html#l00036">36</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a> の <a class="el" href="_shader_manager_8h_source.html#l00028">28</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">列挙型メンバ詳解</h2>
 <a id="a7d15d773b3c6a99dd7086c45c8b0be5f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d15d773b3c6a99dd7086c45c8b0be5f">&#9670;&nbsp;</a></span>PixelShaderType</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">enum <a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">ShaderManager::PixelShaderType</a></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a7d15d773b3c6a99dd7086c45c8b0be5fa73495baa0c47ac751cce0e3385fa80dd"></a>PIXEL_NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7d15d773b3c6a99dd7086c45c8b0be5fa1c9cf819d7e5efbe184309a4702824f1"></a>PIXEL_FIXED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7d15d773b3c6a99dd7086c45c8b0be5fa3acd691a58d74a2ab3430e644c6ef0da"></a>PIXEL_BUMP_MAPPING&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7d15d773b3c6a99dd7086c45c8b0be5fa9281ee100f356fae9f9432679705bb9e"></a>PIXEL_MAX&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a7d15d773b3c6a99dd7086c45c8b0be5fab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7d15d773b3c6a99dd7086c45c8b0be5fac6e6dc18b53b4c2681394b9d8aefcec7"></a>FIXED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7d15d773b3c6a99dd7086c45c8b0be5faf80d3ff63cd812f78f5a29ba2d16eb6a"></a>BLINN_PHONG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7d15d773b3c6a99dd7086c45c8b0be5fa5c4b81b1405aff819dd62e30779f3971"></a>BUMP_MAPPING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7d15d773b3c6a99dd7086c45c8b0be5fa52a264ced6adec1e020fdc1f1c805bc2"></a>COOK_TORRANCE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7d15d773b3c6a99dd7086c45c8b0be5fa5b39c8b553c821e7cddc6da64b5bd2ee"></a>DEFAULT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7d15d773b3c6a99dd7086c45c8b0be5faa2a014751c249304425363067adf2782"></a>DEFAULT_SHADOW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7d15d773b3c6a99dd7086c45c8b0be5fa5b266596cf5123fb91b9f8fe371dbb03"></a>SHADOW_MAP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7d15d773b3c6a99dd7086c45c8b0be5fa26a4b44a837bf97b972628509912b4a5"></a>MAX&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a> の <a class="el" href="_shader_manager_8h_source.html#l00052">52</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a> の <a class="el" href="_shader_manager_8h_source.html#l00048">48</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -209,198 +266,40 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">enum <a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">ShaderManager::VertexShaderType</a></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbdaf0212c589f47f880608c317e6fcbdfab"></a>VERTEX_NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbda66ffcf3d89e817f5cad6b8f8eda5fd71"></a>VERTEX_FIXED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbda6ecdb0c0fcd8c61e0c0d494a99e3a8d8"></a>VERTEX_BUMP_MAPPING&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbda2a90d8502c5060ffb7b4a7d1c1f0e940"></a>VERTEX_MAX&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbdab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbdac6e6dc18b53b4c2681394b9d8aefcec7"></a>FIXED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbdaf444cdeee40506a39576522e6e8d57e7"></a>ANIMATED_DEFAULT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbdaf80d3ff63cd812f78f5a29ba2d16eb6a"></a>BLINN_PHONG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbda5c4b81b1405aff819dd62e30779f3971"></a>BUMP_MAPPING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbda52a264ced6adec1e020fdc1f1c805bc2"></a>COOK_TORRANCE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbda5b39c8b553c821e7cddc6da64b5bd2ee"></a>DEFAULT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbdaa2a014751c249304425363067adf2782"></a>DEFAULT_SHADOW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbda5b266596cf5123fb91b9f8fe371dbb03"></a>SHADOW_MAP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b51e49d70eb3cc58f6d1f3994e8cfbda26a4b44a837bf97b972628509912b4a5"></a>MAX&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a> の <a class="el" href="_shader_manager_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a> の <a class="el" href="_shader_manager_8h_source.html#l00034">34</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a6cfff8f4aee59d9bc5162a5a6f4d07d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cfff8f4aee59d9bc5162a5a6f4d07d4">&#9670;&nbsp;</a></span>CommonSetting()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ShaderManager::CommonSetting </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
-          <td class="paramname"><em>draw</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
-          <td class="paramname"><em>camera</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a>&#160;</td>
-          <td class="paramname"><em>forced_vertex_type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a>&#160;</td>
-          <td class="paramname"><em>forced_pixel_type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>object_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>共通設定関数 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">draw</td><td>: 描画基底クラス camera : カメラ forced_vertex_type : 強制頂点シェーダータイプ forced_pixel_type : 強制ピクセルシェーダータイプ object_index : 描画オブジェクトインデックス </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00069">69</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ad2b591958e1d22d746e5ed3d7941e4c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2b591958e1d22d746e5ed3d7941e4c1">&#9670;&nbsp;</a></span>CommonSettingPixelShader()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ShaderManager::CommonSettingPixelShader </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
-          <td class="paramname"><em>draw</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
-          <td class="paramname"><em>camera</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a>&#160;</td>
-          <td class="paramname"><em>forced_pixel_type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>object_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>ピクセルシェーダー共通設定関数 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">draw</td><td>: 描画基底クラス camera : カメラ forced_pixel_type : 強制ピクセルシェーダータイプ object_index : 描画オブジェクトインデックス </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00223">223</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a836c92ee48dfbf8b8c8085f9413027bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a836c92ee48dfbf8b8c8085f9413027bd">&#9670;&nbsp;</a></span>CommonSettingVertexShader()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ShaderManager::CommonSettingVertexShader </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
-          <td class="paramname"><em>draw</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
-          <td class="paramname"><em>camera</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a>&#160;</td>
-          <td class="paramname"><em>forced_vertex_type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>object_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>頂点シェーダー共通設定関数 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">draw</td><td>: 描画基底クラス camera : カメラ forced_vertex_type : 強制頂点シェーダータイプ object_index : 描画オブジェクトインデックス </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00203">203</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a8e8fd62a28cc18addcd5ec6507a5dcb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e8fd62a28cc18addcd5ec6507a5dcb0">&#9670;&nbsp;</a></span>Init()</h2>
+<a id="a482286710edced4ec663dfe4e8ff6756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a482286710edced4ec663dfe4e8ff6756">&#9670;&nbsp;</a></span>Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,20 +307,33 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
         <tr>
           <td class="memname">void ShaderManager::Init </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td>
+          <td class="paramname"><em>common_data</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*common_data</td><td>描画共通データ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00032">32</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00037">37</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a6e1c2dc6c381081bc0e5ef1624b8e0f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e1c2dc6c381081bc0e5ef1624b8e0f0">&#9670;&nbsp;</a></span>InitPixelShaders()</h2>
+<a id="ada9ec9598240ca169bbcbd7231714e27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada9ec9598240ca169bbcbd7231714e27">&#9670;&nbsp;</a></span>InitPixelShader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -430,9 +342,10 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ShaderManager::InitPixelShaders </td>
+          <td class="memname">void ShaderManager::InitPixelShader </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td>
+          <td class="paramname"><em>common_data</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -444,13 +357,25 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
 </div><div class="memdoc">
 
 <p>ピクセルシェーダー初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*common_data</td><td>描画共通データ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00123">123</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00108">108</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a9881e89daff32662e10f6ac48212ca06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9881e89daff32662e10f6ac48212ca06">&#9670;&nbsp;</a></span>InitVertexShaders()</h2>
+<a id="a5bd660c22b7371684e2da37f0804b5ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bd660c22b7371684e2da37f0804b5ab">&#9670;&nbsp;</a></span>InitVertexShader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -459,9 +384,10 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ShaderManager::InitVertexShaders </td>
+          <td class="memname">void ShaderManager::InitVertexShader </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td>
+          <td class="paramname"><em>common_data</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -473,201 +399,15 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
 </div><div class="memdoc">
 
 <p>頂点シェーダー初期化関数 </p>
-
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00105">105</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a6c954293001a33fafff216ff719618d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c954293001a33fafff216ff719618d5">&#9670;&nbsp;</a></span>SetPixelShader()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ShaderManager::SetPixelShader </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
-          <td class="paramname"><em>draw</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a>&#160;</td>
-          <td class="paramname"><em>forced_pixel_type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>ピクセルシェーダー設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">draw</td><td>: 描画基底クラス forced_pixel_type : 強制ピクセルシェーダータイプ </td></tr>
+    <tr><td class="paramname">*common_data</td><td>描画共通データ </td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00186">186</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ad2caed4ae50c1ca784151d0f9e50c381"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2caed4ae50c1ca784151d0f9e50c381">&#9670;&nbsp;</a></span>SetShader()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ShaderManager::SetShader </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
-          <td class="paramname"><em>draw</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a>&#160;</td>
-          <td class="paramname"><em>forced_vertex_type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a>&#160;</td>
-          <td class="paramname"><em>forced_pixel_type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>シェーダー設定関数 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">draw</td><td>: 描画基底クラス forced_vertex_type : 強制頂点シェーダータイプ forced_pixel_type : 強制ピクセルシェーダータイプ </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00054">54</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a3661a079ae4e9e7e4d5da35f2171b41e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3661a079ae4e9e7e4d5da35f2171b41e">&#9670;&nbsp;</a></span>SetVertexShader()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ShaderManager::SetVertexShader </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
-          <td class="paramname"><em>draw</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a>&#160;</td>
-          <td class="paramname"><em>forced_vertex_type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>頂点シェーダー設定関数 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">draw</td><td>: 描画基底クラス forced_vertex_type : 強制頂点シェーダータイプ </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00169">169</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="af016392b9b0477d49165d753e9404ff4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af016392b9b0477d49165d753e9404ff4">&#9670;&nbsp;</a></span>SpecificSetting()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ShaderManager::SpecificSetting </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
-          <td class="paramname"><em>draw</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
-          <td class="paramname"><em>camera</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a>&#160;</td>
-          <td class="paramname"><em>forced_vertex_type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a>&#160;</td>
-          <td class="paramname"><em>forced_pixel_type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>object_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>mesh_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>固有設定関数 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">draw</td><td>: 描画基底クラス camera : カメラ forced_vertex_type : 強制頂点シェーダータイプ forced_pixel_type : 強制ピクセルシェーダータイプ object_index : 描画オブジェクトインデックス mesh_index : メッシュインデックス </td></tr>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
   </table>
   </dd>
 </dl>
@@ -676,17 +416,14 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
 
 </div>
 </div>
-<a id="a1158156785098fe426dd514e4c2a97c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1158156785098fe426dd514e4c2a97c1">&#9670;&nbsp;</a></span>SpecificSettingPixelShader()</h2>
+<a id="a7551c1c791574973815dd47450ae9124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7551c1c791574973815dd47450ae9124">&#9670;&nbsp;</a></span>MeshSetting()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ShaderManager::SpecificSettingPixelShader </td>
+          <td class="memname">void ShaderManager::MeshSetting </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
           <td class="paramname"><em>draw</em>, </td>
@@ -700,8 +437,64 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a>&#160;</td>
-          <td class="paramname"><em>forced_pixel_type</em>, </td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mesh_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>メッシュ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+    <tr><td class="paramname">*camera</td><td>カメラ </td></tr>
+    <tr><td class="paramname">object_index</td><td>描画オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00077">77</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1493f19d52f73e9fa274ddb4a628807e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1493f19d52f73e9fa274ddb4a628807e">&#9670;&nbsp;</a></span>MeshSettingPixelShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderManager::MeshSettingPixelShader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -728,20 +521,29 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>ピクセルシェーダー固有設定関数 </p>
+<p>ピクセルシェーダーのメッシュ設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">draw</td><td>: 描画基底クラス camera : カメラ forced_vertex_type : 強制頂点シェーダータイプ forced_pixel_type : 強制ピクセルシェーダータイプ object_index : 描画オブジェクトインデックス mesh_index : メッシュインデックス </td></tr>
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+    <tr><td class="paramname">*camera</td><td>カメラ </td></tr>
+    <tr><td class="paramname">object_index</td><td>描画オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00265">265</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00233">233</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a2433c0715142fd310a497e080f7d0ddb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2433c0715142fd310a497e080f7d0ddb">&#9670;&nbsp;</a></span>SpecificSettingVertexShader()</h2>
+<a id="aa54f11169f0b7357b136910a3177a177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa54f11169f0b7357b136910a3177a177">&#9670;&nbsp;</a></span>MeshSettingVertexShader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -750,7 +552,7 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ShaderManager::SpecificSettingVertexShader </td>
+          <td class="memname">void ShaderManager::MeshSettingVertexShader </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
           <td class="paramname"><em>draw</em>, </td>
@@ -760,24 +562,290 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
           <td></td>
           <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
           <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mesh_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>頂点シェーダーのメッシュ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+    <tr><td class="paramname">*camera</td><td>カメラ </td></tr>
+    <tr><td class="paramname">object_index</td><td>描画オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00216">216</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a401db6f6f5157833ddd3020892ad81b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a401db6f6f5157833ddd3020892ad81b4">&#9670;&nbsp;</a></span>ObjectSetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderManager::ObjectSetting </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>オブジェクト設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+    <tr><td class="paramname">*camera</td><td>カメラ </td></tr>
+    <tr><td class="paramname">object_index</td><td>描画オブジェクトインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00068">68</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4d970eb653aa67a9e7fc0b37ab05d73d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d970eb653aa67a9e7fc0b37ab05d73d">&#9670;&nbsp;</a></span>ObjectSettingPixelShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderManager::ObjectSettingPixelShader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ピクセルシェーダーのオブジェクト設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+    <tr><td class="paramname">*camera</td><td>カメラ </td></tr>
+    <tr><td class="paramname">object_index</td><td>描画オブジェクトインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00199">199</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8c7505114a88fdffa534737bb29ba6fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c7505114a88fdffa534737bb29ba6fa">&#9670;&nbsp;</a></span>ObjectSettingVertexShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderManager::ObjectSettingVertexShader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>頂点シェーダーのオブジェクト設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+    <tr><td class="paramname">*camera</td><td>カメラ </td></tr>
+    <tr><td class="paramname">object_index</td><td>描画オブジェクトインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00182">182</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0e58bb3a973eb2cf6aa01cafee045b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e58bb3a973eb2cf6aa01cafee045b11">&#9670;&nbsp;</a></span>PixelShaderSetToDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderManager::PixelShaderSetToDevice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デバイスにピクセルシェーダー設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00166">166</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a05693102a283c82768370e37919ffef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05693102a283c82768370e37919ffef8">&#9670;&nbsp;</a></span>ShaderSetToDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderManager::ShaderSetToDevice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a>&#160;</td>
-          <td class="paramname"><em>forced_vertex_type</em>, </td>
+          <td class="paramname"><em>forced_vertex</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>object_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>mesh_index</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a>&#160;</td>
+          <td class="paramname"><em>forced_pixel</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -785,22 +853,25 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>頂点シェーダー固有設定関数 </p>
+<p>デバイスにシェーダー設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">draw</td><td>: 描画基底クラス camera : カメラ forced_vertex_type : 強制頂点シェーダータイプ forced_pixel_type : 強制ピクセルシェーダータイプ object_index : 描画オブジェクトインデックス mesh_index : メッシュインデックス </td></tr>
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+    <tr><td class="paramname">forced_vertex_</td><td>強制頂点シェーダータイプ </td></tr>
+    <tr><td class="paramname">forced_pixel_</td><td>強制ピクセルシェーダータイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00243">243</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00053">53</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -820,13 +891,25 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
 </div><div class="memdoc">
 
 <p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00043">43</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00045">45</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a1edd1b68c7949022217f98bce8360d3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1edd1b68c7949022217f98bce8360d3c">&#9670;&nbsp;</a></span>UninitPixelShaders()</h2>
+<a id="ae672bb32f27d16fac548a507666facc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae672bb32f27d16fac548a507666facc9">&#9670;&nbsp;</a></span>UninitPixelShader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -835,7 +918,7 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ShaderManager::UninitPixelShaders </td>
+          <td class="memname">void ShaderManager::UninitPixelShader </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -849,13 +932,25 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
 </div><div class="memdoc">
 
 <p>ピクセルシェーダー終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00155">155</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00140">140</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="af3b8f2931857016315e018041321f35a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3b8f2931857016315e018041321f35a">&#9670;&nbsp;</a></span>UninitVertexShaders()</h2>
+<a id="adadfecd2a6e9b79dec633c79ed256e18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adadfecd2a6e9b79dec633c79ed256e18">&#9670;&nbsp;</a></span>UninitVertexShader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -864,7 +959,7 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ShaderManager::UninitVertexShaders </td>
+          <td class="memname">void ShaderManager::UninitVertexShader </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -878,14 +973,25 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
 </div><div class="memdoc">
 
 <p>頂点シェーダー終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00141">141</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00130">130</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<h2 class="groupheader">メンバ詳解</h2>
-<a id="a236d319ea6fb7a9c7233b942fdf4f464"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a236d319ea6fb7a9c7233b942fdf4f464">&#9670;&nbsp;</a></span>pixel_shaders_</h2>
+<a id="a49ddde68576a7bbc3dd4411e2d0caef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ddde68576a7bbc3dd4411e2d0caef7">&#9670;&nbsp;</a></span>VertexShaderSetToDevice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -894,7 +1000,11 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_pixel_shader_base.html">PixelShaderBase</a>* ShaderManager::pixel_shaders_[<a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fa9281ee100f356fae9f9432679705bb9e">PIXEL_MAX</a>] = {nullptr}</td>
+          <td class="memname">void ShaderManager::VertexShaderSetToDevice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td>
+          <td class="paramname"><em>draw</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -903,13 +1013,106 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>デバイスに頂点シェーダー設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a> の <a class="el" href="_shader_manager_8cpp_source.html#l00150">150</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a36e2deec42b20cc8a5d06987a0a74dc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36e2deec42b20cc8a5d06987a0a74dc6">&#9670;&nbsp;</a></span>forced_pixel_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">PixelShaderType</a> ShaderManager::forced_pixel_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>強制ピクセルシェーダータイプ </p>
+
+<p class="definition"> <a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a> の <a class="el" href="_shader_manager_8h_source.html#l00069">69</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab19a3d8d5ae1099c655d04e5e1218575"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab19a3d8d5ae1099c655d04e5e1218575">&#9670;&nbsp;</a></span>forced_vertex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">VertexShaderType</a> ShaderManager::forced_vertex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>強制頂点シェーダータイプ </p>
+
+<p class="definition"> <a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a> の <a class="el" href="_shader_manager_8h_source.html#l00068">68</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad167380b7eed38c3f06e02f2f8eafe00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad167380b7eed38c3f06e02f2f8eafe00">&#9670;&nbsp;</a></span>pixel_shader_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_pixel_shader_base.html">PixelShaderBase</a>* ShaderManager::pixel_shader_[(int) <a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fa26a4b44a837bf97b972628509912b4a5">PixelShaderType::MAX</a>] = {nullptr}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ピクセルシェーダー </p>
 
 <p class="definition"> <a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a> の <a class="el" href="_shader_manager_8h_source.html#l00067">67</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a56ae173a708111646ae72973f623b036"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56ae173a708111646ae72973f623b036">&#9670;&nbsp;</a></span>vertex_shaders_</h2>
+<a id="afdd04862a480ada5dc9f50ec1604e7f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdd04862a480ada5dc9f50ec1604e7f5">&#9670;&nbsp;</a></span>vertex_shader_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -918,7 +1121,7 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_vertex_shader_base.html">VertexShaderBase</a>* ShaderManager::vertex_shaders_[<a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbda2a90d8502c5060ffb7b4a7d1c1f0e940">VERTEX_MAX</a>] = {nullptr}</td>
+          <td class="memname"><a class="el" href="class_vertex_shader_base.html">VertexShaderBase</a>* ShaderManager::vertex_shader_[(int) <a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbda26a4b44a837bf97b972628509912b4a5">VertexShaderType::MAX</a>] = {nullptr}</td>
         </tr>
       </table>
   </td>
@@ -927,14 +1130,16 @@ $(document).ready(function(){initNavTree('class_shader_manager.html','');});
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>頂点シェーダー </p>
 
 <p class="definition"> <a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a> の <a class="el" href="_shader_manager_8h_source.html#l00066">66</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/DrawManager/ShaderManager/<a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/DrawManager/ShaderManager/<a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/Shader/ShaderManager/<a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/Shader/ShaderManager/Source/<a class="el" href="_shader_manager_8cpp_source.html">ShaderManager.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,4 +1,4 @@
 var class_push_space_logo_factory =
 [
-    [ "Create", "class_push_space_logo_factory.html#a40ed4a7781d8f5a6e802b90f3aa599cb", null ]
+    [ "Create", "class_push_space_logo_factory.html#a161a03ac90c35e092aa1cc45ffe7e74f", null ]
 ];

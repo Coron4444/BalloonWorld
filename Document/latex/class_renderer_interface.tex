@@ -9,26 +9,19 @@
 
 {\ttfamily \#include $<$Renderer\+Interface.\+h$>$}
 
-
-
-Renderer\+Interface の継承関係図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=172pt]{class_renderer_interface__inherit__graph}
-\end{center}
-\end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-virtual \mbox{\hyperlink{class_renderer_interface_a1dfa67d2c714f8c66759ab677569a750}{$\sim$\+Renderer\+Interface}} ()
+virtual \mbox{\hyperlink{class_renderer_interface_a571638543a7544e023dc186f7dfc7523}{$\sim$\+Renderer\+Interface}} ()=0
 \begin{DoxyCompactList}\small\item\em 仮想デストラクタ \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{class_renderer_interface_aabef76c27c2332c1af2dbcf7e8de5d38}{Init}} (H\+I\+N\+S\+T\+A\+N\+CE h\+Instance, H\+W\+ND h\+Wnd, B\+O\+OL is\+\_\+full\+\_\+screen, int window\+\_\+width, int window\+\_\+height)=0
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_renderer_interface_ada105489f9db98e7e9542b278699d558}{Uninit}} ()=0
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{class_renderer_interface_a86a487deb4e4207a67410d00ec670fd7}{Draw\+Begin}} ()=0
+virtual bool \mbox{\hyperlink{class_renderer_interface_a8fad8e69ef40358a29e8dd75e4dbc7bd}{Draw\+Begin}} (\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} clear\+\_\+color=\{0.\+123f, 0.\+25f, 0.\+75f, 1.\+0f\})=0
 \begin{DoxyCompactList}\small\item\em 描画開始関数 \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_renderer_interface_a3274ae0eea630ead1af76b1aac32f420}{No\+Clear\+Draw\+Begin}} ()=0
+\begin{DoxyCompactList}\small\item\em クリア無描画開始関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_renderer_interface_a0034a44420e4746062e70e4d66d3bee2}{Draw\+End}} (bool is\+\_\+begin\+\_\+scene)=0
 \begin{DoxyCompactList}\small\item\em 描画終了関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_renderer_interface_aa9e12d2a2f5ffa351c457cfc7806b6f1}{Present}} ()=0
@@ -40,16 +33,16 @@ virtual void \mbox{\hyperlink{class_renderer_interface_aa9e12d2a2f5ffa351c457cfc
 
 レンダラーの\+Interface\+Class 
 
- Renderer\+Interface.\+h の 24 行目に定義があります。
+ Renderer\+Interface.\+h の 23 行目に定義があります。
 
 
 
 \subsection{構築子と解体子}
-\mbox{\Hypertarget{class_renderer_interface_a1dfa67d2c714f8c66759ab677569a750}\label{class_renderer_interface_a1dfa67d2c714f8c66759ab677569a750}} 
+\mbox{\Hypertarget{class_renderer_interface_a571638543a7544e023dc186f7dfc7523}\label{class_renderer_interface_a571638543a7544e023dc186f7dfc7523}} 
 \index{Renderer\+Interface@{Renderer\+Interface}!````~Renderer\+Interface@{$\sim$\+Renderer\+Interface}}
 \index{````~Renderer\+Interface@{$\sim$\+Renderer\+Interface}!Renderer\+Interface@{Renderer\+Interface}}
 \subsubsection{\texorpdfstring{$\sim$\+Renderer\+Interface()}{~RendererInterface()}}
-{\footnotesize\ttfamily virtual Renderer\+Interface\+::$\sim$\+Renderer\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily Renderer\+Interface\+::$\sim$\+Renderer\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -62,16 +55,16 @@ virtual void \mbox{\hyperlink{class_renderer_interface_aa9e12d2a2f5ffa351c457cfc
 \end{DoxyParams}
 
 
- Renderer\+Interface.\+h の 35 行目に定義があります。
+ Renderer\+Interface.\+cpp の 21 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_renderer_interface_a86a487deb4e4207a67410d00ec670fd7}\label{class_renderer_interface_a86a487deb4e4207a67410d00ec670fd7}} 
+\mbox{\Hypertarget{class_renderer_interface_a8fad8e69ef40358a29e8dd75e4dbc7bd}\label{class_renderer_interface_a8fad8e69ef40358a29e8dd75e4dbc7bd}} 
 \index{Renderer\+Interface@{Renderer\+Interface}!Draw\+Begin@{Draw\+Begin}}
 \index{Draw\+Begin@{Draw\+Begin}!Renderer\+Interface@{Renderer\+Interface}}
 \subsubsection{\texorpdfstring{Draw\+Begin()}{DrawBegin()}}
-{\footnotesize\ttfamily virtual bool Renderer\+Interface\+::\+Draw\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool Renderer\+Interface\+::\+Draw\+Begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}}]{clear\+\_\+color = {\ttfamily \{0.123f,~0.25f,~0.75f,~1.0f\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -79,7 +72,7 @@ virtual void \mbox{\hyperlink{class_renderer_interface_aa9e12d2a2f5ffa351c457cfc
 
 
 \begin{DoxyParams}{引数}
-{\em void} & なし \\
+{\em clear\+\_\+color} & クリア色 \\
 \hline
 \end{DoxyParams}
 
@@ -89,7 +82,7 @@ virtual void \mbox{\hyperlink{class_renderer_interface_aa9e12d2a2f5ffa351c457cfc
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_renderer_direct_x9_a5113bf4e6aefdb7bcab2016fbbee0174}{Renderer\+Direct\+X9}}で実装されています。
+\mbox{\hyperlink{class_renderer_direct_x9_a5d299c19850d7c87340c3cbf2629cc01}{Renderer\+Direct\+X9}}で実装されています。
 
 \mbox{\Hypertarget{class_renderer_interface_a0034a44420e4746062e70e4d66d3bee2}\label{class_renderer_interface_a0034a44420e4746062e70e4d66d3bee2}} 
 \index{Renderer\+Interface@{Renderer\+Interface}!Draw\+End@{Draw\+End}}
@@ -102,8 +95,8 @@ virtual void \mbox{\hyperlink{class_renderer_interface_aa9e12d2a2f5ffa351c457cfc
 描画終了関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em is\+\_\+begin\+\_\+scene} & 描画開始成功フラグ \\
+\begin{DoxyParams}{引数}
+{\em is\+\_\+begin\+\_\+scene} & 描画開始成功フラグ \\
 \hline
 \end{DoxyParams}
 
@@ -126,16 +119,16 @@ virtual void \mbox{\hyperlink{class_renderer_interface_aa9e12d2a2f5ffa351c457cfc
 初期化関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em h\+Instance} & インスタンスハンドル \\
+\begin{DoxyParams}{引数}
+{\em h\+Instance} & インスタンスハンドル \\
 \hline
-\mbox{\tt in}  & {\em h\+Wnd} & Windowsハンドル \\
+{\em h\+Wnd} & Windowsハンドル \\
 \hline
-\mbox{\tt in}  & {\em is\+\_\+full\+\_\+screen} & フルスクリーンフラグ \\
+{\em is\+\_\+full\+\_\+screen} & フルスクリーンフラグ \\
 \hline
-\mbox{\tt in}  & {\em window\+\_\+width} & ウィンドウ幅 \\
+{\em window\+\_\+width} & ウィンドウ幅 \\
 \hline
-\mbox{\tt in}  & {\em window\+\_\+height} & ウィンドウ高さ \\
+{\em window\+\_\+height} & ウィンドウ高さ \\
 \hline
 \end{DoxyParams}
 
@@ -146,6 +139,30 @@ virtual void \mbox{\hyperlink{class_renderer_interface_aa9e12d2a2f5ffa351c457cfc
 
 
 \mbox{\hyperlink{class_renderer_direct_x9_af015676b50f3ce1ba7cf20abf6074e3b}{Renderer\+Direct\+X9}}で実装されています。
+
+\mbox{\Hypertarget{class_renderer_interface_a3274ae0eea630ead1af76b1aac32f420}\label{class_renderer_interface_a3274ae0eea630ead1af76b1aac32f420}} 
+\index{Renderer\+Interface@{Renderer\+Interface}!No\+Clear\+Draw\+Begin@{No\+Clear\+Draw\+Begin}}
+\index{No\+Clear\+Draw\+Begin@{No\+Clear\+Draw\+Begin}!Renderer\+Interface@{Renderer\+Interface}}
+\subsubsection{\texorpdfstring{No\+Clear\+Draw\+Begin()}{NoClearDrawBegin()}}
+{\footnotesize\ttfamily virtual bool Renderer\+Interface\+::\+No\+Clear\+Draw\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+クリア無描画開始関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 描画開始成功の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_renderer_direct_x9_ad890dee4b4da01dfe75b0c8af9628f8b}{Renderer\+Direct\+X9}}で実装されています。
 
 \mbox{\Hypertarget{class_renderer_interface_aa9e12d2a2f5ffa351c457cfc7806b6f1}\label{class_renderer_interface_aa9e12d2a2f5ffa351c457cfc7806b6f1}} 
 \index{Renderer\+Interface@{Renderer\+Interface}!Present@{Present}}
@@ -199,4 +216,5 @@ virtual void \mbox{\hyperlink{class_renderer_interface_aa9e12d2a2f5ffa351c457cfc
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/01\+\_\+\+Main/\+Renderer/\+Renderer\+Interface/\mbox{\hyperlink{_renderer_interface_8h}{Renderer\+Interface.\+h}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Renderer/\mbox{\hyperlink{_renderer_interface_8h}{Renderer\+Interface.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Renderer/\+Source/\mbox{\hyperlink{_renderer_interface_8cpp}{Renderer\+Interface.\+cpp}}\end{DoxyCompactItemize}

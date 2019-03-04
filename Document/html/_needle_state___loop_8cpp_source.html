@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Game/Object/3D/Needle/Source/NeedleState_Loop.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_needle_state___loop_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">NeedleState_Loop.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_needle_state___loop_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span><span class="comment">//================================================================================</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// インクルード文</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../NeedleState_Loop.h&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// 定数定義</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">const</span> <a class="code" href="class_vector3_d.html">Vector3D</a> <a class="code" href="class_needle_state___loop.html#a742827e05002a4efb72381f410a5ef8c">NeedleState_Loop::CENTER_POSITION</a>(0.0f, 3.0f, 0.0f);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_needle_state___loop.html#a5b9359b2bdb87d3a83a14387cc21fc23">NeedleState_Loop::ROTATION_CENTER_SPEED</a> = 0.0f;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_needle_state___loop.html#ab427c1fce0c2fb48cbfe6bdb6968b8cc">NeedleState_Loop::ROTATION_SPEED</a> = 2.0f;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// 関数定義</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_needle_state___loop.html#a97f3190ebbbad2943e60f27588b2175d">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_needle_state___loop.html#a97f3190ebbbad2943e60f27588b2175d">NeedleState_Loop::Init</a>()</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// 座標設定</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    *<a class="code" href="class_needle_1_1_state.html#a8e3a82791c1242b2a5ef4b16071be09b">getpNeedle</a>()-&gt;<a class="code" href="class_game_object_base.html#ab2550083f7eed51fc77b3a86ddafd9fb">getpTransform</a>()-&gt;<a class="code" href="class_transform.html#a1ed223415917a6b33e5fd7af132f6b9c">getpPosition</a>() = <a class="code" href="class_needle_state___loop.html#a742827e05002a4efb72381f410a5ef8c">CENTER_POSITION</a>;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_needle_1_1_state.html#a8e3a82791c1242b2a5ef4b16071be09b">getpNeedle</a>()-&gt;<a class="code" href="class_game_object_base.html#ab2550083f7eed51fc77b3a86ddafd9fb">getpTransform</a>()-&gt;<a class="code" href="class_transform.html#a81a4882eb3c4d7afb243b9911c666b52">CreateWorldMatrix</a>();</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_needle_1_1_state.html#a8e3a82791c1242b2a5ef4b16071be09b">getpNeedle</a>()-&gt;<a class="code" href="class_game_object_base.html#ab2550083f7eed51fc77b3a86ddafd9fb">getpTransform</a>()</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        -&gt;<a class="code" href="class_transform.html#afba4a9bc17c9a61f2c6a43bc32a251cc">AddParentMatrixToWorldMatrix</a>(<a class="code" href="class_needle_state___loop.html#adbc09dcbbc7367754c5c14aa4ded7497">rotation_transform_</a>.<a class="code" href="class_transform.html#a58114e02f195f91f9bb807d49c34fe32">getpWorldMatrix</a>());</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_needle_state___loop.html#a059c3e62fde73c19292eb2510f4ab8fa">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_needle_state___loop.html#a059c3e62fde73c19292eb2510f4ab8fa">NeedleState_Loop::Uninit</a>()</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_needle_state___loop.html#ace1091782491ee594b53bf08bb9bcf12">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_needle_state___loop.html#ace1091782491ee594b53bf08bb9bcf12">NeedleState_Loop::Update</a>()</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// 回転</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    *<a class="code" href="class_needle_state___loop.html#adbc09dcbbc7367754c5c14aa4ded7497">rotation_transform_</a>.<a class="code" href="class_transform.html#a85ecb6a9d972caf0ab7d2e58ad2753b7">getpAnglePitch</a>() += <a class="code" href="class_needle_state___loop.html#a5b9359b2bdb87d3a83a14387cc21fc23">ROTATION_CENTER_SPEED</a>;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    *<a class="code" href="class_needle_1_1_state.html#a8e3a82791c1242b2a5ef4b16071be09b">getpNeedle</a>()-&gt;<a class="code" href="class_game_object_base.html#ab2550083f7eed51fc77b3a86ddafd9fb">getpTransform</a>()-&gt;<a class="code" href="class_transform.html#a85ecb6a9d972caf0ab7d2e58ad2753b7">getpAnglePitch</a>() += <a class="code" href="class_needle_state___loop.html#ab427c1fce0c2fb48cbfe6bdb6968b8cc">ROTATION_SPEED</a>;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_needle_state___loop.html#adbc09dcbbc7367754c5c14aa4ded7497">rotation_transform_</a>.<a class="code" href="class_transform.html#a81a4882eb3c4d7afb243b9911c666b52">CreateWorldMatrix</a>();</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="class_needle_1_1_state.html#a8e3a82791c1242b2a5ef4b16071be09b">getpNeedle</a>()-&gt;<a class="code" href="class_game_object_base.html#ab2550083f7eed51fc77b3a86ddafd9fb">getpTransform</a>()-&gt;<a class="code" href="class_transform.html#a81a4882eb3c4d7afb243b9911c666b52">CreateWorldMatrix</a>();</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_needle_1_1_state.html#a8e3a82791c1242b2a5ef4b16071be09b">getpNeedle</a>()-&gt;<a class="code" href="class_game_object_base.html#ab2550083f7eed51fc77b3a86ddafd9fb">getpTransform</a>()</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        -&gt;<a class="code" href="class_transform.html#afba4a9bc17c9a61f2c6a43bc32a251cc">AddParentMatrixToWorldMatrix</a>(<a class="code" href="class_needle_state___loop.html#adbc09dcbbc7367754c5c14aa4ded7497">rotation_transform_</a>.<a class="code" href="class_transform.html#a58114e02f195f91f9bb807d49c34fe32">getpWorldMatrix</a>());</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="ttc" id="class_transform_html_a85ecb6a9d972caf0ab7d2e58ad2753b7"><div class="ttname"><a href="class_transform.html#a85ecb6a9d972caf0ab7d2e58ad2753b7">Transform::getpAnglePitch</a></div><div class="ttdeci">float * getpAnglePitch()</div><div class="ttdoc">Pitch角度取得関数 </div><div class="ttdef"><b>Definition:</b> <a href="_transform_8cpp_source.html#l00053">Transform.cpp:53</a></div></div>
+<div class="ttc" id="class_needle_state___loop_html_a5b9359b2bdb87d3a83a14387cc21fc23"><div class="ttname"><a href="class_needle_state___loop.html#a5b9359b2bdb87d3a83a14387cc21fc23">NeedleState_Loop::ROTATION_CENTER_SPEED</a></div><div class="ttdeci">static const float ROTATION_CENTER_SPEED</div><div class="ttdoc">中心の回転速度 </div><div class="ttdef"><b>Definition:</b> <a href="_needle_state___loop_8h_source.html#l00031">NeedleState_Loop.h:31</a></div></div>
+<div class="ttc" id="class_needle_state___loop_html_ace1091782491ee594b53bf08bb9bcf12"><div class="ttname"><a href="class_needle_state___loop.html#ace1091782491ee594b53bf08bb9bcf12">NeedleState_Loop::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">更新関数 </div><div class="ttdef"><b>Definition:</b> <a href="_needle_state___loop_8cpp_source.html#l00046">NeedleState_Loop.cpp:46</a></div></div>
+<div class="ttc" id="class_needle_state___loop_html_a97f3190ebbbad2943e60f27588b2175d"><div class="ttname"><a href="class_needle_state___loop.html#a97f3190ebbbad2943e60f27588b2175d">NeedleState_Loop::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">初期化関数 </div><div class="ttdef"><b>Definition:</b> <a href="_needle_state___loop_8cpp_source.html#l00029">NeedleState_Loop.cpp:29</a></div></div>
+<div class="ttc" id="class_needle_state___loop_html_ab427c1fce0c2fb48cbfe6bdb6968b8cc"><div class="ttname"><a href="class_needle_state___loop.html#ab427c1fce0c2fb48cbfe6bdb6968b8cc">NeedleState_Loop::ROTATION_SPEED</a></div><div class="ttdeci">static const float ROTATION_SPEED</div><div class="ttdoc">回転速度 </div><div class="ttdef"><b>Definition:</b> <a href="_needle_state___loop_8h_source.html#l00032">NeedleState_Loop.h:32</a></div></div>
+<div class="ttc" id="class_transform_html_a58114e02f195f91f9bb807d49c34fe32"><div class="ttname"><a href="class_transform.html#a58114e02f195f91f9bb807d49c34fe32">Transform::getpWorldMatrix</a></div><div class="ttdeci">Matrix * getpWorldMatrix()</div><div class="ttdoc">ワールド行列取得関数 </div><div class="ttdef"><b>Definition:</b> <a href="_transform_8cpp_source.html#l00222">Transform.cpp:222</a></div></div>
+<div class="ttc" id="class_vector3_d_html"><div class="ttname"><a href="class_vector3_d.html">Vector3D</a></div><div class="ttdoc">3DベクトルClass </div><div class="ttdef"><b>Definition:</b> <a href="_vector3_d_8h_source.html#l00038">Vector3D.h:38</a></div></div>
+<div class="ttc" id="class_transform_html_a81a4882eb3c4d7afb243b9911c666b52"><div class="ttname"><a href="class_transform.html#a81a4882eb3c4d7afb243b9911c666b52">Transform::CreateWorldMatrix</a></div><div class="ttdeci">void CreateWorldMatrix()</div><div class="ttdoc">ワールド行列作成関数 </div><div class="ttdef"><b>Definition:</b> <a href="_transform_8cpp_source.html#l00317">Transform.cpp:317</a></div></div>
+<div class="ttc" id="class_game_object_base_html_ab2550083f7eed51fc77b3a86ddafd9fb"><div class="ttname"><a href="class_game_object_base.html#ab2550083f7eed51fc77b3a86ddafd9fb">GameObjectBase::getpTransform</a></div><div class="ttdeci">Transform * getpTransform()</div><div class="ttdoc">変形取得関数 </div><div class="ttdef"><b>Definition:</b> <a href="_game_object_base_8cpp_source.html#l00025">GameObjectBase.cpp:25</a></div></div>
+<div class="ttc" id="class_needle_1_1_state_html_a8e3a82791c1242b2a5ef4b16071be09b"><div class="ttname"><a href="class_needle_1_1_state.html#a8e3a82791c1242b2a5ef4b16071be09b">Needle::State::getpNeedle</a></div><div class="ttdeci">Needle * getpNeedle()</div><div class="ttdoc">棘取得関数 </div><div class="ttdef"><b>Definition:</b> <a href="_needle_8cpp_source.html#l00020">Needle.cpp:20</a></div></div>
+<div class="ttc" id="class_transform_html_a1ed223415917a6b33e5fd7af132f6b9c"><div class="ttname"><a href="class_transform.html#a1ed223415917a6b33e5fd7af132f6b9c">Transform::getpPosition</a></div><div class="ttdeci">Vector3D * getpPosition()</div><div class="ttdoc">座標取得関数 </div><div class="ttdef"><b>Definition:</b> <a href="_transform_8cpp_source.html#l00020">Transform.cpp:20</a></div></div>
+<div class="ttc" id="class_needle_state___loop_html_a059c3e62fde73c19292eb2510f4ab8fa"><div class="ttname"><a href="class_needle_state___loop.html#a059c3e62fde73c19292eb2510f4ab8fa">NeedleState_Loop::Uninit</a></div><div class="ttdeci">void Uninit() override</div><div class="ttdoc">終了関数 </div><div class="ttdef"><b>Definition:</b> <a href="_needle_state___loop_8cpp_source.html#l00040">NeedleState_Loop.cpp:40</a></div></div>
+<div class="ttc" id="class_transform_html_afba4a9bc17c9a61f2c6a43bc32a251cc"><div class="ttname"><a href="class_transform.html#afba4a9bc17c9a61f2c6a43bc32a251cc">Transform::AddParentMatrixToWorldMatrix</a></div><div class="ttdeci">void AddParentMatrixToWorldMatrix(Matrix *parent_matrix)</div><div class="ttdoc">ワールド行列に親行列追加関数 </div><div class="ttdef"><b>Definition:</b> <a href="_transform_8cpp_source.html#l00310">Transform.cpp:310</a></div></div>
+<div class="ttc" id="class_needle_state___loop_html_adbc09dcbbc7367754c5c14aa4ded7497"><div class="ttname"><a href="class_needle_state___loop.html#adbc09dcbbc7367754c5c14aa4ded7497">NeedleState_Loop::rotation_transform_</a></div><div class="ttdeci">Transform rotation_transform_</div><div class="ttdoc">回転用変形 </div><div class="ttdef"><b>Definition:</b> <a href="_needle_state___loop_8h_source.html#l00039">NeedleState_Loop.h:39</a></div></div>
+<div class="ttc" id="class_needle_state___loop_html_a742827e05002a4efb72381f410a5ef8c"><div class="ttname"><a href="class_needle_state___loop.html#a742827e05002a4efb72381f410a5ef8c">NeedleState_Loop::CENTER_POSITION</a></div><div class="ttdeci">static const Vector3D CENTER_POSITION</div><div class="ttdoc">中心からの座標 </div><div class="ttdef"><b>Definition:</b> <a href="_needle_state___loop_8h_source.html#l00030">NeedleState_Loop.h:30</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_a8670f68e5e207ff6b1d0d24eb385efb.html">Game</a></li><li class="navelem"><a class="el" href="dir_0df63539cebe0c4c23afab917ef959ef.html">Object</a></li><li class="navelem"><a class="el" href="dir_5cfcf2b36e45d02a21be8dfc909800af.html">3D</a></li><li class="navelem"><a class="el" href="dir_30781ddd2d916c4a142fc0eaa046c555.html">Needle</a></li><li class="navelem"><a class="el" href="dir_3c00201f6afe71376a2a73421ee32153.html">Source</a></li><li class="navelem"><a class="el" href="_needle_state___loop_8cpp.html">NeedleState_Loop.cpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

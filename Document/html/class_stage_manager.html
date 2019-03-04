@@ -1,0 +1,1049 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: StageManager クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_stage_manager.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="#pri-static-attribs">静的非公開変数類</a> &#124;
+<a href="class_stage_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">StageManager クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ステージマネージャClass  
+ <a href="class_stage_manager.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_stage_manager_8h_source.html">StageManager.h</a>&gt;</code></p>
+<div class="dynheader">
+StageManager 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_stage_manager__coll__graph.png" border="0" usemap="#_stage_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="_stage_manager_coll__map" id="_stage_manager_coll__map">
+<area shape="rect" id="node2" href="class_game_object_null.html" title="ゲームオブジェクト空白Class " alt="" coords="2546,684,2663,711"/>
+<area shape="rect" id="node27" href="class_scaffold.html" title="足場Class " alt="" coords="2813,420,2881,447"/>
+<area shape="rect" id="node28" href="class_start_block.html" title="スタートブロックClass " alt="" coords="2806,684,2889,711"/>
+<area shape="rect" id="node29" href="class_player.html" title="プレイヤーClass " alt="" coords="3129,572,3188,599"/>
+<area shape="rect" id="node31" href="class_balloon_group.html" title="風船群Class " alt="" coords="2797,745,2897,772"/>
+<area shape="rect" id="node33" href="class_needle.html" title="棘Class " alt="" coords="2816,887,2879,913"/>
+<area shape="rect" id="node3" href="class_game_object_base.html" title="ゲームオブジェクトBaseClass " alt="" coords="2257,553,2383,580"/>
+<area shape="rect" id="node5" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="2545,372,2664,399"/>
+<area shape="rect" id="node25" href="class_physics.html" title="物理Class " alt="" coords="2570,599,2639,625"/>
+<area shape="rect" id="node4" href="class_collision_base.html" title="衝突BaseClass " alt="" coords="1993,372,2095,399"/>
+<area shape="rect" id="node7" href="class_collision_object.html" title="衝突オブジェクトClass " alt="" coords="1315,275,1424,301"/>
+<area shape="rect" id="node16" href="class_draw_base.html" title="描画BaseClass " alt="" coords="2807,121,2888,148"/>
+<area shape="rect" id="node6" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject *,\l ARRAY_NUM \&gt;" alt="" coords="1605,291,1741,347"/>
+<area shape="rect" id="node12" href="class_object_of_tree.html" title="ObjectOfTree\&lt; CollisionObject *\&gt;" alt="" coords="1565,239,1780,265"/>
+<area shape="rect" id="node8" href="class_a_a_b_b.html" title="AABBClass " alt="" coords="741,213,800,240"/>
+<area shape="rect" id="node9" href="class_collision_shape_base.html" title="衝突形状BaseClass " alt="" coords="364,280,503,307"/>
+<area shape="rect" id="node15" href="class_collision_object_1_1_shape.html" title="衝突形状Class " alt="" coords="693,287,848,313"/>
+<area shape="rect" id="node10" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="107,361,183,388"/>
+<area shape="rect" id="node19" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="1051,69,1182,96"/>
+<area shape="rect" id="node20" href="class_camera.html" title="カメラClass " alt="" coords="737,433,804,460"/>
+<area shape="rect" id="node22" href="class_matrix.html" title="行列Class " alt="" coords="404,569,463,596"/>
+<area shape="rect" id="node26" href="class_transform.html" title="変形Class " alt="" coords="731,669,810,696"/>
+<area shape="rect" id="node13" href="class_space_of_tree.html" title="SpaceOfTree\&lt; CollisionObject *\&gt;" alt="" coords="1937,229,2151,256"/>
+<area shape="rect" id="node14" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject::Shape\l *, ARRAY_NUM \&gt;" alt="" coords="1033,276,1200,332"/>
+<area shape="rect" id="node17" href="class_draw_order_list.html" title="描画注文リストClass " alt="" coords="2553,115,2657,141"/>
+<area shape="rect" id="node18" href="class_bit_flag.html" title="ビットフラグClass " alt="" coords="2289,115,2351,141"/>
+<area shape="rect" id="node21" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="1063,499,1170,525"/>
+<area shape="rect" id="node24" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="717,21,824,48"/>
+<area shape="rect" id="node30" href="class_bullet_physics_object.html" title="バレットフィジックスオブジェクトClass " alt="" coords="2777,471,2917,497"/>
+<area shape="rect" id="node32" href="class_reference_list.html" title="ReferenceList\&lt; BalloonGroup \&gt;" alt="" coords="3057,812,3260,839"/>
+<area shape="rect" id="node34" href="class_needle_1_1_state.html" title="ステートClass " alt="" coords="3108,940,3209,967"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad250f6b9d743f80e67f449abb49e7ac2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#ad250f6b9d743f80e67f449abb49e7ac2">getIsEnable</a> ()</td></tr>
+<tr class="memdesc:ad250f6b9d743f80e67f449abb49e7ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効フラグ取得関数  <a href="#ad250f6b9d743f80e67f449abb49e7ac2">[詳解]</a><br /></td></tr>
+<tr class="separator:ad250f6b9d743f80e67f449abb49e7ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82938cb01ba1adbb3620fee0a12397ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a82938cb01ba1adbb3620fee0a12397ec">setIsEnable</a> (bool value)</td></tr>
+<tr class="memdesc:a82938cb01ba1adbb3620fee0a12397ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効フラグ設定関数  <a href="#a82938cb01ba1adbb3620fee0a12397ec">[詳解]</a><br /></td></tr>
+<tr class="separator:a82938cb01ba1adbb3620fee0a12397ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae54498baebd27e0b48c7bcfbe6555b34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#ae54498baebd27e0b48c7bcfbe6555b34">getScore</a> ()</td></tr>
+<tr class="memdesc:ae54498baebd27e0b48c7bcfbe6555b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">スコア取得関数  <a href="#ae54498baebd27e0b48c7bcfbe6555b34">[詳解]</a><br /></td></tr>
+<tr class="separator:ae54498baebd27e0b48c7bcfbe6555b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a861d2cd2829cb25ed06237307f5e98ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a861d2cd2829cb25ed06237307f5e98ab">getTime</a> ()</td></tr>
+<tr class="memdesc:a861d2cd2829cb25ed06237307f5e98ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">時間取得関数  <a href="#a861d2cd2829cb25ed06237307f5e98ab">[詳解]</a><br /></td></tr>
+<tr class="separator:a861d2cd2829cb25ed06237307f5e98ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f83c5c1f67d47393b4d0be426a21ec0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a5f83c5c1f67d47393b4d0be426a21ec0">getBalloonNum</a> ()</td></tr>
+<tr class="memdesc:a5f83c5c1f67d47393b4d0be426a21ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">風船数取得関数  <a href="#a5f83c5c1f67d47393b4d0be426a21ec0">[詳解]</a><br /></td></tr>
+<tr class="separator:a5f83c5c1f67d47393b4d0be426a21ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c7f386ffc5087b8437abd5b881b7156"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a2c7f386ffc5087b8437abd5b881b7156">setPlayerCamera</a> (<a class="el" href="class_camera.html">Camera</a> *value)</td></tr>
+<tr class="memdesc:a2c7f386ffc5087b8437abd5b881b7156"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤーカメラ設定関数  <a href="#a2c7f386ffc5087b8437abd5b881b7156">[詳解]</a><br /></td></tr>
+<tr class="separator:a2c7f386ffc5087b8437abd5b881b7156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af778714de131c8b559c2860647a342a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#af778714de131c8b559c2860647a342a1">getpPlayer</a> ()</td></tr>
+<tr class="memdesc:af778714de131c8b559c2860647a342a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤー取得関数  <a href="#af778714de131c8b559c2860647a342a1">[詳解]</a><br /></td></tr>
+<tr class="separator:af778714de131c8b559c2860647a342a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9681b6ab1d4c6b414bc81af515d1f20d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a9681b6ab1d4c6b414bc81af515d1f20d">getIsOnTheGround</a> ()</td></tr>
+<tr class="memdesc:a9681b6ab1d4c6b414bc81af515d1f20d"><td class="mdescLeft">&#160;</td><td class="mdescRight">地面着地フラグ取得関数  <a href="#a9681b6ab1d4c6b414bc81af515d1f20d">[詳解]</a><br /></td></tr>
+<tr class="separator:a9681b6ab1d4c6b414bc81af515d1f20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ee187d038d202439d696ff31b347226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a6ee187d038d202439d696ff31b347226">Init</a> ()</td></tr>
+<tr class="memdesc:a6ee187d038d202439d696ff31b347226"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a6ee187d038d202439d696ff31b347226">[詳解]</a><br /></td></tr>
+<tr class="separator:a6ee187d038d202439d696ff31b347226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab36f48dee34ce481c585b1d96df26dce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#ab36f48dee34ce481c585b1d96df26dce">Uninit</a> () override</td></tr>
+<tr class="memdesc:ab36f48dee34ce481c585b1d96df26dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#ab36f48dee34ce481c585b1d96df26dce">[詳解]</a><br /></td></tr>
+<tr class="separator:ab36f48dee34ce481c585b1d96df26dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a254173b565937107fdfe02c0871b3520"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a254173b565937107fdfe02c0871b3520">Update</a> () override</td></tr>
+<tr class="memdesc:a254173b565937107fdfe02c0871b3520"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#a254173b565937107fdfe02c0871b3520">[詳解]</a><br /></td></tr>
+<tr class="separator:a254173b565937107fdfe02c0871b3520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fae84b1ae2f986bb79cb73d90595e77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a5fae84b1ae2f986bb79cb73d90595e77">CreateStage</a> ()</td></tr>
+<tr class="memdesc:a5fae84b1ae2f986bb79cb73d90595e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステージ作成関数  <a href="#a5fae84b1ae2f986bb79cb73d90595e77">[詳解]</a><br /></td></tr>
+<tr class="separator:a5fae84b1ae2f986bb79cb73d90595e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_game_object_null"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_game_object_null')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_game_object_null.html">GameObjectNull</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a63df1fd88b786686088b2ac9f79761d1 inherit pub_methods_class_game_object_null"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_null.html#a63df1fd88b786686088b2ac9f79761d1">GameObjectNull</a> (bool is_registration=true)</td></tr>
+<tr class="memdesc:a63df1fd88b786686088b2ac9f79761d1 inherit pub_methods_class_game_object_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="class_game_object_null.html#a63df1fd88b786686088b2ac9f79761d1">[詳解]</a><br /></td></tr>
+<tr class="separator:a63df1fd88b786686088b2ac9f79761d1 inherit pub_methods_class_game_object_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aee36c6a66b723f927c017ec3916918 inherit pub_methods_class_game_object_null"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_null.html#a3aee36c6a66b723f927c017ec3916918">~GameObjectNull</a> ()</td></tr>
+<tr class="memdesc:a3aee36c6a66b723f927c017ec3916918 inherit pub_methods_class_game_object_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_game_object_null.html#a3aee36c6a66b723f927c017ec3916918">[詳解]</a><br /></td></tr>
+<tr class="separator:a3aee36c6a66b723f927c017ec3916918 inherit pub_methods_class_game_object_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc4e2c2ce54fb3d0bc3f0b45149a66cb inherit pub_methods_class_game_object_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_null.html#abc4e2c2ce54fb3d0bc3f0b45149a66cb">LateUpdate</a> () override</td></tr>
+<tr class="memdesc:abc4e2c2ce54fb3d0bc3f0b45149a66cb inherit pub_methods_class_game_object_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">後更新関数  <a href="class_game_object_null.html#abc4e2c2ce54fb3d0bc3f0b45149a66cb">[詳解]</a><br /></td></tr>
+<tr class="separator:abc4e2c2ce54fb3d0bc3f0b45149a66cb inherit pub_methods_class_game_object_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a748e17ea31b987249022562f5198c inherit pub_methods_class_game_object_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_null.html#a26a748e17ea31b987249022562f5198c">Reset</a> () override</td></tr>
+<tr class="memdesc:a26a748e17ea31b987249022562f5198c inherit pub_methods_class_game_object_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">リセット関数  <a href="class_game_object_null.html#a26a748e17ea31b987249022562f5198c">[詳解]</a><br /></td></tr>
+<tr class="separator:a26a748e17ea31b987249022562f5198c inherit pub_methods_class_game_object_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc551307ae5aa0ad8e754f976ffd1c7 inherit pub_methods_class_game_object_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_null.html#a9bc551307ae5aa0ad8e754f976ffd1c7">DebugDisplay</a> () override</td></tr>
+<tr class="memdesc:a9bc551307ae5aa0ad8e754f976ffd1c7 inherit pub_methods_class_game_object_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ表示関数  <a href="class_game_object_null.html#a9bc551307ae5aa0ad8e754f976ffd1c7">[詳解]</a><br /></td></tr>
+<tr class="separator:a9bc551307ae5aa0ad8e754f976ffd1c7 inherit pub_methods_class_game_object_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_game_object_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_game_object_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_game_object_base.html">GameObjectBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ab2550083f7eed51fc77b3a86ddafd9fb inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transform.html">Transform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#ab2550083f7eed51fc77b3a86ddafd9fb">getpTransform</a> ()</td></tr>
+<tr class="memdesc:ab2550083f7eed51fc77b3a86ddafd9fb inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">変形取得関数  <a href="class_game_object_base.html#ab2550083f7eed51fc77b3a86ddafd9fb">[詳解]</a><br /></td></tr>
+<tr class="separator:ab2550083f7eed51fc77b3a86ddafd9fb inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3bc35686dcbf8a209017ec01708255 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_physics.html">Physics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a0d3bc35686dcbf8a209017ec01708255">getpPhysics</a> ()</td></tr>
+<tr class="memdesc:a0d3bc35686dcbf8a209017ec01708255 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">物理取得関数  <a href="class_game_object_base.html#a0d3bc35686dcbf8a209017ec01708255">[詳解]</a><br /></td></tr>
+<tr class="separator:a0d3bc35686dcbf8a209017ec01708255 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad89288cb66472324b9afc39a3afb1c2f inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#ad89288cb66472324b9afc39a3afb1c2f">getIsInput</a> ()</td></tr>
+<tr class="memdesc:ad89288cb66472324b9afc39a3afb1c2f inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力フラグ取得関数  <a href="class_game_object_base.html#ad89288cb66472324b9afc39a3afb1c2f">[詳解]</a><br /></td></tr>
+<tr class="separator:ad89288cb66472324b9afc39a3afb1c2f inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe3edcdf6374f2138c306007fa66fca inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#affe3edcdf6374f2138c306007fa66fca">setIsInput</a> (bool value)</td></tr>
+<tr class="memdesc:affe3edcdf6374f2138c306007fa66fca inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力フラグ取得関数  <a href="class_game_object_base.html#affe3edcdf6374f2138c306007fa66fca">[詳解]</a><br /></td></tr>
+<tr class="separator:affe3edcdf6374f2138c306007fa66fca inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424c78f66de1b6d7ab47633cdd5e90f0 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a424c78f66de1b6d7ab47633cdd5e90f0">getIsUpdate</a> ()</td></tr>
+<tr class="memdesc:a424c78f66de1b6d7ab47633cdd5e90f0 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新フラグ取得関数  <a href="class_game_object_base.html#a424c78f66de1b6d7ab47633cdd5e90f0">[詳解]</a><br /></td></tr>
+<tr class="separator:a424c78f66de1b6d7ab47633cdd5e90f0 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba5110b5f5a877c95ebc675cef428679 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#aba5110b5f5a877c95ebc675cef428679">setIsUpdate</a> (bool value)</td></tr>
+<tr class="memdesc:aba5110b5f5a877c95ebc675cef428679 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新フラグ取得関数  <a href="class_game_object_base.html#aba5110b5f5a877c95ebc675cef428679">[詳解]</a><br /></td></tr>
+<tr class="separator:aba5110b5f5a877c95ebc675cef428679 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17ca64413424b2ad5701d31e74ea501 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#ae17ca64413424b2ad5701d31e74ea501">setAllComponent</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_collision_base.html">CollisionBase</a> *collision)</td></tr>
+<tr class="memdesc:ae17ca64413424b2ad5701d31e74ea501 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">全基底クラス設定関数  <a href="class_game_object_base.html#ae17ca64413424b2ad5701d31e74ea501">[詳解]</a><br /></td></tr>
+<tr class="separator:ae17ca64413424b2ad5701d31e74ea501 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f75b81c278bef3f58196c58e52aff98 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a3f75b81c278bef3f58196c58e52aff98">getpDraw</a> ()</td></tr>
+<tr class="memdesc:a3f75b81c278bef3f58196c58e52aff98 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画基底クラス取得関数  <a href="class_game_object_base.html#a3f75b81c278bef3f58196c58e52aff98">[詳解]</a><br /></td></tr>
+<tr class="separator:a3f75b81c278bef3f58196c58e52aff98 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab771c9ebbca42ccc5ffdee4b3e2e47c5 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#ab771c9ebbca42ccc5ffdee4b3e2e47c5">setDraw</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *value)</td></tr>
+<tr class="memdesc:ab771c9ebbca42ccc5ffdee4b3e2e47c5 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画基底クラス設定関数  <a href="class_game_object_base.html#ab771c9ebbca42ccc5ffdee4b3e2e47c5">[詳解]</a><br /></td></tr>
+<tr class="separator:ab771c9ebbca42ccc5ffdee4b3e2e47c5 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40170b972b0a0eb5637edaac211612e2 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_base.html">CollisionBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a40170b972b0a0eb5637edaac211612e2">getpCollision</a> ()</td></tr>
+<tr class="memdesc:a40170b972b0a0eb5637edaac211612e2 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突基底クラス取得関数  <a href="class_game_object_base.html#a40170b972b0a0eb5637edaac211612e2">[詳解]</a><br /></td></tr>
+<tr class="separator:a40170b972b0a0eb5637edaac211612e2 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddc882ccdb78e47acb0d718d5e55f5d inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#acddc882ccdb78e47acb0d718d5e55f5d">setCollision</a> (<a class="el" href="class_collision_base.html">CollisionBase</a> *value)</td></tr>
+<tr class="memdesc:acddc882ccdb78e47acb0d718d5e55f5d inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突基底クラス設定関数  <a href="class_game_object_base.html#acddc882ccdb78e47acb0d718d5e55f5d">[詳解]</a><br /></td></tr>
+<tr class="separator:acddc882ccdb78e47acb0d718d5e55f5d inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4682a3e88a45a462de288f14e9a8545d inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a4682a3e88a45a462de288f14e9a8545d">GameObjectBase</a> (bool is_registration=true)</td></tr>
+<tr class="memdesc:a4682a3e88a45a462de288f14e9a8545d inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="class_game_object_base.html#a4682a3e88a45a462de288f14e9a8545d">[詳解]</a><br /></td></tr>
+<tr class="separator:a4682a3e88a45a462de288f14e9a8545d inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cb813d5c7af673a3d190eb1b2d26275 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a0cb813d5c7af673a3d190eb1b2d26275">~GameObjectBase</a> ()</td></tr>
+<tr class="memdesc:a0cb813d5c7af673a3d190eb1b2d26275 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_game_object_base.html#a0cb813d5c7af673a3d190eb1b2d26275">[詳解]</a><br /></td></tr>
+<tr class="separator:a0cb813d5c7af673a3d190eb1b2d26275 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96fe1a7816a3aef9a70cfcc39c032d2f inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a96fe1a7816a3aef9a70cfcc39c032d2f">Init</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_collision_base.html">CollisionBase</a> *collision)</td></tr>
+<tr class="memdesc:a96fe1a7816a3aef9a70cfcc39c032d2f inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="class_game_object_base.html#a96fe1a7816a3aef9a70cfcc39c032d2f">[詳解]</a><br /></td></tr>
+<tr class="separator:a96fe1a7816a3aef9a70cfcc39c032d2f inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7df49baa04363c63f9515317776e40 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#adf7df49baa04363c63f9515317776e40">CreatePhysics</a> ()</td></tr>
+<tr class="memdesc:adf7df49baa04363c63f9515317776e40 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">物理生成関数  <a href="class_game_object_base.html#adf7df49baa04363c63f9515317776e40">[詳解]</a><br /></td></tr>
+<tr class="separator:adf7df49baa04363c63f9515317776e40 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a9b693a434f2aec42739c19daf6087da4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a9b693a434f2aec42739c19daf6087da4">is_enable_</a> = false</td></tr>
+<tr class="memdesc:a9b693a434f2aec42739c19daf6087da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効フラグ  <a href="#a9b693a434f2aec42739c19daf6087da4">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b693a434f2aec42739c19daf6087da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80276fabfcdccd74dfd52fd2cc61b1db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a80276fabfcdccd74dfd52fd2cc61b1db">is_ground_</a> = false</td></tr>
+<tr class="memdesc:a80276fabfcdccd74dfd52fd2cc61b1db"><td class="mdescLeft">&#160;</td><td class="mdescRight">着地フラグ  <a href="#a80276fabfcdccd74dfd52fd2cc61b1db">[詳解]</a><br /></td></tr>
+<tr class="separator:a80276fabfcdccd74dfd52fd2cc61b1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21bdb2371d84c916dd594c453c50701e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a21bdb2371d84c916dd594c453c50701e">score_</a> = 0</td></tr>
+<tr class="memdesc:a21bdb2371d84c916dd594c453c50701e"><td class="mdescLeft">&#160;</td><td class="mdescRight">スコア  <a href="#a21bdb2371d84c916dd594c453c50701e">[詳解]</a><br /></td></tr>
+<tr class="separator:a21bdb2371d84c916dd594c453c50701e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb8bffaa00e7c4ed1ebbf136137f6e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#afdb8bffaa00e7c4ed1ebbf136137f6e6">time_</a> = 0</td></tr>
+<tr class="memdesc:afdb8bffaa00e7c4ed1ebbf136137f6e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">時間  <a href="#afdb8bffaa00e7c4ed1ebbf136137f6e6">[詳解]</a><br /></td></tr>
+<tr class="separator:afdb8bffaa00e7c4ed1ebbf136137f6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac234fd37fef3fe233489e75c803ac47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_balloon_group.html">BalloonGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#aac234fd37fef3fe233489e75c803ac47">balloon_group_</a> = nullptr</td></tr>
+<tr class="memdesc:aac234fd37fef3fe233489e75c803ac47"><td class="mdescLeft">&#160;</td><td class="mdescRight">風船群  <a href="#aac234fd37fef3fe233489e75c803ac47">[詳解]</a><br /></td></tr>
+<tr class="separator:aac234fd37fef3fe233489e75c803ac47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a378c995a369018f8595ba5cf4ab947d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a378c995a369018f8595ba5cf4ab947d2">player_</a> = nullptr</td></tr>
+<tr class="memdesc:a378c995a369018f8595ba5cf4ab947d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤー  <a href="#a378c995a369018f8595ba5cf4ab947d2">[詳解]</a><br /></td></tr>
+<tr class="separator:a378c995a369018f8595ba5cf4ab947d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ce3838c9fe4eaa1c9f8a6ecf361ea7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_start_block.html">StartBlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a0ce3838c9fe4eaa1c9f8a6ecf361ea7a">start_block_</a> = nullptr</td></tr>
+<tr class="memdesc:a0ce3838c9fe4eaa1c9f8a6ecf361ea7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">スタートブロック  <a href="#a0ce3838c9fe4eaa1c9f8a6ecf361ea7a">[詳解]</a><br /></td></tr>
+<tr class="separator:a0ce3838c9fe4eaa1c9f8a6ecf361ea7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5cf1a29d5a3f8c1e06c2ca64e369d24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scaffold.html">Scaffold</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#ab5cf1a29d5a3f8c1e06c2ca64e369d24">scaffold_</a> = nullptr</td></tr>
+<tr class="memdesc:ab5cf1a29d5a3f8c1e06c2ca64e369d24"><td class="mdescLeft">&#160;</td><td class="mdescRight">足場  <a href="#ab5cf1a29d5a3f8c1e06c2ca64e369d24">[詳解]</a><br /></td></tr>
+<tr class="separator:ab5cf1a29d5a3f8c1e06c2ca64e369d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaebf5b60351f6406ba9ca9bfaaaf8959"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_needle.html">Needle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#aaebf5b60351f6406ba9ca9bfaaaf8959">needle_</a> = nullptr</td></tr>
+<tr class="memdesc:aaebf5b60351f6406ba9ca9bfaaaf8959"><td class="mdescLeft">&#160;</td><td class="mdescRight">棘  <a href="#aaebf5b60351f6406ba9ca9bfaaaf8959">[詳解]</a><br /></td></tr>
+<tr class="separator:aaebf5b60351f6406ba9ca9bfaaaf8959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静的非公開変数類</h2></td></tr>
+<tr class="memitem:a46709c98366565c68f8de974385501a4"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#a46709c98366565c68f8de974385501a4">MAX_TIME</a> = <a class="el" href="class_time_to_frame.html#a02fe55cc63bdffd73d092d30cc7f0153">TimeToFrame::SecondToFrame</a>(60.0f)</td></tr>
+<tr class="memdesc:a46709c98366565c68f8de974385501a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大時間  <a href="#a46709c98366565c68f8de974385501a4">[詳解]</a><br /></td></tr>
+<tr class="separator:a46709c98366565c68f8de974385501a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeced4abe9b4df7b0105dd42745506a25"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#aeced4abe9b4df7b0105dd42745506a25">BONUS_SCORE</a> = 300</td></tr>
+<tr class="memdesc:aeced4abe9b4df7b0105dd42745506a25"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボーナススコア  <a href="#aeced4abe9b4df7b0105dd42745506a25">[詳解]</a><br /></td></tr>
+<tr class="separator:aeced4abe9b4df7b0105dd42745506a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed94634bfdb7bbc3e9cc46724ba87e12"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_manager.html#aed94634bfdb7bbc3e9cc46724ba87e12">BONUS_SCORE_RAITO</a> = 2</td></tr>
+<tr class="memdesc:aed94634bfdb7bbc3e9cc46724ba87e12"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボーナススコア比率  <a href="#aed94634bfdb7bbc3e9cc46724ba87e12">[詳解]</a><br /></td></tr>
+<tr class="separator:aed94634bfdb7bbc3e9cc46724ba87e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_methods_class_game_object_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_game_object_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_game_object_base.html">GameObjectBase</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:aff8e4f486435f5d921c186b0824e8a0e inherit pro_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#aff8e4f486435f5d921c186b0824e8a0e">UninitComponent</a> ()</td></tr>
+<tr class="memdesc:aff8e4f486435f5d921c186b0824e8a0e inherit pro_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンポーネント終了関数  <a href="class_game_object_base.html#aff8e4f486435f5d921c186b0824e8a0e">[詳解]</a><br /></td></tr>
+<tr class="separator:aff8e4f486435f5d921c186b0824e8a0e inherit pro_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68b93e50540bf41a81d88ca508b2b4d inherit pro_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#ae68b93e50540bf41a81d88ca508b2b4d">ResetComponent</a> ()</td></tr>
+<tr class="memdesc:ae68b93e50540bf41a81d88ca508b2b4d inherit pro_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンポーネントリセット関数  <a href="class_game_object_base.html#ae68b93e50540bf41a81d88ca508b2b4d">[詳解]</a><br /></td></tr>
+<tr class="separator:ae68b93e50540bf41a81d88ca508b2b4d inherit pro_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ステージマネージャClass </p>
+<p>ステージマネージャのClass </p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8h_source.html">StageManager.h</a> の <a class="el" href="_stage_manager_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a5fae84b1ae2f986bb79cb73d90595e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fae84b1ae2f986bb79cb73d90595e77">&#9670;&nbsp;</a></span>CreateStage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StageManager::CreateStage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ステージ作成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_stage_manager_8cpp_source.html">StageManager.cpp</a> の <a class="el" href="_stage_manager_8cpp_source.html#l00153">153</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5f83c5c1f67d47393b4d0be426a21ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f83c5c1f67d47393b4d0be426a21ec0">&#9670;&nbsp;</a></span>getBalloonNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int StageManager::getBalloonNum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>風船数取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">int</td><td>風船数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_stage_manager_8cpp_source.html">StageManager.cpp</a> の <a class="el" href="_stage_manager_8cpp_source.html#l00083">83</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad250f6b9d743f80e67f449abb49e7ac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad250f6b9d743f80e67f449abb49e7ac2">&#9670;&nbsp;</a></span>getIsEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StageManager::getIsEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>有効フラグ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">value</td><td>有効フラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_stage_manager_8cpp_source.html">StageManager.cpp</a> の <a class="el" href="_stage_manager_8cpp_source.html#l00037">37</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9681b6ab1d4c6b414bc81af515d1f20d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9681b6ab1d4c6b414bc81af515d1f20d">&#9670;&nbsp;</a></span>getIsOnTheGround()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StageManager::getIsOnTheGround </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>地面着地フラグ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_stage_manager_8cpp_source.html">StageManager.cpp</a> の <a class="el" href="_stage_manager_8cpp_source.html#l00104">104</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af778714de131c8b559c2860647a342a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af778714de131c8b559c2860647a342a1">&#9670;&nbsp;</a></span>getpPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player.html">Player</a> * StageManager::getpPlayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プレイヤー取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_stage_manager_8cpp_source.html">StageManager.cpp</a> の <a class="el" href="_stage_manager_8cpp_source.html#l00097">97</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae54498baebd27e0b48c7bcfbe6555b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae54498baebd27e0b48c7bcfbe6555b34">&#9670;&nbsp;</a></span>getScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int StageManager::getScore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>スコア取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">int</td><td>スコア </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_stage_manager_8cpp_source.html">StageManager.cpp</a> の <a class="el" href="_stage_manager_8cpp_source.html#l00069">69</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a861d2cd2829cb25ed06237307f5e98ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a861d2cd2829cb25ed06237307f5e98ab">&#9670;&nbsp;</a></span>getTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int StageManager::getTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>時間取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">int</td><td>時間 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_stage_manager_8cpp_source.html">StageManager.cpp</a> の <a class="el" href="_stage_manager_8cpp_source.html#l00076">76</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6ee187d038d202439d696ff31b347226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ee187d038d202439d696ff31b347226">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StageManager::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_stage_manager_8cpp_source.html">StageManager.cpp</a> の <a class="el" href="_stage_manager_8cpp_source.html#l00114">114</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a82938cb01ba1adbb3620fee0a12397ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82938cb01ba1adbb3620fee0a12397ec">&#9670;&nbsp;</a></span>setIsEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StageManager::setIsEnable </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>有効フラグ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>有効フラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_stage_manager_8cpp_source.html">StageManager.cpp</a> の <a class="el" href="_stage_manager_8cpp_source.html#l00044">44</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2c7f386ffc5087b8437abd5b881b7156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7f386ffc5087b8437abd5b881b7156">&#9670;&nbsp;</a></span>setPlayerCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StageManager::setPlayerCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プレイヤーカメラ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*value</td><td>カメラ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_stage_manager_8cpp_source.html">StageManager.cpp</a> の <a class="el" href="_stage_manager_8cpp_source.html#l00090">90</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab36f48dee34ce481c585b1d96df26dce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab36f48dee34ce481c585b1d96df26dce">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StageManager::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_game_object_null.html#a1a70fbd3260fd1c0100320756830a0db">GameObjectNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8cpp_source.html">StageManager.cpp</a> の <a class="el" href="_stage_manager_8cpp_source.html#l00125">125</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a254173b565937107fdfe02c0871b3520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a254173b565937107fdfe02c0871b3520">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StageManager::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_game_object_null.html#aeeb51b7e7aa41fd0b16f8f7c016bdb55">GameObjectNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8cpp_source.html">StageManager.cpp</a> の <a class="el" href="_stage_manager_8cpp_source.html#l00132">132</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="aac234fd37fef3fe233489e75c803ac47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac234fd37fef3fe233489e75c803ac47">&#9670;&nbsp;</a></span>balloon_group_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_balloon_group.html">BalloonGroup</a>* StageManager::balloon_group_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>風船群 </p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8h_source.html">StageManager.h</a> の <a class="el" href="_stage_manager_8h_source.html#l00054">54</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aeced4abe9b4df7b0105dd42745506a25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeced4abe9b4df7b0105dd42745506a25">&#9670;&nbsp;</a></span>BONUS_SCORE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int StageManager::BONUS_SCORE = 300</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ボーナススコア </p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8h_source.html">StageManager.h</a> の <a class="el" href="_stage_manager_8h_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aed94634bfdb7bbc3e9cc46724ba87e12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed94634bfdb7bbc3e9cc46724ba87e12">&#9670;&nbsp;</a></span>BONUS_SCORE_RAITO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int StageManager::BONUS_SCORE_RAITO = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ボーナススコア比率 </p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8h_source.html">StageManager.h</a> の <a class="el" href="_stage_manager_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9b693a434f2aec42739c19daf6087da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b693a434f2aec42739c19daf6087da4">&#9670;&nbsp;</a></span>is_enable_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StageManager::is_enable_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>有効フラグ </p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8h_source.html">StageManager.h</a> の <a class="el" href="_stage_manager_8h_source.html#l00050">50</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a80276fabfcdccd74dfd52fd2cc61b1db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80276fabfcdccd74dfd52fd2cc61b1db">&#9670;&nbsp;</a></span>is_ground_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StageManager::is_ground_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>着地フラグ </p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8h_source.html">StageManager.h</a> の <a class="el" href="_stage_manager_8h_source.html#l00051">51</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a46709c98366565c68f8de974385501a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46709c98366565c68f8de974385501a4">&#9670;&nbsp;</a></span>MAX_TIME</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int StageManager::MAX_TIME = <a class="el" href="class_time_to_frame.html#a02fe55cc63bdffd73d092d30cc7f0153">TimeToFrame::SecondToFrame</a>(60.0f)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最大時間 </p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8h_source.html">StageManager.h</a> の <a class="el" href="_stage_manager_8h_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aaebf5b60351f6406ba9ca9bfaaaf8959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaebf5b60351f6406ba9ca9bfaaaf8959">&#9670;&nbsp;</a></span>needle_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_needle.html">Needle</a>* StageManager::needle_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>棘 </p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8h_source.html">StageManager.h</a> の <a class="el" href="_stage_manager_8h_source.html#l00058">58</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a378c995a369018f8595ba5cf4ab947d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a378c995a369018f8595ba5cf4ab947d2">&#9670;&nbsp;</a></span>player_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player.html">Player</a>* StageManager::player_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>プレイヤー </p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8h_source.html">StageManager.h</a> の <a class="el" href="_stage_manager_8h_source.html#l00055">55</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab5cf1a29d5a3f8c1e06c2ca64e369d24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5cf1a29d5a3f8c1e06c2ca64e369d24">&#9670;&nbsp;</a></span>scaffold_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scaffold.html">Scaffold</a>* StageManager::scaffold_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>足場 </p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8h_source.html">StageManager.h</a> の <a class="el" href="_stage_manager_8h_source.html#l00057">57</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a21bdb2371d84c916dd594c453c50701e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21bdb2371d84c916dd594c453c50701e">&#9670;&nbsp;</a></span>score_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int StageManager::score_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>スコア </p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8h_source.html">StageManager.h</a> の <a class="el" href="_stage_manager_8h_source.html#l00052">52</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0ce3838c9fe4eaa1c9f8a6ecf361ea7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ce3838c9fe4eaa1c9f8a6ecf361ea7a">&#9670;&nbsp;</a></span>start_block_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_start_block.html">StartBlock</a>* StageManager::start_block_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>スタートブロック </p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8h_source.html">StageManager.h</a> の <a class="el" href="_stage_manager_8h_source.html#l00056">56</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afdb8bffaa00e7c4ed1ebbf136137f6e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb8bffaa00e7c4ed1ebbf136137f6e6">&#9670;&nbsp;</a></span>time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int StageManager::time_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>時間 </p>
+
+<p class="definition"> <a class="el" href="_stage_manager_8h_source.html">StageManager.h</a> の <a class="el" href="_stage_manager_8h_source.html#l00053">53</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Game/Object/3D/StageManager/<a class="el" href="_stage_manager_8h_source.html">StageManager.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Game/Object/3D/StageManager/Source/<a class="el" href="_stage_manager_8cpp_source.html">StageManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_stage_manager.html">StageManager</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+\hypertarget{class_start_block}{}\section{Start\+Block クラス}
+\label{class_start_block}\index{Start\+Block@{Start\+Block}}
+
+
+スタートブロック\+Class  
+
+
+
+
+{\ttfamily \#include $<$Start\+Block.\+h$>$}
+
+
+
+Start\+Block 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_start_block__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_start_block_a185544c4a670fcbb7259b31ce8088d2a}{set\+Position}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} value)
+\begin{DoxyCompactList}\small\item\em 座標設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_start_block_acdcd2f5baee7e1cbf9e271315d0a83c1}{Init}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$collision)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_start_block_a89fb4c5fafc1d94155c09ba9b22bb94d}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_start_block_ad23708a631130ebcf6e40cf4f2afcd90}{S\+C\+A\+LE}}
+\begin{DoxyCompactList}\small\item\em 拡縮 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_start_block_a8c5f2b6217db28715cd0d3532849cc54}{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}} = 0.\+01f
+\begin{DoxyCompactList}\small\item\em 回転 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+スタートブロック\+Class 
+
+スタートブロックの\+Class 
+
+ Start\+Block.\+h の 24 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_start_block_acdcd2f5baee7e1cbf9e271315d0a83c1}\label{class_start_block_acdcd2f5baee7e1cbf9e271315d0a83c1}} 
+\index{Start\+Block@{Start\+Block}!Init@{Init}}
+\index{Init@{Init}!Start\+Block@{Start\+Block}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Start\+Block\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$}]{collision }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$collision} & 衝突基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Start\+Block.\+cpp の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_start_block_a185544c4a670fcbb7259b31ce8088d2a}\label{class_start_block_a185544c4a670fcbb7259b31ce8088d2a}} 
+\index{Start\+Block@{Start\+Block}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Start\+Block@{Start\+Block}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Start\+Block\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{value }\end{DoxyParamCaption})}
+
+
+
+座標設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 座標 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Start\+Block.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_start_block_a89fb4c5fafc1d94155c09ba9b22bb94d}\label{class_start_block_a89fb4c5fafc1d94155c09ba9b22bb94d}} 
+\index{Start\+Block@{Start\+Block}!Update@{Update}}
+\index{Update@{Update}!Start\+Block@{Start\+Block}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Start\+Block\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_aeeb51b7e7aa41fd0b16f8f7c016bdb55}{Game\+Object\+Null}}を再実装しています。
+
+
+
+ Start\+Block.\+cpp の 50 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_start_block_a8c5f2b6217db28715cd0d3532849cc54}\label{class_start_block_a8c5f2b6217db28715cd0d3532849cc54}} 
+\index{Start\+Block@{Start\+Block}!R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED@{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}}
+\index{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED@{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}!Start\+Block@{Start\+Block}}
+\subsubsection{\texorpdfstring{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}{ROTATION\_SPEED}}
+{\footnotesize\ttfamily const float Start\+Block\+::\+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED = 0.\+01f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+回転 
+
+
+
+ Start\+Block.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_start_block_ad23708a631130ebcf6e40cf4f2afcd90}\label{class_start_block_ad23708a631130ebcf6e40cf4f2afcd90}} 
+\index{Start\+Block@{Start\+Block}!S\+C\+A\+LE@{S\+C\+A\+LE}}
+\index{S\+C\+A\+LE@{S\+C\+A\+LE}!Start\+Block@{Start\+Block}}
+\subsubsection{\texorpdfstring{S\+C\+A\+LE}{SCALE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Start\+Block\+::\+S\+C\+A\+LE\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+拡縮 
+
+
+
+ Start\+Block.\+h の 30 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Start\+Block/\mbox{\hyperlink{_start_block_8h}{Start\+Block.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Start\+Block/\+Source/\mbox{\hyperlink{_start_block_8cpp}{Start\+Block.\+cpp}}\end{DoxyCompactItemize}

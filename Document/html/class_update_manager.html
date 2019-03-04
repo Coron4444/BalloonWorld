@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: UpdateManager クラス</title>
+<title>BalloonWorld: UpdateManager クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -98,10 +98,40 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>更新マネージャークラス  
+<p>更新マネージャーlass  
  <a href="class_update_manager.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="_update_manager_8h_source.html">UpdateManager.h</a>&gt;</code></p>
+<div class="dynheader">
+UpdateManager 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_update_manager__coll__graph.png" border="0" usemap="#_update_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="_update_manager_coll__map" id="_update_manager_coll__map">
+<area shape="rect" id="node2" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; GameObjectBase *,\l ARRAY_NUM \&gt;" alt="" coords="1379,539,1529,595"/>
+<area shape="rect" id="node3" href="class_game_object_base.html" title="ゲームオブジェクトBaseClass " alt="" coords="1036,559,1161,585"/>
+<area shape="rect" id="node5" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="1395,619,1513,645"/>
+<area shape="rect" id="node25" href="class_physics.html" title="物理Class " alt="" coords="1419,425,1489,452"/>
+<area shape="rect" id="node4" href="class_collision_base.html" title="衝突BaseClass " alt="" coords="1674,605,1775,632"/>
+<area shape="rect" id="node7" href="class_collision_object.html" title="衝突オブジェクトClass " alt="" coords="1923,119,2032,145"/>
+<area shape="rect" id="node16" href="class_draw_base.html" title="描画BaseClass " alt="" coords="1684,437,1765,464"/>
+<area shape="rect" id="node6" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject *,\l ARRAY_NUM \&gt;" alt="" coords="2213,279,2349,335"/>
+<area shape="rect" id="node12" href="class_object_of_tree.html" title="ObjectOfTree\&lt; CollisionObject *\&gt;" alt="" coords="2173,119,2388,145"/>
+<area shape="rect" id="node8" href="class_a_a_b_b.html" title="AABBClass " alt="" coords="741,99,800,125"/>
+<area shape="rect" id="node9" href="class_collision_shape_base.html" title="衝突形状BaseClass " alt="" coords="364,8,503,35"/>
+<area shape="rect" id="node15" href="class_collision_object_1_1_shape.html" title="衝突形状Class " alt="" coords="693,12,848,39"/>
+<area shape="rect" id="node10" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="107,311,183,337"/>
+<area shape="rect" id="node19" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="1033,275,1164,301"/>
+<area shape="rect" id="node20" href="class_camera.html" title="カメラClass " alt="" coords="737,179,804,205"/>
+<area shape="rect" id="node22" href="class_matrix.html" title="行列Class " alt="" coords="404,524,463,551"/>
+<area shape="rect" id="node26" href="class_transform.html" title="変形Class " alt="" coords="731,587,810,613"/>
+<area shape="rect" id="node13" href="class_space_of_tree.html" title="SpaceOfTree\&lt; CollisionObject *\&gt;" alt="" coords="2545,119,2759,145"/>
+<area shape="rect" id="node14" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject::Shape\l *, ARRAY_NUM \&gt;" alt="" coords="1188,29,1355,85"/>
+<area shape="rect" id="node17" href="class_draw_order_list.html" title="描画注文リストClass " alt="" coords="1402,359,1506,385"/>
+<area shape="rect" id="node18" href="class_bit_flag.html" title="ビットフラグClass " alt="" coords="1067,349,1130,376"/>
+<area shape="rect" id="node21" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="1045,164,1152,191"/>
+<area shape="rect" id="node24" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="717,319,824,345"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
@@ -117,15 +147,12 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 <tr class="memitem:ac4bdd39d106c7e6b505fe9a0c55e50de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_update_manager.html#ac4bdd39d106c7e6b505fe9a0c55e50de">Update</a> ()</td></tr>
 <tr class="memdesc:ac4bdd39d106c7e6b505fe9a0c55e50de"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#ac4bdd39d106c7e6b505fe9a0c55e50de">[詳解]</a><br /></td></tr>
 <tr class="separator:ac4bdd39d106c7e6b505fe9a0c55e50de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe4b39d94cde8294cc273cde32788eaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_update_manager.html#afe4b39d94cde8294cc273cde32788eaa">AddUpdateBaseToArray</a> (<a class="el" href="class_update_base.html">UpdateBase</a> *update)</td></tr>
-<tr class="memdesc:afe4b39d94cde8294cc273cde32788eaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新基底クラスの追加関数  <a href="#afe4b39d94cde8294cc273cde32788eaa">[詳解]</a><br /></td></tr>
-<tr class="separator:afe4b39d94cde8294cc273cde32788eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4f492c33ed941ddd01ccae8218080ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_update_manager.html#ab4f492c33ed941ddd01ccae8218080ff">OverwriteArrayUpdateBase</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *game_object, <a class="el" href="class_update_base.html">UpdateBase</a> *new_update)</td></tr>
-<tr class="memdesc:ab4f492c33ed941ddd01ccae8218080ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新基底クラスの上書き関数  <a href="#ab4f492c33ed941ddd01ccae8218080ff">[詳解]</a><br /></td></tr>
-<tr class="separator:ab4f492c33ed941ddd01ccae8218080ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a54226896f4280b589af85c07e869d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_update_manager.html#a8a54226896f4280b589af85c07e869d9">ReleaseUpdateBaseFromArray</a> (<a class="el" href="class_update_base.html">UpdateBase</a> *update)</td></tr>
-<tr class="memdesc:a8a54226896f4280b589af85c07e869d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新基底クラスの解放関数  <a href="#a8a54226896f4280b589af85c07e869d9">[詳解]</a><br /></td></tr>
-<tr class="separator:a8a54226896f4280b589af85c07e869d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47571c441e8494f8e8231d600fd483ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_update_manager.html#a47571c441e8494f8e8231d600fd483ae">AddGameObjectBase</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *update)</td></tr>
+<tr class="memdesc:a47571c441e8494f8e8231d600fd483ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新基底クラスの追加関数  <a href="#a47571c441e8494f8e8231d600fd483ae">[詳解]</a><br /></td></tr>
+<tr class="separator:a47571c441e8494f8e8231d600fd483ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae74872df6b8761ac78744be1211da791"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_update_manager.html#ae74872df6b8761ac78744be1211da791">ReleaseGameObjectBase</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *update)</td></tr>
+<tr class="memdesc:ae74872df6b8761ac78744be1211da791"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新基底クラスの解放関数  <a href="#ae74872df6b8761ac78744be1211da791">[詳解]</a><br /></td></tr>
+<tr class="separator:ae74872df6b8761ac78744be1211da791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
@@ -144,21 +171,21 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 非公開変数類</h2></td></tr>
-<tr class="memitem:a1e22347205a91812355ccb0b61538754"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_update_base.html">UpdateBase</a> *, <a class="el" href="class_update_manager.html#a280b884fb6a025cfd92d4f93086c60c6">ARRAY_NUM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_update_manager.html#a1e22347205a91812355ccb0b61538754">all_update_</a></td></tr>
-<tr class="memdesc:a1e22347205a91812355ccb0b61538754"><td class="mdescLeft">&#160;</td><td class="mdescRight">全更新配列  <a href="#a1e22347205a91812355ccb0b61538754">[詳解]</a><br /></td></tr>
-<tr class="separator:a1e22347205a91812355ccb0b61538754"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acebe668ec93509bdb16c48de1430a49b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_update_base.html">UpdateBase</a> *, <a class="el" href="class_update_manager.html#a280b884fb6a025cfd92d4f93086c60c6">ARRAY_NUM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_update_manager.html#acebe668ec93509bdb16c48de1430a49b">await_add_</a></td></tr>
-<tr class="memdesc:acebe668ec93509bdb16c48de1430a49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加待ち配列  <a href="#acebe668ec93509bdb16c48de1430a49b">[詳解]</a><br /></td></tr>
-<tr class="separator:acebe668ec93509bdb16c48de1430a49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa04ddba3d6d9b5ad4d36749e9d81955c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_update_base.html">UpdateBase</a> *, <a class="el" href="class_update_manager.html#a280b884fb6a025cfd92d4f93086c60c6">ARRAY_NUM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_update_manager.html#aa04ddba3d6d9b5ad4d36749e9d81955c">await_release_</a></td></tr>
-<tr class="memdesc:aa04ddba3d6d9b5ad4d36749e9d81955c"><td class="mdescLeft">&#160;</td><td class="mdescRight">解放待ち配列  <a href="#aa04ddba3d6d9b5ad4d36749e9d81955c">[詳解]</a><br /></td></tr>
-<tr class="separator:aa04ddba3d6d9b5ad4d36749e9d81955c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3943ecea6d685d2aba94dc227a911b52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_game_object_base.html">GameObjectBase</a> *, <a class="el" href="class_update_manager.html#a280b884fb6a025cfd92d4f93086c60c6">ARRAY_NUM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_update_manager.html#a3943ecea6d685d2aba94dc227a911b52">all_object_</a></td></tr>
+<tr class="memdesc:a3943ecea6d685d2aba94dc227a911b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">全更新配列  <a href="#a3943ecea6d685d2aba94dc227a911b52">[詳解]</a><br /></td></tr>
+<tr class="separator:a3943ecea6d685d2aba94dc227a911b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e499225c229fa9f6ae4c8b1f4ae409c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_game_object_base.html">GameObjectBase</a> *, <a class="el" href="class_update_manager.html#a280b884fb6a025cfd92d4f93086c60c6">ARRAY_NUM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_update_manager.html#a0e499225c229fa9f6ae4c8b1f4ae409c">await_add_</a></td></tr>
+<tr class="memdesc:a0e499225c229fa9f6ae4c8b1f4ae409c"><td class="mdescLeft">&#160;</td><td class="mdescRight">追加待ち配列  <a href="#a0e499225c229fa9f6ae4c8b1f4ae409c">[詳解]</a><br /></td></tr>
+<tr class="separator:a0e499225c229fa9f6ae4c8b1f4ae409c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea92aeda54d22c039d1bb97387e6743c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt; <a class="el" href="class_game_object_base.html">GameObjectBase</a> *, <a class="el" href="class_update_manager.html#a280b884fb6a025cfd92d4f93086c60c6">ARRAY_NUM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_update_manager.html#aea92aeda54d22c039d1bb97387e6743c">await_release_</a></td></tr>
+<tr class="memdesc:aea92aeda54d22c039d1bb97387e6743c"><td class="mdescLeft">&#160;</td><td class="mdescRight">解放待ち配列  <a href="#aea92aeda54d22c039d1bb97387e6743c">[詳解]</a><br /></td></tr>
+<tr class="separator:aea92aeda54d22c039d1bb97387e6743c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>更新マネージャークラス </p>
-<p>登録されている更新基底クラスを管理するクラス </p>
+<div class="textblock"><p>更新マネージャーlass </p>
+<p>登録されている更新基底クラスを管理するClass </p>
 
-<p class="definition"> <a class="el" href="_update_manager_8h_source.html">UpdateManager.h</a> の <a class="el" href="_update_manager_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_update_manager_8h_source.html">UpdateManager.h</a> の <a class="el" href="_update_manager_8h_source.html#l00024">24</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
 <a id="a7bb1af3bffcc4d72333ac86ae411891e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7bb1af3bffcc4d72333ac86ae411891e">&#9670;&nbsp;</a></span>AddContentsOfAwaitAddArray()</h2>
@@ -184,21 +211,33 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 </div><div class="memdoc">
 
 <p>追加待ち配列の中身を追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00176">176</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00113">113</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="afe4b39d94cde8294cc273cde32788eaa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe4b39d94cde8294cc273cde32788eaa">&#9670;&nbsp;</a></span>AddUpdateBaseToArray()</h2>
+<a id="a47571c441e8494f8e8231d600fd483ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47571c441e8494f8e8231d600fd483ae">&#9670;&nbsp;</a></span>AddGameObjectBase()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void UpdateManager::AddUpdateBaseToArray </td>
+          <td class="memname">void UpdateManager::AddGameObjectBase </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_update_base.html">UpdateBase</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td>
           <td class="paramname"><em>update</em></td><td>)</td>
           <td></td>
         </tr>
@@ -206,8 +245,20 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 </div><div class="memdoc">
 
 <p>更新基底クラスの追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*update</td><td>更新基底クラス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00116">116</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00097">97</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -227,40 +278,20 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 </div><div class="memdoc">
 
 <p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00027">27</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ab4f492c33ed941ddd01ccae8218080ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4f492c33ed941ddd01ccae8218080ff">&#9670;&nbsp;</a></span>OverwriteArrayUpdateBase()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void UpdateManager::OverwriteArrayUpdateBase </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td>
-          <td class="paramname"><em>game_object</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_update_base.html">UpdateBase</a> *&#160;</td>
-          <td class="paramname"><em>new_update</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>更新基底クラスの上書き関数 </p>
-
-<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00127">127</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00021">21</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -288,21 +319,33 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 </div><div class="memdoc">
 
 <p>解放待ち配列の中身を解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00196">196</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00130">130</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a8a54226896f4280b589af85c07e869d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a54226896f4280b589af85c07e869d9">&#9670;&nbsp;</a></span>ReleaseUpdateBaseFromArray()</h2>
+<a id="ae74872df6b8761ac78744be1211da791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae74872df6b8761ac78744be1211da791">&#9670;&nbsp;</a></span>ReleaseGameObjectBase()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void UpdateManager::ReleaseUpdateBaseFromArray </td>
+          <td class="memname">void UpdateManager::ReleaseGameObjectBase </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_update_base.html">UpdateBase</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td>
           <td class="paramname"><em>update</em></td><td>)</td>
           <td></td>
         </tr>
@@ -310,8 +353,20 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 </div><div class="memdoc">
 
 <p>更新基底クラスの解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*update</td><td>更新基底クラス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00165">165</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00105">105</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -331,8 +386,20 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 </div><div class="memdoc">
 
 <p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00037">37</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00027">27</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -352,8 +419,20 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 </div><div class="memdoc">
 
 <p>シーン変更時の終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00054">54</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00041">41</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -373,14 +452,26 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 </div><div class="memdoc">
 
 <p>更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00071">71</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a> の <a class="el" href="_update_manager_8cpp_source.html#l00055">55</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">メンバ詳解</h2>
-<a id="a1e22347205a91812355ccb0b61538754"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e22347205a91812355ccb0b61538754">&#9670;&nbsp;</a></span>all_update_</h2>
+<a id="a3943ecea6d685d2aba94dc227a911b52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3943ecea6d685d2aba94dc227a911b52">&#9670;&nbsp;</a></span>all_object_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,7 +480,7 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt;<a class="el" href="class_update_base.html">UpdateBase</a>*, <a class="el" href="class_update_manager.html#a280b884fb6a025cfd92d4f93086c60c6">ARRAY_NUM</a>&gt; UpdateManager::all_update_</td>
+          <td class="memname"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt;<a class="el" href="class_game_object_base.html">GameObjectBase</a>*, <a class="el" href="class_update_manager.html#a280b884fb6a025cfd92d4f93086c60c6">ARRAY_NUM</a>&gt; UpdateManager::all_object_</td>
         </tr>
       </table>
   </td>
@@ -401,7 +492,7 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 
 <p>全更新配列 </p>
 
-<p class="definition"> <a class="el" href="_update_manager_8h_source.html">UpdateManager.h</a> の <a class="el" href="_update_manager_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_update_manager_8h_source.html">UpdateManager.h</a> の <a class="el" href="_update_manager_8h_source.html#l00037">37</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -427,12 +518,12 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 
 <p>配列数 </p>
 
-<p class="definition"> <a class="el" href="_update_manager_8h_source.html">UpdateManager.h</a> の <a class="el" href="_update_manager_8h_source.html#l00039">39</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_update_manager_8h_source.html">UpdateManager.h</a> の <a class="el" href="_update_manager_8h_source.html#l00030">30</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="acebe668ec93509bdb16c48de1430a49b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acebe668ec93509bdb16c48de1430a49b">&#9670;&nbsp;</a></span>await_add_</h2>
+<a id="a0e499225c229fa9f6ae4c8b1f4ae409c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e499225c229fa9f6ae4c8b1f4ae409c">&#9670;&nbsp;</a></span>await_add_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -441,7 +532,7 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt;<a class="el" href="class_update_base.html">UpdateBase</a>*, <a class="el" href="class_update_manager.html#a280b884fb6a025cfd92d4f93086c60c6">ARRAY_NUM</a>&gt; UpdateManager::await_add_</td>
+          <td class="memname"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt;<a class="el" href="class_game_object_base.html">GameObjectBase</a>*, <a class="el" href="class_update_manager.html#a280b884fb6a025cfd92d4f93086c60c6">ARRAY_NUM</a>&gt; UpdateManager::await_add_</td>
         </tr>
       </table>
   </td>
@@ -453,12 +544,12 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 
 <p>追加待ち配列 </p>
 
-<p class="definition"> <a class="el" href="_update_manager_8h_source.html">UpdateManager.h</a> の <a class="el" href="_update_manager_8h_source.html#l00047">47</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_update_manager_8h_source.html">UpdateManager.h</a> の <a class="el" href="_update_manager_8h_source.html#l00038">38</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aa04ddba3d6d9b5ad4d36749e9d81955c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa04ddba3d6d9b5ad4d36749e9d81955c">&#9670;&nbsp;</a></span>await_release_</h2>
+<a id="aea92aeda54d22c039d1bb97387e6743c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea92aeda54d22c039d1bb97387e6743c">&#9670;&nbsp;</a></span>await_release_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -467,7 +558,7 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt;<a class="el" href="class_update_base.html">UpdateBase</a>*, <a class="el" href="class_update_manager.html#a280b884fb6a025cfd92d4f93086c60c6">ARRAY_NUM</a>&gt; UpdateManager::await_release_</td>
+          <td class="memname"><a class="el" href="class_limited_pointer_array.html">LimitedPointerArray</a>&lt;<a class="el" href="class_game_object_base.html">GameObjectBase</a>*, <a class="el" href="class_update_manager.html#a280b884fb6a025cfd92d4f93086c60c6">ARRAY_NUM</a>&gt; UpdateManager::await_release_</td>
         </tr>
       </table>
   </td>
@@ -479,13 +570,13 @@ $(document).ready(function(){initNavTree('class_update_manager.html','');});
 
 <p>解放待ち配列 </p>
 
-<p class="definition"> <a class="el" href="_update_manager_8h_source.html">UpdateManager.h</a> の <a class="el" href="_update_manager_8h_source.html#l00048">48</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_update_manager_8h_source.html">UpdateManager.h</a> の <a class="el" href="_update_manager_8h_source.html#l00039">39</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/UpdateManager/<a class="el" href="_update_manager_8h_source.html">UpdateManager.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/UpdateManager/<a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/GameObject/GameObjectManager/<a class="el" href="_update_manager_8h_source.html">UpdateManager.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/GameObject/GameObjectManager/Source/<a class="el" href="_update_manager_8cpp_source.html">UpdateManager.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

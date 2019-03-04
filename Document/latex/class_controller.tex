@@ -1,0 +1,565 @@
+\hypertarget{class_controller}{}\section{Controller クラス}
+\label{class_controller}\index{Controller@{Controller}}
+
+
+コントローラー\+Class  
+
+
+
+
+{\ttfamily \#include $<$Controller.\+h$>$}
+
+
+
+Controller 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{class_controller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_controller_1_1_x_input_controller}{X\+Input\+Controller}}
+\begin{DoxyCompactList}\small\item\em X\+Inputコントローラー\+Class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_controller_ad81882021d5a5c77855c7d656899cc62}{Number}} \{ \newline
+\mbox{\hyperlink{class_controller_ad81882021d5a5c77855c7d656899cc62ab50339a10e1de285ac99d4c3990b8693}{Number\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_controller_ad81882021d5a5c77855c7d656899cc62abc21e6484530fc9d0313cb816b733396}{Number\+::\+O\+NE}}, 
+\mbox{\hyperlink{class_controller_ad81882021d5a5c77855c7d656899cc62a0f82d86afa0f5dc965c5c15aca58dcfb}{Number\+::\+T\+WO}}, 
+\mbox{\hyperlink{class_controller_ad81882021d5a5c77855c7d656899cc62a413af0de1f97a2155acf2b8b26ab36e2}{Number\+::\+T\+H\+R\+EE}}, 
+\newline
+\mbox{\hyperlink{class_controller_ad81882021d5a5c77855c7d656899cc62a7eac1ccd3fbce4abcd58868b992f0a91}{Number\+::f\+O\+UR}}, 
+\mbox{\hyperlink{class_controller_ad81882021d5a5c77855c7d656899cc62a26a4b44a837bf97b972628509912b4a5}{Number\+::\+M\+AX}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4}{Direction}} \{ \newline
+\mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4ab50339a10e1de285ac99d4c3990b8693}{Direction\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4afbaedde498cdead4f2780217646e9ba1}{Direction\+::\+UP}}, 
+\mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4ac4e0e4e3118472beeb2ae75827450f1f}{Direction\+::\+D\+O\+WN}}, 
+\mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4a684d325a7303f52e64011467ff5c5758}{Direction\+::\+L\+E\+FT}}, 
+\newline
+\mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4a21507b40c80068eda19865706fdc2403}{Direction\+::\+R\+I\+G\+HT}}, 
+\mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4a26a4b44a837bf97b972628509912b4a5}{Direction\+::\+M\+AX}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_controller_abd7dd769d06d277d3aae9afcf135a4ee}{Trigger\+Button}} \{ \mbox{\hyperlink{class_controller_abd7dd769d06d277d3aae9afcf135a4eeab50339a10e1de285ac99d4c3990b8693}{Trigger\+Button\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_controller_abd7dd769d06d277d3aae9afcf135a4eea8c6d22ff6f63fc6711cfa315cb80b314}{Trigger\+Button\+::\+R2}}, 
+\mbox{\hyperlink{class_controller_abd7dd769d06d277d3aae9afcf135a4eea7e6aa2d53f6ee2b1a34b017fa403cb76}{Trigger\+Button\+::\+L2}}, 
+\mbox{\hyperlink{class_controller_abd7dd769d06d277d3aae9afcf135a4eea26a4b44a837bf97b972628509912b4a5}{Trigger\+Button\+::\+M\+AX}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_controller_a65e554b546455b9c1fdeb9e5d87731d0}{get\+Hold}} (int controller\+\_\+index, int value)
+\begin{DoxyCompactList}\small\item\em ホールド状態取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_afbd455b5ca62047004ab49a236e90014}{get\+Trigger}} (int controller\+\_\+index, int value)
+\begin{DoxyCompactList}\small\item\em トリガー状態取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_ae2fe11eda9a29429cda53f32eb8c1f1d}{get\+Release}} (int controller\+\_\+index, int value)
+\begin{DoxyCompactList}\small\item\em リリ−ス状態取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_a8bdb3ab0c7d74df02488df3e02fea6ff}{get\+Hold\+L\+Stick}} (int controller\+\_\+index, \mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4}{Direction}} value)
+\begin{DoxyCompactList}\small\item\em Lスティックのホールド状態取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_a58759e8aa85b6f5bd19a8d3c9304580f}{get\+Hold\+R\+Stick}} (int controller\+\_\+index, \mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4}{Direction}} value)
+\item 
+bool \mbox{\hyperlink{class_controller_a7dae1e696002c07c0200432d8c4c87ed}{get\+Trigger\+L\+Stick}} (int controller\+\_\+index, \mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4}{Direction}} value)
+\begin{DoxyCompactList}\small\item\em Lスティックのトリガー状態取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_acf3ce5dd4a886553f53a237ec02383ac}{get\+Hold\+Trigger\+Button}} (int controller\+\_\+index, \mbox{\hyperlink{class_controller_abd7dd769d06d277d3aae9afcf135a4ee}{Trigger\+Button}} value)
+\begin{DoxyCompactList}\small\item\em トリガーボタンのホールド状態取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_a5b04c7d6998a75601a5af2854a887c5e}{get\+Trigger\+Trigger\+Button}} (int controller\+\_\+index, \mbox{\hyperlink{class_controller_abd7dd769d06d277d3aae9afcf135a4ee}{Trigger\+Button}} value)
+\begin{DoxyCompactList}\small\item\em トリガーボタンのトリガー状態取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_a329f08fd8b8293494a1d365148cb195e}{get\+Release\+Trigger\+Button}} (int controller\+\_\+index, \mbox{\hyperlink{class_controller_abd7dd769d06d277d3aae9afcf135a4ee}{Trigger\+Button}} value)
+\begin{DoxyCompactList}\small\item\em トリガーボタンのリリ−ス状態取得関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_controller_a8bb801356986692b32f989574af8d669}{get\+Controller\+Num}} ()
+\begin{DoxyCompactList}\small\item\em コントローラー数取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a6f23f649f5dc2255706f2f151bf30690}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_a9c3ec253ef99efe57471c6e62efe3dcf}{Is\+Connection}} (int controller\+\_\+index)
+\begin{DoxyCompactList}\small\item\em コントローラー接続確認関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controller_1_1_x_input_controller}{X\+Input\+Controller}} \mbox{\hyperlink{class_controller_a8f71d4e54911c80ea0c113f4b72ccfec}{controller\+\_\+}} \mbox{[}(int) \mbox{\hyperlink{class_controller_ad81882021d5a5c77855c7d656899cc62a26a4b44a837bf97b972628509912b4a5}{Number\+::\+M\+AX}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em X\+Inputコントローラー \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_controller_a724390d67344586ab54e87b676d2b5bf}{S\+T\+I\+C\+K\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY}} = 30000
+\begin{DoxyCompactList}\small\item\em スティックトリガー感度 \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{class_controller_a52591fcc8144e0fb274c6a42b5593e1b}{S\+T\+I\+C\+K\+\_\+\+H\+O\+L\+D\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY}} = 100
+\begin{DoxyCompactList}\small\item\em スティックホールド感度 \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{class_controller_a1f1051035784f6b5dfdd028021706f6d}{T\+R\+I\+G\+G\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY}} = 5
+\begin{DoxyCompactList}\small\item\em トリガーボタン感度 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+コントローラー\+Class 
+
+コントローラーの入力\+Class 
+
+ Controller.\+h の 24 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4}\label{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4}} 
+\index{Controller@{Controller}!Direction@{Direction}}
+\index{Direction@{Direction}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4}{Controller\+::\+Direction}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Controller@{Controller}}\index{Controller@{Controller}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4ab50339a10e1de285ac99d4c3990b8693}\label{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4ab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UP@{UP}!Controller@{Controller}}\index{Controller@{Controller}!UP@{UP}}}\mbox{\Hypertarget{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4afbaedde498cdead4f2780217646e9ba1}\label{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4afbaedde498cdead4f2780217646e9ba1}} 
+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+O\+WN@{D\+O\+WN}!Controller@{Controller}}\index{Controller@{Controller}!D\+O\+WN@{D\+O\+WN}}}\mbox{\Hypertarget{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4ac4e0e4e3118472beeb2ae75827450f1f}\label{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4ac4e0e4e3118472beeb2ae75827450f1f}} 
+D\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+E\+FT@{L\+E\+FT}!Controller@{Controller}}\index{Controller@{Controller}!L\+E\+FT@{L\+E\+FT}}}\mbox{\Hypertarget{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4a684d325a7303f52e64011467ff5c5758}\label{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4a684d325a7303f52e64011467ff5c5758}} 
+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+I\+G\+HT@{R\+I\+G\+HT}!Controller@{Controller}}\index{Controller@{Controller}!R\+I\+G\+HT@{R\+I\+G\+HT}}}\mbox{\Hypertarget{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4a21507b40c80068eda19865706fdc2403}\label{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4a21507b40c80068eda19865706fdc2403}} 
+R\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Controller@{Controller}}\index{Controller@{Controller}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4a26a4b44a837bf97b972628509912b4a5}\label{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4a26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Controller.\+h の 89 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_ad81882021d5a5c77855c7d656899cc62}\label{class_controller_ad81882021d5a5c77855c7d656899cc62}} 
+\index{Controller@{Controller}!Number@{Number}}
+\index{Number@{Number}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{Number}{Number}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_controller_ad81882021d5a5c77855c7d656899cc62}{Controller\+::\+Number}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Controller@{Controller}}\index{Controller@{Controller}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_controller_ad81882021d5a5c77855c7d656899cc62ab50339a10e1de285ac99d4c3990b8693}\label{class_controller_ad81882021d5a5c77855c7d656899cc62ab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+NE@{O\+NE}!Controller@{Controller}}\index{Controller@{Controller}!O\+NE@{O\+NE}}}\mbox{\Hypertarget{class_controller_ad81882021d5a5c77855c7d656899cc62abc21e6484530fc9d0313cb816b733396}\label{class_controller_ad81882021d5a5c77855c7d656899cc62abc21e6484530fc9d0313cb816b733396}} 
+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+WO@{T\+WO}!Controller@{Controller}}\index{Controller@{Controller}!T\+WO@{T\+WO}}}\mbox{\Hypertarget{class_controller_ad81882021d5a5c77855c7d656899cc62a0f82d86afa0f5dc965c5c15aca58dcfb}\label{class_controller_ad81882021d5a5c77855c7d656899cc62a0f82d86afa0f5dc965c5c15aca58dcfb}} 
+T\+WO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+H\+R\+EE@{T\+H\+R\+EE}!Controller@{Controller}}\index{Controller@{Controller}!T\+H\+R\+EE@{T\+H\+R\+EE}}}\mbox{\Hypertarget{class_controller_ad81882021d5a5c77855c7d656899cc62a413af0de1f97a2155acf2b8b26ab36e2}\label{class_controller_ad81882021d5a5c77855c7d656899cc62a413af0de1f97a2155acf2b8b26ab36e2}} 
+T\+H\+R\+EE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{f\+O\+UR@{f\+O\+UR}!Controller@{Controller}}\index{Controller@{Controller}!f\+O\+UR@{f\+O\+UR}}}\mbox{\Hypertarget{class_controller_ad81882021d5a5c77855c7d656899cc62a7eac1ccd3fbce4abcd58868b992f0a91}\label{class_controller_ad81882021d5a5c77855c7d656899cc62a7eac1ccd3fbce4abcd58868b992f0a91}} 
+f\+O\+UR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Controller@{Controller}}\index{Controller@{Controller}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_controller_ad81882021d5a5c77855c7d656899cc62a26a4b44a837bf97b972628509912b4a5}\label{class_controller_ad81882021d5a5c77855c7d656899cc62a26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Controller.\+h の 79 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_abd7dd769d06d277d3aae9afcf135a4ee}\label{class_controller_abd7dd769d06d277d3aae9afcf135a4ee}} 
+\index{Controller@{Controller}!Trigger\+Button@{Trigger\+Button}}
+\index{Trigger\+Button@{Trigger\+Button}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{Trigger\+Button}{TriggerButton}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_controller_abd7dd769d06d277d3aae9afcf135a4ee}{Controller\+::\+Trigger\+Button}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Controller@{Controller}}\index{Controller@{Controller}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_controller_abd7dd769d06d277d3aae9afcf135a4eeab50339a10e1de285ac99d4c3990b8693}\label{class_controller_abd7dd769d06d277d3aae9afcf135a4eeab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R2@{R2}!Controller@{Controller}}\index{Controller@{Controller}!R2@{R2}}}\mbox{\Hypertarget{class_controller_abd7dd769d06d277d3aae9afcf135a4eea8c6d22ff6f63fc6711cfa315cb80b314}\label{class_controller_abd7dd769d06d277d3aae9afcf135a4eea8c6d22ff6f63fc6711cfa315cb80b314}} 
+R2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L2@{L2}!Controller@{Controller}}\index{Controller@{Controller}!L2@{L2}}}\mbox{\Hypertarget{class_controller_abd7dd769d06d277d3aae9afcf135a4eea7e6aa2d53f6ee2b1a34b017fa403cb76}\label{class_controller_abd7dd769d06d277d3aae9afcf135a4eea7e6aa2d53f6ee2b1a34b017fa403cb76}} 
+L2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Controller@{Controller}}\index{Controller@{Controller}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_controller_abd7dd769d06d277d3aae9afcf135a4eea26a4b44a837bf97b972628509912b4a5}\label{class_controller_abd7dd769d06d277d3aae9afcf135a4eea26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Controller.\+h の 99 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_controller_a8bb801356986692b32f989574af8d669}\label{class_controller_a8bb801356986692b32f989574af8d669}} 
+\index{Controller@{Controller}!get\+Controller\+Num@{get\+Controller\+Num}}
+\index{get\+Controller\+Num@{get\+Controller\+Num}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Controller\+Num()}{getControllerNum()}}
+{\footnotesize\ttfamily int Controller\+::get\+Controller\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コントローラー数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & コントローラー数 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 238 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_a65e554b546455b9c1fdeb9e5d87731d0}\label{class_controller_a65e554b546455b9c1fdeb9e5d87731d0}} 
+\index{Controller@{Controller}!get\+Hold@{get\+Hold}}
+\index{get\+Hold@{get\+Hold}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Hold()}{getHold()}}
+{\footnotesize\ttfamily bool Controller\+::get\+Hold (\begin{DoxyParamCaption}\item[{int}]{controller\+\_\+index,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+ホールド状態取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em controller\+\_\+index} & コントローラーインデックス \\
+\hline
+{\em value} & 判定したいボタン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 押されていればtrue \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_a8bdb3ab0c7d74df02488df3e02fea6ff}\label{class_controller_a8bdb3ab0c7d74df02488df3e02fea6ff}} 
+\index{Controller@{Controller}!get\+Hold\+L\+Stick@{get\+Hold\+L\+Stick}}
+\index{get\+Hold\+L\+Stick@{get\+Hold\+L\+Stick}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Hold\+L\+Stick()}{getHoldLStick()}}
+{\footnotesize\ttfamily bool Controller\+::get\+Hold\+L\+Stick (\begin{DoxyParamCaption}\item[{int}]{controller\+\_\+index,  }\item[{\mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4}{Controller\+::\+Direction}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Lスティックのホールド状態取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em controller\+\_\+index} & コントローラーインデックス \\
+\hline
+{\em value} & 判定したい方向 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 押されていればtrue \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 76 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_a58759e8aa85b6f5bd19a8d3c9304580f}\label{class_controller_a58759e8aa85b6f5bd19a8d3c9304580f}} 
+\index{Controller@{Controller}!get\+Hold\+R\+Stick@{get\+Hold\+R\+Stick}}
+\index{get\+Hold\+R\+Stick@{get\+Hold\+R\+Stick}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Hold\+R\+Stick()}{getHoldRStick()}}
+{\footnotesize\ttfamily bool Controller\+::get\+Hold\+R\+Stick (\begin{DoxyParamCaption}\item[{int}]{controller\+\_\+index,  }\item[{\mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4}{Controller\+::\+Direction}}}]{value }\end{DoxyParamCaption})}
+
+
+
+ Controller.\+cpp の 106 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_acf3ce5dd4a886553f53a237ec02383ac}\label{class_controller_acf3ce5dd4a886553f53a237ec02383ac}} 
+\index{Controller@{Controller}!get\+Hold\+Trigger\+Button@{get\+Hold\+Trigger\+Button}}
+\index{get\+Hold\+Trigger\+Button@{get\+Hold\+Trigger\+Button}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Hold\+Trigger\+Button()}{getHoldTriggerButton()}}
+{\footnotesize\ttfamily bool Controller\+::get\+Hold\+Trigger\+Button (\begin{DoxyParamCaption}\item[{int}]{controller\+\_\+index,  }\item[{\mbox{\hyperlink{class_controller_abd7dd769d06d277d3aae9afcf135a4ee}{Controller\+::\+Trigger\+Button}}}]{value }\end{DoxyParamCaption})}
+
+
+
+トリガーボタンのホールド状態取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em controller\+\_\+index} & コントローラーインデックス \\
+\hline
+{\em value} & 判定したいボタン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 押されていればtrue \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 170 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_ae2fe11eda9a29429cda53f32eb8c1f1d}\label{class_controller_ae2fe11eda9a29429cda53f32eb8c1f1d}} 
+\index{Controller@{Controller}!get\+Release@{get\+Release}}
+\index{get\+Release@{get\+Release}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Release()}{getRelease()}}
+{\footnotesize\ttfamily bool Controller\+::get\+Release (\begin{DoxyParamCaption}\item[{int}]{controller\+\_\+index,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+リリ−ス状態取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em controller\+\_\+index} & コントローラーインデックス \\
+\hline
+{\em value} & 判定したいボタン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 離した瞬間true \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 67 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_a329f08fd8b8293494a1d365148cb195e}\label{class_controller_a329f08fd8b8293494a1d365148cb195e}} 
+\index{Controller@{Controller}!get\+Release\+Trigger\+Button@{get\+Release\+Trigger\+Button}}
+\index{get\+Release\+Trigger\+Button@{get\+Release\+Trigger\+Button}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Release\+Trigger\+Button()}{getReleaseTriggerButton()}}
+{\footnotesize\ttfamily bool Controller\+::get\+Release\+Trigger\+Button (\begin{DoxyParamCaption}\item[{int}]{controller\+\_\+index,  }\item[{\mbox{\hyperlink{class_controller_abd7dd769d06d277d3aae9afcf135a4ee}{Controller\+::\+Trigger\+Button}}}]{value }\end{DoxyParamCaption})}
+
+
+
+トリガーボタンのリリ−ス状態取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em controller\+\_\+index} & コントローラーインデックス \\
+\hline
+{\em value} & 判定したいボタン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 離した瞬間true \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 215 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_afbd455b5ca62047004ab49a236e90014}\label{class_controller_afbd455b5ca62047004ab49a236e90014}} 
+\index{Controller@{Controller}!get\+Trigger@{get\+Trigger}}
+\index{get\+Trigger@{get\+Trigger}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Trigger()}{getTrigger()}}
+{\footnotesize\ttfamily bool Controller\+::get\+Trigger (\begin{DoxyParamCaption}\item[{int}]{controller\+\_\+index,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+トリガー状態取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em controller\+\_\+index} & コントローラーインデックス \\
+\hline
+{\em value} & 判定したいボタン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 押した瞬間はtrue \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 58 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_a7dae1e696002c07c0200432d8c4c87ed}\label{class_controller_a7dae1e696002c07c0200432d8c4c87ed}} 
+\index{Controller@{Controller}!get\+Trigger\+L\+Stick@{get\+Trigger\+L\+Stick}}
+\index{get\+Trigger\+L\+Stick@{get\+Trigger\+L\+Stick}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Trigger\+L\+Stick()}{getTriggerLStick()}}
+{\footnotesize\ttfamily bool Controller\+::get\+Trigger\+L\+Stick (\begin{DoxyParamCaption}\item[{int}]{controller\+\_\+index,  }\item[{\mbox{\hyperlink{class_controller_a08e36bbdccc56ce55cdbd5dcc0f438d4}{Controller\+::\+Direction}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Lスティックのトリガー状態取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em controller\+\_\+index} & コントローラーインデックス \\
+\hline
+{\em value} & 判定したい方向 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 押した瞬間はtrue \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 136 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_a5b04c7d6998a75601a5af2854a887c5e}\label{class_controller_a5b04c7d6998a75601a5af2854a887c5e}} 
+\index{Controller@{Controller}!get\+Trigger\+Trigger\+Button@{get\+Trigger\+Trigger\+Button}}
+\index{get\+Trigger\+Trigger\+Button@{get\+Trigger\+Trigger\+Button}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Trigger\+Trigger\+Button()}{getTriggerTriggerButton()}}
+{\footnotesize\ttfamily bool Controller\+::get\+Trigger\+Trigger\+Button (\begin{DoxyParamCaption}\item[{int}]{controller\+\_\+index,  }\item[{\mbox{\hyperlink{class_controller_abd7dd769d06d277d3aae9afcf135a4ee}{Controller\+::\+Trigger\+Button}}}]{value }\end{DoxyParamCaption})}
+
+
+
+トリガーボタンのトリガー状態取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em controller\+\_\+index} & コントローラーインデックス \\
+\hline
+{\em value} & 判定したいボタン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 押した瞬間はtrue \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 194 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_a9c3ec253ef99efe57471c6e62efe3dcf}\label{class_controller_a9c3ec253ef99efe57471c6e62efe3dcf}} 
+\index{Controller@{Controller}!Is\+Connection@{Is\+Connection}}
+\index{Is\+Connection@{Is\+Connection}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{Is\+Connection()}{IsConnection()}}
+{\footnotesize\ttfamily bool Controller\+::\+Is\+Connection (\begin{DoxyParamCaption}\item[{int}]{controller\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+コントローラー接続確認関数 
+
+
+\begin{DoxyParams}{引数}
+{\em controller\+\_\+index} & コントローラーインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 接続されていればtrue \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 265 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_a6f23f649f5dc2255706f2f151bf30690}\label{class_controller_a6f23f649f5dc2255706f2f151bf30690}} 
+\index{Controller@{Controller}!Update@{Update}}
+\index{Update@{Update}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Controller\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 254 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_controller_a8f71d4e54911c80ea0c113f4b72ccfec}\label{class_controller_a8f71d4e54911c80ea0c113f4b72ccfec}} 
+\index{Controller@{Controller}!controller\+\_\+@{controller\+\_\+}}
+\index{controller\+\_\+@{controller\+\_\+}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{controller\+\_\+}{controller\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_controller_1_1_x_input_controller}{X\+Input\+Controller}} Controller\+::controller\+\_\+\mbox{[}(int) \mbox{\hyperlink{class_controller_ad81882021d5a5c77855c7d656899cc62a26a4b44a837bf97b972628509912b4a5}{Number\+::\+M\+AX}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+X\+Inputコントローラー 
+
+
+
+ Controller.\+h の 121 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_a52591fcc8144e0fb274c6a42b5593e1b}\label{class_controller_a52591fcc8144e0fb274c6a42b5593e1b}} 
+\index{Controller@{Controller}!S\+T\+I\+C\+K\+\_\+\+H\+O\+L\+D\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY@{S\+T\+I\+C\+K\+\_\+\+H\+O\+L\+D\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY}}
+\index{S\+T\+I\+C\+K\+\_\+\+H\+O\+L\+D\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY@{S\+T\+I\+C\+K\+\_\+\+H\+O\+L\+D\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{S\+T\+I\+C\+K\+\_\+\+H\+O\+L\+D\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY}{STICK\_HOLD\_SENSITIVITY}}
+{\footnotesize\ttfamily const int Controller\+::\+S\+T\+I\+C\+K\+\_\+\+H\+O\+L\+D\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY = 100\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+スティックホールド感度 
+
+
+
+ Controller.\+h の 113 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_a724390d67344586ab54e87b676d2b5bf}\label{class_controller_a724390d67344586ab54e87b676d2b5bf}} 
+\index{Controller@{Controller}!S\+T\+I\+C\+K\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY@{S\+T\+I\+C\+K\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY}}
+\index{S\+T\+I\+C\+K\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY@{S\+T\+I\+C\+K\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{S\+T\+I\+C\+K\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY}{STICK\_TRIGGER\_SENSITIVITY}}
+{\footnotesize\ttfamily const int Controller\+::\+S\+T\+I\+C\+K\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY = 30000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+スティックトリガー感度 
+
+
+
+ Controller.\+h の 112 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_a1f1051035784f6b5dfdd028021706f6d}\label{class_controller_a1f1051035784f6b5dfdd028021706f6d}} 
+\index{Controller@{Controller}!T\+R\+I\+G\+G\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY@{T\+R\+I\+G\+G\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY}}
+\index{T\+R\+I\+G\+G\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY@{T\+R\+I\+G\+G\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{T\+R\+I\+G\+G\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY}{TRIGGER\_BUTTON\_SENSITIVITY}}
+{\footnotesize\ttfamily const int Controller\+::\+T\+R\+I\+G\+G\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+トリガーボタン感度 
+
+
+
+ Controller.\+h の 114 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Input/\mbox{\hyperlink{_controller_8h}{Controller.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Input/\+Source/\mbox{\hyperlink{_controller_8cpp}{Controller.\+cpp}}\end{DoxyCompactItemize}

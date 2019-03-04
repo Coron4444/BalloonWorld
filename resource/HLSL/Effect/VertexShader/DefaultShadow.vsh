@@ -16,7 +16,6 @@ float4x4 MATRIX_VIEW;
 float4x4 MATRIX_PROJECTION;
 float4x4 LIGHT_VIEW;
 float4x4 LIGHT_PROJECTION;
-float4x4 TEXTURE_PROJECTION;
 
 // マテリアル
 float4 MATERIAL_DIFFUSE = {1.0f, 1.0f, 1.0f, 1.0f};
@@ -51,10 +50,7 @@ struct Output
     float4 position_         : POSITION;  //!< 変換済み座標
     float4 color_            : COLOR0;    //!< 色
     float2 ps_uv_            : TEXCOORD0; //!< PS用UV
-    float4 ps_diffuse_       : TEXCOORD1; //!< PS用ディヒューズ
-    float4 ps_ambient_       : TEXCOORD2; //!< PS用アンビエント
-    float4 ps_shadow_map_uv_ : TEXCOORD3; //!< PS用シャドウマップUV
-    float4 ps_depth_         : TEXCOORD4; //!< PS用深度値
+    float4 ps_shadow_map_uv_ : TEXCOORD1; //!< PS用シャドウマップUV
 };
 
 
@@ -64,8 +60,8 @@ struct Output
 //****************************************
 void CalculateWorldPosition(Input input, inout Output output);
 void CalculateShadowMapUV(Input input, inout Output output);
-void CalculateDepth(Input input, inout Output output);
-void CalculateLambertDiffuseLighting(Input input, inout Output output);
+void CalculateLambertDiffuseLighting(Input input, inout float4 color);
+
 
 
 //--------------------------------------------------
@@ -84,11 +80,11 @@ Output MainVertexShader(Input input)
 
     // シャドウマップUV算出
     CalculateShadowMapUV(input, output);
-
-    CalculateDepth(input, output);
-
+    
     // ランバート拡散照明での色算出
-    CalculateLambertDiffuseLighting(input, output);
+    float4 lambert_color;
+    CalculateLambertDiffuseLighting(input, lambert_color);
+    output.color_ = lambert_color;
     
     // PSへ渡す値の代入
     output.ps_uv_ = input.uv_;
@@ -129,24 +125,6 @@ void CalculateShadowMapUV(Input input, inout Output output)
     output.ps_shadow_map_uv_ = mul(input.position_, MATRIX_WORLD);
     output.ps_shadow_map_uv_ = mul(output.ps_shadow_map_uv_, LIGHT_VIEW);
     output.ps_shadow_map_uv_ = mul(output.ps_shadow_map_uv_, LIGHT_PROJECTION);
-    output.ps_shadow_map_uv_ = mul(output.ps_shadow_map_uv_, TEXTURE_PROJECTION);
-}
-
-
-
-//--------------------------------------------------
-//! @brief 深度値算出関数
-//! @details
-//! @param input  入力データ
-//! @param output 出力データ
-//! @retval void なし
-//--------------------------------------------------
-void CalculateDepth(Input input, inout Output output)
-{
-    input.position_.w = 1.0f;
-    output.ps_depth_ = mul(input.position_, MATRIX_WORLD);
-    output.ps_depth_ = mul(output.ps_depth_, LIGHT_VIEW);
-    output.ps_depth_ = mul(output.ps_depth_, LIGHT_PROJECTION);
 }
 
 
@@ -154,11 +132,11 @@ void CalculateDepth(Input input, inout Output output)
 //--------------------------------------------------
 //! @brief ランバート拡散照明での色算出関数
 //! @details
-//! @param input  入力データ
-//! @param output 出力データ
+//! @param input 入力データ
+//! @param color 出力色
 //! @retval void なし
 //--------------------------------------------------
-void CalculateLambertDiffuseLighting(Input input, inout Output output)
+void CalculateLambertDiffuseLighting(Input input, inout float4 color)
 {
     // 環境光の強さの比率を保存
     float ambient_ratio = DIRECTIONAL_LIGHT_VECTOR.w;
@@ -167,10 +145,9 @@ void CalculateLambertDiffuseLighting(Input input, inout Output output)
     float4 inverse_light_vector = -DIRECTIONAL_LIGHT_VECTOR;
 
     // 色の計算
-    output.ps_diffuse_ = MATERIAL_DIFFUSE * max(dot(input.normal_, inverse_light_vector), 0);
-    output.ps_ambient_ = MATERIAL_DIFFUSE * ambient_ratio;
+    color = MATERIAL_DIFFUSE * max(ambient_ratio,
+                                   dot(input.normal_, inverse_light_vector));
 
     // α値も補正の環境光の比率の影響を受けてしまうので別途代入し直す
-    output.ps_diffuse_.a = MATERIAL_DIFFUSE.a;
-    output.ps_ambient_.a = MATERIAL_DIFFUSE.a;
+    color.a = MATERIAL_DIFFUSE.a;
 }

@@ -11,11 +11,11 @@
 
 
 
-Game\+Scene\+State\+\_\+\+Start の継承関係図\nopagebreak
+Game\+Scene\+State\+\_\+\+Start 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=200pt]{class_game_scene_state___start__inherit__graph}
+\includegraphics[width=350pt]{class_game_scene_state___start__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
@@ -23,12 +23,12 @@ Game\+Scene\+State\+\_\+\+Start の継承関係図\nopagebreak
 \item 
 void \mbox{\hyperlink{class_game_scene_state___start_ae921c57f349fbb2f00a197d40a3404b7}{Init}} () override
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_game_scene_state___start_a636df8b7ac0173b044b0efc2927fb83b}{Uninit}} () override
-\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_game_scene_state___start_ae11bb8d8ea9eae4fea2a9acf33dd1c8b}{Update}} () override
 \begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_game_scene_state___start_a59270f7b65613f580864ed8ea3056179}{Reset}} () override
-\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_game_scene_state___start_a7f1b9f52bfb791622ca589ebd970dade}{Pause\+Entrance}} () override
+\begin{DoxyCompactList}\small\item\em ポーズ入口関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_scene_state___start_a667dd2400867b901ca8f2ce3a4f7d367}{Pause\+Exit}} () override
+\begin{DoxyCompactList}\small\item\em ポーズ出口関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
@@ -70,49 +70,21 @@ void \mbox{\hyperlink{class_game_scene_state___start_a59270f7b65613f580864ed8ea3
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_scene_base_1_1_state_base_a33350231b039a2178c19beac0211c5b8}{Scene\+Base\+::\+State\+Base}}を実装しています。
+\mbox{\hyperlink{class_scene_null_1_1_state_null_ac0b3f1adf01b580144337e37a847131f}{Scene\+Null\+::\+State\+Null}}を再実装しています。
 
 
 
- Game\+Scene\+State\+\_\+\+Start.\+cpp の 40 行目に定義があります。
+ Game\+Scene\+State\+\_\+\+Start.\+cpp の 27 行目に定義があります。
 
-\mbox{\Hypertarget{class_game_scene_state___start_a59270f7b65613f580864ed8ea3056179}\label{class_game_scene_state___start_a59270f7b65613f580864ed8ea3056179}} 
-\index{Game\+Scene\+State\+\_\+\+Start@{Game\+Scene\+State\+\_\+\+Start}!Reset@{Reset}}
-\index{Reset@{Reset}!Game\+Scene\+State\+\_\+\+Start@{Game\+Scene\+State\+\_\+\+Start}}
-\subsubsection{\texorpdfstring{Reset()}{Reset()}}
-{\footnotesize\ttfamily void Game\+Scene\+State\+\_\+\+Start\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-リセット関数 
-
-
-\begin{DoxyParams}{引数}
-{\em void} & なし \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyRetVals}{戻り値}
-{\em void} & なし \\
-\hline
-\end{DoxyRetVals}
-
-
-\mbox{\hyperlink{class_scene_base_1_1_state_base_a2e14a3afece0b1d8db9edcebf514a977}{Scene\+Base\+::\+State\+Base}}を実装しています。
+\mbox{\Hypertarget{class_game_scene_state___start_a7f1b9f52bfb791622ca589ebd970dade}\label{class_game_scene_state___start_a7f1b9f52bfb791622ca589ebd970dade}} 
+\index{Game\+Scene\+State\+\_\+\+Start@{Game\+Scene\+State\+\_\+\+Start}!Pause\+Entrance@{Pause\+Entrance}}
+\index{Pause\+Entrance@{Pause\+Entrance}!Game\+Scene\+State\+\_\+\+Start@{Game\+Scene\+State\+\_\+\+Start}}
+\subsubsection{\texorpdfstring{Pause\+Entrance()}{PauseEntrance()}}
+{\footnotesize\ttfamily void Game\+Scene\+State\+\_\+\+Start\+::\+Pause\+Entrance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
- Game\+Scene\+State\+\_\+\+Start.\+cpp の 148 行目に定義があります。
-
-\mbox{\Hypertarget{class_game_scene_state___start_a636df8b7ac0173b044b0efc2927fb83b}\label{class_game_scene_state___start_a636df8b7ac0173b044b0efc2927fb83b}} 
-\index{Game\+Scene\+State\+\_\+\+Start@{Game\+Scene\+State\+\_\+\+Start}!Uninit@{Uninit}}
-\index{Uninit@{Uninit}!Game\+Scene\+State\+\_\+\+Start@{Game\+Scene\+State\+\_\+\+Start}}
-\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
-{\footnotesize\ttfamily void Game\+Scene\+State\+\_\+\+Start\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-終了関数 
+ポーズ入口関数 
 
 
 \begin{DoxyParams}{引数}
@@ -126,11 +98,39 @@ void \mbox{\hyperlink{class_game_scene_state___start_a59270f7b65613f580864ed8ea3
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_scene_base_1_1_state_base_a2763fa37e45b39bd8d3bbb735c76c59b}{Scene\+Base\+::\+State\+Base}}を実装しています。
+\mbox{\hyperlink{class_scene_null_1_1_state_null_a0a14205bef6c8f73c3ef6b785b104f02}{Scene\+Null\+::\+State\+Null}}を再実装しています。
 
 
 
- Game\+Scene\+State\+\_\+\+Start.\+cpp の 123 行目に定義があります。
+ Game\+Scene\+State\+\_\+\+Start.\+cpp の 52 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_scene_state___start_a667dd2400867b901ca8f2ce3a4f7d367}\label{class_game_scene_state___start_a667dd2400867b901ca8f2ce3a4f7d367}} 
+\index{Game\+Scene\+State\+\_\+\+Start@{Game\+Scene\+State\+\_\+\+Start}!Pause\+Exit@{Pause\+Exit}}
+\index{Pause\+Exit@{Pause\+Exit}!Game\+Scene\+State\+\_\+\+Start@{Game\+Scene\+State\+\_\+\+Start}}
+\subsubsection{\texorpdfstring{Pause\+Exit()}{PauseExit()}}
+{\footnotesize\ttfamily void Game\+Scene\+State\+\_\+\+Start\+::\+Pause\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+ポーズ出口関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_scene_null_1_1_state_null_acf2eecc6ee9f16b57095aa0b88192257}{Scene\+Null\+::\+State\+Null}}を再実装しています。
+
+
+
+ Game\+Scene\+State\+\_\+\+Start.\+cpp の 59 行目に定義があります。
 
 \mbox{\Hypertarget{class_game_scene_state___start_ae11bb8d8ea9eae4fea2a9acf33dd1c8b}\label{class_game_scene_state___start_ae11bb8d8ea9eae4fea2a9acf33dd1c8b}} 
 \index{Game\+Scene\+State\+\_\+\+Start@{Game\+Scene\+State\+\_\+\+Start}!Update@{Update}}
@@ -154,11 +154,11 @@ void \mbox{\hyperlink{class_game_scene_state___start_a59270f7b65613f580864ed8ea3
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_scene_base_1_1_state_base_ad2c6c8fd9f020eb02f64f394edee129c}{Scene\+Base\+::\+State\+Base}}を実装しています。
+\mbox{\hyperlink{class_scene_null_1_1_state_null_a835f82c22afb290eca79460450088baf}{Scene\+Null\+::\+State\+Null}}を再実装しています。
 
 
 
- Game\+Scene\+State\+\_\+\+Start.\+cpp の 129 行目に定義があります。
+ Game\+Scene\+State\+\_\+\+Start.\+cpp の 41 行目に定義があります。
 
 
 
@@ -181,5 +181,5 @@ void \mbox{\hyperlink{class_game_scene_state___start_a59270f7b65613f580864ed8ea3
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/02\+\_\+\+Scene/\+Scenes/\+Game\+Scene/\+Game\+Scene\+State/\+Game\+Scene\+State\+\_\+\+Start/\mbox{\hyperlink{_game_scene_state___start_8h}{Game\+Scene\+State\+\_\+\+Start.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/02\+\_\+\+Scene/\+Scenes/\+Game\+Scene/\+Game\+Scene\+State/\+Game\+Scene\+State\+\_\+\+Start/\mbox{\hyperlink{_game_scene_state___start_8cpp}{Game\+Scene\+State\+\_\+\+Start.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Scenes/\+Game\+Scene/\mbox{\hyperlink{_game_scene_state___start_8h}{Game\+Scene\+State\+\_\+\+Start.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Scenes/\+Game\+Scene/\+Source/\mbox{\hyperlink{_game_scene_state___start_8cpp}{Game\+Scene\+State\+\_\+\+Start.\+cpp}}\end{DoxyCompactItemize}

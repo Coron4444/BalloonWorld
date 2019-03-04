@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Game/Object/2D/PushSpaceLogo/Source/PushSpaceLogoFactory.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_push_space_logo_factory_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">PushSpaceLogoFactory.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_push_space_logo_factory_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span><span class="comment">//================================================================================</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// インクルード文</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../PushSpaceLogoFactory.h&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// 関数定義</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_push_space_logo_factory.html#a161a03ac90c35e092aa1cc45ffe7e74f">   20</a></span>&#160;<a class="code" href="class_push_space_logo.html">PushSpaceLogo</a>* <a class="code" href="class_push_space_logo_factory.html#a161a03ac90c35e092aa1cc45ffe7e74f">PushSpaceLogoFactory::Create</a>()</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_push_space_logo.html">PushSpaceLogo</a>* temp = <span class="keyword">new</span> <a class="code" href="class_push_space_logo.html">PushSpaceLogo</a>();</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    temp-&gt;<a class="code" href="class_push_space_logo.html#a3d4177f8b8124e2f278998c912a8b4d4">Init</a>(<span class="keyword">new</span> <a class="code" href="class_push_space_logo_draw.html">PushSpaceLogoDraw</a>());</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> temp;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div><div class="ttc" id="class_push_space_logo_draw_html"><div class="ttname"><a href="class_push_space_logo_draw.html">PushSpaceLogoDraw</a></div><div class="ttdoc">プッシュスペースロゴ描画Class </div><div class="ttdef"><b>Definition:</b> <a href="_push_space_logo_draw_8h_source.html#l00032">PushSpaceLogoDraw.h:32</a></div></div>
+<div class="ttc" id="class_push_space_logo_html_a3d4177f8b8124e2f278998c912a8b4d4"><div class="ttname"><a href="class_push_space_logo.html#a3d4177f8b8124e2f278998c912a8b4d4">PushSpaceLogo::Init</a></div><div class="ttdeci">void Init(DrawBase *draw)</div><div class="ttdoc">初期化関数 </div><div class="ttdef"><b>Definition:</b> <a href="_push_space_logo_8cpp_source.html#l00044">PushSpaceLogo.cpp:44</a></div></div>
+<div class="ttc" id="class_push_space_logo_factory_html_a161a03ac90c35e092aa1cc45ffe7e74f"><div class="ttname"><a href="class_push_space_logo_factory.html#a161a03ac90c35e092aa1cc45ffe7e74f">PushSpaceLogoFactory::Create</a></div><div class="ttdeci">PushSpaceLogo * Create()</div><div class="ttdoc">プッシュスペースロゴ生成関数 </div><div class="ttdef"><b>Definition:</b> <a href="_push_space_logo_factory_8cpp_source.html#l00020">PushSpaceLogoFactory.cpp:20</a></div></div>
+<div class="ttc" id="class_push_space_logo_html"><div class="ttname"><a href="class_push_space_logo.html">PushSpaceLogo</a></div><div class="ttdoc">プッシュスペースロゴClass </div><div class="ttdef"><b>Definition:</b> <a href="_push_space_logo_8h_source.html#l00024">PushSpaceLogo.h:24</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_a8670f68e5e207ff6b1d0d24eb385efb.html">Game</a></li><li class="navelem"><a class="el" href="dir_0df63539cebe0c4c23afab917ef959ef.html">Object</a></li><li class="navelem"><a class="el" href="dir_6bb9e59cbd6715cb0d6e3fe203bd2430.html">2D</a></li><li class="navelem"><a class="el" href="dir_2218bd4e45197d86d8b5acb5d6dcdae6.html">PushSpaceLogo</a></li><li class="navelem"><a class="el" href="dir_8dadac3f50343d30ef96cf9c57c24a1b.html">Source</a></li><li class="navelem"><a class="el" href="_push_space_logo_factory_8cpp.html">PushSpaceLogoFactory.cpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

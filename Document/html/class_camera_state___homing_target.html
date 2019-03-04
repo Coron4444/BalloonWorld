@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: CameraState_HomingTarget クラス</title>
+<title>BalloonWorld: CameraState_HomingTarget クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -89,62 +89,223 @@ $(document).ready(function(){initNavTree('class_camera_state___homing_target.htm
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
 <a href="#pri-attribs">非公開変数類</a> &#124;
-<a href="#pri-static-attribs">静的非公開変数類</a> &#124;
 <a href="class_camera_state___homing_target-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
 <div class="title">CameraState_HomingTarget クラス</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>ターゲット追跡カメラステートClass  
+ <a href="class_camera_state___homing_target.html#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a>&gt;</code></p>
 <div class="dynheader">
-CameraState_HomingTarget の継承関係図</div>
+CameraState_HomingTarget 連携図</div>
 <div class="dyncontent">
-<div class="center"><img src="class_camera_state___homing_target__inherit__graph.png" border="0" usemap="#_camera_state___homing_target_inherit__map" alt="Inheritance graph"/></div>
-<map name="_camera_state___homing_target_inherit__map" id="_camera_state___homing_target_inherit__map">
-<area shape="rect" id="node2" href="class_camera_1_1_state.html" title="カメラステートクラス " alt="" coords="45,5,151,32"/>
+<div class="center"><img src="class_camera_state___homing_target__coll__graph.png" border="0" usemap="#_camera_state___homing_target_coll__map" alt="Collaboration graph"/></div>
+<map name="_camera_state___homing_target_coll__map" id="_camera_state___homing_target_coll__map">
+<area shape="rect" id="node2" href="class_camera_1_1_state.html" title="カメラステートクラス " alt="" coords="1012,87,1119,113"/>
+<area shape="rect" id="node3" href="class_game_object_base.html" title="ゲームオブジェクト基底クラス " alt="" coords="1003,247,1128,273"/>
+<area shape="rect" id="node5" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="1324,281,1443,308"/>
+<area shape="rect" id="node20" href="class_physics.html" title="Physics" alt="" coords="1349,112,1418,139"/>
+<area shape="rect" id="node4" href="class_collision_base.html" title="衝突BaseClass " alt="" coords="1623,431,1724,457"/>
+<area shape="rect" id="node7" href="class_collision_objects.html" title="複数衝突オブジェクトクラス " alt="" coords="1865,523,1981,549"/>
+<area shape="rect" id="node17" href="class_draw_base.html" title="描画BaseClass " alt="" coords="1633,348,1714,375"/>
+<area shape="rect" id="node21" href="class_update_base.html" title="更新BaseClass " alt="" coords="1627,232,1720,259"/>
+<area shape="rect" id="node6" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObjects *,\l ARRAY_NUM \&gt;" alt="" coords="2163,427,2304,483"/>
+<area shape="rect" id="node13" href="class_object_of_tree.html" title="ObjectOfTree\&lt; CollisionObjects *\&gt;" alt="" coords="2123,563,2344,589"/>
+<area shape="rect" id="node8" href="class_a_a_b_b.html" title="AABBClass " alt="" coords="488,521,547,548"/>
+<area shape="rect" id="node9" href="class_collision_shape_base.html" title="衝突形状BaseClass " alt="" coords="143,555,281,581"/>
+<area shape="rect" id="node16" href="class_collision_object.html" title="衝突オブジェクトクラス " alt="" coords="463,572,572,599"/>
+<area shape="rect" id="node11" href="class_vector3_d.html" title="Vector3D" alt="" coords="174,359,250,385"/>
+<area shape="rect" id="node22" href="class_transform.html" title="Transform" alt="" coords="727,251,805,277"/>
+<area shape="rect" id="node24" href="class_axis_vector.html" title="AxisVector" alt="" coords="474,340,561,367"/>
+<area shape="rect" id="node14" href="class_space_of_tree.html" title="SpaceOfTree\&lt; CollisionObjects *\&gt;" alt="" coords="2501,563,2721,589"/>
+<area shape="rect" id="node15" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject *,\l ARRAY_NUM \&gt;" alt="" coords="843,559,979,615"/>
+<area shape="rect" id="node18" href="class_draw_order_list.html" title="描画注文リストクラス " alt="" coords="1331,472,1435,499"/>
+<area shape="rect" id="node19" href="class_flag.html" title="Flag" alt="" coords="1042,472,1089,499"/>
+<area shape="rect" id="node23" href="class_matrix_extend.html" title="DirectX9の行列の拡張版クラス " alt="" coords="468,169,567,196"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a9222190a5f26d564e99623b05941d382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#a9222190a5f26d564e99623b05941d382">Init</a> (<a class="el" href="class_camera.html">Camera</a> *camera) override</td></tr>
-<tr class="memdesc:a9222190a5f26d564e99623b05941d382"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a9222190a5f26d564e99623b05941d382">[詳解]</a><br /></td></tr>
-<tr class="separator:a9222190a5f26d564e99623b05941d382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7b98f9c8be34abc365005910a572c26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#aa7b98f9c8be34abc365005910a572c26">setTargetObject</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *value)</td></tr>
+<tr class="memdesc:aa7b98f9c8be34abc365005910a572c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">ターゲットオブジェクト設定関数  <a href="#aa7b98f9c8be34abc365005910a572c26">[詳解]</a><br /></td></tr>
+<tr class="separator:aa7b98f9c8be34abc365005910a572c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a67d7a1b2da38e6429fc301ce4c1ee1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#a6a67d7a1b2da38e6429fc301ce4c1ee1">setLength</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> value)</td></tr>
+<tr class="memdesc:a6a67d7a1b2da38e6429fc301ce4c1ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">距離設定関数  <a href="#a6a67d7a1b2da38e6429fc301ce4c1ee1">[詳解]</a><br /></td></tr>
+<tr class="separator:a6a67d7a1b2da38e6429fc301ce4c1ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde37b63ed7d0c8b029f6a0483909bc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#afde37b63ed7d0c8b029f6a0483909bc2">setRotationSpeed</a> (float value)</td></tr>
+<tr class="memdesc:afde37b63ed7d0c8b029f6a0483909bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転速度設定関数  <a href="#afde37b63ed7d0c8b029f6a0483909bc2">[詳解]</a><br /></td></tr>
+<tr class="separator:afde37b63ed7d0c8b029f6a0483909bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf95e93c2036a280bbc0a6a9a7df6b37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#aaf95e93c2036a280bbc0a6a9a7df6b37">Init</a> () override</td></tr>
+<tr class="memdesc:aaf95e93c2036a280bbc0a6a9a7df6b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#aaf95e93c2036a280bbc0a6a9a7df6b37">[詳解]</a><br /></td></tr>
+<tr class="separator:aaf95e93c2036a280bbc0a6a9a7df6b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2b5379b35ebafc53189bf4d45646c8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#ab2b5379b35ebafc53189bf4d45646c8c">Uninit</a> () override</td></tr>
 <tr class="memdesc:ab2b5379b35ebafc53189bf4d45646c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#ab2b5379b35ebafc53189bf4d45646c8c">[詳解]</a><br /></td></tr>
 <tr class="separator:ab2b5379b35ebafc53189bf4d45646c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98f04985c06033febdad32d6357088c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#a98f04985c06033febdad32d6357088c9">Update</a> (<a class="el" href="class_camera.html">Camera</a> *camera) override</td></tr>
-<tr class="memdesc:a98f04985c06033febdad32d6357088c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#a98f04985c06033febdad32d6357088c9">[詳解]</a><br /></td></tr>
-<tr class="separator:a98f04985c06033febdad32d6357088c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5beacf25aaff9547b5c4e32cec698e28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#a5beacf25aaff9547b5c4e32cec698e28">SetTarget</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *target)</td></tr>
-<tr class="separator:a5beacf25aaff9547b5c4e32cec698e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488be0a41b5c00fbfaa56db73aefd45c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#a488be0a41b5c00fbfaa56db73aefd45c">Update</a> () override</td></tr>
+<tr class="memdesc:a488be0a41b5c00fbfaa56db73aefd45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#a488be0a41b5c00fbfaa56db73aefd45c">[詳解]</a><br /></td></tr>
+<tr class="separator:a488be0a41b5c00fbfaa56db73aefd45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_camera_1_1_state"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_camera_1_1_state')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_camera_1_1_state.html">Camera::State</a> に属する継承公開メンバ関数</td></tr>
-<tr class="memitem:a61b74bb711d49e26c0f07af65fb74eb9 inherit pub_methods_class_camera_1_1_state"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_1_1_state.html#a61b74bb711d49e26c0f07af65fb74eb9">~State</a> ()</td></tr>
-<tr class="memdesc:a61b74bb711d49e26c0f07af65fb74eb9 inherit pub_methods_class_camera_1_1_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_camera_1_1_state.html#a61b74bb711d49e26c0f07af65fb74eb9">[詳解]</a><br /></td></tr>
-<tr class="separator:a61b74bb711d49e26c0f07af65fb74eb9 inherit pub_methods_class_camera_1_1_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23d6de73794a7a47a640ccb4d3e1b4ca inherit pub_methods_class_camera_1_1_state"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_1_1_state.html#a23d6de73794a7a47a640ccb4d3e1b4ca">getIsInput</a> ()</td></tr>
+<tr class="memdesc:a23d6de73794a7a47a640ccb4d3e1b4ca inherit pub_methods_class_camera_1_1_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力フラグ取得関数  <a href="class_camera_1_1_state.html#a23d6de73794a7a47a640ccb4d3e1b4ca">[詳解]</a><br /></td></tr>
+<tr class="separator:a23d6de73794a7a47a640ccb4d3e1b4ca inherit pub_methods_class_camera_1_1_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e30e611ec0fd1282e552a4304588bc inherit pub_methods_class_camera_1_1_state"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_1_1_state.html#a29e30e611ec0fd1282e552a4304588bc">setIsInput</a> (bool value)</td></tr>
+<tr class="memdesc:a29e30e611ec0fd1282e552a4304588bc inherit pub_methods_class_camera_1_1_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力フラグ取得関数  <a href="class_camera_1_1_state.html#a29e30e611ec0fd1282e552a4304588bc">[詳解]</a><br /></td></tr>
+<tr class="separator:a29e30e611ec0fd1282e552a4304588bc inherit pub_methods_class_camera_1_1_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b8930b430e095cce5f63853f845494 inherit pub_methods_class_camera_1_1_state"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_1_1_state.html#a03b8930b430e095cce5f63853f845494">getIsUpdate</a> ()</td></tr>
+<tr class="memdesc:a03b8930b430e095cce5f63853f845494 inherit pub_methods_class_camera_1_1_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新フラグ取得関数  <a href="class_camera_1_1_state.html#a03b8930b430e095cce5f63853f845494">[詳解]</a><br /></td></tr>
+<tr class="separator:a03b8930b430e095cce5f63853f845494 inherit pub_methods_class_camera_1_1_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1061b2370753de100ffd84ca877203d2 inherit pub_methods_class_camera_1_1_state"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_1_1_state.html#a1061b2370753de100ffd84ca877203d2">setIsUpdate</a> (bool value)</td></tr>
+<tr class="memdesc:a1061b2370753de100ffd84ca877203d2 inherit pub_methods_class_camera_1_1_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新フラグ取得関数  <a href="class_camera_1_1_state.html#a1061b2370753de100ffd84ca877203d2">[詳解]</a><br /></td></tr>
+<tr class="separator:a1061b2370753de100ffd84ca877203d2 inherit pub_methods_class_camera_1_1_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a427018e0f1139ec2c189a8369eace5c3 inherit pub_methods_class_camera_1_1_state"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_1_1_state.html#a427018e0f1139ec2c189a8369eace5c3">getpCamera</a> ()</td></tr>
+<tr class="memdesc:a427018e0f1139ec2c189a8369eace5c3 inherit pub_methods_class_camera_1_1_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラ取得関数  <a href="class_camera_1_1_state.html#a427018e0f1139ec2c189a8369eace5c3">[詳解]</a><br /></td></tr>
+<tr class="separator:a427018e0f1139ec2c189a8369eace5c3 inherit pub_methods_class_camera_1_1_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c95f7df7651ddca8596686a118eb725 inherit pub_methods_class_camera_1_1_state"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_1_1_state.html#a3c95f7df7651ddca8596686a118eb725">setCamera</a> (<a class="el" href="class_camera.html">Camera</a> *value)</td></tr>
+<tr class="memdesc:a3c95f7df7651ddca8596686a118eb725 inherit pub_methods_class_camera_1_1_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラ設定関数  <a href="class_camera_1_1_state.html#a3c95f7df7651ddca8596686a118eb725">[詳解]</a><br /></td></tr>
+<tr class="separator:a3c95f7df7651ddca8596686a118eb725 inherit pub_methods_class_camera_1_1_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d179b912e68fa3dc659ae4d5422ca97 inherit pub_methods_class_camera_1_1_state"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_1_1_state.html#a7d179b912e68fa3dc659ae4d5422ca97">~State</a> ()=0</td></tr>
+<tr class="memdesc:a7d179b912e68fa3dc659ae4d5422ca97 inherit pub_methods_class_camera_1_1_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_camera_1_1_state.html#a7d179b912e68fa3dc659ae4d5422ca97">[詳解]</a><br /></td></tr>
+<tr class="separator:a7d179b912e68fa3dc659ae4d5422ca97 inherit pub_methods_class_camera_1_1_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:ab96ca0ef3a0b7f125fcee847556ff4a9"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#ab96ca0ef3a0b7f125fcee847556ff4a9">DEFAULT_LENGHT</a></td></tr>
+<tr class="memdesc:ab96ca0ef3a0b7f125fcee847556ff4a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定距離  <a href="#ab96ca0ef3a0b7f125fcee847556ff4a9">[詳解]</a><br /></td></tr>
+<tr class="separator:ab96ca0ef3a0b7f125fcee847556ff4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a54798d3c4146d4f01f105d205bfee"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#ae8a54798d3c4146d4f01f105d205bfee">GAZING_POINT_Y</a> = -5.0f</td></tr>
+<tr class="memdesc:ae8a54798d3c4146d4f01f105d205bfee"><td class="mdescLeft">&#160;</td><td class="mdescRight">注視点のY座標  <a href="#ae8a54798d3c4146d4f01f105d205bfee">[詳解]</a><br /></td></tr>
+<tr class="separator:ae8a54798d3c4146d4f01f105d205bfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce38d16884dc79cc100f176cfe6fde7"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#a8ce38d16884dc79cc100f176cfe6fde7">DEFAULT_ROTATION_SPEED</a> = <a class="el" href="class_meter_to_frame.html#aa5468938f59eb934bfc6a897a7513812">MeterToFrame::MeterPerSecondToMeterPerFlame</a>(90.0f)</td></tr>
+<tr class="memdesc:a8ce38d16884dc79cc100f176cfe6fde7"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定回転速度  <a href="#a8ce38d16884dc79cc100f176cfe6fde7">[詳解]</a><br /></td></tr>
+<tr class="separator:a8ce38d16884dc79cc100f176cfe6fde7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04e0008dcb613ee302e8c6ffdbd3dad8"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#a04e0008dcb613ee302e8c6ffdbd3dad8">MAX_ANGLE_OF_AXIS_RIGHT</a> = 70.0f</td></tr>
+<tr class="memdesc:a04e0008dcb613ee302e8c6ffdbd3dad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">右軸最大角度  <a href="#a04e0008dcb613ee302e8c6ffdbd3dad8">[詳解]</a><br /></td></tr>
+<tr class="separator:a04e0008dcb613ee302e8c6ffdbd3dad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a0390c41c817f1809068b527939f4c"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#a39a0390c41c817f1809068b527939f4c">MIN_ANGLE_OF_AXIS_RIGHT</a> = 20.0f</td></tr>
+<tr class="memdesc:a39a0390c41c817f1809068b527939f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">右軸最小角度  <a href="#a39a0390c41c817f1809068b527939f4c">[詳解]</a><br /></td></tr>
+<tr class="separator:a39a0390c41c817f1809068b527939f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad789fa90b971d23abceb58f5c4018c10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#ad789fa90b971d23abceb58f5c4018c10">CalculationPosition</a> ()</td></tr>
+<tr class="memdesc:ad789fa90b971d23abceb58f5c4018c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標算出関数  <a href="#ad789fa90b971d23abceb58f5c4018c10">[詳解]</a><br /></td></tr>
+<tr class="separator:ad789fa90b971d23abceb58f5c4018c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a322f7f00e295f312265b026c0af143ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#a322f7f00e295f312265b026c0af143ba">CalculationGazingPoint</a> ()</td></tr>
+<tr class="memdesc:a322f7f00e295f312265b026c0af143ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">注視点算出関数  <a href="#a322f7f00e295f312265b026c0af143ba">[詳解]</a><br /></td></tr>
+<tr class="separator:a322f7f00e295f312265b026c0af143ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a131b0dc7ec8aee7521cf774fe975d314"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#a131b0dc7ec8aee7521cf774fe975d314">InputRotationAroundGazingPoint</a> ()</td></tr>
+<tr class="memdesc:a131b0dc7ec8aee7521cf774fe975d314"><td class="mdescLeft">&#160;</td><td class="mdescRight">注視点軸関数  <a href="#a131b0dc7ec8aee7521cf774fe975d314">[詳解]</a><br /></td></tr>
+<tr class="separator:a131b0dc7ec8aee7521cf774fe975d314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 非公開変数類</h2></td></tr>
-<tr class="memitem:a302d9fb35f1e46dab9a320287556c769"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#a302d9fb35f1e46dab9a320287556c769">target_</a></td></tr>
-<tr class="separator:a302d9fb35f1e46dab9a320287556c769"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-静的非公開変数類</h2></td></tr>
-<tr class="memitem:a89dd98acec1474af5afb21d17fca4196"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#a89dd98acec1474af5afb21d17fca4196">HOMING_CAMERA_POSITION_Y</a> = 5.0f</td></tr>
-<tr class="separator:a89dd98acec1474af5afb21d17fca4196"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac858a396ea1e8ee84eed407321b3a140"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#ac858a396ea1e8ee84eed407321b3a140">HOMING_CAMERA_POSITION_Z</a> = -15.0f</td></tr>
-<tr class="separator:ac858a396ea1e8ee84eed407321b3a140"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab526a9a9aef20d87a1358ca8c4b4f075"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#ab526a9a9aef20d87a1358ca8c4b4f075">HOMING_CAMERA_LOOK_AT_POINT_Y</a> = 1.0f</td></tr>
-<tr class="separator:ab526a9a9aef20d87a1358ca8c4b4f075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c54d8f2241883f8ed9598288a0185a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#af9c54d8f2241883f8ed9598288a0185a">target_object_</a> = nullptr</td></tr>
+<tr class="memdesc:af9c54d8f2241883f8ed9598288a0185a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ターゲットオブジェクト  <a href="#af9c54d8f2241883f8ed9598288a0185a">[詳解]</a><br /></td></tr>
+<tr class="separator:af9c54d8f2241883f8ed9598288a0185a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6e27c06bb283384fd6fc69bb698e1c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#ae6e27c06bb283384fd6fc69bb698e1c3">lenght_</a></td></tr>
+<tr class="memdesc:ae6e27c06bb283384fd6fc69bb698e1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">距離  <a href="#ae6e27c06bb283384fd6fc69bb698e1c3">[詳解]</a><br /></td></tr>
+<tr class="separator:ae6e27c06bb283384fd6fc69bb698e1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54dbd3a8de35069e116ae1162298e015"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_state___homing_target.html#a54dbd3a8de35069e116ae1162298e015">rotation_speed_</a></td></tr>
+<tr class="memdesc:a54dbd3a8de35069e116ae1162298e015"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転速度  <a href="#a54dbd3a8de35069e116ae1162298e015">[詳解]</a><br /></td></tr>
+<tr class="separator:a54dbd3a8de35069e116ae1162298e015"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00039">39</a> 行目に定義があります。</p>
+<div class="textblock"><p>ターゲット追跡カメラステートClass </p>
+<p>ターゲット追跡のカメラステートClass </p>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00031">31</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="a9222190a5f26d564e99623b05941d382"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9222190a5f26d564e99623b05941d382">&#9670;&nbsp;</a></span>Init()</h2>
+<a id="a322f7f00e295f312265b026c0af143ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a322f7f00e295f312265b026c0af143ba">&#9670;&nbsp;</a></span>CalculationGazingPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraState_HomingTarget::CalculationGazingPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注視点算出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8cpp_source.html">CameraState_HomingTarget.cpp</a> の <a class="el" href="_camera_state___homing_target_8cpp_source.html#l00100">100</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad789fa90b971d23abceb58f5c4018c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad789fa90b971d23abceb58f5c4018c10">&#9670;&nbsp;</a></span>CalculationPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraState_HomingTarget::CalculationPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>座標算出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8cpp_source.html">CameraState_HomingTarget.cpp</a> の <a class="el" href="_camera_state___homing_target_8cpp_source.html#l00091">91</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aaf95e93c2036a280bbc0a6a9a7df6b37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf95e93c2036a280bbc0a6a9a7df6b37">&#9670;&nbsp;</a></span>Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,8 +316,7 @@ CameraState_HomingTarget の継承関係図</div>
         <tr>
           <td class="memname">void CameraState_HomingTarget::Init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
-          <td class="paramname"><em>camera</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -170,19 +330,25 @@ CameraState_HomingTarget の継承関係図</div>
 <p>初期化関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">camera</td><td>: カメラ </td></tr>
+    <tr><td class="paramname">camera</td><td>カメラ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
   </table>
   </dd>
 </dl>
 
-<p><a class="el" href="class_camera_1_1_state.html#aa1b81471ab15e64b3117ffe7de9560ff">Camera::State</a>を実装しています。</p>
+<p><a class="el" href="class_camera_1_1_state.html#a11627f91e7dc5085d3cbb8841747a778">Camera::State</a>を実装しています。</p>
 
-<p class="definition"> <a class="el" href="_camera_state___homing_target_8cpp_source.html">CameraState_HomingTarget.cpp</a> の <a class="el" href="_camera_state___homing_target_8cpp_source.html#l00047">47</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8cpp_source.html">CameraState_HomingTarget.cpp</a> の <a class="el" href="_camera_state___homing_target_8cpp_source.html#l00064">64</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a5beacf25aaff9547b5c4e32cec698e28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5beacf25aaff9547b5c4e32cec698e28">&#9670;&nbsp;</a></span>SetTarget()</h2>
+<a id="a131b0dc7ec8aee7521cf774fe975d314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a131b0dc7ec8aee7521cf774fe975d314">&#9670;&nbsp;</a></span>InputRotationAroundGazingPoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,21 +357,136 @@ CameraState_HomingTarget の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void CameraState_HomingTarget::SetTarget </td>
+          <td class="memname">void CameraState_HomingTarget::InputRotationAroundGazingPoint </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td>
-          <td class="paramname"><em>target</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00056">56</a> 行目に定義があります。</p>
+<p>注視点軸関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8cpp_source.html">CameraState_HomingTarget.cpp</a> の <a class="el" href="_camera_state___homing_target_8cpp_source.html#l00108">108</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6a67d7a1b2da38e6429fc301ce4c1ee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a67d7a1b2da38e6429fc301ce4c1ee1">&#9670;&nbsp;</a></span>setLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraState_HomingTarget::setLength </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>距離設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>距離 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8cpp_source.html">CameraState_HomingTarget.cpp</a> の <a class="el" href="_camera_state___homing_target_8cpp_source.html#l00047">47</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afde37b63ed7d0c8b029f6a0483909bc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde37b63ed7d0c8b029f6a0483909bc2">&#9670;&nbsp;</a></span>setRotationSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraState_HomingTarget::setRotationSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>回転速度設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>回転速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8cpp_source.html">CameraState_HomingTarget.cpp</a> の <a class="el" href="_camera_state___homing_target_8cpp_source.html#l00054">54</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa7b98f9c8be34abc365005910a572c26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7b98f9c8be34abc365005910a572c26">&#9670;&nbsp;</a></span>setTargetObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraState_HomingTarget::setTargetObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ターゲットオブジェクト設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>ターゲットオブジェクト </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8cpp_source.html">CameraState_HomingTarget.cpp</a> の <a class="el" href="_camera_state___homing_target_8cpp_source.html#l00033">33</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -227,7 +508,7 @@ CameraState_HomingTarget の継承関係図</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -235,19 +516,25 @@ CameraState_HomingTarget の継承関係図</div>
 <p>終了関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">camera</td><td>: カメラ </td></tr>
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
   </table>
   </dd>
 </dl>
 
 <p><a class="el" href="class_camera_1_1_state.html#adb3f43b6c3f8100da7877867180e804b">Camera::State</a>を実装しています。</p>
 
-<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00053">53</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8cpp_source.html">CameraState_HomingTarget.cpp</a> の <a class="el" href="_camera_state___homing_target_8cpp_source.html#l00072">72</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a98f04985c06033febdad32d6357088c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98f04985c06033febdad32d6357088c9">&#9670;&nbsp;</a></span>Update()</h2>
+<a id="a488be0a41b5c00fbfaa56db73aefd45c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a488be0a41b5c00fbfaa56db73aefd45c">&#9670;&nbsp;</a></span>Update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,8 +545,7 @@ CameraState_HomingTarget の継承関係図</div>
         <tr>
           <td class="memname">void CameraState_HomingTarget::Update </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
-          <td class="paramname"><em>camera</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -273,20 +559,26 @@ CameraState_HomingTarget の継承関係図</div>
 <p>更新関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">camera</td><td>: カメラ </td></tr>
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
   </table>
   </dd>
 </dl>
 
-<p><a class="el" href="class_camera_1_1_state.html#a2d41e0cb783666bae6c6ea167fcc7874">Camera::State</a>を実装しています。</p>
+<p><a class="el" href="class_camera_1_1_state.html#ab94ec2ba6c56d974cf9e0d7d232948cf">Camera::State</a>を実装しています。</p>
 
-<p class="definition"> <a class="el" href="_camera_state___homing_target_8cpp_source.html">CameraState_HomingTarget.cpp</a> の <a class="el" href="_camera_state___homing_target_8cpp_source.html#l00060">60</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8cpp_source.html">CameraState_HomingTarget.cpp</a> の <a class="el" href="_camera_state___homing_target_8cpp_source.html#l00078">78</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">メンバ詳解</h2>
-<a id="ab526a9a9aef20d87a1358ca8c4b4f075"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab526a9a9aef20d87a1358ca8c4b4f075">&#9670;&nbsp;</a></span>HOMING_CAMERA_LOOK_AT_POINT_Y</h2>
+<a id="ab96ca0ef3a0b7f125fcee847556ff4a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab96ca0ef3a0b7f125fcee847556ff4a9">&#9670;&nbsp;</a></span>DEFAULT_LENGHT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -295,22 +587,24 @@ CameraState_HomingTarget の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const float CameraState_HomingTarget::HOMING_CAMERA_LOOK_AT_POINT_Y = 1.0f</td>
+          <td class="memname">const <a class="el" href="class_vector3_d.html">Vector3D</a> CameraState_HomingTarget::DEFAULT_LENGHT</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+<p>既定距離 </p>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00037">37</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a89dd98acec1474af5afb21d17fca4196"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89dd98acec1474af5afb21d17fca4196">&#9670;&nbsp;</a></span>HOMING_CAMERA_POSITION_Y</h2>
+<a id="a8ce38d16884dc79cc100f176cfe6fde7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ce38d16884dc79cc100f176cfe6fde7">&#9670;&nbsp;</a></span>DEFAULT_ROTATION_SPEED</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,22 +613,24 @@ CameraState_HomingTarget の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const float CameraState_HomingTarget::HOMING_CAMERA_POSITION_Y = 5.0f</td>
+          <td class="memname">const float CameraState_HomingTarget::DEFAULT_ROTATION_SPEED = <a class="el" href="class_meter_to_frame.html#aa5468938f59eb934bfc6a897a7513812">MeterToFrame::MeterPerSecondToMeterPerFlame</a>(90.0f)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00044">44</a> 行目に定義があります。</p>
+<p>既定回転速度 </p>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00039">39</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ac858a396ea1e8ee84eed407321b3a140"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac858a396ea1e8ee84eed407321b3a140">&#9670;&nbsp;</a></span>HOMING_CAMERA_POSITION_Z</h2>
+<a id="ae8a54798d3c4146d4f01f105d205bfee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8a54798d3c4146d4f01f105d205bfee">&#9670;&nbsp;</a></span>GAZING_POINT_Y</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,22 +639,24 @@ CameraState_HomingTarget の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const float CameraState_HomingTarget::HOMING_CAMERA_POSITION_Z = -15.0f</td>
+          <td class="memname">const float CameraState_HomingTarget::GAZING_POINT_Y = -5.0f</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00045">45</a> 行目に定義があります。</p>
+<p>注視点のY座標 </p>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00038">38</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a302d9fb35f1e46dab9a320287556c769"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a302d9fb35f1e46dab9a320287556c769">&#9670;&nbsp;</a></span>target_</h2>
+<a id="ae6e27c06bb283384fd6fc69bb698e1c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6e27c06bb283384fd6fc69bb698e1c3">&#9670;&nbsp;</a></span>lenght_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,7 +665,7 @@ CameraState_HomingTarget の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_game_object_base.html">GameObjectBase</a>* CameraState_HomingTarget::target_</td>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> CameraState_HomingTarget::lenght_</td>
         </tr>
       </table>
   </td>
@@ -377,13 +675,119 @@ CameraState_HomingTarget の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00062">62</a> 行目に定義があります。</p>
+<p>距離 </p>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a04e0008dcb613ee302e8c6ffdbd3dad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04e0008dcb613ee302e8c6ffdbd3dad8">&#9670;&nbsp;</a></span>MAX_ANGLE_OF_AXIS_RIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float CameraState_HomingTarget::MAX_ANGLE_OF_AXIS_RIGHT = 70.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>右軸最大角度 </p>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00040">40</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a39a0390c41c817f1809068b527939f4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39a0390c41c817f1809068b527939f4c">&#9670;&nbsp;</a></span>MIN_ANGLE_OF_AXIS_RIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float CameraState_HomingTarget::MIN_ANGLE_OF_AXIS_RIGHT = 20.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>右軸最小角度 </p>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a54dbd3a8de35069e116ae1162298e015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54dbd3a8de35069e116ae1162298e015">&#9670;&nbsp;</a></span>rotation_speed_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraState_HomingTarget::rotation_speed_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>回転速度 </p>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00050">50</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af9c54d8f2241883f8ed9598288a0185a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c54d8f2241883f8ed9598288a0185a">&#9670;&nbsp;</a></span>target_object_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_object_base.html">GameObjectBase</a>* CameraState_HomingTarget::target_object_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ターゲットオブジェクト </p>
+
+<p class="definition"> <a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a> の <a class="el" href="_camera_state___homing_target_8h_source.html#l00048">48</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/DrawManager/Camera/CameraState_HomingTarget/<a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/DrawManager/Camera/CameraState_HomingTarget/<a class="el" href="_camera_state___homing_target_8cpp_source.html">CameraState_HomingTarget.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/Camera/<a class="el" href="_camera_state___homing_target_8h_source.html">CameraState_HomingTarget.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/Camera/Source/<a class="el" href="_camera_state___homing_target_8cpp_source.html">CameraState_HomingTarget.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

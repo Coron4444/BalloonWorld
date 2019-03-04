@@ -27,5 +27,5 @@ var searchData=
   ['imu64',['ImU64',['../imgui_8h.html#a6875b9978368bbd5cf7e9b967e22eea4',1,'imgui.h']]],
   ['imwchar',['ImWchar',['../imgui_8h.html#af2c7badaf05a0008e15ef76d40875e97',1,'imgui.h']]],
   ['isremovingmanager',['isRemovingManager',['../namespace_effekseer.html#a153d1bcf5fd3c14124e04d0dadf6827c',1,'Effekseer']]],
-  ['iterator',['iterator',['../class_im_vector.html#a74b5478f1f6fd471cc71219bce483db6',1,'ImVector']]]
+  ['iterator',['Iterator',['../class_interpolation.html#a066eb9906faf7f1d56ba68d00c6be64a',1,'Interpolation::Iterator()'],['../class_im_vector.html#a74b5478f1f6fd471cc71219bce483db6',1,'ImVector::iterator()']]]
 ];

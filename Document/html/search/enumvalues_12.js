@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yaxisfixed',['YAxisFixed',['../namespace_effekseer.html#a1e51959dc188f6f19acc48c85860c6d8a8d1827d8fca7d2d9db612616da97258a',1,'Effekseer']]]
+  ['wireframe',['Wireframe',['../namespace_effekseer.html#ad1b82893021dd8e3697e46c1aa544092a33e42d0f3b166a4c405127e4412fbef2',1,'Effekseer']]]
 ];

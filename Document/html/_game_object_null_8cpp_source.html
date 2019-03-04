@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BalloonWorld: C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/GameObject/Source/GameObjectNull.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">BalloonWorld</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_game_object_null_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">GameObjectNull.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_object_null_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span><span class="comment">//================================================================================</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// インクルード文</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../GameObjectNull.h&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// 関数定義</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//****************************************</span></div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_game_object_null.html#a63df1fd88b786686088b2ac9f79761d1">   20</a></span>&#160;<a class="code" href="class_game_object_null.html#a63df1fd88b786686088b2ac9f79761d1">GameObjectNull::GameObjectNull</a>(<span class="keywordtype">bool</span> is_registration)</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    : <a class="code" href="class_game_object_base.html">GameObjectBase</a>(is_registration)</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_game_object_null.html#a3aee36c6a66b723f927c017ec3916918">   27</a></span>&#160;<a class="code" href="class_game_object_null.html#a3aee36c6a66b723f927c017ec3916918">GameObjectNull::~GameObjectNull</a>()</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_game_object_null.html#a1a70fbd3260fd1c0100320756830a0db">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_object_null.html#a1a70fbd3260fd1c0100320756830a0db">GameObjectNull::Uninit</a>()</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_game_object_base.html#aff8e4f486435f5d921c186b0824e8a0e">UninitComponent</a>();</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_game_object_null.html#aeeb51b7e7aa41fd0b16f8f7c016bdb55">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_object_null.html#aeeb51b7e7aa41fd0b16f8f7c016bdb55">GameObjectNull::Update</a>()</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_game_object_null.html#abc4e2c2ce54fb3d0bc3f0b45149a66cb">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_object_null.html#abc4e2c2ce54fb3d0bc3f0b45149a66cb">GameObjectNull::LateUpdate</a>()</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_game_object_null.html#a26a748e17ea31b987249022562f5198c">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_object_null.html#a26a748e17ea31b987249022562f5198c">GameObjectNull::Reset</a>()</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="class_game_object_base.html#ae68b93e50540bf41a81d88ca508b2b4d">ResetComponent</a>();</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_game_object_null.html#a9bc551307ae5aa0ad8e754f976ffd1c7">   59</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_object_null.html#a9bc551307ae5aa0ad8e754f976ffd1c7">GameObjectNull::DebugDisplay</a>()</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div><div class="ttc" id="class_game_object_null_html_a1a70fbd3260fd1c0100320756830a0db"><div class="ttname"><a href="class_game_object_null.html#a1a70fbd3260fd1c0100320756830a0db">GameObjectNull::Uninit</a></div><div class="ttdeci">virtual void Uninit() override</div><div class="ttdoc">終了関数 </div><div class="ttdef"><b>Definition:</b> <a href="_game_object_null_8cpp_source.html#l00033">GameObjectNull.cpp:33</a></div></div>
+<div class="ttc" id="class_game_object_base_html_ae68b93e50540bf41a81d88ca508b2b4d"><div class="ttname"><a href="class_game_object_base.html#ae68b93e50540bf41a81d88ca508b2b4d">GameObjectBase::ResetComponent</a></div><div class="ttdeci">void ResetComponent()</div><div class="ttdoc">コンポーネントリセット関数 </div><div class="ttdef"><b>Definition:</b> <a href="_game_object_base_8cpp_source.html#l00176">GameObjectBase.cpp:176</a></div></div>
+<div class="ttc" id="class_game_object_null_html_a63df1fd88b786686088b2ac9f79761d1"><div class="ttname"><a href="class_game_object_null.html#a63df1fd88b786686088b2ac9f79761d1">GameObjectNull::GameObjectNull</a></div><div class="ttdeci">GameObjectNull(bool is_registration=true)</div><div class="ttdoc">コンストラクタ </div><div class="ttdef"><b>Definition:</b> <a href="_game_object_null_8cpp_source.html#l00020">GameObjectNull.cpp:20</a></div></div>
+<div class="ttc" id="class_game_object_null_html_a3aee36c6a66b723f927c017ec3916918"><div class="ttname"><a href="class_game_object_null.html#a3aee36c6a66b723f927c017ec3916918">GameObjectNull::~GameObjectNull</a></div><div class="ttdeci">virtual ~GameObjectNull()</div><div class="ttdoc">デストラクタ </div><div class="ttdef"><b>Definition:</b> <a href="_game_object_null_8cpp_source.html#l00027">GameObjectNull.cpp:27</a></div></div>
+<div class="ttc" id="class_game_object_null_html_abc4e2c2ce54fb3d0bc3f0b45149a66cb"><div class="ttname"><a href="class_game_object_null.html#abc4e2c2ce54fb3d0bc3f0b45149a66cb">GameObjectNull::LateUpdate</a></div><div class="ttdeci">virtual void LateUpdate() override</div><div class="ttdoc">後更新関数 </div><div class="ttdef"><b>Definition:</b> <a href="_game_object_null_8cpp_source.html#l00046">GameObjectNull.cpp:46</a></div></div>
+<div class="ttc" id="class_game_object_base_html_aff8e4f486435f5d921c186b0824e8a0e"><div class="ttname"><a href="class_game_object_base.html#aff8e4f486435f5d921c186b0824e8a0e">GameObjectBase::UninitComponent</a></div><div class="ttdeci">void UninitComponent()</div><div class="ttdoc">コンポーネント終了関数 </div><div class="ttdef"><b>Definition:</b> <a href="_game_object_base_8cpp_source.html#l00161">GameObjectBase.cpp:161</a></div></div>
+<div class="ttc" id="class_game_object_null_html_aeeb51b7e7aa41fd0b16f8f7c016bdb55"><div class="ttname"><a href="class_game_object_null.html#aeeb51b7e7aa41fd0b16f8f7c016bdb55">GameObjectNull::Update</a></div><div class="ttdeci">virtual void Update() override</div><div class="ttdoc">更新関数 </div><div class="ttdef"><b>Definition:</b> <a href="_game_object_null_8cpp_source.html#l00040">GameObjectNull.cpp:40</a></div></div>
+<div class="ttc" id="class_game_object_null_html_a26a748e17ea31b987249022562f5198c"><div class="ttname"><a href="class_game_object_null.html#a26a748e17ea31b987249022562f5198c">GameObjectNull::Reset</a></div><div class="ttdeci">virtual void Reset() override</div><div class="ttdoc">リセット関数 </div><div class="ttdef"><b>Definition:</b> <a href="_game_object_null_8cpp_source.html#l00052">GameObjectNull.cpp:52</a></div></div>
+<div class="ttc" id="class_game_object_null_html_a9bc551307ae5aa0ad8e754f976ffd1c7"><div class="ttname"><a href="class_game_object_null.html#a9bc551307ae5aa0ad8e754f976ffd1c7">GameObjectNull::DebugDisplay</a></div><div class="ttdeci">virtual void DebugDisplay() override</div><div class="ttdoc">デバッグ表示関数 </div><div class="ttdef"><b>Definition:</b> <a href="_game_object_null_8cpp_source.html#l00059">GameObjectNull.cpp:59</a></div></div>
+<div class="ttc" id="class_game_object_base_html"><div class="ttname"><a href="class_game_object_base.html">GameObjectBase</a></div><div class="ttdoc">ゲームオブジェクトBaseClass </div><div class="ttdef"><b>Definition:</b> <a href="_game_object_base_8h_source.html#l00026">GameObjectBase.h:26</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_b45bb414237523d3953b384861a4c0d0.html">Framework</a></li><li class="navelem"><a class="el" href="dir_7bdbca00cdc73946cd7159151ed3a63d.html">GameEngine</a></li><li class="navelem"><a class="el" href="dir_97d92423bce9120f4d30ddef923b10c4.html">GameObject</a></li><li class="navelem"><a class="el" href="dir_b1bb08ba18abfca849c3b4315a7d80e3.html">Source</a></li><li class="navelem"><a class="el" href="_game_object_null_8cpp.html">GameObjectNull.cpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

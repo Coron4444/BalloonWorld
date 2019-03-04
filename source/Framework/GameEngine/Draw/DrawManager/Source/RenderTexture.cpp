@@ -92,17 +92,16 @@ void RenderTexture::setStencilSurfaceAndViewPort()
 //****************************************
 // ŠÖ”’è‹`
 //****************************************
-void RenderTexture::Init(int texture_width, int texture_height)
+void RenderTexture::Init(int texture_width, int texture_height, _D3DFORMAT format)
 {
 	Renderer::getpInstance()->getDevice(&device_);
-	D3DXCreateTexture(device_, texture_width, texture_height, 1,
-					  D3DUSAGE_RENDERTARGET, D3DFMT_A8R8G8B8,
+	D3DXCreateTexture(device_, texture_width, texture_height, 1, D3DUSAGE_RENDERTARGET, format,
 					  D3DPOOL_DEFAULT, &texture_);
 	texture_->GetSurfaceLevel(0, &surface_);
 
 	device_->CreateDepthStencilSurface(texture_width, texture_height, D3DFMT_D16,
 									   D3DMULTISAMPLE_NONE, 0, TRUE,
-									   &stencil_surface_, NULL);
+									   &stencil_surface_, nullptr);
 
 	view_port_ = {0, 0, (DWORD)texture_width, (DWORD)texture_height, 0.0f, 1.0f};
 }

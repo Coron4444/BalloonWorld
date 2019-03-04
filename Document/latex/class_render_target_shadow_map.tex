@@ -1,0 +1,487 @@
+\hypertarget{class_render_target_shadow_map}{}\section{Render\+Target\+Shadow\+Map クラス}
+\label{class_render_target_shadow_map}\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+
+
+レンダーターゲットシャドウマップ\+Class  
+
+
+
+
+{\ttfamily \#include $<$Render\+Target\+Shadow\+Map.\+h$>$}
+
+
+
+Render\+Target\+Shadow\+Map 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_render_target_shadow_map__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_render_target_shadow_map_aaf7522ca239bc07bd78a6e431a28be09}{set\+Camera}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em カメラ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_shadow_map_a684f715afcbec6138c71f2a6021b89d1}{set\+Draw\+Common\+Data}} (\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 描画共通データ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_shadow_map_a25dfdffef70779c1a2eaaa6f2ebbf2d4}{set\+Shader\+Manager}} (\mbox{\hyperlink{class_shader_manager}{Shader\+Manager}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em シェーダーマネージャ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_shadow_map_a4ef385cc7898df1912bb158b21a97fc2}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_shadow_map_ad81761c98d1ce21e104d28cf7b472199}{Uninit\+When\+Change\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em シーン変更時の終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_shadow_map_a51ad9a4afe326c1bf93e342cb0b0847b}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_shadow_map_aeba65fc4188bb72dd840f775900d0391}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_shadow_map_afc267e5e736c1bbeb2290663df2a4b01}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_shadow_map_ad48ed36a4d46cdc06c1f4a0d95ee6e99}{Add\+Draw\+Base\+To\+Array}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw)
+\begin{DoxyCompactList}\small\item\em 描画基底クラスの追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_shadow_map_a6bc527acde727f9005f056fc36f941be}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned \mbox{\hyperlink{class_render_target_shadow_map_a25b5fd61eef50d76b69314102ccc51fe}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} = 10000
+\begin{DoxyCompactList}\small\item\em 配列数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_render_target_shadow_map_aad78575f0b78dad8e3bacc00d43cce8f}{Change\+Billboard\+Matrix}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw)
+\begin{DoxyCompactList}\small\item\em ビルボード用行列変更関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_shadow_map_a695f696fd3fed4991b79c49c082dbc3e}{All\+Billboard\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 全ビルボード更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_target_shadow_map_a669ba6344e84fba605983c827fb1dc69}{Change\+Camera\+Type}} (\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}} camera\+\_\+type)
+\begin{DoxyCompactList}\small\item\em カメラタイプ変更関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$, \mbox{\hyperlink{class_render_target_shadow_map_a25b5fd61eef50d76b69314102ccc51fe}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_render_target_shadow_map_a8c16acb949d466197d47c4d57484eb7e}{draw\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 描画基底クラス配列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera}{Camera}} $\ast$ \mbox{\hyperlink{class_render_target_shadow_map_ac5af1571a13426a6ebd49f96d9070223}{camera\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em カメラ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}} \mbox{\hyperlink{class_render_target_shadow_map_a57f64742fbf9926ef3ab06eca311c9e7}{save\+\_\+camera\+\_\+type\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 保存用カメラタイプ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$ \mbox{\hyperlink{class_render_target_shadow_map_a95f2c6ef14bc3875893b229f9d8362bf}{common\+\_\+data\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 描画共通データ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shader_manager}{Shader\+Manager}} $\ast$ \mbox{\hyperlink{class_render_target_shadow_map_a05ee7ec6d95ec144cca0847bb880c9cb}{shader\+\_\+manager\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em シェーダーマネージャ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+レンダーターゲットシャドウマップ\+Class 
+
+レンダーターゲットシャドウマップの\+Class 
+
+ Render\+Target\+Shadow\+Map.\+h の 33 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_render_target_shadow_map_ad48ed36a4d46cdc06c1f4a0d95ee6e99}\label{class_render_target_shadow_map_ad48ed36a4d46cdc06c1f4a0d95ee6e99}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!Add\+Draw\+Base\+To\+Array@{Add\+Draw\+Base\+To\+Array}}
+\index{Add\+Draw\+Base\+To\+Array@{Add\+Draw\+Base\+To\+Array}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{Add\+Draw\+Base\+To\+Array()}{AddDrawBaseToArray()}}
+{\footnotesize\ttfamily void Render\+Target\+Shadow\+Map\+::\+Add\+Draw\+Base\+To\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw }\end{DoxyParamCaption})}
+
+
+
+描画基底クラスの追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em draw} & 描画基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Shadow\+Map.\+cpp の 132 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_a695f696fd3fed4991b79c49c082dbc3e}\label{class_render_target_shadow_map_a695f696fd3fed4991b79c49c082dbc3e}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!All\+Billboard\+Update@{All\+Billboard\+Update}}
+\index{All\+Billboard\+Update@{All\+Billboard\+Update}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{All\+Billboard\+Update()}{AllBillboardUpdate()}}
+{\footnotesize\ttfamily void Render\+Target\+Shadow\+Map\+::\+All\+Billboard\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+全ビルボード更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Shadow\+Map.\+cpp の 165 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_aad78575f0b78dad8e3bacc00d43cce8f}\label{class_render_target_shadow_map_aad78575f0b78dad8e3bacc00d43cce8f}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!Change\+Billboard\+Matrix@{Change\+Billboard\+Matrix}}
+\index{Change\+Billboard\+Matrix@{Change\+Billboard\+Matrix}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{Change\+Billboard\+Matrix()}{ChangeBillboardMatrix()}}
+{\footnotesize\ttfamily void Render\+Target\+Shadow\+Map\+::\+Change\+Billboard\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ビルボード用行列変更関数 
+
+
+\begin{DoxyParams}{引数}
+{\em draw} & 描画基底クラス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Shadow\+Map.\+cpp の 154 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_a669ba6344e84fba605983c827fb1dc69}\label{class_render_target_shadow_map_a669ba6344e84fba605983c827fb1dc69}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!Change\+Camera\+Type@{Change\+Camera\+Type}}
+\index{Change\+Camera\+Type@{Change\+Camera\+Type}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{Change\+Camera\+Type()}{ChangeCameraType()}}
+{\footnotesize\ttfamily void Render\+Target\+Shadow\+Map\+::\+Change\+Camera\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}}}]{camera\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+カメラタイプ変更関数 
+
+
+\begin{DoxyParams}{引数}
+{\em camera\+\_\+type} & カメラタイプ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Shadow\+Map.\+cpp の 178 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_afc267e5e736c1bbeb2290663df2a4b01}\label{class_render_target_shadow_map_afc267e5e736c1bbeb2290663df2a4b01}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!Draw@{Draw}}
+\index{Draw@{Draw}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Render\+Target\+Shadow\+Map\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Shadow\+Map.\+cpp の 77 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_a4ef385cc7898df1912bb158b21a97fc2}\label{class_render_target_shadow_map_a4ef385cc7898df1912bb158b21a97fc2}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!Init@{Init}}
+\index{Init@{Init}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Render\+Target\+Shadow\+Map\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Shadow\+Map.\+cpp の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_a6bc527acde727f9005f056fc36f941be}\label{class_render_target_shadow_map_a6bc527acde727f9005f056fc36f941be}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!Reset@{Reset}}
+\index{Reset@{Reset}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Render\+Target\+Shadow\+Map\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+リセット関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Shadow\+Map.\+cpp の 147 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_aaf7522ca239bc07bd78a6e431a28be09}\label{class_render_target_shadow_map_aaf7522ca239bc07bd78a6e431a28be09}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!set\+Camera@{set\+Camera}}
+\index{set\+Camera@{set\+Camera}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{set\+Camera()}{setCamera()}}
+{\footnotesize\ttfamily void Render\+Target\+Shadow\+Map\+::set\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+カメラ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & カメラ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Shadow\+Map.\+cpp の 24 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_a684f715afcbec6138c71f2a6021b89d1}\label{class_render_target_shadow_map_a684f715afcbec6138c71f2a6021b89d1}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!set\+Draw\+Common\+Data@{set\+Draw\+Common\+Data}}
+\index{set\+Draw\+Common\+Data@{set\+Draw\+Common\+Data}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{set\+Draw\+Common\+Data()}{setDrawCommonData()}}
+{\footnotesize\ttfamily void Render\+Target\+Shadow\+Map\+::set\+Draw\+Common\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+描画共通データ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & 描画共通データ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Shadow\+Map.\+cpp の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_a25dfdffef70779c1a2eaaa6f2ebbf2d4}\label{class_render_target_shadow_map_a25dfdffef70779c1a2eaaa6f2ebbf2d4}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!set\+Shader\+Manager@{set\+Shader\+Manager}}
+\index{set\+Shader\+Manager@{set\+Shader\+Manager}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{set\+Shader\+Manager()}{setShaderManager()}}
+{\footnotesize\ttfamily void Render\+Target\+Shadow\+Map\+::set\+Shader\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shader_manager}{Shader\+Manager}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+シェーダーマネージャ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & シェーダーマネージャ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Shadow\+Map.\+cpp の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_a51ad9a4afe326c1bf93e342cb0b0847b}\label{class_render_target_shadow_map_a51ad9a4afe326c1bf93e342cb0b0847b}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Render\+Target\+Shadow\+Map\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Shadow\+Map.\+cpp の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_ad81761c98d1ce21e104d28cf7b472199}\label{class_render_target_shadow_map_ad81761c98d1ce21e104d28cf7b472199}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!Uninit\+When\+Change\+Scene@{Uninit\+When\+Change\+Scene}}
+\index{Uninit\+When\+Change\+Scene@{Uninit\+When\+Change\+Scene}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{Uninit\+When\+Change\+Scene()}{UninitWhenChangeScene()}}
+{\footnotesize\ttfamily void Render\+Target\+Shadow\+Map\+::\+Uninit\+When\+Change\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+シーン変更時の終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Shadow\+Map.\+cpp の 62 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_aeba65fc4188bb72dd840f775900d0391}\label{class_render_target_shadow_map_aeba65fc4188bb72dd840f775900d0391}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!Update@{Update}}
+\index{Update@{Update}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Render\+Target\+Shadow\+Map\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Render\+Target\+Shadow\+Map.\+cpp の 69 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_render_target_shadow_map_a25b5fd61eef50d76b69314102ccc51fe}\label{class_render_target_shadow_map_a25b5fd61eef50d76b69314102ccc51fe}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!A\+R\+R\+A\+Y\+\_\+\+N\+UM@{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}
+\index{A\+R\+R\+A\+Y\+\_\+\+N\+UM@{A\+R\+R\+A\+Y\+\_\+\+N\+UM}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{A\+R\+R\+A\+Y\+\_\+\+N\+UM}{ARRAY\_NUM}}
+{\footnotesize\ttfamily const unsigned Render\+Target\+Shadow\+Map\+::\+A\+R\+R\+A\+Y\+\_\+\+N\+UM = 10000\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+配列数 
+
+
+
+ Render\+Target\+Shadow\+Map.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_ac5af1571a13426a6ebd49f96d9070223}\label{class_render_target_shadow_map_ac5af1571a13426a6ebd49f96d9070223}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!camera\+\_\+@{camera\+\_\+}}
+\index{camera\+\_\+@{camera\+\_\+}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{camera\+\_\+}{camera\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera}{Camera}}$\ast$ Render\+Target\+Shadow\+Map\+::camera\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+カメラ 
+
+
+
+ Render\+Target\+Shadow\+Map.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_a95f2c6ef14bc3875893b229f9d8362bf}\label{class_render_target_shadow_map_a95f2c6ef14bc3875893b229f9d8362bf}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!common\+\_\+data\+\_\+@{common\+\_\+data\+\_\+}}
+\index{common\+\_\+data\+\_\+@{common\+\_\+data\+\_\+}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{common\+\_\+data\+\_\+}{common\_data\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}}$\ast$ Render\+Target\+Shadow\+Map\+::common\+\_\+data\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+描画共通データ 
+
+
+
+ Render\+Target\+Shadow\+Map.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_a8c16acb949d466197d47c4d57484eb7e}\label{class_render_target_shadow_map_a8c16acb949d466197d47c4d57484eb7e}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!draw\+\_\+@{draw\+\_\+}}
+\index{draw\+\_\+@{draw\+\_\+}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{draw\+\_\+}{draw\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$\mbox{\hyperlink{class_draw_base}{Draw\+Base}}$\ast$, \mbox{\hyperlink{class_render_target_shadow_map_a25b5fd61eef50d76b69314102ccc51fe}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}$>$ Render\+Target\+Shadow\+Map\+::draw\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+描画基底クラス配列 
+
+
+
+ Render\+Target\+Shadow\+Map.\+h の 46 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_a57f64742fbf9926ef3ab06eca311c9e7}\label{class_render_target_shadow_map_a57f64742fbf9926ef3ab06eca311c9e7}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!save\+\_\+camera\+\_\+type\+\_\+@{save\+\_\+camera\+\_\+type\+\_\+}}
+\index{save\+\_\+camera\+\_\+type\+\_\+@{save\+\_\+camera\+\_\+type\+\_\+}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{save\+\_\+camera\+\_\+type\+\_\+}{save\_camera\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}} Render\+Target\+Shadow\+Map\+::save\+\_\+camera\+\_\+type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+保存用カメラタイプ 
+
+
+
+ Render\+Target\+Shadow\+Map.\+h の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_render_target_shadow_map_a05ee7ec6d95ec144cca0847bb880c9cb}\label{class_render_target_shadow_map_a05ee7ec6d95ec144cca0847bb880c9cb}} 
+\index{Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}!shader\+\_\+manager\+\_\+@{shader\+\_\+manager\+\_\+}}
+\index{shader\+\_\+manager\+\_\+@{shader\+\_\+manager\+\_\+}!Render\+Target\+Shadow\+Map@{Render\+Target\+Shadow\+Map}}
+\subsubsection{\texorpdfstring{shader\+\_\+manager\+\_\+}{shader\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shader_manager}{Shader\+Manager}}$\ast$ Render\+Target\+Shadow\+Map\+::shader\+\_\+manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+シェーダーマネージャ 
+
+
+
+ Render\+Target\+Shadow\+Map.\+h の 51 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Render\+Target/\mbox{\hyperlink{_render_target_shadow_map_8h}{Render\+Target\+Shadow\+Map.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Render\+Target/\+Source/\mbox{\hyperlink{_render_target_shadow_map_8cpp}{Render\+Target\+Shadow\+Map.\+cpp}}\end{DoxyCompactItemize}

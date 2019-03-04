@@ -2,111 +2,310 @@
 \label{class_effekseer_object}\index{Effekseer\+Object@{Effekseer\+Object}}
 
 
+エフェクシアオブジェクト\+Class  
+
+
+
+
 {\ttfamily \#include $<$Effekseer\+Object.\+h$>$}
 
+
+
+Effekseer\+Object 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_effekseer_object__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_effekseer_object_a8e1e081f62efa87b31e00bcfd9cf1a45}{Effekseer\+Object}} (const std\+::string $\ast$file\+\_\+path)
-\item 
-virtual \mbox{\hyperlink{class_effekseer_object_a0463ba508e3c83576991138465847054}{$\sim$\+Effekseer\+Object}} ()
-\item 
+void \mbox{\hyperlink{class_effekseer_object_ae109ced0206affab5d002a218d3c825c}{set\+Disposable}} (bool value)
+\begin{DoxyCompactList}\small\item\em 使い捨てフラグ設定関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_effekseer_object_a2c09306dca9956b1f2518f10a10dd698}{getp\+Is\+Playing}} ()
+\begin{DoxyCompactList}\small\item\em 再生中フラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_effekseer_object_a5a321097534dd21b16862f56f66e730b}{set\+Is\+Repeat}} (bool value)
+\begin{DoxyCompactList}\small\item\em リピートフラグ設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transform}{Transform}} $\ast$ \mbox{\hyperlink{class_effekseer_object_adb8963108c1ddd2ce6926f974b5f0acc}{getp\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em 変形取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_effekseer_object_a1a868153244f3b30ed4ab63e3b9cee91}{Init}} (std\+::string $\ast$file\+\_\+path, const std\+::string $\ast$map\+\_\+key\+\_\+name)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_effekseer_object_a8d5a00238954a2368bbf870dfa8908f7}{Release}} ()
+\begin{DoxyCompactList}\small\item\em 解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_effekseer_object_a59e36b36fbd554807987b55495250dd2}{Forced\+Release}} ()
+\begin{DoxyCompactList}\small\item\em 強制解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_effekseer_object_aeacb87988d36d3c255cbf53631ad715f}{Add\+Reference\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em 参照カウンタ追加関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_effekseer_object_aecb9314a5ff922c9420301129d2f26f7}{Update}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_effekseer_object_adc628e5089ca0cdc418e92729943a3b2}{Draw}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_effekseer_object_a59c8a12b4eb558449622660d892b3cf4}{Play}} ()
-\item 
-bool \mbox{\hyperlink{class_effekseer_object_a6fe253dd3387bdfd9305878ff194f305}{Is\+Plaing}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 再生関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_effekseer_object_adfbdfbe202b78441b33d76656453e536}{Stop}} ()
-\item 
-void \mbox{\hyperlink{class_effekseer_object_aeec933c68ceb4bafc69d65590c470d72}{Set\+Pause}} (bool is\+\_\+pause)
-\item 
-bool \mbox{\hyperlink{class_effekseer_object_a482a0e824d8719b7676ae15948ae7348}{Get\+Pause}} ()
-\item 
-void \mbox{\hyperlink{class_effekseer_object_a77122f2d71d44d6cceec2b6bdedb4b2a}{Set\+Repeat}} (bool is\+\_\+repeat)
-\item 
-bool \mbox{\hyperlink{class_effekseer_object_a3c44b29c016fb5b3618e2d39060844be}{Get\+Repeat}} ()
-\item 
-void \mbox{\hyperlink{class_effekseer_object_a3c14fd4215640b648b14e445b99564f7}{Set\+Velocity}} (float velocity)
-\item 
-void \mbox{\hyperlink{class_effekseer_object_a5c496e56785ef7b784b13642d59d4e7f}{Set\+Color}} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b, uint8\+\_\+t a)
-\item 
-void \mbox{\hyperlink{class_effekseer_object_aa3849f176ccb493b162d08c1ef387996}{Set\+Projection\+Matrix}} (\mbox{\hyperlink{struct_effekseer_1_1_matrix44}{Effekseer\+::\+Matrix44}} $\ast$projection\+\_\+matrix)
-\item 
-void \mbox{\hyperlink{class_effekseer_object_ac7f3145b79b5e65e45014abd30ee5de8}{Set\+View\+Matrix}} (\mbox{\hyperlink{struct_effekseer_1_1_matrix44}{Effekseer\+::\+Matrix44}} $\ast$view\+\_\+matrix)
-\item 
-\mbox{\hyperlink{class_transform}{Transform}} $\ast$ \mbox{\hyperlink{class_effekseer_object_ad7e825d08856df48459437ad759d7a00}{Get\+Transform}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 停止関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_effekseer_object_a01365c03b533af22fd1b9eee766d16ca}{Pause}} (bool is\+\_\+pause)
+\begin{DoxyCompactList}\small\item\em 一時停止関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_effekseer_object_a52c47feeb74058661f8db31a20a51dbf}{Change\+Velocity}} (float velocity)
+\begin{DoxyCompactList}\small\item\em 速度変更関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_effekseer_object_aa3fbff4e565c771d1b8e2a83b197294b}{Change\+Color}} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b, uint8\+\_\+t a)
+\begin{DoxyCompactList}\small\item\em 色変更関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_effekseer_object_a822247e8b5effa83ccf7239283f83326}{Change\+View\+Matrix}} (\mbox{\hyperlink{struct_effekseer_1_1_matrix44}{Effekseer\+::\+Matrix44}} $\ast$view\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em ビュー行列変更関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_effekseer_object_ad8ad42a6cf622ae1ef145f66af3af7c3}{Change\+Projection\+Matrix}} (\mbox{\hyperlink{struct_effekseer_1_1_matrix44}{Effekseer\+::\+Matrix44}} $\ast$projection\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em プロジェクション行列変更関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_effekseer_object_a4f8e7ad6b6ebfa341302f6b78e846f1e}{Init\+Renderer\+\_\+\+Manager}} ()
-\item 
-void \mbox{\hyperlink{class_effekseer_object_a1566339dd4acebff341a867a2fd05c17}{Input\+Effect}} (const std\+::string $\ast$file\+\_\+path)
-\item 
-void \mbox{\hyperlink{class_effekseer_object_afde70f366e91d31a84ff9b280d4ae3c4}{Set\+World\+Matrix}} (const \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$world\+\_\+matrix)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_effekseer_object_a6b7b077ec4d0892add6e0958dae833db}{Create\+Renderer\+And\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em レンダラー\&マネージャ生成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_effekseer_object_af55a8edc8ff64371e28fe3e00b6af7ae}{Create\+Effect}} (std\+::string $\ast$file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em エフェクト生成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_effekseer_object_a7bc76cdd2fb6f4ff38e20ec9c21bdef5}{Change\+World\+Matrix}} (\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$world\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em ワールド行列変更関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_effekseer_renderer_d_x9_1_1_renderer}{Effekseer\+Renderer\+D\+X9\+::\+Renderer}} $\ast$ \mbox{\hyperlink{class_effekseer_object_a39d29eb6a967f325b3d8659c231e0525}{effekseer\+\_\+renderer\+\_\+}}
-\item 
-\mbox{\hyperlink{class_effekseer_1_1_manager}{Effekseer\+::\+Manager}} $\ast$ \mbox{\hyperlink{class_effekseer_object_a9f66433b8cecd6753b478a73f93f8179}{effekseer\+\_\+manager\+\_\+}}
-\item 
-\mbox{\hyperlink{class_effekseer_1_1_effect}{Effekseer\+::\+Effect}} $\ast$ \mbox{\hyperlink{class_effekseer_object_a66c732f526b92301c72070648ca7e70f}{effekseer\+\_\+effect\+\_\+}}
-\item 
+\mbox{\hyperlink{class_effekseer_renderer_d_x9_1_1_renderer}{Effekseer\+Renderer\+D\+X9\+::\+Renderer}} $\ast$ \mbox{\hyperlink{class_effekseer_object_a39d29eb6a967f325b3d8659c231e0525}{effekseer\+\_\+renderer\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em レンダラー \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_effekseer_1_1_manager}{Effekseer\+::\+Manager}} $\ast$ \mbox{\hyperlink{class_effekseer_object_a9f66433b8cecd6753b478a73f93f8179}{effekseer\+\_\+manager\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em マネージャ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_effekseer_1_1_effect}{Effekseer\+::\+Effect}} $\ast$ \mbox{\hyperlink{class_effekseer_object_a66c732f526b92301c72070648ca7e70f}{effekseer\+\_\+effect\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em エフェクト \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace_effekseer_afba58b8d812da862190e9bbfc040824a}{Effekseer\+::\+Handle}} \mbox{\hyperlink{class_effekseer_object_ac3e771c9f05d91dfe392959591595b7e}{effekseer\+\_\+handle\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em ハンドル \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_effekseer_1_1_matrix43}{Effekseer\+::\+Matrix43}} \mbox{\hyperlink{class_effekseer_object_a16171d7157607b9d6a5fc0aa4ad9d454}{world\+\_\+matrix\+\_\+}}
-\item 
-bool \mbox{\hyperlink{class_effekseer_object_a4ec40aadcda493d25823d95a3035c29d}{is\+\_\+playing\+\_\+}}
-\item 
-bool \mbox{\hyperlink{class_effekseer_object_ad34fd902c49b1f68dc7b212fe9d2676d}{is\+\_\+pause\+\_\+}}
-\item 
-bool \mbox{\hyperlink{class_effekseer_object_a4beb29e4b63e4013d1916ccada3c5635}{is\+\_\+repeat\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 行列 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_effekseer_object_ae48424a2f453590f97ce1b412882943f}{is\+\_\+disposable\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em 使い捨てフラグ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_effekseer_object_a4ec40aadcda493d25823d95a3035c29d}{is\+\_\+playing\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em 再生フラグ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_effekseer_object_ad34fd902c49b1f68dc7b212fe9d2676d}{is\+\_\+pause\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em 停止フラグ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_effekseer_object_a4beb29e4b63e4013d1916ccada3c5635}{is\+\_\+repeat\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em リピートフラグ \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_effekseer_object_a53e096d7eebae5339b2df3c91bc30e7e}{transform\+\_\+}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 変形 \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_effekseer_object_a815d735c9c282cdee2ccfb734eb2bb57}{map\+\_\+key\+\_\+name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em マップ用キー名 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_effekseer_object_ad7bcf0ab26c7601b005cc7d76eb39a9a}{reference\+\_\+counter\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em 参照カウンタ \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 static const int \mbox{\hyperlink{class_effekseer_object_a6edfdaac66134eee3264923075abb1f0}{M\+A\+X\+\_\+\+S\+P\+R\+I\+T\+E\+\_\+\+N\+UM}} = 2000
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 最大スプライト数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
+エフェクシアオブジェクト\+Class 
 
+エフェクシアのオブジェクト\+Class 
 
- Effekseer\+Object.\+h の 40 行目に定義があります。
-
-
-
-\subsection{構築子と解体子}
-\mbox{\Hypertarget{class_effekseer_object_a8e1e081f62efa87b31e00bcfd9cf1a45}\label{class_effekseer_object_a8e1e081f62efa87b31e00bcfd9cf1a45}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Effekseer\+Object@{Effekseer\+Object}}
-\index{Effekseer\+Object@{Effekseer\+Object}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Effekseer\+Object()}{EffekseerObject()}}
-{\footnotesize\ttfamily Effekseer\+Object\+::\+Effekseer\+Object (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})}
-
-
-
- Effekseer\+Object.\+cpp の 47 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_a0463ba508e3c83576991138465847054}\label{class_effekseer_object_a0463ba508e3c83576991138465847054}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!````~Effekseer\+Object@{$\sim$\+Effekseer\+Object}}
-\index{````~Effekseer\+Object@{$\sim$\+Effekseer\+Object}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{$\sim$\+Effekseer\+Object()}{~EffekseerObject()}}
-{\footnotesize\ttfamily Effekseer\+Object\+::$\sim$\+Effekseer\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
- Effekseer\+Object.\+cpp の 67 行目に定義があります。
+ Effekseer\+Object.\+h の 29 行目に定義があります。
 
 
 
 \subsection{関数詳解}
+\mbox{\Hypertarget{class_effekseer_object_aeacb87988d36d3c255cbf53631ad715f}\label{class_effekseer_object_aeacb87988d36d3c255cbf53631ad715f}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!Add\+Reference\+Counter@{Add\+Reference\+Counter}}
+\index{Add\+Reference\+Counter@{Add\+Reference\+Counter}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{Add\+Reference\+Counter()}{AddReferenceCounter()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::\+Add\+Reference\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+参照カウンタ追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 105 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_aa3fbff4e565c771d1b8e2a83b197294b}\label{class_effekseer_object_aa3fbff4e565c771d1b8e2a83b197294b}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!Change\+Color@{Change\+Color}}
+\index{Change\+Color@{Change\+Color}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{Change\+Color()}{ChangeColor()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::\+Change\+Color (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b,  }\item[{uint8\+\_\+t}]{a }\end{DoxyParamCaption})}
+
+
+
+色変更関数 
+
+
+\begin{DoxyParams}{引数}
+{\em r} & 赤 \\
+\hline
+{\em g} & 緑 \\
+\hline
+{\em b} & 青 \\
+\hline
+{\em a} & 透過度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 223 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_ad8ad42a6cf622ae1ef145f66af3af7c3}\label{class_effekseer_object_ad8ad42a6cf622ae1ef145f66af3af7c3}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!Change\+Projection\+Matrix@{Change\+Projection\+Matrix}}
+\index{Change\+Projection\+Matrix@{Change\+Projection\+Matrix}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{Change\+Projection\+Matrix()}{ChangeProjectionMatrix()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::\+Change\+Projection\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_effekseer_1_1_matrix44}{Effekseer\+::\+Matrix44}} $\ast$}]{projection\+\_\+matrix }\end{DoxyParamCaption})}
+
+
+
+プロジェクション行列変更関数 
+
+
+\begin{DoxyParams}{引数}
+{\em velocity} & 速度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 237 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_a52c47feeb74058661f8db31a20a51dbf}\label{class_effekseer_object_a52c47feeb74058661f8db31a20a51dbf}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!Change\+Velocity@{Change\+Velocity}}
+\index{Change\+Velocity@{Change\+Velocity}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{Change\+Velocity()}{ChangeVelocity()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::\+Change\+Velocity (\begin{DoxyParamCaption}\item[{float}]{velocity }\end{DoxyParamCaption})}
+
+
+
+速度変更関数 
+
+
+\begin{DoxyParams}{引数}
+{\em velocity} & 速度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 216 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_a822247e8b5effa83ccf7239283f83326}\label{class_effekseer_object_a822247e8b5effa83ccf7239283f83326}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!Change\+View\+Matrix@{Change\+View\+Matrix}}
+\index{Change\+View\+Matrix@{Change\+View\+Matrix}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{Change\+View\+Matrix()}{ChangeViewMatrix()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::\+Change\+View\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_effekseer_1_1_matrix44}{Effekseer\+::\+Matrix44}} $\ast$}]{view\+\_\+matrix }\end{DoxyParamCaption})}
+
+
+
+ビュー行列変更関数 
+
+
+\begin{DoxyParams}{引数}
+{\em velocity} & 速度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 230 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_a7bc76cdd2fb6f4ff38e20ec9c21bdef5}\label{class_effekseer_object_a7bc76cdd2fb6f4ff38e20ec9c21bdef5}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!Change\+World\+Matrix@{Change\+World\+Matrix}}
+\index{Change\+World\+Matrix@{Change\+World\+Matrix}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{Change\+World\+Matrix()}{ChangeWorldMatrix()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::\+Change\+World\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$}]{world\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ワールド行列変更関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 244 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_af55a8edc8ff64371e28fe3e00b6af7ae}\label{class_effekseer_object_af55a8edc8ff64371e28fe3e00b6af7ae}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!Create\+Effect@{Create\+Effect}}
+\index{Create\+Effect@{Create\+Effect}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{Create\+Effect()}{CreateEffect()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::\+Create\+Effect (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+エフェクト生成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 144 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_a6b7b077ec4d0892add6e0958dae833db}\label{class_effekseer_object_a6b7b077ec4d0892add6e0958dae833db}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!Create\+Renderer\+And\+Manager@{Create\+Renderer\+And\+Manager}}
+\index{Create\+Renderer\+And\+Manager@{Create\+Renderer\+And\+Manager}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{Create\+Renderer\+And\+Manager()}{CreateRendererAndManager()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::\+Create\+Renderer\+And\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+レンダラー\&マネージャ生成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 112 行目に定義があります。
+
 \mbox{\Hypertarget{class_effekseer_object_adc628e5089ca0cdc418e92729943a3b2}\label{class_effekseer_object_adc628e5089ca0cdc418e92729943a3b2}} 
 \index{Effekseer\+Object@{Effekseer\+Object}!Draw@{Draw}}
 \index{Draw@{Draw}!Effekseer\+Object@{Effekseer\+Object}}
@@ -115,67 +314,143 @@ static const int \mbox{\hyperlink{class_effekseer_object_a6edfdaac66134eee326492
 
 
 
- Effekseer\+Object.\+cpp の 126 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_a482a0e824d8719b7676ae15948ae7348}\label{class_effekseer_object_a482a0e824d8719b7676ae15948ae7348}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Get\+Pause@{Get\+Pause}}
-\index{Get\+Pause@{Get\+Pause}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Get\+Pause()}{GetPause()}}
-{\footnotesize\ttfamily bool Effekseer\+Object\+::\+Get\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+描画関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Effekseer\+Object.\+h の 77 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_a3c44b29c016fb5b3618e2d39060844be}\label{class_effekseer_object_a3c44b29c016fb5b3618e2d39060844be}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Get\+Repeat@{Get\+Repeat}}
-\index{Get\+Repeat@{Get\+Repeat}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Get\+Repeat()}{GetRepeat()}}
-{\footnotesize\ttfamily bool Effekseer\+Object\+::\+Get\+Repeat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Effekseer\+Object.\+cpp の 179 行目に定義があります。
 
- Effekseer\+Object.\+h の 81 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_ad7e825d08856df48459437ad759d7a00}\label{class_effekseer_object_ad7e825d08856df48459437ad759d7a00}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Get\+Transform@{Get\+Transform}}
-\index{Get\+Transform@{Get\+Transform}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Get\+Transform()}{GetTransform()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}}$\ast$ Effekseer\+Object\+::\+Get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_effekseer_object_a59e36b36fbd554807987b55495250dd2}\label{class_effekseer_object_a59e36b36fbd554807987b55495250dd2}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!Forced\+Release@{Forced\+Release}}
+\index{Forced\+Release@{Forced\+Release}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{Forced\+Release()}{ForcedRelease()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::\+Forced\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Effekseer\+Object.\+h の 96 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_a4f8e7ad6b6ebfa341302f6b78e846f1e}\label{class_effekseer_object_a4f8e7ad6b6ebfa341302f6b78e846f1e}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Init\+Renderer\+\_\+\+Manager@{Init\+Renderer\+\_\+\+Manager}}
-\index{Init\+Renderer\+\_\+\+Manager@{Init\+Renderer\+\_\+\+Manager}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Init\+Renderer\+\_\+\+Manager()}{InitRenderer\_Manager()}}
-{\footnotesize\ttfamily void Effekseer\+Object\+::\+Init\+Renderer\+\_\+\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+強制解放関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Effekseer\+Object.\+cpp の 239 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_a1566339dd4acebff341a867a2fd05c17}\label{class_effekseer_object_a1566339dd4acebff341a867a2fd05c17}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Input\+Effect@{Input\+Effect}}
-\index{Input\+Effect@{Input\+Effect}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Input\+Effect()}{InputEffect()}}
-{\footnotesize\ttfamily void Effekseer\+Object\+::\+Input\+Effect (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Effekseer\+Object.\+cpp の 97 行目に定義があります。
 
- Effekseer\+Object.\+cpp の 277 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_a6fe253dd3387bdfd9305878ff194f305}\label{class_effekseer_object_a6fe253dd3387bdfd9305878ff194f305}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Is\+Plaing@{Is\+Plaing}}
-\index{Is\+Plaing@{Is\+Plaing}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Is\+Plaing()}{IsPlaing()}}
-{\footnotesize\ttfamily bool Effekseer\+Object\+::\+Is\+Plaing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_effekseer_object_a2c09306dca9956b1f2518f10a10dd698}\label{class_effekseer_object_a2c09306dca9956b1f2518f10a10dd698}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!getp\+Is\+Playing@{getp\+Is\+Playing}}
+\index{getp\+Is\+Playing@{getp\+Is\+Playing}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{getp\+Is\+Playing()}{getpIsPlaying()}}
+{\footnotesize\ttfamily bool Effekseer\+Object\+::getp\+Is\+Playing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Effekseer\+Object.\+h の 70 行目に定義があります。
+再生中フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 再生中の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 36 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_adb8963108c1ddd2ce6926f974b5f0acc}\label{class_effekseer_object_adb8963108c1ddd2ce6926f974b5f0acc}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!getp\+Transform@{getp\+Transform}}
+\index{getp\+Transform@{getp\+Transform}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{getp\+Transform()}{getpTransform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}} $\ast$ Effekseer\+Object\+::getp\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+変形取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Transform$\ast$} & 変形 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_a1a868153244f3b30ed4ab63e3b9cee91}\label{class_effekseer_object_a1a868153244f3b30ed4ab63e3b9cee91}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!Init@{Init}}
+\index{Init@{Init}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::\+Init (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+path,  }\item[{const std\+::string $\ast$}]{map\+\_\+key\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+{\em $\ast$map\+\_\+key\+\_\+name} & マップ用キー名 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 60 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_a01365c03b533af22fd1b9eee766d16ca}\label{class_effekseer_object_a01365c03b533af22fd1b9eee766d16ca}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!Pause@{Pause}}
+\index{Pause@{Pause}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::\+Pause (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+pause }\end{DoxyParamCaption})}
+
+
+
+一時停止関数 
+
+
+\begin{DoxyParams}{引数}
+{\em is\+\_\+pause} & 一時停止フラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 207 行目に定義があります。
 
 \mbox{\Hypertarget{class_effekseer_object_a59c8a12b4eb558449622660d892b3cf4}\label{class_effekseer_object_a59c8a12b4eb558449622660d892b3cf4}} 
 \index{Effekseer\+Object@{Effekseer\+Object}!Play@{Play}}
@@ -185,77 +460,93 @@ static const int \mbox{\hyperlink{class_effekseer_object_a6edfdaac66134eee326492
 
 
 
- Effekseer\+Object.\+cpp の 141 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_a5c496e56785ef7b784b13642d59d4e7f}\label{class_effekseer_object_a5c496e56785ef7b784b13642d59d4e7f}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Set\+Color@{Set\+Color}}
-\index{Set\+Color@{Set\+Color}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Set\+Color()}{SetColor()}}
-{\footnotesize\ttfamily void Effekseer\+Object\+::\+Set\+Color (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b,  }\item[{uint8\+\_\+t}]{a }\end{DoxyParamCaption})}
+再生関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Effekseer\+Object.\+cpp の 200 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_aeec933c68ceb4bafc69d65590c470d72}\label{class_effekseer_object_aeec933c68ceb4bafc69d65590c470d72}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Set\+Pause@{Set\+Pause}}
-\index{Set\+Pause@{Set\+Pause}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Set\+Pause()}{SetPause()}}
-{\footnotesize\ttfamily void Effekseer\+Object\+::\+Set\+Pause (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+pause }\end{DoxyParamCaption})}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Effekseer\+Object.\+cpp の 188 行目に定義があります。
 
- Effekseer\+Object.\+cpp の 171 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_aa3849f176ccb493b162d08c1ef387996}\label{class_effekseer_object_aa3849f176ccb493b162d08c1ef387996}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Set\+Projection\+Matrix@{Set\+Projection\+Matrix}}
-\index{Set\+Projection\+Matrix@{Set\+Projection\+Matrix}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Set\+Projection\+Matrix()}{SetProjectionMatrix()}}
-{\footnotesize\ttfamily void Effekseer\+Object\+::\+Set\+Projection\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_effekseer_1_1_matrix44}{Effekseer\+::\+Matrix44}} $\ast$}]{projection\+\_\+matrix }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_effekseer_object_a8d5a00238954a2368bbf870dfa8908f7}\label{class_effekseer_object_a8d5a00238954a2368bbf870dfa8908f7}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!Release@{Release}}
+\index{Release@{Release}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Effekseer\+Object.\+cpp の 213 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_a77122f2d71d44d6cceec2b6bdedb4b2a}\label{class_effekseer_object_a77122f2d71d44d6cceec2b6bdedb4b2a}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Set\+Repeat@{Set\+Repeat}}
-\index{Set\+Repeat@{Set\+Repeat}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Set\+Repeat()}{SetRepeat()}}
-{\footnotesize\ttfamily void Effekseer\+Object\+::\+Set\+Repeat (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+repeat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+解放関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Effekseer\+Object.\+h の 80 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_a3c14fd4215640b648b14e445b99564f7}\label{class_effekseer_object_a3c14fd4215640b648b14e445b99564f7}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Set\+Velocity@{Set\+Velocity}}
-\index{Set\+Velocity@{Set\+Velocity}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Set\+Velocity()}{SetVelocity()}}
-{\footnotesize\ttfamily void Effekseer\+Object\+::\+Set\+Velocity (\begin{DoxyParamCaption}\item[{float}]{velocity }\end{DoxyParamCaption})}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Effekseer\+Object.\+cpp の 74 行目に定義があります。
 
- Effekseer\+Object.\+cpp の 186 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_ac7f3145b79b5e65e45014abd30ee5de8}\label{class_effekseer_object_ac7f3145b79b5e65e45014abd30ee5de8}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Set\+View\+Matrix@{Set\+View\+Matrix}}
-\index{Set\+View\+Matrix@{Set\+View\+Matrix}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Set\+View\+Matrix()}{SetViewMatrix()}}
-{\footnotesize\ttfamily void Effekseer\+Object\+::\+Set\+View\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_effekseer_1_1_matrix44}{Effekseer\+::\+Matrix44}} $\ast$}]{view\+\_\+matrix }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_effekseer_object_ae109ced0206affab5d002a218d3c825c}\label{class_effekseer_object_ae109ced0206affab5d002a218d3c825c}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!set\+Disposable@{set\+Disposable}}
+\index{set\+Disposable@{set\+Disposable}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{set\+Disposable()}{setDisposable()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::set\+Disposable (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
 
 
 
- Effekseer\+Object.\+cpp の 226 行目に定義があります。
-
-\mbox{\Hypertarget{class_effekseer_object_afde70f366e91d31a84ff9b280d4ae3c4}\label{class_effekseer_object_afde70f366e91d31a84ff9b280d4ae3c4}} 
-\index{Effekseer\+Object@{Effekseer\+Object}!Set\+World\+Matrix@{Set\+World\+Matrix}}
-\index{Set\+World\+Matrix@{Set\+World\+Matrix}!Effekseer\+Object@{Effekseer\+Object}}
-\subsubsection{\texorpdfstring{Set\+World\+Matrix()}{SetWorldMatrix()}}
-{\footnotesize\ttfamily void Effekseer\+Object\+::\+Set\+World\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$}]{world\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+使い捨てフラグ設定関数 
 
 
+\begin{DoxyParams}{引数}
+{\em value} & 使い捨てフラグの値 \\
+\hline
+\end{DoxyParams}
 
- Effekseer\+Object.\+cpp の 297 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 29 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_a5a321097534dd21b16862f56f66e730b}\label{class_effekseer_object_a5a321097534dd21b16862f56f66e730b}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!set\+Is\+Repeat@{set\+Is\+Repeat}}
+\index{set\+Is\+Repeat@{set\+Is\+Repeat}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{set\+Is\+Repeat()}{setIsRepeat()}}
+{\footnotesize\ttfamily void Effekseer\+Object\+::set\+Is\+Repeat (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+リピートフラグ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & リピートフラグの値 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 43 行目に定義があります。
 
 \mbox{\Hypertarget{class_effekseer_object_adfbdfbe202b78441b33d76656453e536}\label{class_effekseer_object_adfbdfbe202b78441b33d76656453e536}} 
 \index{Effekseer\+Object@{Effekseer\+Object}!Stop@{Stop}}
@@ -265,7 +556,21 @@ static const int \mbox{\hyperlink{class_effekseer_object_a6edfdaac66134eee326492
 
 
 
- Effekseer\+Object.\+cpp の 157 行目に定義があります。
+停止関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 198 行目に定義があります。
 
 \mbox{\Hypertarget{class_effekseer_object_aecb9314a5ff922c9420301129d2f26f7}\label{class_effekseer_object_aecb9314a5ff922c9420301129d2f26f7}} 
 \index{Effekseer\+Object@{Effekseer\+Object}!Update@{Update}}
@@ -275,7 +580,21 @@ static const int \mbox{\hyperlink{class_effekseer_object_a6edfdaac66134eee326492
 
 
 
- Effekseer\+Object.\+cpp の 90 行目に定義があります。
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Effekseer\+Object.\+cpp の 157 行目に定義があります。
 
 
 
@@ -284,11 +603,15 @@ static const int \mbox{\hyperlink{class_effekseer_object_a6edfdaac66134eee326492
 \index{Effekseer\+Object@{Effekseer\+Object}!effekseer\+\_\+effect\+\_\+@{effekseer\+\_\+effect\+\_\+}}
 \index{effekseer\+\_\+effect\+\_\+@{effekseer\+\_\+effect\+\_\+}!Effekseer\+Object@{Effekseer\+Object}}
 \subsubsection{\texorpdfstring{effekseer\+\_\+effect\+\_\+}{effekseer\_effect\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_effekseer_1_1_effect}{Effekseer\+::\+Effect}}$\ast$ Effekseer\+Object\+::effekseer\+\_\+effect\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_effekseer_1_1_effect}{Effekseer\+::\+Effect}}$\ast$ Effekseer\+Object\+::effekseer\+\_\+effect\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Effekseer\+Object.\+h の 111 行目に定義があります。
+エフェクト 
+
+
+
+ Effekseer\+Object.\+h の 44 行目に定義があります。
 
 \mbox{\Hypertarget{class_effekseer_object_ac3e771c9f05d91dfe392959591595b7e}\label{class_effekseer_object_ac3e771c9f05d91dfe392959591595b7e}} 
 \index{Effekseer\+Object@{Effekseer\+Object}!effekseer\+\_\+handle\+\_\+@{effekseer\+\_\+handle\+\_\+}}
@@ -298,57 +621,109 @@ static const int \mbox{\hyperlink{class_effekseer_object_a6edfdaac66134eee326492
 
 
 
- Effekseer\+Object.\+h の 112 行目に定義があります。
+ハンドル 
+
+
+
+ Effekseer\+Object.\+h の 45 行目に定義があります。
 
 \mbox{\Hypertarget{class_effekseer_object_a9f66433b8cecd6753b478a73f93f8179}\label{class_effekseer_object_a9f66433b8cecd6753b478a73f93f8179}} 
 \index{Effekseer\+Object@{Effekseer\+Object}!effekseer\+\_\+manager\+\_\+@{effekseer\+\_\+manager\+\_\+}}
 \index{effekseer\+\_\+manager\+\_\+@{effekseer\+\_\+manager\+\_\+}!Effekseer\+Object@{Effekseer\+Object}}
 \subsubsection{\texorpdfstring{effekseer\+\_\+manager\+\_\+}{effekseer\_manager\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_effekseer_1_1_manager}{Effekseer\+::\+Manager}}$\ast$ Effekseer\+Object\+::effekseer\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_effekseer_1_1_manager}{Effekseer\+::\+Manager}}$\ast$ Effekseer\+Object\+::effekseer\+\_\+manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Effekseer\+Object.\+h の 110 行目に定義があります。
+マネージャ 
+
+
+
+ Effekseer\+Object.\+h の 43 行目に定義があります。
 
 \mbox{\Hypertarget{class_effekseer_object_a39d29eb6a967f325b3d8659c231e0525}\label{class_effekseer_object_a39d29eb6a967f325b3d8659c231e0525}} 
 \index{Effekseer\+Object@{Effekseer\+Object}!effekseer\+\_\+renderer\+\_\+@{effekseer\+\_\+renderer\+\_\+}}
 \index{effekseer\+\_\+renderer\+\_\+@{effekseer\+\_\+renderer\+\_\+}!Effekseer\+Object@{Effekseer\+Object}}
 \subsubsection{\texorpdfstring{effekseer\+\_\+renderer\+\_\+}{effekseer\_renderer\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_effekseer_renderer_d_x9_1_1_renderer}{Effekseer\+Renderer\+D\+X9\+::\+Renderer}}$\ast$ Effekseer\+Object\+::effekseer\+\_\+renderer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_effekseer_renderer_d_x9_1_1_renderer}{Effekseer\+Renderer\+D\+X9\+::\+Renderer}}$\ast$ Effekseer\+Object\+::effekseer\+\_\+renderer\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Effekseer\+Object.\+h の 109 行目に定義があります。
+レンダラー 
+
+
+
+ Effekseer\+Object.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_ae48424a2f453590f97ce1b412882943f}\label{class_effekseer_object_ae48424a2f453590f97ce1b412882943f}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!is\+\_\+disposable\+\_\+@{is\+\_\+disposable\+\_\+}}
+\index{is\+\_\+disposable\+\_\+@{is\+\_\+disposable\+\_\+}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{is\+\_\+disposable\+\_\+}{is\_disposable\_}}
+{\footnotesize\ttfamily bool Effekseer\+Object\+::is\+\_\+disposable\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+使い捨てフラグ 
+
+
+
+ Effekseer\+Object.\+h の 47 行目に定義があります。
 
 \mbox{\Hypertarget{class_effekseer_object_ad34fd902c49b1f68dc7b212fe9d2676d}\label{class_effekseer_object_ad34fd902c49b1f68dc7b212fe9d2676d}} 
 \index{Effekseer\+Object@{Effekseer\+Object}!is\+\_\+pause\+\_\+@{is\+\_\+pause\+\_\+}}
 \index{is\+\_\+pause\+\_\+@{is\+\_\+pause\+\_\+}!Effekseer\+Object@{Effekseer\+Object}}
 \subsubsection{\texorpdfstring{is\+\_\+pause\+\_\+}{is\_pause\_}}
-{\footnotesize\ttfamily bool Effekseer\+Object\+::is\+\_\+pause\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily bool Effekseer\+Object\+::is\+\_\+pause\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Effekseer\+Object.\+h の 115 行目に定義があります。
+停止フラグ 
+
+
+
+ Effekseer\+Object.\+h の 49 行目に定義があります。
 
 \mbox{\Hypertarget{class_effekseer_object_a4ec40aadcda493d25823d95a3035c29d}\label{class_effekseer_object_a4ec40aadcda493d25823d95a3035c29d}} 
 \index{Effekseer\+Object@{Effekseer\+Object}!is\+\_\+playing\+\_\+@{is\+\_\+playing\+\_\+}}
 \index{is\+\_\+playing\+\_\+@{is\+\_\+playing\+\_\+}!Effekseer\+Object@{Effekseer\+Object}}
 \subsubsection{\texorpdfstring{is\+\_\+playing\+\_\+}{is\_playing\_}}
-{\footnotesize\ttfamily bool Effekseer\+Object\+::is\+\_\+playing\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily bool Effekseer\+Object\+::is\+\_\+playing\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Effekseer\+Object.\+h の 114 行目に定義があります。
+再生フラグ 
+
+
+
+ Effekseer\+Object.\+h の 48 行目に定義があります。
 
 \mbox{\Hypertarget{class_effekseer_object_a4beb29e4b63e4013d1916ccada3c5635}\label{class_effekseer_object_a4beb29e4b63e4013d1916ccada3c5635}} 
 \index{Effekseer\+Object@{Effekseer\+Object}!is\+\_\+repeat\+\_\+@{is\+\_\+repeat\+\_\+}}
 \index{is\+\_\+repeat\+\_\+@{is\+\_\+repeat\+\_\+}!Effekseer\+Object@{Effekseer\+Object}}
 \subsubsection{\texorpdfstring{is\+\_\+repeat\+\_\+}{is\_repeat\_}}
-{\footnotesize\ttfamily bool Effekseer\+Object\+::is\+\_\+repeat\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily bool Effekseer\+Object\+::is\+\_\+repeat\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Effekseer\+Object.\+h の 116 行目に定義があります。
+リピートフラグ 
+
+
+
+ Effekseer\+Object.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_a815d735c9c282cdee2ccfb734eb2bb57}\label{class_effekseer_object_a815d735c9c282cdee2ccfb734eb2bb57}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!map\+\_\+key\+\_\+name\+\_\+@{map\+\_\+key\+\_\+name\+\_\+}}
+\index{map\+\_\+key\+\_\+name\+\_\+@{map\+\_\+key\+\_\+name\+\_\+}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{map\+\_\+key\+\_\+name\+\_\+}{map\_key\_name\_}}
+{\footnotesize\ttfamily std\+::string Effekseer\+Object\+::map\+\_\+key\+\_\+name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+マップ用キー名 
+
+
+
+ Effekseer\+Object.\+h の 52 行目に定義があります。
 
 \mbox{\Hypertarget{class_effekseer_object_a6edfdaac66134eee3264923075abb1f0}\label{class_effekseer_object_a6edfdaac66134eee3264923075abb1f0}} 
 \index{Effekseer\+Object@{Effekseer\+Object}!M\+A\+X\+\_\+\+S\+P\+R\+I\+T\+E\+\_\+\+N\+UM@{M\+A\+X\+\_\+\+S\+P\+R\+I\+T\+E\+\_\+\+N\+UM}}
@@ -358,7 +733,25 @@ static const int \mbox{\hyperlink{class_effekseer_object_a6edfdaac66134eee326492
 
 
 
- Effekseer\+Object.\+h の 44 行目に定義があります。
+最大スプライト数 
+
+
+
+ Effekseer\+Object.\+h の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_effekseer_object_ad7bcf0ab26c7601b005cc7d76eb39a9a}\label{class_effekseer_object_ad7bcf0ab26c7601b005cc7d76eb39a9a}} 
+\index{Effekseer\+Object@{Effekseer\+Object}!reference\+\_\+counter\+\_\+@{reference\+\_\+counter\+\_\+}}
+\index{reference\+\_\+counter\+\_\+@{reference\+\_\+counter\+\_\+}!Effekseer\+Object@{Effekseer\+Object}}
+\subsubsection{\texorpdfstring{reference\+\_\+counter\+\_\+}{reference\_counter\_}}
+{\footnotesize\ttfamily int Effekseer\+Object\+::reference\+\_\+counter\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+参照カウンタ 
+
+
+
+ Effekseer\+Object.\+h の 53 行目に定義があります。
 
 \mbox{\Hypertarget{class_effekseer_object_a53e096d7eebae5339b2df3c91bc30e7e}\label{class_effekseer_object_a53e096d7eebae5339b2df3c91bc30e7e}} 
 \index{Effekseer\+Object@{Effekseer\+Object}!transform\+\_\+@{transform\+\_\+}}
@@ -368,7 +761,11 @@ static const int \mbox{\hyperlink{class_effekseer_object_a6edfdaac66134eee326492
 
 
 
- Effekseer\+Object.\+h の 118 行目に定義があります。
+変形 
+
+
+
+ Effekseer\+Object.\+h の 51 行目に定義があります。
 
 \mbox{\Hypertarget{class_effekseer_object_a16171d7157607b9d6a5fc0aa4ad9d454}\label{class_effekseer_object_a16171d7157607b9d6a5fc0aa4ad9d454}} 
 \index{Effekseer\+Object@{Effekseer\+Object}!world\+\_\+matrix\+\_\+@{world\+\_\+matrix\+\_\+}}
@@ -378,11 +775,15 @@ static const int \mbox{\hyperlink{class_effekseer_object_a6edfdaac66134eee326492
 
 
 
- Effekseer\+Object.\+h の 113 行目に定義があります。
+行列 
+
+
+
+ Effekseer\+Object.\+h の 46 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/05\+\_\+\+Resource/\+Effekseer/\+Effekseer\+Object/\mbox{\hyperlink{_effekseer_object_8h}{Effekseer\+Object.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/05\+\_\+\+Resource/\+Effekseer/\+Effekseer\+Object/\mbox{\hyperlink{_effekseer_object_8cpp}{Effekseer\+Object.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Effekseer/\mbox{\hyperlink{_effekseer_object_8h}{Effekseer\+Object.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Effekseer/\+Source/\mbox{\hyperlink{_effekseer_object_8cpp}{Effekseer\+Object.\+cpp}}\end{DoxyCompactItemize}

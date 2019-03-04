@@ -2,91 +2,77 @@
 \label{class_plane_polygon}\index{Plane\+Polygon@{Plane\+Polygon}}
 
 
+平面ポリゴン\+Class  
+
+
+
+
 {\ttfamily \#include $<$Plane\+Polygon.\+h$>$}
 
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_plane_polygon_a27987c23a242840b142e0fa11650daf6}{Plane\+Polygon}} (\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} color=\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}(1.\+0f, 1.\+0f, 1.\+0f, 1.\+0f), Vec2 plane\+\_\+size=\+Vec2(1.\+0f, 1.\+0f))
-\item 
-virtual \mbox{\hyperlink{class_plane_polygon_ac91d7ac1ceb00239f54b543690a78dab}{$\sim$\+Plane\+Polygon}} ()
-\item 
-void \mbox{\hyperlink{class_plane_polygon_a2f20691ee0feee4fa428f5d017d7062a}{Draw}} ()
-\item 
-void \mbox{\hyperlink{class_plane_polygon_a55307fc341641d7fd42fe2269acbd113}{Set\+Color}} (\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} color)
-\item 
-void \mbox{\hyperlink{class_plane_polygon_a081458fcb9e758dd8be5b027c66a92ad}{Set\+UV}} (const \mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$texture, const int pattern\+\_\+num=0)
-\item 
-\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_plane_polygon_ac4f8f7b51acdb744231efd342d3b2734}{Get\+Color}} ()
-\item 
+\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_plane_polygon_a93bf115d1d918f4c6372ae760c19ce6b}{get\+Color}} ()
+\begin{DoxyCompactList}\small\item\em 色取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plane_polygon_adc578914c14b2648455e12d2d3724a07}{set\+Color}} (\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} value)
+\begin{DoxyCompactList}\small\item\em 色設定関数 \end{DoxyCompactList}\item 
 unsigned \mbox{\hyperlink{class_plane_polygon_a494068044805bdd4054bc69328c71d7f}{get\+Mesh\+Num}} ()
-\item 
-D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_plane_polygon_a808087c9d82c0eb7cfb0709c9906e833}{Get\+Material}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_plane_polygon_aa475e66d5cbd2c966d47d97dc253ae24}{getp\+Material}} ()
+\begin{DoxyCompactList}\small\item\em マテリアル取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plane_polygon_af2591516a432a77b95932bbb076fad80}{set\+UV}} (\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$texture, int pattern\+\_\+num=0)
+\begin{DoxyCompactList}\small\item\em U\+V設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plane_polygon_ace07dfd794f3f2b4fbd1fe4dea3cca96}{Init}} (\mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}} mesh\+\_\+scale=\{1.\+0f, 1.\+0f\}, X\+Color4 color=\{1.\+0f, 1.\+0f, 1.\+0f, 1.\+0f\})
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plane_polygon_aaf0e9bf23d298371de64bfa4ab76c808}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plane_polygon_a2f20691ee0feee4fa428f5d017d7062a}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plane_polygon_a28ed1c8f4ca971b1a82e8c6567855779}{Draw\+Wire\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em ワイヤーフレームで描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_plane_polygon_aa002e213c1b0481c8b8ee56caadd270d}{Create\+Vertex}} (\mbox{\hyperlink{_vector3_d_8h_a9c2339f516cf07ce4753b8a99fab3791}{Color4}} color, \mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}} plane\+\_\+size)
-\item 
+void \mbox{\hyperlink{class_plane_polygon_a4636b29e9f115e00b16a52089508fb2e}{Create\+Vertex}} (\mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}} mesh\+\_\+scale, \mbox{\hyperlink{_vector3_d_8h_a9c2339f516cf07ce4753b8a99fab3791}{Color4}} color)
+\begin{DoxyCompactList}\small\item\em 頂点作成関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_plane_polygon_a55840ace8bfa216c37f94e963b3fa5e3}{Create\+Index}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em インデックス作成関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_plane_polygon_a4539899c78a222ddc651e45943a7f55b}{Create\+Material}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em マテリアル作成関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_plane_polygon_a88e476aa4b627d7242dc4f1b5eccf889}{Access\+V\+R\+AM}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em V\+R\+A\+Mへアクセス関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_plane_polygon_af4ba95cfaf0aba506eeb58cdc80bfd46}{Registration\+Vertex}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点バッファに登録関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_plane_polygon_a535d0222908f4a4a030d8b525b225554}{Registration\+Index}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em インデックスバッファに登録関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 std\+::vector$<$ \mbox{\hyperlink{class_renderer_direct_x9_1_1_v_e_r_t_e_x__3_d}{Renderer\+Direct\+X9\+::\+V\+E\+R\+T\+E\+X\+\_\+3D}} $>$ \mbox{\hyperlink{class_plane_polygon_a81a3f3d50f00a8772bc47c1015789e7a}{vertex\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点 \end{DoxyCompactList}\item 
 std\+::vector$<$ W\+O\+RD $>$ \mbox{\hyperlink{class_plane_polygon_a75b4c7fca8f0b25f11bd59da087b5a07}{index\+\_\+}}
-\item 
-L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+B\+U\+F\+F\+E\+R9 \mbox{\hyperlink{class_plane_polygon_a04d132486ffae704f7200718ae395170}{vertex\+\_\+buffer\+\_\+}}
-\item 
-L\+P\+D\+I\+R\+E\+C\+T3\+D\+I\+N\+D\+E\+X\+B\+U\+F\+F\+E\+R9 \mbox{\hyperlink{class_plane_polygon_adc95fd0cfa590e34aba0f7928539a0ff}{index\+\_\+buffer\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em インデックス \end{DoxyCompactList}\item 
 D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 \mbox{\hyperlink{class_plane_polygon_a1427bc1b198247eb0a82485f6d63c23e}{material\+\_\+}}
-\item 
-L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_plane_polygon_a9b07736e5b36983967d0fac67c39dc82}{device\+\_\+}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em マテリアル \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+B\+U\+F\+F\+E\+R9 \mbox{\hyperlink{class_plane_polygon_a04d132486ffae704f7200718ae395170}{vertex\+\_\+buffer\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 頂点バッファ \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+I\+N\+D\+E\+X\+B\+U\+F\+F\+E\+R9 \mbox{\hyperlink{class_plane_polygon_adc95fd0cfa590e34aba0f7928539a0ff}{index\+\_\+buffer\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em インデックスバッファ \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_plane_polygon_a9b07736e5b36983967d0fac67c39dc82}{device\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em デバイス \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 static const int \mbox{\hyperlink{class_plane_polygon_ad79c2128868044fb495b70ee08c65e8c}{P\+R\+I\+M\+I\+T\+I\+V\+E\+\_\+\+N\+UM}} = 2
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em プリミティブ数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
+平面ポリゴン\+Class 
 
+平面のポリゴン\+Class 
 
- Plane\+Polygon.\+h の 44 行目に定義があります。
-
-
-
-\subsection{構築子と解体子}
-\mbox{\Hypertarget{class_plane_polygon_a27987c23a242840b142e0fa11650daf6}\label{class_plane_polygon_a27987c23a242840b142e0fa11650daf6}} 
-\index{Plane\+Polygon@{Plane\+Polygon}!Plane\+Polygon@{Plane\+Polygon}}
-\index{Plane\+Polygon@{Plane\+Polygon}!Plane\+Polygon@{Plane\+Polygon}}
-\subsubsection{\texorpdfstring{Plane\+Polygon()}{PlanePolygon()}}
-{\footnotesize\ttfamily Plane\+Polygon\+::\+Plane\+Polygon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}}]{color = {\ttfamily \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}~(1.0f,~1.0f,~1.0f,~1.0f)},  }\item[{\mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}}}]{plane\+\_\+size = {\ttfamily \mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}}~(1.0f,~1.0f)} }\end{DoxyParamCaption})}
-
-
-
- Plane\+Polygon.\+cpp の 48 行目に定義があります。
-
-\mbox{\Hypertarget{class_plane_polygon_ac91d7ac1ceb00239f54b543690a78dab}\label{class_plane_polygon_ac91d7ac1ceb00239f54b543690a78dab}} 
-\index{Plane\+Polygon@{Plane\+Polygon}!````~Plane\+Polygon@{$\sim$\+Plane\+Polygon}}
-\index{````~Plane\+Polygon@{$\sim$\+Plane\+Polygon}!Plane\+Polygon@{Plane\+Polygon}}
-\subsubsection{\texorpdfstring{$\sim$\+Plane\+Polygon()}{~PlanePolygon()}}
-{\footnotesize\ttfamily Plane\+Polygon\+::$\sim$\+Plane\+Polygon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
- Plane\+Polygon.\+cpp の 76 行目に定義があります。
+ Plane\+Polygon.\+h の 24 行目に定義があります。
 
 
 
@@ -99,7 +85,21 @@ static const int \mbox{\hyperlink{class_plane_polygon_ad79c2128868044fb495b70ee0
 
 
 
- Plane\+Polygon.\+cpp の 234 行目に定義があります。
+V\+R\+A\+Mへアクセス関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Plane\+Polygon.\+cpp の 183 行目に定義があります。
 
 \mbox{\Hypertarget{class_plane_polygon_a55840ace8bfa216c37f94e963b3fa5e3}\label{class_plane_polygon_a55840ace8bfa216c37f94e963b3fa5e3}} 
 \index{Plane\+Polygon@{Plane\+Polygon}!Create\+Index@{Create\+Index}}
@@ -109,7 +109,21 @@ static const int \mbox{\hyperlink{class_plane_polygon_ad79c2128868044fb495b70ee0
 
 
 
- Plane\+Polygon.\+cpp の 192 行目に定義があります。
+インデックス作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Plane\+Polygon.\+cpp の 153 行目に定義があります。
 
 \mbox{\Hypertarget{class_plane_polygon_a4539899c78a222ddc651e45943a7f55b}\label{class_plane_polygon_a4539899c78a222ddc651e45943a7f55b}} 
 \index{Plane\+Polygon@{Plane\+Polygon}!Create\+Material@{Create\+Material}}
@@ -119,17 +133,47 @@ static const int \mbox{\hyperlink{class_plane_polygon_ad79c2128868044fb495b70ee0
 
 
 
- Plane\+Polygon.\+cpp の 208 行目に定義があります。
+マテリアル作成関数 
 
-\mbox{\Hypertarget{class_plane_polygon_aa002e213c1b0481c8b8ee56caadd270d}\label{class_plane_polygon_aa002e213c1b0481c8b8ee56caadd270d}} 
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Plane\+Polygon.\+cpp の 163 行目に定義があります。
+
+\mbox{\Hypertarget{class_plane_polygon_a4636b29e9f115e00b16a52089508fb2e}\label{class_plane_polygon_a4636b29e9f115e00b16a52089508fb2e}} 
 \index{Plane\+Polygon@{Plane\+Polygon}!Create\+Vertex@{Create\+Vertex}}
 \index{Create\+Vertex@{Create\+Vertex}!Plane\+Polygon@{Plane\+Polygon}}
 \subsubsection{\texorpdfstring{Create\+Vertex()}{CreateVertex()}}
-{\footnotesize\ttfamily void Plane\+Polygon\+::\+Create\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a9c2339f516cf07ce4753b8a99fab3791}{Color4}}}]{color,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}}}]{plane\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Plane\+Polygon\+::\+Create\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}}}]{mesh\+\_\+scale,  }\item[{\mbox{\hyperlink{_vector3_d_8h_a9c2339f516cf07ce4753b8a99fab3791}{Color4}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Plane\+Polygon.\+cpp の 167 行目に定義があります。
+頂点作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em mesh\+\_\+scale} & メッシュ拡縮 \\
+\hline
+{\em color} & 色 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Plane\+Polygon.\+cpp の 134 行目に定義があります。
 
 \mbox{\Hypertarget{class_plane_polygon_a2f20691ee0feee4fa428f5d017d7062a}\label{class_plane_polygon_a2f20691ee0feee4fa428f5d017d7062a}} 
 \index{Plane\+Polygon@{Plane\+Polygon}!Draw@{Draw}}
@@ -139,37 +183,139 @@ static const int \mbox{\hyperlink{class_plane_polygon_ad79c2128868044fb495b70ee0
 
 
 
- Plane\+Polygon.\+cpp の 129 行目に定義があります。
-
-\mbox{\Hypertarget{class_plane_polygon_ac4f8f7b51acdb744231efd342d3b2734}\label{class_plane_polygon_ac4f8f7b51acdb744231efd342d3b2734}} 
-\index{Plane\+Polygon@{Plane\+Polygon}!Get\+Color@{Get\+Color}}
-\index{Get\+Color@{Get\+Color}!Plane\+Polygon@{Plane\+Polygon}}
-\subsubsection{\texorpdfstring{Get\+Color()}{GetColor()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Plane\+Polygon\+::\+Get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+描画関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Plane\+Polygon.\+h の 72 行目に定義があります。
-
-\mbox{\Hypertarget{class_plane_polygon_a808087c9d82c0eb7cfb0709c9906e833}\label{class_plane_polygon_a808087c9d82c0eb7cfb0709c9906e833}} 
-\index{Plane\+Polygon@{Plane\+Polygon}!Get\+Material@{Get\+Material}}
-\index{Get\+Material@{Get\+Material}!Plane\+Polygon@{Plane\+Polygon}}
-\subsubsection{\texorpdfstring{Get\+Material()}{GetMaterial()}}
-{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$ Plane\+Polygon\+::\+Get\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Plane\+Polygon.\+cpp の 104 行目に定義があります。
 
- Plane\+Polygon.\+h の 75 行目に定義があります。
+\mbox{\Hypertarget{class_plane_polygon_a28ed1c8f4ca971b1a82e8c6567855779}\label{class_plane_polygon_a28ed1c8f4ca971b1a82e8c6567855779}} 
+\index{Plane\+Polygon@{Plane\+Polygon}!Draw\+Wire\+Frame@{Draw\+Wire\+Frame}}
+\index{Draw\+Wire\+Frame@{Draw\+Wire\+Frame}!Plane\+Polygon@{Plane\+Polygon}}
+\subsubsection{\texorpdfstring{Draw\+Wire\+Frame()}{DrawWireFrame()}}
+{\footnotesize\ttfamily void Plane\+Polygon\+::\+Draw\+Wire\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ワイヤーフレームで描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_plane_polygon_a93bf115d1d918f4c6372ae760c19ce6b}\label{class_plane_polygon_a93bf115d1d918f4c6372ae760c19ce6b}} 
+\index{Plane\+Polygon@{Plane\+Polygon}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Plane\+Polygon@{Plane\+Polygon}}
+\subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Plane\+Polygon\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+色取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em X\+Color4} & 色 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Plane\+Polygon.\+cpp の 27 行目に定義があります。
 
 \mbox{\Hypertarget{class_plane_polygon_a494068044805bdd4054bc69328c71d7f}\label{class_plane_polygon_a494068044805bdd4054bc69328c71d7f}} 
 \index{Plane\+Polygon@{Plane\+Polygon}!get\+Mesh\+Num@{get\+Mesh\+Num}}
 \index{get\+Mesh\+Num@{get\+Mesh\+Num}!Plane\+Polygon@{Plane\+Polygon}}
 \subsubsection{\texorpdfstring{get\+Mesh\+Num()}{getMeshNum()}}
-{\footnotesize\ttfamily unsigned Plane\+Polygon\+::get\+Mesh\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily unsigned Plane\+Polygon\+::get\+Mesh\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Plane\+Polygon.\+h の 74 行目に定義があります。
+メッシュ数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & メッシュ数 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Plane\+Polygon.\+cpp の 47 行目に定義があります。
+
+\mbox{\Hypertarget{class_plane_polygon_aa475e66d5cbd2c966d47d97dc253ae24}\label{class_plane_polygon_aa475e66d5cbd2c966d47d97dc253ae24}} 
+\index{Plane\+Polygon@{Plane\+Polygon}!getp\+Material@{getp\+Material}}
+\index{getp\+Material@{getp\+Material}!Plane\+Polygon@{Plane\+Polygon}}
+\subsubsection{\texorpdfstring{getp\+Material()}{getpMaterial()}}
+{\footnotesize\ttfamily D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ Plane\+Polygon\+::getp\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+マテリアル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Plane\+Polygon.\+cpp の 54 行目に定義があります。
+
+\mbox{\Hypertarget{class_plane_polygon_ace07dfd794f3f2b4fbd1fe4dea3cca96}\label{class_plane_polygon_ace07dfd794f3f2b4fbd1fe4dea3cca96}} 
+\index{Plane\+Polygon@{Plane\+Polygon}!Init@{Init}}
+\index{Init@{Init}!Plane\+Polygon@{Plane\+Polygon}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Plane\+Polygon\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}}}]{mesh\+\_\+scale = {\ttfamily \{1.0f,~1.0f\}},  }\item[{\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}}]{color = {\ttfamily \{1.0f,~1.0f,~1.0f,~1.0f\}} }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em mesh\+\_\+scale} & メッシュ拡縮 \\
+\hline
+{\em color} & 色 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Plane\+Polygon.\+cpp の 79 行目に定義があります。
 
 \mbox{\Hypertarget{class_plane_polygon_a535d0222908f4a4a030d8b525b225554}\label{class_plane_polygon_a535d0222908f4a4a030d8b525b225554}} 
 \index{Plane\+Polygon@{Plane\+Polygon}!Registration\+Index@{Registration\+Index}}
@@ -179,7 +325,21 @@ static const int \mbox{\hyperlink{class_plane_polygon_ad79c2128868044fb495b70ee0
 
 
 
- Plane\+Polygon.\+cpp の 306 行目に定義があります。
+インデックスバッファに登録関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Plane\+Polygon.\+cpp の 240 行目に定義があります。
 
 \mbox{\Hypertarget{class_plane_polygon_af4ba95cfaf0aba506eeb58cdc80bfd46}\label{class_plane_polygon_af4ba95cfaf0aba506eeb58cdc80bfd46}} 
 \index{Plane\+Polygon@{Plane\+Polygon}!Registration\+Vertex@{Registration\+Vertex}}
@@ -189,27 +349,95 @@ static const int \mbox{\hyperlink{class_plane_polygon_ad79c2128868044fb495b70ee0
 
 
 
- Plane\+Polygon.\+cpp の 276 行目に定義があります。
-
-\mbox{\Hypertarget{class_plane_polygon_a55307fc341641d7fd42fe2269acbd113}\label{class_plane_polygon_a55307fc341641d7fd42fe2269acbd113}} 
-\index{Plane\+Polygon@{Plane\+Polygon}!Set\+Color@{Set\+Color}}
-\index{Set\+Color@{Set\+Color}!Plane\+Polygon@{Plane\+Polygon}}
-\subsubsection{\texorpdfstring{Set\+Color()}{SetColor()}}
-{\footnotesize\ttfamily void Plane\+Polygon\+::\+Set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}}]{color }\end{DoxyParamCaption})}
+頂点バッファに登録関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Plane\+Polygon.\+cpp の 93 行目に定義があります。
-
-\mbox{\Hypertarget{class_plane_polygon_a081458fcb9e758dd8be5b027c66a92ad}\label{class_plane_polygon_a081458fcb9e758dd8be5b027c66a92ad}} 
-\index{Plane\+Polygon@{Plane\+Polygon}!Set\+UV@{Set\+UV}}
-\index{Set\+UV@{Set\+UV}!Plane\+Polygon@{Plane\+Polygon}}
-\subsubsection{\texorpdfstring{Set\+U\+V()}{SetUV()}}
-{\footnotesize\ttfamily void Plane\+Polygon\+::\+Set\+UV (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$}]{texture,  }\item[{const int}]{pattern\+\_\+num = {\ttfamily 0} }\end{DoxyParamCaption})}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Plane\+Polygon.\+cpp の 217 行目に定義があります。
 
- Plane\+Polygon.\+cpp の 111 行目に定義があります。
+\mbox{\Hypertarget{class_plane_polygon_adc578914c14b2648455e12d2d3724a07}\label{class_plane_polygon_adc578914c14b2648455e12d2d3724a07}} 
+\index{Plane\+Polygon@{Plane\+Polygon}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!Plane\+Polygon@{Plane\+Polygon}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}}
+{\footnotesize\ttfamily void Plane\+Polygon\+::set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}}}]{value }\end{DoxyParamCaption})}
+
+
+
+色設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 色 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Plane\+Polygon.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_plane_polygon_af2591516a432a77b95932bbb076fad80}\label{class_plane_polygon_af2591516a432a77b95932bbb076fad80}} 
+\index{Plane\+Polygon@{Plane\+Polygon}!set\+UV@{set\+UV}}
+\index{set\+UV@{set\+UV}!Plane\+Polygon@{Plane\+Polygon}}
+\subsubsection{\texorpdfstring{set\+U\+V()}{setUV()}}
+{\footnotesize\ttfamily void Plane\+Polygon\+::set\+UV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$}]{texture,  }\item[{int}]{pattern\+\_\+num = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+U\+V設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$texture} & テクスチャオブジェクト \\
+\hline
+{\em pattern\+\_\+num} & パターン数 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Plane\+Polygon.\+cpp の 61 行目に定義があります。
+
+\mbox{\Hypertarget{class_plane_polygon_aaf0e9bf23d298371de64bfa4ab76c808}\label{class_plane_polygon_aaf0e9bf23d298371de64bfa4ab76c808}} 
+\index{Plane\+Polygon@{Plane\+Polygon}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Plane\+Polygon@{Plane\+Polygon}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Plane\+Polygon\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Plane\+Polygon.\+cpp の 96 行目に定義があります。
 
 
 
@@ -218,11 +446,15 @@ static const int \mbox{\hyperlink{class_plane_polygon_ad79c2128868044fb495b70ee0
 \index{Plane\+Polygon@{Plane\+Polygon}!device\+\_\+@{device\+\_\+}}
 \index{device\+\_\+@{device\+\_\+}!Plane\+Polygon@{Plane\+Polygon}}
 \subsubsection{\texorpdfstring{device\+\_\+}{device\_}}
-{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 Plane\+Polygon\+::device\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 Plane\+Polygon\+::device\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Plane\+Polygon.\+h の 99 行目に定義があります。
+デバイス 
+
+
+
+ Plane\+Polygon.\+h の 42 行目に定義があります。
 
 \mbox{\Hypertarget{class_plane_polygon_a75b4c7fca8f0b25f11bd59da087b5a07}\label{class_plane_polygon_a75b4c7fca8f0b25f11bd59da087b5a07}} 
 \index{Plane\+Polygon@{Plane\+Polygon}!index\+\_\+@{index\+\_\+}}
@@ -232,17 +464,25 @@ static const int \mbox{\hyperlink{class_plane_polygon_ad79c2128868044fb495b70ee0
 
 
 
- Plane\+Polygon.\+h の 94 行目に定義があります。
+インデックス 
+
+
+
+ Plane\+Polygon.\+h の 38 行目に定義があります。
 
 \mbox{\Hypertarget{class_plane_polygon_adc95fd0cfa590e34aba0f7928539a0ff}\label{class_plane_polygon_adc95fd0cfa590e34aba0f7928539a0ff}} 
 \index{Plane\+Polygon@{Plane\+Polygon}!index\+\_\+buffer\+\_\+@{index\+\_\+buffer\+\_\+}}
 \index{index\+\_\+buffer\+\_\+@{index\+\_\+buffer\+\_\+}!Plane\+Polygon@{Plane\+Polygon}}
 \subsubsection{\texorpdfstring{index\+\_\+buffer\+\_\+}{index\_buffer\_}}
-{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+I\+N\+D\+E\+X\+B\+U\+F\+F\+E\+R9 Plane\+Polygon\+::index\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+I\+N\+D\+E\+X\+B\+U\+F\+F\+E\+R9 Plane\+Polygon\+::index\+\_\+buffer\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Plane\+Polygon.\+h の 97 行目に定義があります。
+インデックスバッファ 
+
+
+
+ Plane\+Polygon.\+h の 41 行目に定義があります。
 
 \mbox{\Hypertarget{class_plane_polygon_a1427bc1b198247eb0a82485f6d63c23e}\label{class_plane_polygon_a1427bc1b198247eb0a82485f6d63c23e}} 
 \index{Plane\+Polygon@{Plane\+Polygon}!material\+\_\+@{material\+\_\+}}
@@ -252,7 +492,11 @@ static const int \mbox{\hyperlink{class_plane_polygon_ad79c2128868044fb495b70ee0
 
 
 
- Plane\+Polygon.\+h の 98 行目に定義があります。
+マテリアル 
+
+
+
+ Plane\+Polygon.\+h の 39 行目に定義があります。
 
 \mbox{\Hypertarget{class_plane_polygon_ad79c2128868044fb495b70ee08c65e8c}\label{class_plane_polygon_ad79c2128868044fb495b70ee08c65e8c}} 
 \index{Plane\+Polygon@{Plane\+Polygon}!P\+R\+I\+M\+I\+T\+I\+V\+E\+\_\+\+N\+UM@{P\+R\+I\+M\+I\+T\+I\+V\+E\+\_\+\+N\+UM}}
@@ -262,7 +506,11 @@ static const int \mbox{\hyperlink{class_plane_polygon_ad79c2128868044fb495b70ee0
 
 
 
- Plane\+Polygon.\+h の 49 行目に定義があります。
+プリミティブ数 
+
+
+
+ Plane\+Polygon.\+h の 30 行目に定義があります。
 
 \mbox{\Hypertarget{class_plane_polygon_a81a3f3d50f00a8772bc47c1015789e7a}\label{class_plane_polygon_a81a3f3d50f00a8772bc47c1015789e7a}} 
 \index{Plane\+Polygon@{Plane\+Polygon}!vertex\+\_\+@{vertex\+\_\+}}
@@ -272,21 +520,29 @@ static const int \mbox{\hyperlink{class_plane_polygon_ad79c2128868044fb495b70ee0
 
 
 
- Plane\+Polygon.\+h の 93 行目に定義があります。
+頂点 
+
+
+
+ Plane\+Polygon.\+h の 37 行目に定義があります。
 
 \mbox{\Hypertarget{class_plane_polygon_a04d132486ffae704f7200718ae395170}\label{class_plane_polygon_a04d132486ffae704f7200718ae395170}} 
 \index{Plane\+Polygon@{Plane\+Polygon}!vertex\+\_\+buffer\+\_\+@{vertex\+\_\+buffer\+\_\+}}
 \index{vertex\+\_\+buffer\+\_\+@{vertex\+\_\+buffer\+\_\+}!Plane\+Polygon@{Plane\+Polygon}}
 \subsubsection{\texorpdfstring{vertex\+\_\+buffer\+\_\+}{vertex\_buffer\_}}
-{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+B\+U\+F\+F\+E\+R9 Plane\+Polygon\+::vertex\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+B\+U\+F\+F\+E\+R9 Plane\+Polygon\+::vertex\+\_\+buffer\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Plane\+Polygon.\+h の 96 行目に定義があります。
+頂点バッファ 
+
+
+
+ Plane\+Polygon.\+h の 40 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Polygon/\+Plane\+Polygon/\mbox{\hyperlink{_plane_polygon_8h}{Plane\+Polygon.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Polygon/\+Plane\+Polygon/\mbox{\hyperlink{_plane_polygon_8cpp}{Plane\+Polygon.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Polygon/\mbox{\hyperlink{_plane_polygon_8h}{Plane\+Polygon.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Polygon/\+Source/\mbox{\hyperlink{_plane_polygon_8cpp}{Plane\+Polygon.\+cpp}}\end{DoxyCompactItemize}

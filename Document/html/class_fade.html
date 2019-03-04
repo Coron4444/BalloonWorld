@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: Fade クラス</title>
+<title>BalloonWorld: Fade クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -98,72 +98,98 @@ $(document).ready(function(){initNavTree('class_fade.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>フェードクラス  
+<p>フェードClass  
  <a href="class_fade.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="_fade_8h_source.html">Fade.h</a>&gt;</code></p>
 <div class="dynheader">
-Fade の継承関係図</div>
+Fade 連携図</div>
 <div class="dyncontent">
-<div class="center"><img src="class_fade__inherit__graph.png" border="0" usemap="#_fade_inherit__map" alt="Inheritance graph"/></div>
-<map name="_fade_inherit__map" id="_fade_inherit__map">
-<area shape="rect" id="node2" href="class_draw_null.html" title="空白描画Class " alt="" coords="28,155,101,181"/>
-<area shape="rect" id="node3" href="class_draw_base.html" title="描画BaseClass " alt="" coords="24,80,105,107"/>
-<area shape="rect" id="node4" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="5,5,124,32"/>
+<div class="center"><img src="class_fade__coll__graph.png" border="0" usemap="#_fade_coll__map" alt="Collaboration graph"/></div>
+<map name="_fade_coll__map" id="_fade_coll__map">
+<area shape="rect" id="node2" href="class_draw_null.html" title="空白描画Class " alt="" coords="1728,16,1801,43"/>
+<area shape="rect" id="node3" href="class_draw_base.html" title="描画BaseClass " alt="" coords="1433,67,1514,93"/>
+<area shape="rect" id="node5" href="class_game_object_base.html" title="ゲームオブジェクトBaseClass " alt="" coords="1702,163,1827,189"/>
+<area shape="rect" id="node4" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="2001,93,2120,120"/>
+<area shape="rect" id="node6" href="class_collision_base.html" title="衝突BaseClass " alt="" coords="2169,303,2271,329"/>
+<area shape="rect" id="node17" href="class_physics.html" title="物理Class " alt="" coords="2026,225,2095,252"/>
+<area shape="rect" id="node8" href="class_collision_object.html" title="衝突オブジェクトClass " alt="" coords="2412,545,2521,572"/>
+<area shape="rect" id="node7" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject *,\l ARRAY_NUM \&gt;" alt="" coords="2702,372,2838,428"/>
+<area shape="rect" id="node13" href="class_object_of_tree.html" title="ObjectOfTree\&lt; CollisionObject *\&gt;" alt="" coords="2663,545,2877,572"/>
+<area shape="rect" id="node9" href="class_a_a_b_b.html" title="AABBClass " alt="" coords="741,663,800,689"/>
+<area shape="rect" id="node10" href="class_collision_shape_base.html" title="衝突形状BaseClass " alt="" coords="364,673,503,700"/>
+<area shape="rect" id="node16" href="class_collision_object_1_1_shape.html" title="衝突形状Class " alt="" coords="693,713,848,740"/>
+<area shape="rect" id="node11" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="107,516,183,543"/>
+<area shape="rect" id="node18" href="class_transform.html" title="変形Class " alt="" coords="901,423,980,449"/>
+<area shape="rect" id="node19" href="class_matrix.html" title="行列Class " alt="" coords="404,191,463,217"/>
+<area shape="rect" id="node23" href="class_draw_common_data.html" title="描画共通データClass " alt="" coords="1033,113,1164,140"/>
+<area shape="rect" id="node24" href="class_camera.html" title="カメラClass " alt="" coords="737,211,804,237"/>
+<area shape="rect" id="node14" href="class_space_of_tree.html" title="SpaceOfTree\&lt; CollisionObject *\&gt;" alt="" coords="3035,545,3248,572"/>
+<area shape="rect" id="node15" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject::Shape\l *, ARRAY_NUM \&gt;" alt="" coords="1188,676,1355,732"/>
+<area shape="rect" id="node21" href="class_draw_order_list.html" title="描画注文リストClass " alt="" coords="1047,24,1151,51"/>
+<area shape="rect" id="node22" href="class_bit_flag.html" title="ビットフラグClass " alt="" coords="739,5,802,32"/>
+<area shape="rect" id="node25" href="class_camera_1_1_state.html" title="カメラステートClass " alt="" coords="1045,228,1152,255"/>
+<area shape="rect" id="node26" href="class_render_texture.html" title="レンダーテクスチャClass " alt="" coords="717,120,824,147"/>
+<area shape="rect" id="node27" href="class_interpolation.html" title="Interpolation\&lt; float \&gt;" alt="" coords="1695,397,1835,424"/>
+<area shape="rect" id="node28" href="class_interpolation_element.html" title="補間要素Class(Template) " alt="" coords="1379,382,1568,423"/>
+<area shape="rect" id="node29" href="class_plane_polygon.html" title="平面ポリゴンClass " alt="" coords="1713,271,1816,297"/>
+<area shape="rect" id="node30" href="class_texture_object.html" title="テクスチャオブジェクトClass " alt="" coords="1713,345,1816,372"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 公開型</h2></td></tr>
-<tr class="memitem:ac06f27215b454aa05b93c236476d6e80"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80">Type</a> { <a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80aff416f0a20b074a38a4f67e20f001828">TYPE_NONE</a> = -1, 
-<a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80a6058f5db637853756ba18166da96043e">TYPE_NORMAL</a>, 
-<a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80af424897abd4b53f7af0bf51f1190a427">TYPE_TRANSITION_01</a>, 
-<a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80ab05e3987a6b16a8ebe7e284aa8922ea0">TYPE_MAX</a>
+<tr class="memitem:ac06f27215b454aa05b93c236476d6e80"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80">Type</a> { <a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80ab50339a10e1de285ac99d4c3990b8693">Type::NONE</a> = -1, 
+<a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80a1e23852820b9154316c7c06e2b7ba051">Type::NORMAL</a>, 
+<a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80a6d792d623461e0dcc819e2caacbe4e7e">Type::TRANSITION_01</a>, 
+<a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80a26a4b44a837bf97b972628509912b4a5">Type::MAX</a>
  }</td></tr>
 <tr class="separator:ac06f27215b454aa05b93c236476d6e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae77826bf3ff2ab95fb7b3b6f95cba80a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80a">State</a> { <a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80aae593109007af793c6b0e7e287dcc7803">STATE_NONE</a> = -1, 
-<a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80aa5b9862985db043392d465dd7a7a7805b">STATE_FADE_IN</a>, 
-<a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80aa41e3fdc3eb47279527440d923fccbb6e">STATE_FADE_OUT</a>, 
-<a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80aab65dcff35c00997ef90c43d254906121">STATE_MAX</a>
+<tr class="memitem:ae77826bf3ff2ab95fb7b3b6f95cba80a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80a">State</a> { <a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80aab50339a10e1de285ac99d4c3990b8693">State::NONE</a> = -1, 
+<a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80aa3ce542dfb80acd9d3ecc081f236950cf">State::FADE_IN</a>, 
+<a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80aae5c4ab91cc2038893a3a99b567f13199">State::FADE_OUT</a>, 
+<a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80aa26a4b44a837bf97b972628509912b4a5">State::MAX</a>
  }</td></tr>
 <tr class="separator:ae77826bf3ff2ab95fb7b3b6f95cba80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:aec1ac5a0a80be8d7a2a43dbde2a741ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#aec1ac5a0a80be8d7a2a43dbde2a741ee">Fade</a> ()</td></tr>
-<tr class="memdesc:aec1ac5a0a80be8d7a2a43dbde2a741ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#aec1ac5a0a80be8d7a2a43dbde2a741ee">[詳解]</a><br /></td></tr>
-<tr class="separator:aec1ac5a0a80be8d7a2a43dbde2a741ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58ddf7585cb85bf84f5e83adbe2734f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a58ddf7585cb85bf84f5e83adbe2734f9">~Fade</a> ()</td></tr>
-<tr class="memdesc:a58ddf7585cb85bf84f5e83adbe2734f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="#a58ddf7585cb85bf84f5e83adbe2734f9">[詳解]</a><br /></td></tr>
-<tr class="separator:a58ddf7585cb85bf84f5e83adbe2734f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab12848f7102a219968c86ed699a6e5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#aab12848f7102a219968c86ed699a6e5d">Init</a> (<a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80">Type</a> type, <a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80a">State</a> state, <a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a> size, <a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a> color, float speed)</td></tr>
-<tr class="memdesc:aab12848f7102a219968c86ed699a6e5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#aab12848f7102a219968c86ed699a6e5d">[詳解]</a><br /></td></tr>
-<tr class="separator:aab12848f7102a219968c86ed699a6e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a468f87b671026f883443d6cdceeb95c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_matrix_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a468f87b671026f883443d6cdceeb95c6">getpMatrix</a> (unsigned object_index) override</td></tr>
+<tr class="memdesc:a468f87b671026f883443d6cdceeb95c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列取得関数  <a href="#a468f87b671026f883443d6cdceeb95c6">[詳解]</a><br /></td></tr>
+<tr class="separator:a468f87b671026f883443d6cdceeb95c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd049cfdaf165670d1b97b03151a5cd"><td class="memItemLeft" align="right" valign="top">D3DMATERIAL9 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#adbd049cfdaf165670d1b97b03151a5cd">getpMaterial</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
+<tr class="memdesc:adbd049cfdaf165670d1b97b03151a5cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル取得関数  <a href="#adbd049cfdaf165670d1b97b03151a5cd">[詳解]</a><br /></td></tr>
+<tr class="separator:adbd049cfdaf165670d1b97b03151a5cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098d3f7b05dbcdecb185c6cce5bbcec0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80">Type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a098d3f7b05dbcdecb185c6cce5bbcec0">getpType</a> ()</td></tr>
+<tr class="memdesc:a098d3f7b05dbcdecb185c6cce5bbcec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイプ取得関数  <a href="#a098d3f7b05dbcdecb185c6cce5bbcec0">[詳解]</a><br /></td></tr>
+<tr class="separator:a098d3f7b05dbcdecb185c6cce5bbcec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5079a04d7f61eb68bf130ad418e0dbb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80a">State</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a5079a04d7f61eb68bf130ad418e0dbb8">getpState</a> ()</td></tr>
+<tr class="memdesc:a5079a04d7f61eb68bf130ad418e0dbb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステート取得関数  <a href="#a5079a04d7f61eb68bf130ad418e0dbb8">[詳解]</a><br /></td></tr>
+<tr class="separator:a5079a04d7f61eb68bf130ad418e0dbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7abd60e0881a5b7e9548ec544a0e2198"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a7abd60e0881a5b7e9548ec544a0e2198">getpEndFlag</a> ()</td></tr>
+<tr class="memdesc:a7abd60e0881a5b7e9548ec544a0e2198"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了フラグ取得関数  <a href="#a7abd60e0881a5b7e9548ec544a0e2198">[詳解]</a><br /></td></tr>
+<tr class="separator:a7abd60e0881a5b7e9548ec544a0e2198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac703f40e9ed3f91c41525d884306a260"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transform.html">Transform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#ac703f40e9ed3f91c41525d884306a260">getpTransform</a> ()</td></tr>
+<tr class="memdesc:ac703f40e9ed3f91c41525d884306a260"><td class="mdescLeft">&#160;</td><td class="mdescRight">状態取得関数  <a href="#ac703f40e9ed3f91c41525d884306a260">[詳解]</a><br /></td></tr>
+<tr class="separator:ac703f40e9ed3f91c41525d884306a260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab971b8bb17f81d73e0405291a6512a39"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DTEXTURE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#ab971b8bb17f81d73e0405291a6512a39">getpDiffuseTexture</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
+<tr class="memdesc:ab971b8bb17f81d73e0405291a6512a39"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディヒューズテクスチャ取得関数  <a href="#ab971b8bb17f81d73e0405291a6512a39">[詳解]</a><br /></td></tr>
+<tr class="separator:ab971b8bb17f81d73e0405291a6512a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2a47819e1390abcae3259bcb42bddf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#ac2a47819e1390abcae3259bcb42bddf5">Init</a> ()</td></tr>
+<tr class="memdesc:ac2a47819e1390abcae3259bcb42bddf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#ac2a47819e1390abcae3259bcb42bddf5">[詳解]</a><br /></td></tr>
+<tr class="separator:ac2a47819e1390abcae3259bcb42bddf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae77d06811869d3c8162a42c3e0e14f7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#ae77d06811869d3c8162a42c3e0e14f7f">Uninit</a> () override</td></tr>
 <tr class="memdesc:ae77d06811869d3c8162a42c3e0e14f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#ae77d06811869d3c8162a42c3e0e14f7f">[詳解]</a><br /></td></tr>
 <tr class="separator:ae77d06811869d3c8162a42c3e0e14f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1579b5b9020344a1131ea11c15f2c0bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a1579b5b9020344a1131ea11c15f2c0bd">Update</a> ()</td></tr>
-<tr class="memdesc:a1579b5b9020344a1131ea11c15f2c0bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#a1579b5b9020344a1131ea11c15f2c0bd">[詳解]</a><br /></td></tr>
-<tr class="separator:a1579b5b9020344a1131ea11c15f2c0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a332851a9b9fc0b9e3bd0f536f9026004"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a332851a9b9fc0b9e3bd0f536f9026004">Update</a> () override</td></tr>
+<tr class="memdesc:a332851a9b9fc0b9e3bd0f536f9026004"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#a332851a9b9fc0b9e3bd0f536f9026004">[詳解]</a><br /></td></tr>
+<tr class="separator:a332851a9b9fc0b9e3bd0f536f9026004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84a9e688650ac500e03cde74ff0210b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a84a9e688650ac500e03cde74ff0210b8">Draw</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
 <tr class="memdesc:a84a9e688650ac500e03cde74ff0210b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画関数  <a href="#a84a9e688650ac500e03cde74ff0210b8">[詳解]</a><br /></td></tr>
 <tr class="separator:a84a9e688650ac500e03cde74ff0210b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e41a31f9801476e63d2082804375e96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a2e41a31f9801476e63d2082804375e96">getpMatrix</a> (unsigned object_index) override</td></tr>
-<tr class="memdesc:a2e41a31f9801476e63d2082804375e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列ポインタ取得関数  <a href="#a2e41a31f9801476e63d2082804375e96">[詳解]</a><br /></td></tr>
-<tr class="separator:a2e41a31f9801476e63d2082804375e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed5a29d39a5fd6161a9aed73d5f30870"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80">Type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#aed5a29d39a5fd6161a9aed73d5f30870">GetType</a> () const</td></tr>
-<tr class="separator:aed5a29d39a5fd6161a9aed73d5f30870"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb41dfcadf75dd4c980da68e243cc310"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80a">State</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#aeb41dfcadf75dd4c980da68e243cc310">GetState</a> () const</td></tr>
-<tr class="separator:aeb41dfcadf75dd4c980da68e243cc310"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69db8b97a493082644fbd82c9ef3d1aa"><td class="memItemLeft" align="right" valign="top">D3DMATERIAL9 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a69db8b97a493082644fbd82c9ef3d1aa">getpMaterial</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
-<tr class="memdesc:a69db8b97a493082644fbd82c9ef3d1aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルポインタ取得関数  <a href="#a69db8b97a493082644fbd82c9ef3d1aa">[詳解]</a><br /></td></tr>
-<tr class="separator:a69db8b97a493082644fbd82c9ef3d1aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc8adf28ce2e4270e5fb3907d83dadd0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#acc8adf28ce2e4270e5fb3907d83dadd0">GetEndFlag</a> () const</td></tr>
-<tr class="separator:acc8adf28ce2e4270e5fb3907d83dadd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a177209e72a27858ceb2d339321e9c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transform.html">Transform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a1a177209e72a27858ceb2d339321e9c4">GetTransform</a> ()</td></tr>
-<tr class="separator:a1a177209e72a27858ceb2d339321e9c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e047c532d430095e7d0d70288289a82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_texture_object.html">TextureObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a4e047c532d430095e7d0d70288289a82">GetTransition01Object</a> ()</td></tr>
-<tr class="separator:a4e047c532d430095e7d0d70288289a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47bd131483ff8124e059cf502de8e24a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a47bd131483ff8124e059cf502de8e24a">Start</a> (<a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80">Type</a> type, <a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80a">State</a> state, <a class="el" href="_vector3_d_8h.html#a5ef6e95dfc5f9d3820b71772d99bbc25">Vec2</a> size, <a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a> color, float speed)</td></tr>
+<tr class="memdesc:a47bd131483ff8124e059cf502de8e24a"><td class="mdescLeft">&#160;</td><td class="mdescRight">スタート関数  <a href="#a47bd131483ff8124e059cf502de8e24a">[詳解]</a><br /></td></tr>
+<tr class="separator:a47bd131483ff8124e059cf502de8e24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_draw_null"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_draw_null')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_draw_null.html">DrawNull</a> に属する継承公開メンバ関数</td></tr>
 <tr class="memitem:a8bddfa6ee87e47b2ecbbe6803b088e37 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a8bddfa6ee87e47b2ecbbe6803b088e37">getObjectNum</a> () override</td></tr>
 <tr class="memdesc:a8bddfa6ee87e47b2ecbbe6803b088e37 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト数取得関数  <a href="class_draw_null.html#a8bddfa6ee87e47b2ecbbe6803b088e37">[詳解]</a><br /></td></tr>
@@ -171,56 +197,67 @@ Fade の継承関係図</div>
 <tr class="memitem:a4c566a37d27fac3dcf76c7970443f375 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a4c566a37d27fac3dcf76c7970443f375">getMeshNum</a> (unsigned object_index) override</td></tr>
 <tr class="memdesc:a4c566a37d27fac3dcf76c7970443f375 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ数取得関数  <a href="class_draw_null.html#a4c566a37d27fac3dcf76c7970443f375">[詳解]</a><br /></td></tr>
 <tr class="separator:a4c566a37d27fac3dcf76c7970443f375 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87d21f70b6fed637a6e23029f29818c1 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual LPDIRECT3DTEXTURE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a87d21f70b6fed637a6e23029f29818c1">getpDecaleTexture</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
-<tr class="memdesc:a87d21f70b6fed637a6e23029f29818c1 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">デカールテクスチャポインタ取得関数  <a href="class_draw_null.html#a87d21f70b6fed637a6e23029f29818c1">[詳解]</a><br /></td></tr>
-<tr class="separator:a87d21f70b6fed637a6e23029f29818c1 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74aee63e6146b7256b80610abfb3eabb inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a74aee63e6146b7256b80610abfb3eabb">getBoneNum</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
+<tr class="memdesc:a74aee63e6146b7256b80610abfb3eabb inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボーン数取得関数  <a href="class_draw_null.html#a74aee63e6146b7256b80610abfb3eabb">[詳解]</a><br /></td></tr>
+<tr class="separator:a74aee63e6146b7256b80610abfb3eabb inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9843abd940623bf84bbb0931f7e21af6 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_matrix_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a9843abd940623bf84bbb0931f7e21af6">getpBoneMatrix</a> (unsigned object_index, unsigned mesh_index, unsigned bone_index) override</td></tr>
+<tr class="memdesc:a9843abd940623bf84bbb0931f7e21af6 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボーン行列取得関数  <a href="class_draw_null.html#a9843abd940623bf84bbb0931f7e21af6">[詳解]</a><br /></td></tr>
+<tr class="separator:a9843abd940623bf84bbb0931f7e21af6 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdb03713b973fd1f65c914fa146414a1 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual LPDIRECT3DTEXTURE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#abdb03713b973fd1f65c914fa146414a1">getpNormalTexture</a> (unsigned object_index, unsigned mesh_index) override</td></tr>
-<tr class="memdesc:abdb03713b973fd1f65c914fa146414a1 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">法線テクスチャポインタ取得関数  <a href="class_draw_null.html#abdb03713b973fd1f65c914fa146414a1">[詳解]</a><br /></td></tr>
+<tr class="memdesc:abdb03713b973fd1f65c914fa146414a1 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">法線テクスチャ取得関数  <a href="class_draw_null.html#abdb03713b973fd1f65c914fa146414a1">[詳解]</a><br /></td></tr>
 <tr class="separator:abdb03713b973fd1f65c914fa146414a1 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af03c2d730ff3351baf234f89cc28303b inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#af03c2d730ff3351baf234f89cc28303b">~DrawNull</a> ()</td></tr>
 <tr class="memdesc:af03c2d730ff3351baf234f89cc28303b inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="class_draw_null.html#af03c2d730ff3351baf234f89cc28303b">[詳解]</a><br /></td></tr>
 <tr class="separator:af03c2d730ff3351baf234f89cc28303b inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20aef1e54c1a158b741bfd731e18efdf inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a20aef1e54c1a158b741bfd731e18efdf">Init</a> () override</td></tr>
-<tr class="memdesc:a20aef1e54c1a158b741bfd731e18efdf inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="class_draw_null.html#a20aef1e54c1a158b741bfd731e18efdf">[詳解]</a><br /></td></tr>
-<tr class="separator:a20aef1e54c1a158b741bfd731e18efdf inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e295d7fa2d2b78cfe3121e0a0fcd799 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a1e295d7fa2d2b78cfe3121e0a0fcd799">Reset</a> () override</td></tr>
+<tr class="memdesc:a1e295d7fa2d2b78cfe3121e0a0fcd799 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">リセット関数  <a href="class_draw_null.html#a1e295d7fa2d2b78cfe3121e0a0fcd799">[詳解]</a><br /></td></tr>
+<tr class="separator:a1e295d7fa2d2b78cfe3121e0a0fcd799 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed3bbedfe8db8daf7cafa143750f2114 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#aed3bbedfe8db8daf7cafa143750f2114">DebugDisplay</a> () override</td></tr>
 <tr class="memdesc:aed3bbedfe8db8daf7cafa143750f2114 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ表示関数  <a href="class_draw_null.html#aed3bbedfe8db8daf7cafa143750f2114">[詳解]</a><br /></td></tr>
 <tr class="separator:aed3bbedfe8db8daf7cafa143750f2114 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3baf78b024837c8ebb2471e7505db6ea inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a3baf78b024837c8ebb2471e7505db6ea">SettingBeforeDrawing</a> (<a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index) override</td></tr>
-<tr class="memdesc:a3baf78b024837c8ebb2471e7505db6ea inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画前設定関数  <a href="class_draw_null.html#a3baf78b024837c8ebb2471e7505db6ea">[詳解]</a><br /></td></tr>
-<tr class="separator:a3baf78b024837c8ebb2471e7505db6ea inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3600d14d2ce10f4281723567f97c08be inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a3600d14d2ce10f4281723567f97c08be">SettingAfterDrawing</a> (<a class="el" href="class_camera.html">Camera</a> *camera, unsigned object_index) override</td></tr>
-<tr class="memdesc:a3600d14d2ce10f4281723567f97c08be inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画後設定関数  <a href="class_draw_null.html#a3600d14d2ce10f4281723567f97c08be">[詳解]</a><br /></td></tr>
-<tr class="separator:a3600d14d2ce10f4281723567f97c08be inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac79a0adfc83537d5e677851463bb3028 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#ac79a0adfc83537d5e677851463bb3028">ObjectSettingBefore</a> (unsigned object_index) override</td></tr>
+<tr class="memdesc:ac79a0adfc83537d5e677851463bb3028 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト前設定関数  <a href="class_draw_null.html#ac79a0adfc83537d5e677851463bb3028">[詳解]</a><br /></td></tr>
+<tr class="separator:ac79a0adfc83537d5e677851463bb3028 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4466ae238e46cffe4a10fd253caf17 inherit pub_methods_class_draw_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_null.html#a5b4466ae238e46cffe4a10fd253caf17">ObjectSettingAfter</a> (unsigned object_index) override</td></tr>
+<tr class="memdesc:a5b4466ae238e46cffe4a10fd253caf17 inherit pub_methods_class_draw_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト後設定関数  <a href="class_draw_null.html#a5b4466ae238e46cffe4a10fd253caf17">[詳解]</a><br /></td></tr>
+<tr class="separator:a5b4466ae238e46cffe4a10fd253caf17 inherit pub_methods_class_draw_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_draw_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_draw_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_draw_base.html">DrawBase</a> に属する継承公開メンバ関数</td></tr>
 <tr class="memitem:af5fe522d4bbce381e6fe8e5601b69e9f inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_order_list.html">DrawOrderList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#af5fe522d4bbce381e6fe8e5601b69e9f">getpDrawOrderList</a> ()</td></tr>
-<tr class="memdesc:af5fe522d4bbce381e6fe8e5601b69e9f inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画注文リストポインタ取得関数  <a href="class_draw_base.html#af5fe522d4bbce381e6fe8e5601b69e9f">[詳解]</a><br /></td></tr>
+<tr class="memdesc:af5fe522d4bbce381e6fe8e5601b69e9f inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画注文リスト取得関数  <a href="class_draw_base.html#af5fe522d4bbce381e6fe8e5601b69e9f">[詳解]</a><br /></td></tr>
 <tr class="separator:af5fe522d4bbce381e6fe8e5601b69e9f inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac55a0cbcb51067ec9a3515530bb3f7de inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_common_data.html">DrawCommonData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#ac55a0cbcb51067ec9a3515530bb3f7de">getpDrawCommonData</a> ()</td></tr>
+<tr class="memdesc:ac55a0cbcb51067ec9a3515530bb3f7de inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ取得関数  <a href="class_draw_base.html#ac55a0cbcb51067ec9a3515530bb3f7de">[詳解]</a><br /></td></tr>
+<tr class="separator:ac55a0cbcb51067ec9a3515530bb3f7de inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75591fe15951811f294dc964a7894214 inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a75591fe15951811f294dc964a7894214">setDrawCommonData</a> (<a class="el" href="class_draw_common_data.html">DrawCommonData</a> *value)</td></tr>
+<tr class="memdesc:a75591fe15951811f294dc964a7894214 inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画共通データ設定関数  <a href="class_draw_base.html#a75591fe15951811f294dc964a7894214">[詳解]</a><br /></td></tr>
+<tr class="separator:a75591fe15951811f294dc964a7894214 inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af276fa23e7c5f51a4fdeab016456a992 inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#af276fa23e7c5f51a4fdeab016456a992">~DrawBase</a> ()=0</td></tr>
 <tr class="memdesc:af276fa23e7c5f51a4fdeab016456a992 inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="class_draw_base.html#af276fa23e7c5f51a4fdeab016456a992">[詳解]</a><br /></td></tr>
 <tr class="separator:af276fa23e7c5f51a4fdeab016456a992 inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa18abd488181eed72822f92a0f2521fe inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#aa18abd488181eed72822f92a0f2521fe">LimitedChangeCameraType</a> (<a class="el" href="class_camera.html">Camera</a> *camera, <a class="el" href="class_camera.html#a3b0a1f58deca679ac665f61c480d1dcb">Camera::Type</a> type)</td></tr>
-<tr class="memdesc:aa18abd488181eed72822f92a0f2521fe inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">限定カメラタイプ変更関数  <a href="class_draw_base.html#aa18abd488181eed72822f92a0f2521fe">[詳解]</a><br /></td></tr>
-<tr class="separator:aa18abd488181eed72822f92a0f2521fe inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48b144e61928b7658c7a849017e40c79 inherit pub_methods_class_draw_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_base.html#a48b144e61928b7658c7a849017e40c79">RevivalCameraType</a> (<a class="el" href="class_camera.html">Camera</a> *camera)</td></tr>
-<tr class="memdesc:a48b144e61928b7658c7a849017e40c79 inherit pub_methods_class_draw_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラタイプ復活関数  <a href="class_draw_base.html#a48b144e61928b7658c7a849017e40c79">[詳解]</a><br /></td></tr>
-<tr class="separator:a48b144e61928b7658c7a849017e40c79 inherit pub_methods_class_draw_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_component_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_component_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_component_base.html">ComponentBase</a> に属する継承公開メンバ関数</td></tr>
 <tr class="memitem:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object_base.html">GameObjectBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#ab9517b92e45e084b1cc450c147e16642">getpGameObject</a> ()</td></tr>
-<tr class="memdesc:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクトポインタ取得関数  <a href="class_component_base.html#ab9517b92e45e084b1cc450c147e16642">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクト取得関数  <a href="class_component_base.html#ab9517b92e45e084b1cc450c147e16642">[詳解]</a><br /></td></tr>
 <tr class="separator:ab9517b92e45e084b1cc450c147e16642 inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#ae671317076d3c89ba0793ae2cd34d5ea">setGameObject</a> (<a class="el" href="class_game_object_base.html">GameObjectBase</a> *value)</td></tr>
-<tr class="memdesc:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクトポインタ設定関数  <a href="class_component_base.html#ae671317076d3c89ba0793ae2cd34d5ea">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオブジェクト設定関数  <a href="class_component_base.html#ae671317076d3c89ba0793ae2cd34d5ea">[詳解]</a><br /></td></tr>
 <tr class="separator:ae671317076d3c89ba0793ae2cd34d5ea inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f289382f4dd0187a6f355e06c5c08e inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#a36f289382f4dd0187a6f355e06c5c08e">getIsEnable</a> ()</td></tr>
+<tr class="memdesc:a36f289382f4dd0187a6f355e06c5c08e inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効フラグ取得関数  <a href="class_component_base.html#a36f289382f4dd0187a6f355e06c5c08e">[詳解]</a><br /></td></tr>
+<tr class="separator:a36f289382f4dd0187a6f355e06c5c08e inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded407119b125a269d272647fc4c4639 inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#aded407119b125a269d272647fc4c4639">setIsEnable</a> (bool value)</td></tr>
+<tr class="memdesc:aded407119b125a269d272647fc4c4639 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効フラグ取得関数  <a href="class_component_base.html#aded407119b125a269d272647fc4c4639">[詳解]</a><br /></td></tr>
+<tr class="separator:aded407119b125a269d272647fc4c4639 inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80a37e33ecca2471b2186fba1aaf2cdd inherit pub_methods_class_component_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#a80a37e33ecca2471b2186fba1aaf2cdd">~ComponentBase</a> ()=0</td></tr>
 <tr class="memdesc:a80a37e33ecca2471b2186fba1aaf2cdd inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="class_component_base.html#a80a37e33ecca2471b2186fba1aaf2cdd">[詳解]</a><br /></td></tr>
 <tr class="separator:a80a37e33ecca2471b2186fba1aaf2cdd inherit pub_methods_class_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
-<tr class="memitem:acd9c0d6231180af183d6301f31fa0053"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#acd9c0d6231180af183d6301f31fa0053">TEXTURE_PATH</a></td></tr>
-<tr class="separator:acd9c0d6231180af183d6301f31fa0053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7334ff03d82f19ab5129cb40351f9e77"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a7334ff03d82f19ab5129cb40351f9e77">TEXTURE_NAME_LOAD</a> = &quot;Fade/NowLoading.png&quot;</td></tr>
+<tr class="memdesc:a7334ff03d82f19ab5129cb40351f9e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loadテクスチャ名  <a href="#a7334ff03d82f19ab5129cb40351f9e77">[詳解]</a><br /></td></tr>
+<tr class="separator:a7334ff03d82f19ab5129cb40351f9e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5d6f86f07e33205224fa486ff22c51d"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#ab5d6f86f07e33205224fa486ff22c51d">TEXTURE_NAME_TRANSITION_01</a> = &quot;Fade/Transition_01.png&quot;</td></tr>
+<tr class="memdesc:ab5d6f86f07e33205224fa486ff22c51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ名  <a href="#ab5d6f86f07e33205224fa486ff22c51d">[詳解]</a><br /></td></tr>
 <tr class="separator:ab5d6f86f07e33205224fa486ff22c51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -231,50 +268,67 @@ Fade の継承関係図</div>
 <tr class="memitem:ad5ff5a5645edb88fd5544819077ff13f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80a">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#ad5ff5a5645edb88fd5544819077ff13f">state_</a></td></tr>
 <tr class="memdesc:ad5ff5a5645edb88fd5544819077ff13f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステート  <a href="#ad5ff5a5645edb88fd5544819077ff13f">[詳解]</a><br /></td></tr>
 <tr class="separator:ad5ff5a5645edb88fd5544819077ff13f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab51b04ff5e6225016ccb012fce80dd74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_plane_polygon.html">PlanePolygon</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#ab51b04ff5e6225016ccb012fce80dd74">plane_polygon_</a></td></tr>
+<tr class="memitem:ab51b04ff5e6225016ccb012fce80dd74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_plane_polygon.html">PlanePolygon</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#ab51b04ff5e6225016ccb012fce80dd74">plane_polygon_</a> = nullptr</td></tr>
 <tr class="memdesc:ab51b04ff5e6225016ccb012fce80dd74"><td class="mdescLeft">&#160;</td><td class="mdescRight">板ポリゴン  <a href="#ab51b04ff5e6225016ccb012fce80dd74">[詳解]</a><br /></td></tr>
 <tr class="separator:ab51b04ff5e6225016ccb012fce80dd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b94f7f5317c98e1db1cc17346313626"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a3b94f7f5317c98e1db1cc17346313626">transform_</a></td></tr>
-<tr class="memdesc:a3b94f7f5317c98e1db1cc17346313626"><td class="mdescLeft">&#160;</td><td class="mdescRight">状態  <a href="#a3b94f7f5317c98e1db1cc17346313626">[詳解]</a><br /></td></tr>
-<tr class="separator:a3b94f7f5317c98e1db1cc17346313626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f99d8f5316d5461ea7197aed18c4417"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transform.html">Transform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a3f99d8f5316d5461ea7197aed18c4417">transform_</a> = nullptr</td></tr>
+<tr class="memdesc:a3f99d8f5316d5461ea7197aed18c4417"><td class="mdescLeft">&#160;</td><td class="mdescRight">状態  <a href="#a3f99d8f5316d5461ea7197aed18c4417">[詳解]</a><br /></td></tr>
+<tr class="separator:a3f99d8f5316d5461ea7197aed18c4417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bdc7ea6de7666601fa363e503ccc181"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_texture_object.html">TextureObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a5bdc7ea6de7666601fa363e503ccc181">load_texture_</a> = nullptr</td></tr>
+<tr class="memdesc:a5bdc7ea6de7666601fa363e503ccc181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loadテクスチャオブジェクト  <a href="#a5bdc7ea6de7666601fa363e503ccc181">[詳解]</a><br /></td></tr>
+<tr class="separator:a5bdc7ea6de7666601fa363e503ccc181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ff29d821f15a33e2110acc03c8d8a84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_texture_object.html">TextureObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a4ff29d821f15a33e2110acc03c8d8a84">transition01_texture_</a> = nullptr</td></tr>
+<tr class="memdesc:a4ff29d821f15a33e2110acc03c8d8a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャオブジェクト  <a href="#a4ff29d821f15a33e2110acc03c8d8a84">[詳解]</a><br /></td></tr>
+<tr class="separator:a4ff29d821f15a33e2110acc03c8d8a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3b40978f7e38980379c9189aadcf310"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_vector3_d_8h.html#a680c30c4a07d86fe763c7e01169cd6cc">XColor4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#af3b40978f7e38980379c9189aadcf310">color_</a></td></tr>
 <tr class="memdesc:af3b40978f7e38980379c9189aadcf310"><td class="mdescLeft">&#160;</td><td class="mdescRight">色  <a href="#af3b40978f7e38980379c9189aadcf310">[詳解]</a><br /></td></tr>
 <tr class="separator:af3b40978f7e38980379c9189aadcf310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af46cade81dd992a5d8a0fe241aefd8b2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#af46cade81dd992a5d8a0fe241aefd8b2">speed_</a></td></tr>
 <tr class="memdesc:af46cade81dd992a5d8a0fe241aefd8b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">フェード速度  <a href="#af46cade81dd992a5d8a0fe241aefd8b2">[詳解]</a><br /></td></tr>
 <tr class="separator:af46cade81dd992a5d8a0fe241aefd8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeeddfe04f4dc156f2f4f0db903bb7fa1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#aeeddfe04f4dc156f2f4f0db903bb7fa1">end_flag_</a></td></tr>
+<tr class="memitem:aeeddfe04f4dc156f2f4f0db903bb7fa1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#aeeddfe04f4dc156f2f4f0db903bb7fa1">end_flag_</a> = true</td></tr>
 <tr class="memdesc:aeeddfe04f4dc156f2f4f0db903bb7fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了フラグ  <a href="#aeeddfe04f4dc156f2f4f0db903bb7fa1">[詳解]</a><br /></td></tr>
 <tr class="separator:aeeddfe04f4dc156f2f4f0db903bb7fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ff29d821f15a33e2110acc03c8d8a84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_texture_object.html">TextureObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a4ff29d821f15a33e2110acc03c8d8a84">transition01_texture_</a></td></tr>
-<tr class="memdesc:a4ff29d821f15a33e2110acc03c8d8a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャオブジェクト  <a href="#a4ff29d821f15a33e2110acc03c8d8a84">[詳解]</a><br /></td></tr>
-<tr class="separator:a4ff29d821f15a33e2110acc03c8d8a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7ace29a63666158f1b3b12ddf10be5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_interpolation.html">Interpolation</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a2e7ace29a63666158f1b3b12ddf10be5">inter_container_</a></td></tr>
+<tr class="memdesc:a2e7ace29a63666158f1b3b12ddf10be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">補間コンテナ  <a href="#a2e7ace29a63666158f1b3b12ddf10be5">[詳解]</a><br /></td></tr>
+<tr class="separator:a2e7ace29a63666158f1b3b12ddf10be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60961f91ed0fc7aeae5fa957e90c7b0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_interpolation.html">Interpolation</a>&lt; float &gt;::Iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade.html#a60961f91ed0fc7aeae5fa957e90c7b0f">inter_iter_</a></td></tr>
+<tr class="memdesc:a60961f91ed0fc7aeae5fa957e90c7b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">補間イテレータ  <a href="#a60961f91ed0fc7aeae5fa957e90c7b0f">[詳解]</a><br /></td></tr>
+<tr class="separator:a60961f91ed0fc7aeae5fa957e90c7b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>フェードクラス </p>
-<p>フェードのクラス </p>
+<div class="textblock"><p>フェードClass </p>
+<p>フェードのClass </p>
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00033">33</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">列挙型メンバ詳解</h2>
 <a id="ae77826bf3ff2ab95fb7b3b6f95cba80a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae77826bf3ff2ab95fb7b3b6f95cba80a">&#9670;&nbsp;</a></span>State</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">enum <a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80a">Fade::State</a></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ae77826bf3ff2ab95fb7b3b6f95cba80aae593109007af793c6b0e7e287dcc7803"></a>STATE_NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ae77826bf3ff2ab95fb7b3b6f95cba80aa5b9862985db043392d465dd7a7a7805b"></a>STATE_FADE_IN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ae77826bf3ff2ab95fb7b3b6f95cba80aa41e3fdc3eb47279527440d923fccbb6e"></a>STATE_FADE_OUT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ae77826bf3ff2ab95fb7b3b6f95cba80aab65dcff35c00997ef90c43d254906121"></a>STATE_MAX&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ae77826bf3ff2ab95fb7b3b6f95cba80aab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae77826bf3ff2ab95fb7b3b6f95cba80aa3ce542dfb80acd9d3ecc081f236950cf"></a>FADE_IN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae77826bf3ff2ab95fb7b3b6f95cba80aae5c4ab91cc2038893a3a99b567f13199"></a>FADE_OUT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae77826bf3ff2ab95fb7b3b6f95cba80aa26a4b44a837bf97b972628509912b4a5"></a>MAX&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00053">53</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00047">47</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -283,63 +337,28 @@ Fade の継承関係図</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">enum <a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80">Fade::Type</a></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ac06f27215b454aa05b93c236476d6e80aff416f0a20b074a38a4f67e20f001828"></a>TYPE_NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ac06f27215b454aa05b93c236476d6e80a6058f5db637853756ba18166da96043e"></a>TYPE_NORMAL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ac06f27215b454aa05b93c236476d6e80af424897abd4b53f7af0bf51f1190a427"></a>TYPE_TRANSITION_01&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ac06f27215b454aa05b93c236476d6e80ab05e3987a6b16a8ebe7e284aa8922ea0"></a>TYPE_MAX&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ac06f27215b454aa05b93c236476d6e80ab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac06f27215b454aa05b93c236476d6e80a1e23852820b9154316c7c06e2b7ba051"></a>NORMAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac06f27215b454aa05b93c236476d6e80a6d792d623461e0dcc819e2caacbe4e7e"></a>TRANSITION_01&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac06f27215b454aa05b93c236476d6e80a26a4b44a837bf97b972628509912b4a5"></a>MAX&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00045">45</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<h2 class="groupheader">構築子と解体子</h2>
-<a id="aec1ac5a0a80be8d7a2a43dbde2a741ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec1ac5a0a80be8d7a2a43dbde2a741ee">&#9670;&nbsp;</a></span>Fade()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Fade::Fade </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>コンストラクタ </p>
-
-<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00036">36</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a58ddf7585cb85bf84f5e83adbe2734f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58ddf7585cb85bf84f5e83adbe2734f9">&#9670;&nbsp;</a></span>~Fade()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Fade::~Fade </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>デストラクタ </p>
-
-<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00056">56</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00039">39</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -379,15 +398,28 @@ Fade の継承関係図</div>
 </div><div class="memdoc">
 
 <p>描画関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p><a class="el" href="class_draw_null.html#a72ac0b7dc40b1469582419dcc5b0e114">DrawNull</a>を再実装しています。</p>
 
-<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00162">162</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00141">141</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="acc8adf28ce2e4270e5fb3907d83dadd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc8adf28ce2e4270e5fb3907d83dadd0">&#9670;&nbsp;</a></span>GetEndFlag()</h2>
+<a id="ab971b8bb17f81d73e0405291a6512a39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab971b8bb17f81d73e0405291a6512a39">&#9670;&nbsp;</a></span>getpDiffuseTexture()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -396,34 +428,7 @@ Fade の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Fade::GetEndFlag </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00139">139</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a69db8b97a493082644fbd82c9ef3d1aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69db8b97a493082644fbd82c9ef3d1aa">&#9670;&nbsp;</a></span>getpMaterial()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">D3DMATERIAL9* Fade::getpMaterial </td>
+          <td class="memname">LPDIRECT3DTEXTURE9 Fade::getpDiffuseTexture </td>
           <td>(</td>
           <td class="paramtype">unsigned&#160;</td>
           <td class="paramname"><em>object_index</em>, </td>
@@ -442,34 +447,67 @@ Fade の継承関係図</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>マテリアルポインタ取得関数 </p>
+<p>ディヒューズテクスチャ取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">D3DMATERIAL9*</td><td>マテリアルポインタ </td></tr>
+    <tr><td class="paramname">LPDIRECT3DTEXTURE9</td><td>ディヒューズテクスチャ </td></tr>
   </table>
   </dd>
 </dl>
 
-<p><a class="el" href="class_draw_null.html#a0c1efe55fea325ad277594be6fe1e938">DrawNull</a>を再実装しています。</p>
+<p><a class="el" href="class_draw_null.html#a98cc7cd43b19d9d70cc621d23d89286f">DrawNull</a>を再実装しています。</p>
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00132">132</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00073">73</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a2e41a31f9801476e63d2082804375e96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e41a31f9801476e63d2082804375e96">&#9670;&nbsp;</a></span>getpMatrix()</h2>
+<a id="a7abd60e0881a5b7e9548ec544a0e2198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7abd60e0881a5b7e9548ec544a0e2198">&#9670;&nbsp;</a></span>getpEndFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Fade::getpEndFlag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>終了フラグ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>終了フラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00059">59</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adbd049cfdaf165670d1b97b03151a5cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd049cfdaf165670d1b97b03151a5cd">&#9670;&nbsp;</a></span>getpMaterial()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -478,7 +516,62 @@ Fade の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a>* Fade::getpMatrix </td>
+          <td class="memname">D3DMATERIAL9 * Fade::getpMaterial </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>object_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mesh_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マテリアル取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">mesh_index</td><td>メッシュインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">D3DMATERIAL9*</td><td>マテリアル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a0c1efe55fea325ad277594be6fe1e938">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00036">36</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a468f87b671026f883443d6cdceeb95c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a468f87b671026f883443d6cdceeb95c6">&#9670;&nbsp;</a></span>getpMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_matrix_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> * Fade::getpMatrix </td>
           <td>(</td>
           <td class="paramtype">unsigned&#160;</td>
           <td class="paramname"><em>object_index</em></td><td>)</td>
@@ -487,147 +580,181 @@ Fade の継承関係図</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>行列ポインタ取得関数 </p>
+<p>行列取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
+    <tr><td class="paramname">object_index</td><td>オブジェクトインデックス </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">MATRIX*</td><td>行列ポインタ </td></tr>
+    <tr><td class="paramname">MATRIX*</td><td>行列 </td></tr>
   </table>
   </dd>
 </dl>
 
 <p><a class="el" href="class_draw_null.html#a9aac059eb3b5d1f77e8bd3aa0647cff9">DrawNull</a>を再実装しています。</p>
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00125">125</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00028">28</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aeb41dfcadf75dd4c980da68e243cc310"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb41dfcadf75dd4c980da68e243cc310">&#9670;&nbsp;</a></span>GetState()</h2>
+<a id="a5079a04d7f61eb68bf130ad418e0dbb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5079a04d7f61eb68bf130ad418e0dbb8">&#9670;&nbsp;</a></span>getpState()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80a">State</a>* Fade::GetState </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00131">131</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a1a177209e72a27858ceb2d339321e9c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a177209e72a27858ceb2d339321e9c4">&#9670;&nbsp;</a></span>GetTransform()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_transform.html">Transform</a>* Fade::GetTransform </td>
+          <td class="memname"><a class="el" href="class_fade.html#ae77826bf3ff2ab95fb7b3b6f95cba80a">Fade::State</a> * Fade::getpState </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00140">140</a> 行目に定義があります。</p>
+<p>ステート取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">State*</td><td>ステート </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00052">52</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a4e047c532d430095e7d0d70288289a82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e047c532d430095e7d0d70288289a82">&#9670;&nbsp;</a></span>GetTransition01Object()</h2>
+<a id="ac703f40e9ed3f91c41525d884306a260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac703f40e9ed3f91c41525d884306a260">&#9670;&nbsp;</a></span>getpTransform()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_texture_object.html">TextureObject</a>* Fade::GetTransition01Object </td>
+          <td class="memname"><a class="el" href="class_transform.html">Transform</a> * Fade::getpTransform </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00141">141</a> 行目に定義があります。</p>
+<p>状態取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Transform*</td><td>状態 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00066">66</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aed5a29d39a5fd6161a9aed73d5f30870"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed5a29d39a5fd6161a9aed73d5f30870">&#9670;&nbsp;</a></span>GetType()</h2>
+<a id="a098d3f7b05dbcdecb185c6cce5bbcec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a098d3f7b05dbcdecb185c6cce5bbcec0">&#9670;&nbsp;</a></span>getpType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80">Fade::Type</a> * Fade::getpType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>タイプ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Type*</td><td>タイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac2a47819e1390abcae3259bcb42bddf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2a47819e1390abcae3259bcb42bddf5">&#9670;&nbsp;</a></span>Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80">Type</a>* Fade::GetType </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00130">130</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="aab12848f7102a219968c86ed699a6e5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab12848f7102a219968c86ed699a6e5d">&#9670;&nbsp;</a></span>Init()</h2>
-
-<div class="memitem">
-<div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Fade::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_draw_null.html#a20aef1e54c1a158b741bfd731e18efdf">DrawNull</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00099">99</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a47bd131483ff8124e059cf502de8e24a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47bd131483ff8124e059cf502de8e24a">&#9670;&nbsp;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Fade::Start </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_fade.html#ac06f27215b454aa05b93c236476d6e80">Type</a>&#160;</td>
           <td class="paramname"><em>type</em>, </td>
@@ -664,15 +791,25 @@ Fade の継承関係図</div>
       </table>
 </div><div class="memdoc">
 
-<p>初期化関数 </p>
+<p>スタート関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>: タイプ state : ステート size : 拡縮 color : 色 speed : フェード速度 </td></tr>
+    <tr><td class="paramname">type</td><td>タイプ </td></tr>
+    <tr><td class="paramname">state</td><td>ステート </td></tr>
+    <tr><td class="paramname">size</td><td>拡縮 </td></tr>
+    <tr><td class="paramname">color</td><td>色 </td></tr>
+    <tr><td class="paramname">speed</td><td>フェード速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00067">67</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00152">152</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -700,15 +837,27 @@ Fade の継承関係図</div>
 </div><div class="memdoc">
 
 <p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p><a class="el" href="class_draw_null.html#a6e81d63efab7333e8d0e8af99362a4d9">DrawNull</a>を再実装しています。</p>
 
-<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00112">112</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00121">121</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a1579b5b9020344a1131ea11c15f2c0bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1579b5b9020344a1131ea11c15f2c0bd">&#9670;&nbsp;</a></span>Update()</h2>
+<a id="a332851a9b9fc0b9e3bd0f536f9026004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a332851a9b9fc0b9e3bd0f536f9026004">&#9670;&nbsp;</a></span>Update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -725,16 +874,28 @@ Fade の継承関係図</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p><a class="el" href="class_draw_null.html#ad32a508d269de7eda8ad24ea72230464">DrawNull</a>を再実装しています。</p>
 
-<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00132">132</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8cpp_source.html">Fade.cpp</a> の <a class="el" href="_fade_8cpp_source.html#l00131">131</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -761,7 +922,7 @@ Fade の継承関係図</div>
 
 <p>色 </p>
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00070">70</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00074">74</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -775,7 +936,7 @@ Fade の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Fade::end_flag_</td>
+          <td class="memname">bool Fade::end_flag_ = true</td>
         </tr>
       </table>
   </td>
@@ -787,7 +948,85 @@ Fade の継承関係図</div>
 
 <p>終了フラグ </p>
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00073">73</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00076">76</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2e7ace29a63666158f1b3b12ddf10be5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7ace29a63666158f1b3b12ddf10be5">&#9670;&nbsp;</a></span>inter_container_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_interpolation.html">Interpolation</a>&lt;float&gt; Fade::inter_container_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>補間コンテナ </p>
+
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00077">77</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a60961f91ed0fc7aeae5fa957e90c7b0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60961f91ed0fc7aeae5fa957e90c7b0f">&#9670;&nbsp;</a></span>inter_iter_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_interpolation.html">Interpolation</a>&lt;float&gt;::Iterator Fade::inter_iter_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>補間イテレータ </p>
+
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00078">78</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5bdc7ea6de7666601fa363e503ccc181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bdc7ea6de7666601fa363e503ccc181">&#9670;&nbsp;</a></span>load_texture_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_texture_object.html">TextureObject</a>* Fade::load_texture_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loadテクスチャオブジェクト </p>
+
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00072">72</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -801,7 +1040,7 @@ Fade の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_plane_polygon.html">PlanePolygon</a>* Fade::plane_polygon_</td>
+          <td class="memname"><a class="el" href="class_plane_polygon.html">PlanePolygon</a>* Fade::plane_polygon_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -813,7 +1052,7 @@ Fade の継承関係図</div>
 
 <p>板ポリゴン </p>
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00068">68</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00070">70</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -839,7 +1078,7 @@ Fade の継承関係図</div>
 
 <p>フェード速度 </p>
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00072">72</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00075">75</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -865,7 +1104,33 @@ Fade の継承関係図</div>
 
 <p>ステート </p>
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00066">66</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00069">69</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7334ff03d82f19ab5129cb40351f9e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7334ff03d82f19ab5129cb40351f9e77">&#9670;&nbsp;</a></span>TEXTURE_NAME_LOAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string Fade::TEXTURE_NAME_LOAD = &quot;Fade/NowLoading.png&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loadテクスチャ名 </p>
+
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00060">60</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -889,12 +1154,14 @@ Fade の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00038">38</a> 行目に定義があります。</p>
+<p>テクスチャ名 </p>
+
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00061">61</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="acd9c0d6231180af183d6301f31fa0053"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd9c0d6231180af183d6301f31fa0053">&#9670;&nbsp;</a></span>TEXTURE_PATH</h2>
+<a id="a3f99d8f5316d5461ea7197aed18c4417"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f99d8f5316d5461ea7197aed18c4417">&#9670;&nbsp;</a></span>transform_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -903,31 +1170,7 @@ Fade の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string Fade::TEXTURE_PATH</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00037">37</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a3b94f7f5317c98e1db1cc17346313626"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b94f7f5317c98e1db1cc17346313626">&#9670;&nbsp;</a></span>transform_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_transform.html">Transform</a> Fade::transform_</td>
+          <td class="memname"><a class="el" href="class_transform.html">Transform</a>* Fade::transform_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -939,7 +1182,7 @@ Fade の継承関係図</div>
 
 <p>状態 </p>
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00069">69</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00071">71</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -953,7 +1196,7 @@ Fade の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_texture_object.html">TextureObject</a>* Fade::transition01_texture_</td>
+          <td class="memname"><a class="el" href="class_texture_object.html">TextureObject</a>* Fade::transition01_texture_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -965,7 +1208,7 @@ Fade の継承関係図</div>
 
 <p>テクスチャオブジェクト </p>
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00075">75</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00073">73</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -991,13 +1234,13 @@ Fade の継承関係図</div>
 
 <p>タイプ </p>
 
-<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00065">65</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_fade_8h_source.html">Fade.h</a> の <a class="el" href="_fade_8h_source.html#l00068">68</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/DrawManager/Fade/<a class="el" href="_fade_8h_source.html">Fade.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/ComponentManager/DrawManager/Fade/<a class="el" href="_fade_8cpp_source.html">Fade.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/<a class="el" href="_fade_8h_source.html">Fade.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/Source/<a class="el" href="_fade_8cpp_source.html">Fade.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

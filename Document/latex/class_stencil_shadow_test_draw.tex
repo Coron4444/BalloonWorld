@@ -2,7 +2,7 @@
 \label{class_stencil_shadow_test_draw}\index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}}
 
 
-ステンシルシャドウ描画クラス  
+ステンシルシャドウテスト描画\+Class  
 
 
 
@@ -11,36 +11,36 @@
 
 
 
-Stencil\+Shadow\+Test\+Draw の継承関係図\nopagebreak
+Stencil\+Shadow\+Test\+Draw 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=202pt]{class_stencil_shadow_test_draw__inherit__graph}
+\includegraphics[width=350pt]{class_stencil_shadow_test_draw__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
+unsigned \mbox{\hyperlink{class_stencil_shadow_test_draw_ad93f1c8a60a701d185108896c58dd578}{get\+Object\+Num}} () override
+\begin{DoxyCompactList}\small\item\em オブジェクト数取得関数 \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_stencil_shadow_test_draw_a285b3045ff5cc34b6b2b991cca434bb3}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_stencil_shadow_test_draw_a8ab105b75d673adc52698a8401c6525c}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ワールド行列取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_stencil_shadow_test_draw_aacdc680646f832451ea575f1da1eec9a}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアル取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_stencil_shadow_test_draw_a5c74550a8e0eccf29f3c93e5027e492e}{getp\+Diffuse\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ディヒューズテクスチャ取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_stencil_shadow_test_draw_a65be72e71cd12cacf315b0364c12c3e3}{Init}} () override
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_stencil_shadow_test_draw_ad0672bf4ecfc8091cf54ed6f2c76b618}{Uninit}} () override
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_stencil_shadow_test_draw_abb5f9445b7d94c213a3751fa57e36643}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
 \begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_stencil_shadow_test_draw_a0f697b6dad67048c7f8916a53cca6b1c}{Setting\+Before\+Drawing}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em 描画前設定関数 \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_stencil_shadow_test_draw_a68917115d3f151ed91ce297924ee5bbb}{Setting\+After\+Drawing}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em 描画後設定関数 \end{DoxyCompactList}\item 
-unsigned \mbox{\hyperlink{class_stencil_shadow_test_draw_ad93f1c8a60a701d185108896c58dd578}{get\+Object\+Num}} () override
-\begin{DoxyCompactList}\small\item\em オブジェクト数取得関数 \end{DoxyCompactList}\item 
-unsigned \mbox{\hyperlink{class_stencil_shadow_test_draw_a285b3045ff5cc34b6b2b991cca434bb3}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_stencil_shadow_test_draw_a8ab105b75d673adc52698a8401c6525c}{getp\+Matrix}} (unsigned object\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em 行列ポインタ取得関数 \end{DoxyCompactList}\item 
-D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_stencil_shadow_test_draw_aacdc680646f832451ea575f1da1eec9a}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em マテリアルポインタ取得関数 \end{DoxyCompactList}\item 
-L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_stencil_shadow_test_draw_a58f3699fa7ced20625edca807698aa85}{getp\+Decale\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em デカールテクスチャポインタ取得関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_stencil_shadow_test_draw_ab798b88896ba3f0b3de057dff49823be}{Object\+Setting\+Before}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em オブジェクト前設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stencil_shadow_test_draw_a11fa9d700ca8db585b6f0b0be779d1ab}{Object\+Setting\+After}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em オブジェクト後設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
@@ -58,11 +58,11 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 
 
 \subsection{詳解}
-ステンシルシャドウ描画クラス 
+ステンシルシャドウテスト描画\+Class 
 
-ステンシルシャドウの描画クラス 
+ステンシルシャドウテストの描画\+Class 
 
- Stencil\+Shadow\+Test\+Draw.\+h の 38 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+h の 32 行目に定義があります。
 
 
 
@@ -79,16 +79,23 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 
 
 \begin{DoxyParams}{引数}
-{\em object\+\_\+index} & \+: オブジェクトインデックス mesh\+\_\+index \+: メッシュインデックス \\
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
 \mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+cpp の 71 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+cpp の 111 行目に定義があります。
 
 \mbox{\Hypertarget{class_stencil_shadow_test_draw_a285b3045ff5cc34b6b2b991cca434bb3}\label{class_stencil_shadow_test_draw_a285b3045ff5cc34b6b2b991cca434bb3}} 
 \index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!get\+Mesh\+Num@{get\+Mesh\+Num}}
@@ -101,8 +108,8 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 メッシュ数取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
@@ -116,7 +123,7 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+cpp の 155 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+cpp の 33 行目に定義があります。
 
 \mbox{\Hypertarget{class_stencil_shadow_test_draw_ad93f1c8a60a701d185108896c58dd578}\label{class_stencil_shadow_test_draw_ad93f1c8a60a701d185108896c58dd578}} 
 \index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!get\+Object\+Num@{get\+Object\+Num}}
@@ -144,37 +151,37 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+cpp の 145 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+cpp の 26 行目に定義があります。
 
-\mbox{\Hypertarget{class_stencil_shadow_test_draw_a58f3699fa7ced20625edca807698aa85}\label{class_stencil_shadow_test_draw_a58f3699fa7ced20625edca807698aa85}} 
-\index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!getp\+Decale\+Texture@{getp\+Decale\+Texture}}
-\index{getp\+Decale\+Texture@{getp\+Decale\+Texture}!Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}}
-\subsubsection{\texorpdfstring{getp\+Decale\+Texture()}{getpDecaleTexture()}}
-{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Stencil\+Shadow\+Test\+Draw\+::getp\+Decale\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-デカールテクスチャポインタ取得関数 
+\mbox{\Hypertarget{class_stencil_shadow_test_draw_a5c74550a8e0eccf29f3c93e5027e492e}\label{class_stencil_shadow_test_draw_a5c74550a8e0eccf29f3c93e5027e492e}} 
+\index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!getp\+Diffuse\+Texture@{getp\+Diffuse\+Texture}}
+\index{getp\+Diffuse\+Texture@{getp\+Diffuse\+Texture}!Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Diffuse\+Texture()}{getpDiffuseTexture()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Stencil\+Shadow\+Test\+Draw\+::getp\+Diffuse\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+
+ディヒューズテクスチャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & デカールテクスチャポインタ \\
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & ディヒューズテクスチャ \\
 \hline
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_draw_null_a87d21f70b6fed637a6e23029f29818c1}{Draw\+Null}}を再実装しています。
+\mbox{\hyperlink{class_draw_null_a98cc7cd43b19d9d70cc621d23d89286f}{Draw\+Null}}を再実装しています。
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+cpp の 196 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+cpp の 65 行目に定義があります。
 
 \mbox{\Hypertarget{class_stencil_shadow_test_draw_aacdc680646f832451ea575f1da1eec9a}\label{class_stencil_shadow_test_draw_aacdc680646f832451ea575f1da1eec9a}} 
 \index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!getp\+Material@{getp\+Material}}
@@ -184,18 +191,18 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 
 
 
-マテリアルポインタ取得関数 
+マテリアル取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアルポインタ \\
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
 \hline
 \end{DoxyRetVals}
 
@@ -204,26 +211,26 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+cpp の 182 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+cpp の 54 行目に定義があります。
 
 \mbox{\Hypertarget{class_stencil_shadow_test_draw_a8ab105b75d673adc52698a8401c6525c}\label{class_stencil_shadow_test_draw_a8ab105b75d673adc52698a8401c6525c}} 
 \index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!getp\+Matrix@{getp\+Matrix}}
 \index{getp\+Matrix@{getp\+Matrix}!Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}}
 \subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Stencil\+Shadow\+Test\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Stencil\+Shadow\+Test\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-行列ポインタ取得関数 
+ワールド行列取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em M\+A\+T\+R\+I\+X$\ast$} & 行列ポインタ \\
+{\em M\+A\+T\+R\+I\+X$\ast$} & ワールド行列 \\
 \hline
 \end{DoxyRetVals}
 
@@ -232,7 +239,7 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+cpp の 167 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+cpp の 42 行目に定義があります。
 
 \mbox{\Hypertarget{class_stencil_shadow_test_draw_a65be72e71cd12cacf315b0364c12c3e3}\label{class_stencil_shadow_test_draw_a65be72e71cd12cacf315b0364c12c3e3}} 
 \index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!Init@{Init}}
@@ -245,58 +252,78 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
 
 \mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+cpp の 34 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+cpp の 79 行目に定義があります。
 
-\mbox{\Hypertarget{class_stencil_shadow_test_draw_a68917115d3f151ed91ce297924ee5bbb}\label{class_stencil_shadow_test_draw_a68917115d3f151ed91ce297924ee5bbb}} 
-\index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!Setting\+After\+Drawing@{Setting\+After\+Drawing}}
-\index{Setting\+After\+Drawing@{Setting\+After\+Drawing}!Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}}
-\subsubsection{\texorpdfstring{Setting\+After\+Drawing()}{SettingAfterDrawing()}}
-{\footnotesize\ttfamily void Stencil\+Shadow\+Test\+Draw\+::\+Setting\+After\+Drawing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-描画後設定関数 
-
-
-\begin{DoxyParams}{引数}
-{\em camera} & \+: カメラ object\+\_\+index \+: オブジェクトインデックス \\
-\hline
-\end{DoxyParams}
-
-
-\mbox{\hyperlink{class_draw_null_a3600d14d2ce10f4281723567f97c08be}{Draw\+Null}}を再実装しています。
+\mbox{\Hypertarget{class_stencil_shadow_test_draw_a11fa9d700ca8db585b6f0b0be779d1ab}\label{class_stencil_shadow_test_draw_a11fa9d700ca8db585b6f0b0be779d1ab}} 
+\index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!Object\+Setting\+After@{Object\+Setting\+After}}
+\index{Object\+Setting\+After@{Object\+Setting\+After}!Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}}
+\subsubsection{\texorpdfstring{Object\+Setting\+After()}{ObjectSettingAfter()}}
+{\footnotesize\ttfamily void Stencil\+Shadow\+Test\+Draw\+::\+Object\+Setting\+After (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+cpp の 128 行目に定義があります。
-
-\mbox{\Hypertarget{class_stencil_shadow_test_draw_a0f697b6dad67048c7f8916a53cca6b1c}\label{class_stencil_shadow_test_draw_a0f697b6dad67048c7f8916a53cca6b1c}} 
-\index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!Setting\+Before\+Drawing@{Setting\+Before\+Drawing}}
-\index{Setting\+Before\+Drawing@{Setting\+Before\+Drawing}!Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}}
-\subsubsection{\texorpdfstring{Setting\+Before\+Drawing()}{SettingBeforeDrawing()}}
-{\footnotesize\ttfamily void Stencil\+Shadow\+Test\+Draw\+::\+Setting\+Before\+Drawing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-描画前設定関数 
+オブジェクト後設定関数 
 
 
 \begin{DoxyParams}{引数}
-{\em camera} & \+: カメラ object\+\_\+index \+: オブジェクトインデックス \\
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\hyperlink{class_draw_null_a3baf78b024837c8ebb2471e7505db6ea}{Draw\+Null}}を再実装しています。
+
+\mbox{\hyperlink{class_draw_null_a5b4466ae238e46cffe4a10fd253caf17}{Draw\+Null}}を再実装しています。
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+cpp の 89 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+cpp の 162 行目に定義があります。
+
+\mbox{\Hypertarget{class_stencil_shadow_test_draw_ab798b88896ba3f0b3de057dff49823be}\label{class_stencil_shadow_test_draw_ab798b88896ba3f0b3de057dff49823be}} 
+\index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!Object\+Setting\+Before@{Object\+Setting\+Before}}
+\index{Object\+Setting\+Before@{Object\+Setting\+Before}!Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}}
+\subsubsection{\texorpdfstring{Object\+Setting\+Before()}{ObjectSettingBefore()}}
+{\footnotesize\ttfamily void Stencil\+Shadow\+Test\+Draw\+::\+Object\+Setting\+Before (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+オブジェクト前設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_ac79a0adfc83537d5e677851463bb3028}{Draw\+Null}}を再実装しています。
+
+
+
+ Stencil\+Shadow\+Test\+Draw.\+cpp の 126 行目に定義があります。
 
 \mbox{\Hypertarget{class_stencil_shadow_test_draw_ad0672bf4ecfc8091cf54ed6f2c76b618}\label{class_stencil_shadow_test_draw_ad0672bf4ecfc8091cf54ed6f2c76b618}} 
 \index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!Uninit@{Uninit}}
@@ -309,12 +336,22 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
 
 \mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+cpp の 60 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+cpp の 103 行目に定義があります。
 
 
 
@@ -331,7 +368,7 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+h の 45 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+h の 38 行目に定義があります。
 
 \mbox{\Hypertarget{class_stencil_shadow_test_draw_ae2abfaec1e669ea0019e67d02e2942b6}\label{class_stencil_shadow_test_draw_ae2abfaec1e669ea0019e67d02e2942b6}} 
 \index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}}
@@ -345,7 +382,7 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+h の 52 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+h の 46 行目に定義があります。
 
 \mbox{\Hypertarget{class_stencil_shadow_test_draw_ae64a0179736364fd9e6d26074edcf61a}\label{class_stencil_shadow_test_draw_ae64a0179736364fd9e6d26074edcf61a}} 
 \index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!plane\+\_\+polygon\+\_\+transform\+\_\+@{plane\+\_\+polygon\+\_\+transform\+\_\+}}
@@ -359,7 +396,7 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+h の 53 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+h の 47 行目に定義があります。
 
 \mbox{\Hypertarget{class_stencil_shadow_test_draw_a6c57baf28efdf89dbfb52fb379f33c26}\label{class_stencil_shadow_test_draw_a6c57baf28efdf89dbfb52fb379f33c26}} 
 \index{Stencil\+Shadow\+Test\+Draw@{Stencil\+Shadow\+Test\+Draw}!player\+\_\+model\+\_\+@{player\+\_\+model\+\_\+}}
@@ -373,11 +410,11 @@ static const std\+::string \mbox{\hyperlink{class_stencil_shadow_test_draw_a1ef4
 
 
 
- Stencil\+Shadow\+Test\+Draw.\+h の 51 行目に定義があります。
+ Stencil\+Shadow\+Test\+Draw.\+h の 45 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Stencil\+Shadow\+Test/\+Stencil\+Shadow\+Test\+Draw/\mbox{\hyperlink{_stencil_shadow_test_draw_8h}{Stencil\+Shadow\+Test\+Draw.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Stencil\+Shadow\+Test/\+Stencil\+Shadow\+Test\+Draw/\mbox{\hyperlink{_stencil_shadow_test_draw_8cpp}{Stencil\+Shadow\+Test\+Draw.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Stencil\+Shadow\+Test/\mbox{\hyperlink{_stencil_shadow_test_draw_8h}{Stencil\+Shadow\+Test\+Draw.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Stencil\+Shadow\+Test/\+Source/\mbox{\hyperlink{_stencil_shadow_test_draw_8cpp}{Stencil\+Shadow\+Test\+Draw.\+cpp}}\end{DoxyCompactItemize}

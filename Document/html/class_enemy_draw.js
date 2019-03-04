@@ -6,5 +6,6 @@ var class_enemy_draw =
     [ "getpMatrix", "class_enemy_draw.html#afbb8ac19041abda280ece7737103dc66", null ],
     [ "Init", "class_enemy_draw.html#aa1659c35fa757db6a6cf07e26ad9ddfb", null ],
     [ "Uninit", "class_enemy_draw.html#a2861dc0623b0be7726bc69a6a469190e", null ],
+    [ "cube_polygon_", "class_enemy_draw.html#a4f35f850ee5e41bb43fc6979e83589dd", null ],
     [ "enemy_", "class_enemy_draw.html#a95b8a7f07e810d1347f1704669c8f790", null ]
 ];

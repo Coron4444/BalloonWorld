@@ -2,7 +2,7 @@
 \label{class_clear_logo_draw}\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
 
 
-クリアロゴ描画クラス  
+クリアロゴ描画\+Class  
 
 
 
@@ -11,52 +11,70 @@
 
 
 
-Clear\+Logo\+Draw の継承関係図\nopagebreak
+Clear\+Logo\+Draw 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=169pt]{class_clear_logo_draw__inherit__graph}
+\includegraphics[width=350pt]{class_clear_logo_draw__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
+virtual unsigned \mbox{\hyperlink{class_clear_logo_draw_ad58068c5cfa0236b559e3a5b526b22d7}{get\+Object\+Num}} () override
+\begin{DoxyCompactList}\small\item\em オブジェクト数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_clear_logo_draw_abcbd0cd8663e0262bcdd83356516082b}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ワールド行列取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_clear_logo_draw_a6273330249f20ddcde3a2ab97c1bdca2}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアル取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_clear_logo_draw_adbf4078e91bef05bf5a366adcda744a3}{getp\+Diffuse\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ディヒューズテクスチャ取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_clear_logo_draw_a9af656c0a8ebfb5fa133a0983add6ffd}{Init}} () override
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_clear_logo_draw_aa73db5b701e644f8e552ddb254a0a9aa}{Uninit}} () override
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clear_logo_draw_a2253a9252d9ba6e23602379404ec92fc}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_clear_logo_draw_ab018f370071f370ae7016d8ee402c456}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
-unsigned \mbox{\hyperlink{class_clear_logo_draw_a257f34e6f8325580f7df835f20d2ebb4}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_clear_logo_draw_abcbd0cd8663e0262bcdd83356516082b}{getp\+Matrix}} (unsigned object\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em 行列ポインタ取得関数 \end{DoxyCompactList}\item 
-D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_clear_logo_draw_a6273330249f20ddcde3a2ab97c1bdca2}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em マテリアルポインタ取得関数 \end{DoxyCompactList}\item 
-L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_clear_logo_draw_ae67f9779fb2f9aa05d55c2167a36ddb0}{getp\+Decale\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em デカールテクスチャポインタ取得関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_clear_logo}{Clear\+Logo}} $\ast$ \mbox{\hyperlink{class_clear_logo_draw_a9cfe2a7655dbda11e6a9719943022327}{clear\+\_\+logo\+\_\+}}
-\begin{DoxyCompactList}\small\item\em クリアロゴ \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_clear_logo_draw_a4fdf733ac28fe6dd10e9899b808ddcf4}{decale\+\_\+texture\+\_\+}}
-\begin{DoxyCompactList}\small\item\em デカールテクスチャ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_clear_logo}{Clear\+Logo}} $\ast$ \mbox{\hyperlink{class_clear_logo_draw_a9cfe2a7655dbda11e6a9719943022327}{clear\+\_\+logo\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{class_numbers_polygon}{Numbers\+Polygon}} $\ast$ \mbox{\hyperlink{class_clear_logo_draw_a556564d76190e945754e26194ef94591}{numbers\+\_\+polygon\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 数字群ポリゴン \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}} $\ast$ \mbox{\hyperlink{class_clear_logo_draw_a8d5fe46bbb3bf445ca322555853cf60a}{plane\+\_\+polygon\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 平面ポリゴン \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_clear_logo_draw_adc0729c654f49a408df7ef53b8db0146}{texture\+\_\+}}
+\begin{DoxyCompactList}\small\item\em テクスチャオブジェクト \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_object}{Texture\+Object}} $\ast$ \mbox{\hyperlink{class_clear_logo_draw_a7a48d8631dd9d72bc35d00117a1b1d01}{texture\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em テクスチャオブジェクト \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-static const std\+::string \mbox{\hyperlink{class_clear_logo_draw_aea89948b2e9b540fe35f1c910824c82f}{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}} = \char`\"{}UI/Clear.\+png\char`\"{}
+static const std\+::string \mbox{\hyperlink{class_clear_logo_draw_aea89948b2e9b540fe35f1c910824c82f}{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}} = \char`\"{}UI/Num.\+png\char`\"{}
 \begin{DoxyCompactList}\small\item\em テクスチャ名 \end{DoxyCompactList}\item 
-static const float \mbox{\hyperlink{class_clear_logo_draw_afdf263982add6dd6b8ac167b3ef44dc0}{S\+C\+A\+LE}} = 1.\+25f
+static const std\+::string \mbox{\hyperlink{class_clear_logo_draw_a0688794f9d828c82cf0225ca91e4b491}{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2}} = \char`\"{}UI/Result.\+png\char`\"{}
+\begin{DoxyCompactList}\small\item\em テクスチャ名 \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{class_clear_logo_draw_a50f368e8ecf24e1f701f7a522b9635f1}{S\+C\+O\+R\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM}} = 0
+\begin{DoxyCompactList}\small\item\em スコア桁数 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}} \mbox{\hyperlink{class_clear_logo_draw_ad3e2ab6e607fbf850696affe9ee47bd2}{S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}
+\begin{DoxyCompactList}\small\item\em スコア座標 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}} \mbox{\hyperlink{class_clear_logo_draw_a38addcdd1692a417e62453f67c8065f5}{S\+C\+O\+R\+E\+\_\+\+S\+C\+A\+LE}}
+\begin{DoxyCompactList}\small\item\em スコア拡縮 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} \mbox{\hyperlink{class_clear_logo_draw_abe0a99d0920b3ad3a28077eb966d1fd5}{S\+C\+O\+R\+E\+\_\+\+C\+O\+L\+OR}}
+\begin{DoxyCompactList}\small\item\em スコア色 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_clear_logo_draw_afdf263982add6dd6b8ac167b3ef44dc0}{S\+C\+A\+LE}} = 1.\+41f
 \begin{DoxyCompactList}\small\item\em 拡縮 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
-クリアロゴ描画クラス 
+クリアロゴ描画\+Class 
 
-クリアロゴの描画クラス 
+クリアロゴの描画\+Class 
 
- Clear\+Logo\+Draw.\+h の 31 行目に定義があります。
+ Clear\+Logo\+Draw.\+h の 33 行目に定義があります。
 
 
 
@@ -73,74 +91,81 @@ static const float \mbox{\hyperlink{class_clear_logo_draw_afdf263982add6dd6b8ac1
 
 
 \begin{DoxyParams}{引数}
-{\em object\+\_\+index} & \+: オブジェクトインデックス mesh\+\_\+index \+: メッシュインデックス \\
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
 \mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
 
 
 
- Clear\+Logo\+Draw.\+cpp の 68 行目に定義があります。
+ Clear\+Logo\+Draw.\+cpp の 128 行目に定義があります。
 
-\mbox{\Hypertarget{class_clear_logo_draw_a257f34e6f8325580f7df835f20d2ebb4}\label{class_clear_logo_draw_a257f34e6f8325580f7df835f20d2ebb4}} 
-\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!get\+Mesh\+Num@{get\+Mesh\+Num}}
-\index{get\+Mesh\+Num@{get\+Mesh\+Num}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
-\subsubsection{\texorpdfstring{get\+Mesh\+Num()}{getMeshNum()}}
-{\footnotesize\ttfamily unsigned Clear\+Logo\+Draw\+::get\+Mesh\+Num (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-メッシュ数取得関数 
+\mbox{\Hypertarget{class_clear_logo_draw_ad58068c5cfa0236b559e3a5b526b22d7}\label{class_clear_logo_draw_ad58068c5cfa0236b559e3a5b526b22d7}} 
+\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!get\+Object\+Num@{get\+Object\+Num}}
+\index{get\+Object\+Num@{get\+Object\+Num}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{get\+Object\+Num()}{getObjectNum()}}
+{\footnotesize\ttfamily unsigned Clear\+Logo\+Draw\+::get\+Object\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+
+オブジェクト数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em unsigned} & メッシュ数 \\
+{\em unsigned} & オブジェクト数 \\
 \hline
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_draw_null_a4c566a37d27fac3dcf76c7970443f375}{Draw\+Null}}を再実装しています。
+\mbox{\hyperlink{class_draw_null_a8bddfa6ee87e47b2ecbbe6803b088e37}{Draw\+Null}}を再実装しています。
 
 
 
- Clear\+Logo\+Draw.\+cpp の 81 行目に定義があります。
+ Clear\+Logo\+Draw.\+cpp の 34 行目に定義があります。
 
-\mbox{\Hypertarget{class_clear_logo_draw_ae67f9779fb2f9aa05d55c2167a36ddb0}\label{class_clear_logo_draw_ae67f9779fb2f9aa05d55c2167a36ddb0}} 
-\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!getp\+Decale\+Texture@{getp\+Decale\+Texture}}
-\index{getp\+Decale\+Texture@{getp\+Decale\+Texture}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
-\subsubsection{\texorpdfstring{getp\+Decale\+Texture()}{getpDecaleTexture()}}
-{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Clear\+Logo\+Draw\+::getp\+Decale\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-デカールテクスチャポインタ取得関数 
+\mbox{\Hypertarget{class_clear_logo_draw_adbf4078e91bef05bf5a366adcda744a3}\label{class_clear_logo_draw_adbf4078e91bef05bf5a366adcda744a3}} 
+\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!getp\+Diffuse\+Texture@{getp\+Diffuse\+Texture}}
+\index{getp\+Diffuse\+Texture@{getp\+Diffuse\+Texture}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{getp\+Diffuse\+Texture()}{getpDiffuseTexture()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Clear\+Logo\+Draw\+::getp\+Diffuse\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+
+ディヒューズテクスチャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & デカールテクスチャポインタ \\
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & ディヒューズテクスチャ \\
 \hline
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_draw_null_a87d21f70b6fed637a6e23029f29818c1}{Draw\+Null}}を再実装しています。
+\mbox{\hyperlink{class_draw_null_a98cc7cd43b19d9d70cc621d23d89286f}{Draw\+Null}}を再実装しています。
 
 
 
- Clear\+Logo\+Draw.\+cpp の 118 行目に定義があります。
+ Clear\+Logo\+Draw.\+cpp の 64 行目に定義があります。
 
 \mbox{\Hypertarget{class_clear_logo_draw_a6273330249f20ddcde3a2ab97c1bdca2}\label{class_clear_logo_draw_a6273330249f20ddcde3a2ab97c1bdca2}} 
 \index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!getp\+Material@{getp\+Material}}
@@ -150,18 +175,18 @@ static const float \mbox{\hyperlink{class_clear_logo_draw_afdf263982add6dd6b8ac1
 
 
 
-マテリアルポインタ取得関数 
+マテリアル取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアルポインタ \\
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
 \hline
 \end{DoxyRetVals}
 
@@ -170,26 +195,26 @@ static const float \mbox{\hyperlink{class_clear_logo_draw_afdf263982add6dd6b8ac1
 
 
 
- Clear\+Logo\+Draw.\+cpp の 105 行目に定義があります。
+ Clear\+Logo\+Draw.\+cpp の 52 行目に定義があります。
 
 \mbox{\Hypertarget{class_clear_logo_draw_abcbd0cd8663e0262bcdd83356516082b}\label{class_clear_logo_draw_abcbd0cd8663e0262bcdd83356516082b}} 
 \index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!getp\+Matrix@{getp\+Matrix}}
 \index{getp\+Matrix@{getp\+Matrix}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
 \subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Clear\+Logo\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Clear\+Logo\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-行列ポインタ取得関数 
+ワールド行列取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em M\+A\+T\+R\+I\+X$\ast$} & 行列ポインタ \\
+{\em M\+A\+T\+R\+I\+X$\ast$} & ワールド行列 \\
 \hline
 \end{DoxyRetVals}
 
@@ -198,7 +223,7 @@ static const float \mbox{\hyperlink{class_clear_logo_draw_afdf263982add6dd6b8ac1
 
 
 
- Clear\+Logo\+Draw.\+cpp の 93 行目に定義があります。
+ Clear\+Logo\+Draw.\+cpp の 41 行目に定義があります。
 
 \mbox{\Hypertarget{class_clear_logo_draw_a9af656c0a8ebfb5fa133a0983add6ffd}\label{class_clear_logo_draw_a9af656c0a8ebfb5fa133a0983add6ffd}} 
 \index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!Init@{Init}}
@@ -211,12 +236,22 @@ static const float \mbox{\hyperlink{class_clear_logo_draw_afdf263982add6dd6b8ac1
 初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
 
 \mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
 
 
 
- Clear\+Logo\+Draw.\+cpp の 33 行目に定義があります。
+ Clear\+Logo\+Draw.\+cpp の 80 行目に定義があります。
 
 \mbox{\Hypertarget{class_clear_logo_draw_aa73db5b701e644f8e552ddb254a0a9aa}\label{class_clear_logo_draw_aa73db5b701e644f8e552ddb254a0a9aa}} 
 \index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!Uninit@{Uninit}}
@@ -229,12 +264,50 @@ static const float \mbox{\hyperlink{class_clear_logo_draw_afdf263982add6dd6b8ac1
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
 
 \mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
 
 
 
- Clear\+Logo\+Draw.\+cpp の 59 行目に定義があります。
+ Clear\+Logo\+Draw.\+cpp の 111 行目に定義があります。
+
+\mbox{\Hypertarget{class_clear_logo_draw_a2253a9252d9ba6e23602379404ec92fc}\label{class_clear_logo_draw_a2253a9252d9ba6e23602379404ec92fc}} 
+\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!Update@{Update}}
+\index{Update@{Update}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Clear\+Logo\+Draw\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_draw_null_ad32a508d269de7eda8ad24ea72230464}{Draw\+Null}}を再実装しています。
+
+
+
+ Clear\+Logo\+Draw.\+cpp の 121 行目に定義があります。
 
 
 
@@ -243,35 +316,45 @@ static const float \mbox{\hyperlink{class_clear_logo_draw_afdf263982add6dd6b8ac1
 \index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!clear\+\_\+logo\+\_\+@{clear\+\_\+logo\+\_\+}}
 \index{clear\+\_\+logo\+\_\+@{clear\+\_\+logo\+\_\+}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
 \subsubsection{\texorpdfstring{clear\+\_\+logo\+\_\+}{clear\_logo\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_clear_logo}{Clear\+Logo}}$\ast$ Clear\+Logo\+Draw\+::clear\+\_\+logo\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_clear_logo}{Clear\+Logo}}$\ast$ Clear\+Logo\+Draw\+::clear\+\_\+logo\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-クリアロゴ 
+ Clear\+Logo\+Draw.\+h の 52 行目に定義があります。
+
+\mbox{\Hypertarget{class_clear_logo_draw_a556564d76190e945754e26194ef94591}\label{class_clear_logo_draw_a556564d76190e945754e26194ef94591}} 
+\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!numbers\+\_\+polygon\+\_\+@{numbers\+\_\+polygon\+\_\+}}
+\index{numbers\+\_\+polygon\+\_\+@{numbers\+\_\+polygon\+\_\+}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{numbers\+\_\+polygon\+\_\+}{numbers\_polygon\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_numbers_polygon}{Numbers\+Polygon}}$\ast$ Clear\+Logo\+Draw\+::numbers\+\_\+polygon\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Clear\+Logo\+Draw.\+h の 45 行目に定義があります。
-
-\mbox{\Hypertarget{class_clear_logo_draw_a4fdf733ac28fe6dd10e9899b808ddcf4}\label{class_clear_logo_draw_a4fdf733ac28fe6dd10e9899b808ddcf4}} 
-\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!decale\+\_\+texture\+\_\+@{decale\+\_\+texture\+\_\+}}
-\index{decale\+\_\+texture\+\_\+@{decale\+\_\+texture\+\_\+}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
-\subsubsection{\texorpdfstring{decale\+\_\+texture\+\_\+}{decale\_texture\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Clear\+Logo\+Draw\+::decale\+\_\+texture\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+数字群ポリゴン 
 
 
 
-デカールテクスチャ 
+ Clear\+Logo\+Draw.\+h の 53 行目に定義があります。
+
+\mbox{\Hypertarget{class_clear_logo_draw_a8d5fe46bbb3bf445ca322555853cf60a}\label{class_clear_logo_draw_a8d5fe46bbb3bf445ca322555853cf60a}} 
+\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}}
+\index{plane\+\_\+polygon\+\_\+@{plane\+\_\+polygon\+\_\+}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{plane\+\_\+polygon\+\_\+}{plane\_polygon\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane_polygon}{Plane\+Polygon}}$\ast$ Clear\+Logo\+Draw\+::plane\+\_\+polygon\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Clear\+Logo\+Draw.\+h の 46 行目に定義があります。
+平面ポリゴン 
+
+
+
+ Clear\+Logo\+Draw.\+h の 54 行目に定義があります。
 
 \mbox{\Hypertarget{class_clear_logo_draw_afdf263982add6dd6b8ac167b3ef44dc0}\label{class_clear_logo_draw_afdf263982add6dd6b8ac167b3ef44dc0}} 
 \index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!S\+C\+A\+LE@{S\+C\+A\+LE}}
 \index{S\+C\+A\+LE@{S\+C\+A\+LE}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
 \subsubsection{\texorpdfstring{S\+C\+A\+LE}{SCALE}}
-{\footnotesize\ttfamily const float Clear\+Logo\+Draw\+::\+S\+C\+A\+LE = 1.\+25f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily const float Clear\+Logo\+Draw\+::\+S\+C\+A\+LE = 1.\+41f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
@@ -279,13 +362,97 @@ static const float \mbox{\hyperlink{class_clear_logo_draw_afdf263982add6dd6b8ac1
 
 
 
- Clear\+Logo\+Draw.\+h の 38 行目に定義があります。
+ Clear\+Logo\+Draw.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_clear_logo_draw_abe0a99d0920b3ad3a28077eb966d1fd5}\label{class_clear_logo_draw_abe0a99d0920b3ad3a28077eb966d1fd5}} 
+\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!S\+C\+O\+R\+E\+\_\+\+C\+O\+L\+OR@{S\+C\+O\+R\+E\+\_\+\+C\+O\+L\+OR}}
+\index{S\+C\+O\+R\+E\+\_\+\+C\+O\+L\+OR@{S\+C\+O\+R\+E\+\_\+\+C\+O\+L\+OR}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{S\+C\+O\+R\+E\+\_\+\+C\+O\+L\+OR}{SCORE\_COLOR}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_vector3_d_8h_a680c30c4a07d86fe763c7e01169cd6cc}{X\+Color4}} Clear\+Logo\+Draw\+::\+S\+C\+O\+R\+E\+\_\+\+C\+O\+L\+OR\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+スコア色 
+
+
+
+ Clear\+Logo\+Draw.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_clear_logo_draw_a50f368e8ecf24e1f701f7a522b9635f1}\label{class_clear_logo_draw_a50f368e8ecf24e1f701f7a522b9635f1}} 
+\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!S\+C\+O\+R\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM@{S\+C\+O\+R\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM}}
+\index{S\+C\+O\+R\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM@{S\+C\+O\+R\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{S\+C\+O\+R\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM}{SCORE\_DIGITS\_NUM}}
+{\footnotesize\ttfamily const int Clear\+Logo\+Draw\+::\+S\+C\+O\+R\+E\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+N\+UM = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+スコア桁数 
+
+
+
+ Clear\+Logo\+Draw.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_clear_logo_draw_ad3e2ab6e607fbf850696affe9ee47bd2}\label{class_clear_logo_draw_ad3e2ab6e607fbf850696affe9ee47bd2}} 
+\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON@{S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}
+\index{S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON@{S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON}{SCORE\_POSITION}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}} Clear\+Logo\+Draw\+::\+S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+スコア座標 
+
+
+
+ Clear\+Logo\+Draw.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_clear_logo_draw_a38addcdd1692a417e62453f67c8065f5}\label{class_clear_logo_draw_a38addcdd1692a417e62453f67c8065f5}} 
+\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!S\+C\+O\+R\+E\+\_\+\+S\+C\+A\+LE@{S\+C\+O\+R\+E\+\_\+\+S\+C\+A\+LE}}
+\index{S\+C\+O\+R\+E\+\_\+\+S\+C\+A\+LE@{S\+C\+O\+R\+E\+\_\+\+S\+C\+A\+LE}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{S\+C\+O\+R\+E\+\_\+\+S\+C\+A\+LE}{SCORE\_SCALE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_vector3_d_8h_a5ef6e95dfc5f9d3820b71772d99bbc25}{Vec2}} Clear\+Logo\+Draw\+::\+S\+C\+O\+R\+E\+\_\+\+S\+C\+A\+LE\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+スコア拡縮 
+
+
+
+ Clear\+Logo\+Draw.\+h の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_clear_logo_draw_adc0729c654f49a408df7ef53b8db0146}\label{class_clear_logo_draw_adc0729c654f49a408df7ef53b8db0146}} 
+\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!texture\+\_\+@{texture\+\_\+}}
+\index{texture\+\_\+@{texture\+\_\+}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{texture\+\_\+}{texture\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Clear\+Logo\+Draw\+::texture\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+テクスチャオブジェクト 
+
+
+
+ Clear\+Logo\+Draw.\+h の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_clear_logo_draw_a7a48d8631dd9d72bc35d00117a1b1d01}\label{class_clear_logo_draw_a7a48d8631dd9d72bc35d00117a1b1d01}} 
+\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!texture\+\_\+2@{texture\+\_\+2}}
+\index{texture\+\_\+2@{texture\+\_\+2}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{texture\+\_\+2}{texture\_2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_object}{Texture\+Object}}$\ast$ Clear\+Logo\+Draw\+::texture\+\_\+2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+テクスチャオブジェクト 
+
+
+
+ Clear\+Logo\+Draw.\+h の 56 行目に定義があります。
 
 \mbox{\Hypertarget{class_clear_logo_draw_aea89948b2e9b540fe35f1c910824c82f}\label{class_clear_logo_draw_aea89948b2e9b540fe35f1c910824c82f}} 
 \index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}}
 \index{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
 \subsubsection{\texorpdfstring{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME}{TEXTURE\_NAME}}
-{\footnotesize\ttfamily const std\+::string Clear\+Logo\+Draw\+::\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME = \char`\"{}UI/Clear.\+png\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily const std\+::string Clear\+Logo\+Draw\+::\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+ME = \char`\"{}UI/Num.\+png\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
@@ -293,11 +460,25 @@ static const float \mbox{\hyperlink{class_clear_logo_draw_afdf263982add6dd6b8ac1
 
 
 
- Clear\+Logo\+Draw.\+h の 37 行目に定義があります。
+ Clear\+Logo\+Draw.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_clear_logo_draw_a0688794f9d828c82cf0225ca91e4b491}\label{class_clear_logo_draw_a0688794f9d828c82cf0225ca91e4b491}} 
+\index{Clear\+Logo\+Draw@{Clear\+Logo\+Draw}!T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2}}
+\index{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2@{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2}!Clear\+Logo\+Draw@{Clear\+Logo\+Draw}}
+\subsubsection{\texorpdfstring{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2}{TEXTURE\_NAME2}}
+{\footnotesize\ttfamily const std\+::string Clear\+Logo\+Draw\+::\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+A\+M\+E2 = \char`\"{}UI/Result.\+png\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+テクスチャ名 
+
+
+
+ Clear\+Logo\+Draw.\+h の 40 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/2\+D/\+U\+I/\+Clear\+Logo/\+Clear\+Logo\+Draw/\mbox{\hyperlink{_clear_logo_draw_8h}{Clear\+Logo\+Draw.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/2\+D/\+U\+I/\+Clear\+Logo/\+Clear\+Logo\+Draw/\mbox{\hyperlink{_clear_logo_draw_8cpp}{Clear\+Logo\+Draw.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/2\+D/\+Clear\+Logo/\mbox{\hyperlink{_clear_logo_draw_8h}{Clear\+Logo\+Draw.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/2\+D/\+Clear\+Logo/\+Source/\mbox{\hyperlink{_clear_logo_draw_8cpp}{Clear\+Logo\+Draw.\+cpp}}\end{DoxyCompactItemize}

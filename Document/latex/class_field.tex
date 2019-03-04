@@ -2,42 +2,73 @@
 \label{class_field}\index{Field@{Field}}
 
 
+コイン\+Class  
+
+
+
+
 {\ttfamily \#include $<$Field.\+h$>$}
 
 
 
-Field の継承関係図\nopagebreak
+Field 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=174pt]{class_field__inherit__graph}
+\includegraphics[width=350pt]{class_field__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_mesh_plane_polygon}{Mesh\+Plane\+Polygon}} $\ast$ \mbox{\hyperlink{class_field_ac3603afd80f48bb6bf62752a621578f3}{getp\+Mesh\+Plane\+Polygon}} ()
+\begin{DoxyCompactList}\small\item\em メッシュ平面ポリゴン取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_field_a8360ab68eaf346984eab8bce4c37c3b3}{Init}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw)
-\item 
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_field_a6d1015e2409daa87cd00485ac1efc06b}{Uninit}} () override
-\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_field_a5b140074dcca821ac702da348238c6d4}{Reset}} () override
-\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{公開変数類}
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_mesh_plane_polygon}{Mesh\+Plane\+Polygon}} $\ast$ \mbox{\hyperlink{class_field_a5c4ad4d2fea2269e7ab2185cf09beb10}{mesh\+\_\+plane\+\_\+polygon\+\_\+}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em メッシュ平面ポリゴン \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
+コイン\+Class 
 
+コインの\+Class 
 
- Field.\+h の 39 行目に定義があります。
+ Field.\+h の 24 行目に定義があります。
 
 
 
 \subsection{関数詳解}
+\mbox{\Hypertarget{class_field_ac3603afd80f48bb6bf62752a621578f3}\label{class_field_ac3603afd80f48bb6bf62752a621578f3}} 
+\index{Field@{Field}!getp\+Mesh\+Plane\+Polygon@{getp\+Mesh\+Plane\+Polygon}}
+\index{getp\+Mesh\+Plane\+Polygon@{getp\+Mesh\+Plane\+Polygon}!Field@{Field}}
+\subsubsection{\texorpdfstring{getp\+Mesh\+Plane\+Polygon()}{getpMeshPlanePolygon()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mesh_plane_polygon}{Mesh\+Plane\+Polygon}} $\ast$ Field\+::getp\+Mesh\+Plane\+Polygon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+メッシュ平面ポリゴン取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Field.\+cpp の 20 行目に定義があります。
+
 \mbox{\Hypertarget{class_field_a8360ab68eaf346984eab8bce4c37c3b3}\label{class_field_a8360ab68eaf346984eab8bce4c37c3b3}} 
 \index{Field@{Field}!Init@{Init}}
 \index{Init@{Init}!Field@{Field}}
@@ -46,25 +77,21 @@ void \mbox{\hyperlink{class_field_a5b140074dcca821ac702da348238c6d4}{Reset}} () 
 
 
 
- Field.\+cpp の 35 行目に定義があります。
-
-\mbox{\Hypertarget{class_field_a5b140074dcca821ac702da348238c6d4}\label{class_field_a5b140074dcca821ac702da348238c6d4}} 
-\index{Field@{Field}!Reset@{Reset}}
-\index{Reset@{Reset}!Field@{Field}}
-\subsubsection{\texorpdfstring{Reset()}{Reset()}}
-{\footnotesize\ttfamily void Field\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+\end{DoxyParams}
 
-リセット関数 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
-
-\mbox{\hyperlink{class_game_object_base_a85c59554f734bcb09f1a1e18d9517dce}{Game\+Object\+Base}}を実装しています。
-
-
-
- Field.\+cpp の 70 行目に定義があります。
+ Field.\+cpp の 30 行目に定義があります。
 
 \mbox{\Hypertarget{class_field_a6d1015e2409daa87cd00485ac1efc06b}\label{class_field_a6d1015e2409daa87cd00485ac1efc06b}} 
 \index{Field@{Field}!Uninit@{Uninit}}
@@ -77,12 +104,22 @@ void \mbox{\hyperlink{class_field_a5b140074dcca821ac702da348238c6d4}{Reset}} () 
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
-\mbox{\hyperlink{class_game_object_base_a97e1bc277d7b1c0156d4735de29a022c}{Game\+Object\+Base}}を再実装しています。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_a1a70fbd3260fd1c0100320756830a0db}{Game\+Object\+Null}}を再実装しています。
 
 
 
- Field.\+cpp の 54 行目に定義があります。
+ Field.\+cpp の 44 行目に定義があります。
 
 
 
@@ -91,15 +128,19 @@ void \mbox{\hyperlink{class_field_a5b140074dcca821ac702da348238c6d4}{Reset}} () 
 \index{Field@{Field}!mesh\+\_\+plane\+\_\+polygon\+\_\+@{mesh\+\_\+plane\+\_\+polygon\+\_\+}}
 \index{mesh\+\_\+plane\+\_\+polygon\+\_\+@{mesh\+\_\+plane\+\_\+polygon\+\_\+}!Field@{Field}}
 \subsubsection{\texorpdfstring{mesh\+\_\+plane\+\_\+polygon\+\_\+}{mesh\_plane\_polygon\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_mesh_plane_polygon}{Mesh\+Plane\+Polygon}}$\ast$ Field\+::mesh\+\_\+plane\+\_\+polygon\+\_\+}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mesh_plane_polygon}{Mesh\+Plane\+Polygon}}$\ast$ Field\+::mesh\+\_\+plane\+\_\+polygon\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Field.\+h の 52 行目に定義があります。
+メッシュ平面ポリゴン 
+
+
+
+ Field.\+h の 30 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Field/\mbox{\hyperlink{_field_8h}{Field.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Field/\mbox{\hyperlink{_field_8cpp}{Field.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Field/\mbox{\hyperlink{_field_8h}{Field.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Field/\+Source/\mbox{\hyperlink{_field_8cpp}{Field.\+cpp}}\end{DoxyCompactItemize}

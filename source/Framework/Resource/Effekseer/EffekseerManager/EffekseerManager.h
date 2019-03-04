@@ -163,10 +163,13 @@ public:
 	//----------------------------------------
 	//! @brief プロジェクション行列生成関数
 	//! @details
-	//! @param angle_of_view_ 画角
+	//! @param angle_of_view 画角
+	//! @param near_clip     近面クリップ
+	//! @param far_clip      遠面クリップ
 	//! @retval void なし
 	//----------------------------------------
-	void CreateProjectionMatrix(float angle_of_view_);
+	void CreateProjectionMatrix(float angle_of_view,
+								float near_clip, float far_clip);
 
 private:
 	//----------------------------------------

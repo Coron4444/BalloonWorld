@@ -9,6 +9,15 @@
 
 {\ttfamily \#include $<$Draw\+Order\+List.\+h$>$}
 
+
+
+Draw\+Order\+List 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{class_draw_order_list__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{公開型}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,8 +45,12 @@ void \mbox{\hyperlink{class_draw_order_list_a761f6f76271366ad3c0203b098087914}{s
 \begin{DoxyCompactList}\small\item\em 描画タイプ取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_draw_order_list_a03d72a3943c45d19b70602ed7f526906}{set\+Draw\+Type}} (\mbox{\hyperlink{class_draw_order_list_a6c9b9ceb312c16d399ef355f4f3486bb}{Draw\+Type}} value)
 \begin{DoxyCompactList}\small\item\em 描画タイプ設定関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_flag}{Flag}} $\ast$ \mbox{\hyperlink{class_draw_order_list_a2bc0267f11550e6c231682e0824b25b5}{getp\+Render\+Target\+Flag}} ()
-\begin{DoxyCompactList}\small\item\em レンダーターゲットフラグポインタ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_draw_order_list_a6c9b9ceb312c16d399ef355f4f3486bb}{Draw\+Type}} \mbox{\hyperlink{class_draw_order_list_a8ab03bec2bf394ed6ffc3d44b0eaabb4}{get\+Temp\+Change\+Draw\+Type}} ()
+\begin{DoxyCompactList}\small\item\em 一時変更描画タイプ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_draw_order_list_a4e4126b1de6ba16ce30558b9e8d9b490}{set\+Temp\+Change\+Draw\+Type}} (\mbox{\hyperlink{class_draw_order_list_a6c9b9ceb312c16d399ef355f4f3486bb}{Draw\+Type}} value)
+\begin{DoxyCompactList}\small\item\em 一時変更描画タイプ設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bit_flag}{Bit\+Flag}} $\ast$ \mbox{\hyperlink{class_draw_order_list_a3c483376f2da73a403bbd82f7e9e3370}{getp\+Render\+Target\+Flag}} ()
+\begin{DoxyCompactList}\small\item\em レンダーターゲットフラグ取得関数 \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_draw_order_list_a5d49272331a0f6f8656839ba5fe5e1b6}{get\+Is\+Billboard}} ()
 \begin{DoxyCompactList}\small\item\em ビルボードフラグ取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_draw_order_list_a80a404e3308a92dcb9bfa3451518d14e}{set\+Is\+Billboard}} (bool value)
@@ -46,6 +59,10 @@ bool \mbox{\hyperlink{class_draw_order_list_a1015463f08f8bf1118d5d1f79029d869}{g
 \begin{DoxyCompactList}\small\item\em ライティングフラグ取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_draw_order_list_a90504fdecaa6c022c8b85919352a10b1}{set\+Is\+Lighting}} (bool value)
 \begin{DoxyCompactList}\small\item\em ライティングフラグ設定関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_draw_order_list_a7131fc4155b8a35108697ad9628f337f}{get\+Is\+Animation}} ()
+\begin{DoxyCompactList}\small\item\em アニメーションフラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_draw_order_list_a31b85221bde032f5912219f79a93c100}{set\+Is\+Animation}} (bool value)
+\begin{DoxyCompactList}\small\item\em アニメーションフラグ設定関数 \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_draw_order_list_afe5cb8651814f631146c91e6428c0b6d}{get\+Layer\+Num}} ()
 \begin{DoxyCompactList}\small\item\em レイヤー数取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_draw_order_list_a692fe6ddfbc8ac4167c697a1f8096c57}{set\+Layer\+Num}} (int value)
@@ -53,23 +70,29 @@ void \mbox{\hyperlink{class_draw_order_list_a692fe6ddfbc8ac4167c697a1f8096c57}{s
 \subsection*{静的公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-static const unsigned \mbox{\hyperlink{class_draw_order_list_a75498416e70da9517427695271d4b5e7}{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+F\+F\+ER}} = 1 $<$$<$ 0
+static const unsigned \mbox{\hyperlink{class_draw_order_list_a9b0fb07f07093ce5047373732c33fca1}{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+M\+A\+IN}} = 1 $<$$<$ 0
+\item 
+static const unsigned \mbox{\hyperlink{class_draw_order_list_a0ee325016a7e07c0be79c6440f3bfe53}{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+M\+AP}} = 1 $<$$<$ 1
 \end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_shader_manager_a9b51e49d70eb3cc58f6d1f3994e8cfbd}{Shader\+Manager\+::\+Vertex\+Shader\+Type}} \mbox{\hyperlink{class_draw_order_list_afcb0968108f4e6932358393a8bc90a8b}{vertex\+\_\+shader\+\_\+type\+\_\+}} = Shader\+Manager\+::\+Vertex\+Shader\+Type\+::\+V\+E\+R\+T\+E\+X\+\_\+\+F\+I\+X\+ED
-\begin{DoxyCompactList}\small\item\em 頂点シェーダータイプ \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_shader_manager_a7d15d773b3c6a99dd7086c45c8b0be5f}{Shader\+Manager\+::\+Pixel\+Shader\+Type}} \mbox{\hyperlink{class_draw_order_list_a8c2adbcac9f724deae8da0a698e93c57}{pixel\+\_\+shader\+\_\+type\+\_\+}} = Shader\+Manager\+::\+Pixel\+Shader\+Type\+::\+P\+I\+X\+E\+L\+\_\+\+F\+I\+X\+ED
-\begin{DoxyCompactList}\small\item\em ピクセルシェーダータイプ \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_draw_order_list_a6c9b9ceb312c16d399ef355f4f3486bb}{Draw\+Type}} \mbox{\hyperlink{class_draw_order_list_ad2ce43c1b177ba4dae4198aa272eeb23}{draw\+\_\+type\+\_\+}} = Draw\+Type\+::\+O\+P\+A\+C\+I\+TY
 \begin{DoxyCompactList}\small\item\em 描画の種類 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_flag}{Flag}} \mbox{\hyperlink{class_draw_order_list_a8da2b635d5b2a9191088f9180d1fe6d6}{render\+\_\+target\+\_\+flag\+\_\+}}
+\mbox{\hyperlink{class_draw_order_list_a6c9b9ceb312c16d399ef355f4f3486bb}{Draw\+Type}} \mbox{\hyperlink{class_draw_order_list_a57edbe464013d515f591d2cc98bfcbd0}{temp\+\_\+change\+\_\+draw\+\_\+type\+\_\+}} = Draw\+Type\+::\+N\+O\+NE
+\begin{DoxyCompactList}\small\item\em 一時変更描画の種類 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shader_manager_a9b51e49d70eb3cc58f6d1f3994e8cfbd}{Shader\+Manager\+::\+Vertex\+Shader\+Type}} \mbox{\hyperlink{class_draw_order_list_afcb0968108f4e6932358393a8bc90a8b}{vertex\+\_\+shader\+\_\+type\+\_\+}} = \mbox{\hyperlink{class_shader_manager_a9b51e49d70eb3cc58f6d1f3994e8cfbdac6e6dc18b53b4c2681394b9d8aefcec7}{Shader\+Manager\+::\+Vertex\+Shader\+Type\+::\+F\+I\+X\+ED}}
+\begin{DoxyCompactList}\small\item\em 頂点シェーダータイプ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shader_manager_a7d15d773b3c6a99dd7086c45c8b0be5f}{Shader\+Manager\+::\+Pixel\+Shader\+Type}} \mbox{\hyperlink{class_draw_order_list_a8c2adbcac9f724deae8da0a698e93c57}{pixel\+\_\+shader\+\_\+type\+\_\+}} = \mbox{\hyperlink{class_shader_manager_a7d15d773b3c6a99dd7086c45c8b0be5fac6e6dc18b53b4c2681394b9d8aefcec7}{Shader\+Manager\+::\+Pixel\+Shader\+Type\+::\+F\+I\+X\+ED}}
+\begin{DoxyCompactList}\small\item\em ピクセルシェーダータイプ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bit_flag}{Bit\+Flag}} \mbox{\hyperlink{class_draw_order_list_a9ec6aa2d6330335a0cb5ac037d3dd26d}{render\+\_\+target\+\_\+flag\+\_\+}}
 \begin{DoxyCompactList}\small\item\em レンダーターゲットフラグ \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_draw_order_list_ae9a77121ff108d8f0ee0c73065f99a75}{is\+\_\+billboard\+\_\+}} = false
 \begin{DoxyCompactList}\small\item\em ビルボードフラグ \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_draw_order_list_a26e72a0f47cc2c791eeb87fe6aadeee9}{is\+\_\+lighting\+\_\+}} = true
 \begin{DoxyCompactList}\small\item\em ラインティングフラグ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_draw_order_list_a002c0ace5780bf451d2c0fefad9385be}{is\+\_\+animation\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em アニメーションフラグ \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_draw_order_list_aff49851688a106fc572abab6e65506b8}{layer\+\_\+num\+\_\+}} = 0
 \begin{DoxyCompactList}\small\item\em レイヤー数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -143,6 +166,30 @@ M\+AX&\\
 
  Draw\+Order\+List.\+cpp の 47 行目に定義があります。
 
+\mbox{\Hypertarget{class_draw_order_list_a7131fc4155b8a35108697ad9628f337f}\label{class_draw_order_list_a7131fc4155b8a35108697ad9628f337f}} 
+\index{Draw\+Order\+List@{Draw\+Order\+List}!get\+Is\+Animation@{get\+Is\+Animation}}
+\index{get\+Is\+Animation@{get\+Is\+Animation}!Draw\+Order\+List@{Draw\+Order\+List}}
+\subsubsection{\texorpdfstring{get\+Is\+Animation()}{getIsAnimation()}}
+{\footnotesize\ttfamily bool Draw\+Order\+List\+::get\+Is\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+アニメーションフラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & アニメーションフラグ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Draw\+Order\+List.\+cpp の 110 行目に定義があります。
+
 \mbox{\Hypertarget{class_draw_order_list_a5d49272331a0f6f8656839ba5fe5e1b6}\label{class_draw_order_list_a5d49272331a0f6f8656839ba5fe5e1b6}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!get\+Is\+Billboard@{get\+Is\+Billboard}}
 \index{get\+Is\+Billboard@{get\+Is\+Billboard}!Draw\+Order\+List@{Draw\+Order\+List}}
@@ -165,7 +212,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Draw\+Order\+List.\+cpp の 68 行目に定義があります。
+ Draw\+Order\+List.\+cpp の 82 行目に定義があります。
 
 \mbox{\Hypertarget{class_draw_order_list_a1015463f08f8bf1118d5d1f79029d869}\label{class_draw_order_list_a1015463f08f8bf1118d5d1f79029d869}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!get\+Is\+Lighting@{get\+Is\+Lighting}}
@@ -189,7 +236,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Draw\+Order\+List.\+cpp の 82 行目に定義があります。
+ Draw\+Order\+List.\+cpp の 96 行目に定義があります。
 
 \mbox{\Hypertarget{class_draw_order_list_afe5cb8651814f631146c91e6428c0b6d}\label{class_draw_order_list_afe5cb8651814f631146c91e6428c0b6d}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!get\+Layer\+Num@{get\+Layer\+Num}}
@@ -213,7 +260,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Draw\+Order\+List.\+cpp の 96 行目に定義があります。
+ Draw\+Order\+List.\+cpp の 124 行目に定義があります。
 
 \mbox{\Hypertarget{class_draw_order_list_afc56377beda4eabbf20c5115c3a26ef7}\label{class_draw_order_list_afc56377beda4eabbf20c5115c3a26ef7}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!get\+Pixel\+Shader\+Type@{get\+Pixel\+Shader\+Type}}
@@ -239,15 +286,15 @@ M\+AX&\\
 
  Draw\+Order\+List.\+cpp の 33 行目に定義があります。
 
-\mbox{\Hypertarget{class_draw_order_list_a2bc0267f11550e6c231682e0824b25b5}\label{class_draw_order_list_a2bc0267f11550e6c231682e0824b25b5}} 
+\mbox{\Hypertarget{class_draw_order_list_a3c483376f2da73a403bbd82f7e9e3370}\label{class_draw_order_list_a3c483376f2da73a403bbd82f7e9e3370}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!getp\+Render\+Target\+Flag@{getp\+Render\+Target\+Flag}}
 \index{getp\+Render\+Target\+Flag@{getp\+Render\+Target\+Flag}!Draw\+Order\+List@{Draw\+Order\+List}}
 \subsubsection{\texorpdfstring{getp\+Render\+Target\+Flag()}{getpRenderTargetFlag()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_flag}{Flag}} $\ast$ Draw\+Order\+List\+::getp\+Render\+Target\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bit_flag}{Bit\+Flag}} $\ast$ Draw\+Order\+List\+::getp\+Render\+Target\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-レンダーターゲットフラグポインタ取得関数 
+レンダーターゲットフラグ取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -256,7 +303,31 @@ M\+AX&\\
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Flag$\ast$} & レンダーターゲットフラグポインタ \\
+{\em Bit\+Flag$\ast$} & レンダーターゲットフラグ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Draw\+Order\+List.\+cpp の 75 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_order_list_a8ab03bec2bf394ed6ffc3d44b0eaabb4}\label{class_draw_order_list_a8ab03bec2bf394ed6ffc3d44b0eaabb4}} 
+\index{Draw\+Order\+List@{Draw\+Order\+List}!get\+Temp\+Change\+Draw\+Type@{get\+Temp\+Change\+Draw\+Type}}
+\index{get\+Temp\+Change\+Draw\+Type@{get\+Temp\+Change\+Draw\+Type}!Draw\+Order\+List@{Draw\+Order\+List}}
+\subsubsection{\texorpdfstring{get\+Temp\+Change\+Draw\+Type()}{getTempChangeDrawType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_order_list_a6c9b9ceb312c16d399ef355f4f3486bb}{Draw\+Order\+List\+::\+Draw\+Type}} Draw\+Order\+List\+::get\+Temp\+Change\+Draw\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+一時変更描画タイプ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Draw\+Type} & 一時変更描画タイプ \\
 \hline
 \end{DoxyRetVals}
 
@@ -298,8 +369,8 @@ M\+AX&\\
 描画タイプ設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & 描画タイプ \\
+\begin{DoxyParams}{引数}
+{\em value} & 描画タイプ \\
 \hline
 \end{DoxyParams}
 
@@ -310,6 +381,30 @@ M\+AX&\\
 
 
  Draw\+Order\+List.\+cpp の 54 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_order_list_a31b85221bde032f5912219f79a93c100}\label{class_draw_order_list_a31b85221bde032f5912219f79a93c100}} 
+\index{Draw\+Order\+List@{Draw\+Order\+List}!set\+Is\+Animation@{set\+Is\+Animation}}
+\index{set\+Is\+Animation@{set\+Is\+Animation}!Draw\+Order\+List@{Draw\+Order\+List}}
+\subsubsection{\texorpdfstring{set\+Is\+Animation()}{setIsAnimation()}}
+{\footnotesize\ttfamily void Draw\+Order\+List\+::set\+Is\+Animation (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+アニメーションフラグ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & アニメーションフラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Draw\+Order\+List.\+cpp の 117 行目に定義があります。
 
 \mbox{\Hypertarget{class_draw_order_list_a80a404e3308a92dcb9bfa3451518d14e}\label{class_draw_order_list_a80a404e3308a92dcb9bfa3451518d14e}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!set\+Is\+Billboard@{set\+Is\+Billboard}}
@@ -322,8 +417,8 @@ M\+AX&\\
 ビルボードフラグ設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & ビルボードフラグ \\
+\begin{DoxyParams}{引数}
+{\em value} & ビルボードフラグ \\
 \hline
 \end{DoxyParams}
 
@@ -333,7 +428,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Draw\+Order\+List.\+cpp の 75 行目に定義があります。
+ Draw\+Order\+List.\+cpp の 89 行目に定義があります。
 
 \mbox{\Hypertarget{class_draw_order_list_a90504fdecaa6c022c8b85919352a10b1}\label{class_draw_order_list_a90504fdecaa6c022c8b85919352a10b1}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!set\+Is\+Lighting@{set\+Is\+Lighting}}
@@ -346,8 +441,8 @@ M\+AX&\\
 ライティングフラグ設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & ライティングフラグ \\
+\begin{DoxyParams}{引数}
+{\em value} & ライティングフラグ \\
 \hline
 \end{DoxyParams}
 
@@ -357,7 +452,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Draw\+Order\+List.\+cpp の 89 行目に定義があります。
+ Draw\+Order\+List.\+cpp の 103 行目に定義があります。
 
 \mbox{\Hypertarget{class_draw_order_list_a692fe6ddfbc8ac4167c697a1f8096c57}\label{class_draw_order_list_a692fe6ddfbc8ac4167c697a1f8096c57}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!set\+Layer\+Num@{set\+Layer\+Num}}
@@ -370,8 +465,8 @@ M\+AX&\\
 レイヤー数設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & レイヤー数 \\
+\begin{DoxyParams}{引数}
+{\em value} & レイヤー数 \\
 \hline
 \end{DoxyParams}
 
@@ -381,7 +476,7 @@ M\+AX&\\
 \end{DoxyRetVals}
 
 
- Draw\+Order\+List.\+cpp の 103 行目に定義があります。
+ Draw\+Order\+List.\+cpp の 131 行目に定義があります。
 
 \mbox{\Hypertarget{class_draw_order_list_a761f6f76271366ad3c0203b098087914}\label{class_draw_order_list_a761f6f76271366ad3c0203b098087914}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!set\+Pixel\+Shader\+Type@{set\+Pixel\+Shader\+Type}}
@@ -394,8 +489,8 @@ M\+AX&\\
 ピクセルシェーダータイプ設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & ピクセルシェーダータイプ \\
+\begin{DoxyParams}{引数}
+{\em value} & ピクセルシェーダータイプ \\
 \hline
 \end{DoxyParams}
 
@@ -406,6 +501,30 @@ M\+AX&\\
 
 
  Draw\+Order\+List.\+cpp の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_order_list_a4e4126b1de6ba16ce30558b9e8d9b490}\label{class_draw_order_list_a4e4126b1de6ba16ce30558b9e8d9b490}} 
+\index{Draw\+Order\+List@{Draw\+Order\+List}!set\+Temp\+Change\+Draw\+Type@{set\+Temp\+Change\+Draw\+Type}}
+\index{set\+Temp\+Change\+Draw\+Type@{set\+Temp\+Change\+Draw\+Type}!Draw\+Order\+List@{Draw\+Order\+List}}
+\subsubsection{\texorpdfstring{set\+Temp\+Change\+Draw\+Type()}{setTempChangeDrawType()}}
+{\footnotesize\ttfamily void Draw\+Order\+List\+::set\+Temp\+Change\+Draw\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_order_list_a6c9b9ceb312c16d399ef355f4f3486bb}{Draw\+Order\+List\+::\+Draw\+Type}}}]{value }\end{DoxyParamCaption})}
+
+
+
+一時変更描画タイプ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 一時変更描画タイプ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Draw\+Order\+List.\+cpp の 68 行目に定義があります。
 
 \mbox{\Hypertarget{class_draw_order_list_ad813fde8368b6e8ae6ba373edd0a0a42}\label{class_draw_order_list_ad813fde8368b6e8ae6ba373edd0a0a42}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!set\+Vertex\+Shader\+Type@{set\+Vertex\+Shader\+Type}}
@@ -418,8 +537,8 @@ M\+AX&\\
 頂点シェーダータイプ設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & 頂点シェーダータイプ \\
+\begin{DoxyParams}{引数}
+{\em value} & 頂点シェーダータイプ \\
 \hline
 \end{DoxyParams}
 
@@ -446,7 +565,21 @@ M\+AX&\\
 
 
 
- Draw\+Order\+List.\+h の 55 行目に定義があります。
+ Draw\+Order\+List.\+h の 53 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_order_list_a002c0ace5780bf451d2c0fefad9385be}\label{class_draw_order_list_a002c0ace5780bf451d2c0fefad9385be}} 
+\index{Draw\+Order\+List@{Draw\+Order\+List}!is\+\_\+animation\+\_\+@{is\+\_\+animation\+\_\+}}
+\index{is\+\_\+animation\+\_\+@{is\+\_\+animation\+\_\+}!Draw\+Order\+List@{Draw\+Order\+List}}
+\subsubsection{\texorpdfstring{is\+\_\+animation\+\_\+}{is\_animation\_}}
+{\footnotesize\ttfamily bool Draw\+Order\+List\+::is\+\_\+animation\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+アニメーションフラグ 
+
+
+
+ Draw\+Order\+List.\+h の 60 行目に定義があります。
 
 \mbox{\Hypertarget{class_draw_order_list_ae9a77121ff108d8f0ee0c73065f99a75}\label{class_draw_order_list_ae9a77121ff108d8f0ee0c73065f99a75}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!is\+\_\+billboard\+\_\+@{is\+\_\+billboard\+\_\+}}
@@ -488,13 +621,13 @@ M\+AX&\\
 
 
 
- Draw\+Order\+List.\+h の 60 行目に定義があります。
+ Draw\+Order\+List.\+h の 61 行目に定義があります。
 
 \mbox{\Hypertarget{class_draw_order_list_a8c2adbcac9f724deae8da0a698e93c57}\label{class_draw_order_list_a8c2adbcac9f724deae8da0a698e93c57}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!pixel\+\_\+shader\+\_\+type\+\_\+@{pixel\+\_\+shader\+\_\+type\+\_\+}}
 \index{pixel\+\_\+shader\+\_\+type\+\_\+@{pixel\+\_\+shader\+\_\+type\+\_\+}!Draw\+Order\+List@{Draw\+Order\+List}}
 \subsubsection{\texorpdfstring{pixel\+\_\+shader\+\_\+type\+\_\+}{pixel\_shader\_type\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_shader_manager_a7d15d773b3c6a99dd7086c45c8b0be5f}{Shader\+Manager\+::\+Pixel\+Shader\+Type}} Draw\+Order\+List\+::pixel\+\_\+shader\+\_\+type\+\_\+ = Shader\+Manager\+::\+Pixel\+Shader\+Type\+::\+P\+I\+X\+E\+L\+\_\+\+F\+I\+X\+ED\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shader_manager_a7d15d773b3c6a99dd7086c45c8b0be5f}{Shader\+Manager\+::\+Pixel\+Shader\+Type}} Draw\+Order\+List\+::pixel\+\_\+shader\+\_\+type\+\_\+ = \mbox{\hyperlink{class_shader_manager_a7d15d773b3c6a99dd7086c45c8b0be5fac6e6dc18b53b4c2681394b9d8aefcec7}{Shader\+Manager\+::\+Pixel\+Shader\+Type\+::\+F\+I\+X\+ED}}\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -502,23 +635,13 @@ M\+AX&\\
 
 
 
- Draw\+Order\+List.\+h の 53 行目に定義があります。
+ Draw\+Order\+List.\+h の 56 行目に定義があります。
 
-\mbox{\Hypertarget{class_draw_order_list_a75498416e70da9517427695271d4b5e7}\label{class_draw_order_list_a75498416e70da9517427695271d4b5e7}} 
-\index{Draw\+Order\+List@{Draw\+Order\+List}!R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+F\+F\+ER@{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+F\+F\+ER}}
-\index{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+F\+F\+ER@{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+F\+F\+ER}!Draw\+Order\+List@{Draw\+Order\+List}}
-\subsubsection{\texorpdfstring{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+F\+F\+ER}{RENDER\_TARGET\_BACK\_BUFFER}}
-{\footnotesize\ttfamily const unsigned Draw\+Order\+List\+::\+R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+F\+F\+ER = 1 $<$$<$ 0\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
- Draw\+Order\+List.\+h の 45 行目に定義があります。
-
-\mbox{\Hypertarget{class_draw_order_list_a8da2b635d5b2a9191088f9180d1fe6d6}\label{class_draw_order_list_a8da2b635d5b2a9191088f9180d1fe6d6}} 
+\mbox{\Hypertarget{class_draw_order_list_a9ec6aa2d6330335a0cb5ac037d3dd26d}\label{class_draw_order_list_a9ec6aa2d6330335a0cb5ac037d3dd26d}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!render\+\_\+target\+\_\+flag\+\_\+@{render\+\_\+target\+\_\+flag\+\_\+}}
 \index{render\+\_\+target\+\_\+flag\+\_\+@{render\+\_\+target\+\_\+flag\+\_\+}!Draw\+Order\+List@{Draw\+Order\+List}}
 \subsubsection{\texorpdfstring{render\+\_\+target\+\_\+flag\+\_\+}{render\_target\_flag\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_flag}{Flag}} Draw\+Order\+List\+::render\+\_\+target\+\_\+flag\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bit_flag}{Bit\+Flag}} Draw\+Order\+List\+::render\+\_\+target\+\_\+flag\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -528,11 +651,45 @@ M\+AX&\\
 
  Draw\+Order\+List.\+h の 57 行目に定義があります。
 
+\mbox{\Hypertarget{class_draw_order_list_a9b0fb07f07093ce5047373732c33fca1}\label{class_draw_order_list_a9b0fb07f07093ce5047373732c33fca1}} 
+\index{Draw\+Order\+List@{Draw\+Order\+List}!R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+M\+A\+IN@{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+M\+A\+IN}}
+\index{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+M\+A\+IN@{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+M\+A\+IN}!Draw\+Order\+List@{Draw\+Order\+List}}
+\subsubsection{\texorpdfstring{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+M\+A\+IN}{RENDER\_TARGET\_MAIN}}
+{\footnotesize\ttfamily const unsigned Draw\+Order\+List\+::\+R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+M\+A\+IN = 1 $<$$<$ 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ Draw\+Order\+List.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_order_list_a0ee325016a7e07c0be79c6440f3bfe53}\label{class_draw_order_list_a0ee325016a7e07c0be79c6440f3bfe53}} 
+\index{Draw\+Order\+List@{Draw\+Order\+List}!R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+M\+AP@{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+M\+AP}}
+\index{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+M\+AP@{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+M\+AP}!Draw\+Order\+List@{Draw\+Order\+List}}
+\subsubsection{\texorpdfstring{R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+M\+AP}{RENDER\_TARGET\_SHADOW\_MAP}}
+{\footnotesize\ttfamily const unsigned Draw\+Order\+List\+::\+R\+E\+N\+D\+E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+M\+AP = 1 $<$$<$ 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ Draw\+Order\+List.\+h の 46 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_order_list_a57edbe464013d515f591d2cc98bfcbd0}\label{class_draw_order_list_a57edbe464013d515f591d2cc98bfcbd0}} 
+\index{Draw\+Order\+List@{Draw\+Order\+List}!temp\+\_\+change\+\_\+draw\+\_\+type\+\_\+@{temp\+\_\+change\+\_\+draw\+\_\+type\+\_\+}}
+\index{temp\+\_\+change\+\_\+draw\+\_\+type\+\_\+@{temp\+\_\+change\+\_\+draw\+\_\+type\+\_\+}!Draw\+Order\+List@{Draw\+Order\+List}}
+\subsubsection{\texorpdfstring{temp\+\_\+change\+\_\+draw\+\_\+type\+\_\+}{temp\_change\_draw\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_order_list_a6c9b9ceb312c16d399ef355f4f3486bb}{Draw\+Type}} Draw\+Order\+List\+::temp\+\_\+change\+\_\+draw\+\_\+type\+\_\+ = Draw\+Type\+::\+N\+O\+NE\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+一時変更描画の種類 
+
+
+
+ Draw\+Order\+List.\+h の 54 行目に定義があります。
+
 \mbox{\Hypertarget{class_draw_order_list_afcb0968108f4e6932358393a8bc90a8b}\label{class_draw_order_list_afcb0968108f4e6932358393a8bc90a8b}} 
 \index{Draw\+Order\+List@{Draw\+Order\+List}!vertex\+\_\+shader\+\_\+type\+\_\+@{vertex\+\_\+shader\+\_\+type\+\_\+}}
 \index{vertex\+\_\+shader\+\_\+type\+\_\+@{vertex\+\_\+shader\+\_\+type\+\_\+}!Draw\+Order\+List@{Draw\+Order\+List}}
 \subsubsection{\texorpdfstring{vertex\+\_\+shader\+\_\+type\+\_\+}{vertex\_shader\_type\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_shader_manager_a9b51e49d70eb3cc58f6d1f3994e8cfbd}{Shader\+Manager\+::\+Vertex\+Shader\+Type}} Draw\+Order\+List\+::vertex\+\_\+shader\+\_\+type\+\_\+ = Shader\+Manager\+::\+Vertex\+Shader\+Type\+::\+V\+E\+R\+T\+E\+X\+\_\+\+F\+I\+X\+ED\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shader_manager_a9b51e49d70eb3cc58f6d1f3994e8cfbd}{Shader\+Manager\+::\+Vertex\+Shader\+Type}} Draw\+Order\+List\+::vertex\+\_\+shader\+\_\+type\+\_\+ = \mbox{\hyperlink{class_shader_manager_a9b51e49d70eb3cc58f6d1f3994e8cfbdac6e6dc18b53b4c2681394b9d8aefcec7}{Shader\+Manager\+::\+Vertex\+Shader\+Type\+::\+F\+I\+X\+ED}}\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -540,11 +697,11 @@ M\+AX&\\
 
 
 
- Draw\+Order\+List.\+h の 52 行目に定義があります。
+ Draw\+Order\+List.\+h の 55 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Draw/\+Draw\+Base/\+Draw\+Order\+List/\mbox{\hyperlink{_draw_order_list_8h}{Draw\+Order\+List.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Draw/\+Draw\+Base/\+Draw\+Order\+List/\mbox{\hyperlink{_draw_order_list_8cpp}{Draw\+Order\+List.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\mbox{\hyperlink{_draw_order_list_8h}{Draw\+Order\+List.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Source/\mbox{\hyperlink{_draw_order_list_8cpp}{Draw\+Order\+List.\+cpp}}\end{DoxyCompactItemize}

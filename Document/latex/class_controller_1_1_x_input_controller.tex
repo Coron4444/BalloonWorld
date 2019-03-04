@@ -1,0 +1,164 @@
+\hypertarget{class_controller_1_1_x_input_controller}{}\section{Controller\+:\+:X\+Input\+Controller クラス}
+\label{class_controller_1_1_x_input_controller}\index{Controller\+::\+X\+Input\+Controller@{Controller\+::\+X\+Input\+Controller}}
+
+
+X\+Inputコントローラー\+Class  
+
+
+
+
+{\ttfamily \#include $<$Controller.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+X\+I\+N\+P\+U\+T\+\_\+\+S\+T\+A\+TE $\ast$ \mbox{\hyperlink{class_controller_1_1_x_input_controller_afee7c8104fdee4da995b2fdcf57985e3}{getp\+State}} ()
+\begin{DoxyCompactList}\small\item\em ステート取得関数 \end{DoxyCompactList}\item 
+X\+I\+N\+P\+U\+T\+\_\+\+S\+T\+A\+TE $\ast$ \mbox{\hyperlink{class_controller_1_1_x_input_controller_aa8341af2132808335e28268e57b7ffc2}{getp\+Old\+State}} ()
+\begin{DoxyCompactList}\small\item\em 1フレーム前のステート取得関数 \end{DoxyCompactList}\item 
+D\+W\+O\+RD $\ast$ \mbox{\hyperlink{class_controller_1_1_x_input_controller_a5c87f062465413fbb4c9ebfeace86fed}{getp\+Connection\+Message}} ()
+\begin{DoxyCompactList}\small\item\em 接続メッセージ取得関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+X\+I\+N\+P\+U\+T\+\_\+\+S\+T\+A\+TE \mbox{\hyperlink{class_controller_1_1_x_input_controller_a3ab82fee9794108189ed9851eca78cd9}{state\+\_\+}}
+\begin{DoxyCompactList}\small\item\em ステート \end{DoxyCompactList}\item 
+X\+I\+N\+P\+U\+T\+\_\+\+S\+T\+A\+TE \mbox{\hyperlink{class_controller_1_1_x_input_controller_a8b9cc519f51442d11b0eecf06afaf702}{old\+\_\+state\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 1フレーム前のステート \end{DoxyCompactList}\item 
+D\+W\+O\+RD \mbox{\hyperlink{class_controller_1_1_x_input_controller_a9b2e2c583c4a0bc90ad3278860937e3f}{connection\+\_\+message\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 接続メッセージ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+X\+Inputコントローラー\+Class 
+
+X\+Inputコントローラー1つ分の状態を持つ\+Class 
+
+ Controller.\+h の 35 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_controller_1_1_x_input_controller_a5c87f062465413fbb4c9ebfeace86fed}\label{class_controller_1_1_x_input_controller_a5c87f062465413fbb4c9ebfeace86fed}} 
+\index{Controller\+::\+X\+Input\+Controller@{Controller\+::\+X\+Input\+Controller}!getp\+Connection\+Message@{getp\+Connection\+Message}}
+\index{getp\+Connection\+Message@{getp\+Connection\+Message}!Controller\+::\+X\+Input\+Controller@{Controller\+::\+X\+Input\+Controller}}
+\subsubsection{\texorpdfstring{getp\+Connection\+Message()}{getpConnectionMessage()}}
+{\footnotesize\ttfamily D\+W\+O\+RD $\ast$ Controller\+::\+X\+Input\+Controller\+::getp\+Connection\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+接続メッセージ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em D\+W\+O\+R\+D$\ast$} & 接続メッセージ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_1_1_x_input_controller_aa8341af2132808335e28268e57b7ffc2}\label{class_controller_1_1_x_input_controller_aa8341af2132808335e28268e57b7ffc2}} 
+\index{Controller\+::\+X\+Input\+Controller@{Controller\+::\+X\+Input\+Controller}!getp\+Old\+State@{getp\+Old\+State}}
+\index{getp\+Old\+State@{getp\+Old\+State}!Controller\+::\+X\+Input\+Controller@{Controller\+::\+X\+Input\+Controller}}
+\subsubsection{\texorpdfstring{getp\+Old\+State()}{getpOldState()}}
+{\footnotesize\ttfamily X\+I\+N\+P\+U\+T\+\_\+\+S\+T\+A\+TE $\ast$ Controller\+::\+X\+Input\+Controller\+::getp\+Old\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+1フレーム前のステート取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em X\+I\+N\+P\+U\+T\+\_\+\+S\+T\+A\+T\+E$\ast$} & 1フレーム前のステート \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 36 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_1_1_x_input_controller_afee7c8104fdee4da995b2fdcf57985e3}\label{class_controller_1_1_x_input_controller_afee7c8104fdee4da995b2fdcf57985e3}} 
+\index{Controller\+::\+X\+Input\+Controller@{Controller\+::\+X\+Input\+Controller}!getp\+State@{getp\+State}}
+\index{getp\+State@{getp\+State}!Controller\+::\+X\+Input\+Controller@{Controller\+::\+X\+Input\+Controller}}
+\subsubsection{\texorpdfstring{getp\+State()}{getpState()}}
+{\footnotesize\ttfamily X\+I\+N\+P\+U\+T\+\_\+\+S\+T\+A\+TE $\ast$ Controller\+::\+X\+Input\+Controller\+::getp\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ステート取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em X\+I\+N\+P\+U\+T\+\_\+\+S\+T\+A\+T\+E$\ast$} & ステート \\
+\hline
+\end{DoxyRetVals}
+
+
+ Controller.\+cpp の 29 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_controller_1_1_x_input_controller_a9b2e2c583c4a0bc90ad3278860937e3f}\label{class_controller_1_1_x_input_controller_a9b2e2c583c4a0bc90ad3278860937e3f}} 
+\index{Controller\+::\+X\+Input\+Controller@{Controller\+::\+X\+Input\+Controller}!connection\+\_\+message\+\_\+@{connection\+\_\+message\+\_\+}}
+\index{connection\+\_\+message\+\_\+@{connection\+\_\+message\+\_\+}!Controller\+::\+X\+Input\+Controller@{Controller\+::\+X\+Input\+Controller}}
+\subsubsection{\texorpdfstring{connection\+\_\+message\+\_\+}{connection\_message\_}}
+{\footnotesize\ttfamily D\+W\+O\+RD Controller\+::\+X\+Input\+Controller\+::connection\+\_\+message\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+接続メッセージ 
+
+
+
+ Controller.\+h の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_1_1_x_input_controller_a8b9cc519f51442d11b0eecf06afaf702}\label{class_controller_1_1_x_input_controller_a8b9cc519f51442d11b0eecf06afaf702}} 
+\index{Controller\+::\+X\+Input\+Controller@{Controller\+::\+X\+Input\+Controller}!old\+\_\+state\+\_\+@{old\+\_\+state\+\_\+}}
+\index{old\+\_\+state\+\_\+@{old\+\_\+state\+\_\+}!Controller\+::\+X\+Input\+Controller@{Controller\+::\+X\+Input\+Controller}}
+\subsubsection{\texorpdfstring{old\+\_\+state\+\_\+}{old\_state\_}}
+{\footnotesize\ttfamily X\+I\+N\+P\+U\+T\+\_\+\+S\+T\+A\+TE Controller\+::\+X\+Input\+Controller\+::old\+\_\+state\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+1フレーム前のステート 
+
+
+
+ Controller.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_controller_1_1_x_input_controller_a3ab82fee9794108189ed9851eca78cd9}\label{class_controller_1_1_x_input_controller_a3ab82fee9794108189ed9851eca78cd9}} 
+\index{Controller\+::\+X\+Input\+Controller@{Controller\+::\+X\+Input\+Controller}!state\+\_\+@{state\+\_\+}}
+\index{state\+\_\+@{state\+\_\+}!Controller\+::\+X\+Input\+Controller@{Controller\+::\+X\+Input\+Controller}}
+\subsubsection{\texorpdfstring{state\+\_\+}{state\_}}
+{\footnotesize\ttfamily X\+I\+N\+P\+U\+T\+\_\+\+S\+T\+A\+TE Controller\+::\+X\+Input\+Controller\+::state\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ステート 
+
+
+
+ Controller.\+h の 41 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Input/\mbox{\hyperlink{_controller_8h}{Controller.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Input/\+Source/\mbox{\hyperlink{_controller_8cpp}{Controller.\+cpp}}\end{DoxyCompactItemize}

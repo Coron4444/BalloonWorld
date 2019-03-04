@@ -1,0 +1,345 @@
+\hypertarget{class_motion_blur}{}\section{Motion\+Blur クラス}
+\label{class_motion_blur}\index{Motion\+Blur@{Motion\+Blur}}
+
+
+モーションブラー\+Class  
+
+
+
+
+{\ttfamily \#include $<$Motion\+Blur.\+h$>$}
+
+
+
+Motion\+Blur 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motion_blur__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_motion_blur_ab4f38538f4a0ca8e444109aa090537ee}{set\+Camera}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em カメラ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motion_blur_ac33ebb6a66254418212786178f4e4479}{set\+Draw\+Common\+Data}} (\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 描画共通データ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motion_blur_a801a9afbb4ee439af84bbaa2050cd414}{set\+Shader\+Manager}} (\mbox{\hyperlink{class_shader_manager}{Shader\+Manager}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em シェーダーマネージャ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motion_blur_a93f61cc3a14ed681e026d286a51da059}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motion_blur_ada6365aa40bddda3adf76695e9651e89}{Uninit\+When\+Change\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em シーン変更時の終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motion_blur_a4bceb3a1e625653a0037af10fa5cf422}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motion_blur_a931793c39ebeed7da3406f3aeaa7452e}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motion_blur_a8f3c39934e707c4325310873eea3ed45}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motion_blur_a5fcf35d649a2e1174e5fdaa0ee168a9f}{Late\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 後更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera}{Camera}} $\ast$ \mbox{\hyperlink{class_motion_blur_a1e43ed8f5b0ae775221695807b68ae8f}{camera\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em カメラ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$ \mbox{\hyperlink{class_motion_blur_aecc7c243d6ec641ec5d0bdc7bbeff481}{common\+\_\+data\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 描画共通データ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shader_manager}{Shader\+Manager}} $\ast$ \mbox{\hyperlink{class_motion_blur_a888c174da110fd14c2fcf2ab5c751dda}{shader\+\_\+manager\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em シェーダーマネージャ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_render_texture_polygon}{Render\+Texture\+Polygon}} $\ast$ \mbox{\hyperlink{class_motion_blur_a14af04a5a96dbdeed47b07bd7bd3d860}{polygon\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 表示用ポリゴン \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+モーションブラー\+Class 
+
+モーションブラーの\+Class 
+
+ Motion\+Blur.\+h の 27 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_motion_blur_a8f3c39934e707c4325310873eea3ed45}\label{class_motion_blur_a8f3c39934e707c4325310873eea3ed45}} 
+\index{Motion\+Blur@{Motion\+Blur}!Draw@{Draw}}
+\index{Draw@{Draw}!Motion\+Blur@{Motion\+Blur}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Motion\+Blur\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Motion\+Blur.\+cpp の 100 行目に定義があります。
+
+\mbox{\Hypertarget{class_motion_blur_a93f61cc3a14ed681e026d286a51da059}\label{class_motion_blur_a93f61cc3a14ed681e026d286a51da059}} 
+\index{Motion\+Blur@{Motion\+Blur}!Init@{Init}}
+\index{Init@{Init}!Motion\+Blur@{Motion\+Blur}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Motion\+Blur\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Motion\+Blur.\+cpp の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_motion_blur_a5fcf35d649a2e1174e5fdaa0ee168a9f}\label{class_motion_blur_a5fcf35d649a2e1174e5fdaa0ee168a9f}} 
+\index{Motion\+Blur@{Motion\+Blur}!Late\+Update@{Late\+Update}}
+\index{Late\+Update@{Late\+Update}!Motion\+Blur@{Motion\+Blur}}
+\subsubsection{\texorpdfstring{Late\+Update()}{LateUpdate()}}
+{\footnotesize\ttfamily void Motion\+Blur\+::\+Late\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+後更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Motion\+Blur.\+cpp の 80 行目に定義があります。
+
+\mbox{\Hypertarget{class_motion_blur_ab4f38538f4a0ca8e444109aa090537ee}\label{class_motion_blur_ab4f38538f4a0ca8e444109aa090537ee}} 
+\index{Motion\+Blur@{Motion\+Blur}!set\+Camera@{set\+Camera}}
+\index{set\+Camera@{set\+Camera}!Motion\+Blur@{Motion\+Blur}}
+\subsubsection{\texorpdfstring{set\+Camera()}{setCamera()}}
+{\footnotesize\ttfamily void Motion\+Blur\+::set\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+カメラ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & カメラ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Motion\+Blur.\+cpp の 24 行目に定義があります。
+
+\mbox{\Hypertarget{class_motion_blur_ac33ebb6a66254418212786178f4e4479}\label{class_motion_blur_ac33ebb6a66254418212786178f4e4479}} 
+\index{Motion\+Blur@{Motion\+Blur}!set\+Draw\+Common\+Data@{set\+Draw\+Common\+Data}}
+\index{set\+Draw\+Common\+Data@{set\+Draw\+Common\+Data}!Motion\+Blur@{Motion\+Blur}}
+\subsubsection{\texorpdfstring{set\+Draw\+Common\+Data()}{setDrawCommonData()}}
+{\footnotesize\ttfamily void Motion\+Blur\+::set\+Draw\+Common\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+描画共通データ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & 描画共通データ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Motion\+Blur.\+cpp の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_motion_blur_a801a9afbb4ee439af84bbaa2050cd414}\label{class_motion_blur_a801a9afbb4ee439af84bbaa2050cd414}} 
+\index{Motion\+Blur@{Motion\+Blur}!set\+Shader\+Manager@{set\+Shader\+Manager}}
+\index{set\+Shader\+Manager@{set\+Shader\+Manager}!Motion\+Blur@{Motion\+Blur}}
+\subsubsection{\texorpdfstring{set\+Shader\+Manager()}{setShaderManager()}}
+{\footnotesize\ttfamily void Motion\+Blur\+::set\+Shader\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shader_manager}{Shader\+Manager}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+シェーダーマネージャ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & シェーダーマネージャ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Motion\+Blur.\+cpp の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_motion_blur_a4bceb3a1e625653a0037af10fa5cf422}\label{class_motion_blur_a4bceb3a1e625653a0037af10fa5cf422}} 
+\index{Motion\+Blur@{Motion\+Blur}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Motion\+Blur@{Motion\+Blur}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Motion\+Blur\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Motion\+Blur.\+cpp の 60 行目に定義があります。
+
+\mbox{\Hypertarget{class_motion_blur_ada6365aa40bddda3adf76695e9651e89}\label{class_motion_blur_ada6365aa40bddda3adf76695e9651e89}} 
+\index{Motion\+Blur@{Motion\+Blur}!Uninit\+When\+Change\+Scene@{Uninit\+When\+Change\+Scene}}
+\index{Uninit\+When\+Change\+Scene@{Uninit\+When\+Change\+Scene}!Motion\+Blur@{Motion\+Blur}}
+\subsubsection{\texorpdfstring{Uninit\+When\+Change\+Scene()}{UninitWhenChangeScene()}}
+{\footnotesize\ttfamily void Motion\+Blur\+::\+Uninit\+When\+Change\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+シーン変更時の終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Motion\+Blur.\+cpp の 67 行目に定義があります。
+
+\mbox{\Hypertarget{class_motion_blur_a931793c39ebeed7da3406f3aeaa7452e}\label{class_motion_blur_a931793c39ebeed7da3406f3aeaa7452e}} 
+\index{Motion\+Blur@{Motion\+Blur}!Update@{Update}}
+\index{Update@{Update}!Motion\+Blur@{Motion\+Blur}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Motion\+Blur\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Motion\+Blur.\+cpp の 74 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_motion_blur_a1e43ed8f5b0ae775221695807b68ae8f}\label{class_motion_blur_a1e43ed8f5b0ae775221695807b68ae8f}} 
+\index{Motion\+Blur@{Motion\+Blur}!camera\+\_\+@{camera\+\_\+}}
+\index{camera\+\_\+@{camera\+\_\+}!Motion\+Blur@{Motion\+Blur}}
+\subsubsection{\texorpdfstring{camera\+\_\+}{camera\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera}{Camera}}$\ast$ Motion\+Blur\+::camera\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+カメラ 
+
+
+
+ Motion\+Blur.\+h の 33 行目に定義があります。
+
+\mbox{\Hypertarget{class_motion_blur_aecc7c243d6ec641ec5d0bdc7bbeff481}\label{class_motion_blur_aecc7c243d6ec641ec5d0bdc7bbeff481}} 
+\index{Motion\+Blur@{Motion\+Blur}!common\+\_\+data\+\_\+@{common\+\_\+data\+\_\+}}
+\index{common\+\_\+data\+\_\+@{common\+\_\+data\+\_\+}!Motion\+Blur@{Motion\+Blur}}
+\subsubsection{\texorpdfstring{common\+\_\+data\+\_\+}{common\_data\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}}$\ast$ Motion\+Blur\+::common\+\_\+data\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+描画共通データ 
+
+
+
+ Motion\+Blur.\+h の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_motion_blur_a14af04a5a96dbdeed47b07bd7bd3d860}\label{class_motion_blur_a14af04a5a96dbdeed47b07bd7bd3d860}} 
+\index{Motion\+Blur@{Motion\+Blur}!polygon\+\_\+@{polygon\+\_\+}}
+\index{polygon\+\_\+@{polygon\+\_\+}!Motion\+Blur@{Motion\+Blur}}
+\subsubsection{\texorpdfstring{polygon\+\_\+}{polygon\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_render_texture_polygon}{Render\+Texture\+Polygon}}$\ast$ Motion\+Blur\+::polygon\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+表示用ポリゴン 
+
+
+
+ Motion\+Blur.\+h の 36 行目に定義があります。
+
+\mbox{\Hypertarget{class_motion_blur_a888c174da110fd14c2fcf2ab5c751dda}\label{class_motion_blur_a888c174da110fd14c2fcf2ab5c751dda}} 
+\index{Motion\+Blur@{Motion\+Blur}!shader\+\_\+manager\+\_\+@{shader\+\_\+manager\+\_\+}}
+\index{shader\+\_\+manager\+\_\+@{shader\+\_\+manager\+\_\+}!Motion\+Blur@{Motion\+Blur}}
+\subsubsection{\texorpdfstring{shader\+\_\+manager\+\_\+}{shader\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shader_manager}{Shader\+Manager}}$\ast$ Motion\+Blur\+::shader\+\_\+manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+シェーダーマネージャ 
+
+
+
+ Motion\+Blur.\+h の 35 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Post\+Effect/\mbox{\hyperlink{_motion_blur_8h}{Motion\+Blur.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Post\+Effect/\+Source/\mbox{\hyperlink{_motion_blur_8cpp}{Motion\+Blur.\+cpp}}\end{DoxyCompactItemize}

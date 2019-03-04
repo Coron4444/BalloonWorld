@@ -2,69 +2,496 @@
 \label{class_player}\index{Player@{Player}}
 
 
+プレイヤー\+Class  
+
+
+
+
 {\ttfamily \#include $<$Player.\+h$>$}
 
 
 
-Player の継承関係図\nopagebreak
+Player 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=174pt]{class_player__inherit__graph}
+\includegraphics[width=350pt]{class_player__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_player_a171167a4b1a6dddbe94b8f3c6f7462c4}{Init}} (\mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$update, \mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$collision, \mbox{\hyperlink{class_game_scene}{Game\+Scene}} $\ast$game\+\_\+scene)
-\item 
+void \mbox{\hyperlink{class_player_a4d067dc5b3d71b842b09b2149cb26276}{set\+Position}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} value)
+\begin{DoxyCompactList}\small\item\em 座標設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_balloon_group}{Balloon\+Group}} $\ast$ \mbox{\hyperlink{class_player_a60a79ad6d48a709e94c97178bb6f669a}{getp\+Balloon\+Group}} ()
+\begin{DoxyCompactList}\small\item\em 風船群取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a9e5527047eded7fdeef45eb94d7d488a}{set\+Balloon\+Group}} (\mbox{\hyperlink{class_balloon_group}{Balloon\+Group}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 風船群設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera}{Camera}} $\ast$ \mbox{\hyperlink{class_player_aba339bf40ee75457b4c436c68b4670cd}{getp\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em カメラ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_aa8e97731aaa160060e6f9c9784297140}{set\+Camera}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em カメラ設定関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_aeb7e5d371b48735a6a9088fbe147d531}{get\+Is\+On\+The\+Ground}} ()
+\begin{DoxyCompactList}\small\item\em 地面着地フラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ae6433f8257774cb0eb102b7ad0431161}{set\+Is\+On\+The\+Ground}} (bool value)
+\begin{DoxyCompactList}\small\item\em 地面着地フラグ設定関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_a97e5447778ae6c384eedc532dcd8431d}{get\+Score}} ()
+\begin{DoxyCompactList}\small\item\em スコア取得関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_ae7ab2639de2492722e9db81533598e01}{get\+Anim\+Count}} ()
+\begin{DoxyCompactList}\small\item\em アニメーションカウント取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_aecd3f846ad6bb9e7525ef273c4a76f53}{set\+Anim\+Count}} (int value)
+\begin{DoxyCompactList}\small\item\em アニメーションカウント取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_aaf3637816c8511b56528cb8f2a6d1ccb}{Init}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$collision)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_player_a7455a83ac23d2f5e0cce0ddd7d92db0c}{Uninit}} () override
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_player_a457153d0edd58932e37e1356f5fe5fed}{Reset}} () override
-\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{公開変数類}
+void \mbox{\hyperlink{class_player_a5e17be3418fa0ac0192c05efaf3dc8bd}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_aa3adab06a1122754f468413b5d3a165f}{Add\+Score}} (int value)
+\begin{DoxyCompactList}\small\item\em デバッグ表示関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_game_scene}{Game\+Scene}} $\ast$ \mbox{\hyperlink{class_player_ab41e7ebf6f975f2eea365923bc2dca7f}{game\+\_\+scene\+\_\+}}
+void \mbox{\hyperlink{class_player_a65a76094cff6f149d5847d2110fe443d}{Input}} ()
+\begin{DoxyCompactList}\small\item\em 入力関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a0b8e7f60389c0d55a733b163d9b26a4d}{Input\+Translation}} ()
+\begin{DoxyCompactList}\small\item\em 平行移動入力関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_afea84763c80097fa3565b08f4cc4d40f}{Input\+Translation\+Not\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em カメラ無し平行移動入力関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a0b738799f41b3b5819d32e30263ff5de}{Input\+Balloon}} ()
+\begin{DoxyCompactList}\small\item\em 風船入力関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_balloon_group}{Balloon\+Group}} $\ast$ \mbox{\hyperlink{class_player_ac0e8f407322bde4ee86300624b26eb56}{balloon\+\_\+group\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 風船群 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera}{Camera}} $\ast$ \mbox{\hyperlink{class_player_aab89171e78f99d2604210055d2f10734}{camera\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em カメラ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}} $\ast$ \mbox{\hyperlink{class_player_ad2aef02a40527af4f79dc99d652f5e7c}{bullet\+\_\+object\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em バレットオブジェクト \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a4d724c47f9c39bbd760bbc86dc895bd0}{is\+\_\+on\+\_\+the\+\_\+ground\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em 地面着地フラグ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_a423e2096b25d4965a84e4a8bf38c7683}{score\+\_\+}} = 0
+\item 
+int \mbox{\hyperlink{class_player_afe5d702e0d5f909d5c562df8a0e6cd9f}{anim\+\_\+counter\+\_\+}} = 0
 \end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const float \mbox{\hyperlink{class_player_a93f160503f5e15ca8d9675b5d3d14706}{A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}} = \mbox{\hyperlink{class_meter_to_frame_ac3292be31b35e97027a65b4c74763ebe}{Meter\+To\+Frame\+::\+Meter\+Per\+Second\+Squared\+To\+Meter\+Per\+Frame\+Squared}}(200.\+0f)
+\begin{DoxyCompactList}\small\item\em 加速度 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_player_ac436f0b176fe8d747919df13ebacb428}{M\+A\+X\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+V\+E\+L\+O\+C\+I\+TY}} = \mbox{\hyperlink{class_meter_to_frame_aa5468938f59eb934bfc6a897a7513812}{Meter\+To\+Frame\+::\+Meter\+Per\+Second\+To\+Meter\+Per\+Flame}}(500.\+0f)
+\begin{DoxyCompactList}\small\item\em 最大垂直方向速度 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_player_a1d3ffee6a3d31efa3a7b18ab639ced96}{M\+A\+X\+\_\+\+M\+A\+SS}} = 80.\+0f
+\begin{DoxyCompactList}\small\item\em 最大質量 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
+プレイヤー\+Class 
 
+プレイヤーの\+Class 
 
- Player.\+h の 31 行目に定義があります。
+ Player.\+h の 33 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_player_a171167a4b1a6dddbe94b8f3c6f7462c4}\label{class_player_a171167a4b1a6dddbe94b8f3c6f7462c4}} 
+\mbox{\Hypertarget{class_player_aa3adab06a1122754f468413b5d3a165f}\label{class_player_aa3adab06a1122754f468413b5d3a165f}} 
+\index{Player@{Player}!Add\+Score@{Add\+Score}}
+\index{Add\+Score@{Add\+Score}!Player@{Player}}
+\subsubsection{\texorpdfstring{Add\+Score()}{AddScore()}}
+{\footnotesize\ttfamily void Player\+::\+Add\+Score (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+デバッグ表示関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし スコア追加関数\\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyParams}{引数}
+{\em value} & スコア \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 183 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_ae7ab2639de2492722e9db81533598e01}\label{class_player_ae7ab2639de2492722e9db81533598e01}} 
+\index{Player@{Player}!get\+Anim\+Count@{get\+Anim\+Count}}
+\index{get\+Anim\+Count@{get\+Anim\+Count}!Player@{Player}}
+\subsubsection{\texorpdfstring{get\+Anim\+Count()}{getAnimCount()}}
+{\footnotesize\ttfamily int Player\+::get\+Anim\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+アニメーションカウント取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & アニメーションカウント \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 96 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_aeb7e5d371b48735a6a9088fbe147d531}\label{class_player_aeb7e5d371b48735a6a9088fbe147d531}} 
+\index{Player@{Player}!get\+Is\+On\+The\+Ground@{get\+Is\+On\+The\+Ground}}
+\index{get\+Is\+On\+The\+Ground@{get\+Is\+On\+The\+Ground}!Player@{Player}}
+\subsubsection{\texorpdfstring{get\+Is\+On\+The\+Ground()}{getIsOnTheGround()}}
+{\footnotesize\ttfamily bool Player\+::get\+Is\+On\+The\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+地面着地フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 地面着地フラグ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 74 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_a60a79ad6d48a709e94c97178bb6f669a}\label{class_player_a60a79ad6d48a709e94c97178bb6f669a}} 
+\index{Player@{Player}!getp\+Balloon\+Group@{getp\+Balloon\+Group}}
+\index{getp\+Balloon\+Group@{getp\+Balloon\+Group}!Player@{Player}}
+\subsubsection{\texorpdfstring{getp\+Balloon\+Group()}{getpBalloonGroup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_balloon_group}{Balloon\+Group}} $\ast$ Player\+::getp\+Balloon\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+風船群取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Balloon\+Group$\ast$} & 風船群 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_aba339bf40ee75457b4c436c68b4670cd}\label{class_player_aba339bf40ee75457b4c436c68b4670cd}} 
+\index{Player@{Player}!getp\+Camera@{getp\+Camera}}
+\index{getp\+Camera@{getp\+Camera}!Player@{Player}}
+\subsubsection{\texorpdfstring{getp\+Camera()}{getpCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera}{Camera}} $\ast$ Player\+::getp\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+カメラ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Camera$\ast$} & カメラ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 60 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_a97e5447778ae6c384eedc532dcd8431d}\label{class_player_a97e5447778ae6c384eedc532dcd8431d}} 
+\index{Player@{Player}!get\+Score@{get\+Score}}
+\index{get\+Score@{get\+Score}!Player@{Player}}
+\subsubsection{\texorpdfstring{get\+Score()}{getScore()}}
+{\footnotesize\ttfamily int Player\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+スコア取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & スコア \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 87 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_aaf3637816c8511b56528cb8f2a6d1ccb}\label{class_player_aaf3637816c8511b56528cb8f2a6d1ccb}} 
 \index{Player@{Player}!Init@{Init}}
 \index{Init@{Init}!Player@{Player}}
 \subsubsection{\texorpdfstring{Init()}{Init()}}
-{\footnotesize\ttfamily void Player\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$}]{update,  }\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$}]{collision,  }\item[{\mbox{\hyperlink{class_game_scene}{Game\+Scene}} $\ast$}]{game\+\_\+scene }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Player\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$}]{collision }\end{DoxyParamCaption})}
 
 
 
- Player.\+cpp の 32 行目に定義があります。
-
-\mbox{\Hypertarget{class_player_a457153d0edd58932e37e1356f5fe5fed}\label{class_player_a457153d0edd58932e37e1356f5fe5fed}} 
-\index{Player@{Player}!Reset@{Reset}}
-\index{Reset@{Reset}!Player@{Player}}
-\subsubsection{\texorpdfstring{Reset()}{Reset()}}
-{\footnotesize\ttfamily void Player\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$collision} & 衝突基底クラス \\
+\hline
+\end{DoxyParams}
 
-リセット関数 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 113 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_a65a76094cff6f149d5847d2110fe443d}\label{class_player_a65a76094cff6f149d5847d2110fe443d}} 
+\index{Player@{Player}!Input@{Input}}
+\index{Input@{Input}!Player@{Player}}
+\subsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily void Player\+::\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-\mbox{\hyperlink{class_game_object_base_a85c59554f734bcb09f1a1e18d9517dce}{Game\+Object\+Base}}を実装しています。
+入力関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 190 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_a0b738799f41b3b5819d32e30263ff5de}\label{class_player_a0b738799f41b3b5819d32e30263ff5de}} 
+\index{Player@{Player}!Input\+Balloon@{Input\+Balloon}}
+\index{Input\+Balloon@{Input\+Balloon}!Player@{Player}}
+\subsubsection{\texorpdfstring{Input\+Balloon()}{InputBalloon()}}
+{\footnotesize\ttfamily void Player\+::\+Input\+Balloon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Player.\+cpp の 66 行目に定義があります。
+風船入力関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 290 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_a0b8e7f60389c0d55a733b163d9b26a4d}\label{class_player_a0b8e7f60389c0d55a733b163d9b26a4d}} 
+\index{Player@{Player}!Input\+Translation@{Input\+Translation}}
+\index{Input\+Translation@{Input\+Translation}!Player@{Player}}
+\subsubsection{\texorpdfstring{Input\+Translation()}{InputTranslation()}}
+{\footnotesize\ttfamily void Player\+::\+Input\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+平行移動入力関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 205 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_afea84763c80097fa3565b08f4cc4d40f}\label{class_player_afea84763c80097fa3565b08f4cc4d40f}} 
+\index{Player@{Player}!Input\+Translation\+Not\+Camera@{Input\+Translation\+Not\+Camera}}
+\index{Input\+Translation\+Not\+Camera@{Input\+Translation\+Not\+Camera}!Player@{Player}}
+\subsubsection{\texorpdfstring{Input\+Translation\+Not\+Camera()}{InputTranslationNotCamera()}}
+{\footnotesize\ttfamily void Player\+::\+Input\+Translation\+Not\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+カメラ無し平行移動入力関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 250 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_aecd3f846ad6bb9e7525ef273c4a76f53}\label{class_player_aecd3f846ad6bb9e7525ef273c4a76f53}} 
+\index{Player@{Player}!set\+Anim\+Count@{set\+Anim\+Count}}
+\index{set\+Anim\+Count@{set\+Anim\+Count}!Player@{Player}}
+\subsubsection{\texorpdfstring{set\+Anim\+Count()}{setAnimCount()}}
+{\footnotesize\ttfamily void Player\+::set\+Anim\+Count (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+アニメーションカウント取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & アニメーションカウント \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 103 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_a9e5527047eded7fdeef45eb94d7d488a}\label{class_player_a9e5527047eded7fdeef45eb94d7d488a}} 
+\index{Player@{Player}!set\+Balloon\+Group@{set\+Balloon\+Group}}
+\index{set\+Balloon\+Group@{set\+Balloon\+Group}!Player@{Player}}
+\subsubsection{\texorpdfstring{set\+Balloon\+Group()}{setBalloonGroup()}}
+{\footnotesize\ttfamily void Player\+::set\+Balloon\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_balloon_group}{Balloon\+Group}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+風船群設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & 風船群 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_aa8e97731aaa160060e6f9c9784297140}\label{class_player_aa8e97731aaa160060e6f9c9784297140}} 
+\index{Player@{Player}!set\+Camera@{set\+Camera}}
+\index{set\+Camera@{set\+Camera}!Player@{Player}}
+\subsubsection{\texorpdfstring{set\+Camera()}{setCamera()}}
+{\footnotesize\ttfamily void Player\+::set\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+カメラ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & カメラ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 67 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_ae6433f8257774cb0eb102b7ad0431161}\label{class_player_ae6433f8257774cb0eb102b7ad0431161}} 
+\index{Player@{Player}!set\+Is\+On\+The\+Ground@{set\+Is\+On\+The\+Ground}}
+\index{set\+Is\+On\+The\+Ground@{set\+Is\+On\+The\+Ground}!Player@{Player}}
+\subsubsection{\texorpdfstring{set\+Is\+On\+The\+Ground()}{setIsOnTheGround()}}
+{\footnotesize\ttfamily void Player\+::set\+Is\+On\+The\+Ground (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+地面着地フラグ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 地面着地フラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 81 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_a4d067dc5b3d71b842b09b2149cb26276}\label{class_player_a4d067dc5b3d71b842b09b2149cb26276}} 
+\index{Player@{Player}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Player@{Player}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Player\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{value }\end{DoxyParamCaption})}
+
+
+
+座標設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 座標 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Player.\+cpp の 36 行目に定義があります。
 
 \mbox{\Hypertarget{class_player_a7455a83ac23d2f5e0cce0ddd7d92db0c}\label{class_player_a7455a83ac23d2f5e0cce0ddd7d92db0c}} 
 \index{Player@{Player}!Uninit@{Uninit}}
@@ -77,29 +504,175 @@ void \mbox{\hyperlink{class_player_a457153d0edd58932e37e1356f5fe5fed}{Reset}} ()
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
-\mbox{\hyperlink{class_game_object_base_a97e1bc277d7b1c0156d4735de29a022c}{Game\+Object\+Base}}を再実装しています。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_a1a70fbd3260fd1c0100320756830a0db}{Game\+Object\+Null}}を再実装しています。
 
 
 
- Player.\+cpp の 52 行目に定義があります。
+ Player.\+cpp の 144 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_a5e17be3418fa0ac0192c05efaf3dc8bd}\label{class_player_a5e17be3418fa0ac0192c05efaf3dc8bd}} 
+\index{Player@{Player}!Update@{Update}}
+\index{Update@{Update}!Player@{Player}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_aeeb51b7e7aa41fd0b16f8f7c016bdb55}{Game\+Object\+Null}}を再実装しています。
+
+
+
+ Player.\+cpp の 154 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
-\mbox{\Hypertarget{class_player_ab41e7ebf6f975f2eea365923bc2dca7f}\label{class_player_ab41e7ebf6f975f2eea365923bc2dca7f}} 
-\index{Player@{Player}!game\+\_\+scene\+\_\+@{game\+\_\+scene\+\_\+}}
-\index{game\+\_\+scene\+\_\+@{game\+\_\+scene\+\_\+}!Player@{Player}}
-\subsubsection{\texorpdfstring{game\+\_\+scene\+\_\+}{game\_scene\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_game_scene}{Game\+Scene}}$\ast$ Player\+::game\+\_\+scene\+\_\+}
+\mbox{\Hypertarget{class_player_a93f160503f5e15ca8d9675b5d3d14706}\label{class_player_a93f160503f5e15ca8d9675b5d3d14706}} 
+\index{Player@{Player}!A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON@{A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}}
+\index{A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON@{A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}!Player@{Player}}
+\subsubsection{\texorpdfstring{A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}{ACCELERATION}}
+{\footnotesize\ttfamily const float Player\+::\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON = \mbox{\hyperlink{class_meter_to_frame_ac3292be31b35e97027a65b4c74763ebe}{Meter\+To\+Frame\+::\+Meter\+Per\+Second\+Squared\+To\+Meter\+Per\+Frame\+Squared}}(200.\+0f)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+加速度 
+
+
+
+ Player.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_afe5d702e0d5f909d5c562df8a0e6cd9f}\label{class_player_afe5d702e0d5f909d5c562df8a0e6cd9f}} 
+\index{Player@{Player}!anim\+\_\+counter\+\_\+@{anim\+\_\+counter\+\_\+}}
+\index{anim\+\_\+counter\+\_\+@{anim\+\_\+counter\+\_\+}!Player@{Player}}
+\subsubsection{\texorpdfstring{anim\+\_\+counter\+\_\+}{anim\_counter\_}}
+{\footnotesize\ttfamily int Player\+::anim\+\_\+counter\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ Player.\+h の 52 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_ac0e8f407322bde4ee86300624b26eb56}\label{class_player_ac0e8f407322bde4ee86300624b26eb56}} 
+\index{Player@{Player}!balloon\+\_\+group\+\_\+@{balloon\+\_\+group\+\_\+}}
+\index{balloon\+\_\+group\+\_\+@{balloon\+\_\+group\+\_\+}!Player@{Player}}
+\subsubsection{\texorpdfstring{balloon\+\_\+group\+\_\+}{balloon\_group\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_balloon_group}{Balloon\+Group}}$\ast$ Player\+::balloon\+\_\+group\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+風船群 
 
 
 
  Player.\+h の 47 行目に定義があります。
 
+\mbox{\Hypertarget{class_player_ad2aef02a40527af4f79dc99d652f5e7c}\label{class_player_ad2aef02a40527af4f79dc99d652f5e7c}} 
+\index{Player@{Player}!bullet\+\_\+object\+\_\+@{bullet\+\_\+object\+\_\+}}
+\index{bullet\+\_\+object\+\_\+@{bullet\+\_\+object\+\_\+}!Player@{Player}}
+\subsubsection{\texorpdfstring{bullet\+\_\+object\+\_\+}{bullet\_object\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bullet_physics_object}{Bullet\+Physics\+Object}}$\ast$ Player\+::bullet\+\_\+object\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+バレットオブジェクト 
+
+
+
+ Player.\+h の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_aab89171e78f99d2604210055d2f10734}\label{class_player_aab89171e78f99d2604210055d2f10734}} 
+\index{Player@{Player}!camera\+\_\+@{camera\+\_\+}}
+\index{camera\+\_\+@{camera\+\_\+}!Player@{Player}}
+\subsubsection{\texorpdfstring{camera\+\_\+}{camera\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera}{Camera}}$\ast$ Player\+::camera\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+カメラ 
+
+
+
+ Player.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_a4d724c47f9c39bbd760bbc86dc895bd0}\label{class_player_a4d724c47f9c39bbd760bbc86dc895bd0}} 
+\index{Player@{Player}!is\+\_\+on\+\_\+the\+\_\+ground\+\_\+@{is\+\_\+on\+\_\+the\+\_\+ground\+\_\+}}
+\index{is\+\_\+on\+\_\+the\+\_\+ground\+\_\+@{is\+\_\+on\+\_\+the\+\_\+ground\+\_\+}!Player@{Player}}
+\subsubsection{\texorpdfstring{is\+\_\+on\+\_\+the\+\_\+ground\+\_\+}{is\_on\_the\_ground\_}}
+{\footnotesize\ttfamily bool Player\+::is\+\_\+on\+\_\+the\+\_\+ground\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+地面着地フラグ 
+
+
+
+ Player.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_a1d3ffee6a3d31efa3a7b18ab639ced96}\label{class_player_a1d3ffee6a3d31efa3a7b18ab639ced96}} 
+\index{Player@{Player}!M\+A\+X\+\_\+\+M\+A\+SS@{M\+A\+X\+\_\+\+M\+A\+SS}}
+\index{M\+A\+X\+\_\+\+M\+A\+SS@{M\+A\+X\+\_\+\+M\+A\+SS}!Player@{Player}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+M\+A\+SS}{MAX\_MASS}}
+{\footnotesize\ttfamily const float Player\+::\+M\+A\+X\+\_\+\+M\+A\+SS = 80.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+最大質量 
+
+
+
+ Player.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_ac436f0b176fe8d747919df13ebacb428}\label{class_player_ac436f0b176fe8d747919df13ebacb428}} 
+\index{Player@{Player}!M\+A\+X\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+V\+E\+L\+O\+C\+I\+TY@{M\+A\+X\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+V\+E\+L\+O\+C\+I\+TY}}
+\index{M\+A\+X\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+V\+E\+L\+O\+C\+I\+TY@{M\+A\+X\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+V\+E\+L\+O\+C\+I\+TY}!Player@{Player}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+V\+E\+L\+O\+C\+I\+TY}{MAX\_VERTICAL\_VELOCITY}}
+{\footnotesize\ttfamily const float Player\+::\+M\+A\+X\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+V\+E\+L\+O\+C\+I\+TY = \mbox{\hyperlink{class_meter_to_frame_aa5468938f59eb934bfc6a897a7513812}{Meter\+To\+Frame\+::\+Meter\+Per\+Second\+To\+Meter\+Per\+Flame}}(500.\+0f)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+最大垂直方向速度 
+
+
+
+ Player.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_player_a423e2096b25d4965a84e4a8bf38c7683}\label{class_player_a423e2096b25d4965a84e4a8bf38c7683}} 
+\index{Player@{Player}!score\+\_\+@{score\+\_\+}}
+\index{score\+\_\+@{score\+\_\+}!Player@{Player}}
+\subsubsection{\texorpdfstring{score\+\_\+}{score\_}}
+{\footnotesize\ttfamily int Player\+::score\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ Player.\+h の 51 行目に定義があります。
+
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Player/\mbox{\hyperlink{_player_8h}{Player.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Player/\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Player/\mbox{\hyperlink{_player_8h}{Player.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Player/\+Source/\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

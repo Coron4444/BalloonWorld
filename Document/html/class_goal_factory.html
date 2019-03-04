@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: GoalFactory クラス</title>
+<title>BalloonWorld: GoalFactory クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -95,54 +95,59 @@ $(document).ready(function(){initNavTree('class_goal_factory.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>ゴールファクトリークラス  
+<p>ゴール生成Class  
  <a href="class_goal_factory.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="_goal_factory_8h_source.html">GoalFactory.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:af0b52f5fd6e567a05985285369be7b2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_goal.html">Goal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_goal_factory.html#af0b52f5fd6e567a05985285369be7b2e">Create</a> ()</td></tr>
-<tr class="memdesc:af0b52f5fd6e567a05985285369be7b2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">作成関数  <a href="#af0b52f5fd6e567a05985285369be7b2e">[詳解]</a><br /></td></tr>
-<tr class="separator:af0b52f5fd6e567a05985285369be7b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1af3aeec48c6f7ee510a8e8eaca299f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_goal.html">Goal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_goal_factory.html#a1af3aeec48c6f7ee510a8e8eaca299f1">Create</a> ()</td></tr>
+<tr class="memdesc:a1af3aeec48c6f7ee510a8e8eaca299f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゴール生成関数  <a href="#a1af3aeec48c6f7ee510a8e8eaca299f1">[詳解]</a><br /></td></tr>
+<tr class="separator:a1af3aeec48c6f7ee510a8e8eaca299f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>ゴールファクトリークラス </p>
-<p>ゴールのファクトリークラス </p>
+<div class="textblock"><p>ゴール生成Class </p>
+<p>ゴールの生成Class </p>
 
-<p class="definition"> <a class="el" href="_goal_factory_8h_source.html">GoalFactory.h</a> の <a class="el" href="_goal_factory_8h_source.html#l00028">28</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_goal_factory_8h_source.html">GoalFactory.h</a> の <a class="el" href="_goal_factory_8h_source.html#l00026">26</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="af0b52f5fd6e567a05985285369be7b2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0b52f5fd6e567a05985285369be7b2e">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="a1af3aeec48c6f7ee510a8e8eaca299f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1af3aeec48c6f7ee510a8e8eaca299f1">&#9670;&nbsp;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_goal.html">Goal</a>* GoalFactory::Create </td>
+          <td class="memname"><a class="el" href="class_goal.html">Goal</a> * GoalFactory::Create </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>作成関数 </p>
+<p>ゴール生成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Goal*</td><td>ゴール </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="_goal_factory_8h_source.html">GoalFactory.h</a> の <a class="el" href="_goal_factory_8h_source.html#l00038">38</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_goal_factory_8cpp_source.html">GoalFactory.cpp</a> の <a class="el" href="_goal_factory_8cpp_source.html#l00020">20</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/03_Object/3D/Goal/GoalFactory/<a class="el" href="_goal_factory_8h_source.html">GoalFactory.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Game/Object/3D/Goal/<a class="el" href="_goal_factory_8h_source.html">GoalFactory.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Game/Object/3D/Goal/Source/<a class="el" href="_goal_factory_8cpp_source.html">GoalFactory.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

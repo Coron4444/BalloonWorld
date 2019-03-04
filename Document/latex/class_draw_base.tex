@@ -11,11 +11,11 @@
 
 
 
-Draw\+Base の継承関係図\nopagebreak
+Draw\+Base 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_draw_base__inherit__graph}
+\includegraphics[width=350pt]{class_draw_base__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
@@ -25,35 +25,39 @@ virtual unsigned \mbox{\hyperlink{class_draw_base_a57c010b4386dc09afa124fba81a6e
 \begin{DoxyCompactList}\small\item\em オブジェクト数取得関数 \end{DoxyCompactList}\item 
 virtual unsigned \mbox{\hyperlink{class_draw_base_add488139aed539e7ccd19492702b4bee}{get\+Mesh\+Num}} (unsigned object\+\_\+index)=0
 \begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_draw_base_a60fc3148b2679e4ea7723d2af0c37283}{getp\+Matrix}} (unsigned object\+\_\+index)=0
-\begin{DoxyCompactList}\small\item\em 行列ポインタ取得関数 \end{DoxyCompactList}\item 
+virtual unsigned \mbox{\hyperlink{class_draw_base_a9420d7257415446e8cddd1a22f139dd3}{get\+Bone\+Num}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index)=0
+\begin{DoxyCompactList}\small\item\em ボーン数取得関数 \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_draw_base_a60fc3148b2679e4ea7723d2af0c37283}{getp\+Matrix}} (unsigned object\+\_\+index)=0
+\begin{DoxyCompactList}\small\item\em ワールド行列取得関数 \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_draw_base_aea44fcf0b1281ec4caa7ad3f2f898950}{getp\+Bone\+Matrix}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index, unsigned bone\+\_\+index)=0
+\begin{DoxyCompactList}\small\item\em ボーン行列取得関数 \end{DoxyCompactList}\item 
 virtual D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_draw_base_a940543b482e934624637f3c6b4d17f96}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index)=0
-\begin{DoxyCompactList}\small\item\em マテリアルポインタ取得関数 \end{DoxyCompactList}\item 
-virtual L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_draw_base_a9f50a030778dbfca5ae45bb7908e0d58}{getp\+Decale\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index)=0
-\begin{DoxyCompactList}\small\item\em デカールテクスチャポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em マテリアル取得関数 \end{DoxyCompactList}\item 
+virtual L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_draw_base_a96e94272903d6b663463e0f49246d959}{getp\+Diffuse\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index)=0
+\begin{DoxyCompactList}\small\item\em ディヒューズテクスチャ取得関数 \end{DoxyCompactList}\item 
 virtual L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{class_draw_base_a76c3b910b495fcf69aacf6164ca90c7d}{getp\+Normal\+Texture}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index)=0
-\begin{DoxyCompactList}\small\item\em 法線テクスチャポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 法線テクスチャ取得関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_draw_order_list}{Draw\+Order\+List}} $\ast$ \mbox{\hyperlink{class_draw_base_af5fe522d4bbce381e6fe8e5601b69e9f}{getp\+Draw\+Order\+List}} ()
-\begin{DoxyCompactList}\small\item\em 描画注文リストポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 描画注文リスト取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$ \mbox{\hyperlink{class_draw_base_ac55a0cbcb51067ec9a3515530bb3f7de}{getp\+Draw\+Common\+Data}} ()
+\begin{DoxyCompactList}\small\item\em 描画共通データ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_draw_base_a75591fe15951811f294dc964a7894214}{set\+Draw\+Common\+Data}} (\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 描画共通データ設定関数 \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_draw_base_af276fa23e7c5f51a4fdeab016456a992}{$\sim$\+Draw\+Base}} ()=0
 \begin{DoxyCompactList}\small\item\em 仮想デストラクタ \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_draw_base_a408080106630a1146d7af0bb46a4d8d1}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index)=0
 \begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_draw_base_a3978252914ddde12197ea4577356bf25}{Setting\+Before\+Drawing}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)=0
-\begin{DoxyCompactList}\small\item\em 描画前設定関数 \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_draw_base_afe64f27b0bbf8c45da7aa0de4c3f3d65}{Setting\+After\+Drawing}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)=0
-\begin{DoxyCompactList}\small\item\em 描画後設定関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_draw_base_aa18abd488181eed72822f92a0f2521fe}{Limited\+Change\+Camera\+Type}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, \mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}} type)
-\begin{DoxyCompactList}\small\item\em 限定カメラタイプ変更関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival\+Camera\+Type}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$camera)
-\begin{DoxyCompactList}\small\item\em カメラタイプ復活関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{class_draw_base_a9bf55f6b67735e0bff42d749f43826c1}{Object\+Setting\+Before}} (unsigned object\+\_\+index)=0
+\begin{DoxyCompactList}\small\item\em オブジェクト前設定関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_draw_base_ab1592d0f04fb49289758008dcff4e7a0}{Object\+Setting\+After}} (unsigned object\+\_\+index)=0
+\begin{DoxyCompactList}\small\item\em オブジェクト後設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_draw_order_list}{Draw\+Order\+List}} \mbox{\hyperlink{class_draw_base_a6ebc8dc96176ddd3bd984b3d54739adb}{draw\+\_\+order\+\_\+list\+\_\+}}
+\mbox{\hyperlink{class_draw_order_list}{Draw\+Order\+List}} \mbox{\hyperlink{class_draw_base_a68325df7021177f7ca82a18511e1328f}{order\+\_\+list\+\_\+}}
 \begin{DoxyCompactList}\small\item\em 描画注文リスト \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}} \mbox{\hyperlink{class_draw_base_aa8be4980756a0af7cc76dfe455c492d4}{save\+\_\+camera\+\_\+type\+\_\+}} = Camera\+::\+Type\+::\+N\+O\+NE
-\begin{DoxyCompactList}\small\item\em カメラタイプ保存用 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$ \mbox{\hyperlink{class_draw_base_a44e99e97b203c9cffa794b65df77539a}{common\+\_\+data\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 描画共通データ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
@@ -83,7 +87,7 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 \end{DoxyParams}
 
 
- Draw\+Base.\+cpp の 29 行目に定義があります。
+ Draw\+Base.\+cpp の 42 行目に定義があります。
 
 
 
@@ -99,10 +103,10 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 描画関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
@@ -112,7 +116,33 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}, \mbox{\hyperlink{class_fade_a84a9e688650ac500e03cde74ff0210b8}{Fade}}, \mbox{\hyperlink{class_goal_draw_a554c826d7a4534ee489dfe18edf7ee0e}{Goal\+Draw}}, \mbox{\hyperlink{class_tutorial_logo_draw_aa808cfb8bc59d58bbd698a195603429f}{Tutorial\+Logo\+Draw}}, \mbox{\hyperlink{class_stencil_shadow_test_draw_abb5f9445b7d94c213a3751fa57e36643}{Stencil\+Shadow\+Test\+Draw}}, \mbox{\hyperlink{class_render_texture_a529ab829c676470ae5764b42cba9efb0}{Render\+Texture}}, \mbox{\hyperlink{class_coin_draw_ac7d91fecb6845cebe276eb81a4953563}{Coin\+Draw}}, \mbox{\hyperlink{class_player_draw_a8b9e8caa6bea7295f58a0aaddeb9458b}{Player\+Draw}}, \mbox{\hyperlink{class_clear_logo_draw_ab018f370071f370ae7016d8ee402c456}{Clear\+Logo\+Draw}}, \mbox{\hyperlink{class_failure_logo_draw_a8ee20e1697bbbaf7f41c18334830488a}{Failure\+Logo\+Draw}}, \mbox{\hyperlink{class_push_space_logo_draw_a647dddefc43d66cb3c720ee8fbb6a783}{Push\+Space\+Logo\+Draw}}, \mbox{\hyperlink{class_title_logo_draw_a01e4cb21d580bac86a226fa2e35bf4a3}{Title\+Logo\+Draw}}, \mbox{\hyperlink{class_field_draw_a1915497654d079074dbd3e058db06a78}{Field\+Draw}}, \mbox{\hyperlink{class_sky_dome_draw_a42364ea42618cbab588d55050edfe95a}{Sky\+Dome\+Draw}}, \mbox{\hyperlink{class_enemy_draw_a20a23c1c5fd5e510d15e8ca27aabd821}{Enemy\+Draw}}, \mbox{\hyperlink{class_number_draw_a15e4e602b3f9372349d0b6ff9e4fc423}{Number\+Draw}}, \mbox{\hyperlink{class_score_draw_a799e71943140a264cedba6002308b976}{Score\+Draw}} (計17項目)で実装されています。
+\mbox{\hyperlink{class_fade_a84a9e688650ac500e03cde74ff0210b8}{Fade}}, \mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}, \mbox{\hyperlink{class_player_draw_a8b9e8caa6bea7295f58a0aaddeb9458b}{Player\+Draw}}, \mbox{\hyperlink{class_clear_logo_draw_ab018f370071f370ae7016d8ee402c456}{Clear\+Logo\+Draw}}, \mbox{\hyperlink{class_score_draw_a799e71943140a264cedba6002308b976}{Score\+Draw}}, \mbox{\hyperlink{class_time_draw_a1d5bd7b20e71eb37f3f0b225079cc9b3}{Time\+Draw}}, \mbox{\hyperlink{class_balloon_num_draw_ae4477e10f6ac54beb64b1f2f85f6d2d1}{Balloon\+Num\+Draw}}, \mbox{\hyperlink{class_pause_draw_a84a0b8965acd5d9a6021d4a4776a770f}{Pause\+Draw}}, \mbox{\hyperlink{class_push_space_logo_draw_a647dddefc43d66cb3c720ee8fbb6a783}{Push\+Space\+Logo\+Draw}}, \mbox{\hyperlink{class_balloon_draw_aff3ee0684a7c027878915e332ca895ee}{Balloon\+Draw}}, \mbox{\hyperlink{class_coin_draw_ac7d91fecb6845cebe276eb81a4953563}{Coin\+Draw}}, \mbox{\hyperlink{class_stencil_shadow_test_draw_abb5f9445b7d94c213a3751fa57e36643}{Stencil\+Shadow\+Test\+Draw}}, \mbox{\hyperlink{class_tutorial_logo_draw_aa808cfb8bc59d58bbd698a195603429f}{Tutorial\+Logo\+Draw}}, \mbox{\hyperlink{class_failure_logo_draw_a8ee20e1697bbbaf7f41c18334830488a}{Failure\+Logo\+Draw}}, \mbox{\hyperlink{class_title_logo_draw_a01e4cb21d580bac86a226fa2e35bf4a3}{Title\+Logo\+Draw}}, \mbox{\hyperlink{class_field_draw_a1915497654d079074dbd3e058db06a78}{Field\+Draw}}, \mbox{\hyperlink{class_sky_dome_draw_a42364ea42618cbab588d55050edfe95a}{Sky\+Dome\+Draw}}, \mbox{\hyperlink{class_goal_draw_a554c826d7a4534ee489dfe18edf7ee0e}{Goal\+Draw}}, \mbox{\hyperlink{class_render_texture_polygon_a95e688cae107312649c1fb7965e2ba6b}{Render\+Texture\+Polygon}}, \mbox{\hyperlink{class_scaffold_draw_ae70204344a061ff43744a116da64b013}{Scaffold\+Draw}}, \mbox{\hyperlink{class_needle_draw_a9fb9ee239ee432f2fc3235acbd24647c}{Needle\+Draw}}, \mbox{\hyperlink{class_start_block_draw_a280430a290cf9ea32117f0c460a0f775}{Start\+Block\+Draw}}, \mbox{\hyperlink{class_enemy_draw_a20a23c1c5fd5e510d15e8ca27aabd821}{Enemy\+Draw}} (計23項目)で実装されています。
+
+\mbox{\Hypertarget{class_draw_base_a9420d7257415446e8cddd1a22f139dd3}\label{class_draw_base_a9420d7257415446e8cddd1a22f139dd3}} 
+\index{Draw\+Base@{Draw\+Base}!get\+Bone\+Num@{get\+Bone\+Num}}
+\index{get\+Bone\+Num@{get\+Bone\+Num}!Draw\+Base@{Draw\+Base}}
+\subsubsection{\texorpdfstring{get\+Bone\+Num()}{getBoneNum()}}
+{\footnotesize\ttfamily virtual unsigned Draw\+Base\+::get\+Bone\+Num (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+ボーン数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em unsigned} & ボーン数 \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_player_draw_a716aeac1dca9a44c97bc2ea42e55d6f6}{Player\+Draw}}, \mbox{\hyperlink{class_draw_null_a74aee63e6146b7256b80610abfb3eabb}{Draw\+Null}}で実装されています。
 
 \mbox{\Hypertarget{class_draw_base_add488139aed539e7ccd19492702b4bee}\label{class_draw_base_add488139aed539e7ccd19492702b4bee}} 
 \index{Draw\+Base@{Draw\+Base}!get\+Mesh\+Num@{get\+Mesh\+Num}}
@@ -125,8 +155,8 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 メッシュ数取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
@@ -136,7 +166,7 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_stencil_shadow_test_draw_a285b3045ff5cc34b6b2b991cca434bb3}{Stencil\+Shadow\+Test\+Draw}}, \mbox{\hyperlink{class_goal_draw_ac80c8da78cda7b15a4ce46f7d7057622}{Goal\+Draw}}, \mbox{\hyperlink{class_coin_draw_a8ebedf2582d53b40016ebd3f0e82c38e}{Coin\+Draw}}, \mbox{\hyperlink{class_tutorial_logo_draw_a0e56784e25f1f83e6ff167280b801aad}{Tutorial\+Logo\+Draw}}, \mbox{\hyperlink{class_player_draw_ac618153d70492f73299c58a50d565431}{Player\+Draw}}, \mbox{\hyperlink{class_clear_logo_draw_a257f34e6f8325580f7df835f20d2ebb4}{Clear\+Logo\+Draw}}, \mbox{\hyperlink{class_failure_logo_draw_a45bb5d0965ca73b06ae0836f27f9b0e3}{Failure\+Logo\+Draw}}, \mbox{\hyperlink{class_push_space_logo_draw_abaa66b6e3c46aa03bae21bad271eebc0}{Push\+Space\+Logo\+Draw}}, \mbox{\hyperlink{class_title_logo_draw_a20a0e0c3569e49eb421ab4b5a65777cd}{Title\+Logo\+Draw}}, \mbox{\hyperlink{class_field_draw_a0894ddd73716f0db8ceed4b7d89f23fd}{Field\+Draw}}, \mbox{\hyperlink{class_sky_dome_draw_a6b281bafa71c058ee83c373ad978e3bb}{Sky\+Dome\+Draw}}, \mbox{\hyperlink{class_enemy_draw_a1d8a943e4b625795bbd5ae614cc38ed1}{Enemy\+Draw}}, \mbox{\hyperlink{class_number_draw_abcd88040b2b6d5dd7d21e8cfd50b1682}{Number\+Draw}}, \mbox{\hyperlink{class_draw_null_a4c566a37d27fac3dcf76c7970443f375}{Draw\+Null}}で実装されています。
+\mbox{\hyperlink{class_balloon_draw_ab6d1aa381df255809889d9f646154dc5}{Balloon\+Draw}}, \mbox{\hyperlink{class_pause_draw_ab6de445e905a481df0292de7fb1880fc}{Pause\+Draw}}, \mbox{\hyperlink{class_stencil_shadow_test_draw_a285b3045ff5cc34b6b2b991cca434bb3}{Stencil\+Shadow\+Test\+Draw}}, \mbox{\hyperlink{class_player_draw_ac618153d70492f73299c58a50d565431}{Player\+Draw}}, \mbox{\hyperlink{class_tutorial_logo_draw_a0e56784e25f1f83e6ff167280b801aad}{Tutorial\+Logo\+Draw}}, \mbox{\hyperlink{class_push_space_logo_draw_abaa66b6e3c46aa03bae21bad271eebc0}{Push\+Space\+Logo\+Draw}}, \mbox{\hyperlink{class_coin_draw_a8ebedf2582d53b40016ebd3f0e82c38e}{Coin\+Draw}}, \mbox{\hyperlink{class_failure_logo_draw_a45bb5d0965ca73b06ae0836f27f9b0e3}{Failure\+Logo\+Draw}}, \mbox{\hyperlink{class_title_logo_draw_a20a0e0c3569e49eb421ab4b5a65777cd}{Title\+Logo\+Draw}}, \mbox{\hyperlink{class_goal_draw_ac80c8da78cda7b15a4ce46f7d7057622}{Goal\+Draw}}, \mbox{\hyperlink{class_field_draw_a0894ddd73716f0db8ceed4b7d89f23fd}{Field\+Draw}}, \mbox{\hyperlink{class_needle_draw_a904f0aa7550f450f4b7bb2845c863e23}{Needle\+Draw}}, \mbox{\hyperlink{class_sky_dome_draw_a6b281bafa71c058ee83c373ad978e3bb}{Sky\+Dome\+Draw}}, \mbox{\hyperlink{class_enemy_draw_a1d8a943e4b625795bbd5ae614cc38ed1}{Enemy\+Draw}}, \mbox{\hyperlink{class_scaffold_draw_a5cbec566b4f66a0c87eca20e88c81b19}{Scaffold\+Draw}}, \mbox{\hyperlink{class_start_block_draw_a15cefedde4eab371fa2229d86c54455d}{Start\+Block\+Draw}}, \mbox{\hyperlink{class_draw_null_a4c566a37d27fac3dcf76c7970443f375}{Draw\+Null}} (計17項目)で実装されています。
 
 \mbox{\Hypertarget{class_draw_base_a57c010b4386dc09afa124fba81a6e0fc}\label{class_draw_base_a57c010b4386dc09afa124fba81a6e0fc}} 
 \index{Draw\+Base@{Draw\+Base}!get\+Object\+Num@{get\+Object\+Num}}
@@ -160,33 +190,85 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_stencil_shadow_test_draw_ad93f1c8a60a701d185108896c58dd578}{Stencil\+Shadow\+Test\+Draw}}, \mbox{\hyperlink{class_draw_null_a8bddfa6ee87e47b2ecbbe6803b088e37}{Draw\+Null}}で実装されています。
+\mbox{\hyperlink{class_clear_logo_draw_ad58068c5cfa0236b559e3a5b526b22d7}{Clear\+Logo\+Draw}}, \mbox{\hyperlink{class_score_draw_a15a6210aebf09d1472c4e4194950456c}{Score\+Draw}}, \mbox{\hyperlink{class_time_draw_aea19327b7f9a50a9e634fbb56d430222}{Time\+Draw}}, \mbox{\hyperlink{class_balloon_num_draw_ac9fbbdb35976d81abb6d4b9ce0c128f3}{Balloon\+Num\+Draw}}, \mbox{\hyperlink{class_balloon_draw_a979518a6cc85aa355f680336953b5e46}{Balloon\+Draw}}, \mbox{\hyperlink{class_pause_draw_a44936b777c942619b85106d7aa4dda14}{Pause\+Draw}}, \mbox{\hyperlink{class_stencil_shadow_test_draw_ad93f1c8a60a701d185108896c58dd578}{Stencil\+Shadow\+Test\+Draw}}, \mbox{\hyperlink{class_draw_null_a8bddfa6ee87e47b2ecbbe6803b088e37}{Draw\+Null}}で実装されています。
 
-\mbox{\Hypertarget{class_draw_base_a9f50a030778dbfca5ae45bb7908e0d58}\label{class_draw_base_a9f50a030778dbfca5ae45bb7908e0d58}} 
-\index{Draw\+Base@{Draw\+Base}!getp\+Decale\+Texture@{getp\+Decale\+Texture}}
-\index{getp\+Decale\+Texture@{getp\+Decale\+Texture}!Draw\+Base@{Draw\+Base}}
-\subsubsection{\texorpdfstring{getp\+Decale\+Texture()}{getpDecaleTexture()}}
-{\footnotesize\ttfamily virtual L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Draw\+Base\+::getp\+Decale\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-
-
-デカールテクスチャポインタ取得関数 
+\mbox{\Hypertarget{class_draw_base_aea44fcf0b1281ec4caa7ad3f2f898950}\label{class_draw_base_aea44fcf0b1281ec4caa7ad3f2f898950}} 
+\index{Draw\+Base@{Draw\+Base}!getp\+Bone\+Matrix@{getp\+Bone\+Matrix}}
+\index{getp\+Bone\+Matrix@{getp\+Bone\+Matrix}!Draw\+Base@{Draw\+Base}}
+\subsubsection{\texorpdfstring{getp\+Bone\+Matrix()}{getpBoneMatrix()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}}$\ast$ Draw\+Base\+::getp\+Bone\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index,  }\item[{unsigned}]{bone\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+
+ボーン行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+{\em bone\+\_\+index} & ボーンインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & デカールテクスチャポインタ \\
+{\em M\+A\+T\+R\+I\+X$\ast$} & ボーン行列 \\
 \hline
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_stencil_shadow_test_draw_a58f3699fa7ced20625edca807698aa85}{Stencil\+Shadow\+Test\+Draw}}, \mbox{\hyperlink{class_coin_draw_af99db1c0db2ed6b3ba429f23cd44279b}{Coin\+Draw}}, \mbox{\hyperlink{class_tutorial_logo_draw_abf06755b745dc62341a817a58d377659}{Tutorial\+Logo\+Draw}}, \mbox{\hyperlink{class_player_draw_ae69b46285241f390fbf62f6af2b5340d}{Player\+Draw}}, \mbox{\hyperlink{class_clear_logo_draw_ae67f9779fb2f9aa05d55c2167a36ddb0}{Clear\+Logo\+Draw}}, \mbox{\hyperlink{class_failure_logo_draw_a29a9642997edb92eeec83e8bd6b1ddee}{Failure\+Logo\+Draw}}, \mbox{\hyperlink{class_push_space_logo_draw_abfba58752543d8b2ccfe1e4003032dd3}{Push\+Space\+Logo\+Draw}}, \mbox{\hyperlink{class_title_logo_draw_a15ca49711182673a20439200dd8bc119}{Title\+Logo\+Draw}}, \mbox{\hyperlink{class_field_draw_a77cef7390fbe8fc68c0b325f4fcc839f}{Field\+Draw}}, \mbox{\hyperlink{class_sky_dome_draw_a99ec8e0a5aea708b66cf07c79a6449d1}{Sky\+Dome\+Draw}}, \mbox{\hyperlink{class_draw_null_a87d21f70b6fed637a6e23029f29818c1}{Draw\+Null}}, \mbox{\hyperlink{class_number_draw_a77d155c00ac4637154e62904556de05a}{Number\+Draw}}で実装されています。
+\mbox{\hyperlink{class_player_draw_a94e34d6503076f1686302fa376da1c09}{Player\+Draw}}, \mbox{\hyperlink{class_draw_null_a9843abd940623bf84bbb0931f7e21af6}{Draw\+Null}}で実装されています。
+
+\mbox{\Hypertarget{class_draw_base_a96e94272903d6b663463e0f49246d959}\label{class_draw_base_a96e94272903d6b663463e0f49246d959}} 
+\index{Draw\+Base@{Draw\+Base}!getp\+Diffuse\+Texture@{getp\+Diffuse\+Texture}}
+\index{getp\+Diffuse\+Texture@{getp\+Diffuse\+Texture}!Draw\+Base@{Draw\+Base}}
+\subsubsection{\texorpdfstring{getp\+Diffuse\+Texture()}{getpDiffuseTexture()}}
+{\footnotesize\ttfamily virtual L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 Draw\+Base\+::getp\+Diffuse\+Texture (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+ディヒューズテクスチャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9} & ディヒューズテクスチャ \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_fade_ab971b8bb17f81d73e0405291a6512a39}{Fade}}, \mbox{\hyperlink{class_player_draw_a3abcf6fb159e94ca4e5785b572e0af11}{Player\+Draw}}, \mbox{\hyperlink{class_clear_logo_draw_adbf4078e91bef05bf5a366adcda744a3}{Clear\+Logo\+Draw}}, \mbox{\hyperlink{class_pause_draw_a191f46de3bb829ab30fca52f902c1df9}{Pause\+Draw}}, \mbox{\hyperlink{class_score_draw_a8736a0044e8a2a6258c396bfed4d1ce8}{Score\+Draw}}, \mbox{\hyperlink{class_time_draw_ac844c99a6d5cdcad9c541779a0e99b22}{Time\+Draw}}, \mbox{\hyperlink{class_stencil_shadow_test_draw_a5c74550a8e0eccf29f3c93e5027e492e}{Stencil\+Shadow\+Test\+Draw}}, \mbox{\hyperlink{class_balloon_num_draw_a1bf5721e82b99cdfd5550262f560da95}{Balloon\+Num\+Draw}}, \mbox{\hyperlink{class_draw_null_a98cc7cd43b19d9d70cc621d23d89286f}{Draw\+Null}}, \mbox{\hyperlink{class_tutorial_logo_draw_a80a3858068af2dcbd1ffc7e59c212924}{Tutorial\+Logo\+Draw}}, \mbox{\hyperlink{class_push_space_logo_draw_a0b4de9ad688997090ab6ab4925e1f5d8}{Push\+Space\+Logo\+Draw}}, \mbox{\hyperlink{class_coin_draw_a38a4143f2e93a5b16d33ec94a188f4f6}{Coin\+Draw}}, \mbox{\hyperlink{class_failure_logo_draw_a3247b4c8de4cb8a8af0ca9dfaf85018b}{Failure\+Logo\+Draw}}, \mbox{\hyperlink{class_title_logo_draw_a4e3da42496afc69f31731e8abfb27380}{Title\+Logo\+Draw}}, \mbox{\hyperlink{class_field_draw_a8e4ea02d9efb9895a0172c29a91d0fb2}{Field\+Draw}}, \mbox{\hyperlink{class_sky_dome_draw_aaa9db229fadd7d4c041afa5436a584af}{Sky\+Dome\+Draw}} (計16項目)で実装されています。
+
+\mbox{\Hypertarget{class_draw_base_ac55a0cbcb51067ec9a3515530bb3f7de}\label{class_draw_base_ac55a0cbcb51067ec9a3515530bb3f7de}} 
+\index{Draw\+Base@{Draw\+Base}!getp\+Draw\+Common\+Data@{getp\+Draw\+Common\+Data}}
+\index{getp\+Draw\+Common\+Data@{getp\+Draw\+Common\+Data}!Draw\+Base@{Draw\+Base}}
+\subsubsection{\texorpdfstring{getp\+Draw\+Common\+Data()}{getpDrawCommonData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$ Draw\+Base\+::getp\+Draw\+Common\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+描画共通データ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Draw\+Common\+Data$\ast$} & 描画共通データ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Draw\+Base.\+cpp の 26 行目に定義があります。
 
 \mbox{\Hypertarget{class_draw_base_af5fe522d4bbce381e6fe8e5601b69e9f}\label{class_draw_base_af5fe522d4bbce381e6fe8e5601b69e9f}} 
 \index{Draw\+Base@{Draw\+Base}!getp\+Draw\+Order\+List@{getp\+Draw\+Order\+List}}
@@ -196,7 +278,7 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 
 
 
-描画注文リストポインタ取得関数 
+描画注文リスト取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -205,7 +287,7 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Draw\+Order\+List$\ast$} & 描画注文リストポインタ \\
+{\em Draw\+Order\+List$\ast$} & 描画注文リスト \\
 \hline
 \end{DoxyRetVals}
 
@@ -220,47 +302,47 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 
 
 
-マテリアルポインタ取得関数 
+マテリアル取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアルポインタ \\
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
 \hline
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_fade_a69db8b97a493082644fbd82c9ef3d1aa}{Fade}}, \mbox{\hyperlink{class_stencil_shadow_test_draw_aacdc680646f832451ea575f1da1eec9a}{Stencil\+Shadow\+Test\+Draw}}, \mbox{\hyperlink{class_render_texture_a1defe8bfacccf91dc7479a977e70578c}{Render\+Texture}}, \mbox{\hyperlink{class_goal_draw_ae7f45a84006809475aba8d9ce1b1f8a5}{Goal\+Draw}}, \mbox{\hyperlink{class_coin_draw_ad62dd6a9dd468342849a0c6ad5f8a5dd}{Coin\+Draw}}, \mbox{\hyperlink{class_tutorial_logo_draw_acbd9aefdbd4450188e561fb5e5dcd64f}{Tutorial\+Logo\+Draw}}, \mbox{\hyperlink{class_player_draw_acb94ea7611a99698507321e44b7e9acb}{Player\+Draw}}, \mbox{\hyperlink{class_clear_logo_draw_a6273330249f20ddcde3a2ab97c1bdca2}{Clear\+Logo\+Draw}}, \mbox{\hyperlink{class_failure_logo_draw_a60b0cd983365acdad363cdaf8ebdef46}{Failure\+Logo\+Draw}}, \mbox{\hyperlink{class_push_space_logo_draw_a4dc41e6b1afece431f3c321145abe541}{Push\+Space\+Logo\+Draw}}, \mbox{\hyperlink{class_title_logo_draw_aafb35175c0ffe60c7a3facf7f9cda2f2}{Title\+Logo\+Draw}}, \mbox{\hyperlink{class_field_draw_a5ed29c14e0013513d72f79f8651db805}{Field\+Draw}}, \mbox{\hyperlink{class_sky_dome_draw_a45d3e8d70753af83c84c7a7c9193459f}{Sky\+Dome\+Draw}}, \mbox{\hyperlink{class_enemy_draw_a3f2885da84533364daaaac4a801fbc46}{Enemy\+Draw}}, \mbox{\hyperlink{class_number_draw_a4e1a672907ee288fc0c2c6caecdf3904}{Number\+Draw}}, \mbox{\hyperlink{class_draw_null_a0c1efe55fea325ad277594be6fe1e938}{Draw\+Null}} (計16項目)で実装されています。
+\mbox{\hyperlink{class_player_draw_acb94ea7611a99698507321e44b7e9acb}{Player\+Draw}}, \mbox{\hyperlink{class_fade_adbd049cfdaf165670d1b97b03151a5cd}{Fade}}, \mbox{\hyperlink{class_balloon_draw_aa84c8479ee1a6e95376b7fc0c82e5173}{Balloon\+Draw}}, \mbox{\hyperlink{class_clear_logo_draw_a6273330249f20ddcde3a2ab97c1bdca2}{Clear\+Logo\+Draw}}, \mbox{\hyperlink{class_pause_draw_afa2566700e81ce898e874ce71a8943d5}{Pause\+Draw}}, \mbox{\hyperlink{class_score_draw_a89a4917ed27a9d89cfa3e3acfaecacc2}{Score\+Draw}}, \mbox{\hyperlink{class_time_draw_a32e9166df2da094b6b8c6cfc9dd73872}{Time\+Draw}}, \mbox{\hyperlink{class_stencil_shadow_test_draw_aacdc680646f832451ea575f1da1eec9a}{Stencil\+Shadow\+Test\+Draw}}, \mbox{\hyperlink{class_balloon_num_draw_aa517d5cd0ff871f61145d916f6056922}{Balloon\+Num\+Draw}}, \mbox{\hyperlink{class_draw_null_a0c1efe55fea325ad277594be6fe1e938}{Draw\+Null}}, \mbox{\hyperlink{class_tutorial_logo_draw_acbd9aefdbd4450188e561fb5e5dcd64f}{Tutorial\+Logo\+Draw}}, \mbox{\hyperlink{class_push_space_logo_draw_a4dc41e6b1afece431f3c321145abe541}{Push\+Space\+Logo\+Draw}}, \mbox{\hyperlink{class_coin_draw_ad62dd6a9dd468342849a0c6ad5f8a5dd}{Coin\+Draw}}, \mbox{\hyperlink{class_failure_logo_draw_a60b0cd983365acdad363cdaf8ebdef46}{Failure\+Logo\+Draw}}, \mbox{\hyperlink{class_title_logo_draw_aafb35175c0ffe60c7a3facf7f9cda2f2}{Title\+Logo\+Draw}}, \mbox{\hyperlink{class_goal_draw_ae7f45a84006809475aba8d9ce1b1f8a5}{Goal\+Draw}}, \mbox{\hyperlink{class_field_draw_a5ed29c14e0013513d72f79f8651db805}{Field\+Draw}}, \mbox{\hyperlink{class_needle_draw_aff38ea3f7201eb584e81ae9d6b9328cf}{Needle\+Draw}}, \mbox{\hyperlink{class_sky_dome_draw_a45d3e8d70753af83c84c7a7c9193459f}{Sky\+Dome\+Draw}}, \mbox{\hyperlink{class_enemy_draw_a3f2885da84533364daaaac4a801fbc46}{Enemy\+Draw}}, \mbox{\hyperlink{class_scaffold_draw_a22d8838f68a92b3307008ba952ad718d}{Scaffold\+Draw}}, \mbox{\hyperlink{class_start_block_draw_a42d2c4f04609ba09359470fc38113bbf}{Start\+Block\+Draw}}, \mbox{\hyperlink{class_render_texture_polygon_a86dac06a0a8c8cc64ade472011745fa3}{Render\+Texture\+Polygon}} (計23項目)で実装されています。
 
 \mbox{\Hypertarget{class_draw_base_a60fc3148b2679e4ea7723d2af0c37283}\label{class_draw_base_a60fc3148b2679e4ea7723d2af0c37283}} 
 \index{Draw\+Base@{Draw\+Base}!getp\+Matrix@{getp\+Matrix}}
 \index{getp\+Matrix@{getp\+Matrix}!Draw\+Base@{Draw\+Base}}
 \subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}}$\ast$ Draw\+Base\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}}$\ast$ Draw\+Base\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-行列ポインタ取得関数 
+ワールド行列取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em M\+A\+T\+R\+I\+X$\ast$} & 行列ポインタ \\
+{\em M\+A\+T\+R\+I\+X$\ast$} & ワールド行列 \\
 \hline
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_fade_a2e41a31f9801476e63d2082804375e96}{Fade}}, \mbox{\hyperlink{class_stencil_shadow_test_draw_a8ab105b75d673adc52698a8401c6525c}{Stencil\+Shadow\+Test\+Draw}}, \mbox{\hyperlink{class_goal_draw_a536a23c043576f9032e6651d7644d038}{Goal\+Draw}}, \mbox{\hyperlink{class_coin_draw_ad8cbbe87f4cf4428214f50492c731f5f}{Coin\+Draw}}, \mbox{\hyperlink{class_render_texture_adafb7e9aeea3c298cbfcc71e35ed9457}{Render\+Texture}}, \mbox{\hyperlink{class_tutorial_logo_draw_aade531190180c385c266f5698f99735d}{Tutorial\+Logo\+Draw}}, \mbox{\hyperlink{class_player_draw_a334e94f368f6bd571da866d69333f313}{Player\+Draw}}, \mbox{\hyperlink{class_clear_logo_draw_abcbd0cd8663e0262bcdd83356516082b}{Clear\+Logo\+Draw}}, \mbox{\hyperlink{class_failure_logo_draw_a6e6fb80dc21af9318d659bc3fa71c0b5}{Failure\+Logo\+Draw}}, \mbox{\hyperlink{class_push_space_logo_draw_a9e0875967651293ef97713477334bc2e}{Push\+Space\+Logo\+Draw}}, \mbox{\hyperlink{class_title_logo_draw_a34fa4366f1ff190a08a36f8e402f6941}{Title\+Logo\+Draw}}, \mbox{\hyperlink{class_field_draw_ad399978201f737f4c0dd2b3990fa6b34}{Field\+Draw}}, \mbox{\hyperlink{class_sky_dome_draw_accbc05d1bbde9ad9d6b7180d91e9ed89}{Sky\+Dome\+Draw}}, \mbox{\hyperlink{class_enemy_draw_afbb8ac19041abda280ece7737103dc66}{Enemy\+Draw}}, \mbox{\hyperlink{class_number_draw_a2ea44b362c3a018faf46905d0f755410}{Number\+Draw}}, \mbox{\hyperlink{class_score_draw_adb995c83624c2eab8b8a15d1182df5b8}{Score\+Draw}}, \mbox{\hyperlink{class_draw_null_a9aac059eb3b5d1f77e8bd3aa0647cff9}{Draw\+Null}} (計17項目)で実装されています。
+\mbox{\hyperlink{class_fade_a468f87b671026f883443d6cdceeb95c6}{Fade}}, \mbox{\hyperlink{class_player_draw_a334e94f368f6bd571da866d69333f313}{Player\+Draw}}, \mbox{\hyperlink{class_balloon_draw_ab98a9333dcdf57c0ede287444b7cbabb}{Balloon\+Draw}}, \mbox{\hyperlink{class_clear_logo_draw_abcbd0cd8663e0262bcdd83356516082b}{Clear\+Logo\+Draw}}, \mbox{\hyperlink{class_pause_draw_a36622378926e01e7a401b6e201cb4f16}{Pause\+Draw}}, \mbox{\hyperlink{class_score_draw_adb995c83624c2eab8b8a15d1182df5b8}{Score\+Draw}}, \mbox{\hyperlink{class_time_draw_a3624fef571681cf4861891aa073338a0}{Time\+Draw}}, \mbox{\hyperlink{class_stencil_shadow_test_draw_a8ab105b75d673adc52698a8401c6525c}{Stencil\+Shadow\+Test\+Draw}}, \mbox{\hyperlink{class_balloon_num_draw_a9a337ac248ebb73dc32ef407221a6478}{Balloon\+Num\+Draw}}, \mbox{\hyperlink{class_tutorial_logo_draw_aade531190180c385c266f5698f99735d}{Tutorial\+Logo\+Draw}}, \mbox{\hyperlink{class_push_space_logo_draw_a9e0875967651293ef97713477334bc2e}{Push\+Space\+Logo\+Draw}}, \mbox{\hyperlink{class_coin_draw_ad8cbbe87f4cf4428214f50492c731f5f}{Coin\+Draw}}, \mbox{\hyperlink{class_failure_logo_draw_a6e6fb80dc21af9318d659bc3fa71c0b5}{Failure\+Logo\+Draw}}, \mbox{\hyperlink{class_title_logo_draw_a34fa4366f1ff190a08a36f8e402f6941}{Title\+Logo\+Draw}}, \mbox{\hyperlink{class_goal_draw_a536a23c043576f9032e6651d7644d038}{Goal\+Draw}}, \mbox{\hyperlink{class_field_draw_ad399978201f737f4c0dd2b3990fa6b34}{Field\+Draw}}, \mbox{\hyperlink{class_needle_draw_a7ae74f52a190793745b5339a6be559d7}{Needle\+Draw}}, \mbox{\hyperlink{class_sky_dome_draw_accbc05d1bbde9ad9d6b7180d91e9ed89}{Sky\+Dome\+Draw}}, \mbox{\hyperlink{class_draw_null_a9aac059eb3b5d1f77e8bd3aa0647cff9}{Draw\+Null}}, \mbox{\hyperlink{class_enemy_draw_afbb8ac19041abda280ece7737103dc66}{Enemy\+Draw}}, \mbox{\hyperlink{class_scaffold_draw_a337aafb07b51a215f7f25ab67202b102}{Scaffold\+Draw}}, \mbox{\hyperlink{class_start_block_draw_a062b7069d21ec07630f6c8aeea532401}{Start\+Block\+Draw}}, \mbox{\hyperlink{class_render_texture_polygon_a76ab48dff0a23ee4db47da598f4d6a70}{Render\+Texture\+Polygon}} (計23項目)で実装されています。
 
 \mbox{\Hypertarget{class_draw_base_a76c3b910b495fcf69aacf6164ca90c7d}\label{class_draw_base_a76c3b910b495fcf69aacf6164ca90c7d}} 
 \index{Draw\+Base@{Draw\+Base}!getp\+Normal\+Texture@{getp\+Normal\+Texture}}
@@ -270,39 +352,37 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 
 
 
-法線テクスチャポインタ取得関数 
+法線テクスチャ取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Renderer\+Interface$\ast$} & 法線テクスチャポインタ \\
+{\em Renderer\+Interface$\ast$} & 法線テクスチャ \\
 \hline
 \end{DoxyRetVals}
 
 
 \mbox{\hyperlink{class_player_draw_a231aa618a0bf71311b61897ccf7191b8}{Player\+Draw}}, \mbox{\hyperlink{class_draw_null_abdb03713b973fd1f65c914fa146414a1}{Draw\+Null}}で実装されています。
 
-\mbox{\Hypertarget{class_draw_base_aa18abd488181eed72822f92a0f2521fe}\label{class_draw_base_aa18abd488181eed72822f92a0f2521fe}} 
-\index{Draw\+Base@{Draw\+Base}!Limited\+Change\+Camera\+Type@{Limited\+Change\+Camera\+Type}}
-\index{Limited\+Change\+Camera\+Type@{Limited\+Change\+Camera\+Type}!Draw\+Base@{Draw\+Base}}
-\subsubsection{\texorpdfstring{Limited\+Change\+Camera\+Type()}{LimitedChangeCameraType()}}
-{\footnotesize\ttfamily void Draw\+Base\+::\+Limited\+Change\+Camera\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}}}]{type }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_draw_base_ab1592d0f04fb49289758008dcff4e7a0}\label{class_draw_base_ab1592d0f04fb49289758008dcff4e7a0}} 
+\index{Draw\+Base@{Draw\+Base}!Object\+Setting\+After@{Object\+Setting\+After}}
+\index{Object\+Setting\+After@{Object\+Setting\+After}!Draw\+Base@{Draw\+Base}}
+\subsubsection{\texorpdfstring{Object\+Setting\+After()}{ObjectSettingAfter()}}
+{\footnotesize\ttfamily virtual void Draw\+Base\+::\+Object\+Setting\+After (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-限定カメラタイプ変更関数 
+オブジェクト後設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in,out}  & {\em camera} & カメラ \\
-\hline
-\mbox{\tt in}  & {\em type} & 　 カメラタイプ \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
@@ -312,21 +392,21 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 \end{DoxyRetVals}
 
 
- Draw\+Base.\+cpp の 35 行目に定義があります。
+\mbox{\hyperlink{class_draw_null_a5b4466ae238e46cffe4a10fd253caf17}{Draw\+Null}}, \mbox{\hyperlink{class_stencil_shadow_test_draw_a11fa9d700ca8db585b6f0b0be779d1ab}{Stencil\+Shadow\+Test\+Draw}}で実装されています。
 
-\mbox{\Hypertarget{class_draw_base_a48b144e61928b7658c7a849017e40c79}\label{class_draw_base_a48b144e61928b7658c7a849017e40c79}} 
-\index{Draw\+Base@{Draw\+Base}!Revival\+Camera\+Type@{Revival\+Camera\+Type}}
-\index{Revival\+Camera\+Type@{Revival\+Camera\+Type}!Draw\+Base@{Draw\+Base}}
-\subsubsection{\texorpdfstring{Revival\+Camera\+Type()}{RevivalCameraType()}}
-{\footnotesize\ttfamily void Draw\+Base\+::\+Revival\+Camera\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})}
-
-
-
-カメラタイプ復活関数 
+\mbox{\Hypertarget{class_draw_base_a9bf55f6b67735e0bff42d749f43826c1}\label{class_draw_base_a9bf55f6b67735e0bff42d749f43826c1}} 
+\index{Draw\+Base@{Draw\+Base}!Object\+Setting\+Before@{Object\+Setting\+Before}}
+\index{Object\+Setting\+Before@{Object\+Setting\+Before}!Draw\+Base@{Draw\+Base}}
+\subsubsection{\texorpdfstring{Object\+Setting\+Before()}{ObjectSettingBefore()}}
+{\footnotesize\ttfamily virtual void Draw\+Base\+::\+Object\+Setting\+Before (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in,out}  & {\em camera} & カメラ \\
+
+オブジェクト前設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
@@ -336,23 +416,21 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 \end{DoxyRetVals}
 
 
- Draw\+Base.\+cpp の 43 行目に定義があります。
+\mbox{\hyperlink{class_draw_null_ac79a0adfc83537d5e677851463bb3028}{Draw\+Null}}, \mbox{\hyperlink{class_stencil_shadow_test_draw_ab798b88896ba3f0b3de057dff49823be}{Stencil\+Shadow\+Test\+Draw}}で実装されています。
 
-\mbox{\Hypertarget{class_draw_base_afe64f27b0bbf8c45da7aa0de4c3f3d65}\label{class_draw_base_afe64f27b0bbf8c45da7aa0de4c3f3d65}} 
-\index{Draw\+Base@{Draw\+Base}!Setting\+After\+Drawing@{Setting\+After\+Drawing}}
-\index{Setting\+After\+Drawing@{Setting\+After\+Drawing}!Draw\+Base@{Draw\+Base}}
-\subsubsection{\texorpdfstring{Setting\+After\+Drawing()}{SettingAfterDrawing()}}
-{\footnotesize\ttfamily virtual void Draw\+Base\+::\+Setting\+After\+Drawing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-
-
-描画後設定関数 
+\mbox{\Hypertarget{class_draw_base_a75591fe15951811f294dc964a7894214}\label{class_draw_base_a75591fe15951811f294dc964a7894214}} 
+\index{Draw\+Base@{Draw\+Base}!set\+Draw\+Common\+Data@{set\+Draw\+Common\+Data}}
+\index{set\+Draw\+Common\+Data@{set\+Draw\+Common\+Data}!Draw\+Base@{Draw\+Base}}
+\subsubsection{\texorpdfstring{set\+Draw\+Common\+Data()}{setDrawCommonData()}}
+{\footnotesize\ttfamily void Draw\+Base\+::set\+Draw\+Common\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$}]{value }\end{DoxyParamCaption})}
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in,out}  & {\em camera} & カメラ \\
-\hline
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+
+描画共通データ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 描画共通データ \\
 \hline
 \end{DoxyParams}
 
@@ -362,42 +440,30 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 \end{DoxyRetVals}
 
 
-\mbox{\hyperlink{class_draw_null_a3600d14d2ce10f4281723567f97c08be}{Draw\+Null}}, \mbox{\hyperlink{class_stencil_shadow_test_draw_a68917115d3f151ed91ce297924ee5bbb}{Stencil\+Shadow\+Test\+Draw}}で実装されています。
-
-\mbox{\Hypertarget{class_draw_base_a3978252914ddde12197ea4577356bf25}\label{class_draw_base_a3978252914ddde12197ea4577356bf25}} 
-\index{Draw\+Base@{Draw\+Base}!Setting\+Before\+Drawing@{Setting\+Before\+Drawing}}
-\index{Setting\+Before\+Drawing@{Setting\+Before\+Drawing}!Draw\+Base@{Draw\+Base}}
-\subsubsection{\texorpdfstring{Setting\+Before\+Drawing()}{SettingBeforeDrawing()}}
-{\footnotesize\ttfamily virtual void Draw\+Base\+::\+Setting\+Before\+Drawing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-
-
-描画前設定関数 
-
-
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in,out}  & {\em camera} & カメラ \\
-\hline
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyRetVals}{戻り値}
-{\em void} & なし \\
-\hline
-\end{DoxyRetVals}
-
-
-\mbox{\hyperlink{class_draw_null_a3baf78b024837c8ebb2471e7505db6ea}{Draw\+Null}}, \mbox{\hyperlink{class_stencil_shadow_test_draw_a0f697b6dad67048c7f8916a53cca6b1c}{Stencil\+Shadow\+Test\+Draw}}, \mbox{\hyperlink{class_coin_draw_a66c03acd675ac1820977cb21015abfdb}{Coin\+Draw}}で実装されています。
+ Draw\+Base.\+cpp の 32 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
-\mbox{\Hypertarget{class_draw_base_a6ebc8dc96176ddd3bd984b3d54739adb}\label{class_draw_base_a6ebc8dc96176ddd3bd984b3d54739adb}} 
-\index{Draw\+Base@{Draw\+Base}!draw\+\_\+order\+\_\+list\+\_\+@{draw\+\_\+order\+\_\+list\+\_\+}}
-\index{draw\+\_\+order\+\_\+list\+\_\+@{draw\+\_\+order\+\_\+list\+\_\+}!Draw\+Base@{Draw\+Base}}
-\subsubsection{\texorpdfstring{draw\+\_\+order\+\_\+list\+\_\+}{draw\_order\_list\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_order_list}{Draw\+Order\+List}} Draw\+Base\+::draw\+\_\+order\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_draw_base_a44e99e97b203c9cffa794b65df77539a}\label{class_draw_base_a44e99e97b203c9cffa794b65df77539a}} 
+\index{Draw\+Base@{Draw\+Base}!common\+\_\+data\+\_\+@{common\+\_\+data\+\_\+}}
+\index{common\+\_\+data\+\_\+@{common\+\_\+data\+\_\+}!Draw\+Base@{Draw\+Base}}
+\subsubsection{\texorpdfstring{common\+\_\+data\+\_\+}{common\_data\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}}$\ast$ Draw\+Base\+::common\+\_\+data\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+描画共通データ 
+
+
+
+ Draw\+Base.\+h の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_draw_base_a68325df7021177f7ca82a18511e1328f}\label{class_draw_base_a68325df7021177f7ca82a18511e1328f}} 
+\index{Draw\+Base@{Draw\+Base}!order\+\_\+list\+\_\+@{order\+\_\+list\+\_\+}}
+\index{order\+\_\+list\+\_\+@{order\+\_\+list\+\_\+}!Draw\+Base@{Draw\+Base}}
+\subsubsection{\texorpdfstring{order\+\_\+list\+\_\+}{order\_list\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_order_list}{Draw\+Order\+List}} Draw\+Base\+::order\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -407,23 +473,9 @@ void \mbox{\hyperlink{class_draw_base_a48b144e61928b7658c7a849017e40c79}{Revival
 
  Draw\+Base.\+h の 34 行目に定義があります。
 
-\mbox{\Hypertarget{class_draw_base_aa8be4980756a0af7cc76dfe455c492d4}\label{class_draw_base_aa8be4980756a0af7cc76dfe455c492d4}} 
-\index{Draw\+Base@{Draw\+Base}!save\+\_\+camera\+\_\+type\+\_\+@{save\+\_\+camera\+\_\+type\+\_\+}}
-\index{save\+\_\+camera\+\_\+type\+\_\+@{save\+\_\+camera\+\_\+type\+\_\+}!Draw\+Base@{Draw\+Base}}
-\subsubsection{\texorpdfstring{save\+\_\+camera\+\_\+type\+\_\+}{save\_camera\_type\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}} Draw\+Base\+::save\+\_\+camera\+\_\+type\+\_\+ = Camera\+::\+Type\+::\+N\+O\+NE\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-カメラタイプ保存用 
-
-
-
- Draw\+Base.\+h の 35 行目に定義があります。
-
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Draw/\+Draw\+Base/\mbox{\hyperlink{_draw_base_8h}{Draw\+Base.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Draw/\+Draw\+Base/\mbox{\hyperlink{_draw_base_8cpp}{Draw\+Base.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\mbox{\hyperlink{_draw_base_8h}{Draw\+Base.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Source/\mbox{\hyperlink{_draw_base_8cpp}{Draw\+Base.\+cpp}}\end{DoxyCompactItemize}

@@ -227,7 +227,7 @@ std::string EffekseerManager::CreateFilePath(const std::string* key_name,
 
 
 
-void EffekseerManager::CreateViewMatrix(Vector3D camera_position, 
+void EffekseerManager::CreateViewMatrix(Vector3D camera_position,
 										Vector3D look_at_point, Vector3D camera_up)
 {
 	view_matrix_ = Effekseer::Matrix44().LookAtLH(Effekseer::Vector3D(camera_position.x, camera_position.y, camera_position.z),
@@ -237,10 +237,11 @@ void EffekseerManager::CreateViewMatrix(Vector3D camera_position,
 
 
 
-void EffekseerManager::CreateProjectionMatrix(float angle_of_view_)
+void EffekseerManager::CreateProjectionMatrix(float angle_of_view,
+											  float near_clip, float far_clip)
 {
-	projection_matrix_ = Effekseer::Matrix44().PerspectiveFovLH(D3DXToRadian(angle_of_view_),
+	projection_matrix_ = Effekseer::Matrix44().PerspectiveFovLH(D3DXToRadian(angle_of_view),
 		(float)GameEngine::SCREEN_WIDTH / GameEngine::SCREEN_HEIGHT,
-																Camera::NEAR_CLIPPING_PLANE,
-																Camera::FAR_CLIPPING_PLANE);
+																near_clip,
+																far_clip);
 }

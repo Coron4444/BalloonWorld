@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: ClearLogo クラス</title>
+<title>BalloonWorld: ClearLogo クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -89,78 +89,181 @@ $(document).ready(function(){initNavTree('class_clear_logo.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
-<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
 <a href="class_clear_logo-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
 <div class="title">ClearLogo クラス</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>クリアロゴClass  
+ <a href="class_clear_logo.html#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_clear_logo_8h_source.html">ClearLogo.h</a>&gt;</code></p>
 <div class="dynheader">
-ClearLogo の継承関係図</div>
+ClearLogo 連携図</div>
 <div class="dyncontent">
-<div class="center"><img src="class_clear_logo__inherit__graph.png" border="0" usemap="#_clear_logo_inherit__map" alt="Inheritance graph"/></div>
-<map name="_clear_logo_inherit__map" id="_clear_logo_inherit__map">
-<area shape="rect" id="node2" href="class_game_object_base.html" title="ゲームオブジェクト基底クラス " alt="" coords="5,5,131,32"/>
+<div class="center"><img src="class_clear_logo__coll__graph.png" border="0" usemap="#_clear_logo_coll__map" alt="Collaboration graph"/></div>
+<map name="_clear_logo_coll__map" id="_clear_logo_coll__map">
+<area shape="rect" id="node2" href="class_game_object_base.html" title="ゲームオブジェクト基底クラス " alt="" coords="1003,252,1128,279"/>
+<area shape="rect" id="node4" href="class_component_base.html" title="コンポーネントBaseClass " alt="" coords="1291,285,1409,312"/>
+<area shape="rect" id="node19" href="class_physics.html" title="Physics" alt="" coords="1315,121,1385,148"/>
+<area shape="rect" id="node3" href="class_collision_base.html" title="衝突BaseClass " alt="" coords="1556,435,1657,461"/>
+<area shape="rect" id="node6" href="class_collision_objects.html" title="複数衝突オブジェクトクラス " alt="" coords="1799,527,1915,553"/>
+<area shape="rect" id="node16" href="class_draw_base.html" title="描画BaseClass " alt="" coords="1566,352,1647,379"/>
+<area shape="rect" id="node20" href="class_update_base.html" title="更新BaseClass " alt="" coords="1560,236,1653,263"/>
+<area shape="rect" id="node5" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObjects *,\l ARRAY_NUM \&gt;" alt="" coords="2096,431,2237,487"/>
+<area shape="rect" id="node12" href="class_object_of_tree.html" title="ObjectOfTree\&lt; CollisionObjects *\&gt;" alt="" coords="2056,567,2277,593"/>
+<area shape="rect" id="node7" href="class_a_a_b_b.html" title="AABBClass " alt="" coords="488,525,547,552"/>
+<area shape="rect" id="node8" href="class_collision_shape_base.html" title="衝突形状BaseClass " alt="" coords="143,559,281,585"/>
+<area shape="rect" id="node15" href="class_collision_object.html" title="衝突オブジェクトクラス " alt="" coords="463,576,572,603"/>
+<area shape="rect" id="node10" href="class_vector3_d.html" title="Vector3D" alt="" coords="174,363,250,389"/>
+<area shape="rect" id="node21" href="class_transform.html" title="Transform" alt="" coords="727,252,805,279"/>
+<area shape="rect" id="node23" href="class_axis_vector.html" title="AxisVector" alt="" coords="474,344,561,371"/>
+<area shape="rect" id="node13" href="class_space_of_tree.html" title="SpaceOfTree\&lt; CollisionObjects *\&gt;" alt="" coords="2435,567,2655,593"/>
+<area shape="rect" id="node14" href="class_limited_pointer_array.html" title="LimitedPointerArray\l\&lt; CollisionObject *,\l ARRAY_NUM \&gt;" alt="" coords="843,563,979,619"/>
+<area shape="rect" id="node17" href="class_draw_order_list.html" title="描画注文リストクラス " alt="" coords="1298,476,1402,503"/>
+<area shape="rect" id="node18" href="class_flag.html" title="Flag" alt="" coords="1042,476,1089,503"/>
+<area shape="rect" id="node22" href="class_matrix_extend.html" title="DirectX9の行列の拡張版クラス " alt="" coords="468,173,567,200"/>
+<area shape="rect" id="node24" href="class_plane_polygon.html" title="PlanePolygon" alt="" coords="1014,87,1117,113"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab19c1b71853014f6a037db63e1a052d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clear_logo.html#ab19c1b71853014f6a037db63e1a052d4">getScore</a> ()</td></tr>
+<tr class="memdesc:ab19c1b71853014f6a037db63e1a052d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">スコア取得関数  <a href="#ab19c1b71853014f6a037db63e1a052d4">[詳解]</a><br /></td></tr>
+<tr class="separator:ab19c1b71853014f6a037db63e1a052d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4fd6460e479d7b9c970fd775735807"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clear_logo.html#a6c4fd6460e479d7b9c970fd775735807">setScore</a> (int value)</td></tr>
+<tr class="memdesc:a6c4fd6460e479d7b9c970fd775735807"><td class="mdescLeft">&#160;</td><td class="mdescRight">スコア設定関数  <a href="#a6c4fd6460e479d7b9c970fd775735807">[詳解]</a><br /></td></tr>
+<tr class="separator:a6c4fd6460e479d7b9c970fd775735807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46c1a948342d75bb418047a31e70999d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clear_logo.html#a46c1a948342d75bb418047a31e70999d">Init</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw)</td></tr>
+<tr class="memdesc:a46c1a948342d75bb418047a31e70999d"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a46c1a948342d75bb418047a31e70999d">[詳解]</a><br /></td></tr>
 <tr class="separator:a46c1a948342d75bb418047a31e70999d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab55def116615b92a8e8cc40b364b7a4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clear_logo.html#ab55def116615b92a8e8cc40b364b7a4c">Uninit</a> () override</td></tr>
-<tr class="memdesc:ab55def116615b92a8e8cc40b364b7a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#ab55def116615b92a8e8cc40b364b7a4c">[詳解]</a><br /></td></tr>
-<tr class="separator:ab55def116615b92a8e8cc40b364b7a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa19369cbace0cc79957ef7b4d4dbd0f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clear_logo.html#aa19369cbace0cc79957ef7b4d4dbd0f5">Reset</a> () override</td></tr>
-<tr class="memdesc:aa19369cbace0cc79957ef7b4d4dbd0f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">リセット関数  <a href="#aa19369cbace0cc79957ef7b4d4dbd0f5">[詳解]</a><br /></td></tr>
-<tr class="separator:aa19369cbace0cc79957ef7b4d4dbd0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_game_object_null"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_game_object_null')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_game_object_null.html">GameObjectNull</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a63df1fd88b786686088b2ac9f79761d1 inherit pub_methods_class_game_object_null"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_null.html#a63df1fd88b786686088b2ac9f79761d1">GameObjectNull</a> (bool is_registration=true)</td></tr>
+<tr class="memdesc:a63df1fd88b786686088b2ac9f79761d1 inherit pub_methods_class_game_object_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="class_game_object_null.html#a63df1fd88b786686088b2ac9f79761d1">[詳解]</a><br /></td></tr>
+<tr class="separator:a63df1fd88b786686088b2ac9f79761d1 inherit pub_methods_class_game_object_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aee36c6a66b723f927c017ec3916918 inherit pub_methods_class_game_object_null"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_null.html#a3aee36c6a66b723f927c017ec3916918">~GameObjectNull</a> ()</td></tr>
+<tr class="memdesc:a3aee36c6a66b723f927c017ec3916918 inherit pub_methods_class_game_object_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_game_object_null.html#a3aee36c6a66b723f927c017ec3916918">[詳解]</a><br /></td></tr>
+<tr class="separator:a3aee36c6a66b723f927c017ec3916918 inherit pub_methods_class_game_object_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a70fbd3260fd1c0100320756830a0db inherit pub_methods_class_game_object_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_null.html#a1a70fbd3260fd1c0100320756830a0db">Uninit</a> () override</td></tr>
+<tr class="memdesc:a1a70fbd3260fd1c0100320756830a0db inherit pub_methods_class_game_object_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="class_game_object_null.html#a1a70fbd3260fd1c0100320756830a0db">[詳解]</a><br /></td></tr>
+<tr class="separator:a1a70fbd3260fd1c0100320756830a0db inherit pub_methods_class_game_object_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeb51b7e7aa41fd0b16f8f7c016bdb55 inherit pub_methods_class_game_object_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_null.html#aeeb51b7e7aa41fd0b16f8f7c016bdb55">Update</a> () override</td></tr>
+<tr class="memdesc:aeeb51b7e7aa41fd0b16f8f7c016bdb55 inherit pub_methods_class_game_object_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="class_game_object_null.html#aeeb51b7e7aa41fd0b16f8f7c016bdb55">[詳解]</a><br /></td></tr>
+<tr class="separator:aeeb51b7e7aa41fd0b16f8f7c016bdb55 inherit pub_methods_class_game_object_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc4e2c2ce54fb3d0bc3f0b45149a66cb inherit pub_methods_class_game_object_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_null.html#abc4e2c2ce54fb3d0bc3f0b45149a66cb">LateUpdate</a> () override</td></tr>
+<tr class="memdesc:abc4e2c2ce54fb3d0bc3f0b45149a66cb inherit pub_methods_class_game_object_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">後更新関数  <a href="class_game_object_null.html#abc4e2c2ce54fb3d0bc3f0b45149a66cb">[詳解]</a><br /></td></tr>
+<tr class="separator:abc4e2c2ce54fb3d0bc3f0b45149a66cb inherit pub_methods_class_game_object_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a748e17ea31b987249022562f5198c inherit pub_methods_class_game_object_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_null.html#a26a748e17ea31b987249022562f5198c">Reset</a> () override</td></tr>
+<tr class="memdesc:a26a748e17ea31b987249022562f5198c inherit pub_methods_class_game_object_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">リセット関数  <a href="class_game_object_null.html#a26a748e17ea31b987249022562f5198c">[詳解]</a><br /></td></tr>
+<tr class="separator:a26a748e17ea31b987249022562f5198c inherit pub_methods_class_game_object_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc551307ae5aa0ad8e754f976ffd1c7 inherit pub_methods_class_game_object_null"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_null.html#a9bc551307ae5aa0ad8e754f976ffd1c7">DebugDisplay</a> () override</td></tr>
+<tr class="memdesc:a9bc551307ae5aa0ad8e754f976ffd1c7 inherit pub_methods_class_game_object_null"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ表示関数  <a href="class_game_object_null.html#a9bc551307ae5aa0ad8e754f976ffd1c7">[詳解]</a><br /></td></tr>
+<tr class="separator:a9bc551307ae5aa0ad8e754f976ffd1c7 inherit pub_methods_class_game_object_null"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_game_object_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_game_object_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_game_object_base.html">GameObjectBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ab2550083f7eed51fc77b3a86ddafd9fb inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transform.html">Transform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#ab2550083f7eed51fc77b3a86ddafd9fb">getpTransform</a> ()</td></tr>
+<tr class="memdesc:ab2550083f7eed51fc77b3a86ddafd9fb inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">変形取得関数  <a href="class_game_object_base.html#ab2550083f7eed51fc77b3a86ddafd9fb">[詳解]</a><br /></td></tr>
+<tr class="separator:ab2550083f7eed51fc77b3a86ddafd9fb inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3bc35686dcbf8a209017ec01708255 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_physics.html">Physics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a0d3bc35686dcbf8a209017ec01708255">getpPhysics</a> ()</td></tr>
+<tr class="memdesc:a0d3bc35686dcbf8a209017ec01708255 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">物理取得関数  <a href="class_game_object_base.html#a0d3bc35686dcbf8a209017ec01708255">[詳解]</a><br /></td></tr>
+<tr class="separator:a0d3bc35686dcbf8a209017ec01708255 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad89288cb66472324b9afc39a3afb1c2f inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#ad89288cb66472324b9afc39a3afb1c2f">getIsInput</a> ()</td></tr>
+<tr class="memdesc:ad89288cb66472324b9afc39a3afb1c2f inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力フラグ取得関数  <a href="class_game_object_base.html#ad89288cb66472324b9afc39a3afb1c2f">[詳解]</a><br /></td></tr>
+<tr class="separator:ad89288cb66472324b9afc39a3afb1c2f inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe3edcdf6374f2138c306007fa66fca inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#affe3edcdf6374f2138c306007fa66fca">setIsInput</a> (bool value)</td></tr>
+<tr class="memdesc:affe3edcdf6374f2138c306007fa66fca inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力フラグ取得関数  <a href="class_game_object_base.html#affe3edcdf6374f2138c306007fa66fca">[詳解]</a><br /></td></tr>
+<tr class="separator:affe3edcdf6374f2138c306007fa66fca inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424c78f66de1b6d7ab47633cdd5e90f0 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a424c78f66de1b6d7ab47633cdd5e90f0">getIsUpdate</a> ()</td></tr>
+<tr class="memdesc:a424c78f66de1b6d7ab47633cdd5e90f0 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新フラグ取得関数  <a href="class_game_object_base.html#a424c78f66de1b6d7ab47633cdd5e90f0">[詳解]</a><br /></td></tr>
+<tr class="separator:a424c78f66de1b6d7ab47633cdd5e90f0 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba5110b5f5a877c95ebc675cef428679 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#aba5110b5f5a877c95ebc675cef428679">setIsUpdate</a> (bool value)</td></tr>
+<tr class="memdesc:aba5110b5f5a877c95ebc675cef428679 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新フラグ取得関数  <a href="class_game_object_base.html#aba5110b5f5a877c95ebc675cef428679">[詳解]</a><br /></td></tr>
+<tr class="separator:aba5110b5f5a877c95ebc675cef428679 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17ca64413424b2ad5701d31e74ea501 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#ae17ca64413424b2ad5701d31e74ea501">setAllComponent</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_collision_base.html">CollisionBase</a> *collision)</td></tr>
+<tr class="memdesc:ae17ca64413424b2ad5701d31e74ea501 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">全基底クラス設定関数  <a href="class_game_object_base.html#ae17ca64413424b2ad5701d31e74ea501">[詳解]</a><br /></td></tr>
+<tr class="separator:ae17ca64413424b2ad5701d31e74ea501 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f75b81c278bef3f58196c58e52aff98 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a3f75b81c278bef3f58196c58e52aff98">getpDraw</a> ()</td></tr>
+<tr class="memdesc:a3f75b81c278bef3f58196c58e52aff98 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画基底クラス取得関数  <a href="class_game_object_base.html#a3f75b81c278bef3f58196c58e52aff98">[詳解]</a><br /></td></tr>
+<tr class="separator:a3f75b81c278bef3f58196c58e52aff98 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab771c9ebbca42ccc5ffdee4b3e2e47c5 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#ab771c9ebbca42ccc5ffdee4b3e2e47c5">setDraw</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *value)</td></tr>
+<tr class="memdesc:ab771c9ebbca42ccc5ffdee4b3e2e47c5 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画基底クラス設定関数  <a href="class_game_object_base.html#ab771c9ebbca42ccc5ffdee4b3e2e47c5">[詳解]</a><br /></td></tr>
+<tr class="separator:ab771c9ebbca42ccc5ffdee4b3e2e47c5 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40170b972b0a0eb5637edaac211612e2 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_base.html">CollisionBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a40170b972b0a0eb5637edaac211612e2">getpCollision</a> ()</td></tr>
+<tr class="memdesc:a40170b972b0a0eb5637edaac211612e2 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突基底クラス取得関数  <a href="class_game_object_base.html#a40170b972b0a0eb5637edaac211612e2">[詳解]</a><br /></td></tr>
+<tr class="separator:a40170b972b0a0eb5637edaac211612e2 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddc882ccdb78e47acb0d718d5e55f5d inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#acddc882ccdb78e47acb0d718d5e55f5d">setCollision</a> (<a class="el" href="class_collision_base.html">CollisionBase</a> *value)</td></tr>
+<tr class="memdesc:acddc882ccdb78e47acb0d718d5e55f5d inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突基底クラス設定関数  <a href="class_game_object_base.html#acddc882ccdb78e47acb0d718d5e55f5d">[詳解]</a><br /></td></tr>
+<tr class="separator:acddc882ccdb78e47acb0d718d5e55f5d inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4682a3e88a45a462de288f14e9a8545d inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a4682a3e88a45a462de288f14e9a8545d">GameObjectBase</a> (bool is_registration=true)</td></tr>
 <tr class="memdesc:a4682a3e88a45a462de288f14e9a8545d inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="class_game_object_base.html#a4682a3e88a45a462de288f14e9a8545d">[詳解]</a><br /></td></tr>
 <tr class="separator:a4682a3e88a45a462de288f14e9a8545d inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cb813d5c7af673a3d190eb1b2d26275 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a0cb813d5c7af673a3d190eb1b2d26275">~GameObjectBase</a> ()</td></tr>
-<tr class="memdesc:a0cb813d5c7af673a3d190eb1b2d26275 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">仮想デストラクタ  <a href="class_game_object_base.html#a0cb813d5c7af673a3d190eb1b2d26275">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a0cb813d5c7af673a3d190eb1b2d26275 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_game_object_base.html#a0cb813d5c7af673a3d190eb1b2d26275">[詳解]</a><br /></td></tr>
 <tr class="separator:a0cb813d5c7af673a3d190eb1b2d26275 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96fe1a7816a3aef9a70cfcc39c032d2f inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a96fe1a7816a3aef9a70cfcc39c032d2f">Init</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_collision_base.html">CollisionBase</a> *collision)</td></tr>
+<tr class="memdesc:a96fe1a7816a3aef9a70cfcc39c032d2f inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="class_game_object_base.html#a96fe1a7816a3aef9a70cfcc39c032d2f">[詳解]</a><br /></td></tr>
+<tr class="separator:a96fe1a7816a3aef9a70cfcc39c032d2f inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf7df49baa04363c63f9515317776e40 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#adf7df49baa04363c63f9515317776e40">CreatePhysics</a> ()</td></tr>
-<tr class="memdesc:adf7df49baa04363c63f9515317776e40 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">剛体生成関数  <a href="class_game_object_base.html#adf7df49baa04363c63f9515317776e40">[詳解]</a><br /></td></tr>
+<tr class="memdesc:adf7df49baa04363c63f9515317776e40 inherit pub_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">物理生成関数  <a href="class_game_object_base.html#adf7df49baa04363c63f9515317776e40">[詳解]</a><br /></td></tr>
 <tr class="separator:adf7df49baa04363c63f9515317776e40 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7df1e16838f8fa578a27e8ba64652b49 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transform.html">Transform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a7df1e16838f8fa578a27e8ba64652b49">GetTransform</a> ()</td></tr>
-<tr class="separator:a7df1e16838f8fa578a27e8ba64652b49 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a853cdb5dbb2edf28e45e49540f85e554 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_physics.html">Physics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a853cdb5dbb2edf28e45e49540f85e554">GetPhysics</a> ()</td></tr>
-<tr class="separator:a853cdb5dbb2edf28e45e49540f85e554 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad0e581dfba83d11af6412a0df6ecd90 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#aad0e581dfba83d11af6412a0df6ecd90">SetAllComponent</a> (<a class="el" href="class_update_base.html">UpdateBase</a> *value0, <a class="el" href="class_draw_base.html">DrawBase</a> *value1, <a class="el" href="class_collision_base.html">CollisionBase</a> *value2)</td></tr>
-<tr class="separator:aad0e581dfba83d11af6412a0df6ecd90 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a177985be1be1252df6588fa29f2c7f41 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_update_base.html">UpdateBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a177985be1be1252df6588fa29f2c7f41">GetUpdate</a> ()</td></tr>
-<tr class="separator:a177985be1be1252df6588fa29f2c7f41 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71704e8310b3183f3f88869f8fd27d08 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a71704e8310b3183f3f88869f8fd27d08">SetUpdate</a> (<a class="el" href="class_update_base.html">UpdateBase</a> *value)</td></tr>
-<tr class="separator:a71704e8310b3183f3f88869f8fd27d08 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb893b1827cb7fbb27f0caf6a8e0fb88 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_base.html">DrawBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#acb893b1827cb7fbb27f0caf6a8e0fb88">GetDraw</a> ()</td></tr>
-<tr class="separator:acb893b1827cb7fbb27f0caf6a8e0fb88 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab548b4208b8da2af6e3abb533ea53da9 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#ab548b4208b8da2af6e3abb533ea53da9">SetDraw</a> (<a class="el" href="class_draw_base.html">DrawBase</a> *value)</td></tr>
-<tr class="separator:ab548b4208b8da2af6e3abb533ea53da9 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8158138ea811db49445845d8aaacaf3a inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_base.html">CollisionBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a8158138ea811db49445845d8aaacaf3a">GetCollision</a> ()</td></tr>
-<tr class="separator:a8158138ea811db49445845d8aaacaf3a inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4aeb0212f5a390570d050bfef51b7818 inherit pub_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#a4aeb0212f5a390570d050bfef51b7818">SetCollision</a> (<a class="el" href="class_collision_base.html">CollisionBase</a> *value)</td></tr>
-<tr class="separator:a4aeb0212f5a390570d050bfef51b7818 inherit pub_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-公開変数類</h2></td></tr>
-<tr class="memitem:ad4c1abbd7e501cc44357c9f65e12482f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_plane_polygon.html">PlanePolygon</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clear_logo.html#ad4c1abbd7e501cc44357c9f65e12482f">plane_polygon_</a></td></tr>
-<tr class="separator:ad4c1abbd7e501cc44357c9f65e12482f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:ab56bfb1e5656143da26cd4c841b67e5f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clear_logo.html#ab56bfb1e5656143da26cd4c841b67e5f">score_</a> = 0</td></tr>
+<tr class="memdesc:ab56bfb1e5656143da26cd4c841b67e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">スコア  <a href="#ab56bfb1e5656143da26cd4c841b67e5f">[詳解]</a><br /></td></tr>
+<tr class="separator:ab56bfb1e5656143da26cd4c841b67e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 その他の継承メンバ</h2></td></tr>
 <tr class="inherit_header pro_methods_class_game_object_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_game_object_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_game_object_base.html">GameObjectBase</a> に属する継承限定公開メンバ関数</td></tr>
-<tr class="memitem:aca14cf5d66f945347653c4965876e75b inherit pro_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#aca14cf5d66f945347653c4965876e75b">Init</a> (<a class="el" href="class_update_base.html">UpdateBase</a> *update, <a class="el" href="class_draw_base.html">DrawBase</a> *draw, <a class="el" href="class_collision_base.html">CollisionBase</a> *collision)</td></tr>
-<tr class="memdesc:aca14cf5d66f945347653c4965876e75b inherit pro_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="class_game_object_base.html#aca14cf5d66f945347653c4965876e75b">[詳解]</a><br /></td></tr>
-<tr class="separator:aca14cf5d66f945347653c4965876e75b inherit pro_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff8e4f486435f5d921c186b0824e8a0e inherit pro_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#aff8e4f486435f5d921c186b0824e8a0e">UninitComponent</a> ()</td></tr>
+<tr class="memdesc:aff8e4f486435f5d921c186b0824e8a0e inherit pro_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンポーネント終了関数  <a href="class_game_object_base.html#aff8e4f486435f5d921c186b0824e8a0e">[詳解]</a><br /></td></tr>
+<tr class="separator:aff8e4f486435f5d921c186b0824e8a0e inherit pro_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68b93e50540bf41a81d88ca508b2b4d inherit pro_methods_class_game_object_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object_base.html#ae68b93e50540bf41a81d88ca508b2b4d">ResetComponent</a> ()</td></tr>
+<tr class="memdesc:ae68b93e50540bf41a81d88ca508b2b4d inherit pro_methods_class_game_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンポーネントリセット関数  <a href="class_game_object_base.html#ae68b93e50540bf41a81d88ca508b2b4d">[詳解]</a><br /></td></tr>
+<tr class="separator:ae68b93e50540bf41a81d88ca508b2b4d inherit pro_methods_class_game_object_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="_clear_logo_8h_source.html">ClearLogo.h</a> の <a class="el" href="_clear_logo_8h_source.html#l00039">39</a> 行目に定義があります。</p>
+<div class="textblock"><p>クリアロゴClass </p>
+<p>クリアロゴのClass </p>
+
+<p class="definition"> <a class="el" href="_clear_logo_8h_source.html">ClearLogo.h</a> の <a class="el" href="_clear_logo_8h_source.html#l00024">24</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
+<a id="ab19c1b71853014f6a037db63e1a052d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab19c1b71853014f6a037db63e1a052d4">&#9670;&nbsp;</a></span>getScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ClearLogo::getScore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>スコア取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">int</td><td>スコア </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_clear_logo_8cpp_source.html">ClearLogo.cpp</a> の <a class="el" href="_clear_logo_8cpp_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="a46c1a948342d75bb418047a31e70999d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46c1a948342d75bb418047a31e70999d">&#9670;&nbsp;</a></span>Init()</h2>
 
@@ -177,92 +280,88 @@ ClearLogo の継承関係図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_clear_logo_8cpp_source.html">ClearLogo.cpp</a> の <a class="el" href="_clear_logo_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*draw</td><td>描画基底クラス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_clear_logo_8cpp_source.html">ClearLogo.cpp</a> の <a class="el" href="_clear_logo_8cpp_source.html#l00037">37</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aa19369cbace0cc79957ef7b4d4dbd0f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa19369cbace0cc79957ef7b4d4dbd0f5">&#9670;&nbsp;</a></span>Reset()</h2>
+<a id="a6c4fd6460e479d7b9c970fd775735807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c4fd6460e479d7b9c970fd775735807">&#9670;&nbsp;</a></span>setScore()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ClearLogo::Reset </td>
+          <td class="memname">void ClearLogo::setScore </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>リセット関数 </p>
+<p>スコア設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>スコア </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p><a class="el" href="class_game_object_base.html#a85c59554f734bcb09f1a1e18d9517dce">GameObjectBase</a>を実装しています。</p>
-
-<p class="definition"> <a class="el" href="_clear_logo_8cpp_source.html">ClearLogo.cpp</a> の <a class="el" href="_clear_logo_8cpp_source.html#l00068">68</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ab55def116615b92a8e8cc40b364b7a4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab55def116615b92a8e8cc40b364b7a4c">&#9670;&nbsp;</a></span>Uninit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ClearLogo::Uninit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>終了関数 </p>
-
-<p><a class="el" href="class_game_object_base.html#a97e1bc277d7b1c0156d4735de29a022c">GameObjectBase</a>を再実装しています。</p>
-
-<p class="definition"> <a class="el" href="_clear_logo_8cpp_source.html">ClearLogo.cpp</a> の <a class="el" href="_clear_logo_8cpp_source.html#l00051">51</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_clear_logo_8cpp_source.html">ClearLogo.cpp</a> の <a class="el" href="_clear_logo_8cpp_source.html#l00027">27</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">メンバ詳解</h2>
-<a id="ad4c1abbd7e501cc44357c9f65e12482f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4c1abbd7e501cc44357c9f65e12482f">&#9670;&nbsp;</a></span>plane_polygon_</h2>
+<a id="ab56bfb1e5656143da26cd4c841b67e5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab56bfb1e5656143da26cd4c841b67e5f">&#9670;&nbsp;</a></span>score_</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_plane_polygon.html">PlanePolygon</a>* ClearLogo::plane_polygon_</td>
+          <td class="memname">int ClearLogo::score_ = 0</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_clear_logo_8h_source.html">ClearLogo.h</a> の <a class="el" href="_clear_logo_8h_source.html#l00052">52</a> 行目に定義があります。</p>
+<p>スコア </p>
+
+<p class="definition"> <a class="el" href="_clear_logo_8h_source.html">ClearLogo.h</a> の <a class="el" href="_clear_logo_8h_source.html#l00030">30</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/03_Object/2D/UI/ClearLogo/<a class="el" href="_clear_logo_8h_source.html">ClearLogo.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/03_Object/2D/UI/ClearLogo/<a class="el" href="_clear_logo_8cpp_source.html">ClearLogo.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Game/Object/2D/ClearLogo/<a class="el" href="_clear_logo_8h_source.html">ClearLogo.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Game/Object/2D/ClearLogo/Source/<a class="el" href="_clear_logo_8cpp_source.html">ClearLogo.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

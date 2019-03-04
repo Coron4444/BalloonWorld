@@ -1,0 +1,242 @@
+\hypertarget{class_time_to_frame}{}\section{Time\+To\+Frame クラス}
+\label{class_time_to_frame}\index{Time\+To\+Frame@{Time\+To\+Frame}}
+
+
+時間とフレーム変換\+Class(static)  
+
+
+
+
+{\ttfamily \#include $<$Time\+To\+Frame.\+h$>$}
+
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_time_to_frame_a02fe55cc63bdffd73d092d30cc7f0153}{Second\+To\+Frame}} (float second)
+\begin{DoxyCompactList}\small\item\em 秒からフレーム数へ変換関数 \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_time_to_frame_acbf546584774a378e03270592f0500e8}{Minute\+To\+Frame}} (float minute)
+\begin{DoxyCompactList}\small\item\em 分からフレーム数へ変換関数 \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_time_to_frame_ab2e0cac54c1c7bcab824c27f8d30f3f4}{Hour\+To\+Frame}} (float hour)
+\begin{DoxyCompactList}\small\item\em 時からフレーム数へ変換関数 \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_time_to_frame_a3d24db23e04cc41af8106883b4598b00}{Frame\+To\+Second}} (int frame)
+\begin{DoxyCompactList}\small\item\em フレーム数から秒へ変換関数 \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_time_to_frame_a1ec1bf2a0e8ad53782b2ad0bce8b7c78}{Frame\+To\+Minute}} (int frame)
+\begin{DoxyCompactList}\small\item\em フレーム数から分へ変換関数 \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_time_to_frame_ab9a81c7b6f84d87f29a602716863a82c}{Frame\+To\+Hour}} (int frame)
+\begin{DoxyCompactList}\small\item\em フレーム数から時へ変換関数 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_time_to_frame_a17d56ef5146d0934e48200ca44fcfa79}{Frame\+To\+Time}} (int frame, float $\ast$hour, float $\ast$minute, float $\ast$second)
+\begin{DoxyCompactList}\small\item\em フレーム数から時間へ変換関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned \mbox{\hyperlink{class_time_to_frame_a2e16dc9c8965177964d86eb7b67e5254}{F\+PS}} = 60
+\begin{DoxyCompactList}\small\item\em F\+PS \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+時間とフレーム変換\+Class(static) 
+
+時間とフレームの変換\+Class(static) 
+
+ Time\+To\+Frame.\+h の 17 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_time_to_frame_ab9a81c7b6f84d87f29a602716863a82c}\label{class_time_to_frame_ab9a81c7b6f84d87f29a602716863a82c}} 
+\index{Time\+To\+Frame@{Time\+To\+Frame}!Frame\+To\+Hour@{Frame\+To\+Hour}}
+\index{Frame\+To\+Hour@{Frame\+To\+Hour}!Time\+To\+Frame@{Time\+To\+Frame}}
+\subsubsection{\texorpdfstring{Frame\+To\+Hour()}{FrameToHour()}}
+{\footnotesize\ttfamily float Time\+To\+Frame\+::\+Frame\+To\+Hour (\begin{DoxyParamCaption}\item[{int}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+フレーム数から時へ変換関数 
+
+
+\begin{DoxyParams}{引数}
+{\em frame} & フレーム数 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 時 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Time\+To\+Frame.\+cpp の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_to_frame_a1ec1bf2a0e8ad53782b2ad0bce8b7c78}\label{class_time_to_frame_a1ec1bf2a0e8ad53782b2ad0bce8b7c78}} 
+\index{Time\+To\+Frame@{Time\+To\+Frame}!Frame\+To\+Minute@{Frame\+To\+Minute}}
+\index{Frame\+To\+Minute@{Frame\+To\+Minute}!Time\+To\+Frame@{Time\+To\+Frame}}
+\subsubsection{\texorpdfstring{Frame\+To\+Minute()}{FrameToMinute()}}
+{\footnotesize\ttfamily float Time\+To\+Frame\+::\+Frame\+To\+Minute (\begin{DoxyParamCaption}\item[{int}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+フレーム数から分へ変換関数 
+
+
+\begin{DoxyParams}{引数}
+{\em frame} & フレーム数 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Time\+To\+Frame.\+cpp の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_to_frame_a3d24db23e04cc41af8106883b4598b00}\label{class_time_to_frame_a3d24db23e04cc41af8106883b4598b00}} 
+\index{Time\+To\+Frame@{Time\+To\+Frame}!Frame\+To\+Second@{Frame\+To\+Second}}
+\index{Frame\+To\+Second@{Frame\+To\+Second}!Time\+To\+Frame@{Time\+To\+Frame}}
+\subsubsection{\texorpdfstring{Frame\+To\+Second()}{FrameToSecond()}}
+{\footnotesize\ttfamily float Time\+To\+Frame\+::\+Frame\+To\+Second (\begin{DoxyParamCaption}\item[{int}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+フレーム数から秒へ変換関数 
+
+
+\begin{DoxyParams}{引数}
+{\em frame} & フレーム数 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 秒 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Time\+To\+Frame.\+cpp の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_to_frame_a17d56ef5146d0934e48200ca44fcfa79}\label{class_time_to_frame_a17d56ef5146d0934e48200ca44fcfa79}} 
+\index{Time\+To\+Frame@{Time\+To\+Frame}!Frame\+To\+Time@{Frame\+To\+Time}}
+\index{Frame\+To\+Time@{Frame\+To\+Time}!Time\+To\+Frame@{Time\+To\+Frame}}
+\subsubsection{\texorpdfstring{Frame\+To\+Time()}{FrameToTime()}}
+{\footnotesize\ttfamily void Time\+To\+Frame\+::\+Frame\+To\+Time (\begin{DoxyParamCaption}\item[{int}]{frame,  }\item[{float $\ast$}]{hour,  }\item[{float $\ast$}]{minute,  }\item[{float $\ast$}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+フレーム数から時間へ変換関数 
+
+
+\begin{DoxyParams}{引数}
+{\em frame} & フレーム数 \\
+\hline
+{\em $\ast$hour} & 時 \\
+\hline
+{\em $\ast$minute} & 分 \\
+\hline
+{\em $\ast$second} & 秒 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Time\+To\+Frame.\+cpp の 71 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_to_frame_ab2e0cac54c1c7bcab824c27f8d30f3f4}\label{class_time_to_frame_ab2e0cac54c1c7bcab824c27f8d30f3f4}} 
+\index{Time\+To\+Frame@{Time\+To\+Frame}!Hour\+To\+Frame@{Hour\+To\+Frame}}
+\index{Hour\+To\+Frame@{Hour\+To\+Frame}!Time\+To\+Frame@{Time\+To\+Frame}}
+\subsubsection{\texorpdfstring{Hour\+To\+Frame()}{HourToFrame()}}
+{\footnotesize\ttfamily int Time\+To\+Frame\+::\+Hour\+To\+Frame (\begin{DoxyParamCaption}\item[{float}]{hour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+時からフレーム数へ変換関数 
+
+
+\begin{DoxyParams}{引数}
+{\em hour} & 時 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & フレーム数 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Time\+To\+Frame.\+cpp の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_to_frame_acbf546584774a378e03270592f0500e8}\label{class_time_to_frame_acbf546584774a378e03270592f0500e8}} 
+\index{Time\+To\+Frame@{Time\+To\+Frame}!Minute\+To\+Frame@{Minute\+To\+Frame}}
+\index{Minute\+To\+Frame@{Minute\+To\+Frame}!Time\+To\+Frame@{Time\+To\+Frame}}
+\subsubsection{\texorpdfstring{Minute\+To\+Frame()}{MinuteToFrame()}}
+{\footnotesize\ttfamily int Time\+To\+Frame\+::\+Minute\+To\+Frame (\begin{DoxyParamCaption}\item[{float}]{minute }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+分からフレーム数へ変換関数 
+
+
+\begin{DoxyParams}{引数}
+{\em minute} & 分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & フレーム数 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Time\+To\+Frame.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_time_to_frame_a02fe55cc63bdffd73d092d30cc7f0153}\label{class_time_to_frame_a02fe55cc63bdffd73d092d30cc7f0153}} 
+\index{Time\+To\+Frame@{Time\+To\+Frame}!Second\+To\+Frame@{Second\+To\+Frame}}
+\index{Second\+To\+Frame@{Second\+To\+Frame}!Time\+To\+Frame@{Time\+To\+Frame}}
+\subsubsection{\texorpdfstring{Second\+To\+Frame()}{SecondToFrame()}}
+{\footnotesize\ttfamily int Time\+To\+Frame\+::\+Second\+To\+Frame (\begin{DoxyParamCaption}\item[{float}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+秒からフレーム数へ変換関数 
+
+
+\begin{DoxyParams}{引数}
+{\em second} & 秒 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & フレーム数 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Time\+To\+Frame.\+cpp の 27 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_time_to_frame_a2e16dc9c8965177964d86eb7b67e5254}\label{class_time_to_frame_a2e16dc9c8965177964d86eb7b67e5254}} 
+\index{Time\+To\+Frame@{Time\+To\+Frame}!F\+PS@{F\+PS}}
+\index{F\+PS@{F\+PS}!Time\+To\+Frame@{Time\+To\+Frame}}
+\subsubsection{\texorpdfstring{F\+PS}{FPS}}
+{\footnotesize\ttfamily const unsigned Time\+To\+Frame\+::\+F\+PS = 60\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+F\+PS 
+
+
+
+ Time\+To\+Frame.\+h の 23 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_time_to_frame_8h}{Time\+To\+Frame.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\+Source/\mbox{\hyperlink{_time_to_frame_8cpp}{Time\+To\+Frame.\+cpp}}\end{DoxyCompactItemize}

@@ -93,13 +93,6 @@ int Player::getScore()
 
 
 
-void Player::AddScore(int value)
-{
-	score_ += value;
-}
-
-
-
 int Player::getAnimCount()
 {
 	return anim_counter_;
@@ -183,6 +176,13 @@ void Player::Update()
 	getpBalloonGroup()->setPosition(balloon_position_matrix.getPosition());
 
 	anim_counter_++;
+}
+
+
+
+void Player::AddScore(int value)
+{
+	score_ += value;
 }
 
 

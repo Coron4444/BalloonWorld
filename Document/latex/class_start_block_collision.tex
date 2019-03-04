@@ -1,0 +1,222 @@
+\hypertarget{class_start_block_collision}{}\section{Start\+Block\+Collision クラス}
+\label{class_start_block_collision}\index{Start\+Block\+Collision@{Start\+Block\+Collision}}
+
+
+スタートブロック衝突\+Class  
+
+
+
+
+{\ttfamily \#include $<$Start\+Block\+Collision.\+h$>$}
+
+
+
+Start\+Block\+Collision 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_start_block_collision__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_start_block_collision_af6bc5a437ac6427dbf664269c22c8e13}{Object\+Tag}} \{ \mbox{\hyperlink{class_start_block_collision_af6bc5a437ac6427dbf664269c22c8e13ab50339a10e1de285ac99d4c3990b8693}{Object\+Tag\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_start_block_collision_af6bc5a437ac6427dbf664269c22c8e13a186495f7da296bf880df3a22a492b378}{Object\+Tag\+::\+M\+A\+IN}}, 
+\mbox{\hyperlink{class_start_block_collision_af6bc5a437ac6427dbf664269c22c8e13a26a4b44a837bf97b972628509912b4a5}{Object\+Tag\+::\+M\+AX}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_start_block_collision_a2248356335da3741aefdbce33b1052b5}{Shape\+Tag}} \{ \mbox{\hyperlink{class_start_block_collision_a2248356335da3741aefdbce33b1052b5ab50339a10e1de285ac99d4c3990b8693}{Shape\+Tag\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_start_block_collision_a2248356335da3741aefdbce33b1052b5a186495f7da296bf880df3a22a492b378}{Shape\+Tag\+::\+M\+A\+IN}}, 
+\mbox{\hyperlink{class_start_block_collision_a2248356335da3741aefdbce33b1052b5a26a4b44a837bf97b972628509912b4a5}{Shape\+Tag\+::\+M\+AX}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_start_block_collision_a2ff4f4ba72b71c6083ce2b8ceb9c4e65}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_start_block_collision_a0e70da365db1a2bb07c56609d28217ad}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$ \mbox{\hyperlink{class_start_block_collision_a4c902986bebddbbb7629ab231d434dc0}{collision\+\_\+object\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 衝突オブジェクト \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_b_b}{O\+BB}} $\ast$ \mbox{\hyperlink{class_start_block_collision_a77b2824aa8efb3428c1c287836ba6aec}{main\+\_\+obb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em メイン\+O\+BB \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_start_block_collision_a44d290b81523f98265db3c4d2f246954}{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}}
+\begin{DoxyCompactList}\small\item\em メイン\+O\+B\+B長さ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+スタートブロック衝突\+Class 
+
+スタートブロックの衝突\+Class 
+
+ Start\+Block\+Collision.\+h の 25 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_start_block_collision_af6bc5a437ac6427dbf664269c22c8e13}\label{class_start_block_collision_af6bc5a437ac6427dbf664269c22c8e13}} 
+\index{Start\+Block\+Collision@{Start\+Block\+Collision}!Object\+Tag@{Object\+Tag}}
+\index{Object\+Tag@{Object\+Tag}!Start\+Block\+Collision@{Start\+Block\+Collision}}
+\subsubsection{\texorpdfstring{Object\+Tag}{ObjectTag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_start_block_collision_af6bc5a437ac6427dbf664269c22c8e13}{Start\+Block\+Collision\+::\+Object\+Tag}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Start\+Block\+Collision@{Start\+Block\+Collision}}\index{Start\+Block\+Collision@{Start\+Block\+Collision}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_start_block_collision_af6bc5a437ac6427dbf664269c22c8e13ab50339a10e1de285ac99d4c3990b8693}\label{class_start_block_collision_af6bc5a437ac6427dbf664269c22c8e13ab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+IN@{M\+A\+IN}!Start\+Block\+Collision@{Start\+Block\+Collision}}\index{Start\+Block\+Collision@{Start\+Block\+Collision}!M\+A\+IN@{M\+A\+IN}}}\mbox{\Hypertarget{class_start_block_collision_af6bc5a437ac6427dbf664269c22c8e13a186495f7da296bf880df3a22a492b378}\label{class_start_block_collision_af6bc5a437ac6427dbf664269c22c8e13a186495f7da296bf880df3a22a492b378}} 
+M\+A\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Start\+Block\+Collision@{Start\+Block\+Collision}}\index{Start\+Block\+Collision@{Start\+Block\+Collision}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_start_block_collision_af6bc5a437ac6427dbf664269c22c8e13a26a4b44a837bf97b972628509912b4a5}\label{class_start_block_collision_af6bc5a437ac6427dbf664269c22c8e13a26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Start\+Block\+Collision.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_start_block_collision_a2248356335da3741aefdbce33b1052b5}\label{class_start_block_collision_a2248356335da3741aefdbce33b1052b5}} 
+\index{Start\+Block\+Collision@{Start\+Block\+Collision}!Shape\+Tag@{Shape\+Tag}}
+\index{Shape\+Tag@{Shape\+Tag}!Start\+Block\+Collision@{Start\+Block\+Collision}}
+\subsubsection{\texorpdfstring{Shape\+Tag}{ShapeTag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_start_block_collision_a2248356335da3741aefdbce33b1052b5}{Start\+Block\+Collision\+::\+Shape\+Tag}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Start\+Block\+Collision@{Start\+Block\+Collision}}\index{Start\+Block\+Collision@{Start\+Block\+Collision}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_start_block_collision_a2248356335da3741aefdbce33b1052b5ab50339a10e1de285ac99d4c3990b8693}\label{class_start_block_collision_a2248356335da3741aefdbce33b1052b5ab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+IN@{M\+A\+IN}!Start\+Block\+Collision@{Start\+Block\+Collision}}\index{Start\+Block\+Collision@{Start\+Block\+Collision}!M\+A\+IN@{M\+A\+IN}}}\mbox{\Hypertarget{class_start_block_collision_a2248356335da3741aefdbce33b1052b5a186495f7da296bf880df3a22a492b378}\label{class_start_block_collision_a2248356335da3741aefdbce33b1052b5a186495f7da296bf880df3a22a492b378}} 
+M\+A\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Start\+Block\+Collision@{Start\+Block\+Collision}}\index{Start\+Block\+Collision@{Start\+Block\+Collision}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_start_block_collision_a2248356335da3741aefdbce33b1052b5a26a4b44a837bf97b972628509912b4a5}\label{class_start_block_collision_a2248356335da3741aefdbce33b1052b5a26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Start\+Block\+Collision.\+h の 38 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_start_block_collision_a2ff4f4ba72b71c6083ce2b8ceb9c4e65}\label{class_start_block_collision_a2ff4f4ba72b71c6083ce2b8ceb9c4e65}} 
+\index{Start\+Block\+Collision@{Start\+Block\+Collision}!Init@{Init}}
+\index{Init@{Init}!Start\+Block\+Collision@{Start\+Block\+Collision}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Start\+Block\+Collision\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_null_a18cfc21fefcd3e8dec380ac44a85f111}{Collision\+Null}}を再実装しています。
+
+
+
+ Start\+Block\+Collision.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_start_block_collision_a0e70da365db1a2bb07c56609d28217ad}\label{class_start_block_collision_a0e70da365db1a2bb07c56609d28217ad}} 
+\index{Start\+Block\+Collision@{Start\+Block\+Collision}!Update@{Update}}
+\index{Update@{Update}!Start\+Block\+Collision@{Start\+Block\+Collision}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Start\+Block\+Collision\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_null_ad6ac0e9b06fcb4e3d19a5c3c1cadfe7e}{Collision\+Null}}を再実装しています。
+
+
+
+ Start\+Block\+Collision.\+cpp の 46 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_start_block_collision_a4c902986bebddbbb7629ab231d434dc0}\label{class_start_block_collision_a4c902986bebddbbb7629ab231d434dc0}} 
+\index{Start\+Block\+Collision@{Start\+Block\+Collision}!collision\+\_\+object\+\_\+@{collision\+\_\+object\+\_\+}}
+\index{collision\+\_\+object\+\_\+@{collision\+\_\+object\+\_\+}!Start\+Block\+Collision@{Start\+Block\+Collision}}
+\subsubsection{\texorpdfstring{collision\+\_\+object\+\_\+}{collision\_object\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_object}{Collision\+Object}}$\ast$ Start\+Block\+Collision\+::collision\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+衝突オブジェクト 
+
+
+
+ Start\+Block\+Collision.\+h の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_start_block_collision_a77b2824aa8efb3428c1c287836ba6aec}\label{class_start_block_collision_a77b2824aa8efb3428c1c287836ba6aec}} 
+\index{Start\+Block\+Collision@{Start\+Block\+Collision}!main\+\_\+obb\+\_\+@{main\+\_\+obb\+\_\+}}
+\index{main\+\_\+obb\+\_\+@{main\+\_\+obb\+\_\+}!Start\+Block\+Collision@{Start\+Block\+Collision}}
+\subsubsection{\texorpdfstring{main\+\_\+obb\+\_\+}{main\_obb\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_b_b}{O\+BB}}$\ast$ Start\+Block\+Collision\+::main\+\_\+obb\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+メイン\+O\+BB 
+
+
+
+ Start\+Block\+Collision.\+h の 58 行目に定義があります。
+
+\mbox{\Hypertarget{class_start_block_collision_a44d290b81523f98265db3c4d2f246954}\label{class_start_block_collision_a44d290b81523f98265db3c4d2f246954}} 
+\index{Start\+Block\+Collision@{Start\+Block\+Collision}!M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}}
+\index{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}!Start\+Block\+Collision@{Start\+Block\+Collision}}
+\subsubsection{\texorpdfstring{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}{MAIN\_OBB\_LENGTH}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Start\+Block\+Collision\+::\+M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+メイン\+O\+B\+B長さ 
+
+
+
+ Start\+Block\+Collision.\+h の 50 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Start\+Block/\mbox{\hyperlink{_start_block_collision_8h}{Start\+Block\+Collision.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Start\+Block/\+Source/\mbox{\hyperlink{_start_block_collision_8cpp}{Start\+Block\+Collision.\+cpp}}\end{DoxyCompactItemize}

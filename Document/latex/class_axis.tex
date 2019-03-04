@@ -1,0 +1,691 @@
+\hypertarget{class_axis}{}\section{Axis クラス}
+\label{class_axis}\index{Axis@{Axis}}
+
+
+軸\+Class  
+
+
+
+
+{\ttfamily \#include $<$Axis.\+h$>$}
+
+
+
+Axis 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{class_axis__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_axis_a97ddaeb8484fec8c8c51d8ae45ea6058}{getp\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em 前ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_axis_a71030c261074a737756e3f083da8d185}{getp\+Default\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em 既定前ベクトル取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_axis_af37757c4c30c1a9d0e111a2d954bf734}{set\+Forward}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} value)
+\begin{DoxyCompactList}\small\item\em 前ベクトル設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_axis_af9b293c3e3ad85321382f112d7afa538}{getp\+Up}} ()
+\begin{DoxyCompactList}\small\item\em 上ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_axis_a6461d731bdccbe4d5d28bca3f9125344}{getp\+Default\+Up}} ()
+\begin{DoxyCompactList}\small\item\em 既定上ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_axis_a5562bdd19fc244dc78f4e6cce018ca5d}{getp\+Right}} ()
+\begin{DoxyCompactList}\small\item\em 右ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_axis_aa674343b016db11ac4e3ec2a149088e3}{getp\+Default\+Right}} ()
+\begin{DoxyCompactList}\small\item\em 既定右ベクトル取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_axis_a2ccc5c19d05f0c9096c6a3e14af2de8f}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_axis_a74c734b0145fe83813c139cc731b5bce}{Rotation\+AxisX}} (float radian)
+\begin{DoxyCompactList}\small\item\em X軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_axis_acb5217738982de2c3695ef0802b14a6c}{Rotation\+AxisY}} (float radian)
+\begin{DoxyCompactList}\small\item\em Y軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_axis_a1a0571e9a3e26843be14ff62f08351e3}{Rotation\+AxisZ}} (float radian)
+\begin{DoxyCompactList}\small\item\em Z軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_axis_af53def73117a3e373768d6c155af3103}{Rotation\+Axis\+Forward}} (float radian)
+\begin{DoxyCompactList}\small\item\em 前ベクトル軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_axis_a90411a040bb9673b5e0785a4da46c023}{Rotation\+Axis\+Up}} (float radian)
+\begin{DoxyCompactList}\small\item\em 上ベクトル軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_axis_aeb54b8fe54afaa79c930c64136f0007d}{Rotation\+Axis\+Right}} (float radian)
+\begin{DoxyCompactList}\small\item\em 右ベクトル軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_axis_a02f95ead5d71cf4f4a38b6a9f9d19caa}{Rotation\+Axis\+Any}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} axis, float radian)
+\begin{DoxyCompactList}\small\item\em 任意軸回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_axis_a3fd6433b4949d4e826d51c1b3a812771}{Rotation\+Matrix}} (\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$matrix)
+\begin{DoxyCompactList}\small\item\em 行列回転関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_axis_a0c12edd6d56e298b41b0a20ef2cacceb}{Rotation\+Quaternion}} (\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$quaternion)
+\begin{DoxyCompactList}\small\item\em クォータニオン回転回転関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_axis_af27bd2cc59e50b8a7256434cd4214c2b}{Calculation\+Up\+And\+Right\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em 上\&右ベクトル算出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_axis_a2f996a45ce7884ae66ced29c33e9e2fb}{Normalize\+All\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em 全ベクトル正規化関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_axis_a9595934289a148d6acbbe65614669115}{forward\+\_\+}} = \mbox{\hyperlink{class_axis_a3360259f8662e72e5d86405647dc0188}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD}}
+\begin{DoxyCompactList}\small\item\em 前ベクトル \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_axis_a7588c9e81446f5b2c69af24a11763309}{default\+\_\+forward\+\_\+}} = \mbox{\hyperlink{class_axis_a3360259f8662e72e5d86405647dc0188}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD}}
+\begin{DoxyCompactList}\small\item\em 既定前ベクトル \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_axis_a7a09c9a41bd3576b12a7564e6aad7cb6}{up\+\_\+}} = \mbox{\hyperlink{class_axis_afe3787d2e4c4affc0c4ab43a5f52891e}{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP}}
+\begin{DoxyCompactList}\small\item\em 上ベクトル \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_axis_a50d5dc8e7cc5443421948ae81676360f}{default\+\_\+up\+\_\+}} = \mbox{\hyperlink{class_axis_afe3787d2e4c4affc0c4ab43a5f52891e}{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP}}
+\begin{DoxyCompactList}\small\item\em 既定上ベクトル \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_axis_a10577439f2638a389cc0f7d4f0a8dac8}{right\+\_\+}} = \mbox{\hyperlink{class_axis_a12c07eb8804a096a9c72d8f6d4abf6f7}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT}}
+\begin{DoxyCompactList}\small\item\em 右ベクトル \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_axis_a30aa135ef84dba206ab95d28e1ad573b}{default\+\_\+right\+\_\+}} = \mbox{\hyperlink{class_axis_a12c07eb8804a096a9c72d8f6d4abf6f7}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT}}
+\begin{DoxyCompactList}\small\item\em 既定右ベクトル \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_axis_a3360259f8662e72e5d86405647dc0188}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD}}
+\begin{DoxyCompactList}\small\item\em 既定前ベクトル \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_axis_afe3787d2e4c4affc0c4ab43a5f52891e}{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP}}
+\begin{DoxyCompactList}\small\item\em 既定上ベクトル \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_axis_a12c07eb8804a096a9c72d8f6d4abf6f7}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT}}
+\begin{DoxyCompactList}\small\item\em 既定右ベクトル \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+軸\+Class 
+
+軸を表す\+Class 
+
+ Axis.\+h の 17 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_axis_af27bd2cc59e50b8a7256434cd4214c2b}\label{class_axis_af27bd2cc59e50b8a7256434cd4214c2b}} 
+\index{Axis@{Axis}!Calculation\+Up\+And\+Right\+Vector@{Calculation\+Up\+And\+Right\+Vector}}
+\index{Calculation\+Up\+And\+Right\+Vector@{Calculation\+Up\+And\+Right\+Vector}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{Calculation\+Up\+And\+Right\+Vector()}{CalculationUpAndRightVector()}}
+{\footnotesize\ttfamily void Axis\+::\+Calculation\+Up\+And\+Right\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+上\&右ベクトル算出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 179 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a71030c261074a737756e3f083da8d185}\label{class_axis_a71030c261074a737756e3f083da8d185}} 
+\index{Axis@{Axis}!getp\+Default\+Forward@{getp\+Default\+Forward}}
+\index{getp\+Default\+Forward@{getp\+Default\+Forward}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{getp\+Default\+Forward()}{getpDefaultForward()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Axis\+::getp\+Default\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+既定前ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 既定前ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_aa674343b016db11ac4e3ec2a149088e3}\label{class_axis_aa674343b016db11ac4e3ec2a149088e3}} 
+\index{Axis@{Axis}!getp\+Default\+Right@{getp\+Default\+Right}}
+\index{getp\+Default\+Right@{getp\+Default\+Right}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{getp\+Default\+Right()}{getpDefaultRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Axis\+::getp\+Default\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+既定右ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 既定右ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 73 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a6461d731bdccbe4d5d28bca3f9125344}\label{class_axis_a6461d731bdccbe4d5d28bca3f9125344}} 
+\index{Axis@{Axis}!getp\+Default\+Up@{getp\+Default\+Up}}
+\index{getp\+Default\+Up@{getp\+Default\+Up}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{getp\+Default\+Up()}{getpDefaultUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Axis\+::getp\+Default\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+既定上ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 既定上ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 59 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a97ddaeb8484fec8c8c51d8ae45ea6058}\label{class_axis_a97ddaeb8484fec8c8c51d8ae45ea6058}} 
+\index{Axis@{Axis}!getp\+Forward@{getp\+Forward}}
+\index{getp\+Forward@{getp\+Forward}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{getp\+Forward()}{getpForward()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Axis\+::getp\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+前ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 前ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 29 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a5562bdd19fc244dc78f4e6cce018ca5d}\label{class_axis_a5562bdd19fc244dc78f4e6cce018ca5d}} 
+\index{Axis@{Axis}!getp\+Right@{getp\+Right}}
+\index{getp\+Right@{getp\+Right}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{getp\+Right()}{getpRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Axis\+::getp\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+右ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 右ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 66 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_af9b293c3e3ad85321382f112d7afa538}\label{class_axis_af9b293c3e3ad85321382f112d7afa538}} 
+\index{Axis@{Axis}!getp\+Up@{getp\+Up}}
+\index{getp\+Up@{getp\+Up}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{getp\+Up()}{getpUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Axis\+::getp\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+上ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 上ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 52 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a2f996a45ce7884ae66ced29c33e9e2fb}\label{class_axis_a2f996a45ce7884ae66ced29c33e9e2fb}} 
+\index{Axis@{Axis}!Normalize\+All\+Vector@{Normalize\+All\+Vector}}
+\index{Normalize\+All\+Vector@{Normalize\+All\+Vector}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{Normalize\+All\+Vector()}{NormalizeAllVector()}}
+{\footnotesize\ttfamily void Axis\+::\+Normalize\+All\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+全ベクトル正規化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 187 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a2ccc5c19d05f0c9096c6a3e14af2de8f}\label{class_axis_a2ccc5c19d05f0c9096c6a3e14af2de8f}} 
+\index{Axis@{Axis}!Reset@{Reset}}
+\index{Reset@{Reset}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Axis\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+リセット関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 83 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a02f95ead5d71cf4f4a38b6a9f9d19caa}\label{class_axis_a02f95ead5d71cf4f4a38b6a9f9d19caa}} 
+\index{Axis@{Axis}!Rotation\+Axis\+Any@{Rotation\+Axis\+Any}}
+\index{Rotation\+Axis\+Any@{Rotation\+Axis\+Any}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Any()}{RotationAxisAny()}}
+{\footnotesize\ttfamily void Axis\+::\+Rotation\+Axis\+Any (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{axis,  }\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+任意軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 149 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_af53def73117a3e373768d6c155af3103}\label{class_axis_af53def73117a3e373768d6c155af3103}} 
+\index{Axis@{Axis}!Rotation\+Axis\+Forward@{Rotation\+Axis\+Forward}}
+\index{Rotation\+Axis\+Forward@{Rotation\+Axis\+Forward}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Forward()}{RotationAxisForward()}}
+{\footnotesize\ttfamily void Axis\+::\+Rotation\+Axis\+Forward (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+前ベクトル軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 122 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_aeb54b8fe54afaa79c930c64136f0007d}\label{class_axis_aeb54b8fe54afaa79c930c64136f0007d}} 
+\index{Axis@{Axis}!Rotation\+Axis\+Right@{Rotation\+Axis\+Right}}
+\index{Rotation\+Axis\+Right@{Rotation\+Axis\+Right}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Right()}{RotationAxisRight()}}
+{\footnotesize\ttfamily void Axis\+::\+Rotation\+Axis\+Right (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+右ベクトル軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 140 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a90411a040bb9673b5e0785a4da46c023}\label{class_axis_a90411a040bb9673b5e0785a4da46c023}} 
+\index{Axis@{Axis}!Rotation\+Axis\+Up@{Rotation\+Axis\+Up}}
+\index{Rotation\+Axis\+Up@{Rotation\+Axis\+Up}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Up()}{RotationAxisUp()}}
+{\footnotesize\ttfamily void Axis\+::\+Rotation\+Axis\+Up (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+上ベクトル軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 131 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a74c734b0145fe83813c139cc731b5bce}\label{class_axis_a74c734b0145fe83813c139cc731b5bce}} 
+\index{Axis@{Axis}!Rotation\+AxisX@{Rotation\+AxisX}}
+\index{Rotation\+AxisX@{Rotation\+AxisX}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+X()}{RotationAxisX()}}
+{\footnotesize\ttfamily void Axis\+::\+Rotation\+AxisX (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+X軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 92 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_acb5217738982de2c3695ef0802b14a6c}\label{class_axis_acb5217738982de2c3695ef0802b14a6c}} 
+\index{Axis@{Axis}!Rotation\+AxisY@{Rotation\+AxisY}}
+\index{Rotation\+AxisY@{Rotation\+AxisY}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Y()}{RotationAxisY()}}
+{\footnotesize\ttfamily void Axis\+::\+Rotation\+AxisY (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+Y軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 102 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a1a0571e9a3e26843be14ff62f08351e3}\label{class_axis_a1a0571e9a3e26843be14ff62f08351e3}} 
+\index{Axis@{Axis}!Rotation\+AxisZ@{Rotation\+AxisZ}}
+\index{Rotation\+AxisZ@{Rotation\+AxisZ}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Z()}{RotationAxisZ()}}
+{\footnotesize\ttfamily void Axis\+::\+Rotation\+AxisZ (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+Z軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 112 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a3fd6433b4949d4e826d51c1b3a812771}\label{class_axis_a3fd6433b4949d4e826d51c1b3a812771}} 
+\index{Axis@{Axis}!Rotation\+Matrix@{Rotation\+Matrix}}
+\index{Rotation\+Matrix@{Rotation\+Matrix}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{Rotation\+Matrix()}{RotationMatrix()}}
+{\footnotesize\ttfamily void Axis\+::\+Rotation\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$}]{matrix }\end{DoxyParamCaption})}
+
+
+
+行列回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em rotation\+\_\+matrix} & 行列 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 159 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a0c12edd6d56e298b41b0a20ef2cacceb}\label{class_axis_a0c12edd6d56e298b41b0a20ef2cacceb}} 
+\index{Axis@{Axis}!Rotation\+Quaternion@{Rotation\+Quaternion}}
+\index{Rotation\+Quaternion@{Rotation\+Quaternion}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{Rotation\+Quaternion()}{RotationQuaternion()}}
+{\footnotesize\ttfamily void Axis\+::\+Rotation\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$}]{quaternion }\end{DoxyParamCaption})}
+
+
+
+クォータニオン回転回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em quaternion} & クォータニオン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 169 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_af37757c4c30c1a9d0e111a2d954bf734}\label{class_axis_af37757c4c30c1a9d0e111a2d954bf734}} 
+\index{Axis@{Axis}!set\+Forward@{set\+Forward}}
+\index{set\+Forward@{set\+Forward}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{set\+Forward()}{setForward()}}
+{\footnotesize\ttfamily void Axis\+::set\+Forward (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{value }\end{DoxyParamCaption})}
+
+
+
+前ベクトル設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 前ベクトル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Axis.\+cpp の 36 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_axis_a3360259f8662e72e5d86405647dc0188}\label{class_axis_a3360259f8662e72e5d86405647dc0188}} 
+\index{Axis@{Axis}!D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD}{DEFAULT\_FORWARD}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Axis\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+既定前ベクトル 
+
+
+
+ Axis.\+h の 23 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a7588c9e81446f5b2c69af24a11763309}\label{class_axis_a7588c9e81446f5b2c69af24a11763309}} 
+\index{Axis@{Axis}!default\+\_\+forward\+\_\+@{default\+\_\+forward\+\_\+}}
+\index{default\+\_\+forward\+\_\+@{default\+\_\+forward\+\_\+}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{default\+\_\+forward\+\_\+}{default\_forward\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Axis\+::default\+\_\+forward\+\_\+ = \mbox{\hyperlink{class_axis_a3360259f8662e72e5d86405647dc0188}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+既定前ベクトル 
+
+
+
+ Axis.\+h の 33 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a12c07eb8804a096a9c72d8f6d4abf6f7}\label{class_axis_a12c07eb8804a096a9c72d8f6d4abf6f7}} 
+\index{Axis@{Axis}!D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT}{DEFAULT\_RIGHT}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Axis\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+既定右ベクトル 
+
+
+
+ Axis.\+h の 25 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a30aa135ef84dba206ab95d28e1ad573b}\label{class_axis_a30aa135ef84dba206ab95d28e1ad573b}} 
+\index{Axis@{Axis}!default\+\_\+right\+\_\+@{default\+\_\+right\+\_\+}}
+\index{default\+\_\+right\+\_\+@{default\+\_\+right\+\_\+}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{default\+\_\+right\+\_\+}{default\_right\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Axis\+::default\+\_\+right\+\_\+ = \mbox{\hyperlink{class_axis_a12c07eb8804a096a9c72d8f6d4abf6f7}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+既定右ベクトル 
+
+
+
+ Axis.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_afe3787d2e4c4affc0c4ab43a5f52891e}\label{class_axis_afe3787d2e4c4affc0c4ab43a5f52891e}} 
+\index{Axis@{Axis}!D\+E\+F\+A\+U\+L\+T\+\_\+\+UP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP}{DEFAULT\_UP}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Axis\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+UP\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+既定上ベクトル 
+
+
+
+ Axis.\+h の 24 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a50d5dc8e7cc5443421948ae81676360f}\label{class_axis_a50d5dc8e7cc5443421948ae81676360f}} 
+\index{Axis@{Axis}!default\+\_\+up\+\_\+@{default\+\_\+up\+\_\+}}
+\index{default\+\_\+up\+\_\+@{default\+\_\+up\+\_\+}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{default\+\_\+up\+\_\+}{default\_up\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Axis\+::default\+\_\+up\+\_\+ = \mbox{\hyperlink{class_axis_afe3787d2e4c4affc0c4ab43a5f52891e}{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+既定上ベクトル 
+
+
+
+ Axis.\+h の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a9595934289a148d6acbbe65614669115}\label{class_axis_a9595934289a148d6acbbe65614669115}} 
+\index{Axis@{Axis}!forward\+\_\+@{forward\+\_\+}}
+\index{forward\+\_\+@{forward\+\_\+}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{forward\+\_\+}{forward\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Axis\+::forward\+\_\+ = \mbox{\hyperlink{class_axis_a3360259f8662e72e5d86405647dc0188}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+O\+R\+W\+A\+RD}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+前ベクトル 
+
+
+
+ Axis.\+h の 32 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a10577439f2638a389cc0f7d4f0a8dac8}\label{class_axis_a10577439f2638a389cc0f7d4f0a8dac8}} 
+\index{Axis@{Axis}!right\+\_\+@{right\+\_\+}}
+\index{right\+\_\+@{right\+\_\+}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{right\+\_\+}{right\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Axis\+::right\+\_\+ = \mbox{\hyperlink{class_axis_a12c07eb8804a096a9c72d8f6d4abf6f7}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+G\+HT}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+右ベクトル 
+
+
+
+ Axis.\+h の 36 行目に定義があります。
+
+\mbox{\Hypertarget{class_axis_a7a09c9a41bd3576b12a7564e6aad7cb6}\label{class_axis_a7a09c9a41bd3576b12a7564e6aad7cb6}} 
+\index{Axis@{Axis}!up\+\_\+@{up\+\_\+}}
+\index{up\+\_\+@{up\+\_\+}!Axis@{Axis}}
+\subsubsection{\texorpdfstring{up\+\_\+}{up\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Axis\+::up\+\_\+ = \mbox{\hyperlink{class_axis_afe3787d2e4c4affc0c4ab43a5f52891e}{D\+E\+F\+A\+U\+L\+T\+\_\+\+UP}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+上ベクトル 
+
+
+
+ Axis.\+h の 34 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_axis_8h}{Axis.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\+Source/\mbox{\hyperlink{_axis_8cpp}{Axis.\+cpp}}\end{DoxyCompactItemize}

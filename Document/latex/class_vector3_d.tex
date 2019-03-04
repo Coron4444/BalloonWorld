@@ -2,74 +2,132 @@
 \label{class_vector3_d}\index{Vector3D@{Vector3D}}
 
 
+3\+Dベクトル\+Class  
+
+
+
+
 {\ttfamily \#include $<$Vector3\+D.\+h$>$}
 
 
 
-Vector3D の継承関係図\nopagebreak
+Vector3D 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=137pt]{class_vector3_d__inherit__graph}
+\includegraphics[width=137pt]{class_vector3_d__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
+float \mbox{\hyperlink{class_vector3_d_a1c2679622aef3b49ed30857ca3eda472}{getX}} () const
+\begin{DoxyCompactList}\small\item\em X成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vector3_d_a1d0270486894c651e920dfa62dc9259a}{setX}} (float value)
+\begin{DoxyCompactList}\small\item\em X成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vector3_d_a1568588ea6695cb2a5680b156f45f961}{getY}} () const
+\begin{DoxyCompactList}\small\item\em Y成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vector3_d_a94311183867a11fc8b7c6fc6a1d100a9}{setY}} (float value)
+\begin{DoxyCompactList}\small\item\em Y成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vector3_d_ab5f2c9a3a82269a8797d2fea70602ede}{getZ}} () const
+\begin{DoxyCompactList}\small\item\em Z成分取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vector3_d_a33803684829d7be6b3fb746e4b530feb}{setZ}} (float value)
+\begin{DoxyCompactList}\small\item\em Z成分設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vector3_d_a36067a5027567b47c11eae8f1fc5be82}{get\+SquareX}} () const
+\begin{DoxyCompactList}\small\item\em X成分の2乗取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vector3_d_a367f48b718d547de44789f1bedfa57a5}{get\+SquareY}} () const
+\begin{DoxyCompactList}\small\item\em Y成分の2乗取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vector3_d_ae38a3a196d197225be9a53110e4210ea}{get\+SquareZ}} () const
+\begin{DoxyCompactList}\small\item\em Z成分の2乗取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vector3_d_a21323e4bb404b4fe11528b574d44c3d4}{get\+Length}} () const
+\begin{DoxyCompactList}\small\item\em 長さ取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vector3_d_ab125e8573d80809abed3dba11c5b520b}{get\+Length\+Square}} () const
+\begin{DoxyCompactList}\small\item\em 長さの2乗取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vector3_d_a83f6e201a88329e7d4e966045ce4c535}{get\+LengthX}} () const
+\begin{DoxyCompactList}\small\item\em Xの長さ取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vector3_d_a0f475f8ffd361c5571bc57cb0c72a551}{get\+LengthY}} () const
+\begin{DoxyCompactList}\small\item\em Yの長さ取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vector3_d_a534136a09ed7f995ae559687b12f38a1}{get\+LengthZ}} () const
+\begin{DoxyCompactList}\small\item\em Zの長さ取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vector3_d_a59f0095984eee6b0cdb72f1da7647a57}{get\+Length\+XY}} () const
+\begin{DoxyCompactList}\small\item\em X\+Yの長さ取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vector3_d_ab4884482e69fd58473794e1c260f93e8}{get\+Length\+XZ}} () const
+\begin{DoxyCompactList}\small\item\em X\+Zの長さ取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vector3_d_a2fdf90670c71d3efbe0b9f19dabb83eb}{get\+Length\+YZ}} () const
+\begin{DoxyCompactList}\small\item\em Y\+Zの長さ取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_vector3_d_abe8e87481ed14469de6aae3dbfa0953e}{operator$<$}} (const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \&vector) const
+\begin{DoxyCompactList}\small\item\em $<$演算子 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_vector3_d_a06de9e8940880c4241e05533a7ad0db9}{operator$>$}} (const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \&vector) const
+\begin{DoxyCompactList}\small\item\em $>$演算子 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_vector3_d_ada60cd10b049b046da1254b83a30f133}{operator$<$=}} (const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \&vector) const
+\begin{DoxyCompactList}\small\item\em $<$=演算子 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_vector3_d_a74d53debf36f302abf4d28a9300dae32}{operator$>$=}} (const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \&vector) const
+\begin{DoxyCompactList}\small\item\em $>$=演算子 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d_a0b11a8d75da427b27443d8a94d0d296c}{Vector3D}} ()
-\item 
-\mbox{\hyperlink{class_vector3_d_a8021647d8191d446485dc153e49809b2}{Vector3D}} (const float $\ast$num)
-\item 
+\begin{DoxyCompactList}\small\item\em コンストラクタ関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d_a0e9cf75fc9744dba85c6936a7a5ab791}{Vector3D}} (const float $\ast$value)
+\begin{DoxyCompactList}\small\item\em 単一floatコンストラクタ関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d_a62a6c07e15fa66cb220fb3e511582683}{Vector3D}} (const \mbox{\hyperlink{_vector3_d_8h_afe61185afc2bf3856c12613d99eede01}{Float16}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 単一float16コンストラクタ関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d_abe8fbafd6d5d8b44f1c79fe3f135cc71}{Vector3D}} (float value\+\_\+x, float value\+\_\+y, float value\+\_\+z)
+\begin{DoxyCompactList}\small\item\em 複数floatコンストラクタ関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d_a446893e1b89f6e60ea16cf30ef0a3afc}{Vector3D}} (const \mbox{\hyperlink{_vector3_d_8h_a1f0b707f0d418d6cc74484019e41e55d}{Vec}} \&vector)
-\item 
-\mbox{\hyperlink{class_vector3_d_af5bdf4c49bc5804bb8aaa56f08007553}{Vector3D}} (const \mbox{\hyperlink{_vector3_d_8h_afe61185afc2bf3856c12613d99eede01}{Float16}} $\ast$num)
-\item 
-\mbox{\hyperlink{class_vector3_d_a01f2964e8b01e8e146eb4eca9ad36d2b}{Vector3D}} (float num\+\_\+x, float num\+\_\+y, float num\+\_\+z)
-\item 
+\begin{DoxyCompactList}\small\item\em ベクターコンストラクタ関数 \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_vector3_d_ae4fde5759270bf5bcf615f12f0823a8c}{$\sim$\+Vector3D}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vector3_d_a5a150ccb85382a0926661ac17e080525}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_a43de085342dac1c57c5f66f0d6e6ef66}{Change\+Normalize}} ()
+\begin{DoxyCompactList}\small\item\em 正規化関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_a3972641a984580d5dc12d219ab6c1ffe}{Change\+Any\+Length}} (float length)
+\begin{DoxyCompactList}\small\item\em 任意の長さに変更関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_a3a28833aece711a085634cd98e5c6d74}{Change\+Any\+LengthX}} (float length)
+\begin{DoxyCompactList}\small\item\em Xを任意の長さに変更関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_a2444fe3402cb2b869bb17ec15559f036}{Change\+Any\+LengthY}} (float length)
+\begin{DoxyCompactList}\small\item\em Yを任意の長さに変更関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_aeb984fa3378a2f19e98e24e042d9533c}{Change\+Any\+LengthZ}} (float length)
+\begin{DoxyCompactList}\small\item\em Zを任意の長さに変更関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_a15f0c8fd120fe271e2b87115015e96f8}{Change\+Any\+Length\+XY}} (float length)
+\begin{DoxyCompactList}\small\item\em X\+Yを任意の長さに変更関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_a99c8f6195ee59955b562cb746520a6b4}{Change\+Any\+Length\+XZ}} (float length)
+\begin{DoxyCompactList}\small\item\em X\+Zを任意の長さに変更関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_aa008639776dce3f6aed3f88fb2d67ded}{Change\+Any\+Length\+YZ}} (float length)
+\begin{DoxyCompactList}\small\item\em Y\+Zを任意の長さに変更関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_a8623201898abbb7816824282f4dac6db}{Rotation\+AxisX}} (float radian)
+\begin{DoxyCompactList}\small\item\em X軸回転関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_a437846b683f4e8fab1ad16d1a96f4944}{Rotation\+AxisY}} (float radian)
+\begin{DoxyCompactList}\small\item\em Y軸回転関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_a34daa7e7dfbf578c45997f2cb06a86ec}{Rotation\+AxisZ}} (float radian)
+\begin{DoxyCompactList}\small\item\em Z軸回転関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_ad20038581979a29c282793023057aef7}{Rotation\+Axis\+Any}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} axis, float radian)
+\begin{DoxyCompactList}\small\item\em 任意軸回転関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_a8c48b70ba67f7ad84fb04d3b84836e77}{Rotation\+Matrix}} (\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$matrix)
+\begin{DoxyCompactList}\small\item\em 行列回転関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_vector3_d_ab81a157d73d4a3274c8191834b2bfb45}{Rotation\+Quaternion}} (\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$quaternion)
+\begin{DoxyCompactList}\small\item\em クォータニオン回転回転関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_vector3_d_a9cfe261f14b3b2e6704c5649058d3ecd}{Reset\+Vector}} ()
-\item 
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_vector3_d_ae55e42c07bdfcc6c11bcbc6bf5e27808}{Create\+Normalize}} ()
-\item 
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_vector3_d_a030384bdfe25863cd4be77fa73052cf1}{Any\+Length\+Vector}} (const float length)
-\item 
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_vector3_d_a0b058c605bbea7ea97bd96efa3c0bc26}{Rotation\+Vector\+\_\+\+AxisX}} (const float radian)
-\item 
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_vector3_d_a0a8556c9bd5caef8592174a8c095080f}{Rotation\+Vector\+\_\+\+AxisY}} (const float radian)
-\item 
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_vector3_d_ac893f738dde87e5981dcff5d5515ede6}{Rotation\+Vector\+\_\+\+AxisZ}} (const float radian)
-\item 
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_vector3_d_aadbe9f3e0ee3298c59cf123b592140bd}{Rotation\+Vector\+\_\+\+Axis\+Free}} (const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} axis\+\_\+vector, const float radian)
-\item 
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_vector3_d_aa368719da4c1ac4e8a727edbd09ec390}{Rotation\+Vector\+\_\+\+Matrix}} (\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$rotation\+\_\+matrix)
-\item 
-float \mbox{\hyperlink{class_vector3_d_aed4c9936346cfbcb7238bd64ae1601d3}{Create\+Vector\+Dot}} (const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} vector) const
-\item 
-\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_vector3_d_accbd42535a385947ac5380084f2c688c}{Create\+Vector\+Cross}} (const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} vector) const
-\item 
-float \mbox{\hyperlink{class_vector3_d_a77ee5fc836fd4024bd8bdae603b1677e}{Get\+SquareX}} () const
-\item 
-float \mbox{\hyperlink{class_vector3_d_a151d4791ff98d3f99d038c1dc372e0fc}{Get\+SquareY}} () const
-\item 
-float \mbox{\hyperlink{class_vector3_d_a8ede9efe34b69e067153688aea96574f}{Get\+SquareZ}} () const
-\item 
-float \mbox{\hyperlink{class_vector3_d_a8b10872079076291bbbc81b7d48aa514}{Get\+Length}} () const
-\item 
-float \mbox{\hyperlink{class_vector3_d_a0d486a19d3f7515e2f147c78bb73ce07}{Get\+Length\+Square}} () const
-\item 
-float \mbox{\hyperlink{class_vector3_d_abaf2a0ccb78fdf2c3a393959e9c29708}{Get\+Length\+\_\+\+XY}} () const
-\item 
-float \mbox{\hyperlink{class_vector3_d_ae61982f6eb062257652f624ab1801089}{Get\+Length\+\_\+\+XZ}} () const
-\item 
-float \mbox{\hyperlink{class_vector3_d_a183854c5c7ea8bf32f752a02cf3fc3ce}{Get\+Length\+\_\+\+YZ}} () const
-\end{DoxyCompactItemize}
+static float \mbox{\hyperlink{class_vector3_d_ae4985d83fb38247a24ba42a82a3e7def}{Create\+Dot}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$vector0, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$vector1)
+\begin{DoxyCompactList}\small\item\em 内積生成関数 \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_vector3_d_ac83144257d920f85a5634b5087219b61}{Create\+Dot\+Point3}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$point0, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$point1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$point2)
+\begin{DoxyCompactList}\small\item\em 3点から内積生成関数 \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_vector3_d_a7520b0efa372a10ab9a5a5f312bf999e}{Create\+Cross}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$vector0, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$vector1)
+\begin{DoxyCompactList}\small\item\em 外積生成関数 \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_vector3_d_aa7ba79be5ad8d9d0b94de9d94e55c053}{Create\+Cross\+Point3}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$point0, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$point1, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$point2)
+\begin{DoxyCompactList}\small\item\em 3点から外積生成関数 \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_vector3_d_ac2e3a4f5dbef0f56fbb6be70109163e5}{Create\+Angle\+Radian}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$vector0, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$vector1)
+\begin{DoxyCompactList}\small\item\em ラジアン角度生成関数 \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_vector3_d_acc5d9faf504a6ce741276d0d6e6d44a5}{Create\+Angle\+Degree}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$vector0, \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$vector1)
+\begin{DoxyCompactList}\small\item\em デグリー角度生成関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
+3\+Dベクトル\+Class 
 
+3\+Dのベクトル\+Class 
 
- Vector3\+D.\+h の 49 行目に定義があります。
+ Vector3\+D.\+h の 38 行目に定義があります。
 
 
 
@@ -78,247 +136,1147 @@ float \mbox{\hyperlink{class_vector3_d_a183854c5c7ea8bf32f752a02cf3fc3ce}{Get\+L
 \index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
 \index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
 \subsubsection{\texorpdfstring{Vector3\+D()}{Vector3D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
-{\footnotesize\ttfamily Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Vector3\+D.\+h の 121 行目に定義があります。
+コンストラクタ関数 
 
-\mbox{\Hypertarget{class_vector3_d_a8021647d8191d446485dc153e49809b2}\label{class_vector3_d_a8021647d8191d446485dc153e49809b2}} 
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Vector3\+D.\+cpp の 242 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a0e9cf75fc9744dba85c6936a7a5ab791}\label{class_vector3_d_a0e9cf75fc9744dba85c6936a7a5ab791}} 
 \index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
 \index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
 \subsubsection{\texorpdfstring{Vector3\+D()}{Vector3D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
-{\footnotesize\ttfamily Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}\item[{const float $\ast$}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}\item[{const float $\ast$}]{value }\end{DoxyParamCaption})}
 
 
 
- Vector3\+D.\+h の 134 行目に定義があります。
+単一floatコンストラクタ関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 成分 \\
+\hline
+\end{DoxyParams}
+
+
+ Vector3\+D.\+cpp の 249 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a62a6c07e15fa66cb220fb3e511582683}\label{class_vector3_d_a62a6c07e15fa66cb220fb3e511582683}} 
+\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
+\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Vector3\+D()}{Vector3D()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3_d_8h_afe61185afc2bf3856c12613d99eede01}{Float16}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+単一float16コンストラクタ関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 成分 \\
+\hline
+\end{DoxyParams}
+
+
+ Vector3\+D.\+cpp の 256 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_abe8fbafd6d5d8b44f1c79fe3f135cc71}\label{class_vector3_d_abe8fbafd6d5d8b44f1c79fe3f135cc71}} 
+\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
+\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Vector3\+D()}{Vector3D()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}\item[{float}]{value\+\_\+x,  }\item[{float}]{value\+\_\+y,  }\item[{float}]{value\+\_\+z }\end{DoxyParamCaption})}
+
+
+
+複数floatコンストラクタ関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value\+\_\+x} & X成分 \\
+\hline
+{\em value\+\_\+y} & Y成分 \\
+\hline
+{\em value\+\_\+z} & Z成分 \\
+\hline
+\end{DoxyParams}
+
+
+ Vector3\+D.\+cpp の 263 行目に定義があります。
 
 \mbox{\Hypertarget{class_vector3_d_a446893e1b89f6e60ea16cf30ef0a3afc}\label{class_vector3_d_a446893e1b89f6e60ea16cf30ef0a3afc}} 
 \index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
 \index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Vector3\+D()}{Vector3D()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
-{\footnotesize\ttfamily Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3_d_8h_a1f0b707f0d418d6cc74484019e41e55d}{Vec}} \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- Vector3\+D.\+h の 147 行目に定義があります。
-
-\mbox{\Hypertarget{class_vector3_d_af5bdf4c49bc5804bb8aaa56f08007553}\label{class_vector3_d_af5bdf4c49bc5804bb8aaa56f08007553}} 
-\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
-\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Vector3\+D()}{Vector3D()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
-{\footnotesize\ttfamily Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3_d_8h_afe61185afc2bf3856c12613d99eede01}{Float16}} $\ast$}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- Vector3\+D.\+h の 160 行目に定義があります。
-
-\mbox{\Hypertarget{class_vector3_d_a01f2964e8b01e8e146eb4eca9ad36d2b}\label{class_vector3_d_a01f2964e8b01e8e146eb4eca9ad36d2b}} 
-\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
-\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
 \subsubsection{\texorpdfstring{Vector3\+D()}{Vector3D()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
-{\footnotesize\ttfamily Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}\item[{float}]{num\+\_\+x,  }\item[{float}]{num\+\_\+y,  }\item[{float}]{num\+\_\+z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3_d_8h_a1f0b707f0d418d6cc74484019e41e55d}{Vec}} \&}]{vector }\end{DoxyParamCaption})}
 
 
 
- Vector3\+D.\+h の 173 行目に定義があります。
+ベクターコンストラクタ関数 
+
+
+\begin{DoxyParams}{引数}
+{\em vector} & ベクター \\
+\hline
+\end{DoxyParams}
+
+
+ Vector3\+D.\+cpp の 270 行目に定義があります。
 
 \mbox{\Hypertarget{class_vector3_d_ae4fde5759270bf5bcf615f12f0823a8c}\label{class_vector3_d_ae4fde5759270bf5bcf615f12f0823a8c}} 
 \index{Vector3D@{Vector3D}!````~Vector3D@{$\sim$\+Vector3D}}
 \index{````~Vector3D@{$\sim$\+Vector3D}!Vector3D@{Vector3D}}
 \subsubsection{\texorpdfstring{$\sim$\+Vector3\+D()}{~Vector3D()}}
-{\footnotesize\ttfamily Vector3\+D\+::$\sim$\+Vector3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily Vector3\+D\+::$\sim$\+Vector3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
- Vector3\+D.\+h の 186 行目に定義があります。
+デストラクタ関数 
+
+
+
+ Vector3\+D.\+cpp の 277 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_vector3_d_a030384bdfe25863cd4be77fa73052cf1}\label{class_vector3_d_a030384bdfe25863cd4be77fa73052cf1}} 
-\index{Vector3D@{Vector3D}!Any\+Length\+Vector@{Any\+Length\+Vector}}
-\index{Any\+Length\+Vector@{Any\+Length\+Vector}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Any\+Length\+Vector()}{AnyLengthVector()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} Vector3\+D\+::\+Any\+Length\+Vector (\begin{DoxyParamCaption}\item[{const float}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_vector3_d_a3972641a984580d5dc12d219ab6c1ffe}\label{class_vector3_d_a3972641a984580d5dc12d219ab6c1ffe}} 
+\index{Vector3D@{Vector3D}!Change\+Any\+Length@{Change\+Any\+Length}}
+\index{Change\+Any\+Length@{Change\+Any\+Length}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Change\+Any\+Length()}{ChangeAnyLength()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Change\+Any\+Length (\begin{DoxyParamCaption}\item[{float}]{length }\end{DoxyParamCaption})}
 
 
 
- Vector3\+D.\+h の 226 行目に定義があります。
+任意の長さに変更関数 
 
-\mbox{\Hypertarget{class_vector3_d_ae55e42c07bdfcc6c11bcbc6bf5e27808}\label{class_vector3_d_ae55e42c07bdfcc6c11bcbc6bf5e27808}} 
-\index{Vector3D@{Vector3D}!Create\+Normalize@{Create\+Normalize}}
-\index{Create\+Normalize@{Create\+Normalize}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Create\+Normalize()}{CreateNormalize()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} Vector3\+D\+::\+Create\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+\begin{DoxyParams}{引数}
+{\em length} & 長さ \\
+\hline
+\end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
 
- Vector3\+D.\+h の 211 行目に定義があります。
 
-\mbox{\Hypertarget{class_vector3_d_accbd42535a385947ac5380084f2c688c}\label{class_vector3_d_accbd42535a385947ac5380084f2c688c}} 
-\index{Vector3D@{Vector3D}!Create\+Vector\+Cross@{Create\+Vector\+Cross}}
-\index{Create\+Vector\+Cross@{Create\+Vector\+Cross}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Create\+Vector\+Cross()}{CreateVectorCross()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} Vector3\+D\+::\+Create\+Vector\+Cross (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}}}]{vector }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+ Vector3\+D.\+cpp の 300 行目に定義があります。
 
+\mbox{\Hypertarget{class_vector3_d_a3a28833aece711a085634cd98e5c6d74}\label{class_vector3_d_a3a28833aece711a085634cd98e5c6d74}} 
+\index{Vector3D@{Vector3D}!Change\+Any\+LengthX@{Change\+Any\+LengthX}}
+\index{Change\+Any\+LengthX@{Change\+Any\+LengthX}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Change\+Any\+Length\+X()}{ChangeAnyLengthX()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Change\+Any\+LengthX (\begin{DoxyParamCaption}\item[{float}]{length }\end{DoxyParamCaption})}
 
 
- Vector3\+D.\+h の 348 行目に定義があります。
 
-\mbox{\Hypertarget{class_vector3_d_aed4c9936346cfbcb7238bd64ae1601d3}\label{class_vector3_d_aed4c9936346cfbcb7238bd64ae1601d3}} 
-\index{Vector3D@{Vector3D}!Create\+Vector\+Dot@{Create\+Vector\+Dot}}
-\index{Create\+Vector\+Dot@{Create\+Vector\+Dot}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Create\+Vector\+Dot()}{CreateVectorDot()}}
-{\footnotesize\ttfamily float Vector3\+D\+::\+Create\+Vector\+Dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}}}]{vector }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+Xを任意の長さに変更関数 
 
 
+\begin{DoxyParams}{引数}
+{\em length} & 長さ \\
+\hline
+\end{DoxyParams}
 
- Vector3\+D.\+h の 334 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\Hypertarget{class_vector3_d_a8b10872079076291bbbc81b7d48aa514}\label{class_vector3_d_a8b10872079076291bbbc81b7d48aa514}} 
-\index{Vector3D@{Vector3D}!Get\+Length@{Get\+Length}}
-\index{Get\+Length@{Get\+Length}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Get\+Length()}{GetLength()}}
-{\footnotesize\ttfamily float Vector3\+D\+::\+Get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+ Vector3\+D.\+cpp の 309 行目に定義があります。
 
+\mbox{\Hypertarget{class_vector3_d_a15f0c8fd120fe271e2b87115015e96f8}\label{class_vector3_d_a15f0c8fd120fe271e2b87115015e96f8}} 
+\index{Vector3D@{Vector3D}!Change\+Any\+Length\+XY@{Change\+Any\+Length\+XY}}
+\index{Change\+Any\+Length\+XY@{Change\+Any\+Length\+XY}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Change\+Any\+Length\+X\+Y()}{ChangeAnyLengthXY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Change\+Any\+Length\+XY (\begin{DoxyParamCaption}\item[{float}]{length }\end{DoxyParamCaption})}
 
- Vector3\+D.\+h の 366 行目に定義があります。
 
-\mbox{\Hypertarget{class_vector3_d_abaf2a0ccb78fdf2c3a393959e9c29708}\label{class_vector3_d_abaf2a0ccb78fdf2c3a393959e9c29708}} 
-\index{Vector3D@{Vector3D}!Get\+Length\+\_\+\+XY@{Get\+Length\+\_\+\+XY}}
-\index{Get\+Length\+\_\+\+XY@{Get\+Length\+\_\+\+XY}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Get\+Length\+\_\+\+X\+Y()}{GetLength\_XY()}}
-{\footnotesize\ttfamily float Vector3\+D\+::\+Get\+Length\+\_\+\+XY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+X\+Yを任意の長さに変更関数 
 
 
- Vector3\+D.\+h の 392 行目に定義があります。
+\begin{DoxyParams}{引数}
+{\em length} & 長さ \\
+\hline
+\end{DoxyParams}
 
-\mbox{\Hypertarget{class_vector3_d_ae61982f6eb062257652f624ab1801089}\label{class_vector3_d_ae61982f6eb062257652f624ab1801089}} 
-\index{Vector3D@{Vector3D}!Get\+Length\+\_\+\+XZ@{Get\+Length\+\_\+\+XZ}}
-\index{Get\+Length\+\_\+\+XZ@{Get\+Length\+\_\+\+XZ}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Get\+Length\+\_\+\+X\+Z()}{GetLength\_XZ()}}
-{\footnotesize\ttfamily float Vector3\+D\+::\+Get\+Length\+\_\+\+XZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
 
 
+ Vector3\+D.\+cpp の 342 行目に定義があります。
 
- Vector3\+D.\+h の 407 行目に定義があります。
+\mbox{\Hypertarget{class_vector3_d_a99c8f6195ee59955b562cb746520a6b4}\label{class_vector3_d_a99c8f6195ee59955b562cb746520a6b4}} 
+\index{Vector3D@{Vector3D}!Change\+Any\+Length\+XZ@{Change\+Any\+Length\+XZ}}
+\index{Change\+Any\+Length\+XZ@{Change\+Any\+Length\+XZ}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Change\+Any\+Length\+X\+Z()}{ChangeAnyLengthXZ()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Change\+Any\+Length\+XZ (\begin{DoxyParamCaption}\item[{float}]{length }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_vector3_d_a183854c5c7ea8bf32f752a02cf3fc3ce}\label{class_vector3_d_a183854c5c7ea8bf32f752a02cf3fc3ce}} 
-\index{Vector3D@{Vector3D}!Get\+Length\+\_\+\+YZ@{Get\+Length\+\_\+\+YZ}}
-\index{Get\+Length\+\_\+\+YZ@{Get\+Length\+\_\+\+YZ}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Get\+Length\+\_\+\+Y\+Z()}{GetLength\_YZ()}}
-{\footnotesize\ttfamily float Vector3\+D\+::\+Get\+Length\+\_\+\+YZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+X\+Zを任意の長さに変更関数 
 
- Vector3\+D.\+h の 422 行目に定義があります。
 
-\mbox{\Hypertarget{class_vector3_d_a0d486a19d3f7515e2f147c78bb73ce07}\label{class_vector3_d_a0d486a19d3f7515e2f147c78bb73ce07}} 
-\index{Vector3D@{Vector3D}!Get\+Length\+Square@{Get\+Length\+Square}}
-\index{Get\+Length\+Square@{Get\+Length\+Square}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Get\+Length\+Square()}{GetLengthSquare()}}
-{\footnotesize\ttfamily float Vector3\+D\+::\+Get\+Length\+Square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyParams}{引数}
+{\em length} & 長さ \\
+\hline
+\end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
 
 
- Vector3\+D.\+h の 379 行目に定義があります。
+ Vector3\+D.\+cpp の 354 行目に定義があります。
 
-\mbox{\Hypertarget{class_vector3_d_a77ee5fc836fd4024bd8bdae603b1677e}\label{class_vector3_d_a77ee5fc836fd4024bd8bdae603b1677e}} 
-\index{Vector3D@{Vector3D}!Get\+SquareX@{Get\+SquareX}}
-\index{Get\+SquareX@{Get\+SquareX}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Get\+Square\+X()}{GetSquareX()}}
-{\footnotesize\ttfamily float Vector3\+D\+::\+Get\+SquareX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_vector3_d_a2444fe3402cb2b869bb17ec15559f036}\label{class_vector3_d_a2444fe3402cb2b869bb17ec15559f036}} 
+\index{Vector3D@{Vector3D}!Change\+Any\+LengthY@{Change\+Any\+LengthY}}
+\index{Change\+Any\+LengthY@{Change\+Any\+LengthY}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Change\+Any\+Length\+Y()}{ChangeAnyLengthY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Change\+Any\+LengthY (\begin{DoxyParamCaption}\item[{float}]{length }\end{DoxyParamCaption})}
 
 
 
- Vector3\+D.\+h の 92 行目に定義があります。
+Yを任意の長さに変更関数 
 
-\mbox{\Hypertarget{class_vector3_d_a151d4791ff98d3f99d038c1dc372e0fc}\label{class_vector3_d_a151d4791ff98d3f99d038c1dc372e0fc}} 
-\index{Vector3D@{Vector3D}!Get\+SquareY@{Get\+SquareY}}
-\index{Get\+SquareY@{Get\+SquareY}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Get\+Square\+Y()}{GetSquareY()}}
-{\footnotesize\ttfamily float Vector3\+D\+::\+Get\+SquareY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+\begin{DoxyParams}{引数}
+{\em length} & 長さ \\
+\hline
+\end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
 
- Vector3\+D.\+h の 93 行目に定義があります。
 
-\mbox{\Hypertarget{class_vector3_d_a8ede9efe34b69e067153688aea96574f}\label{class_vector3_d_a8ede9efe34b69e067153688aea96574f}} 
-\index{Vector3D@{Vector3D}!Get\+SquareZ@{Get\+SquareZ}}
-\index{Get\+SquareZ@{Get\+SquareZ}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Get\+Square\+Z()}{GetSquareZ()}}
-{\footnotesize\ttfamily float Vector3\+D\+::\+Get\+SquareZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+ Vector3\+D.\+cpp の 320 行目に定義があります。
 
+\mbox{\Hypertarget{class_vector3_d_aa008639776dce3f6aed3f88fb2d67ded}\label{class_vector3_d_aa008639776dce3f6aed3f88fb2d67ded}} 
+\index{Vector3D@{Vector3D}!Change\+Any\+Length\+YZ@{Change\+Any\+Length\+YZ}}
+\index{Change\+Any\+Length\+YZ@{Change\+Any\+Length\+YZ}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Change\+Any\+Length\+Y\+Z()}{ChangeAnyLengthYZ()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Change\+Any\+Length\+YZ (\begin{DoxyParamCaption}\item[{float}]{length }\end{DoxyParamCaption})}
 
 
- Vector3\+D.\+h の 94 行目に定義があります。
 
-\mbox{\Hypertarget{class_vector3_d_a9cfe261f14b3b2e6704c5649058d3ecd}\label{class_vector3_d_a9cfe261f14b3b2e6704c5649058d3ecd}} 
-\index{Vector3D@{Vector3D}!Reset\+Vector@{Reset\+Vector}}
-\index{Reset\+Vector@{Reset\+Vector}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Reset\+Vector()}{ResetVector()}}
-{\footnotesize\ttfamily void Vector3\+D\+::\+Reset\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+Y\+Zを任意の長さに変更関数 
 
 
+\begin{DoxyParams}{引数}
+{\em length} & 長さ \\
+\hline
+\end{DoxyParams}
 
- Vector3\+D.\+h の 198 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\Hypertarget{class_vector3_d_aadbe9f3e0ee3298c59cf123b592140bd}\label{class_vector3_d_aadbe9f3e0ee3298c59cf123b592140bd}} 
-\index{Vector3D@{Vector3D}!Rotation\+Vector\+\_\+\+Axis\+Free@{Rotation\+Vector\+\_\+\+Axis\+Free}}
-\index{Rotation\+Vector\+\_\+\+Axis\+Free@{Rotation\+Vector\+\_\+\+Axis\+Free}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Rotation\+Vector\+\_\+\+Axis\+Free()}{RotationVector\_AxisFree()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} Vector3\+D\+::\+Rotation\+Vector\+\_\+\+Axis\+Free (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}}}]{axis\+\_\+vector,  }\item[{const float}]{radian }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+ Vector3\+D.\+cpp の 366 行目に定義があります。
 
+\mbox{\Hypertarget{class_vector3_d_aeb984fa3378a2f19e98e24e042d9533c}\label{class_vector3_d_aeb984fa3378a2f19e98e24e042d9533c}} 
+\index{Vector3D@{Vector3D}!Change\+Any\+LengthZ@{Change\+Any\+LengthZ}}
+\index{Change\+Any\+LengthZ@{Change\+Any\+LengthZ}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Change\+Any\+Length\+Z()}{ChangeAnyLengthZ()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Change\+Any\+LengthZ (\begin{DoxyParamCaption}\item[{float}]{length }\end{DoxyParamCaption})}
 
- Vector3\+D.\+h の 300 行目に定義があります。
 
-\mbox{\Hypertarget{class_vector3_d_a0b058c605bbea7ea97bd96efa3c0bc26}\label{class_vector3_d_a0b058c605bbea7ea97bd96efa3c0bc26}} 
-\index{Vector3D@{Vector3D}!Rotation\+Vector\+\_\+\+AxisX@{Rotation\+Vector\+\_\+\+AxisX}}
-\index{Rotation\+Vector\+\_\+\+AxisX@{Rotation\+Vector\+\_\+\+AxisX}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Rotation\+Vector\+\_\+\+Axis\+X()}{RotationVector\_AxisX()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} Vector3\+D\+::\+Rotation\+Vector\+\_\+\+AxisX (\begin{DoxyParamCaption}\item[{const float}]{radian }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Zを任意の長さに変更関数 
 
 
- Vector3\+D.\+h の 243 行目に定義があります。
+\begin{DoxyParams}{引数}
+{\em length} & 長さ \\
+\hline
+\end{DoxyParams}
 
-\mbox{\Hypertarget{class_vector3_d_a0a8556c9bd5caef8592174a8c095080f}\label{class_vector3_d_a0a8556c9bd5caef8592174a8c095080f}} 
-\index{Vector3D@{Vector3D}!Rotation\+Vector\+\_\+\+AxisY@{Rotation\+Vector\+\_\+\+AxisY}}
-\index{Rotation\+Vector\+\_\+\+AxisY@{Rotation\+Vector\+\_\+\+AxisY}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Rotation\+Vector\+\_\+\+Axis\+Y()}{RotationVector\_AxisY()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} Vector3\+D\+::\+Rotation\+Vector\+\_\+\+AxisY (\begin{DoxyParamCaption}\item[{const float}]{radian }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
 
 
+ Vector3\+D.\+cpp の 331 行目に定義があります。
 
- Vector3\+D.\+h の 262 行目に定義があります。
+\mbox{\Hypertarget{class_vector3_d_a43de085342dac1c57c5f66f0d6e6ef66}\label{class_vector3_d_a43de085342dac1c57c5f66f0d6e6ef66}} 
+\index{Vector3D@{Vector3D}!Change\+Normalize@{Change\+Normalize}}
+\index{Change\+Normalize@{Change\+Normalize}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Change\+Normalize()}{ChangeNormalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Change\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_vector3_d_ac893f738dde87e5981dcff5d5515ede6}\label{class_vector3_d_ac893f738dde87e5981dcff5d5515ede6}} 
-\index{Vector3D@{Vector3D}!Rotation\+Vector\+\_\+\+AxisZ@{Rotation\+Vector\+\_\+\+AxisZ}}
-\index{Rotation\+Vector\+\_\+\+AxisZ@{Rotation\+Vector\+\_\+\+AxisZ}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Rotation\+Vector\+\_\+\+Axis\+Z()}{RotationVector\_AxisZ()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} Vector3\+D\+::\+Rotation\+Vector\+\_\+\+AxisZ (\begin{DoxyParamCaption}\item[{const float}]{radian }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+正規化関数 
 
- Vector3\+D.\+h の 281 行目に定義があります。
 
-\mbox{\Hypertarget{class_vector3_d_aa368719da4c1ac4e8a727edbd09ec390}\label{class_vector3_d_aa368719da4c1ac4e8a727edbd09ec390}} 
-\index{Vector3D@{Vector3D}!Rotation\+Vector\+\_\+\+Matrix@{Rotation\+Vector\+\_\+\+Matrix}}
-\index{Rotation\+Vector\+\_\+\+Matrix@{Rotation\+Vector\+\_\+\+Matrix}!Vector3D@{Vector3D}}
-\subsubsection{\texorpdfstring{Rotation\+Vector\+\_\+\+Matrix()}{RotationVector\_Matrix()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} Vector3\+D\+::\+Rotation\+Vector\+\_\+\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$}]{rotation\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
 
 
- Vector3\+D.\+h の 319 行目に定義があります。
+ Vector3\+D.\+cpp の 292 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_acc5d9faf504a6ce741276d0d6e6d44a5}\label{class_vector3_d_acc5d9faf504a6ce741276d0d6e6d44a5}} 
+\index{Vector3D@{Vector3D}!Create\+Angle\+Degree@{Create\+Angle\+Degree}}
+\index{Create\+Angle\+Degree@{Create\+Angle\+Degree}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Create\+Angle\+Degree()}{CreateAngleDegree()}}
+{\footnotesize\ttfamily float Vector3\+D\+::\+Create\+Angle\+Degree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{vector0,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{vector1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+デグリー角度生成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$vector0} & ベクトル0 \\
+\hline
+{\em $\ast$vector1} & ベクトル1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & デグリー角度 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 61 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_ac2e3a4f5dbef0f56fbb6be70109163e5}\label{class_vector3_d_ac2e3a4f5dbef0f56fbb6be70109163e5}} 
+\index{Vector3D@{Vector3D}!Create\+Angle\+Radian@{Create\+Angle\+Radian}}
+\index{Create\+Angle\+Radian@{Create\+Angle\+Radian}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Create\+Angle\+Radian()}{CreateAngleRadian()}}
+{\footnotesize\ttfamily float Vector3\+D\+::\+Create\+Angle\+Radian (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{vector0,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{vector1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ラジアン角度生成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$vector0} & ベクトル0 \\
+\hline
+{\em $\ast$vector1} & ベクトル1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & ラジアン角度 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 54 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a7520b0efa372a10ab9a5a5f312bf999e}\label{class_vector3_d_a7520b0efa372a10ab9a5a5f312bf999e}} 
+\index{Vector3D@{Vector3D}!Create\+Cross@{Create\+Cross}}
+\index{Create\+Cross@{Create\+Cross}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Create\+Cross()}{CreateCross()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Vector3\+D\+::\+Create\+Cross (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{vector0,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{vector1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+外積生成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$vector0} & ベクトル0 \\
+\hline
+{\em $\ast$vector1} & ベクトル1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 外積値 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 36 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_aa7ba79be5ad8d9d0b94de9d94e55c053}\label{class_vector3_d_aa7ba79be5ad8d9d0b94de9d94e55c053}} 
+\index{Vector3D@{Vector3D}!Create\+Cross\+Point3@{Create\+Cross\+Point3}}
+\index{Create\+Cross\+Point3@{Create\+Cross\+Point3}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Create\+Cross\+Point3()}{CreateCrossPoint3()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Vector3\+D\+::\+Create\+Cross\+Point3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{point0,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{point1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{point2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+3点から外積生成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$point0} & 点0 \\
+\hline
+{\em $\ast$point1} & 点1 \\
+\hline
+{\em $\ast$point2} & 点2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_vector3_d}{Vector3D}}} & 外積値 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_ae4985d83fb38247a24ba42a82a3e7def}\label{class_vector3_d_ae4985d83fb38247a24ba42a82a3e7def}} 
+\index{Vector3D@{Vector3D}!Create\+Dot@{Create\+Dot}}
+\index{Create\+Dot@{Create\+Dot}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Create\+Dot()}{CreateDot()}}
+{\footnotesize\ttfamily float Vector3\+D\+::\+Create\+Dot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{vector0,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{vector1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+内積生成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$vector0} & ベクトル0 \\
+\hline
+{\em $\ast$vector1} & ベクトル1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 内積値 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 20 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_ac83144257d920f85a5634b5087219b61}\label{class_vector3_d_ac83144257d920f85a5634b5087219b61}} 
+\index{Vector3D@{Vector3D}!Create\+Dot\+Point3@{Create\+Dot\+Point3}}
+\index{Create\+Dot\+Point3@{Create\+Dot\+Point3}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Create\+Dot\+Point3()}{CreateDotPoint3()}}
+{\footnotesize\ttfamily float Vector3\+D\+::\+Create\+Dot\+Point3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{point0,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{point1,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$}]{point2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+3点から内積生成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$point0} & 点0 \\
+\hline
+{\em $\ast$point1} & 点1 \\
+\hline
+{\em $\ast$point2} & 点2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 内積値 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a21323e4bb404b4fe11528b574d44c3d4}\label{class_vector3_d_a21323e4bb404b4fe11528b574d44c3d4}} 
+\index{Vector3D@{Vector3D}!get\+Length@{get\+Length}}
+\index{get\+Length@{get\+Length}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+Length()}{getLength()}}
+{\footnotesize\ttfamily float Vector3\+D\+::get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+長さ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 長さ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 134 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_ab125e8573d80809abed3dba11c5b520b}\label{class_vector3_d_ab125e8573d80809abed3dba11c5b520b}} 
+\index{Vector3D@{Vector3D}!get\+Length\+Square@{get\+Length\+Square}}
+\index{get\+Length\+Square@{get\+Length\+Square}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+Length\+Square()}{getLengthSquare()}}
+{\footnotesize\ttfamily float Vector3\+D\+::get\+Length\+Square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+長さの2乗取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 長さの2乗 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 141 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a83f6e201a88329e7d4e966045ce4c535}\label{class_vector3_d_a83f6e201a88329e7d4e966045ce4c535}} 
+\index{Vector3D@{Vector3D}!get\+LengthX@{get\+LengthX}}
+\index{get\+LengthX@{get\+LengthX}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+Length\+X()}{getLengthX()}}
+{\footnotesize\ttfamily float Vector3\+D\+::get\+LengthX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Xの長さ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & Xの長さ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 148 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a59f0095984eee6b0cdb72f1da7647a57}\label{class_vector3_d_a59f0095984eee6b0cdb72f1da7647a57}} 
+\index{Vector3D@{Vector3D}!get\+Length\+XY@{get\+Length\+XY}}
+\index{get\+Length\+XY@{get\+Length\+XY}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+Length\+X\+Y()}{getLengthXY()}}
+{\footnotesize\ttfamily float Vector3\+D\+::get\+Length\+XY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+X\+Yの長さ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & X\+Yの長さ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 169 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_ab4884482e69fd58473794e1c260f93e8}\label{class_vector3_d_ab4884482e69fd58473794e1c260f93e8}} 
+\index{Vector3D@{Vector3D}!get\+Length\+XZ@{get\+Length\+XZ}}
+\index{get\+Length\+XZ@{get\+Length\+XZ}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+Length\+X\+Z()}{getLengthXZ()}}
+{\footnotesize\ttfamily float Vector3\+D\+::get\+Length\+XZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+X\+Zの長さ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & X\+Zの長さ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 178 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a0f475f8ffd361c5571bc57cb0c72a551}\label{class_vector3_d_a0f475f8ffd361c5571bc57cb0c72a551}} 
+\index{Vector3D@{Vector3D}!get\+LengthY@{get\+LengthY}}
+\index{get\+LengthY@{get\+LengthY}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+Length\+Y()}{getLengthY()}}
+{\footnotesize\ttfamily float Vector3\+D\+::get\+LengthY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Yの長さ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & Yの長さ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 155 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a2fdf90670c71d3efbe0b9f19dabb83eb}\label{class_vector3_d_a2fdf90670c71d3efbe0b9f19dabb83eb}} 
+\index{Vector3D@{Vector3D}!get\+Length\+YZ@{get\+Length\+YZ}}
+\index{get\+Length\+YZ@{get\+Length\+YZ}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+Length\+Y\+Z()}{getLengthYZ()}}
+{\footnotesize\ttfamily float Vector3\+D\+::get\+Length\+YZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Y\+Zの長さ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & Y\+Zの長さ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 187 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a534136a09ed7f995ae559687b12f38a1}\label{class_vector3_d_a534136a09ed7f995ae559687b12f38a1}} 
+\index{Vector3D@{Vector3D}!get\+LengthZ@{get\+LengthZ}}
+\index{get\+LengthZ@{get\+LengthZ}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+Length\+Z()}{getLengthZ()}}
+{\footnotesize\ttfamily float Vector3\+D\+::get\+LengthZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Zの長さ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & Zの長さ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 162 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a36067a5027567b47c11eae8f1fc5be82}\label{class_vector3_d_a36067a5027567b47c11eae8f1fc5be82}} 
+\index{Vector3D@{Vector3D}!get\+SquareX@{get\+SquareX}}
+\index{get\+SquareX@{get\+SquareX}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+Square\+X()}{getSquareX()}}
+{\footnotesize\ttfamily float Vector3\+D\+::get\+SquareX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+X成分の2乗取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & X成分の2乗 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 113 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a367f48b718d547de44789f1bedfa57a5}\label{class_vector3_d_a367f48b718d547de44789f1bedfa57a5}} 
+\index{Vector3D@{Vector3D}!get\+SquareY@{get\+SquareY}}
+\index{get\+SquareY@{get\+SquareY}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+Square\+Y()}{getSquareY()}}
+{\footnotesize\ttfamily float Vector3\+D\+::get\+SquareY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Y成分の2乗取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & Y成分の2乗 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 120 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_ae38a3a196d197225be9a53110e4210ea}\label{class_vector3_d_ae38a3a196d197225be9a53110e4210ea}} 
+\index{Vector3D@{Vector3D}!get\+SquareZ@{get\+SquareZ}}
+\index{get\+SquareZ@{get\+SquareZ}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+Square\+Z()}{getSquareZ()}}
+{\footnotesize\ttfamily float Vector3\+D\+::get\+SquareZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Z成分の2乗取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & Z成分の2乗 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 127 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a1c2679622aef3b49ed30857ca3eda472}\label{class_vector3_d_a1c2679622aef3b49ed30857ca3eda472}} 
+\index{Vector3D@{Vector3D}!getX@{getX}}
+\index{getX@{getX}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+X()}{getX()}}
+{\footnotesize\ttfamily float Vector3\+D\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+X成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & X成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 71 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a1568588ea6695cb2a5680b156f45f961}\label{class_vector3_d_a1568588ea6695cb2a5680b156f45f961}} 
+\index{Vector3D@{Vector3D}!getY@{getY}}
+\index{getY@{getY}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+Y()}{getY()}}
+{\footnotesize\ttfamily float Vector3\+D\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Y成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & Y成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 85 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_ab5f2c9a3a82269a8797d2fea70602ede}\label{class_vector3_d_ab5f2c9a3a82269a8797d2fea70602ede}} 
+\index{Vector3D@{Vector3D}!getZ@{getZ}}
+\index{getZ@{getZ}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{get\+Z()}{getZ()}}
+{\footnotesize\ttfamily float Vector3\+D\+::getZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Z成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & Z成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 99 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a5a150ccb85382a0926661ac17e080525}\label{class_vector3_d_a5a150ccb85382a0926661ac17e080525}} 
+\index{Vector3D@{Vector3D}!Init@{Init}}
+\index{Init@{Init}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Vector3\+D\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 283 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_abe8e87481ed14469de6aae3dbfa0953e}\label{class_vector3_d_abe8e87481ed14469de6aae3dbfa0953e}} 
+\index{Vector3D@{Vector3D}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Vector3\+D\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \&}]{vector }\end{DoxyParamCaption}) const}
+
+
+
+$<$演算子 
+
+
+\begin{DoxyParams}{引数}
+{\em vector} & ベクター \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 判定の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 199 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_ada60cd10b049b046da1254b83a30f133}\label{class_vector3_d_ada60cd10b049b046da1254b83a30f133}} 
+\index{Vector3D@{Vector3D}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool Vector3\+D\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \&}]{vector }\end{DoxyParamCaption}) const}
+
+
+
+$<$=演算子 
+
+
+\begin{DoxyParams}{引数}
+{\em vector} & ベクター \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 判定の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 219 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a06de9e8940880c4241e05533a7ad0db9}\label{class_vector3_d_a06de9e8940880c4241e05533a7ad0db9}} 
+\index{Vector3D@{Vector3D}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Vector3\+D\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \&}]{vector }\end{DoxyParamCaption}) const}
+
+
+
+$>$演算子 
+
+
+\begin{DoxyParams}{引数}
+{\em vector} & ベクター \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 判定の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 209 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a74d53debf36f302abf4d28a9300dae32}\label{class_vector3_d_a74d53debf36f302abf4d28a9300dae32}} 
+\index{Vector3D@{Vector3D}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool Vector3\+D\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \&}]{vector }\end{DoxyParamCaption}) const}
+
+
+
+$>$=演算子 
+
+
+\begin{DoxyParams}{引数}
+{\em vector} & ベクター \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 判定の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 229 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_ad20038581979a29c282793023057aef7}\label{class_vector3_d_ad20038581979a29c282793023057aef7}} 
+\index{Vector3D@{Vector3D}!Rotation\+Axis\+Any@{Rotation\+Axis\+Any}}
+\index{Rotation\+Axis\+Any@{Rotation\+Axis\+Any}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Any()}{RotationAxisAny()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Rotation\+Axis\+Any (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{axis,  }\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+任意軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em axis} & 軸 \\
+\hline
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 408 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a8623201898abbb7816824282f4dac6db}\label{class_vector3_d_a8623201898abbb7816824282f4dac6db}} 
+\index{Vector3D@{Vector3D}!Rotation\+AxisX@{Rotation\+AxisX}}
+\index{Rotation\+AxisX@{Rotation\+AxisX}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+X()}{RotationAxisX()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Rotation\+AxisX (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+X軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 378 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a437846b683f4e8fab1ad16d1a96f4944}\label{class_vector3_d_a437846b683f4e8fab1ad16d1a96f4944}} 
+\index{Vector3D@{Vector3D}!Rotation\+AxisY@{Rotation\+AxisY}}
+\index{Rotation\+AxisY@{Rotation\+AxisY}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Y()}{RotationAxisY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Rotation\+AxisY (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+Y軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 388 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a34daa7e7dfbf578c45997f2cb06a86ec}\label{class_vector3_d_a34daa7e7dfbf578c45997f2cb06a86ec}} 
+\index{Vector3D@{Vector3D}!Rotation\+AxisZ@{Rotation\+AxisZ}}
+\index{Rotation\+AxisZ@{Rotation\+AxisZ}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Rotation\+Axis\+Z()}{RotationAxisZ()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Rotation\+AxisZ (\begin{DoxyParamCaption}\item[{float}]{radian }\end{DoxyParamCaption})}
+
+
+
+Z軸回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em radian} & 角度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 398 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a8c48b70ba67f7ad84fb04d3b84836e77}\label{class_vector3_d_a8c48b70ba67f7ad84fb04d3b84836e77}} 
+\index{Vector3D@{Vector3D}!Rotation\+Matrix@{Rotation\+Matrix}}
+\index{Rotation\+Matrix@{Rotation\+Matrix}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Rotation\+Matrix()}{RotationMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Rotation\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$}]{matrix }\end{DoxyParamCaption})}
+
+
+
+行列回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em matrix} & 行列 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 418 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_ab81a157d73d4a3274c8191834b2bfb45}\label{class_vector3_d_ab81a157d73d4a3274c8191834b2bfb45}} 
+\index{Vector3D@{Vector3D}!Rotation\+Quaternion@{Rotation\+Quaternion}}
+\index{Rotation\+Quaternion@{Rotation\+Quaternion}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{Rotation\+Quaternion()}{RotationQuaternion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Vector3\+D\+::\+Rotation\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$}]{quaternion }\end{DoxyParamCaption})}
+
+
+
+クォータニオン回転回転関数 
+
+
+\begin{DoxyParams}{引数}
+{\em quaternion} & クォータニオン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 変更後ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 426 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a1d0270486894c651e920dfa62dc9259a}\label{class_vector3_d_a1d0270486894c651e920dfa62dc9259a}} 
+\index{Vector3D@{Vector3D}!setX@{setX}}
+\index{setX@{setX}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{set\+X()}{setX()}}
+{\footnotesize\ttfamily void Vector3\+D\+::setX (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+X成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & X成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 78 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a94311183867a11fc8b7c6fc6a1d100a9}\label{class_vector3_d_a94311183867a11fc8b7c6fc6a1d100a9}} 
+\index{Vector3D@{Vector3D}!setY@{setY}}
+\index{setY@{setY}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{set\+Y()}{setY()}}
+{\footnotesize\ttfamily void Vector3\+D\+::setY (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Y成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & X成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 92 行目に定義があります。
+
+\mbox{\Hypertarget{class_vector3_d_a33803684829d7be6b3fb746e4b530feb}\label{class_vector3_d_a33803684829d7be6b3fb746e4b530feb}} 
+\index{Vector3D@{Vector3D}!setZ@{setZ}}
+\index{setZ@{setZ}!Vector3D@{Vector3D}}
+\subsubsection{\texorpdfstring{set\+Z()}{setZ()}}
+{\footnotesize\ttfamily void Vector3\+D\+::setZ (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Z成分設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & Z成分 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vector3\+D.\+cpp の 106 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Vector/\mbox{\hyperlink{_vector3_d_8h}{Vector3\+D.\+h}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_vector3_d_8h}{Vector3\+D.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\+Source/\mbox{\hyperlink{_vector3_d_8cpp}{Vector3\+D.\+cpp}}\end{DoxyCompactItemize}

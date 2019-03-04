@@ -52,6 +52,7 @@ private:
 	int pattern_num_ = 0;
 	Player* player_ = nullptr;
 
+
 //====================
 // プロパティ
 //====================

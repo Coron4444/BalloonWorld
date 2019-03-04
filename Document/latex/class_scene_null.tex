@@ -1,0 +1,224 @@
+\hypertarget{class_scene_null}{}\section{Scene\+Null クラス}
+\label{class_scene_null}\index{Scene\+Null@{Scene\+Null}}
+
+
+シーン空白\+Class  
+
+
+
+
+{\ttfamily \#include $<$Scene\+Null.\+h$>$}
+
+
+
+Scene\+Null 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_null__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_scene_null_1_1_state_null}{State\+Null}}
+\begin{DoxyCompactList}\small\item\em シーンステート空白\+Class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_null_accf19999b93db3298bb702b3873fc4d5}{Scene\+Null}} (\mbox{\hyperlink{class_scene_base_1_1_state_base}{State\+Base}} $\ast$state)
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_scene_null_a89dec83bf96f843211e53907d0bb5df5}{$\sim$\+Scene\+Null}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_null_a6b27830a755687f2c00149bcfa739388}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_null_abbff54a7323b5ccde4b5094757747738}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_null_a79de810b699f496fda20e4ac837d075a}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_null_ae71209e6283270d35a3fad40103e9572}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+シーン空白\+Class 
+
+シーンの空白\+Class 
+
+ Scene\+Null.\+h の 24 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_scene_null_accf19999b93db3298bb702b3873fc4d5}\label{class_scene_null_accf19999b93db3298bb702b3873fc4d5}} 
+\index{Scene\+Null@{Scene\+Null}!Scene\+Null@{Scene\+Null}}
+\index{Scene\+Null@{Scene\+Null}!Scene\+Null@{Scene\+Null}}
+\subsubsection{\texorpdfstring{Scene\+Null()}{SceneNull()}}
+{\footnotesize\ttfamily Scene\+Null\+::\+Scene\+Null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene_base_1_1_state_base}{State\+Base}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$state} & 最初のステート \\
+\hline
+\end{DoxyParams}
+
+
+ Scene\+Null.\+cpp の 56 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_null_a89dec83bf96f843211e53907d0bb5df5}\label{class_scene_null_a89dec83bf96f843211e53907d0bb5df5}} 
+\index{Scene\+Null@{Scene\+Null}!````~Scene\+Null@{$\sim$\+Scene\+Null}}
+\index{````~Scene\+Null@{$\sim$\+Scene\+Null}!Scene\+Null@{Scene\+Null}}
+\subsubsection{\texorpdfstring{$\sim$\+Scene\+Null()}{~SceneNull()}}
+{\footnotesize\ttfamily Scene\+Null\+::$\sim$\+Scene\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+デストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Scene\+Null.\+cpp の 63 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_scene_null_a6b27830a755687f2c00149bcfa739388}\label{class_scene_null_a6b27830a755687f2c00149bcfa739388}} 
+\index{Scene\+Null@{Scene\+Null}!Init@{Init}}
+\index{Init@{Init}!Scene\+Null@{Scene\+Null}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Scene\+Null\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_scene_base_a24d7db43c819924dc8b07b436f6d3148}{Scene\+Base}}を実装しています。
+
+
+
+\mbox{\hyperlink{class_game_scene_a0ed06e4578a96910725641fb1a74d958}{Game\+Scene}}, \mbox{\hyperlink{class_tutorial_scene_a73023dcc6009590adb942c04631f3294}{Tutorial\+Scene}}, \mbox{\hyperlink{class_result_scene_a222b1c39e96888c43ae2111726576768}{Result\+Scene}}, \mbox{\hyperlink{class_title_scene_a28897f29ffe8725445bc0a27d7a865d1}{Title\+Scene}}で再実装されています。
+
+
+
+ Scene\+Null.\+cpp の 69 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_null_ae71209e6283270d35a3fad40103e9572}\label{class_scene_null_ae71209e6283270d35a3fad40103e9572}} 
+\index{Scene\+Null@{Scene\+Null}!Reset@{Reset}}
+\index{Reset@{Reset}!Scene\+Null@{Scene\+Null}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Scene\+Null\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+リセット関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_scene_base_a80611ca266dc84f466b96913ace28b8e}{Scene\+Base}}を実装しています。
+
+
+
+ Scene\+Null.\+cpp の 90 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_null_abbff54a7323b5ccde4b5094757747738}\label{class_scene_null_abbff54a7323b5ccde4b5094757747738}} 
+\index{Scene\+Null@{Scene\+Null}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Scene\+Null@{Scene\+Null}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Scene\+Null\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_scene_base_a175987954480e29219a4e3a1d840bbe4}{Scene\+Base}}を実装しています。
+
+
+
+\mbox{\hyperlink{class_game_scene_a8b96bb5d72109ab37729f05f4f78c43e}{Game\+Scene}}, \mbox{\hyperlink{class_tutorial_scene_a988a579b179fc989876b28e24fae7591}{Tutorial\+Scene}}, \mbox{\hyperlink{class_result_scene_a17c396c63a5575a545cd771ece012140}{Result\+Scene}}, \mbox{\hyperlink{class_title_scene_a65fcb66cfab634ff7b0f6b69bbc63d7c}{Title\+Scene}}で再実装されています。
+
+
+
+ Scene\+Null.\+cpp の 76 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_null_a79de810b699f496fda20e4ac837d075a}\label{class_scene_null_a79de810b699f496fda20e4ac837d075a}} 
+\index{Scene\+Null@{Scene\+Null}!Update@{Update}}
+\index{Update@{Update}!Scene\+Null@{Scene\+Null}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Scene\+Null\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_scene_base_a596ef75258a6e4d843d81f01cc0c28da}{Scene\+Base}}を実装しています。
+
+
+
+\mbox{\hyperlink{class_game_scene_a4a7840220ef38af15def6d25159c93f3}{Game\+Scene}}で再実装されています。
+
+
+
+ Scene\+Null.\+cpp の 83 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Scene/\mbox{\hyperlink{_scene_null_8h}{Scene\+Null.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Scene/\+Source/\mbox{\hyperlink{_scene_null_8cpp}{Scene\+Null.\+cpp}}\end{DoxyCompactItemize}

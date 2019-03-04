@@ -64,8 +64,7 @@ void DrawCommonData::setCameraShadowMap(Camera* value)
 void DrawCommonData::Init()
 {
 	main_.Init(GameEngine::SCREEN_WIDTH, GameEngine::SCREEN_HEIGHT);
-	shadow_map_.Init(GameEngine::SCREEN_WIDTH, GameEngine::SCREEN_HEIGHT);
-	shadow_map_.Init(GameEngine::SCREEN_WIDTH, GameEngine::SCREEN_HEIGHT);
+	shadow_map_.Init(1024* 10, 1024*10, D3DFMT_R32F);// GameEngine::SCREEN_WIDTH, GameEngine::SCREEN_HEIGHT);// , D3DFMT_R32F);
 	motion_blur_.Init(GameEngine::SCREEN_WIDTH, GameEngine::SCREEN_HEIGHT);
 }
 

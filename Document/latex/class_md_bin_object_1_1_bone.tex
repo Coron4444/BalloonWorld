@@ -1,0 +1,225 @@
+\hypertarget{class_md_bin_object_1_1_bone}{}\section{Md\+Bin\+Object\+:\+:Bone クラス}
+\label{class_md_bin_object_1_1_bone}\index{Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}}
+
+
+ボーン\+Class  
+
+
+
+
+{\ttfamily \#include $<$Md\+Bin\+Object.\+h$>$}
+
+
+
+Md\+Bin\+Object\+:\+:Bone 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{class_md_bin_object_1_1_bone__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string $\ast$ \mbox{\hyperlink{class_md_bin_object_1_1_bone_a253478f63c13730809e943a3928b7e50}{getp\+Name}} ()
+\begin{DoxyCompactList}\small\item\em ボーン名取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ \mbox{\hyperlink{class_md_bin_object_1_1_bone_ac700babba67e7d39ff6e894ca7831b51}{getp\+Offset\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em オフセット行列取得関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_md_bin_object_1_1_bone_a66f24e8fb5fccdb6abcbbedca365ee4e}{get\+Animation\+Matrix\+Array\+Size}} ()
+\begin{DoxyCompactList}\small\item\em アニメーション行列配列サイズ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_object_1_1_bone_ad3d6cc591c4a08d349095374c5e72d9c}{set\+Animation\+Matrix\+Array\+Size}} (int value)
+\begin{DoxyCompactList}\small\item\em アニメーション行列配列サイズ設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ \mbox{\hyperlink{class_md_bin_object_1_1_bone_a1fbda2e276ea0036c0f86145ae7dbd08}{getp\+Animation\+Matrix}} (int index)
+\begin{DoxyCompactList}\small\item\em アニメーション行列取得関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_md_bin_object_1_1_bone_ae9a47dcfa4c7f15e95b76a31846c9481}{name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em ボーン名 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_md_bin_object_1_1_bone_a7ec2fdffbe14211b099c580c492f808a}{offset\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em オフセット行列 \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_matrix}{Matrix}} $>$ \mbox{\hyperlink{class_md_bin_object_1_1_bone_a0b2968694781bca6852ce0675f69504a}{animation\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em アニメーション行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+ボーン\+Class 
+
+ボーンの\+Class 
+
+ Md\+Bin\+Object.\+h の 62 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_md_bin_object_1_1_bone_a66f24e8fb5fccdb6abcbbedca365ee4e}\label{class_md_bin_object_1_1_bone_a66f24e8fb5fccdb6abcbbedca365ee4e}} 
+\index{Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}!get\+Animation\+Matrix\+Array\+Size@{get\+Animation\+Matrix\+Array\+Size}}
+\index{get\+Animation\+Matrix\+Array\+Size@{get\+Animation\+Matrix\+Array\+Size}!Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}}
+\subsubsection{\texorpdfstring{get\+Animation\+Matrix\+Array\+Size()}{getAnimationMatrixArraySize()}}
+{\footnotesize\ttfamily int Md\+Bin\+Object\+::\+Bone\+::get\+Animation\+Matrix\+Array\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+アニメーション行列配列サイズ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & アニメーション行列配列サイズ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_bone_a1fbda2e276ea0036c0f86145ae7dbd08}\label{class_md_bin_object_1_1_bone_a1fbda2e276ea0036c0f86145ae7dbd08}} 
+\index{Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}!getp\+Animation\+Matrix@{getp\+Animation\+Matrix}}
+\index{getp\+Animation\+Matrix@{getp\+Animation\+Matrix}!Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}}
+\subsubsection{\texorpdfstring{getp\+Animation\+Matrix()}{getpAnimationMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ Md\+Bin\+Object\+::\+Bone\+::getp\+Animation\+Matrix (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+アニメーション行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Matrix$\ast$} & アニメーション行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_bone_a253478f63c13730809e943a3928b7e50}\label{class_md_bin_object_1_1_bone_a253478f63c13730809e943a3928b7e50}} 
+\index{Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}!getp\+Name@{getp\+Name}}
+\index{getp\+Name@{getp\+Name}!Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}}
+\subsubsection{\texorpdfstring{getp\+Name()}{getpName()}}
+{\footnotesize\ttfamily std\+::string $\ast$ Md\+Bin\+Object\+::\+Bone\+::getp\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ボーン名取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em std\+::string$\ast$} & ボーン名 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 20 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_bone_ac700babba67e7d39ff6e894ca7831b51}\label{class_md_bin_object_1_1_bone_ac700babba67e7d39ff6e894ca7831b51}} 
+\index{Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}!getp\+Offset\+Matrix@{getp\+Offset\+Matrix}}
+\index{getp\+Offset\+Matrix@{getp\+Offset\+Matrix}!Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}}
+\subsubsection{\texorpdfstring{getp\+Offset\+Matrix()}{getpOffsetMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ Md\+Bin\+Object\+::\+Bone\+::getp\+Offset\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+オフセット行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Matrix$\ast$} & オフセット配列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_bone_ad3d6cc591c4a08d349095374c5e72d9c}\label{class_md_bin_object_1_1_bone_ad3d6cc591c4a08d349095374c5e72d9c}} 
+\index{Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}!set\+Animation\+Matrix\+Array\+Size@{set\+Animation\+Matrix\+Array\+Size}}
+\index{set\+Animation\+Matrix\+Array\+Size@{set\+Animation\+Matrix\+Array\+Size}!Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}}
+\subsubsection{\texorpdfstring{set\+Animation\+Matrix\+Array\+Size()}{setAnimationMatrixArraySize()}}
+{\footnotesize\ttfamily void Md\+Bin\+Object\+::\+Bone\+::set\+Animation\+Matrix\+Array\+Size (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+アニメーション行列配列サイズ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & アニメーション行列配列サイズ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Object.\+cpp の 41 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_md_bin_object_1_1_bone_a0b2968694781bca6852ce0675f69504a}\label{class_md_bin_object_1_1_bone_a0b2968694781bca6852ce0675f69504a}} 
+\index{Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}!animation\+\_\+matrix\+\_\+@{animation\+\_\+matrix\+\_\+}}
+\index{animation\+\_\+matrix\+\_\+@{animation\+\_\+matrix\+\_\+}!Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}}
+\subsubsection{\texorpdfstring{animation\+\_\+matrix\+\_\+}{animation\_matrix\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_matrix}{Matrix}}$>$ Md\+Bin\+Object\+::\+Bone\+::animation\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+アニメーション行列 
+
+
+
+ Md\+Bin\+Object.\+h の 70 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_bone_ae9a47dcfa4c7f15e95b76a31846c9481}\label{class_md_bin_object_1_1_bone_ae9a47dcfa4c7f15e95b76a31846c9481}} 
+\index{Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}!name\+\_\+@{name\+\_\+}}
+\index{name\+\_\+@{name\+\_\+}!Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}}
+\subsubsection{\texorpdfstring{name\+\_\+}{name\_}}
+{\footnotesize\ttfamily std\+::string Md\+Bin\+Object\+::\+Bone\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ボーン名 
+
+
+
+ Md\+Bin\+Object.\+h の 68 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_object_1_1_bone_a7ec2fdffbe14211b099c580c492f808a}\label{class_md_bin_object_1_1_bone_a7ec2fdffbe14211b099c580c492f808a}} 
+\index{Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}!offset\+\_\+matrix\+\_\+@{offset\+\_\+matrix\+\_\+}}
+\index{offset\+\_\+matrix\+\_\+@{offset\+\_\+matrix\+\_\+}!Md\+Bin\+Object\+::\+Bone@{Md\+Bin\+Object\+::\+Bone}}
+\subsubsection{\texorpdfstring{offset\+\_\+matrix\+\_\+}{offset\_matrix\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Md\+Bin\+Object\+::\+Bone\+::offset\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+オフセット行列 
+
+
+
+ Md\+Bin\+Object.\+h の 69 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Md\+Bin/\mbox{\hyperlink{_md_bin_object_8h}{Md\+Bin\+Object.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Resource/\+Md\+Bin/\+Source/\mbox{\hyperlink{_md_bin_object_8cpp}{Md\+Bin\+Object.\+cpp}}\end{DoxyCompactItemize}

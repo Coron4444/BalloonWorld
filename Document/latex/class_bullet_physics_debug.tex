@@ -1,0 +1,307 @@
+\hypertarget{class_bullet_physics_debug}{}\section{Bullet\+Physics\+Debug クラス}
+\label{class_bullet_physics_debug}\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+
+
+バレットフィジックスデバッグ\+Class  
+
+
+
+
+{\ttfamily \#include $<$Bullet\+Physics\+Debug.\+h$>$}
+
+
+
+Bullet\+Physics\+Debug 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bullet_physics_debug__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_bullet_physics_debug_a6b75505ddd99b72ab6d72658a835419f}{get\+Debug\+Mode}} () const override
+\begin{DoxyCompactList}\small\item\em デバッグモード取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_debug_ae97707d5b14ac1c55edec5d4686dd802}{set\+Debug\+Mode}} (int value) override
+\begin{DoxyCompactList}\small\item\em デバッグモード設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_debug_a1881672318e69c82f3c4f3eee81c0f11}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_bullet_physics_debug_ad2602a90645ab868f8b3aafc98be7109}{draw\+Line}} (const bt\+Vector3 \&from, const bt\+Vector3 \&to, const bt\+Vector3 \&color) override
+\begin{DoxyCompactList}\small\item\em 線の描画関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_debug_ac88494485e3532fcb79c56a715dfa737}{Draw\+Setting\+Before}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$camera)
+\begin{DoxyCompactList}\small\item\em 描画前設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_debug_a6d38dedc62b0479bf65f4f92058ca9b8}{Draw\+Setting\+After}} ()
+\begin{DoxyCompactList}\small\item\em 描画後設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bullet_physics_debug_aa895e20c63340cb995693d3ad8f71a19}{draw\+Contact\+Point}} (const bt\+Vector3 \&Point\+OnB, const bt\+Vector3 \&normal\+OnB, bt\+Scalar distance, int life\+Time, const bt\+Vector3 \&color) override
+\item 
+void \mbox{\hyperlink{class_bullet_physics_debug_aeec16a6d939beb6afbae9760310ec098}{report\+Error\+Warning}} (const char $\ast$warning\+String) override
+\item 
+void \mbox{\hyperlink{class_bullet_physics_debug_a517d4d3b25ee5d9a83d984bb19e81ca4}{draw3d\+Text}} (const bt\+Vector3 \&location, const char $\ast$text\+String) override
+\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_bullet_physics_debug_a7aec768464aa74fc9c97e10bff2375fe}{debug\+\_\+mode\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em デバッグモード \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_renderer_direct_x9_1_1_v_e_r_t_e_x__3_d}{Renderer\+Direct\+X9\+::\+V\+E\+R\+T\+E\+X\+\_\+3D}} \mbox{\hyperlink{class_bullet_physics_debug_a4ff9e5b54a2830046ad94116443e036a}{vertex\+\_\+}} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em 頂点 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_bullet_physics_debug_a0504ae564495b078f7805fcb42b66b6b}{device\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em デバイス \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_bullet_physics_debug_aba9367272ecf72569e20f740389e31e5}{transform\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 変形 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+バレットフィジックスデバッグ\+Class 
+
+バレットフィジックスのデバッグ\+Class 
+
+ Bullet\+Physics\+Debug.\+h の 38 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_bullet_physics_debug_a517d4d3b25ee5d9a83d984bb19e81ca4}\label{class_bullet_physics_debug_a517d4d3b25ee5d9a83d984bb19e81ca4}} 
+\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}!draw3d\+Text@{draw3d\+Text}}
+\index{draw3d\+Text@{draw3d\+Text}!Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+\subsubsection{\texorpdfstring{draw3d\+Text()}{draw3dText()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Debug\+::draw3d\+Text (\begin{DoxyParamCaption}\item[{const bt\+Vector3 \&}]{location,  }\item[{const char $\ast$}]{text\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+ Bullet\+Physics\+Debug.\+cpp の 130 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_debug_aa895e20c63340cb995693d3ad8f71a19}\label{class_bullet_physics_debug_aa895e20c63340cb995693d3ad8f71a19}} 
+\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}!draw\+Contact\+Point@{draw\+Contact\+Point}}
+\index{draw\+Contact\+Point@{draw\+Contact\+Point}!Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+\subsubsection{\texorpdfstring{draw\+Contact\+Point()}{drawContactPoint()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Debug\+::draw\+Contact\+Point (\begin{DoxyParamCaption}\item[{const bt\+Vector3 \&}]{Point\+OnB,  }\item[{const bt\+Vector3 \&}]{normal\+OnB,  }\item[{bt\+Scalar}]{distance,  }\item[{int}]{life\+Time,  }\item[{const bt\+Vector3 \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+ Bullet\+Physics\+Debug.\+cpp の 110 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_debug_ad2602a90645ab868f8b3aafc98be7109}\label{class_bullet_physics_debug_ad2602a90645ab868f8b3aafc98be7109}} 
+\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}!draw\+Line@{draw\+Line}}
+\index{draw\+Line@{draw\+Line}!Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+\subsubsection{\texorpdfstring{draw\+Line()}{drawLine()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Debug\+::draw\+Line (\begin{DoxyParamCaption}\item[{const bt\+Vector3 \&}]{from,  }\item[{const bt\+Vector3 \&}]{to,  }\item[{const bt\+Vector3 \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+線の描画関数 
+
+
+\begin{DoxyParams}{引数}
+{\em from} & 開始点 \\
+\hline
+{\em to} & 終端点 \\
+\hline
+{\em color} & 色 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Debug.\+cpp の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_debug_a6d38dedc62b0479bf65f4f92058ca9b8}\label{class_bullet_physics_debug_a6d38dedc62b0479bf65f4f92058ca9b8}} 
+\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}!Draw\+Setting\+After@{Draw\+Setting\+After}}
+\index{Draw\+Setting\+After@{Draw\+Setting\+After}!Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+\subsubsection{\texorpdfstring{Draw\+Setting\+After()}{DrawSettingAfter()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Debug\+::\+Draw\+Setting\+After (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+描画後設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Debug.\+cpp の 102 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_debug_ac88494485e3532fcb79c56a715dfa737}\label{class_bullet_physics_debug_ac88494485e3532fcb79c56a715dfa737}} 
+\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}!Draw\+Setting\+Before@{Draw\+Setting\+Before}}
+\index{Draw\+Setting\+Before@{Draw\+Setting\+Before}!Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+\subsubsection{\texorpdfstring{Draw\+Setting\+Before()}{DrawSettingBefore()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Debug\+::\+Draw\+Setting\+Before (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})}
+
+
+
+描画前設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em camera} & カメラ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Debug.\+cpp の 73 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_debug_a6b75505ddd99b72ab6d72658a835419f}\label{class_bullet_physics_debug_a6b75505ddd99b72ab6d72658a835419f}} 
+\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}!get\+Debug\+Mode@{get\+Debug\+Mode}}
+\index{get\+Debug\+Mode@{get\+Debug\+Mode}!Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+\subsubsection{\texorpdfstring{get\+Debug\+Mode()}{getDebugMode()}}
+{\footnotesize\ttfamily int Bullet\+Physics\+Debug\+::get\+Debug\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+デバッグモード取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & デバッグモード \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Debug.\+cpp の 20 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_debug_a1881672318e69c82f3c4f3eee81c0f11}\label{class_bullet_physics_debug_a1881672318e69c82f3c4f3eee81c0f11}} 
+\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}!Init@{Init}}
+\index{Init@{Init}!Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Debug\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Debug.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_debug_aeec16a6d939beb6afbae9760310ec098}\label{class_bullet_physics_debug_aeec16a6d939beb6afbae9760310ec098}} 
+\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}!report\+Error\+Warning@{report\+Error\+Warning}}
+\index{report\+Error\+Warning@{report\+Error\+Warning}!Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+\subsubsection{\texorpdfstring{report\+Error\+Warning()}{reportErrorWarning()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Debug\+::report\+Error\+Warning (\begin{DoxyParamCaption}\item[{const char $\ast$}]{warning\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+ Bullet\+Physics\+Debug.\+cpp の 122 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_debug_ae97707d5b14ac1c55edec5d4686dd802}\label{class_bullet_physics_debug_ae97707d5b14ac1c55edec5d4686dd802}} 
+\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}!set\+Debug\+Mode@{set\+Debug\+Mode}}
+\index{set\+Debug\+Mode@{set\+Debug\+Mode}!Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+\subsubsection{\texorpdfstring{set\+Debug\+Mode()}{setDebugMode()}}
+{\footnotesize\ttfamily void Bullet\+Physics\+Debug\+::set\+Debug\+Mode (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+デバッグモード設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & デバッグモード \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Bullet\+Physics\+Debug.\+cpp の 27 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_bullet_physics_debug_a7aec768464aa74fc9c97e10bff2375fe}\label{class_bullet_physics_debug_a7aec768464aa74fc9c97e10bff2375fe}} 
+\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}!debug\+\_\+mode\+\_\+@{debug\+\_\+mode\+\_\+}}
+\index{debug\+\_\+mode\+\_\+@{debug\+\_\+mode\+\_\+}!Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+\subsubsection{\texorpdfstring{debug\+\_\+mode\+\_\+}{debug\_mode\_}}
+{\footnotesize\ttfamily int Bullet\+Physics\+Debug\+::debug\+\_\+mode\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+デバッグモード 
+
+
+
+ Bullet\+Physics\+Debug.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_debug_a0504ae564495b078f7805fcb42b66b6b}\label{class_bullet_physics_debug_a0504ae564495b078f7805fcb42b66b6b}} 
+\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}!device\+\_\+@{device\+\_\+}}
+\index{device\+\_\+@{device\+\_\+}!Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+\subsubsection{\texorpdfstring{device\+\_\+}{device\_}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 Bullet\+Physics\+Debug\+::device\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+デバイス 
+
+
+
+ Bullet\+Physics\+Debug.\+h の 46 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_debug_aba9367272ecf72569e20f740389e31e5}\label{class_bullet_physics_debug_aba9367272ecf72569e20f740389e31e5}} 
+\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}!transform\+\_\+@{transform\+\_\+}}
+\index{transform\+\_\+@{transform\+\_\+}!Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+\subsubsection{\texorpdfstring{transform\+\_\+}{transform\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}} Bullet\+Physics\+Debug\+::transform\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+変形 
+
+
+
+ Bullet\+Physics\+Debug.\+h の 47 行目に定義があります。
+
+\mbox{\Hypertarget{class_bullet_physics_debug_a4ff9e5b54a2830046ad94116443e036a}\label{class_bullet_physics_debug_a4ff9e5b54a2830046ad94116443e036a}} 
+\index{Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}!vertex\+\_\+@{vertex\+\_\+}}
+\index{vertex\+\_\+@{vertex\+\_\+}!Bullet\+Physics\+Debug@{Bullet\+Physics\+Debug}}
+\subsubsection{\texorpdfstring{vertex\+\_\+}{vertex\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_renderer_direct_x9_1_1_v_e_r_t_e_x__3_d}{Renderer\+Direct\+X9\+::\+V\+E\+R\+T\+E\+X\+\_\+3D}} Bullet\+Physics\+Debug\+::vertex\+\_\+\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+頂点 
+
+
+
+ Bullet\+Physics\+Debug.\+h の 45 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Bullet\+Physics/\mbox{\hyperlink{_bullet_physics_debug_8h}{Bullet\+Physics\+Debug.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Bullet\+Physics/\+Source/\mbox{\hyperlink{_bullet_physics_debug_8cpp}{Bullet\+Physics\+Debug.\+cpp}}\end{DoxyCompactItemize}

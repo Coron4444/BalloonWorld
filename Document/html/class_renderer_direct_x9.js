@@ -1,11 +1,12 @@
 var class_renderer_direct_x9 =
 [
     [ "VERTEX_3D", "class_renderer_direct_x9_1_1_v_e_r_t_e_x__3_d.html", "class_renderer_direct_x9_1_1_v_e_r_t_e_x__3_d" ],
-    [ "DrawBegin", "class_renderer_direct_x9.html#a5113bf4e6aefdb7bcab2016fbbee0174", null ],
+    [ "DrawBegin", "class_renderer_direct_x9.html#a5d299c19850d7c87340c3cbf2629cc01", null ],
     [ "DrawEnd", "class_renderer_direct_x9.html#a5f934597020f77dc9cf729acfb13a830", null ],
     [ "getpDevice", "class_renderer_direct_x9.html#afabcea127b5af61e4d80564369e72baa", null ],
     [ "getpInterface", "class_renderer_direct_x9.html#aad68389e45dd757dcde19d636f082a21", null ],
     [ "Init", "class_renderer_direct_x9.html#af015676b50f3ce1ba7cf20abf6074e3b", null ],
+    [ "NoClearDrawBegin", "class_renderer_direct_x9.html#ad890dee4b4da01dfe75b0c8af9628f8b", null ],
     [ "Present", "class_renderer_direct_x9.html#a77dbc76e8adbe4f9ee41c5f09e5ebe81", null ],
     [ "SetAlphaBlending_Add", "class_renderer_direct_x9.html#aa552107a3d5f8a61347fe10741fd04a3", null ],
     [ "SetAlphaBlending_Baking", "class_renderer_direct_x9.html#a083f55d941075227189769fd9807ffd1", null ],

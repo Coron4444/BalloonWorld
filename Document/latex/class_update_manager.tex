@@ -2,13 +2,22 @@
 \label{class_update_manager}\index{Update\+Manager@{Update\+Manager}}
 
 
-更新マネージャークラス  
+更新マネージャーlass  
 
 
 
 
 {\ttfamily \#include $<$Update\+Manager.\+h$>$}
 
+
+
+Update\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_update_manager__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,11 +29,9 @@ void \mbox{\hyperlink{class_update_manager_a2e0a6b1a620ba620783d929e532b6148}{Un
 \begin{DoxyCompactList}\small\item\em シーン変更時の終了関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_update_manager_ac4bdd39d106c7e6b505fe9a0c55e50de}{Update}} ()
 \begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_update_manager_afe4b39d94cde8294cc273cde32788eaa}{Add\+Update\+Base\+To\+Array}} (\mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$update)
+void \mbox{\hyperlink{class_update_manager_a47571c441e8494f8e8231d600fd483ae}{Add\+Game\+Object\+Base}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$update)
 \begin{DoxyCompactList}\small\item\em 更新基底クラスの追加関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_update_manager_ab4f492c33ed941ddd01ccae8218080ff}{Overwrite\+Array\+Update\+Base}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$game\+\_\+object, \mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$new\+\_\+update)
-\begin{DoxyCompactList}\small\item\em 更新基底クラスの上書き関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_update_manager_a8a54226896f4280b589af85c07e869d9}{Release\+Update\+Base\+From\+Array}} (\mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$update)
+void \mbox{\hyperlink{class_update_manager_ae74872df6b8761ac78744be1211da791}{Release\+Game\+Object\+Base}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$update)
 \begin{DoxyCompactList}\small\item\em 更新基底クラスの解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的公開変数類}
 \begin{DoxyCompactItemize}
@@ -41,20 +48,20 @@ void \mbox{\hyperlink{class_update_manager_ac87db8037fbfb800187c50ca22a1f01d}{Re
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$, \mbox{\hyperlink{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_update_manager_a1e22347205a91812355ccb0b61538754}{all\+\_\+update\+\_\+}}
+\mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$, \mbox{\hyperlink{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_update_manager_a3943ecea6d685d2aba94dc227a911b52}{all\+\_\+object\+\_\+}}
 \begin{DoxyCompactList}\small\item\em 全更新配列 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$, \mbox{\hyperlink{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_update_manager_acebe668ec93509bdb16c48de1430a49b}{await\+\_\+add\+\_\+}}
+\mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$, \mbox{\hyperlink{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_update_manager_a0e499225c229fa9f6ae4c8b1f4ae409c}{await\+\_\+add\+\_\+}}
 \begin{DoxyCompactList}\small\item\em 追加待ち配列 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$, \mbox{\hyperlink{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_update_manager_aa04ddba3d6d9b5ad4d36749e9d81955c}{await\+\_\+release\+\_\+}}
+\mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$ \mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$, \mbox{\hyperlink{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}} $>$ \mbox{\hyperlink{class_update_manager_aea92aeda54d22c039d1bb97387e6743c}{await\+\_\+release\+\_\+}}
 \begin{DoxyCompactList}\small\item\em 解放待ち配列 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
-更新マネージャークラス 
+更新マネージャーlass 
 
-登録されている更新基底クラスを管理するクラス 
+登録されている更新基底クラスを管理する\+Class 
 
- Update\+Manager.\+h の 33 行目に定義があります。
+ Update\+Manager.\+h の 24 行目に定義があります。
 
 
 
@@ -70,22 +77,42 @@ void \mbox{\hyperlink{class_update_manager_ac87db8037fbfb800187c50ca22a1f01d}{Re
 追加待ち配列の中身を追加関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Update\+Manager.\+cpp の 176 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\Hypertarget{class_update_manager_afe4b39d94cde8294cc273cde32788eaa}\label{class_update_manager_afe4b39d94cde8294cc273cde32788eaa}} 
-\index{Update\+Manager@{Update\+Manager}!Add\+Update\+Base\+To\+Array@{Add\+Update\+Base\+To\+Array}}
-\index{Add\+Update\+Base\+To\+Array@{Add\+Update\+Base\+To\+Array}!Update\+Manager@{Update\+Manager}}
-\subsubsection{\texorpdfstring{Add\+Update\+Base\+To\+Array()}{AddUpdateBaseToArray()}}
-{\footnotesize\ttfamily void Update\+Manager\+::\+Add\+Update\+Base\+To\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$}]{update }\end{DoxyParamCaption})}
+
+ Update\+Manager.\+cpp の 113 行目に定義があります。
+
+\mbox{\Hypertarget{class_update_manager_a47571c441e8494f8e8231d600fd483ae}\label{class_update_manager_a47571c441e8494f8e8231d600fd483ae}} 
+\index{Update\+Manager@{Update\+Manager}!Add\+Game\+Object\+Base@{Add\+Game\+Object\+Base}}
+\index{Add\+Game\+Object\+Base@{Add\+Game\+Object\+Base}!Update\+Manager@{Update\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Game\+Object\+Base()}{AddGameObjectBase()}}
+{\footnotesize\ttfamily void Update\+Manager\+::\+Add\+Game\+Object\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{update }\end{DoxyParamCaption})}
 
 
 
 更新基底クラスの追加関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$update} & 更新基底クラス \\
+\hline
+\end{DoxyParams}
 
- Update\+Manager.\+cpp の 116 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Update\+Manager.\+cpp の 97 行目に定義があります。
 
 \mbox{\Hypertarget{class_update_manager_a7b0a2a3bf51d4fcb83fd25fe642fc66b}\label{class_update_manager_a7b0a2a3bf51d4fcb83fd25fe642fc66b}} 
 \index{Update\+Manager@{Update\+Manager}!Init@{Init}}
@@ -98,22 +125,18 @@ void \mbox{\hyperlink{class_update_manager_ac87db8037fbfb800187c50ca22a1f01d}{Re
 初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Update\+Manager.\+cpp の 27 行目に定義があります。
-
-\mbox{\Hypertarget{class_update_manager_ab4f492c33ed941ddd01ccae8218080ff}\label{class_update_manager_ab4f492c33ed941ddd01ccae8218080ff}} 
-\index{Update\+Manager@{Update\+Manager}!Overwrite\+Array\+Update\+Base@{Overwrite\+Array\+Update\+Base}}
-\index{Overwrite\+Array\+Update\+Base@{Overwrite\+Array\+Update\+Base}!Update\+Manager@{Update\+Manager}}
-\subsubsection{\texorpdfstring{Overwrite\+Array\+Update\+Base()}{OverwriteArrayUpdateBase()}}
-{\footnotesize\ttfamily void Update\+Manager\+::\+Overwrite\+Array\+Update\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{game\+\_\+object,  }\item[{\mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$}]{new\+\_\+update }\end{DoxyParamCaption})}
-
-
-
-更新基底クラスの上書き関数 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
-
- Update\+Manager.\+cpp の 127 行目に定義があります。
+ Update\+Manager.\+cpp の 21 行目に定義があります。
 
 \mbox{\Hypertarget{class_update_manager_ac87db8037fbfb800187c50ca22a1f01d}\label{class_update_manager_ac87db8037fbfb800187c50ca22a1f01d}} 
 \index{Update\+Manager@{Update\+Manager}!Release\+Contents\+Of\+Await\+Release\+Array@{Release\+Contents\+Of\+Await\+Release\+Array}}
@@ -126,22 +149,42 @@ void \mbox{\hyperlink{class_update_manager_ac87db8037fbfb800187c50ca22a1f01d}{Re
 解放待ち配列の中身を解放関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Update\+Manager.\+cpp の 196 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\Hypertarget{class_update_manager_a8a54226896f4280b589af85c07e869d9}\label{class_update_manager_a8a54226896f4280b589af85c07e869d9}} 
-\index{Update\+Manager@{Update\+Manager}!Release\+Update\+Base\+From\+Array@{Release\+Update\+Base\+From\+Array}}
-\index{Release\+Update\+Base\+From\+Array@{Release\+Update\+Base\+From\+Array}!Update\+Manager@{Update\+Manager}}
-\subsubsection{\texorpdfstring{Release\+Update\+Base\+From\+Array()}{ReleaseUpdateBaseFromArray()}}
-{\footnotesize\ttfamily void Update\+Manager\+::\+Release\+Update\+Base\+From\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$}]{update }\end{DoxyParamCaption})}
+
+ Update\+Manager.\+cpp の 130 行目に定義があります。
+
+\mbox{\Hypertarget{class_update_manager_ae74872df6b8761ac78744be1211da791}\label{class_update_manager_ae74872df6b8761ac78744be1211da791}} 
+\index{Update\+Manager@{Update\+Manager}!Release\+Game\+Object\+Base@{Release\+Game\+Object\+Base}}
+\index{Release\+Game\+Object\+Base@{Release\+Game\+Object\+Base}!Update\+Manager@{Update\+Manager}}
+\subsubsection{\texorpdfstring{Release\+Game\+Object\+Base()}{ReleaseGameObjectBase()}}
+{\footnotesize\ttfamily void Update\+Manager\+::\+Release\+Game\+Object\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{update }\end{DoxyParamCaption})}
 
 
 
 更新基底クラスの解放関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$update} & 更新基底クラス \\
+\hline
+\end{DoxyParams}
 
- Update\+Manager.\+cpp の 165 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Update\+Manager.\+cpp の 105 行目に定義があります。
 
 \mbox{\Hypertarget{class_update_manager_a389f9047e882de587eb4def0c691909d}\label{class_update_manager_a389f9047e882de587eb4def0c691909d}} 
 \index{Update\+Manager@{Update\+Manager}!Uninit@{Uninit}}
@@ -154,8 +197,18 @@ void \mbox{\hyperlink{class_update_manager_ac87db8037fbfb800187c50ca22a1f01d}{Re
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Update\+Manager.\+cpp の 37 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Update\+Manager.\+cpp の 27 行目に定義があります。
 
 \mbox{\Hypertarget{class_update_manager_a2e0a6b1a620ba620783d929e532b6148}\label{class_update_manager_a2e0a6b1a620ba620783d929e532b6148}} 
 \index{Update\+Manager@{Update\+Manager}!Uninit\+When\+Change\+Scene@{Uninit\+When\+Change\+Scene}}
@@ -168,8 +221,18 @@ void \mbox{\hyperlink{class_update_manager_ac87db8037fbfb800187c50ca22a1f01d}{Re
 シーン変更時の終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Update\+Manager.\+cpp の 54 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Update\+Manager.\+cpp の 41 行目に定義があります。
 
 \mbox{\Hypertarget{class_update_manager_ac4bdd39d106c7e6b505fe9a0c55e50de}\label{class_update_manager_ac4bdd39d106c7e6b505fe9a0c55e50de}} 
 \index{Update\+Manager@{Update\+Manager}!Update@{Update}}
@@ -182,17 +245,27 @@ void \mbox{\hyperlink{class_update_manager_ac87db8037fbfb800187c50ca22a1f01d}{Re
 更新関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Update\+Manager.\+cpp の 71 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Update\+Manager.\+cpp の 55 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
-\mbox{\Hypertarget{class_update_manager_a1e22347205a91812355ccb0b61538754}\label{class_update_manager_a1e22347205a91812355ccb0b61538754}} 
-\index{Update\+Manager@{Update\+Manager}!all\+\_\+update\+\_\+@{all\+\_\+update\+\_\+}}
-\index{all\+\_\+update\+\_\+@{all\+\_\+update\+\_\+}!Update\+Manager@{Update\+Manager}}
-\subsubsection{\texorpdfstring{all\+\_\+update\+\_\+}{all\_update\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$\mbox{\hyperlink{class_update_base}{Update\+Base}}$\ast$, \mbox{\hyperlink{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}$>$ Update\+Manager\+::all\+\_\+update\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_update_manager_a3943ecea6d685d2aba94dc227a911b52}\label{class_update_manager_a3943ecea6d685d2aba94dc227a911b52}} 
+\index{Update\+Manager@{Update\+Manager}!all\+\_\+object\+\_\+@{all\+\_\+object\+\_\+}}
+\index{all\+\_\+object\+\_\+@{all\+\_\+object\+\_\+}!Update\+Manager@{Update\+Manager}}
+\subsubsection{\texorpdfstring{all\+\_\+object\+\_\+}{all\_object\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}}$\ast$, \mbox{\hyperlink{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}$>$ Update\+Manager\+::all\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -200,7 +273,7 @@ void \mbox{\hyperlink{class_update_manager_ac87db8037fbfb800187c50ca22a1f01d}{Re
 
 
 
- Update\+Manager.\+h の 46 行目に定義があります。
+ Update\+Manager.\+h の 37 行目に定義があります。
 
 \mbox{\Hypertarget{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}\label{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}} 
 \index{Update\+Manager@{Update\+Manager}!A\+R\+R\+A\+Y\+\_\+\+N\+UM@{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}
@@ -214,13 +287,13 @@ void \mbox{\hyperlink{class_update_manager_ac87db8037fbfb800187c50ca22a1f01d}{Re
 
 
 
- Update\+Manager.\+h の 39 行目に定義があります。
+ Update\+Manager.\+h の 30 行目に定義があります。
 
-\mbox{\Hypertarget{class_update_manager_acebe668ec93509bdb16c48de1430a49b}\label{class_update_manager_acebe668ec93509bdb16c48de1430a49b}} 
+\mbox{\Hypertarget{class_update_manager_a0e499225c229fa9f6ae4c8b1f4ae409c}\label{class_update_manager_a0e499225c229fa9f6ae4c8b1f4ae409c}} 
 \index{Update\+Manager@{Update\+Manager}!await\+\_\+add\+\_\+@{await\+\_\+add\+\_\+}}
 \index{await\+\_\+add\+\_\+@{await\+\_\+add\+\_\+}!Update\+Manager@{Update\+Manager}}
 \subsubsection{\texorpdfstring{await\+\_\+add\+\_\+}{await\_add\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$\mbox{\hyperlink{class_update_base}{Update\+Base}}$\ast$, \mbox{\hyperlink{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}$>$ Update\+Manager\+::await\+\_\+add\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}}$\ast$, \mbox{\hyperlink{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}$>$ Update\+Manager\+::await\+\_\+add\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -228,13 +301,13 @@ void \mbox{\hyperlink{class_update_manager_ac87db8037fbfb800187c50ca22a1f01d}{Re
 
 
 
- Update\+Manager.\+h の 47 行目に定義があります。
+ Update\+Manager.\+h の 38 行目に定義があります。
 
-\mbox{\Hypertarget{class_update_manager_aa04ddba3d6d9b5ad4d36749e9d81955c}\label{class_update_manager_aa04ddba3d6d9b5ad4d36749e9d81955c}} 
+\mbox{\Hypertarget{class_update_manager_aea92aeda54d22c039d1bb97387e6743c}\label{class_update_manager_aea92aeda54d22c039d1bb97387e6743c}} 
 \index{Update\+Manager@{Update\+Manager}!await\+\_\+release\+\_\+@{await\+\_\+release\+\_\+}}
 \index{await\+\_\+release\+\_\+@{await\+\_\+release\+\_\+}!Update\+Manager@{Update\+Manager}}
 \subsubsection{\texorpdfstring{await\+\_\+release\+\_\+}{await\_release\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$\mbox{\hyperlink{class_update_base}{Update\+Base}}$\ast$, \mbox{\hyperlink{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}$>$ Update\+Manager\+::await\+\_\+release\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_limited_pointer_array}{Limited\+Pointer\+Array}}$<$\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}}$\ast$, \mbox{\hyperlink{class_update_manager_a280b884fb6a025cfd92d4f93086c60c6}{A\+R\+R\+A\+Y\+\_\+\+N\+UM}}$>$ Update\+Manager\+::await\+\_\+release\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -242,11 +315,11 @@ void \mbox{\hyperlink{class_update_manager_ac87db8037fbfb800187c50ca22a1f01d}{Re
 
 
 
- Update\+Manager.\+h の 48 行目に定義があります。
+ Update\+Manager.\+h の 39 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Update\+Manager/\mbox{\hyperlink{_update_manager_8h}{Update\+Manager.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Update\+Manager/\mbox{\hyperlink{_update_manager_8cpp}{Update\+Manager.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Game\+Object/\+Game\+Object\+Manager/\mbox{\hyperlink{_update_manager_8h}{Update\+Manager.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Game\+Object/\+Game\+Object\+Manager/\+Source/\mbox{\hyperlink{_update_manager_8cpp}{Update\+Manager.\+cpp}}\end{DoxyCompactItemize}

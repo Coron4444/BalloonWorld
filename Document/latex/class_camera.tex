@@ -2,117 +2,146 @@
 \label{class_camera}\index{Camera@{Camera}}
 
 
-カメラクラス  
+カメラ\+Class  
 
 
 
 
 {\ttfamily \#include $<$Camera.\+h$>$}
 
+
+
+Camera 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_camera__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_camera_1_1_state}{State}}
-\begin{DoxyCompactList}\small\item\em カメラステートクラス \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em カメラステート\+Class \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{公開型}
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Type}} \{ \newline
-\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcba12c79dd5dae61a931ff74c2855ec82f5}{N\+O\+NE}} = -\/1, 
-\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcba34783417054408fd9e024048b1cefa47}{P\+E\+R\+S\+P\+E\+C\+T\+I\+VE}}, 
-\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcba5421bcd519dac606b7af9786b11f88d6}{O\+R\+T\+HO}}, 
-\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcbaa144a5dc97bc343a7ef630cf23b09a76}{T\+W\+O\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+AL}}, 
+\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcbab50339a10e1de285ac99d4c3990b8693}{Type\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcbad46c97be63d6c4cb887419a4a3df5347}{Type\+::\+P\+E\+R\+S\+P\+E\+C\+T\+I\+VE}}, 
+\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcba9441273d8f694623f0a3cf3e24c29944}{Type\+::\+O\+R\+T\+HO}}, 
+\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcba3438f91b4b43888aadc97e739cc258de}{Type\+::\+T\+W\+O\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+AL}}, 
 \newline
-\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcba7a6334fc8418deee4c453e1c7a366efa}{M\+AX}}
+\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcba26a4b44a837bf97b972628509912b4a5}{Type\+::\+M\+AX}}
  \}
 \end{DoxyCompactItemize}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_camera_a03e3ca8b70417632f7b1b581426ec66d}{Init}} (\mbox{\hyperlink{class_camera_1_1_state}{State}} $\ast$state, \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} position=\{0.\+0f, 0.\+0f, -\/10.\+0f\}, Vec3 look\+\_\+at\+\_\+point=\{0.\+0f, 0.\+0f, 0.\+0f\}, Vec3 up=\{0.\+0f, 1.\+0f, 0.\+0f\})
+\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ \mbox{\hyperlink{class_camera_a754251a0c028649cc5ca1b58efa41886}{getp\+View\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em ビュー行列取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ \mbox{\hyperlink{class_camera_a68b2c96bfda62c6d8e6a77e38c396e8a}{getp\+Projection\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em プロジェクション行列取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_camera_a3384dbae97724934c5083740a30f4a98}{getp\+Position}} ()
+\begin{DoxyCompactList}\small\item\em 座標取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_camera_a26d0234a29c2617960b3d07c1064f8d0}{getp\+Gazing\+Point}} ()
+\begin{DoxyCompactList}\small\item\em 注視点取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_a19d2d19ddd9307c66075c83e515bda57}{get\+Angle\+Of\+View}} () const
+\begin{DoxyCompactList}\small\item\em 画角取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a8c9073240eb8385fec51d3ef185d3cee}{set\+Angle\+Of\+View}} (float value)
+\begin{DoxyCompactList}\small\item\em 画角設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_a85236e6f5584c5123251664ff7b848d9}{get\+Near\+Clip}} () const
+\begin{DoxyCompactList}\small\item\em 近面クリップ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a911ec8ed518a107fec11766b97d6d025}{set\+Near\+Clip}} (float value)
+\begin{DoxyCompactList}\small\item\em 近面クリップ設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_a0c7ba904973245fcd1b7e825eaa8d9ba}{get\+Far\+Clip}} () const
+\begin{DoxyCompactList}\small\item\em 遠面クリップ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a1afa6c327f1f7d273c79acd55501c4ad}{set\+Far\+Clip}} (float value)
+\begin{DoxyCompactList}\small\item\em 近面クリップ設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera_1_1_state}{State}} $\ast$ \mbox{\hyperlink{class_camera_af6c2d92a8119d8379ee8f421a04e1a0c}{getp\+State}} ()
+\begin{DoxyCompactList}\small\item\em ステート取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_aedfc18fafa8a97eafbd8a2cb24c2e41b}{set\+State}} (\mbox{\hyperlink{class_camera_1_1_state}{State}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em ステート設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Type}} \mbox{\hyperlink{class_camera_a65143452b51a6d5e1470f79a4c358679}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em タイプ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a93ecfb5163ef828fb6a5e2238954685e}{set\+Type}} (\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Type}} value)
+\begin{DoxyCompactList}\small\item\em タイプ設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_camera_a4598846e26db6cf3fe4a661b8e6a1917}{getp\+Right}} ()
+\begin{DoxyCompactList}\small\item\em 右ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_camera_a519361bbdc75f342e7f7754dac1f4e49}{getp\+Up}} ()
+\begin{DoxyCompactList}\small\item\em 上ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_camera_acef9b42caead07f003dc3f98c0ccdc3c}{getp\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em 前ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_camera_a6f4c660007278a3db020a72242c9cb26}{getp\+Default\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em 既定前ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_camera_a1a807dd20a5e8a5d8e5116748a54dfa7}{getp\+Default\+Up}} ()
+\begin{DoxyCompactList}\small\item\em 既定上ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_camera_ad83e4c1317708ca7282556d3f6a9ad25}{getp\+Default\+Right}} ()
+\begin{DoxyCompactList}\small\item\em 既定右ベクトル取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera_ad1897942d0ccf91052386388a497349f}{$\sim$\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a7742a0dd5a97b1f4c9777a018feb8146}{Init}} (\mbox{\hyperlink{class_camera_1_1_state}{State}} $\ast$state, \mbox{\hyperlink{class_vector3_d}{Vector3D}} position=\{0.\+0f, 0.\+0f, -\/10.\+0f\}, Vector3\+D gazing\+\_\+point=\{0.\+0f, 0.\+0f, 0.\+0f\}, Vector3\+D up=\{0.\+0f, 1.\+0f, 0.\+0f\}, float angle\+\_\+of\+\_\+view=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+N\+G\+L\+E\+\_\+\+O\+F\+\_\+\+V\+I\+E\+W, float near\+\_\+clip=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+E\+A\+R\+\_\+\+C\+L\+I\+P, float far\+\_\+clip=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+R\+\_\+\+C\+L\+I\+P)
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_camera_a8b3337b3e560ea6a780d646bc8c509d7}{Uninit}} ()
-\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_camera_a4a596a3ea1fdc7d244ba4268031a360b}{Update}} ()
 \begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_camera_a5b4993ffb218536cb31d6d5224453b1a}{Create\+View\+Matrix}} ()
 \begin{DoxyCompactList}\small\item\em ビュー行列作成関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_camera_a1786fe1adbe95e2ffa2de4cdb114546a}{Create\+Projection\+Matrix\+\_\+\+Perspective\+Fov}} ()
-\begin{DoxyCompactList}\small\item\em プロジェクション行列作成関数(透視投影行列) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_camera_a215010fc78cb35ed588ac9676c166f64}{Create\+Projection\+Matrix\+\_\+\+Ortho}} ()
-\begin{DoxyCompactList}\small\item\em プロジェクション行列作成関数(正射影行列) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_camera_aaae8043a952b7675d209bdc9b80bcc3f}{Create\+Projection\+Matrix\+\_\+2D}} ()
-\begin{DoxyCompactList}\small\item\em プロジェクション行列作成関数(2\+D) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_camera_abb88028a49a71e9a6774d58076816dbf}{Change\+State}} (\mbox{\hyperlink{class_camera_1_1_state}{State}} $\ast$new\+\_\+camera\+\_\+state)
-\begin{DoxyCompactList}\small\item\em カメラステートの変更 \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_camera_aa472374f61480c5a9dff89d30be029f4}{Get\+View\+Matrix}} () const
-\item 
-const \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_camera_a473a7a8408bc7a1fdd46d12fa3852846}{Get\+Projection\+Matrix}} () const
-\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_camera_a18f380bd6b2c42162c8fcf7e4441a355}{Get\+Positon}} ()
-\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_camera_a4cc3e87e6522b4a1ae72eab5b87430a6}{Get\+Look\+At\+Point}} ()
-\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_camera_aa767cb71ea435cee1e42effc912904eb}{Get\+Up}} ()
-\item 
-int \mbox{\hyperlink{class_camera_a9d54f574c141e6007d98ccd905501632}{Get\+Angle\+Of\+View}} ()
-\item 
-void \mbox{\hyperlink{class_camera_a4c22c8ceed9126db627df9be7eb53a42}{Set\+Angle\+Of\+View}} (int value)
-\item 
-\mbox{\hyperlink{class_axis_vector}{Axis\+Vector}} $\ast$ \mbox{\hyperlink{class_camera_a62c4371143e87e34c70d27f2728987d9}{Get\+Axis}} ()
-\item 
-const \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_camera_aec9441c5c1924df0a0cacbcf28c839e2}{Get\+Forward\+Vector}} () const
-\item 
-const \mbox{\hyperlink{class_camera_1_1_state}{State}} $\ast$ \mbox{\hyperlink{class_camera_a47e72bd04f7aaac1657d7bce5322b97c}{Get\+Camera\+State}} () const
-\item 
-\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Type}} \mbox{\hyperlink{class_camera_a3bda45b352bfa163c306c638a2aee1f6}{Get\+Type}} ()
-\item 
-void \mbox{\hyperlink{class_camera_a6218126e761a8289c6e6bc8c66b05e47}{Set\+Type}} (\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Type}} value)
-\end{DoxyCompactItemize}
-\subsection*{静的公開変数類}
-\begin{DoxyCompactItemize}
-\item 
-static const float \mbox{\hyperlink{class_camera_ad2e91249b7878a87cd23cf7dd5d86e00}{N\+E\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE}} = 0.\+1f
-\begin{DoxyCompactList}\small\item\em 近面クリップ \end{DoxyCompactList}\item 
-static const float \mbox{\hyperlink{class_camera_a90ee4c7f7bbcb5d2b0ab86d14ed60d90}{F\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE}} = 1000.\+0f
-\begin{DoxyCompactList}\small\item\em 遠面クリップ \end{DoxyCompactList}\item 
-static const int \mbox{\hyperlink{class_camera_a0e0f326c66006cf7f9dc29b3e2b86b81}{D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+N\+G\+L\+E\+\_\+\+O\+F\+\_\+\+V\+I\+EW}} = 60
-\begin{DoxyCompactList}\small\item\em 画角 \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_camera_af9f52f44747bba0be03aa8dda5cf5914}{Create\+Projection\+Matrix\+Perspective\+Fov}} ()
+\begin{DoxyCompactList}\small\item\em 透視投影プロジェクション行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_aa649036ee18decc7c539ef7de2b0dff6}{Create\+Projection\+Matrix\+Ortho}} ()
+\begin{DoxyCompactList}\small\item\em 正射影プロジェクション行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a9eb4faceb2a0cf81a9ec9600de03e42d}{Create\+Projection\+Matrix2D}} ()
+\begin{DoxyCompactList}\small\item\em 2\+Dプロジェクション行列作成関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_camera_a0a3450c7cdfaa59456d92779ac9ea574}{position\+\_\+}}
 \begin{DoxyCompactList}\small\item\em 座標 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_camera_a8253e46e7580737e7d22afae9aa5c0b6}{look\+\_\+at\+\_\+point\+\_\+}}
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_camera_a6db99b83e2e2cc8e4284d1885dbbb31f}{gazing\+\_\+point\+\_\+}}
 \begin{DoxyCompactList}\small\item\em 注視点 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_camera_a8df7d311c10a0c640ac480cb5cbada83}{up\+\_\+}}
-\begin{DoxyCompactList}\small\item\em 上ベクトル \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_camera_a8c8ccaf83b140c65c458aa5d0077806c}{angle\+\_\+of\+\_\+view\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 上方向 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_a76b515411d8c1b2dc0dbbace1b82c0a7}{angle\+\_\+of\+\_\+view\+\_\+}}
 \begin{DoxyCompactList}\small\item\em 画角 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_axis_vector}{Axis\+Vector}} \mbox{\hyperlink{class_camera_ad803bf87c68409f7f60836ae8fc25ab0}{axis\+\_\+}}
-\begin{DoxyCompactList}\small\item\em 軸 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_camera_a5839ccb2cd4931e904a7a6cd412260ad}{view\+\_\+}}
+float \mbox{\hyperlink{class_camera_a33867fed5ea7fe064fd7df9eb9d08bac}{near\+\_\+clip\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 近面クリップ \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_afa256bca85bfb0739e5c2822d853117e}{far\+\_\+clip\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 遠面クリップ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_camera_aed93b5c4ec9e79379d84ade0d2ae90d4}{view\+\_\+}}
 \begin{DoxyCompactList}\small\item\em ビュー行列 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_camera_af6dbadc718d75c621fec94b76365ca57}{view\+\_\+2\+D\+\_\+}}
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_camera_a572a7293b43cdfa079999a24a2c433f0}{view\+\_\+2\+D\+\_\+}}
 \begin{DoxyCompactList}\small\item\em ビュー行列(2\+D) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_camera_ab0abb153efc1642da91ec0716847231c}{projection\+\_\+perspective\+\_\+}}
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_camera_ac7f9d66ae42e2aa9db2eb3da07eb0a24}{projection\+\_\+perspective\+\_\+}}
 \begin{DoxyCompactList}\small\item\em プロジェクション行列(透視投影) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_camera_a624f360dabc01f89cc988ca16599eff4}{projection\+\_\+ortho\+\_\+}}
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_camera_a486f4283c1171dd45bc2d8edc89934e4}{projection\+\_\+ortho\+\_\+}}
 \begin{DoxyCompactList}\small\item\em プロジェクション行列(正射影) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_camera_a67951793f883b6b9372ea08213278eee}{projection\+\_\+2\+D\+\_\+}}
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{class_camera_aff80effa10ccd9c00e7e2c0b6342b71e}{projection\+\_\+2\+D\+\_\+}}
 \begin{DoxyCompactList}\small\item\em プロジェクション行列(2\+D) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_camera_1_1_state}{State}} $\ast$ \mbox{\hyperlink{class_camera_ab2f0ce08b9fee8a4481b323f2856b245}{state\+\_\+}} = nullptr
+\mbox{\hyperlink{class_camera_1_1_state}{State}} $\ast$ \mbox{\hyperlink{class_camera_ab2f0ce08b9fee8a4481b323f2856b245}{state\+\_\+}}
 \begin{DoxyCompactList}\small\item\em ステート \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Type}} \mbox{\hyperlink{class_camera_a18f6d287c98a979a2ca1579eb928d9aa}{type\+\_\+}} = Type\+::\+P\+E\+R\+S\+P\+E\+C\+T\+I\+VE
+\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Type}} \mbox{\hyperlink{class_camera_a18f6d287c98a979a2ca1579eb928d9aa}{type\+\_\+}}
 \begin{DoxyCompactList}\small\item\em タイプ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const float \mbox{\hyperlink{class_camera_a4c0adb132f7021b25c1765914197c330}{D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+N\+G\+L\+E\+\_\+\+O\+F\+\_\+\+V\+I\+EW}} = 60.\+0f
+\begin{DoxyCompactList}\small\item\em 既定画角 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_camera_a0c53b37bfc18f468b1a14e74ff8fec7e}{D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+E\+A\+R\+\_\+\+C\+L\+IP}} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em 既定近面クリップ \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_camera_a67838c152145b91ed68e401f58bb08bf}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+R\+\_\+\+C\+L\+IP}} = 1000.\+0f
+\begin{DoxyCompactList}\small\item\em 既定遠面クリップ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
-カメラクラス 
+カメラ\+Class 
 
-カメラのクラス 
+カメラの\+Class 
 
- Camera.\+h の 26 行目に定義があります。
+ Camera.\+h の 17 行目に定義があります。
 
 
 
@@ -121,92 +150,149 @@ int \mbox{\hyperlink{class_camera_a8c8ccaf83b140c65c458aa5d0077806c}{angle\+\_\+
 \index{Camera@{Camera}!Type@{Type}}
 \index{Type@{Type}!Camera@{Camera}}
 \subsubsection{\texorpdfstring{Type}{Type}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
 
 \begin{DoxyEnumFields}{列挙値}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Camera@{Camera}}\index{Camera@{Camera}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_camera_a3b0a1f58deca679ac665f61c480d1dcba12c79dd5dae61a931ff74c2855ec82f5}\label{class_camera_a3b0a1f58deca679ac665f61c480d1dcba12c79dd5dae61a931ff74c2855ec82f5}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Camera@{Camera}}\index{Camera@{Camera}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_camera_a3b0a1f58deca679ac665f61c480d1dcbab50339a10e1de285ac99d4c3990b8693}\label{class_camera_a3b0a1f58deca679ac665f61c480d1dcbab50339a10e1de285ac99d4c3990b8693}} 
 N\+O\+NE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+E\+R\+S\+P\+E\+C\+T\+I\+VE@{P\+E\+R\+S\+P\+E\+C\+T\+I\+VE}!Camera@{Camera}}\index{Camera@{Camera}!P\+E\+R\+S\+P\+E\+C\+T\+I\+VE@{P\+E\+R\+S\+P\+E\+C\+T\+I\+VE}}}\mbox{\Hypertarget{class_camera_a3b0a1f58deca679ac665f61c480d1dcba34783417054408fd9e024048b1cefa47}\label{class_camera_a3b0a1f58deca679ac665f61c480d1dcba34783417054408fd9e024048b1cefa47}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+E\+R\+S\+P\+E\+C\+T\+I\+VE@{P\+E\+R\+S\+P\+E\+C\+T\+I\+VE}!Camera@{Camera}}\index{Camera@{Camera}!P\+E\+R\+S\+P\+E\+C\+T\+I\+VE@{P\+E\+R\+S\+P\+E\+C\+T\+I\+VE}}}\mbox{\Hypertarget{class_camera_a3b0a1f58deca679ac665f61c480d1dcbad46c97be63d6c4cb887419a4a3df5347}\label{class_camera_a3b0a1f58deca679ac665f61c480d1dcbad46c97be63d6c4cb887419a4a3df5347}} 
 P\+E\+R\+S\+P\+E\+C\+T\+I\+VE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+R\+T\+HO@{O\+R\+T\+HO}!Camera@{Camera}}\index{Camera@{Camera}!O\+R\+T\+HO@{O\+R\+T\+HO}}}\mbox{\Hypertarget{class_camera_a3b0a1f58deca679ac665f61c480d1dcba5421bcd519dac606b7af9786b11f88d6}\label{class_camera_a3b0a1f58deca679ac665f61c480d1dcba5421bcd519dac606b7af9786b11f88d6}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+R\+T\+HO@{O\+R\+T\+HO}!Camera@{Camera}}\index{Camera@{Camera}!O\+R\+T\+HO@{O\+R\+T\+HO}}}\mbox{\Hypertarget{class_camera_a3b0a1f58deca679ac665f61c480d1dcba9441273d8f694623f0a3cf3e24c29944}\label{class_camera_a3b0a1f58deca679ac665f61c480d1dcba9441273d8f694623f0a3cf3e24c29944}} 
 O\+R\+T\+HO&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+W\+O\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+AL@{T\+W\+O\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+AL}!Camera@{Camera}}\index{Camera@{Camera}!T\+W\+O\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+AL@{T\+W\+O\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+AL}}}\mbox{\Hypertarget{class_camera_a3b0a1f58deca679ac665f61c480d1dcbaa144a5dc97bc343a7ef630cf23b09a76}\label{class_camera_a3b0a1f58deca679ac665f61c480d1dcbaa144a5dc97bc343a7ef630cf23b09a76}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+W\+O\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+AL@{T\+W\+O\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+AL}!Camera@{Camera}}\index{Camera@{Camera}!T\+W\+O\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+AL@{T\+W\+O\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+AL}}}\mbox{\Hypertarget{class_camera_a3b0a1f58deca679ac665f61c480d1dcba3438f91b4b43888aadc97e739cc258de}\label{class_camera_a3b0a1f58deca679ac665f61c480d1dcba3438f91b4b43888aadc97e739cc258de}} 
 T\+W\+O\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+AL&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Camera@{Camera}}\index{Camera@{Camera}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_camera_a3b0a1f58deca679ac665f61c480d1dcba7a6334fc8418deee4c453e1c7a366efa}\label{class_camera_a3b0a1f58deca679ac665f61c480d1dcba7a6334fc8418deee4c453e1c7a366efa}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Camera@{Camera}}\index{Camera@{Camera}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_camera_a3b0a1f58deca679ac665f61c480d1dcba26a4b44a837bf97b972628509912b4a5}\label{class_camera_a3b0a1f58deca679ac665f61c480d1dcba26a4b44a837bf97b972628509912b4a5}} 
 M\+AX&\\
 \hline
 
 \end{DoxyEnumFields}
 
 
- Camera.\+h の 85 行目に定義があります。
+ Camera.\+h の 133 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_camera_a01f94c3543f56ede7af49dc778f19331}\label{class_camera_a01f94c3543f56ede7af49dc778f19331}} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Camera.\+cpp の 240 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_ad1897942d0ccf91052386388a497349f}\label{class_camera_ad1897942d0ccf91052386388a497349f}} 
+\index{Camera@{Camera}!````~Camera@{$\sim$\+Camera}}
+\index{````~Camera@{$\sim$\+Camera}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{$\sim$\+Camera()}{~Camera()}}
+{\footnotesize\ttfamily Camera\+::$\sim$\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+デストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Camera.\+cpp の 260 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_camera_abb88028a49a71e9a6774d58076816dbf}\label{class_camera_abb88028a49a71e9a6774d58076816dbf}} 
-\index{Camera@{Camera}!Change\+State@{Change\+State}}
-\index{Change\+State@{Change\+State}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Change\+State()}{ChangeState()}}
-{\footnotesize\ttfamily void Camera\+::\+Change\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera_1_1_state}{State}} $\ast$}]{new\+\_\+camera\+\_\+state }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_camera_a9eb4faceb2a0cf81a9ec9600de03e42d}\label{class_camera_a9eb4faceb2a0cf81a9ec9600de03e42d}} 
+\index{Camera@{Camera}!Create\+Projection\+Matrix2D@{Create\+Projection\+Matrix2D}}
+\index{Create\+Projection\+Matrix2D@{Create\+Projection\+Matrix2D}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{Create\+Projection\+Matrix2\+D()}{CreateProjectionMatrix2D()}}
+{\footnotesize\ttfamily void Camera\+::\+Create\+Projection\+Matrix2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-カメラステートの変更 
+2\+Dプロジェクション行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 346 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_aa649036ee18decc7c539ef7de2b0dff6}\label{class_camera_aa649036ee18decc7c539ef7de2b0dff6}} 
+\index{Camera@{Camera}!Create\+Projection\+Matrix\+Ortho@{Create\+Projection\+Matrix\+Ortho}}
+\index{Create\+Projection\+Matrix\+Ortho@{Create\+Projection\+Matrix\+Ortho}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{Create\+Projection\+Matrix\+Ortho()}{CreateProjectionMatrixOrtho()}}
+{\footnotesize\ttfamily void Camera\+::\+Create\+Projection\+Matrix\+Ortho (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Camera.\+cpp の 149 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_aaae8043a952b7675d209bdc9b80bcc3f}\label{class_camera_aaae8043a952b7675d209bdc9b80bcc3f}} 
-\index{Camera@{Camera}!Create\+Projection\+Matrix\+\_\+2D@{Create\+Projection\+Matrix\+\_\+2D}}
-\index{Create\+Projection\+Matrix\+\_\+2D@{Create\+Projection\+Matrix\+\_\+2D}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Create\+Projection\+Matrix\+\_\+2\+D()}{CreateProjectionMatrix\_2D()}}
-{\footnotesize\ttfamily void Camera\+::\+Create\+Projection\+Matrix\+\_\+2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+正射影プロジェクション行列作成関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
-プロジェクション行列作成関数(2\+D) 
-
-
-
- Camera.\+cpp の 134 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_a215010fc78cb35ed588ac9676c166f64}\label{class_camera_a215010fc78cb35ed588ac9676c166f64}} 
-\index{Camera@{Camera}!Create\+Projection\+Matrix\+\_\+\+Ortho@{Create\+Projection\+Matrix\+\_\+\+Ortho}}
-\index{Create\+Projection\+Matrix\+\_\+\+Ortho@{Create\+Projection\+Matrix\+\_\+\+Ortho}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Create\+Projection\+Matrix\+\_\+\+Ortho()}{CreateProjectionMatrix\_Ortho()}}
-{\footnotesize\ttfamily void Camera\+::\+Create\+Projection\+Matrix\+\_\+\+Ortho (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Camera.\+cpp の 334 行目に定義があります。
 
-プロジェクション行列作成関数(正射影行列) 
+\mbox{\Hypertarget{class_camera_af9f52f44747bba0be03aa8dda5cf5914}\label{class_camera_af9f52f44747bba0be03aa8dda5cf5914}} 
+\index{Camera@{Camera}!Create\+Projection\+Matrix\+Perspective\+Fov@{Create\+Projection\+Matrix\+Perspective\+Fov}}
+\index{Create\+Projection\+Matrix\+Perspective\+Fov@{Create\+Projection\+Matrix\+Perspective\+Fov}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{Create\+Projection\+Matrix\+Perspective\+Fov()}{CreateProjectionMatrixPerspectiveFov()}}
+{\footnotesize\ttfamily void Camera\+::\+Create\+Projection\+Matrix\+Perspective\+Fov (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Camera.\+cpp の 118 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_a1786fe1adbe95e2ffa2de4cdb114546a}\label{class_camera_a1786fe1adbe95e2ffa2de4cdb114546a}} 
-\index{Camera@{Camera}!Create\+Projection\+Matrix\+\_\+\+Perspective\+Fov@{Create\+Projection\+Matrix\+\_\+\+Perspective\+Fov}}
-\index{Create\+Projection\+Matrix\+\_\+\+Perspective\+Fov@{Create\+Projection\+Matrix\+\_\+\+Perspective\+Fov}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Create\+Projection\+Matrix\+\_\+\+Perspective\+Fov()}{CreateProjectionMatrix\_PerspectiveFov()}}
-{\footnotesize\ttfamily void Camera\+::\+Create\+Projection\+Matrix\+\_\+\+Perspective\+Fov (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+透視投影プロジェクション行列作成関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
-プロジェクション行列作成関数(透視投影行列) 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
-
- Camera.\+cpp の 101 行目に定義があります。
+ Camera.\+cpp の 322 行目に定義があります。
 
 \mbox{\Hypertarget{class_camera_a5b4993ffb218536cb31d6d5224453b1a}\label{class_camera_a5b4993ffb218536cb31d6d5224453b1a}} 
 \index{Camera@{Camera}!Create\+View\+Matrix@{Create\+View\+Matrix}}
@@ -219,114 +305,384 @@ M\+AX&\\
 ビュー行列作成関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Camera.\+cpp の 87 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_a9d54f574c141e6007d98ccd905501632}\label{class_camera_a9d54f574c141e6007d98ccd905501632}} 
-\index{Camera@{Camera}!Get\+Angle\+Of\+View@{Get\+Angle\+Of\+View}}
-\index{Get\+Angle\+Of\+View@{Get\+Angle\+Of\+View}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Get\+Angle\+Of\+View()}{GetAngleOfView()}}
-{\footnotesize\ttfamily int Camera\+::\+Get\+Angle\+Of\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- Camera.\+h の 191 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_a62c4371143e87e34c70d27f2728987d9}\label{class_camera_a62c4371143e87e34c70d27f2728987d9}} 
-\index{Camera@{Camera}!Get\+Axis@{Get\+Axis}}
-\index{Get\+Axis@{Get\+Axis}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Get\+Axis()}{GetAxis()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_axis_vector}{Axis\+Vector}}$\ast$ Camera\+::\+Get\+Axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Camera.\+cpp の 315 行目に定義があります。
 
- Camera.\+h の 198 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_a47e72bd04f7aaac1657d7bce5322b97c}\label{class_camera_a47e72bd04f7aaac1657d7bce5322b97c}} 
-\index{Camera@{Camera}!Get\+Camera\+State@{Get\+Camera\+State}}
-\index{Get\+Camera\+State@{Get\+Camera\+State}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Get\+Camera\+State()}{GetCameraState()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{class_camera_1_1_state}{State}}$\ast$ Camera\+::\+Get\+Camera\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_camera_a19d2d19ddd9307c66075c83e515bda57}\label{class_camera_a19d2d19ddd9307c66075c83e515bda57}} 
+\index{Camera@{Camera}!get\+Angle\+Of\+View@{get\+Angle\+Of\+View}}
+\index{get\+Angle\+Of\+View@{get\+Angle\+Of\+View}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{get\+Angle\+Of\+View()}{getAngleOfView()}}
+{\footnotesize\ttfamily float Camera\+::get\+Angle\+Of\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
- Camera.\+h の 200 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_aec9441c5c1924df0a0cacbcf28c839e2}\label{class_camera_aec9441c5c1924df0a0cacbcf28c839e2}} 
-\index{Camera@{Camera}!Get\+Forward\+Vector@{Get\+Forward\+Vector}}
-\index{Get\+Forward\+Vector@{Get\+Forward\+Vector}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Get\+Forward\+Vector()}{GetForwardVector()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}}$\ast$ Camera\+::\+Get\+Forward\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+画角取得関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Camera.\+h の 199 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_a4cc3e87e6522b4a1ae72eab5b87430a6}\label{class_camera_a4cc3e87e6522b4a1ae72eab5b87430a6}} 
-\index{Camera@{Camera}!Get\+Look\+At\+Point@{Get\+Look\+At\+Point}}
-\index{Get\+Look\+At\+Point@{Get\+Look\+At\+Point}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Get\+Look\+At\+Point()}{GetLookAtPoint()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}}$\ast$ Camera\+::\+Get\+Look\+At\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 画角 \\
+\hline
+\end{DoxyRetVals}
 
 
+ Camera.\+cpp の 102 行目に定義があります。
 
- Camera.\+h の 189 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_a18f380bd6b2c42162c8fcf7e4441a355}\label{class_camera_a18f380bd6b2c42162c8fcf7e4441a355}} 
-\index{Camera@{Camera}!Get\+Positon@{Get\+Positon}}
-\index{Get\+Positon@{Get\+Positon}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Get\+Positon()}{GetPositon()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}}$\ast$ Camera\+::\+Get\+Positon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_camera_a0c7ba904973245fcd1b7e825eaa8d9ba}\label{class_camera_a0c7ba904973245fcd1b7e825eaa8d9ba}} 
+\index{Camera@{Camera}!get\+Far\+Clip@{get\+Far\+Clip}}
+\index{get\+Far\+Clip@{get\+Far\+Clip}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{get\+Far\+Clip()}{getFarClip()}}
+{\footnotesize\ttfamily float Camera\+::get\+Far\+Clip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
- Camera.\+h の 188 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_a473a7a8408bc7a1fdd46d12fa3852846}\label{class_camera_a473a7a8408bc7a1fdd46d12fa3852846}} 
-\index{Camera@{Camera}!Get\+Projection\+Matrix@{Get\+Projection\+Matrix}}
-\index{Get\+Projection\+Matrix@{Get\+Projection\+Matrix}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Get\+Projection\+Matrix()}{GetProjectionMatrix()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}}$\ast$ Camera\+::\+Get\+Projection\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+遠面クリップ取得関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Camera.\+h の 182 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_a3bda45b352bfa163c306c638a2aee1f6}\label{class_camera_a3bda45b352bfa163c306c638a2aee1f6}} 
-\index{Camera@{Camera}!Get\+Type@{Get\+Type}}
-\index{Get\+Type@{Get\+Type}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Get\+Type()}{GetType()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Type}} Camera\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 遠面クリップ \\
+\hline
+\end{DoxyRetVals}
 
 
+ Camera.\+cpp の 134 行目に定義があります。
 
- Camera.\+h の 201 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_aa767cb71ea435cee1e42effc912904eb}\label{class_camera_aa767cb71ea435cee1e42effc912904eb}} 
-\index{Camera@{Camera}!Get\+Up@{Get\+Up}}
-\index{Get\+Up@{Get\+Up}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Get\+Up()}{GetUp()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}}$\ast$ Camera\+::\+Get\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_camera_a85236e6f5584c5123251664ff7b848d9}\label{class_camera_a85236e6f5584c5123251664ff7b848d9}} 
+\index{Camera@{Camera}!get\+Near\+Clip@{get\+Near\+Clip}}
+\index{get\+Near\+Clip@{get\+Near\+Clip}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{get\+Near\+Clip()}{getNearClip()}}
+{\footnotesize\ttfamily float Camera\+::get\+Near\+Clip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
- Camera.\+h の 190 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_aa472374f61480c5a9dff89d30be029f4}\label{class_camera_aa472374f61480c5a9dff89d30be029f4}} 
-\index{Camera@{Camera}!Get\+View\+Matrix@{Get\+View\+Matrix}}
-\index{Get\+View\+Matrix@{Get\+View\+Matrix}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Get\+View\+Matrix()}{GetViewMatrix()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}}$\ast$ Camera\+::\+Get\+View\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+近面クリップ取得関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Camera.\+h の 177 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 近面クリップ \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\Hypertarget{class_camera_a03e3ca8b70417632f7b1b581426ec66d}\label{class_camera_a03e3ca8b70417632f7b1b581426ec66d}} 
+
+ Camera.\+cpp の 118 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a6f4c660007278a3db020a72242c9cb26}\label{class_camera_a6f4c660007278a3db020a72242c9cb26}} 
+\index{Camera@{Camera}!getp\+Default\+Forward@{getp\+Default\+Forward}}
+\index{getp\+Default\+Forward@{getp\+Default\+Forward}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{getp\+Default\+Forward()}{getpDefaultForward()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Camera\+::getp\+Default\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+既定前ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 既定前ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 224 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_ad83e4c1317708ca7282556d3f6a9ad25}\label{class_camera_ad83e4c1317708ca7282556d3f6a9ad25}} 
+\index{Camera@{Camera}!getp\+Default\+Right@{getp\+Default\+Right}}
+\index{getp\+Default\+Right@{getp\+Default\+Right}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{getp\+Default\+Right()}{getpDefaultRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Camera\+::getp\+Default\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+既定右ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 既定右ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 210 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a1a807dd20a5e8a5d8e5116748a54dfa7}\label{class_camera_a1a807dd20a5e8a5d8e5116748a54dfa7}} 
+\index{Camera@{Camera}!getp\+Default\+Up@{getp\+Default\+Up}}
+\index{getp\+Default\+Up@{getp\+Default\+Up}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{getp\+Default\+Up()}{getpDefaultUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Camera\+::getp\+Default\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+既定上ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 既定上ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 217 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_acef9b42caead07f003dc3f98c0ccdc3c}\label{class_camera_acef9b42caead07f003dc3f98c0ccdc3c}} 
+\index{Camera@{Camera}!getp\+Forward@{getp\+Forward}}
+\index{getp\+Forward@{getp\+Forward}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{getp\+Forward()}{getpForward()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Camera\+::getp\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+前ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 前ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 203 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a26d0234a29c2617960b3d07c1064f8d0}\label{class_camera_a26d0234a29c2617960b3d07c1064f8d0}} 
+\index{Camera@{Camera}!getp\+Gazing\+Point@{getp\+Gazing\+Point}}
+\index{getp\+Gazing\+Point@{getp\+Gazing\+Point}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{getp\+Gazing\+Point()}{getpGazingPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Camera\+::getp\+Gazing\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+注視点取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 注視点 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 95 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a3384dbae97724934c5083740a30f4a98}\label{class_camera_a3384dbae97724934c5083740a30f4a98}} 
+\index{Camera@{Camera}!getp\+Position@{getp\+Position}}
+\index{getp\+Position@{getp\+Position}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{getp\+Position()}{getpPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Camera\+::getp\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+座標取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 座標 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 88 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a68b2c96bfda62c6d8e6a77e38c396e8a}\label{class_camera_a68b2c96bfda62c6d8e6a77e38c396e8a}} 
+\index{Camera@{Camera}!getp\+Projection\+Matrix@{getp\+Projection\+Matrix}}
+\index{getp\+Projection\+Matrix@{getp\+Projection\+Matrix}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{getp\+Projection\+Matrix()}{getpProjectionMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ Camera\+::getp\+Projection\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+プロジェクション行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Matrix$\ast$} & プロジェクション行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 79 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a4598846e26db6cf3fe4a661b8e6a1917}\label{class_camera_a4598846e26db6cf3fe4a661b8e6a1917}} 
+\index{Camera@{Camera}!getp\+Right@{getp\+Right}}
+\index{getp\+Right@{getp\+Right}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{getp\+Right()}{getpRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Camera\+::getp\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+右ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 右ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 189 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_af6c2d92a8119d8379ee8f421a04e1a0c}\label{class_camera_af6c2d92a8119d8379ee8f421a04e1a0c}} 
+\index{Camera@{Camera}!getp\+State@{getp\+State}}
+\index{getp\+State@{getp\+State}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{getp\+State()}{getpState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_1_1_state}{Camera\+::\+State}} $\ast$ Camera\+::getp\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ステート取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em State$\ast$} & ステート \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 150 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a519361bbdc75f342e7f7754dac1f4e49}\label{class_camera_a519361bbdc75f342e7f7754dac1f4e49}} 
+\index{Camera@{Camera}!getp\+Up@{getp\+Up}}
+\index{getp\+Up@{getp\+Up}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{getp\+Up()}{getpUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Camera\+::getp\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+上ベクトル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 上ベクトル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 196 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a754251a0c028649cc5ca1b58efa41886}\label{class_camera_a754251a0c028649cc5ca1b58efa41886}} 
+\index{Camera@{Camera}!getp\+View\+Matrix@{getp\+View\+Matrix}}
+\index{getp\+View\+Matrix@{getp\+View\+Matrix}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{getp\+View\+Matrix()}{getpViewMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} $\ast$ Camera\+::getp\+View\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ビュー行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Matrix$\ast$} & ビュー行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 71 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a65143452b51a6d5e1470f79a4c358679}\label{class_camera_a65143452b51a6d5e1470f79a4c358679}} 
+\index{Camera@{Camera}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}} Camera\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+タイプ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Type} & タイプ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 175 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a7742a0dd5a97b1f4c9777a018feb8146}\label{class_camera_a7742a0dd5a97b1f4c9777a018feb8146}} 
 \index{Camera@{Camera}!Init@{Init}}
 \index{Init@{Init}!Camera@{Camera}}
 \subsubsection{\texorpdfstring{Init()}{Init()}}
-{\footnotesize\ttfamily void Camera\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera_1_1_state}{State}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}}}]{position = {\ttfamily \{0.0f,~0.0f,~-\/10.0f\}},  }\item[{\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}}}]{look\+\_\+at\+\_\+point = {\ttfamily \{0.0f,~0.0f,~0.0f\}},  }\item[{\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}}}]{up = {\ttfamily \{0.0f,~1.0f,~0.0f\}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Camera\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera_1_1_state}{State}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{position = {\ttfamily \{0.0f,~0.0f,~-\/10.0f\}},  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{gazing\+\_\+point = {\ttfamily \{0.0f,~0.0f,~0.0f\}},  }\item[{\mbox{\hyperlink{class_vector3_d}{Vector3D}}}]{up = {\ttfamily \{0.0f,~1.0f,~0.0f\}},  }\item[{float}]{angle\+\_\+of\+\_\+view = {\ttfamily \mbox{\hyperlink{class_camera_a4c0adb132f7021b25c1765914197c330}{D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+N\+G\+L\+E\+\_\+\+O\+F\+\_\+\+V\+I\+EW}}},  }\item[{float}]{near\+\_\+clip = {\ttfamily \mbox{\hyperlink{class_camera_a0c53b37bfc18f468b1a14e74ff8fec7e}{D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+E\+A\+R\+\_\+\+C\+L\+IP}}},  }\item[{float}]{far\+\_\+clip = {\ttfamily \mbox{\hyperlink{class_camera_a67838c152145b91ed68e401f58bb08bf}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+R\+\_\+\+C\+L\+IP}}} }\end{DoxyParamCaption})}
 
 
 
@@ -334,32 +690,149 @@ M\+AX&\\
 
 
 \begin{DoxyParams}{引数}
-{\em state} & \+: ステート position \+: 座標 look\+\_\+at\+\_\+point \+: 注視点 up \+: 上ベクトル \\
+{\em state} & ステート \\
+\hline
+{\em position} & 座標 \\
+\hline
+{\em gazing\+\_\+point} & 注視点 \\
+\hline
+{\em up} & 上ベクトル \\
+\hline
+{\em angle\+\_\+of\+\_\+view} & 画角 \\
+\hline
+{\em near\+\_\+clip} & 近面クリップ \\
+\hline
+{\em far\+\_\+clip} & 遠面クリップ \\
 \hline
 \end{DoxyParams}
 
-
- Camera.\+cpp の 35 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_a4c22c8ceed9126db627df9be7eb53a42}\label{class_camera_a4c22c8ceed9126db627df9be7eb53a42}} 
-\index{Camera@{Camera}!Set\+Angle\+Of\+View@{Set\+Angle\+Of\+View}}
-\index{Set\+Angle\+Of\+View@{Set\+Angle\+Of\+View}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Set\+Angle\+Of\+View()}{SetAngleOfView()}}
-{\footnotesize\ttfamily void Camera\+::\+Set\+Angle\+Of\+View (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Camera.\+cpp の 267 行目に定義があります。
 
- Camera.\+h の 192 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_a6218126e761a8289c6e6bc8c66b05e47}\label{class_camera_a6218126e761a8289c6e6bc8c66b05e47}} 
-\index{Camera@{Camera}!Set\+Type@{Set\+Type}}
-\index{Set\+Type@{Set\+Type}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{Set\+Type()}{SetType()}}
-{\footnotesize\ttfamily void Camera\+::\+Set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Type}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_camera_a8c9073240eb8385fec51d3ef185d3cee}\label{class_camera_a8c9073240eb8385fec51d3ef185d3cee}} 
+\index{Camera@{Camera}!set\+Angle\+Of\+View@{set\+Angle\+Of\+View}}
+\index{set\+Angle\+Of\+View@{set\+Angle\+Of\+View}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{set\+Angle\+Of\+View()}{setAngleOfView()}}
+{\footnotesize\ttfamily void Camera\+::set\+Angle\+Of\+View (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
 
 
 
- Camera.\+h の 202 行目に定義があります。
+画角設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 画角 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 109 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a1afa6c327f1f7d273c79acd55501c4ad}\label{class_camera_a1afa6c327f1f7d273c79acd55501c4ad}} 
+\index{Camera@{Camera}!set\+Far\+Clip@{set\+Far\+Clip}}
+\index{set\+Far\+Clip@{set\+Far\+Clip}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{set\+Far\+Clip()}{setFarClip()}}
+{\footnotesize\ttfamily void Camera\+::set\+Far\+Clip (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+近面クリップ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 遠面クリップ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 141 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a911ec8ed518a107fec11766b97d6d025}\label{class_camera_a911ec8ed518a107fec11766b97d6d025}} 
+\index{Camera@{Camera}!set\+Near\+Clip@{set\+Near\+Clip}}
+\index{set\+Near\+Clip@{set\+Near\+Clip}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{set\+Near\+Clip()}{setNearClip()}}
+{\footnotesize\ttfamily void Camera\+::set\+Near\+Clip (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+近面クリップ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 近面クリップ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 125 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_aedfc18fafa8a97eafbd8a2cb24c2e41b}\label{class_camera_aedfc18fafa8a97eafbd8a2cb24c2e41b}} 
+\index{Camera@{Camera}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{set\+State()}{setState()}}
+{\footnotesize\ttfamily void Camera\+::set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera_1_1_state}{Camera\+::\+State}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+ステート設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & ステート \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 157 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a93ecfb5163ef828fb6a5e2238954685e}\label{class_camera_a93ecfb5163ef828fb6a5e2238954685e}} 
+\index{Camera@{Camera}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{set\+Type()}{setType()}}
+{\footnotesize\ttfamily void Camera\+::set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Camera\+::\+Type}}}]{value }\end{DoxyParamCaption})}
+
+
+
+タイプ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & タイプ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 182 行目に定義があります。
 
 \mbox{\Hypertarget{class_camera_a8b3337b3e560ea6a780d646bc8c509d7}\label{class_camera_a8b3337b3e560ea6a780d646bc8c509d7}} 
 \index{Camera@{Camera}!Uninit@{Uninit}}
@@ -369,11 +842,21 @@ M\+AX&\\
 
 
 
-終了関数 
+初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Camera.\+cpp の 65 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 294 行目に定義があります。
 
 \mbox{\Hypertarget{class_camera_a4a596a3ea1fdc7d244ba4268031a360b}\label{class_camera_a4a596a3ea1fdc7d244ba4268031a360b}} 
 \index{Camera@{Camera}!Update@{Update}}
@@ -386,17 +869,27 @@ M\+AX&\\
 更新関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Camera.\+cpp の 75 行目に定義があります。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera.\+cpp の 301 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
-\mbox{\Hypertarget{class_camera_a8c8ccaf83b140c65c458aa5d0077806c}\label{class_camera_a8c8ccaf83b140c65c458aa5d0077806c}} 
+\mbox{\Hypertarget{class_camera_a76b515411d8c1b2dc0dbbace1b82c0a7}\label{class_camera_a76b515411d8c1b2dc0dbbace1b82c0a7}} 
 \index{Camera@{Camera}!angle\+\_\+of\+\_\+view\+\_\+@{angle\+\_\+of\+\_\+view\+\_\+}}
 \index{angle\+\_\+of\+\_\+view\+\_\+@{angle\+\_\+of\+\_\+view\+\_\+}!Camera@{Camera}}
 \subsubsection{\texorpdfstring{angle\+\_\+of\+\_\+view\+\_\+}{angle\_of\_view\_}}
-{\footnotesize\ttfamily int Camera\+::angle\+\_\+of\+\_\+view\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily float Camera\+::angle\+\_\+of\+\_\+view\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -404,41 +897,55 @@ M\+AX&\\
 
 
 
- Camera.\+h の 104 行目に定義があります。
+ Camera.\+h の 159 行目に定義があります。
 
-\mbox{\Hypertarget{class_camera_ad803bf87c68409f7f60836ae8fc25ab0}\label{class_camera_ad803bf87c68409f7f60836ae8fc25ab0}} 
-\index{Camera@{Camera}!axis\+\_\+@{axis\+\_\+}}
-\index{axis\+\_\+@{axis\+\_\+}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{axis\+\_\+}{axis\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_axis_vector}{Axis\+Vector}} Camera\+::axis\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-軸 
-
-
-
- Camera.\+h の 106 行目に定義があります。
-
-\mbox{\Hypertarget{class_camera_a0e0f326c66006cf7f9dc29b3e2b86b81}\label{class_camera_a0e0f326c66006cf7f9dc29b3e2b86b81}} 
+\mbox{\Hypertarget{class_camera_a4c0adb132f7021b25c1765914197c330}\label{class_camera_a4c0adb132f7021b25c1765914197c330}} 
 \index{Camera@{Camera}!D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+N\+G\+L\+E\+\_\+\+O\+F\+\_\+\+V\+I\+EW@{D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+N\+G\+L\+E\+\_\+\+O\+F\+\_\+\+V\+I\+EW}}
 \index{D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+N\+G\+L\+E\+\_\+\+O\+F\+\_\+\+V\+I\+EW@{D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+N\+G\+L\+E\+\_\+\+O\+F\+\_\+\+V\+I\+EW}!Camera@{Camera}}
 \subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+N\+G\+L\+E\+\_\+\+O\+F\+\_\+\+V\+I\+EW}{DEFAULT\_ANGLE\_OF\_VIEW}}
-{\footnotesize\ttfamily const int Camera\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+N\+G\+L\+E\+\_\+\+O\+F\+\_\+\+V\+I\+EW = 60\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily const float Camera\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+N\+G\+L\+E\+\_\+\+O\+F\+\_\+\+V\+I\+EW = 60.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
-画角 
+既定画角 
 
 
 
- Camera.\+h の 79 行目に定義があります。
+ Camera.\+h の 147 行目に定義があります。
 
-\mbox{\Hypertarget{class_camera_a90ee4c7f7bbcb5d2b0ab86d14ed60d90}\label{class_camera_a90ee4c7f7bbcb5d2b0ab86d14ed60d90}} 
-\index{Camera@{Camera}!F\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE@{F\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE}}
-\index{F\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE@{F\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{F\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE}{FAR\_CLIPPING\_PLANE}}
-{\footnotesize\ttfamily const float Camera\+::\+F\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE = 1000.\+0f\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_camera_a67838c152145b91ed68e401f58bb08bf}\label{class_camera_a67838c152145b91ed68e401f58bb08bf}} 
+\index{Camera@{Camera}!D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+R\+\_\+\+C\+L\+IP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+R\+\_\+\+C\+L\+IP}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+R\+\_\+\+C\+L\+IP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+R\+\_\+\+C\+L\+IP}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+R\+\_\+\+C\+L\+IP}{DEFAULT\_FAR\_CLIP}}
+{\footnotesize\ttfamily const float Camera\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+A\+R\+\_\+\+C\+L\+IP = 1000.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+既定遠面クリップ 
+
+
+
+ Camera.\+h の 149 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_a0c53b37bfc18f468b1a14e74ff8fec7e}\label{class_camera_a0c53b37bfc18f468b1a14e74ff8fec7e}} 
+\index{Camera@{Camera}!D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+E\+A\+R\+\_\+\+C\+L\+IP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+E\+A\+R\+\_\+\+C\+L\+IP}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+E\+A\+R\+\_\+\+C\+L\+IP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+E\+A\+R\+\_\+\+C\+L\+IP}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+E\+A\+R\+\_\+\+C\+L\+IP}{DEFAULT\_NEAR\_CLIP}}
+{\footnotesize\ttfamily const float Camera\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+E\+A\+R\+\_\+\+C\+L\+IP = 0.\+1f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+既定近面クリップ 
+
+
+
+ Camera.\+h の 148 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_afa256bca85bfb0739e5c2822d853117e}\label{class_camera_afa256bca85bfb0739e5c2822d853117e}} 
+\index{Camera@{Camera}!far\+\_\+clip\+\_\+@{far\+\_\+clip\+\_\+}}
+\index{far\+\_\+clip\+\_\+@{far\+\_\+clip\+\_\+}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{far\+\_\+clip\+\_\+}{far\_clip\_}}
+{\footnotesize\ttfamily float Camera\+::far\+\_\+clip\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -446,13 +953,13 @@ M\+AX&\\
 
 
 
- Camera.\+h の 78 行目に定義があります。
+ Camera.\+h の 161 行目に定義があります。
 
-\mbox{\Hypertarget{class_camera_a8253e46e7580737e7d22afae9aa5c0b6}\label{class_camera_a8253e46e7580737e7d22afae9aa5c0b6}} 
-\index{Camera@{Camera}!look\+\_\+at\+\_\+point\+\_\+@{look\+\_\+at\+\_\+point\+\_\+}}
-\index{look\+\_\+at\+\_\+point\+\_\+@{look\+\_\+at\+\_\+point\+\_\+}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{look\+\_\+at\+\_\+point\+\_\+}{look\_at\_point\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Camera\+::look\+\_\+at\+\_\+point\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_camera_a6db99b83e2e2cc8e4284d1885dbbb31f}\label{class_camera_a6db99b83e2e2cc8e4284d1885dbbb31f}} 
+\index{Camera@{Camera}!gazing\+\_\+point\+\_\+@{gazing\+\_\+point\+\_\+}}
+\index{gazing\+\_\+point\+\_\+@{gazing\+\_\+point\+\_\+}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{gazing\+\_\+point\+\_\+}{gazing\_point\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Camera\+::gazing\+\_\+point\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -460,13 +967,13 @@ M\+AX&\\
 
 
 
- Camera.\+h の 101 行目に定義があります。
+ Camera.\+h の 157 行目に定義があります。
 
-\mbox{\Hypertarget{class_camera_ad2e91249b7878a87cd23cf7dd5d86e00}\label{class_camera_ad2e91249b7878a87cd23cf7dd5d86e00}} 
-\index{Camera@{Camera}!N\+E\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE@{N\+E\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE}}
-\index{N\+E\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE@{N\+E\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE}!Camera@{Camera}}
-\subsubsection{\texorpdfstring{N\+E\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE}{NEAR\_CLIPPING\_PLANE}}
-{\footnotesize\ttfamily const float Camera\+::\+N\+E\+A\+R\+\_\+\+C\+L\+I\+P\+P\+I\+N\+G\+\_\+\+P\+L\+A\+NE = 0.\+1f\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_camera_a33867fed5ea7fe064fd7df9eb9d08bac}\label{class_camera_a33867fed5ea7fe064fd7df9eb9d08bac}} 
+\index{Camera@{Camera}!near\+\_\+clip\+\_\+@{near\+\_\+clip\+\_\+}}
+\index{near\+\_\+clip\+\_\+@{near\+\_\+clip\+\_\+}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{near\+\_\+clip\+\_\+}{near\_clip\_}}
+{\footnotesize\ttfamily float Camera\+::near\+\_\+clip\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -474,7 +981,7 @@ M\+AX&\\
 
 
 
- Camera.\+h の 77 行目に定義があります。
+ Camera.\+h の 160 行目に定義があります。
 
 \mbox{\Hypertarget{class_camera_a0a3450c7cdfaa59456d92779ac9ea574}\label{class_camera_a0a3450c7cdfaa59456d92779ac9ea574}} 
 \index{Camera@{Camera}!position\+\_\+@{position\+\_\+}}
@@ -488,13 +995,13 @@ M\+AX&\\
 
 
 
- Camera.\+h の 100 行目に定義があります。
+ Camera.\+h の 156 行目に定義があります。
 
-\mbox{\Hypertarget{class_camera_a67951793f883b6b9372ea08213278eee}\label{class_camera_a67951793f883b6b9372ea08213278eee}} 
+\mbox{\Hypertarget{class_camera_aff80effa10ccd9c00e7e2c0b6342b71e}\label{class_camera_aff80effa10ccd9c00e7e2c0b6342b71e}} 
 \index{Camera@{Camera}!projection\+\_\+2\+D\+\_\+@{projection\+\_\+2\+D\+\_\+}}
 \index{projection\+\_\+2\+D\+\_\+@{projection\+\_\+2\+D\+\_\+}!Camera@{Camera}}
 \subsubsection{\texorpdfstring{projection\+\_\+2\+D\+\_\+}{projection\_2D\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Camera\+::projection\+\_\+2\+D\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Camera\+::projection\+\_\+2\+D\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -502,13 +1009,13 @@ M\+AX&\\
 
 
 
- Camera.\+h の 112 行目に定義があります。
+ Camera.\+h の 166 行目に定義があります。
 
-\mbox{\Hypertarget{class_camera_a624f360dabc01f89cc988ca16599eff4}\label{class_camera_a624f360dabc01f89cc988ca16599eff4}} 
+\mbox{\Hypertarget{class_camera_a486f4283c1171dd45bc2d8edc89934e4}\label{class_camera_a486f4283c1171dd45bc2d8edc89934e4}} 
 \index{Camera@{Camera}!projection\+\_\+ortho\+\_\+@{projection\+\_\+ortho\+\_\+}}
 \index{projection\+\_\+ortho\+\_\+@{projection\+\_\+ortho\+\_\+}!Camera@{Camera}}
 \subsubsection{\texorpdfstring{projection\+\_\+ortho\+\_\+}{projection\_ortho\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Camera\+::projection\+\_\+ortho\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Camera\+::projection\+\_\+ortho\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -516,13 +1023,13 @@ M\+AX&\\
 
 
 
- Camera.\+h の 111 行目に定義があります。
+ Camera.\+h の 165 行目に定義があります。
 
-\mbox{\Hypertarget{class_camera_ab0abb153efc1642da91ec0716847231c}\label{class_camera_ab0abb153efc1642da91ec0716847231c}} 
+\mbox{\Hypertarget{class_camera_ac7f9d66ae42e2aa9db2eb3da07eb0a24}\label{class_camera_ac7f9d66ae42e2aa9db2eb3da07eb0a24}} 
 \index{Camera@{Camera}!projection\+\_\+perspective\+\_\+@{projection\+\_\+perspective\+\_\+}}
 \index{projection\+\_\+perspective\+\_\+@{projection\+\_\+perspective\+\_\+}!Camera@{Camera}}
 \subsubsection{\texorpdfstring{projection\+\_\+perspective\+\_\+}{projection\_perspective\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Camera\+::projection\+\_\+perspective\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Camera\+::projection\+\_\+perspective\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -530,13 +1037,13 @@ M\+AX&\\
 
 
 
- Camera.\+h の 110 行目に定義があります。
+ Camera.\+h の 164 行目に定義があります。
 
 \mbox{\Hypertarget{class_camera_ab2f0ce08b9fee8a4481b323f2856b245}\label{class_camera_ab2f0ce08b9fee8a4481b323f2856b245}} 
 \index{Camera@{Camera}!state\+\_\+@{state\+\_\+}}
 \index{state\+\_\+@{state\+\_\+}!Camera@{Camera}}
 \subsubsection{\texorpdfstring{state\+\_\+}{state\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_1_1_state}{State}}$\ast$ Camera\+::state\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_1_1_state}{State}}$\ast$ Camera\+::state\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -544,13 +1051,13 @@ M\+AX&\\
 
 
 
- Camera.\+h の 114 行目に定義があります。
+ Camera.\+h の 167 行目に定義があります。
 
 \mbox{\Hypertarget{class_camera_a18f6d287c98a979a2ca1579eb928d9aa}\label{class_camera_a18f6d287c98a979a2ca1579eb928d9aa}} 
 \index{Camera@{Camera}!type\+\_\+@{type\+\_\+}}
 \index{type\+\_\+@{type\+\_\+}!Camera@{Camera}}
 \subsubsection{\texorpdfstring{type\+\_\+}{type\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Type}} Camera\+::type\+\_\+ = Type\+::\+P\+E\+R\+S\+P\+E\+C\+T\+I\+VE\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_a3b0a1f58deca679ac665f61c480d1dcb}{Type}} Camera\+::type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -558,7 +1065,7 @@ M\+AX&\\
 
 
 
- Camera.\+h の 115 行目に定義があります。
+ Camera.\+h の 168 行目に定義があります。
 
 \mbox{\Hypertarget{class_camera_a8df7d311c10a0c640ac480cb5cbada83}\label{class_camera_a8df7d311c10a0c640ac480cb5cbada83}} 
 \index{Camera@{Camera}!up\+\_\+@{up\+\_\+}}
@@ -568,17 +1075,17 @@ M\+AX&\\
 
 
 
-上ベクトル 
+上方向 
 
 
 
- Camera.\+h の 102 行目に定義があります。
+ Camera.\+h の 158 行目に定義があります。
 
-\mbox{\Hypertarget{class_camera_a5839ccb2cd4931e904a7a6cd412260ad}\label{class_camera_a5839ccb2cd4931e904a7a6cd412260ad}} 
+\mbox{\Hypertarget{class_camera_aed93b5c4ec9e79379d84ade0d2ae90d4}\label{class_camera_aed93b5c4ec9e79379d84ade0d2ae90d4}} 
 \index{Camera@{Camera}!view\+\_\+@{view\+\_\+}}
 \index{view\+\_\+@{view\+\_\+}!Camera@{Camera}}
 \subsubsection{\texorpdfstring{view\+\_\+}{view\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Camera\+::view\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Camera\+::view\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -586,13 +1093,13 @@ M\+AX&\\
 
 
 
- Camera.\+h の 108 行目に定義があります。
+ Camera.\+h の 162 行目に定義があります。
 
-\mbox{\Hypertarget{class_camera_af6dbadc718d75c621fec94b76365ca57}\label{class_camera_af6dbadc718d75c621fec94b76365ca57}} 
+\mbox{\Hypertarget{class_camera_a572a7293b43cdfa079999a24a2c433f0}\label{class_camera_a572a7293b43cdfa079999a24a2c433f0}} 
 \index{Camera@{Camera}!view\+\_\+2\+D\+\_\+@{view\+\_\+2\+D\+\_\+}}
 \index{view\+\_\+2\+D\+\_\+@{view\+\_\+2\+D\+\_\+}!Camera@{Camera}}
 \subsubsection{\texorpdfstring{view\+\_\+2\+D\+\_\+}{view\_2D\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Camera\+::view\+\_\+2\+D\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix}{Matrix}} Camera\+::view\+\_\+2\+D\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -600,11 +1107,11 @@ M\+AX&\\
 
 
 
- Camera.\+h の 109 行目に定義があります。
+ Camera.\+h の 163 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Camera/\mbox{\hyperlink{_camera_8h}{Camera.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Camera/\mbox{\hyperlink{_camera_8cpp}{Camera.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Camera/\mbox{\hyperlink{_camera_8h}{Camera.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Camera/\+Source/\mbox{\hyperlink{_camera_8cpp}{Camera.\+cpp}}\end{DoxyCompactItemize}

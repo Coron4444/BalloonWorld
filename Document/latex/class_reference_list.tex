@@ -1,0 +1,191 @@
+\hypertarget{class_reference_list}{}\section{Reference\+List$<$ Type $>$ クラステンプレート}
+\label{class_reference_list}\index{Reference\+List$<$ Type $>$@{Reference\+List$<$ Type $>$}}
+
+
+参照リスト\+Class(template)  
+
+
+
+
+{\ttfamily \#include $<$Reference\+List.\+h$>$}
+
+
+
+Reference\+List$<$ Type $>$ 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{class_reference_list__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_reference_list_ab7e9c83c0d79b4a9d62c4e678243e632}{set\+Object}} (Type $\ast$value)
+\begin{DoxyCompactList}\small\item\em オブジェクト設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reference_list_a4ea7062b9314814866c9b3990ea59e49}{getp\+My\+Pointer}} (Type $\ast$$\ast$value)
+\begin{DoxyCompactList}\small\item\em 自分のオブジェクトポインタ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reference_list_a549cf7b92db6d920fc9a92c2ad33f0c5}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reference_list_a56ce3eb1b8a5b80325dd99a2e4d767c6}{Release\+Reference}} (Type $\ast$$\ast$reference\+\_\+opponent)
+\begin{DoxyCompactList}\small\item\em 参照解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+Type $\ast$ \mbox{\hyperlink{class_reference_list_a4db4d51f2d810aea8668abdae6f0bd56}{object\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 自分のオブジェクト \end{DoxyCompactList}\item 
+std\+::list$<$ Type $\ast$$\ast$ $>$ \mbox{\hyperlink{class_reference_list_a3730c5bad58a49a53810c08f235b867c}{reference\+\_\+opponent\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 参照相手ポインタリスト \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Type$>$\newline
+class Reference\+List$<$ Type $>$}
+
+参照リスト\+Class(template) 
+
+参照相手のリスト\+Class(template) 
+
+ Reference\+List.\+h の 18 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_reference_list_a4ea7062b9314814866c9b3990ea59e49}\label{class_reference_list_a4ea7062b9314814866c9b3990ea59e49}} 
+\index{Reference\+List@{Reference\+List}!getp\+My\+Pointer@{getp\+My\+Pointer}}
+\index{getp\+My\+Pointer@{getp\+My\+Pointer}!Reference\+List@{Reference\+List}}
+\subsubsection{\texorpdfstring{getp\+My\+Pointer()}{getpMyPointer()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \mbox{\hyperlink{class_reference_list}{Reference\+List}}$<$ Type $>$\+::getp\+My\+Pointer (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+自分のオブジェクトポインタ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$$\ast$value} & 参照相手 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Type$\ast$} & 自分のオブジェクトポインタ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Reference\+List.\+h の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_reference_list_a56ce3eb1b8a5b80325dd99a2e4d767c6}\label{class_reference_list_a56ce3eb1b8a5b80325dd99a2e4d767c6}} 
+\index{Reference\+List@{Reference\+List}!Release\+Reference@{Release\+Reference}}
+\index{Release\+Reference@{Release\+Reference}!Reference\+List@{Reference\+List}}
+\subsubsection{\texorpdfstring{Release\+Reference()}{ReleaseReference()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \mbox{\hyperlink{class_reference_list}{Reference\+List}}$<$ Type $>$\+::Release\+Reference (\begin{DoxyParamCaption}\item[{Type $\ast$$\ast$}]{reference\+\_\+opponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+参照解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$$\ast$reference\+\_\+opponent} & 参照相手 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Reference\+List.\+h の 85 行目に定義があります。
+
+\mbox{\Hypertarget{class_reference_list_ab7e9c83c0d79b4a9d62c4e678243e632}\label{class_reference_list_ab7e9c83c0d79b4a9d62c4e678243e632}} 
+\index{Reference\+List@{Reference\+List}!set\+Object@{set\+Object}}
+\index{set\+Object@{set\+Object}!Reference\+List@{Reference\+List}}
+\subsubsection{\texorpdfstring{set\+Object()}{setObject()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \mbox{\hyperlink{class_reference_list}{Reference\+List}}$<$ Type $>$\+::set\+Object (\begin{DoxyParamCaption}\item[{Type $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+オブジェクト設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & オブジェクト \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Reference\+List.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_reference_list_a549cf7b92db6d920fc9a92c2ad33f0c5}\label{class_reference_list_a549cf7b92db6d920fc9a92c2ad33f0c5}} 
+\index{Reference\+List@{Reference\+List}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Reference\+List@{Reference\+List}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \mbox{\hyperlink{class_reference_list}{Reference\+List}}$<$ Type $>$\+::Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Reference\+List.\+h の 70 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_reference_list_a4db4d51f2d810aea8668abdae6f0bd56}\label{class_reference_list_a4db4d51f2d810aea8668abdae6f0bd56}} 
+\index{Reference\+List@{Reference\+List}!object\+\_\+@{object\+\_\+}}
+\index{object\+\_\+@{object\+\_\+}!Reference\+List@{Reference\+List}}
+\subsubsection{\texorpdfstring{object\+\_\+}{object\_}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+Type$\ast$ \mbox{\hyperlink{class_reference_list}{Reference\+List}}$<$ Type $>$\+::object\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+自分のオブジェクト 
+
+
+
+ Reference\+List.\+h の 24 行目に定義があります。
+
+\mbox{\Hypertarget{class_reference_list_a3730c5bad58a49a53810c08f235b867c}\label{class_reference_list_a3730c5bad58a49a53810c08f235b867c}} 
+\index{Reference\+List@{Reference\+List}!reference\+\_\+opponent\+\_\+@{reference\+\_\+opponent\+\_\+}}
+\index{reference\+\_\+opponent\+\_\+@{reference\+\_\+opponent\+\_\+}!Reference\+List@{Reference\+List}}
+\subsubsection{\texorpdfstring{reference\+\_\+opponent\+\_\+}{reference\_opponent\_}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+std\+::list$<$Type$\ast$$\ast$$>$ \mbox{\hyperlink{class_reference_list}{Reference\+List}}$<$ Type $>$\+::reference\+\_\+opponent\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+参照相手ポインタリスト 
+
+
+
+ Reference\+List.\+h の 25 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_reference_list_8h}{Reference\+List.\+h}}\end{DoxyCompactItemize}

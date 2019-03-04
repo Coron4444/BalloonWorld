@@ -11,39 +11,63 @@
 
 
 
-Game\+Scene の継承関係図\nopagebreak
+Game\+Scene 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=151pt]{class_game_scene__inherit__graph}
+\includegraphics[width=350pt]{class_game_scene__coll__graph}
 \end{center}
 \end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463f}{State}} \{ \newline
+\mbox{\hyperlink{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fab50339a10e1de285ac99d4c3990b8693}{State\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fab078ffd28db767c502ac367053f6e0ac}{State\+::\+S\+T\+A\+RT}}, 
+\mbox{\hyperlink{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fa4504e1ed59cd9732b8a844e5424e6f13}{State\+::\+G\+A\+ME}}, 
+\mbox{\hyperlink{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fa291554596c183e837f0a6bec3767c891}{State\+::\+P\+A\+U\+SE}}, 
+\newline
+\mbox{\hyperlink{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fab1a326c06d88bf042f73d70f50197905}{State\+::\+E\+ND}}, 
+\mbox{\hyperlink{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fa26a4b44a837bf97b972628509912b4a5}{State\+::\+M\+AX}}
+ \}
+\end{DoxyCompactItemize}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{class_game_scene_a56604f01c0fa914660c3d8b788a94405}{get\+Is\+Clear}} ()
-\begin{DoxyCompactList}\small\item\em クリアフラグ取得関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_game_scene_a1bd84ecb8d44bd5e57b4a2d772ef1bf9}{set\+Is\+Clear}} (bool value)
-\begin{DoxyCompactList}\small\item\em クリアフラグ設定関数 \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_game_scene_a16b26b3b8ea91dcaf762292414bf5d6d}{get\+Score}} ()
+\mbox{\hyperlink{class_stage_manager}{Stage\+Manager}} $\ast$ \mbox{\hyperlink{class_game_scene_adbeafbb5e7029a875c7471d9792e5862}{getp\+Stage\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em ステージマネージャ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_scene_a22d5ace2b0834672d2a3d4044cda8b8e}{set\+Stage\+Manager}} (\mbox{\hyperlink{class_stage_manager}{Stage\+Manager}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em ステージマネージャ設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_score}{Score}} $\ast$ \mbox{\hyperlink{class_game_scene_adaeb9248bb4825eb4c80b3b75032fb91}{getp\+Score}} ()
 \begin{DoxyCompactList}\small\item\em スコア取得関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_game_scene_a853fefbf82ff85b9f34e325108ae7e3b}{set\+Score}} (int value)
-\begin{DoxyCompactList}\small\item\em スコア設定関数 \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_game_scene_a2f8413f473bc9a937fa02bfd4678d61d}{get\+Game\+Over}} ()
-\begin{DoxyCompactList}\small\item\em ゲームオーバーフラグ取得関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_game_scene_abaefc8ae1bd5625d79da25120ef33a8e}{set\+Game\+Over}} (int value)
-\begin{DoxyCompactList}\small\item\em ゲームオーバーフラグ設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_time}{Time}} $\ast$ \mbox{\hyperlink{class_game_scene_a8f489cb8ef215a3df4806444aa69e869}{getp\+Time}} ()
+\begin{DoxyCompactList}\small\item\em 時間取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_balloon_num}{Balloon\+Num}} $\ast$ \mbox{\hyperlink{class_game_scene_a873a5361d2169acbc94298f200d45259}{getp\+Balloon\+Num}} ()
+\begin{DoxyCompactList}\small\item\em 風船数取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_scene_a91e9e6ce0d780a1a673a79176069634b}{set\+All\+UI}} ()
+\begin{DoxyCompactList}\small\item\em 全\+U\+I設定関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_game_scene_a25e9e82ce85255dac27cd6489751bd40}{Game\+Scene}} (\mbox{\hyperlink{class_scene_base_1_1_state_base}{State\+Base}} $\ast$state)
-\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_scene_a0ed06e4578a96910725641fb1a74d958}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_scene_a8b96bb5d72109ab37729f05f4f78c43e}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_scene_a4a7840220ef38af15def6d25159c93f3}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{class_game_scene_a48cf67b81c80718df80ee03aa6e73e74}{is\+\_\+clear\+\_\+}} = false
-\begin{DoxyCompactList}\small\item\em クリアフラグ \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_game_scene_afe49ee089b9ad8415f7ab432a3c554aa}{score\+\_\+}} = 0
+\mbox{\hyperlink{class_pause}{Pause}} $\ast$ \mbox{\hyperlink{class_game_scene_a998ade349a8d24fbeaea63d3455c6954}{pause\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em ポーズ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_stage_manager}{Stage\+Manager}} $\ast$ \mbox{\hyperlink{class_game_scene_a9644e90afff130771cafa10d28206c43}{stage\+\_\+manager\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em ステージマネージャ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_score}{Score}} $\ast$ \mbox{\hyperlink{class_game_scene_ab1fde2d9a04eb791457a7fc8ec11a99d}{score\+\_\+}} = nullptr
 \begin{DoxyCompactList}\small\item\em スコア \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_game_scene_a92b5476dc1536c43b604bef51cc36c70}{game\+\_\+over\+\_\+}} = -\/1
-\begin{DoxyCompactList}\small\item\em ゲームオーバーフラグ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_time}{Time}} $\ast$ \mbox{\hyperlink{class_game_scene_a9bb839a4c2d00698292efd6d029e9c8e}{time\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 時間 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_balloon_num}{Balloon\+Num}} $\ast$ \mbox{\hyperlink{class_game_scene_a721bf927c3a3953fbe6333aea1718c3b}{balloon\+\_\+num\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 風船数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
@@ -53,7 +77,46 @@ int \mbox{\hyperlink{class_game_scene_a92b5476dc1536c43b604bef51cc36c70}{game\+\
 
 ゲームシーン特有の共有データを持っている 
 
- Game\+Scene.\+h の 25 行目に定義があります。
+ Game\+Scene.\+h の 36 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463f}\label{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463f}} 
+\index{Game\+Scene@{Game\+Scene}!State@{State}}
+\index{State@{State}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463f}{Game\+Scene\+::\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Game\+Scene@{Game\+Scene}}\index{Game\+Scene@{Game\+Scene}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fab50339a10e1de285ac99d4c3990b8693}\label{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+A\+RT@{S\+T\+A\+RT}!Game\+Scene@{Game\+Scene}}\index{Game\+Scene@{Game\+Scene}!S\+T\+A\+RT@{S\+T\+A\+RT}}}\mbox{\Hypertarget{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fab078ffd28db767c502ac367053f6e0ac}\label{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fab078ffd28db767c502ac367053f6e0ac}} 
+S\+T\+A\+RT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+A\+ME@{G\+A\+ME}!Game\+Scene@{Game\+Scene}}\index{Game\+Scene@{Game\+Scene}!G\+A\+ME@{G\+A\+ME}}}\mbox{\Hypertarget{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fa4504e1ed59cd9732b8a844e5424e6f13}\label{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fa4504e1ed59cd9732b8a844e5424e6f13}} 
+G\+A\+ME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+U\+SE@{P\+A\+U\+SE}!Game\+Scene@{Game\+Scene}}\index{Game\+Scene@{Game\+Scene}!P\+A\+U\+SE@{P\+A\+U\+SE}}}\mbox{\Hypertarget{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fa291554596c183e837f0a6bec3767c891}\label{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fa291554596c183e837f0a6bec3767c891}} 
+P\+A\+U\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+ND@{E\+ND}!Game\+Scene@{Game\+Scene}}\index{Game\+Scene@{Game\+Scene}!E\+ND@{E\+ND}}}\mbox{\Hypertarget{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fab1a326c06d88bf042f73d70f50197905}\label{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fab1a326c06d88bf042f73d70f50197905}} 
+E\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Game\+Scene@{Game\+Scene}}\index{Game\+Scene@{Game\+Scene}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fa26a4b44a837bf97b972628509912b4a5}\label{class_game_scene_a36a51763487e2f01ced6dd8eb2dd463fa26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Game\+Scene.\+h の 42 行目に定義があります。
 
 
 
@@ -70,49 +133,25 @@ int \mbox{\hyperlink{class_game_scene_a92b5476dc1536c43b604bef51cc36c70}{game\+\
 
 
 \begin{DoxyParams}{引数}
-{\em state} & 最初のステート \\
+{\em $\ast$value} & ステート \\
 \hline
 \end{DoxyParams}
 
 
- Game\+Scene.\+cpp の 65 行目に定義があります。
+ Game\+Scene.\+cpp の 78 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_game_scene_a2f8413f473bc9a937fa02bfd4678d61d}\label{class_game_scene_a2f8413f473bc9a937fa02bfd4678d61d}} 
-\index{Game\+Scene@{Game\+Scene}!get\+Game\+Over@{get\+Game\+Over}}
-\index{get\+Game\+Over@{get\+Game\+Over}!Game\+Scene@{Game\+Scene}}
-\subsubsection{\texorpdfstring{get\+Game\+Over()}{getGameOver()}}
-{\footnotesize\ttfamily int Game\+Scene\+::get\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_game_scene_a873a5361d2169acbc94298f200d45259}\label{class_game_scene_a873a5361d2169acbc94298f200d45259}} 
+\index{Game\+Scene@{Game\+Scene}!getp\+Balloon\+Num@{getp\+Balloon\+Num}}
+\index{getp\+Balloon\+Num@{getp\+Balloon\+Num}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{getp\+Balloon\+Num()}{getpBalloonNum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_balloon_num}{Balloon\+Num}} $\ast$ Game\+Scene\+::getp\+Balloon\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-ゲームオーバーフラグ取得関数 
-
-
-\begin{DoxyParams}{引数}
-{\em void} & なし \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyRetVals}{戻り値}
-{\em bool} & ゲームオーバーの有無 \\
-\hline
-\end{DoxyRetVals}
-
-
- Game\+Scene.\+cpp の 48 行目に定義があります。
-
-\mbox{\Hypertarget{class_game_scene_a56604f01c0fa914660c3d8b788a94405}\label{class_game_scene_a56604f01c0fa914660c3d8b788a94405}} 
-\index{Game\+Scene@{Game\+Scene}!get\+Is\+Clear@{get\+Is\+Clear}}
-\index{get\+Is\+Clear@{get\+Is\+Clear}!Game\+Scene@{Game\+Scene}}
-\subsubsection{\texorpdfstring{get\+Is\+Clear()}{getIsClear()}}
-{\footnotesize\ttfamily bool Game\+Scene\+::get\+Is\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-クリアフラグ取得関数 
+風船数取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -121,18 +160,18 @@ int \mbox{\hyperlink{class_game_scene_a92b5476dc1536c43b604bef51cc36c70}{game\+\
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em bool} & クリアの有無 \\
+{\em Balloon\+Num$\ast$} & 風船数 \\
 \hline
 \end{DoxyRetVals}
 
 
- Game\+Scene.\+cpp の 20 行目に定義があります。
+ Game\+Scene.\+cpp の 59 行目に定義があります。
 
-\mbox{\Hypertarget{class_game_scene_a16b26b3b8ea91dcaf762292414bf5d6d}\label{class_game_scene_a16b26b3b8ea91dcaf762292414bf5d6d}} 
-\index{Game\+Scene@{Game\+Scene}!get\+Score@{get\+Score}}
-\index{get\+Score@{get\+Score}!Game\+Scene@{Game\+Scene}}
-\subsubsection{\texorpdfstring{get\+Score()}{getScore()}}
-{\footnotesize\ttfamily int Game\+Scene\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_game_scene_adaeb9248bb4825eb4c80b3b75032fb91}\label{class_game_scene_adaeb9248bb4825eb4c80b3b75032fb91}} 
+\index{Game\+Scene@{Game\+Scene}!getp\+Score@{getp\+Score}}
+\index{getp\+Score@{getp\+Score}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{getp\+Score()}{getpScore()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_score}{Score}} $\ast$ Game\+Scene\+::getp\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -145,26 +184,74 @@ int \mbox{\hyperlink{class_game_scene_a92b5476dc1536c43b604bef51cc36c70}{game\+\
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em int} & スコア値 \\
+{\em Score$\ast$} & スコア \\
 \hline
 \end{DoxyRetVals}
 
 
- Game\+Scene.\+cpp の 34 行目に定義があります。
+ Game\+Scene.\+cpp の 45 行目に定義があります。
 
-\mbox{\Hypertarget{class_game_scene_abaefc8ae1bd5625d79da25120ef33a8e}\label{class_game_scene_abaefc8ae1bd5625d79da25120ef33a8e}} 
-\index{Game\+Scene@{Game\+Scene}!set\+Game\+Over@{set\+Game\+Over}}
-\index{set\+Game\+Over@{set\+Game\+Over}!Game\+Scene@{Game\+Scene}}
-\subsubsection{\texorpdfstring{set\+Game\+Over()}{setGameOver()}}
-{\footnotesize\ttfamily void Game\+Scene\+::set\+Game\+Over (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
-
-
-
-ゲームオーバーフラグ設定関数 
+\mbox{\Hypertarget{class_game_scene_adbeafbb5e7029a875c7471d9792e5862}\label{class_game_scene_adbeafbb5e7029a875c7471d9792e5862}} 
+\index{Game\+Scene@{Game\+Scene}!getp\+Stage\+Manager@{getp\+Stage\+Manager}}
+\index{getp\+Stage\+Manager@{getp\+Stage\+Manager}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{getp\+Stage\+Manager()}{getpStageManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_stage_manager}{Stage\+Manager}} $\ast$ Game\+Scene\+::getp\+Stage\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & ゲームオーバーフラグ \\
+
+ステージマネージャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Stage\+Manager$\ast$} & ステージマネージャ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Scene.\+cpp の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_scene_a8f489cb8ef215a3df4806444aa69e869}\label{class_game_scene_a8f489cb8ef215a3df4806444aa69e869}} 
+\index{Game\+Scene@{Game\+Scene}!getp\+Time@{getp\+Time}}
+\index{getp\+Time@{getp\+Time}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{getp\+Time()}{getpTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}} $\ast$ Game\+Scene\+::getp\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+時間取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Time$\ast$} & 時間 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Scene.\+cpp の 52 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_scene_a0ed06e4578a96910725641fb1a74d958}\label{class_game_scene_a0ed06e4578a96910725641fb1a74d958}} 
+\index{Game\+Scene@{Game\+Scene}!Init@{Init}}
+\index{Init@{Init}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Game\+Scene\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
 \hline
 \end{DoxyParams}
 
@@ -174,21 +261,25 @@ int \mbox{\hyperlink{class_game_scene_a92b5476dc1536c43b604bef51cc36c70}{game\+\
 \end{DoxyRetVals}
 
 
- Game\+Scene.\+cpp の 55 行目に定義があります。
-
-\mbox{\Hypertarget{class_game_scene_a1bd84ecb8d44bd5e57b4a2d772ef1bf9}\label{class_game_scene_a1bd84ecb8d44bd5e57b4a2d772ef1bf9}} 
-\index{Game\+Scene@{Game\+Scene}!set\+Is\+Clear@{set\+Is\+Clear}}
-\index{set\+Is\+Clear@{set\+Is\+Clear}!Game\+Scene@{Game\+Scene}}
-\subsubsection{\texorpdfstring{set\+Is\+Clear()}{setIsClear()}}
-{\footnotesize\ttfamily void Game\+Scene\+::set\+Is\+Clear (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+\mbox{\hyperlink{class_scene_null_a6b27830a755687f2c00149bcfa739388}{Scene\+Null}}を再実装しています。
 
 
 
-クリアフラグ設定関数 
+ Game\+Scene.\+cpp の 85 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_scene_a91e9e6ce0d780a1a673a79176069634b}\label{class_game_scene_a91e9e6ce0d780a1a673a79176069634b}} 
+\index{Game\+Scene@{Game\+Scene}!set\+All\+UI@{set\+All\+UI}}
+\index{set\+All\+UI@{set\+All\+UI}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{set\+All\+U\+I()}{setAllUI()}}
+{\footnotesize\ttfamily void Game\+Scene\+::set\+All\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & クリアフラグ \\
+
+全\+U\+I設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
 \hline
 \end{DoxyParams}
 
@@ -198,21 +289,45 @@ int \mbox{\hyperlink{class_game_scene_a92b5476dc1536c43b604bef51cc36c70}{game\+\
 \end{DoxyRetVals}
 
 
- Game\+Scene.\+cpp の 27 行目に定義があります。
+ Game\+Scene.\+cpp の 66 行目に定義があります。
 
-\mbox{\Hypertarget{class_game_scene_a853fefbf82ff85b9f34e325108ae7e3b}\label{class_game_scene_a853fefbf82ff85b9f34e325108ae7e3b}} 
-\index{Game\+Scene@{Game\+Scene}!set\+Score@{set\+Score}}
-\index{set\+Score@{set\+Score}!Game\+Scene@{Game\+Scene}}
-\subsubsection{\texorpdfstring{set\+Score()}{setScore()}}
-{\footnotesize\ttfamily void Game\+Scene\+::set\+Score (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
-
-
-
-スコア設定関数 
+\mbox{\Hypertarget{class_game_scene_a22d5ace2b0834672d2a3d4044cda8b8e}\label{class_game_scene_a22d5ace2b0834672d2a3d4044cda8b8e}} 
+\index{Game\+Scene@{Game\+Scene}!set\+Stage\+Manager@{set\+Stage\+Manager}}
+\index{set\+Stage\+Manager@{set\+Stage\+Manager}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{set\+Stage\+Manager()}{setStageManager()}}
+{\footnotesize\ttfamily void Game\+Scene\+::set\+Stage\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stage_manager}{Stage\+Manager}} $\ast$}]{value }\end{DoxyParamCaption})}
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & スコア値 \\
+
+ステージマネージャ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Stage\+Manager$\ast$} & ステージマネージャ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Game\+Scene.\+cpp の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_scene_a8b96bb5d72109ab37729f05f4f78c43e}\label{class_game_scene_a8b96bb5d72109ab37729f05f4f78c43e}} 
+\index{Game\+Scene@{Game\+Scene}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Game\+Scene\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
 \hline
 \end{DoxyParams}
 
@@ -222,44 +337,76 @@ int \mbox{\hyperlink{class_game_scene_a92b5476dc1536c43b604bef51cc36c70}{game\+\
 \end{DoxyRetVals}
 
 
- Game\+Scene.\+cpp の 41 行目に定義があります。
+\mbox{\hyperlink{class_scene_null_abbff54a7323b5ccde4b5094757747738}{Scene\+Null}}を再実装しています。
+
+
+
+ Game\+Scene.\+cpp の 195 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_scene_a4a7840220ef38af15def6d25159c93f3}\label{class_game_scene_a4a7840220ef38af15def6d25159c93f3}} 
+\index{Game\+Scene@{Game\+Scene}!Update@{Update}}
+\index{Update@{Update}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Game\+Scene\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_scene_null_a79de810b699f496fda20e4ac837d075a}{Scene\+Null}}を再実装しています。
+
+
+
+ Game\+Scene.\+cpp の 140 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
-\mbox{\Hypertarget{class_game_scene_a92b5476dc1536c43b604bef51cc36c70}\label{class_game_scene_a92b5476dc1536c43b604bef51cc36c70}} 
-\index{Game\+Scene@{Game\+Scene}!game\+\_\+over\+\_\+@{game\+\_\+over\+\_\+}}
-\index{game\+\_\+over\+\_\+@{game\+\_\+over\+\_\+}!Game\+Scene@{Game\+Scene}}
-\subsubsection{\texorpdfstring{game\+\_\+over\+\_\+}{game\_over\_}}
-{\footnotesize\ttfamily int Game\+Scene\+::game\+\_\+over\+\_\+ = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_game_scene_a721bf927c3a3953fbe6333aea1718c3b}\label{class_game_scene_a721bf927c3a3953fbe6333aea1718c3b}} 
+\index{Game\+Scene@{Game\+Scene}!balloon\+\_\+num\+\_\+@{balloon\+\_\+num\+\_\+}}
+\index{balloon\+\_\+num\+\_\+@{balloon\+\_\+num\+\_\+}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{balloon\+\_\+num\+\_\+}{balloon\_num\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_balloon_num}{Balloon\+Num}}$\ast$ Game\+Scene\+::balloon\+\_\+num\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-ゲームオーバーフラグ 
+風船数 
 
 
 
- Game\+Scene.\+h の 33 行目に定義があります。
+ Game\+Scene.\+h の 61 行目に定義があります。
 
-\mbox{\Hypertarget{class_game_scene_a48cf67b81c80718df80ee03aa6e73e74}\label{class_game_scene_a48cf67b81c80718df80ee03aa6e73e74}} 
-\index{Game\+Scene@{Game\+Scene}!is\+\_\+clear\+\_\+@{is\+\_\+clear\+\_\+}}
-\index{is\+\_\+clear\+\_\+@{is\+\_\+clear\+\_\+}!Game\+Scene@{Game\+Scene}}
-\subsubsection{\texorpdfstring{is\+\_\+clear\+\_\+}{is\_clear\_}}
-{\footnotesize\ttfamily bool Game\+Scene\+::is\+\_\+clear\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-クリアフラグ 
+\mbox{\Hypertarget{class_game_scene_a998ade349a8d24fbeaea63d3455c6954}\label{class_game_scene_a998ade349a8d24fbeaea63d3455c6954}} 
+\index{Game\+Scene@{Game\+Scene}!pause\+\_\+@{pause\+\_\+}}
+\index{pause\+\_\+@{pause\+\_\+}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{pause\+\_\+}{pause\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pause}{Pause}}$\ast$ Game\+Scene\+::pause\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
- Game\+Scene.\+h の 31 行目に定義があります。
+ポーズ 
 
-\mbox{\Hypertarget{class_game_scene_afe49ee089b9ad8415f7ab432a3c554aa}\label{class_game_scene_afe49ee089b9ad8415f7ab432a3c554aa}} 
+
+
+ Game\+Scene.\+h の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_scene_ab1fde2d9a04eb791457a7fc8ec11a99d}\label{class_game_scene_ab1fde2d9a04eb791457a7fc8ec11a99d}} 
 \index{Game\+Scene@{Game\+Scene}!score\+\_\+@{score\+\_\+}}
 \index{score\+\_\+@{score\+\_\+}!Game\+Scene@{Game\+Scene}}
 \subsubsection{\texorpdfstring{score\+\_\+}{score\_}}
-{\footnotesize\ttfamily int Game\+Scene\+::score\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_score}{Score}}$\ast$ Game\+Scene\+::score\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -267,11 +414,39 @@ int \mbox{\hyperlink{class_game_scene_a92b5476dc1536c43b604bef51cc36c70}{game\+\
 
 
 
- Game\+Scene.\+h の 32 行目に定義があります。
+ Game\+Scene.\+h の 59 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_scene_a9644e90afff130771cafa10d28206c43}\label{class_game_scene_a9644e90afff130771cafa10d28206c43}} 
+\index{Game\+Scene@{Game\+Scene}!stage\+\_\+manager\+\_\+@{stage\+\_\+manager\+\_\+}}
+\index{stage\+\_\+manager\+\_\+@{stage\+\_\+manager\+\_\+}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{stage\+\_\+manager\+\_\+}{stage\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_stage_manager}{Stage\+Manager}}$\ast$ Game\+Scene\+::stage\+\_\+manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ステージマネージャ 
+
+
+
+ Game\+Scene.\+h の 58 行目に定義があります。
+
+\mbox{\Hypertarget{class_game_scene_a9bb839a4c2d00698292efd6d029e9c8e}\label{class_game_scene_a9bb839a4c2d00698292efd6d029e9c8e}} 
+\index{Game\+Scene@{Game\+Scene}!time\+\_\+@{time\+\_\+}}
+\index{time\+\_\+@{time\+\_\+}!Game\+Scene@{Game\+Scene}}
+\subsubsection{\texorpdfstring{time\+\_\+}{time\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}}$\ast$ Game\+Scene\+::time\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+時間 
+
+
+
+ Game\+Scene.\+h の 60 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/02\+\_\+\+Scene/\+Scenes/\+Game\+Scene/\mbox{\hyperlink{_game_scene_8h}{Game\+Scene.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/02\+\_\+\+Scene/\+Scenes/\+Game\+Scene/\mbox{\hyperlink{_game_scene_8cpp}{Game\+Scene.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Scenes/\+Game\+Scene/\mbox{\hyperlink{_game_scene_8h}{Game\+Scene.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Scenes/\+Game\+Scene/\+Source/\mbox{\hyperlink{_game_scene_8cpp}{Game\+Scene.\+cpp}}\end{DoxyCompactItemize}

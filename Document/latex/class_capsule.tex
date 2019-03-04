@@ -11,40 +11,45 @@
 
 
 
-Capsule の継承関係図\nopagebreak
+Capsule 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=184pt]{class_capsule__inherit__graph}
+\includegraphics[width=304pt]{class_capsule__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_sphere}{Sphere}} $\ast$ \mbox{\hyperlink{class_capsule_ad6590760125ad1b564bcd00fc9c0272e}{getp\+Sphere0}} ()
-\begin{DoxyCompactList}\small\item\em 球0ポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 球0取得関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_sphere}{Sphere}} $\ast$ \mbox{\hyperlink{class_capsule_a3abd8375914c3ae6c5ff8ad585988d57}{getp\+Sphere1}} ()
-\begin{DoxyCompactList}\small\item\em 球1ポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 球1取得関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_cylinder}{Cylinder}} $\ast$ \mbox{\hyperlink{class_capsule_a86fceb506f99d999cec56a5c316a5c7a}{getp\+Cylinder}} ()
-\begin{DoxyCompactList}\small\item\em 円柱ポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 円柱取得関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_line_segment}{Line\+Segment}} $\ast$ \mbox{\hyperlink{class_capsule_aadd6a7e5e20796e3f591b83cc406070e}{getp\+Line\+Segment}} ()
-\begin{DoxyCompactList}\small\item\em 線分ポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 線分取得関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_capsule_ab0f3be95228fef65ef04d444aa5bcddd}{getp\+Position}} ()
-\begin{DoxyCompactList}\small\item\em 座標ポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 座標取得関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_capsule_a93bb5298cb7f9f8ab27e08825bcb2f76}{getp\+Vector}} ()
-\begin{DoxyCompactList}\small\item\em 方向ポインタ取得関数 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 方向取得関数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_capsule_a32991dc5e0331f716302ce73a8f9fd2f}{get\+Add\+Vector\+To\+Position}} ()
 \begin{DoxyCompactList}\small\item\em 方向ベクトル加算済み座標取得関数 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_capsule_a4e98e8545ea57fe682c5a2002bd49bdb}{get\+Radius}} ()
 \begin{DoxyCompactList}\small\item\em 半径取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_capsule_a42d2233293d60384377ab4f4213be612}{set\+Radius}} (float value)
 \begin{DoxyCompactList}\small\item\em 半径設定関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_capsule_a4324279c9cc08241083b53c3a3dec44c}{Capsule}} ()
-\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_capsule_abfd7f0348ce8e7f8ee4e70374ae27533}{$\sim$\+Capsule}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_capsule_a89dc585afa88e50e84a2f98bbf0bb400}{Init}} (\mbox{\hyperlink{class_vector3_d}{Vector3D}} position, \mbox{\hyperlink{class_vector3_d}{Vector3D}} vector, float radius)
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} ()
-\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_capsule_abfa1026590603a2971c5269171a50864}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_capsule_a52ada68cdb0c18a4dd8b4b169ad0d6df}{Calculation\+Min\+And\+Max}} () override
+\begin{DoxyCompactList}\small\item\em 最小値と最大値算出関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
@@ -67,15 +72,15 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 
 
 \subsection{構築子と解体子}
-\mbox{\Hypertarget{class_capsule_a4324279c9cc08241083b53c3a3dec44c}\label{class_capsule_a4324279c9cc08241083b53c3a3dec44c}} 
-\index{Capsule@{Capsule}!Capsule@{Capsule}}
-\index{Capsule@{Capsule}!Capsule@{Capsule}}
-\subsubsection{\texorpdfstring{Capsule()}{Capsule()}}
-{\footnotesize\ttfamily Capsule\+::\+Capsule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_capsule_abfd7f0348ce8e7f8ee4e70374ae27533}\label{class_capsule_abfd7f0348ce8e7f8ee4e70374ae27533}} 
+\index{Capsule@{Capsule}!````~Capsule@{$\sim$\+Capsule}}
+\index{````~Capsule@{$\sim$\+Capsule}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{$\sim$\+Capsule()}{~Capsule()}}
+{\footnotesize\ttfamily Capsule\+::$\sim$\+Capsule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-コンストラクタ 
+デストラクタ 
 
 
 \begin{DoxyParams}{引数}
@@ -89,6 +94,34 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 
 
 \subsection{関数詳解}
+\mbox{\Hypertarget{class_capsule_a52ada68cdb0c18a4dd8b4b169ad0d6df}\label{class_capsule_a52ada68cdb0c18a4dd8b4b169ad0d6df}} 
+\index{Capsule@{Capsule}!Calculation\+Min\+And\+Max@{Calculation\+Min\+And\+Max}}
+\index{Calculation\+Min\+And\+Max@{Calculation\+Min\+And\+Max}!Capsule@{Capsule}}
+\subsubsection{\texorpdfstring{Calculation\+Min\+And\+Max()}{CalculationMinAndMax()}}
+{\footnotesize\ttfamily void Capsule\+::\+Calculation\+Min\+And\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+最小値と最大値算出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_shape_base_ad227c2f83038d7c05bc6b1d510cb4000}{Collision\+Shape\+Base}}を実装しています。
+
+
+
+ Capsule.\+cpp の 122 行目に定義があります。
+
 \mbox{\Hypertarget{class_capsule_a32991dc5e0331f716302ce73a8f9fd2f}\label{class_capsule_a32991dc5e0331f716302ce73a8f9fd2f}} 
 \index{Capsule@{Capsule}!get\+Add\+Vector\+To\+Position@{get\+Add\+Vector\+To\+Position}}
 \index{get\+Add\+Vector\+To\+Position@{get\+Add\+Vector\+To\+Position}!Capsule@{Capsule}}
@@ -121,7 +154,7 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 
 
 
-円柱ポインタ取得関数 
+円柱取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -130,7 +163,7 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Cylinder$\ast$} & 円柱ポインタ \\
+{\em Cylinder$\ast$} & 円柱 \\
 \hline
 \end{DoxyRetVals}
 
@@ -145,7 +178,7 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 
 
 
-線分ポインタ取得関数 
+線分取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -154,7 +187,7 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Line\+Segment$\ast$} & 線分ポインタ \\
+{\em Line\+Segment$\ast$} & 線分 \\
 \hline
 \end{DoxyRetVals}
 
@@ -169,7 +202,7 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 
 
 
-座標ポインタ取得関数 
+座標取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -178,7 +211,7 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Vector3\+D$\ast$} & 座標ポインタ \\
+{\em Vector3\+D$\ast$} & 座標 \\
 \hline
 \end{DoxyRetVals}
 
@@ -193,7 +226,7 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 
 
 
-球0ポインタ取得関数 
+球0取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -202,7 +235,7 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Sphere$\ast$} & 球0ポインタ \\
+{\em Sphere$\ast$} & 球0 \\
 \hline
 \end{DoxyRetVals}
 
@@ -217,7 +250,7 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 
 
 
-球1ポインタ取得関数 
+球1取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -226,7 +259,7 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Sphere$\ast$} & 球1ポインタ \\
+{\em Sphere$\ast$} & 球1 \\
 \hline
 \end{DoxyRetVals}
 
@@ -241,7 +274,7 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 
 
 
-方向ポインタ取得関数 
+方向取得関数 
 
 
 \begin{DoxyParams}{引数}
@@ -250,7 +283,7 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Vector3\+D$\ast$} & 方向ポインタ \\
+{\em Vector3\+D$\ast$} & 方向 \\
 \hline
 \end{DoxyRetVals}
 
@@ -292,12 +325,12 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 初期化関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em position} & 始点座標 \\
+\begin{DoxyParams}{引数}
+{\em position} & 始点座標 \\
 \hline
-\mbox{\tt in}  & {\em vector} & 方向 \\
+{\em vector} & 方向 \\
 \hline
-\mbox{\tt in}  & {\em radius} & 半径 \\
+{\em radius} & 半径 \\
 \hline
 \end{DoxyParams}
 
@@ -307,7 +340,7 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 \end{DoxyRetVals}
 
 
- Capsule.\+cpp の 93 行目に定義があります。
+ Capsule.\+cpp の 92 行目に定義があります。
 
 \mbox{\Hypertarget{class_capsule_a42d2233293d60384377ab4f4213be612}\label{class_capsule_a42d2233293d60384377ab4f4213be612}} 
 \index{Capsule@{Capsule}!set\+Radius@{set\+Radius}}
@@ -320,8 +353,8 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 半径設定関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em value} & 半径 \\
+\begin{DoxyParams}{引数}
+{\em value} & 半径 \\
 \hline
 \end{DoxyParams}
 
@@ -333,15 +366,15 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 
  Capsule.\+cpp の 76 行目に定義があります。
 
-\mbox{\Hypertarget{class_capsule_af53f19ae224208814b21238c3661a643}\label{class_capsule_af53f19ae224208814b21238c3661a643}} 
+\mbox{\Hypertarget{class_capsule_abfa1026590603a2971c5269171a50864}\label{class_capsule_abfa1026590603a2971c5269171a50864}} 
 \index{Capsule@{Capsule}!Update@{Update}}
 \index{Update@{Update}!Capsule@{Capsule}}
 \subsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily void Capsule\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Capsule\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-初期化関数 
+更新関数 
 
 
 \begin{DoxyParams}{引数}
@@ -355,7 +388,11 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 \end{DoxyRetVals}
 
 
- Capsule.\+cpp の 105 行目に定義があります。
+\mbox{\hyperlink{class_collision_shape_base_a7aaa0f4de4e208f168f78e3445313929}{Collision\+Shape\+Base}}を実装しています。
+
+
+
+ Capsule.\+cpp の 108 行目に定義があります。
 
 
 
@@ -406,5 +443,5 @@ void \mbox{\hyperlink{class_capsule_af53f19ae224208814b21238c3661a643}{Update}} 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+Capsule/\mbox{\hyperlink{_capsule_8h}{Capsule.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\+Capsule/\mbox{\hyperlink{_capsule_8cpp}{Capsule.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\mbox{\hyperlink{_capsule_8h}{Capsule.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\+Source/\mbox{\hyperlink{_capsule_8cpp}{Capsule.\+cpp}}\end{DoxyCompactItemize}

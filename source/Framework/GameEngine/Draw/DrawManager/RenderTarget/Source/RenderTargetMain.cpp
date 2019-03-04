@@ -50,12 +50,12 @@ void RenderTargetMain::setShaderManager(ShaderManager* value)
 void RenderTargetMain::Init()
 {
 	Reset();
-	//shadow_map_polygon_ = new RenderTexturePolygon();
-	//shadow_map_polygon_->Init();
-	//shadow_map_polygon_->Update(-200.0f, -200.0f,
-	//	(float)100.0f,
-	//							 (float)100.0f,
-	//							 XColor4(1.0f, 1.0f, 1.0f, 1.0f));
+	shadow_map_polygon_ = new RenderTexturePolygon();
+	shadow_map_polygon_->Init();
+	shadow_map_polygon_->Update(-500.0f, -200.0f,
+		(float)256.0f,
+								 (float)128.0f,
+								 XColor4(1.0f, 1.0f, 1.0f, 1.0f));
 }
 
 
@@ -63,7 +63,7 @@ void RenderTargetMain::Init()
 void RenderTargetMain::Uninit()
 {
 	Reset();
-	//SafeRelease::PlusUninit(&shadow_map_polygon_);
+	SafeRelease::PlusUninit(&shadow_map_polygon_);
 }
 
 
@@ -88,7 +88,9 @@ void RenderTargetMain::Update()
 	EffekseerManager::getpInstance()->CreateViewMatrix(*camera_->getpPosition(),
 													   *camera_->getpGazingPoint(),
 													   *camera_->getpUp());
-	EffekseerManager::getpInstance()->CreateProjectionMatrix(camera_->getAngleOfView());
+	EffekseerManager::getpInstance()->CreateProjectionMatrix(camera_->getAngleOfView(),
+															 camera_->getNearClip(),
+															 camera_->getFarClip());
 	EffekseerManager::getpInstance()->Update();
 }
 
@@ -125,7 +127,7 @@ void RenderTargetMain::Draw()
 	//Renderer::getpInstance()->getDevice(&device);
 	//device->SetTexture(0, common_data_->getpRenderTextureShadowMap()->getpTexture());
 	//shadow_map_polygon_->Draw(0, 0);
-	//
+	
 	Renderer::getpInstance()->DrawEnd(is_begin);
 }
 

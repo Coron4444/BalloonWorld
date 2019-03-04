@@ -118,11 +118,12 @@ public:
 	//----------------------------------------
 	//! @brief 初期化関数
 	//! @details
-	//! @param texture_width なし
+	//! @param texture_width  なし
 	//! @param texture_height なし
+	//! @param format         フォーマット
 	//! @retval void なし
 	//----------------------------------------
-	void Init(int texture_width, int texture_height);
+	void Init(int texture_width, int texture_height, _D3DFORMAT format = D3DFMT_A8R8G8B8);
 
 	//----------------------------------------
 	//! @brief 終了関数

@@ -1,4 +1,4 @@
 var class_goal_factory =
 [
-    [ "Create", "class_goal_factory.html#af0b52f5fd6e567a05985285369be7b2e", null ]
+    [ "Create", "class_goal_factory.html#a1af3aeec48c6f7ee510a8e8eaca299f1", null ]
 ];

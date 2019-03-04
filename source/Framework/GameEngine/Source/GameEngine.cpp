@@ -47,7 +47,7 @@ bool GameEngine::Init(HINSTANCE hInstance, HWND hWnd, BOOL is_full_screen,
 	}
 
 	// ImGUIの初期化
-//#ifdef _DEBUG
+#ifdef _DEBUG
 	LPDIRECT3DDEVICE9 device = nullptr;
 	Renderer::getpInstance()->getDevice(&device);
 	if (device == nullptr)
@@ -56,7 +56,7 @@ bool GameEngine::Init(HINSTANCE hInstance, HWND hWnd, BOOL is_full_screen,
 		return false;
 	}
 	ImGui_ImplDX9_Init(hWnd, device);
-//#endif
+#endif
 
 	// 乱数初期化
 	Random::getpInstance()->Init();
@@ -115,9 +115,9 @@ void GameEngine::Uninit()
 	Random::ReleaseInstance();
 
 	// ImGUIの終了
-//#ifdef _DEBUG
+#ifdef _DEBUG
 	ImGui_ImplDX9_Shutdown();
-//#endif
+#endif
 
 	// レンダラーの終了
 	Renderer::getpInstance()->Uninit();
@@ -129,9 +129,9 @@ void GameEngine::Uninit()
 void GameEngine::Update()
 {
 	// ImGUIの更新
-//#ifdef _DEBUG
+#ifdef _DEBUG
 	ImGui_ImplDX9_NewFrame();
-//#endif
+#endif
 
 	// Bullet更新
 	BulletPhysicsManager::getpInstance()->Update();
@@ -151,9 +151,9 @@ void GameEngine::Draw()
 	scene_manager_->DrawScene();
 
 	// ImGUIの描画
-//#ifdef _DEBUG
+#ifdef _DEBUG
 	ImGui::Render();
-//#endif
+#endif
 
 	// バックバッファをフロントバッファに反映
 	Renderer::getpInstance()->Present();

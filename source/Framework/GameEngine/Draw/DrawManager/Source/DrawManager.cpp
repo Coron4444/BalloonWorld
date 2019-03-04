@@ -87,11 +87,11 @@ void DrawManager::Init()
 	render_target_main_->Init();
 
 	// レンダーターゲットシャドウマップ初期化
-	//render_target_shadow_map_ = new RenderTargetShadowMap();
-	//render_target_shadow_map_->setCamera(camera_[(int)RenderTargetType::SHADOW_MAP]);
-	//render_target_shadow_map_->setDrawCommonData(common_data_);
-	//render_target_shadow_map_->setShaderManager(shader_manager_);
-	//render_target_shadow_map_->Init();
+	render_target_shadow_map_ = new RenderTargetShadowMap();
+	render_target_shadow_map_->setCamera(camera_[(int)RenderTargetType::SHADOW_MAP]);
+	render_target_shadow_map_->setDrawCommonData(common_data_);
+	render_target_shadow_map_->setShaderManager(shader_manager_);
+	render_target_shadow_map_->Init();
 
 	// モーションブラー初期化
 	motion_blur_ = new MotionBlur();
@@ -120,7 +120,7 @@ void DrawManager::Uninit()
 	SafeRelease::PlusRelease(&back_buffer_surface_);
 	SafeRelease::PlusRelease(&back_buffer_stencil_surface_);
 	SafeRelease::PlusUninit(&motion_blur_);
-	//SafeRelease::PlusUninit(&render_target_shadow_map_);
+	SafeRelease::PlusUninit(&render_target_shadow_map_);
 	SafeRelease::PlusUninit(&render_target_main_);
 	SafeRelease::PlusUninit(&back_buffer_polygon_);
 	SafeRelease::PlusUninit(&shader_manager_);
@@ -141,7 +141,7 @@ void DrawManager::UninitWhenChangeScene()
 	all_draw_.Reset();
 
 	render_target_main_->UninitWhenChangeScene();
-	//render_target_shadow_map_->UninitWhenChangeScene();
+	render_target_shadow_map_->UninitWhenChangeScene();
 	motion_blur_->UninitWhenChangeScene();
 
 	for (auto& contents : camera_)
@@ -197,7 +197,17 @@ void DrawManager::Update()
 void DrawManager::Draw()
 {
 	// レンダーターゲットシャドウマップ描画
-	//render_target_shadow_map_->Draw();
+	// サンプラー変更
+	device_->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_POINT);
+	device_->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_POINT);
+	device_->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_POINT);
+
+	// 描画
+	render_target_shadow_map_->Draw();
+
+	// サンプラー変更
+	((RendererDirectX9*)Renderer::getpInstance()->getpRenderer())
+		->SetDefaultSamplerState();
 
 	// レンダーターゲットメイン描画
 	device_->SetDepthStencilSurface(back_buffer_stencil_surface_);
@@ -346,7 +356,7 @@ void DrawManager::UpdateAllDrawBase()
 void DrawManager::ResetAllRenderTarget()
 {
 	render_target_main_->Reset();
-	//render_target_shadow_map_->Reset();
+	render_target_shadow_map_->Reset();
 }
 
 
@@ -366,11 +376,11 @@ void DrawManager::DistributeDrawBase()
 		}
 
 		// レンダーターゲットシャドウマップ
-		//if (all_draw_.getObject(i)->getpDrawOrderList()->getpRenderTargetFlag()
-		//	->CheckAny(DrawOrderList::RENDER_TARGET_SHADOW_MAP))
-		//{
-		//	render_target_shadow_map_->AddDrawBaseToArray(all_draw_.getObject(i));
-		//}
+		if (all_draw_.getObject(i)->getpDrawOrderList()->getpRenderTargetFlag()
+			->CheckAny(DrawOrderList::RENDER_TARGET_SHADOW_MAP))
+		{
+			render_target_shadow_map_->AddDrawBaseToArray(all_draw_.getObject(i));
+		}
 	}
 }
 
@@ -379,7 +389,7 @@ void DrawManager::DistributeDrawBase()
 void DrawManager::UpdateAllRenderTarget()
 {
 	render_target_main_->Update();
-	//render_target_shadow_map_->Update();
+	render_target_shadow_map_->Update();
 }
 
 

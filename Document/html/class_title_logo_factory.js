@@ -1,4 +1,4 @@
 var class_title_logo_factory =
 [
-    [ "Create", "class_title_logo_factory.html#acbd10f361541910e9c0cee26770f0150", null ]
+    [ "Create", "class_title_logo_factory.html#abd7c5693ef9e36fc224b51968402e2a0", null ]
 ];

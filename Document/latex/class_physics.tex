@@ -2,133 +2,160 @@
 \label{class_physics}\index{Physics@{Physics}}
 
 
+物理\+Class  
+
+
+
+
 {\ttfamily \#include $<$Physics.\+h$>$}
 
+
+
+Physics 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_physics_a2e4cab77c53c0acf5273bd4986f8423d}{Physics}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$game\+\_\+object)
-\item 
-\mbox{\hyperlink{class_physics_a045c3788e28059d3920136499942490f}{$\sim$\+Physics}} ()
-\item 
+bool \mbox{\hyperlink{class_physics_a9f7d1579ed7e0f97726ca7117f479c45}{get\+Is\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em 有効フラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_a7ae1ceeab958b0a86cb7e570e5e405b5}{set\+Is\+Enable}} (bool value)
+\begin{DoxyCompactList}\small\item\em 有効フラグ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_a8362e2d029415bc93b25b0891cc8a3d8}{set\+Game\+Object}} (\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em ゲームオブジェクト設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_physics_a41b427ec429632a13db548bb5cc6642e}{getp\+Acceleration}} ()
+\begin{DoxyCompactList}\small\item\em 加速度取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_physics_a6025f297e751c71a3c54260007c175ee}{getp\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em 速度取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_physics_a47edf04cb497a621940b3dfc5e9e6993}{get\+Max\+Horizontal\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em 最大水平速度取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_a4e8108eeaa958c99543fe2ec3e21b240}{set\+Max\+Horizontal\+Velocity}} (float value)
+\begin{DoxyCompactList}\small\item\em 最大水平速度設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_physics_a80d556fa40945e73ca6d4d6931b743ad}{get\+Max\+Vertical\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em 最大垂直速度取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_a6a96fd4d918235e89384320519eae0f5}{set\+Max\+Vertical\+Velocity}} (float value)
+\begin{DoxyCompactList}\small\item\em 最大垂直速度設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_physics_a4ce827465a471657b4f4e8973e9f2138}{get\+Mass}} ()
+\begin{DoxyCompactList}\small\item\em 質量取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_ab852c1bb08fcd4f364c2650cadfe1eda}{set\+Mass}} (float value)
+\begin{DoxyCompactList}\small\item\em 質量設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_physics_ad85a3df693d588f8ff528566c5218533}{get\+Friction}} ()
+\begin{DoxyCompactList}\small\item\em 摩擦力取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_physics_a293e9ef38e53b79692c4a9d4a60b13ed}{get\+My\+Friction}} ()
+\begin{DoxyCompactList}\small\item\em 自分の摩擦力取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_a848d75133a2c2f46a73c8439f29297c5}{set\+My\+Friction}} (float value)
+\begin{DoxyCompactList}\small\item\em 自分の摩擦力設定関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_physics_afa061352341f5c53745433672be775bb}{get\+Bounciness}} ()
+\begin{DoxyCompactList}\small\item\em 反発力取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_physics_a25433df081fc471e1e5d475f718f116b}{get\+My\+Bounciness}} ()
+\begin{DoxyCompactList}\small\item\em 自分の反発力取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_a4e23a9b6f9888b22d3043ea8463fbd37}{set\+My\+Bounciness}} (float value)
+\begin{DoxyCompactList}\small\item\em 自分の反発力設定関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_physics_a7a4f2372930e737b61a73b2a41067158}{get\+Is\+Gravity}} ()
+\begin{DoxyCompactList}\small\item\em 重力フラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_af5f8eac3abc26f0255b5ec7dc67c11db}{set\+Is\+Gravity}} (float value)
+\begin{DoxyCompactList}\small\item\em 重力フラグ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_aad378ed29224e1bc00fd08ddc6122478}{set\+On\+The\+Ground}} ()
+\begin{DoxyCompactList}\small\item\em 地面に乗っているフラグ設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_physics_a4b2ebc0a344f04f48d227c72f0d0fbda}{Physics}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_physics_a13bf3e9de07a12afc3c0a4012e00d0a1}{Update}} ()
-\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_physics_aee9ce4604f63dbdcab07ded4d0174989}{Get\+Acceleration}} ()
-\item 
-\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_physics_a8e33f600575e7ee5ad348d695a9eb45e}{Get\+Velocity}} ()
-\item 
-void \mbox{\hyperlink{class_physics_afd9e36bb94e921a41818f261df4205d0}{Set\+Max\+Velocity}} (float max\+\_\+velocity)
-\item 
-float \mbox{\hyperlink{class_physics_a0ee3b82e3e1588fee1727e582c824467}{Get\+Max\+Velocity}} ()
-\item 
-void \mbox{\hyperlink{class_physics_a7a6eac8c5f6d7db0baef290710825085}{Set\+Mass}} (float mass)
-\item 
-float \mbox{\hyperlink{class_physics_a80a377efcd573cff3484d91c9f5512e4}{Get\+Mass}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_physics_a77e9a04f034ccad4fec996832fb7ce63}{Add\+Friction}} (float friction)
-\item 
-float \mbox{\hyperlink{class_physics_aee1fe26db953d0712b2a26ce9d1db0d9}{Get\+Friction}} ()
-\item 
-void \mbox{\hyperlink{class_physics_a0e3c9825aa4129a2212c1c61d0cd6ecb}{Set\+My\+Friction}} (float my\+\_\+friction)
-\item 
-float \mbox{\hyperlink{class_physics_a50ad9d79f3b42a209a05f57557f294f0}{Get\+My\+Friction}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 摩擦力追加関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_physics_af88191e5605a97952caefd19319b05f9}{Add\+Bounciness}} (float bounciness)
-\item 
-float \mbox{\hyperlink{class_physics_a5126745b31c45267ae516cc09a82fb5d}{Get\+Bounciness}} ()
-\item 
-void \mbox{\hyperlink{class_physics_a662185709961c64615c51ac5f32ab2ff}{Set\+My\+Bounciness}} (float bounciness)
-\item 
-float \mbox{\hyperlink{class_physics_acd6312afafb3faed57ba6450ed9ab9a6}{Get\+My\+Bounciness}} ()
-\item 
-void \mbox{\hyperlink{class_physics_a6f4c3f73eb1d2669ccc449b0d74f9d32}{Set\+Gravity}} (bool is\+\_\+gravity)
-\item 
-bool \mbox{\hyperlink{class_physics_a666e85a519fcb5f350a1f42273842f4d}{Is\+Gravity}} ()
-\item 
-void \mbox{\hyperlink{class_physics_a4e132f82ecc7f24200ec72213e2dc0c6}{Set\+On\+The\+Ground}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 反発力追加関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_physics_a7ba30ff9f5a0a0a12616ed861f68a20f}{Reset}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_physics_a122041053c2c4e69cdf6dc92076e1d79}{Update\+Acceleration}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 加速度更新関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_physics_abd74d6413b1fd6c77007edf51ea9db4b}{Update\+Velocity}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 速度更新関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_physics_a481f06d777c1b1f52dc2c06c71e93932}{Update\+Position}} ()
-\item 
-void \mbox{\hyperlink{class_physics_ac52e3e0cccd6268aa592d1e5f098a685}{Set\+Gravity}} ()
-\item 
-void \mbox{\hyperlink{class_physics_a5bb34919242bdb3472e574b7e024b7e7}{Set\+Ground}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 座標更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_a5fb75ffa48210f4e01ab5a199626a3d5}{Add\+Gravity}} ()
+\begin{DoxyCompactList}\small\item\em 重力追加関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_a085300405839f6de506bfe5d0a57fdd5}{Update\+Ground}} ()
+\begin{DoxyCompactList}\small\item\em 地面更新関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_physics_af6ad00988f0aa878285b930121d4748c}{Check\+Velocity\+Min\+Max}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 速度の最小値・最大値チェック関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
+bool \mbox{\hyperlink{class_physics_aa1ce0627c339b93ca16d3db4ccbdbd18}{is\+\_\+enable\+\_\+}} = true
+\begin{DoxyCompactList}\small\item\em 有効フラグ \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$ \mbox{\hyperlink{class_physics_a43e626ecc90d765a7cbd4c561b19331a}{game\+\_\+object\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em ゲームオブジェクト \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_physics_a8e87f3c364d5d0b8d3fb228237f3ff56}{acceleration\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 加速度 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_physics_a9818c603a813d8f70254812f43e67b3e}{velocity\+\_\+}}
-\item 
-float \mbox{\hyperlink{class_physics_a28b0e36d5eec30e1e9ccb1a51c5c6363}{max\+\_\+velocity\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 速度 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_physics_a0ed07971c58b56acb606ece7caa03068}{max\+\_\+horizontal\+\_\+velocity\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 最大水平速度 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_physics_a5018fa4a3e2e72533e669112e6aebbc4}{max\+\_\+vertical\+\_\+velocity\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 最大垂直速度 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_physics_a68f81110a54f8ed24ac94b6cd33c3ae0}{mass\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 質量 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_physics_a63b2e282267a28f0a160b98d56fa40b6}{friction\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 摩擦 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_physics_a25f0db16668c86e90babbf9233b57511}{my\+\_\+friction\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 自分の摩擦 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_physics_a302b8ad7552303570fa1cfd070bb8588}{bounciness\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 反発力 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_physics_a6a04fea3f4790f2dfc2301940b8ccb6b}{my\+\_\+bounciness\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 自分の反発力 \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_physics_ab49b5561a800bec8abcb3d35b1125c4e}{is\+\_\+gravity\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 重力フラグ \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_physics_af292ed854ca107f1a09a79931b10c3fa}{gravity\+\_\+acceleration\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 重力加速度 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_physics_aadfeac1807906f025d97143ba1c0f323}{gravity\+\_\+direction\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 重力ベクトル \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_physics_a07a6416cab35698692378441c1750c4c}{is\+\_\+on\+\_\+tha\+\_\+ground\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em 地面に乗っているフラグ \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_physics_a863e16866ca69201a22365e480b7c74f}{is\+\_\+landing\+\_\+}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 着地したフラグ \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{静的非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24faf}{V\+E\+L\+O\+C\+I\+T\+Y\+\_\+\+M\+IN}} = 0.\+0001f
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 最低速度 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
+物理\+Class 
 
+物理の計算\+Class 
 
- Physics.\+h の 39 行目に定義があります。
+ Physics.\+h の 31 行目に定義があります。
 
 
 
 \subsection{構築子と解体子}
-\mbox{\Hypertarget{class_physics_a2e4cab77c53c0acf5273bd4986f8423d}\label{class_physics_a2e4cab77c53c0acf5273bd4986f8423d}} 
+\mbox{\Hypertarget{class_physics_a4b2ebc0a344f04f48d227c72f0d0fbda}\label{class_physics_a4b2ebc0a344f04f48d227c72f0d0fbda}} 
 \index{Physics@{Physics}!Physics@{Physics}}
 \index{Physics@{Physics}!Physics@{Physics}}
 \subsubsection{\texorpdfstring{Physics()}{Physics()}}
-{\footnotesize\ttfamily Physics\+::\+Physics (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{game\+\_\+object }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Physics\+::\+Physics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Physics.\+cpp の 45 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a045c3788e28059d3920136499942490f}\label{class_physics_a045c3788e28059d3920136499942490f}} 
-\index{Physics@{Physics}!````~Physics@{$\sim$\+Physics}}
-\index{````~Physics@{$\sim$\+Physics}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{$\sim$\+Physics()}{~Physics()}}
-{\footnotesize\ttfamily Physics\+::$\sim$\+Physics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+コンストラクタ 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Physics.\+cpp の 70 行目に定義があります。
+
+ Physics.\+cpp の 173 行目に定義があります。
 
 
 
@@ -137,21 +164,73 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 \index{Physics@{Physics}!Add\+Bounciness@{Add\+Bounciness}}
 \index{Add\+Bounciness@{Add\+Bounciness}!Physics@{Physics}}
 \subsubsection{\texorpdfstring{Add\+Bounciness()}{AddBounciness()}}
-{\footnotesize\ttfamily void Physics\+::\+Add\+Bounciness (\begin{DoxyParamCaption}\item[{float}]{bounciness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Physics\+::\+Add\+Bounciness (\begin{DoxyParamCaption}\item[{float}]{bounciness }\end{DoxyParamCaption})}
 
 
 
- Physics.\+h の 83 行目に定義があります。
+反発力追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 209 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a77e9a04f034ccad4fec996832fb7ce63}\label{class_physics_a77e9a04f034ccad4fec996832fb7ce63}} 
 \index{Physics@{Physics}!Add\+Friction@{Add\+Friction}}
 \index{Add\+Friction@{Add\+Friction}!Physics@{Physics}}
 \subsubsection{\texorpdfstring{Add\+Friction()}{AddFriction()}}
-{\footnotesize\ttfamily void Physics\+::\+Add\+Friction (\begin{DoxyParamCaption}\item[{float}]{friction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Physics\+::\+Add\+Friction (\begin{DoxyParamCaption}\item[{float}]{friction }\end{DoxyParamCaption})}
 
 
 
- Physics.\+h の 77 行目に定義があります。
+摩擦力追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 202 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a5fb75ffa48210f4e01ab5a199626a3d5}\label{class_physics_a5fb75ffa48210f4e01ab5a199626a3d5}} 
+\index{Physics@{Physics}!Add\+Gravity@{Add\+Gravity}}
+\index{Add\+Gravity@{Add\+Gravity}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{Add\+Gravity()}{AddGravity()}}
+{\footnotesize\ttfamily void Physics\+::\+Add\+Gravity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+重力追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 268 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_af6ad00988f0aa878285b930121d4748c}\label{class_physics_af6ad00988f0aa878285b930121d4748c}} 
 \index{Physics@{Physics}!Check\+Velocity\+Min\+Max@{Check\+Velocity\+Min\+Max}}
@@ -161,97 +240,285 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+cpp の 244 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_aee9ce4604f63dbdcab07ded4d0174989}\label{class_physics_aee9ce4604f63dbdcab07ded4d0174989}} 
-\index{Physics@{Physics}!Get\+Acceleration@{Get\+Acceleration}}
-\index{Get\+Acceleration@{Get\+Acceleration}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Get\+Acceleration()}{GetAcceleration()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}}$\ast$ Physics\+::\+Get\+Acceleration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+速度の最小値・最大値チェック関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Physics.\+h の 65 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a5126745b31c45267ae516cc09a82fb5d}\label{class_physics_a5126745b31c45267ae516cc09a82fb5d}} 
-\index{Physics@{Physics}!Get\+Bounciness@{Get\+Bounciness}}
-\index{Get\+Bounciness@{Get\+Bounciness}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Get\+Bounciness()}{GetBounciness()}}
-{\footnotesize\ttfamily float Physics\+::\+Get\+Bounciness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Physics.\+cpp の 306 行目に定義があります。
 
- Physics.\+h の 84 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_aee1fe26db953d0712b2a26ce9d1db0d9}\label{class_physics_aee1fe26db953d0712b2a26ce9d1db0d9}} 
-\index{Physics@{Physics}!Get\+Friction@{Get\+Friction}}
-\index{Get\+Friction@{Get\+Friction}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Get\+Friction()}{GetFriction()}}
-{\footnotesize\ttfamily float Physics\+::\+Get\+Friction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_physics_afa061352341f5c53745433672be775bb}\label{class_physics_afa061352341f5c53745433672be775bb}} 
+\index{Physics@{Physics}!get\+Bounciness@{get\+Bounciness}}
+\index{get\+Bounciness@{get\+Bounciness}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{get\+Bounciness()}{getBounciness()}}
+{\footnotesize\ttfamily float Physics\+::get\+Bounciness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Physics.\+h の 78 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a80a377efcd573cff3484d91c9f5512e4}\label{class_physics_a80a377efcd573cff3484d91c9f5512e4}} 
-\index{Physics@{Physics}!Get\+Mass@{Get\+Mass}}
-\index{Get\+Mass@{Get\+Mass}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Get\+Mass()}{GetMass()}}
-{\footnotesize\ttfamily float Physics\+::\+Get\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+反発力取得関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Physics.\+h の 74 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a0ee3b82e3e1588fee1727e582c824467}\label{class_physics_a0ee3b82e3e1588fee1727e582c824467}} 
-\index{Physics@{Physics}!Get\+Max\+Velocity@{Get\+Max\+Velocity}}
-\index{Get\+Max\+Velocity@{Get\+Max\+Velocity}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Get\+Max\+Velocity()}{GetMaxVelocity()}}
-{\footnotesize\ttfamily float Physics\+::\+Get\+Max\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 反発力 \\
+\hline
+\end{DoxyRetVals}
 
 
+ Physics.\+cpp の 128 行目に定義があります。
 
- Physics.\+h の 70 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_acd6312afafb3faed57ba6450ed9ab9a6}\label{class_physics_acd6312afafb3faed57ba6450ed9ab9a6}} 
-\index{Physics@{Physics}!Get\+My\+Bounciness@{Get\+My\+Bounciness}}
-\index{Get\+My\+Bounciness@{Get\+My\+Bounciness}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Get\+My\+Bounciness()}{GetMyBounciness()}}
-{\footnotesize\ttfamily float Physics\+::\+Get\+My\+Bounciness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_physics_ad85a3df693d588f8ff528566c5218533}\label{class_physics_ad85a3df693d588f8ff528566c5218533}} 
+\index{Physics@{Physics}!get\+Friction@{get\+Friction}}
+\index{get\+Friction@{get\+Friction}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{get\+Friction()}{getFriction()}}
+{\footnotesize\ttfamily float Physics\+::get\+Friction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Physics.\+h の 86 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a50ad9d79f3b42a209a05f57557f294f0}\label{class_physics_a50ad9d79f3b42a209a05f57557f294f0}} 
-\index{Physics@{Physics}!Get\+My\+Friction@{Get\+My\+Friction}}
-\index{Get\+My\+Friction@{Get\+My\+Friction}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Get\+My\+Friction()}{GetMyFriction()}}
-{\footnotesize\ttfamily float Physics\+::\+Get\+My\+Friction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+摩擦力取得関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Physics.\+h の 80 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a8e33f600575e7ee5ad348d695a9eb45e}\label{class_physics_a8e33f600575e7ee5ad348d695a9eb45e}} 
-\index{Physics@{Physics}!Get\+Velocity@{Get\+Velocity}}
-\index{Get\+Velocity@{Get\+Velocity}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Get\+Velocity()}{GetVelocity()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}}$\ast$ Physics\+::\+Get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 摩擦力 \\
+\hline
+\end{DoxyRetVals}
 
 
+ Physics.\+cpp の 107 行目に定義があります。
 
- Physics.\+h の 68 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a666e85a519fcb5f350a1f42273842f4d}\label{class_physics_a666e85a519fcb5f350a1f42273842f4d}} 
-\index{Physics@{Physics}!Is\+Gravity@{Is\+Gravity}}
-\index{Is\+Gravity@{Is\+Gravity}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Is\+Gravity()}{IsGravity()}}
-{\footnotesize\ttfamily bool Physics\+::\+Is\+Gravity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_physics_a9f7d1579ed7e0f97726ca7117f479c45}\label{class_physics_a9f7d1579ed7e0f97726ca7117f479c45}} 
+\index{Physics@{Physics}!get\+Is\+Enable@{get\+Is\+Enable}}
+\index{get\+Is\+Enable@{get\+Is\+Enable}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{get\+Is\+Enable()}{getIsEnable()}}
+{\footnotesize\ttfamily bool Physics\+::get\+Is\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Physics.\+h の 90 行目に定義があります。
+有効フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em value} & 有効フラグ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a7a4f2372930e737b61a73b2a41067158}\label{class_physics_a7a4f2372930e737b61a73b2a41067158}} 
+\index{Physics@{Physics}!get\+Is\+Gravity@{get\+Is\+Gravity}}
+\index{get\+Is\+Gravity@{get\+Is\+Gravity}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{get\+Is\+Gravity()}{getIsGravity()}}
+{\footnotesize\ttfamily bool Physics\+::get\+Is\+Gravity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+重力フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 重力フラグ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 149 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a4ce827465a471657b4f4e8973e9f2138}\label{class_physics_a4ce827465a471657b4f4e8973e9f2138}} 
+\index{Physics@{Physics}!get\+Mass@{get\+Mass}}
+\index{get\+Mass@{get\+Mass}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{get\+Mass()}{getMass()}}
+{\footnotesize\ttfamily float Physics\+::get\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+質量取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 質量 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 93 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a47edf04cb497a621940b3dfc5e9e6993}\label{class_physics_a47edf04cb497a621940b3dfc5e9e6993}} 
+\index{Physics@{Physics}!get\+Max\+Horizontal\+Velocity@{get\+Max\+Horizontal\+Velocity}}
+\index{get\+Max\+Horizontal\+Velocity@{get\+Max\+Horizontal\+Velocity}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{get\+Max\+Horizontal\+Velocity()}{getMaxHorizontalVelocity()}}
+{\footnotesize\ttfamily float Physics\+::get\+Max\+Horizontal\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+最大水平速度取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 最大水平速度 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 65 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a80d556fa40945e73ca6d4d6931b743ad}\label{class_physics_a80d556fa40945e73ca6d4d6931b743ad}} 
+\index{Physics@{Physics}!get\+Max\+Vertical\+Velocity@{get\+Max\+Vertical\+Velocity}}
+\index{get\+Max\+Vertical\+Velocity@{get\+Max\+Vertical\+Velocity}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{get\+Max\+Vertical\+Velocity()}{getMaxVerticalVelocity()}}
+{\footnotesize\ttfamily float Physics\+::get\+Max\+Vertical\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+最大垂直速度取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 最大垂直速度 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 79 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a25433df081fc471e1e5d475f718f116b}\label{class_physics_a25433df081fc471e1e5d475f718f116b}} 
+\index{Physics@{Physics}!get\+My\+Bounciness@{get\+My\+Bounciness}}
+\index{get\+My\+Bounciness@{get\+My\+Bounciness}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{get\+My\+Bounciness()}{getMyBounciness()}}
+{\footnotesize\ttfamily float Physics\+::get\+My\+Bounciness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+自分の反発力取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 自分の反発力 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 135 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a293e9ef38e53b79692c4a9d4a60b13ed}\label{class_physics_a293e9ef38e53b79692c4a9d4a60b13ed}} 
+\index{Physics@{Physics}!get\+My\+Friction@{get\+My\+Friction}}
+\index{get\+My\+Friction@{get\+My\+Friction}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{get\+My\+Friction()}{getMyFriction()}}
+{\footnotesize\ttfamily float Physics\+::get\+My\+Friction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+自分の摩擦力取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 自分の摩擦力 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 114 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a41b427ec429632a13db548bb5cc6642e}\label{class_physics_a41b427ec429632a13db548bb5cc6642e}} 
+\index{Physics@{Physics}!getp\+Acceleration@{getp\+Acceleration}}
+\index{getp\+Acceleration@{getp\+Acceleration}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{getp\+Acceleration()}{getpAcceleration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Physics\+::getp\+Acceleration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+加速度取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 加速度 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a6025f297e751c71a3c54260007c175ee}\label{class_physics_a6025f297e751c71a3c54260007c175ee}} 
+\index{Physics@{Physics}!getp\+Velocity@{getp\+Velocity}}
+\index{getp\+Velocity@{getp\+Velocity}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{getp\+Velocity()}{getpVelocity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Physics\+::getp\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+速度取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 速度 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 58 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a7ba30ff9f5a0a0a12616ed861f68a20f}\label{class_physics_a7ba30ff9f5a0a0a12616ed861f68a20f}} 
 \index{Physics@{Physics}!Reset@{Reset}}
@@ -261,87 +528,237 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+cpp の 106 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a6f4c3f73eb1d2669ccc449b0d74f9d32}\label{class_physics_a6f4c3f73eb1d2669ccc449b0d74f9d32}} 
-\index{Physics@{Physics}!Set\+Gravity@{Set\+Gravity}}
-\index{Set\+Gravity@{Set\+Gravity}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Set\+Gravity()}{SetGravity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Physics\+::\+Set\+Gravity (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+gravity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+リセット関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Physics.\+h の 89 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_ac52e3e0cccd6268aa592d1e5f098a685}\label{class_physics_ac52e3e0cccd6268aa592d1e5f098a685}} 
-\index{Physics@{Physics}!Set\+Gravity@{Set\+Gravity}}
-\index{Set\+Gravity@{Set\+Gravity}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Set\+Gravity()}{SetGravity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Physics\+::\+Set\+Gravity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Physics.\+cpp の 216 行目に定義があります。
 
- Physics.\+cpp の 192 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a5bb34919242bdb3472e574b7e024b7e7}\label{class_physics_a5bb34919242bdb3472e574b7e024b7e7}} 
-\index{Physics@{Physics}!Set\+Ground@{Set\+Ground}}
-\index{Set\+Ground@{Set\+Ground}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Set\+Ground()}{SetGround()}}
-{\footnotesize\ttfamily void Physics\+::\+Set\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_physics_a8362e2d029415bc93b25b0891cc8a3d8}\label{class_physics_a8362e2d029415bc93b25b0891cc8a3d8}} 
+\index{Physics@{Physics}!set\+Game\+Object@{set\+Game\+Object}}
+\index{set\+Game\+Object@{set\+Game\+Object}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{set\+Game\+Object()}{setGameObject()}}
+{\footnotesize\ttfamily void Physics\+::set\+Game\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_base}{Game\+Object\+Base}} $\ast$}]{value }\end{DoxyParamCaption})}
 
 
 
- Physics.\+cpp の 212 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a7a6eac8c5f6d7db0baef290710825085}\label{class_physics_a7a6eac8c5f6d7db0baef290710825085}} 
-\index{Physics@{Physics}!Set\+Mass@{Set\+Mass}}
-\index{Set\+Mass@{Set\+Mass}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Set\+Mass()}{SetMass()}}
-{\footnotesize\ttfamily void Physics\+::\+Set\+Mass (\begin{DoxyParamCaption}\item[{float}]{mass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+ゲームオブジェクト設定関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & ゲームオブジェクト \\
+\hline
+\end{DoxyParams}
 
- Physics.\+h の 73 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_afd9e36bb94e921a41818f261df4205d0}\label{class_physics_afd9e36bb94e921a41818f261df4205d0}} 
-\index{Physics@{Physics}!Set\+Max\+Velocity@{Set\+Max\+Velocity}}
-\index{Set\+Max\+Velocity@{Set\+Max\+Velocity}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Set\+Max\+Velocity()}{SetMaxVelocity()}}
-{\footnotesize\ttfamily void Physics\+::\+Set\+Max\+Velocity (\begin{DoxyParamCaption}\item[{float}]{max\+\_\+velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Physics.\+cpp の 44 行目に定義があります。
 
- Physics.\+h の 69 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a662185709961c64615c51ac5f32ab2ff}\label{class_physics_a662185709961c64615c51ac5f32ab2ff}} 
-\index{Physics@{Physics}!Set\+My\+Bounciness@{Set\+My\+Bounciness}}
-\index{Set\+My\+Bounciness@{Set\+My\+Bounciness}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Set\+My\+Bounciness()}{SetMyBounciness()}}
-{\footnotesize\ttfamily void Physics\+::\+Set\+My\+Bounciness (\begin{DoxyParamCaption}\item[{float}]{bounciness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_physics_a7ae1ceeab958b0a86cb7e570e5e405b5}\label{class_physics_a7ae1ceeab958b0a86cb7e570e5e405b5}} 
+\index{Physics@{Physics}!set\+Is\+Enable@{set\+Is\+Enable}}
+\index{set\+Is\+Enable@{set\+Is\+Enable}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{set\+Is\+Enable()}{setIsEnable()}}
+{\footnotesize\ttfamily void Physics\+::set\+Is\+Enable (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
 
 
 
- Physics.\+h の 85 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a0e3c9825aa4129a2212c1c61d0cd6ecb}\label{class_physics_a0e3c9825aa4129a2212c1c61d0cd6ecb}} 
-\index{Physics@{Physics}!Set\+My\+Friction@{Set\+My\+Friction}}
-\index{Set\+My\+Friction@{Set\+My\+Friction}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Set\+My\+Friction()}{SetMyFriction()}}
-{\footnotesize\ttfamily void Physics\+::\+Set\+My\+Friction (\begin{DoxyParamCaption}\item[{float}]{my\+\_\+friction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+有効フラグ設定関数 
 
 
+\begin{DoxyParams}{引数}
+{\em value} & 有効フラグ \\
+\hline
+\end{DoxyParams}
 
- Physics.\+h の 79 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a4e132f82ecc7f24200ec72213e2dc0c6}\label{class_physics_a4e132f82ecc7f24200ec72213e2dc0c6}} 
-\index{Physics@{Physics}!Set\+On\+The\+Ground@{Set\+On\+The\+Ground}}
-\index{Set\+On\+The\+Ground@{Set\+On\+The\+Ground}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{Set\+On\+The\+Ground()}{SetOnTheGround()}}
-{\footnotesize\ttfamily void Physics\+::\+Set\+On\+The\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Physics.\+cpp の 37 行目に定義があります。
 
- Physics.\+h の 93 行目に定義があります。
+\mbox{\Hypertarget{class_physics_af5f8eac3abc26f0255b5ec7dc67c11db}\label{class_physics_af5f8eac3abc26f0255b5ec7dc67c11db}} 
+\index{Physics@{Physics}!set\+Is\+Gravity@{set\+Is\+Gravity}}
+\index{set\+Is\+Gravity@{set\+Is\+Gravity}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{set\+Is\+Gravity()}{setIsGravity()}}
+{\footnotesize\ttfamily void Physics\+::set\+Is\+Gravity (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+重力フラグ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 重力フラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 156 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_ab852c1bb08fcd4f364c2650cadfe1eda}\label{class_physics_ab852c1bb08fcd4f364c2650cadfe1eda}} 
+\index{Physics@{Physics}!set\+Mass@{set\+Mass}}
+\index{set\+Mass@{set\+Mass}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{set\+Mass()}{setMass()}}
+{\footnotesize\ttfamily void Physics\+::set\+Mass (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+質量設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 質量 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 100 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a4e8108eeaa958c99543fe2ec3e21b240}\label{class_physics_a4e8108eeaa958c99543fe2ec3e21b240}} 
+\index{Physics@{Physics}!set\+Max\+Horizontal\+Velocity@{set\+Max\+Horizontal\+Velocity}}
+\index{set\+Max\+Horizontal\+Velocity@{set\+Max\+Horizontal\+Velocity}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{set\+Max\+Horizontal\+Velocity()}{setMaxHorizontalVelocity()}}
+{\footnotesize\ttfamily void Physics\+::set\+Max\+Horizontal\+Velocity (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+最大水平速度設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 最大水平速度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 72 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a6a96fd4d918235e89384320519eae0f5}\label{class_physics_a6a96fd4d918235e89384320519eae0f5}} 
+\index{Physics@{Physics}!set\+Max\+Vertical\+Velocity@{set\+Max\+Vertical\+Velocity}}
+\index{set\+Max\+Vertical\+Velocity@{set\+Max\+Vertical\+Velocity}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{set\+Max\+Vertical\+Velocity()}{setMaxVerticalVelocity()}}
+{\footnotesize\ttfamily void Physics\+::set\+Max\+Vertical\+Velocity (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+最大垂直速度設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 最大垂直速度 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 86 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a4e23a9b6f9888b22d3043ea8463fbd37}\label{class_physics_a4e23a9b6f9888b22d3043ea8463fbd37}} 
+\index{Physics@{Physics}!set\+My\+Bounciness@{set\+My\+Bounciness}}
+\index{set\+My\+Bounciness@{set\+My\+Bounciness}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{set\+My\+Bounciness()}{setMyBounciness()}}
+{\footnotesize\ttfamily void Physics\+::set\+My\+Bounciness (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+自分の反発力設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 自分の反発力 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 142 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a848d75133a2c2f46a73c8439f29297c5}\label{class_physics_a848d75133a2c2f46a73c8439f29297c5}} 
+\index{Physics@{Physics}!set\+My\+Friction@{set\+My\+Friction}}
+\index{set\+My\+Friction@{set\+My\+Friction}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{set\+My\+Friction()}{setMyFriction()}}
+{\footnotesize\ttfamily void Physics\+::set\+My\+Friction (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+自分の摩擦力設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 自分の摩擦力 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 121 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_aad378ed29224e1bc00fd08ddc6122478}\label{class_physics_aad378ed29224e1bc00fd08ddc6122478}} 
+\index{Physics@{Physics}!set\+On\+The\+Ground@{set\+On\+The\+Ground}}
+\index{set\+On\+The\+Ground@{set\+On\+The\+Ground}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{set\+On\+The\+Ground()}{setOnTheGround()}}
+{\footnotesize\ttfamily void Physics\+::set\+On\+The\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+地面に乗っているフラグ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 163 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a13bf3e9de07a12afc3c0a4012e00d0a1}\label{class_physics_a13bf3e9de07a12afc3c0a4012e00d0a1}} 
 \index{Physics@{Physics}!Update@{Update}}
@@ -351,7 +768,21 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+cpp の 83 行目に定義があります。
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 192 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a122041053c2c4e69cdf6dc92076e1d79}\label{class_physics_a122041053c2c4e69cdf6dc92076e1d79}} 
 \index{Physics@{Physics}!Update\+Acceleration@{Update\+Acceleration}}
@@ -361,7 +792,45 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+cpp の 129 行目に定義があります。
+加速度更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 226 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a085300405839f6de506bfe5d0a57fdd5}\label{class_physics_a085300405839f6de506bfe5d0a57fdd5}} 
+\index{Physics@{Physics}!Update\+Ground@{Update\+Ground}}
+\index{Update\+Ground@{Update\+Ground}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{Update\+Ground()}{UpdateGround()}}
+{\footnotesize\ttfamily void Physics\+::\+Update\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+地面更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 280 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a481f06d777c1b1f52dc2c06c71e93932}\label{class_physics_a481f06d777c1b1f52dc2c06c71e93932}} 
 \index{Physics@{Physics}!Update\+Position@{Update\+Position}}
@@ -371,7 +840,21 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+cpp の 175 行目に定義があります。
+座標更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 257 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_abd74d6413b1fd6c77007edf51ea9db4b}\label{class_physics_abd74d6413b1fd6c77007edf51ea9db4b}} 
 \index{Physics@{Physics}!Update\+Velocity@{Update\+Velocity}}
@@ -381,7 +864,21 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+cpp の 146 行目に定義があります。
+速度更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Physics.\+cpp の 234 行目に定義があります。
 
 
 
@@ -394,7 +891,11 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 113 行目に定義があります。
+加速度 
+
+
+
+ Physics.\+h の 46 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a302b8ad7552303570fa1cfd070bb8588}\label{class_physics_a302b8ad7552303570fa1cfd070bb8588}} 
 \index{Physics@{Physics}!bounciness\+\_\+@{bounciness\+\_\+}}
@@ -404,7 +905,11 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 127 行目に定義があります。
+反発力 
+
+
+
+ Physics.\+h の 53 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a63b2e282267a28f0a160b98d56fa40b6}\label{class_physics_a63b2e282267a28f0a160b98d56fa40b6}} 
 \index{Physics@{Physics}!friction\+\_\+@{friction\+\_\+}}
@@ -414,7 +919,11 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 123 行目に定義があります。
+摩擦 
+
+
+
+ Physics.\+h の 51 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a43e626ecc90d765a7cbd4c561b19331a}\label{class_physics_a43e626ecc90d765a7cbd4c561b19331a}} 
 \index{Physics@{Physics}!game\+\_\+object\+\_\+@{game\+\_\+object\+\_\+}}
@@ -424,7 +933,11 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 110 行目に定義があります。
+ゲームオブジェクト 
+
+
+
+ Physics.\+h の 45 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_af292ed854ca107f1a09a79931b10c3fa}\label{class_physics_af292ed854ca107f1a09a79931b10c3fa}} 
 \index{Physics@{Physics}!gravity\+\_\+acceleration\+\_\+@{gravity\+\_\+acceleration\+\_\+}}
@@ -434,7 +947,11 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 132 行目に定義があります。
+重力加速度 
+
+
+
+ Physics.\+h の 56 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_aadfeac1807906f025d97143ba1c0f323}\label{class_physics_aadfeac1807906f025d97143ba1c0f323}} 
 \index{Physics@{Physics}!gravity\+\_\+direction\+\_\+@{gravity\+\_\+direction\+\_\+}}
@@ -444,7 +961,25 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 133 行目に定義があります。
+重力ベクトル 
+
+
+
+ Physics.\+h の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_aa1ce0627c339b93ca16d3db4ccbdbd18}\label{class_physics_aa1ce0627c339b93ca16d3db4ccbdbd18}} 
+\index{Physics@{Physics}!is\+\_\+enable\+\_\+@{is\+\_\+enable\+\_\+}}
+\index{is\+\_\+enable\+\_\+@{is\+\_\+enable\+\_\+}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{is\+\_\+enable\+\_\+}{is\_enable\_}}
+{\footnotesize\ttfamily bool Physics\+::is\+\_\+enable\+\_\+ = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+有効フラグ 
+
+
+
+ Physics.\+h の 44 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_ab49b5561a800bec8abcb3d35b1125c4e}\label{class_physics_ab49b5561a800bec8abcb3d35b1125c4e}} 
 \index{Physics@{Physics}!is\+\_\+gravity\+\_\+@{is\+\_\+gravity\+\_\+}}
@@ -454,7 +989,11 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 131 行目に定義があります。
+重力フラグ 
+
+
+
+ Physics.\+h の 55 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a863e16866ca69201a22365e480b7c74f}\label{class_physics_a863e16866ca69201a22365e480b7c74f}} 
 \index{Physics@{Physics}!is\+\_\+landing\+\_\+@{is\+\_\+landing\+\_\+}}
@@ -464,7 +1003,11 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 137 行目に定義があります。
+着地したフラグ 
+
+
+
+ Physics.\+h の 59 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a07a6416cab35698692378441c1750c4c}\label{class_physics_a07a6416cab35698692378441c1750c4c}} 
 \index{Physics@{Physics}!is\+\_\+on\+\_\+tha\+\_\+ground\+\_\+@{is\+\_\+on\+\_\+tha\+\_\+ground\+\_\+}}
@@ -474,7 +1017,11 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 136 行目に定義があります。
+地面に乗っているフラグ 
+
+
+
+ Physics.\+h の 58 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a68f81110a54f8ed24ac94b6cd33c3ae0}\label{class_physics_a68f81110a54f8ed24ac94b6cd33c3ae0}} 
 \index{Physics@{Physics}!mass\+\_\+@{mass\+\_\+}}
@@ -484,17 +1031,39 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 120 行目に定義があります。
-
-\mbox{\Hypertarget{class_physics_a28b0e36d5eec30e1e9ccb1a51c5c6363}\label{class_physics_a28b0e36d5eec30e1e9ccb1a51c5c6363}} 
-\index{Physics@{Physics}!max\+\_\+velocity\+\_\+@{max\+\_\+velocity\+\_\+}}
-\index{max\+\_\+velocity\+\_\+@{max\+\_\+velocity\+\_\+}!Physics@{Physics}}
-\subsubsection{\texorpdfstring{max\+\_\+velocity\+\_\+}{max\_velocity\_}}
-{\footnotesize\ttfamily float Physics\+::max\+\_\+velocity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+質量 
 
 
 
- Physics.\+h の 117 行目に定義があります。
+ Physics.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a0ed07971c58b56acb606ece7caa03068}\label{class_physics_a0ed07971c58b56acb606ece7caa03068}} 
+\index{Physics@{Physics}!max\+\_\+horizontal\+\_\+velocity\+\_\+@{max\+\_\+horizontal\+\_\+velocity\+\_\+}}
+\index{max\+\_\+horizontal\+\_\+velocity\+\_\+@{max\+\_\+horizontal\+\_\+velocity\+\_\+}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{max\+\_\+horizontal\+\_\+velocity\+\_\+}{max\_horizontal\_velocity\_}}
+{\footnotesize\ttfamily float Physics\+::max\+\_\+horizontal\+\_\+velocity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+最大水平速度 
+
+
+
+ Physics.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_physics_a5018fa4a3e2e72533e669112e6aebbc4}\label{class_physics_a5018fa4a3e2e72533e669112e6aebbc4}} 
+\index{Physics@{Physics}!max\+\_\+vertical\+\_\+velocity\+\_\+@{max\+\_\+vertical\+\_\+velocity\+\_\+}}
+\index{max\+\_\+vertical\+\_\+velocity\+\_\+@{max\+\_\+vertical\+\_\+velocity\+\_\+}!Physics@{Physics}}
+\subsubsection{\texorpdfstring{max\+\_\+vertical\+\_\+velocity\+\_\+}{max\_vertical\_velocity\_}}
+{\footnotesize\ttfamily float Physics\+::max\+\_\+vertical\+\_\+velocity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+最大垂直速度 
+
+
+
+ Physics.\+h の 49 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a6a04fea3f4790f2dfc2301940b8ccb6b}\label{class_physics_a6a04fea3f4790f2dfc2301940b8ccb6b}} 
 \index{Physics@{Physics}!my\+\_\+bounciness\+\_\+@{my\+\_\+bounciness\+\_\+}}
@@ -504,7 +1073,11 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 128 行目に定義があります。
+自分の反発力 
+
+
+
+ Physics.\+h の 54 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a25f0db16668c86e90babbf9233b57511}\label{class_physics_a25f0db16668c86e90babbf9233b57511}} 
 \index{Physics@{Physics}!my\+\_\+friction\+\_\+@{my\+\_\+friction\+\_\+}}
@@ -514,7 +1087,11 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 124 行目に定義があります。
+自分の摩擦 
+
+
+
+ Physics.\+h の 52 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a9818c603a813d8f70254812f43e67b3e}\label{class_physics_a9818c603a813d8f70254812f43e67b3e}} 
 \index{Physics@{Physics}!velocity\+\_\+@{velocity\+\_\+}}
@@ -524,7 +1101,11 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 116 行目に定義があります。
+速度 
+
+
+
+ Physics.\+h の 47 行目に定義があります。
 
 \mbox{\Hypertarget{class_physics_a84ba24f3a5b31888a654c6750fb24faf}\label{class_physics_a84ba24f3a5b31888a654c6750fb24faf}} 
 \index{Physics@{Physics}!V\+E\+L\+O\+C\+I\+T\+Y\+\_\+\+M\+IN@{V\+E\+L\+O\+C\+I\+T\+Y\+\_\+\+M\+IN}}
@@ -534,11 +1115,15 @@ static const float \mbox{\hyperlink{class_physics_a84ba24f3a5b31888a654c6750fb24
 
 
 
- Physics.\+h の 43 行目に定義があります。
+最低速度 
+
+
+
+ Physics.\+h の 37 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Vector/\+Physics/\mbox{\hyperlink{_physics_8h}{Physics.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Vector/\+Physics/\mbox{\hyperlink{_physics_8cpp}{Physics.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_physics_8h}{Physics.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\+Source/\mbox{\hyperlink{_physics_8cpp}{Physics.\+cpp}}\end{DoxyCompactItemize}

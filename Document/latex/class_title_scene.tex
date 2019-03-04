@@ -11,18 +11,23 @@
 
 
 
-Title\+Scene の継承関係図\nopagebreak
+Title\+Scene 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=147pt]{class_title_scene__inherit__graph}
+\includegraphics[width=350pt]{class_title_scene__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_title_scene_a433ef854689b1c9defb29d9f999c52da}{Title\+Scene}} (\mbox{\hyperlink{class_scene_base_1_1_state_base}{State\+Base}} $\ast$state)
-\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_title_scene_a28897f29ffe8725445bc0a27d7a865d1}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_title_scene_a65fcb66cfab634ff7b0f6b69bbc63d7c}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
@@ -49,7 +54,7 @@ Title\+Scene の継承関係図\nopagebreak
 
 
 \begin{DoxyParams}{引数}
-{\em state} & 最初のステート \\
+{\em $\ast$state} & 最初のステート \\
 \hline
 \end{DoxyParams}
 
@@ -58,7 +63,66 @@ Title\+Scene の継承関係図\nopagebreak
 
 
 
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_title_scene_a28897f29ffe8725445bc0a27d7a865d1}\label{class_title_scene_a28897f29ffe8725445bc0a27d7a865d1}} 
+\index{Title\+Scene@{Title\+Scene}!Init@{Init}}
+\index{Init@{Init}!Title\+Scene@{Title\+Scene}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Title\+Scene\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_scene_null_a6b27830a755687f2c00149bcfa739388}{Scene\+Null}}を再実装しています。
+
+
+
+ Title\+Scene.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_title_scene_a65fcb66cfab634ff7b0f6b69bbc63d7c}\label{class_title_scene_a65fcb66cfab634ff7b0f6b69bbc63d7c}} 
+\index{Title\+Scene@{Title\+Scene}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Title\+Scene@{Title\+Scene}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Title\+Scene\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_scene_null_abbff54a7323b5ccde4b5094757747738}{Scene\+Null}}を再実装しています。
+
+
+
+ Title\+Scene.\+cpp の 37 行目に定義があります。
+
+
+
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/02\+\_\+\+Scene/\+Scenes/\+Title\+Scene/\mbox{\hyperlink{_title_scene_8h}{Title\+Scene.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/02\+\_\+\+Scene/\+Scenes/\+Title\+Scene/\mbox{\hyperlink{_title_scene_8cpp}{Title\+Scene.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Scenes/\+Title\+Scene/\mbox{\hyperlink{_title_scene_8h}{Title\+Scene.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Scenes/\+Title\+Scene/\+Source/\mbox{\hyperlink{_title_scene_8cpp}{Title\+Scene.\+cpp}}\end{DoxyCompactItemize}

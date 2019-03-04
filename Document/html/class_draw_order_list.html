@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: DrawOrderList クラス</title>
+<title>BalloonWorld: DrawOrderList クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -102,6 +102,14 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
  <a href="class_draw_order_list.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a>&gt;</code></p>
+<div class="dynheader">
+DrawOrderList 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_draw_order_list__coll__graph.png" border="0" usemap="#_draw_order_list_coll__map" alt="Collaboration graph"/></div>
+<map name="_draw_order_list_coll__map" id="_draw_order_list_coll__map">
+<area shape="rect" id="node2" href="class_bit_flag.html" title="ビットフラグClass " alt="" coords="26,5,89,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 公開型</h2></td></tr>
@@ -136,9 +144,15 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 <tr class="memitem:a03d72a3943c45d19b70602ed7f526906"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a03d72a3943c45d19b70602ed7f526906">setDrawType</a> (<a class="el" href="class_draw_order_list.html#a6c9b9ceb312c16d399ef355f4f3486bb">DrawType</a> value)</td></tr>
 <tr class="memdesc:a03d72a3943c45d19b70602ed7f526906"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画タイプ設定関数  <a href="#a03d72a3943c45d19b70602ed7f526906">[詳解]</a><br /></td></tr>
 <tr class="separator:a03d72a3943c45d19b70602ed7f526906"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bc0267f11550e6c231682e0824b25b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_flag.html">Flag</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a2bc0267f11550e6c231682e0824b25b5">getpRenderTargetFlag</a> ()</td></tr>
-<tr class="memdesc:a2bc0267f11550e6c231682e0824b25b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダーターゲットフラグポインタ取得関数  <a href="#a2bc0267f11550e6c231682e0824b25b5">[詳解]</a><br /></td></tr>
-<tr class="separator:a2bc0267f11550e6c231682e0824b25b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab03bec2bf394ed6ffc3d44b0eaabb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_order_list.html#a6c9b9ceb312c16d399ef355f4f3486bb">DrawType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a8ab03bec2bf394ed6ffc3d44b0eaabb4">getTempChangeDrawType</a> ()</td></tr>
+<tr class="memdesc:a8ab03bec2bf394ed6ffc3d44b0eaabb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">一時変更描画タイプ取得関数  <a href="#a8ab03bec2bf394ed6ffc3d44b0eaabb4">[詳解]</a><br /></td></tr>
+<tr class="separator:a8ab03bec2bf394ed6ffc3d44b0eaabb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e4126b1de6ba16ce30558b9e8d9b490"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a4e4126b1de6ba16ce30558b9e8d9b490">setTempChangeDrawType</a> (<a class="el" href="class_draw_order_list.html#a6c9b9ceb312c16d399ef355f4f3486bb">DrawType</a> value)</td></tr>
+<tr class="memdesc:a4e4126b1de6ba16ce30558b9e8d9b490"><td class="mdescLeft">&#160;</td><td class="mdescRight">一時変更描画タイプ設定関数  <a href="#a4e4126b1de6ba16ce30558b9e8d9b490">[詳解]</a><br /></td></tr>
+<tr class="separator:a4e4126b1de6ba16ce30558b9e8d9b490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c483376f2da73a403bbd82f7e9e3370"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bit_flag.html">BitFlag</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a3c483376f2da73a403bbd82f7e9e3370">getpRenderTargetFlag</a> ()</td></tr>
+<tr class="memdesc:a3c483376f2da73a403bbd82f7e9e3370"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダーターゲットフラグ取得関数  <a href="#a3c483376f2da73a403bbd82f7e9e3370">[詳解]</a><br /></td></tr>
+<tr class="separator:a3c483376f2da73a403bbd82f7e9e3370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d49272331a0f6f8656839ba5fe5e1b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a5d49272331a0f6f8656839ba5fe5e1b6">getIsBillboard</a> ()</td></tr>
 <tr class="memdesc:a5d49272331a0f6f8656839ba5fe5e1b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビルボードフラグ取得関数  <a href="#a5d49272331a0f6f8656839ba5fe5e1b6">[詳解]</a><br /></td></tr>
 <tr class="separator:a5d49272331a0f6f8656839ba5fe5e1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,6 +165,12 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 <tr class="memitem:a90504fdecaa6c022c8b85919352a10b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a90504fdecaa6c022c8b85919352a10b1">setIsLighting</a> (bool value)</td></tr>
 <tr class="memdesc:a90504fdecaa6c022c8b85919352a10b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ライティングフラグ設定関数  <a href="#a90504fdecaa6c022c8b85919352a10b1">[詳解]</a><br /></td></tr>
 <tr class="separator:a90504fdecaa6c022c8b85919352a10b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7131fc4155b8a35108697ad9628f337f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a7131fc4155b8a35108697ad9628f337f">getIsAnimation</a> ()</td></tr>
+<tr class="memdesc:a7131fc4155b8a35108697ad9628f337f"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーションフラグ取得関数  <a href="#a7131fc4155b8a35108697ad9628f337f">[詳解]</a><br /></td></tr>
+<tr class="separator:a7131fc4155b8a35108697ad9628f337f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b85221bde032f5912219f79a93c100"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a31b85221bde032f5912219f79a93c100">setIsAnimation</a> (bool value)</td></tr>
+<tr class="memdesc:a31b85221bde032f5912219f79a93c100"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーションフラグ設定関数  <a href="#a31b85221bde032f5912219f79a93c100">[詳解]</a><br /></td></tr>
+<tr class="separator:a31b85221bde032f5912219f79a93c100"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe5cb8651814f631146c91e6428c0b6d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#afe5cb8651814f631146c91e6428c0b6d">getLayerNum</a> ()</td></tr>
 <tr class="memdesc:afe5cb8651814f631146c91e6428c0b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">レイヤー数取得関数  <a href="#afe5cb8651814f631146c91e6428c0b6d">[詳解]</a><br /></td></tr>
 <tr class="separator:afe5cb8651814f631146c91e6428c0b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,29 +180,37 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
-<tr class="memitem:a75498416e70da9517427695271d4b5e7"><td class="memItemLeft" align="right" valign="top">static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a75498416e70da9517427695271d4b5e7">RENDER_TARGET_BACK_BUFFER</a> = 1 &lt;&lt; 0</td></tr>
-<tr class="separator:a75498416e70da9517427695271d4b5e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b0fb07f07093ce5047373732c33fca1"><td class="memItemLeft" align="right" valign="top">static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a9b0fb07f07093ce5047373732c33fca1">RENDER_TARGET_MAIN</a> = 1 &lt;&lt; 0</td></tr>
+<tr class="separator:a9b0fb07f07093ce5047373732c33fca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ee325016a7e07c0be79c6440f3bfe53"><td class="memItemLeft" align="right" valign="top">static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a0ee325016a7e07c0be79c6440f3bfe53">RENDER_TARGET_SHADOW_MAP</a> = 1 &lt;&lt; 1</td></tr>
+<tr class="separator:a0ee325016a7e07c0be79c6440f3bfe53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 非公開変数類</h2></td></tr>
-<tr class="memitem:afcb0968108f4e6932358393a8bc90a8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">ShaderManager::VertexShaderType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#afcb0968108f4e6932358393a8bc90a8b">vertex_shader_type_</a> = ShaderManager::VertexShaderType::VERTEX_FIXED</td></tr>
-<tr class="memdesc:afcb0968108f4e6932358393a8bc90a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダータイプ  <a href="#afcb0968108f4e6932358393a8bc90a8b">[詳解]</a><br /></td></tr>
-<tr class="separator:afcb0968108f4e6932358393a8bc90a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c2adbcac9f724deae8da0a698e93c57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">ShaderManager::PixelShaderType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a8c2adbcac9f724deae8da0a698e93c57">pixel_shader_type_</a> = ShaderManager::PixelShaderType::PIXEL_FIXED</td></tr>
-<tr class="memdesc:a8c2adbcac9f724deae8da0a698e93c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダータイプ  <a href="#a8c2adbcac9f724deae8da0a698e93c57">[詳解]</a><br /></td></tr>
-<tr class="separator:a8c2adbcac9f724deae8da0a698e93c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2ce43c1b177ba4dae4198aa272eeb23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_order_list.html#a6c9b9ceb312c16d399ef355f4f3486bb">DrawType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#ad2ce43c1b177ba4dae4198aa272eeb23">draw_type_</a> = DrawType::OPACITY</td></tr>
 <tr class="memdesc:ad2ce43c1b177ba4dae4198aa272eeb23"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画の種類  <a href="#ad2ce43c1b177ba4dae4198aa272eeb23">[詳解]</a><br /></td></tr>
 <tr class="separator:ad2ce43c1b177ba4dae4198aa272eeb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8da2b635d5b2a9191088f9180d1fe6d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_flag.html">Flag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a8da2b635d5b2a9191088f9180d1fe6d6">render_target_flag_</a></td></tr>
-<tr class="memdesc:a8da2b635d5b2a9191088f9180d1fe6d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダーターゲットフラグ  <a href="#a8da2b635d5b2a9191088f9180d1fe6d6">[詳解]</a><br /></td></tr>
-<tr class="separator:a8da2b635d5b2a9191088f9180d1fe6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57edbe464013d515f591d2cc98bfcbd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_draw_order_list.html#a6c9b9ceb312c16d399ef355f4f3486bb">DrawType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a57edbe464013d515f591d2cc98bfcbd0">temp_change_draw_type_</a> = DrawType::NONE</td></tr>
+<tr class="memdesc:a57edbe464013d515f591d2cc98bfcbd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">一時変更描画の種類  <a href="#a57edbe464013d515f591d2cc98bfcbd0">[詳解]</a><br /></td></tr>
+<tr class="separator:a57edbe464013d515f591d2cc98bfcbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb0968108f4e6932358393a8bc90a8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">ShaderManager::VertexShaderType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#afcb0968108f4e6932358393a8bc90a8b">vertex_shader_type_</a> = <a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbdac6e6dc18b53b4c2681394b9d8aefcec7">ShaderManager::VertexShaderType::FIXED</a></td></tr>
+<tr class="memdesc:afcb0968108f4e6932358393a8bc90a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダータイプ  <a href="#afcb0968108f4e6932358393a8bc90a8b">[詳解]</a><br /></td></tr>
+<tr class="separator:afcb0968108f4e6932358393a8bc90a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c2adbcac9f724deae8da0a698e93c57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">ShaderManager::PixelShaderType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a8c2adbcac9f724deae8da0a698e93c57">pixel_shader_type_</a> = <a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fac6e6dc18b53b4c2681394b9d8aefcec7">ShaderManager::PixelShaderType::FIXED</a></td></tr>
+<tr class="memdesc:a8c2adbcac9f724deae8da0a698e93c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダータイプ  <a href="#a8c2adbcac9f724deae8da0a698e93c57">[詳解]</a><br /></td></tr>
+<tr class="separator:a8c2adbcac9f724deae8da0a698e93c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec6aa2d6330335a0cb5ac037d3dd26d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bit_flag.html">BitFlag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a9ec6aa2d6330335a0cb5ac037d3dd26d">render_target_flag_</a></td></tr>
+<tr class="memdesc:a9ec6aa2d6330335a0cb5ac037d3dd26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダーターゲットフラグ  <a href="#a9ec6aa2d6330335a0cb5ac037d3dd26d">[詳解]</a><br /></td></tr>
+<tr class="separator:a9ec6aa2d6330335a0cb5ac037d3dd26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9a77121ff108d8f0ee0c73065f99a75"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#ae9a77121ff108d8f0ee0c73065f99a75">is_billboard_</a> = false</td></tr>
 <tr class="memdesc:ae9a77121ff108d8f0ee0c73065f99a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビルボードフラグ  <a href="#ae9a77121ff108d8f0ee0c73065f99a75">[詳解]</a><br /></td></tr>
 <tr class="separator:ae9a77121ff108d8f0ee0c73065f99a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26e72a0f47cc2c791eeb87fe6aadeee9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a26e72a0f47cc2c791eeb87fe6aadeee9">is_lighting_</a> = true</td></tr>
 <tr class="memdesc:a26e72a0f47cc2c791eeb87fe6aadeee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラインティングフラグ  <a href="#a26e72a0f47cc2c791eeb87fe6aadeee9">[詳解]</a><br /></td></tr>
 <tr class="separator:a26e72a0f47cc2c791eeb87fe6aadeee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a002c0ace5780bf451d2c0fefad9385be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#a002c0ace5780bf451d2c0fefad9385be">is_animation_</a> = false</td></tr>
+<tr class="memdesc:a002c0ace5780bf451d2c0fefad9385be"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーションフラグ  <a href="#a002c0ace5780bf451d2c0fefad9385be">[詳解]</a><br /></td></tr>
+<tr class="separator:a002c0ace5780bf451d2c0fefad9385be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff49851688a106fc572abab6e65506b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_order_list.html#aff49851688a106fc572abab6e65506b8">layer_num_</a> = 0</td></tr>
 <tr class="memdesc:aff49851688a106fc572abab6e65506b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">レイヤー数  <a href="#aff49851688a106fc572abab6e65506b8">[詳解]</a><br /></td></tr>
 <tr class="separator:aff49851688a106fc572abab6e65506b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,6 +278,39 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 
 </div>
 </div>
+<a id="a7131fc4155b8a35108697ad9628f337f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7131fc4155b8a35108697ad9628f337f">&#9670;&nbsp;</a></span>getIsAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DrawOrderList::getIsAnimation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アニメーションフラグ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>アニメーションフラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00110">110</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="a5d49272331a0f6f8656839ba5fe5e1b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d49272331a0f6f8656839ba5fe5e1b6">&#9670;&nbsp;</a></span>getIsBillboard()</h2>
 
@@ -279,7 +340,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00068">68</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00082">82</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -312,7 +373,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00082">82</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00096">96</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -345,7 +406,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00096">96</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00124">124</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -382,14 +443,14 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 
 </div>
 </div>
-<a id="a2bc0267f11550e6c231682e0824b25b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bc0267f11550e6c231682e0824b25b5">&#9670;&nbsp;</a></span>getpRenderTargetFlag()</h2>
+<a id="a3c483376f2da73a403bbd82f7e9e3370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c483376f2da73a403bbd82f7e9e3370">&#9670;&nbsp;</a></span>getpRenderTargetFlag()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_flag.html">Flag</a> * DrawOrderList::getpRenderTargetFlag </td>
+          <td class="memname"><a class="el" href="class_bit_flag.html">BitFlag</a> * DrawOrderList::getpRenderTargetFlag </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -397,7 +458,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>レンダーターゲットフラグポインタ取得関数 </p>
+<p>レンダーターゲットフラグ取得関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">void</td><td>なし </td></tr>
@@ -406,7 +467,40 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 </dl>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">Flag*</td><td>レンダーターゲットフラグポインタ </td></tr>
+    <tr><td class="paramname">BitFlag*</td><td>レンダーターゲットフラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00075">75</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8ab03bec2bf394ed6ffc3d44b0eaabb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab03bec2bf394ed6ffc3d44b0eaabb4">&#9670;&nbsp;</a></span>getTempChangeDrawType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_draw_order_list.html#a6c9b9ceb312c16d399ef355f4f3486bb">DrawOrderList::DrawType</a> DrawOrderList::getTempChangeDrawType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>一時変更描画タイプ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">DrawType</td><td>一時変更描画タイプ </td></tr>
   </table>
   </dd>
 </dl>
@@ -467,7 +561,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 <p>描画タイプ設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>描画タイプ </td></tr>
+    <tr><td class="paramname">value</td><td>描画タイプ </td></tr>
   </table>
   </dd>
 </dl>
@@ -479,6 +573,40 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 </dl>
 
 <p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00054">54</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a31b85221bde032f5912219f79a93c100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b85221bde032f5912219f79a93c100">&#9670;&nbsp;</a></span>setIsAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawOrderList::setIsAnimation </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アニメーションフラグ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>アニメーションフラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00117">117</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -501,7 +629,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 <p>ビルボードフラグ設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>ビルボードフラグ </td></tr>
+    <tr><td class="paramname">value</td><td>ビルボードフラグ </td></tr>
   </table>
   </dd>
 </dl>
@@ -512,7 +640,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00075">75</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00089">89</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -535,7 +663,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 <p>ライティングフラグ設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>ライティングフラグ </td></tr>
+    <tr><td class="paramname">value</td><td>ライティングフラグ </td></tr>
   </table>
   </dd>
 </dl>
@@ -546,7 +674,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00089">89</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00103">103</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -569,7 +697,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 <p>レイヤー数設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>レイヤー数 </td></tr>
+    <tr><td class="paramname">value</td><td>レイヤー数 </td></tr>
   </table>
   </dd>
 </dl>
@@ -580,7 +708,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00103">103</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00131">131</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -603,7 +731,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 <p>ピクセルシェーダータイプ設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>ピクセルシェーダータイプ </td></tr>
+    <tr><td class="paramname">value</td><td>ピクセルシェーダータイプ </td></tr>
   </table>
   </dd>
 </dl>
@@ -615,6 +743,40 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 </dl>
 
 <p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00040">40</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4e4126b1de6ba16ce30558b9e8d9b490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e4126b1de6ba16ce30558b9e8d9b490">&#9670;&nbsp;</a></span>setTempChangeDrawType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawOrderList::setTempChangeDrawType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_draw_order_list.html#a6c9b9ceb312c16d399ef355f4f3486bb">DrawOrderList::DrawType</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>一時変更描画タイプ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>一時変更描画タイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a> の <a class="el" href="_draw_order_list_8cpp_source.html#l00068">68</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -637,7 +799,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 <p>頂点シェーダータイプ設定関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>頂点シェーダータイプ </td></tr>
+    <tr><td class="paramname">value</td><td>頂点シェーダータイプ </td></tr>
   </table>
   </dd>
 </dl>
@@ -675,7 +837,33 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 
 <p>描画の種類 </p>
 
-<p class="definition"> <a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a> の <a class="el" href="_draw_order_list_8h_source.html#l00055">55</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a> の <a class="el" href="_draw_order_list_8h_source.html#l00053">53</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a002c0ace5780bf451d2c0fefad9385be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a002c0ace5780bf451d2c0fefad9385be">&#9670;&nbsp;</a></span>is_animation_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DrawOrderList::is_animation_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アニメーションフラグ </p>
+
+<p class="definition"> <a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a> の <a class="el" href="_draw_order_list_8h_source.html#l00060">60</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -753,7 +941,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 
 <p>レイヤー数 </p>
 
-<p class="definition"> <a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a> の <a class="el" href="_draw_order_list_8h_source.html#l00060">60</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a> の <a class="el" href="_draw_order_list_8h_source.html#l00061">61</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -767,7 +955,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">ShaderManager::PixelShaderType</a> DrawOrderList::pixel_shader_type_ = ShaderManager::PixelShaderType::PIXEL_FIXED</td>
+          <td class="memname"><a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5f">ShaderManager::PixelShaderType</a> DrawOrderList::pixel_shader_type_ = <a class="el" href="class_shader_manager.html#a7d15d773b3c6a99dd7086c45c8b0be5fac6e6dc18b53b4c2681394b9d8aefcec7">ShaderManager::PixelShaderType::FIXED</a></td>
         </tr>
       </table>
   </td>
@@ -779,12 +967,12 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 
 <p>ピクセルシェーダータイプ </p>
 
-<p class="definition"> <a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a> の <a class="el" href="_draw_order_list_8h_source.html#l00053">53</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a> の <a class="el" href="_draw_order_list_8h_source.html#l00056">56</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a75498416e70da9517427695271d4b5e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75498416e70da9517427695271d4b5e7">&#9670;&nbsp;</a></span>RENDER_TARGET_BACK_BUFFER</h2>
+<a id="a9ec6aa2d6330335a0cb5ac037d3dd26d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec6aa2d6330335a0cb5ac037d3dd26d">&#9670;&nbsp;</a></span>render_target_flag_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -793,31 +981,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned DrawOrderList::RENDER_TARGET_BACK_BUFFER = 1 &lt;&lt; 0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a> の <a class="el" href="_draw_order_list_8h_source.html#l00045">45</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a8da2b635d5b2a9191088f9180d1fe6d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8da2b635d5b2a9191088f9180d1fe6d6">&#9670;&nbsp;</a></span>render_target_flag_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_flag.html">Flag</a> DrawOrderList::render_target_flag_</td>
+          <td class="memname"><a class="el" href="class_bit_flag.html">BitFlag</a> DrawOrderList::render_target_flag_</td>
         </tr>
       </table>
   </td>
@@ -833,6 +997,80 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 
 </div>
 </div>
+<a id="a9b0fb07f07093ce5047373732c33fca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b0fb07f07093ce5047373732c33fca1">&#9670;&nbsp;</a></span>RENDER_TARGET_MAIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned DrawOrderList::RENDER_TARGET_MAIN = 1 &lt;&lt; 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a> の <a class="el" href="_draw_order_list_8h_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0ee325016a7e07c0be79c6440f3bfe53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ee325016a7e07c0be79c6440f3bfe53">&#9670;&nbsp;</a></span>RENDER_TARGET_SHADOW_MAP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned DrawOrderList::RENDER_TARGET_SHADOW_MAP = 1 &lt;&lt; 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a> の <a class="el" href="_draw_order_list_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a57edbe464013d515f591d2cc98bfcbd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57edbe464013d515f591d2cc98bfcbd0">&#9670;&nbsp;</a></span>temp_change_draw_type_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_draw_order_list.html#a6c9b9ceb312c16d399ef355f4f3486bb">DrawType</a> DrawOrderList::temp_change_draw_type_ = DrawType::NONE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>一時変更描画の種類 </p>
+
+<p class="definition"> <a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a> の <a class="el" href="_draw_order_list_8h_source.html#l00054">54</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="afcb0968108f4e6932358393a8bc90a8b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afcb0968108f4e6932358393a8bc90a8b">&#9670;&nbsp;</a></span>vertex_shader_type_</h2>
 
@@ -843,7 +1081,7 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">ShaderManager::VertexShaderType</a> DrawOrderList::vertex_shader_type_ = ShaderManager::VertexShaderType::VERTEX_FIXED</td>
+          <td class="memname"><a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbd">ShaderManager::VertexShaderType</a> DrawOrderList::vertex_shader_type_ = <a class="el" href="class_shader_manager.html#a9b51e49d70eb3cc58f6d1f3994e8cfbdac6e6dc18b53b4c2681394b9d8aefcec7">ShaderManager::VertexShaderType::FIXED</a></td>
         </tr>
       </table>
   </td>
@@ -855,13 +1093,13 @@ $(document).ready(function(){initNavTree('class_draw_order_list.html','');});
 
 <p>頂点シェーダータイプ </p>
 
-<p class="definition"> <a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a> の <a class="el" href="_draw_order_list_8h_source.html#l00052">52</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a> の <a class="el" href="_draw_order_list_8h_source.html#l00055">55</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Component/Draw/DrawBase/DrawOrderList/<a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/04_Tool/Component/Draw/DrawBase/DrawOrderList/<a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/<a class="el" href="_draw_order_list_8h_source.html">DrawOrderList.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/GameEngine/Draw/DrawManager/Source/<a class="el" href="_draw_order_list_8cpp_source.html">DrawOrderList.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -2,7 +2,7 @@
 \label{class_pixel_shader_null}\index{Pixel\+Shader\+Null@{Pixel\+Shader\+Null}}
 
 
-空白ピクセルシェーダークラス  
+空白ピクセルシェーダー\+Class  
 
 
 
@@ -11,136 +11,178 @@
 
 
 
-Pixel\+Shader\+Null の継承関係図\nopagebreak
+Pixel\+Shader\+Null 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=211pt]{class_pixel_shader_null__inherit__graph}
+\includegraphics[height=550pt]{class_pixel_shader_null__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{class_pixel_shader_null_abfd7a6a986da09061a55d31024219eba}{Init}} ()
+virtual void \mbox{\hyperlink{class_pixel_shader_null_a5318be2bf26892c385d863e3e8409571}{Init}} ()
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_pixel_shader_null_ae5ee2fa95e5da787918ccbd1877cd0ef}{Uninit}} ()
+virtual void \mbox{\hyperlink{class_pixel_shader_null_adca4c44cd25c90a5ebd75b459f5e641e}{Uninit}} ()
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_pixel_shader_null_a99c712ab174da29ba26a893820b64799}{Common\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)
-\begin{DoxyCompactList}\small\item\em 共通設定関数 \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_pixel_shader_null_a8dd0194b5a22da5261ab35233a7cfdcd}{Specific\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index, unsigned mesh\+\_\+index)
-\begin{DoxyCompactList}\small\item\em 固有設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{class_pixel_shader_null_a488bde4a2c9a9c45c4ec0ad42487d3b1}{Object\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)
+\begin{DoxyCompactList}\small\item\em オブジェクト設定関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pixel_shader_null_a89b6f0558a969478b06af52bb8e6ee16}{Mesh\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index, unsigned mesh\+\_\+index)
+\begin{DoxyCompactList}\small\item\em メッシュ設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
-空白ピクセルシェーダークラス 
+空白ピクセルシェーダー\+Class 
 
-空白ピクセルシェーダークラス 
+空白ピクセルシェーダーの\+Class 
 
- Pixel\+Shader\+Null.\+h の 26 行目に定義があります。
+ Pixel\+Shader\+Null.\+h の 24 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_pixel_shader_null_a99c712ab174da29ba26a893820b64799}\label{class_pixel_shader_null_a99c712ab174da29ba26a893820b64799}} 
-\index{Pixel\+Shader\+Null@{Pixel\+Shader\+Null}!Common\+Setting@{Common\+Setting}}
-\index{Common\+Setting@{Common\+Setting}!Pixel\+Shader\+Null@{Pixel\+Shader\+Null}}
-\subsubsection{\texorpdfstring{Common\+Setting()}{CommonSetting()}}
-{\footnotesize\ttfamily virtual void Pixel\+Shader\+Null\+::\+Common\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
-
-
-
-共通設定関数 
-
-
-\begin{DoxyParams}{引数}
-{\em draw} & \+: 描画基底クラス camera \+: カメラ object\+\_\+index \+: 描画オブジェクトインデックス \\
-\hline
-\end{DoxyParams}
-
-
-\mbox{\hyperlink{class_shader_base_aef6fa922223d71fbec81464ebbfaf687}{Shader\+Base}}を実装しています。
-
-
-
-\mbox{\hyperlink{class_pixel_shader_bump_mapping_af62a2b40930533a3bae17319f876705d}{Pixel\+Shader\+Bump\+Mapping}}で再実装されています。
-
-
-
- Pixel\+Shader\+Null.\+h の 55 行目に定義があります。
-
-\mbox{\Hypertarget{class_pixel_shader_null_abfd7a6a986da09061a55d31024219eba}\label{class_pixel_shader_null_abfd7a6a986da09061a55d31024219eba}} 
+\mbox{\Hypertarget{class_pixel_shader_null_a5318be2bf26892c385d863e3e8409571}\label{class_pixel_shader_null_a5318be2bf26892c385d863e3e8409571}} 
 \index{Pixel\+Shader\+Null@{Pixel\+Shader\+Null}!Init@{Init}}
 \index{Init@{Init}!Pixel\+Shader\+Null@{Pixel\+Shader\+Null}}
 \subsubsection{\texorpdfstring{Init()}{Init()}}
-{\footnotesize\ttfamily virtual void Pixel\+Shader\+Null\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Null\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
 初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
 
 \mbox{\hyperlink{class_shader_base_a9622b2f5e0184a78d3af82820dc5113d}{Shader\+Base}}を実装しています。
 
 
 
-\mbox{\hyperlink{class_pixel_shader_bump_mapping_ab7807b7c56242e965ddb23e66e1a5d9e}{Pixel\+Shader\+Bump\+Mapping}}で再実装されています。
+\mbox{\hyperlink{class_pixel_shader_default_a74187e4e936d79947753bf4028a411bf}{Pixel\+Shader\+Default}}, \mbox{\hyperlink{class_pixel_shader_default_shadow_a22be67e887bcad8d9b6725cbae7e3abc}{Pixel\+Shader\+Default\+Shadow}}, \mbox{\hyperlink{class_pixel_shader_shadow_map_a4e68df44391fdd93985ad7b361828f99}{Pixel\+Shader\+Shadow\+Map}}, \mbox{\hyperlink{class_pixel_shader_blinn_phong_af02b6b6659975f0285aebced953c567a}{Pixel\+Shader\+Blinn\+Phong}}, \mbox{\hyperlink{class_pixel_shader_bump_mapping_ab7807b7c56242e965ddb23e66e1a5d9e}{Pixel\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_pixel_shader_cook_torrance_aed6d21d6560d11fede08e596f49716d5}{Pixel\+Shader\+Cook\+Torrance}}で再実装されています。
 
 
 
- Pixel\+Shader\+Null.\+h の 36 行目に定義があります。
+ Pixel\+Shader\+Null.\+cpp の 20 行目に定義があります。
 
-\mbox{\Hypertarget{class_pixel_shader_null_a8dd0194b5a22da5261ab35233a7cfdcd}\label{class_pixel_shader_null_a8dd0194b5a22da5261ab35233a7cfdcd}} 
-\index{Pixel\+Shader\+Null@{Pixel\+Shader\+Null}!Specific\+Setting@{Specific\+Setting}}
-\index{Specific\+Setting@{Specific\+Setting}!Pixel\+Shader\+Null@{Pixel\+Shader\+Null}}
-\subsubsection{\texorpdfstring{Specific\+Setting()}{SpecificSetting()}}
-{\footnotesize\ttfamily virtual void Pixel\+Shader\+Null\+::\+Specific\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_pixel_shader_null_a89b6f0558a969478b06af52bb8e6ee16}\label{class_pixel_shader_null_a89b6f0558a969478b06af52bb8e6ee16}} 
+\index{Pixel\+Shader\+Null@{Pixel\+Shader\+Null}!Mesh\+Setting@{Mesh\+Setting}}
+\index{Mesh\+Setting@{Mesh\+Setting}!Pixel\+Shader\+Null@{Pixel\+Shader\+Null}}
+\subsubsection{\texorpdfstring{Mesh\+Setting()}{MeshSetting()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Null\+::\+Mesh\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-固有設定関数 
+メッシュ設定関数 
 
 
 \begin{DoxyParams}{引数}
-{\em draw} & \+: 描画基底クラス camera \+: カメラ object\+\_\+index \+: 描画オブジェクトインデックス mesh\+\_\+index \+: メッシュインデックス \\
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
-
-\mbox{\hyperlink{class_shader_base_ac78c78ede3b8e48cf28b739b97456620}{Shader\+Base}}を実装しています。
-
-
-
-\mbox{\hyperlink{class_pixel_shader_bump_mapping_afa80c2404b490a444d54cc47c681ca8f}{Pixel\+Shader\+Bump\+Mapping}}で再実装されています。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+\mbox{\hyperlink{class_shader_base_a04f6ce27a707f4040e8abe48f9840951}{Shader\+Base}}を実装しています。
 
- Pixel\+Shader\+Null.\+h の 72 行目に定義があります。
 
-\mbox{\Hypertarget{class_pixel_shader_null_ae5ee2fa95e5da787918ccbd1877cd0ef}\label{class_pixel_shader_null_ae5ee2fa95e5da787918ccbd1877cd0ef}} 
+
+\mbox{\hyperlink{class_pixel_shader_default_a18985aa792820858e214f141643119c4}{Pixel\+Shader\+Default}}, \mbox{\hyperlink{class_pixel_shader_default_shadow_adec247949dea3a73545f602641a99103}{Pixel\+Shader\+Default\+Shadow}}, \mbox{\hyperlink{class_pixel_shader_blinn_phong_a5b4b61a3d51610d6a41dfb3b25704421}{Pixel\+Shader\+Blinn\+Phong}}, \mbox{\hyperlink{class_pixel_shader_bump_mapping_ac1ff541401f121f7bd15b6e11cab997f}{Pixel\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_pixel_shader_cook_torrance_a0e658d9792cc15730c800db5a509fad9}{Pixel\+Shader\+Cook\+Torrance}}で再実装されています。
+
+
+
+ Pixel\+Shader\+Null.\+cpp の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_null_a488bde4a2c9a9c45c4ec0ad42487d3b1}\label{class_pixel_shader_null_a488bde4a2c9a9c45c4ec0ad42487d3b1}} 
+\index{Pixel\+Shader\+Null@{Pixel\+Shader\+Null}!Object\+Setting@{Object\+Setting}}
+\index{Object\+Setting@{Object\+Setting}!Pixel\+Shader\+Null@{Pixel\+Shader\+Null}}
+\subsubsection{\texorpdfstring{Object\+Setting()}{ObjectSetting()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Null\+::\+Object\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+オブジェクト設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_shader_base_a054bc5e129619ec976740e0698ef9a8b}{Shader\+Base}}を実装しています。
+
+
+
+\mbox{\hyperlink{class_pixel_shader_default_ae70580bd12afdbf654122bdb4dce85d0}{Pixel\+Shader\+Default}}, \mbox{\hyperlink{class_pixel_shader_default_shadow_ac7e4f76ddef588b97dd898c31023be37}{Pixel\+Shader\+Default\+Shadow}}, \mbox{\hyperlink{class_pixel_shader_blinn_phong_a772f7d20219ce7a563a8e608306f0ca1}{Pixel\+Shader\+Blinn\+Phong}}, \mbox{\hyperlink{class_pixel_shader_bump_mapping_a03839e7482a4a53ff1dc18ab288fec05}{Pixel\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_pixel_shader_cook_torrance_a2eff8f1808d5c7686599949537e7fdc4}{Pixel\+Shader\+Cook\+Torrance}}で再実装されています。
+
+
+
+ Pixel\+Shader\+Null.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_null_adca4c44cd25c90a5ebd75b459f5e641e}\label{class_pixel_shader_null_adca4c44cd25c90a5ebd75b459f5e641e}} 
 \index{Pixel\+Shader\+Null@{Pixel\+Shader\+Null}!Uninit@{Uninit}}
 \index{Uninit@{Uninit}!Pixel\+Shader\+Null@{Pixel\+Shader\+Null}}
 \subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
-{\footnotesize\ttfamily virtual void Pixel\+Shader\+Null\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Null\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
 
 \mbox{\hyperlink{class_shader_base_a784edfa81bec4d08a257ed4f02c61222}{Shader\+Base}}を実装しています。
 
 
 
-\mbox{\hyperlink{class_pixel_shader_bump_mapping_a004f731db6dab6b59949baed4a5a32d7}{Pixel\+Shader\+Bump\+Mapping}}で再実装されています。
+\mbox{\hyperlink{class_pixel_shader_default_af195bc2ba2e5f7352d4b762b20825d95}{Pixel\+Shader\+Default}}, \mbox{\hyperlink{class_pixel_shader_default_shadow_abd9b03c980fed91c4fc14bbab244adbd}{Pixel\+Shader\+Default\+Shadow}}, \mbox{\hyperlink{class_pixel_shader_shadow_map_aa95a200a1bf5bd91ffaa526a647818f1}{Pixel\+Shader\+Shadow\+Map}}, \mbox{\hyperlink{class_pixel_shader_blinn_phong_a50450f0ad9c6c0ad011361ee153088af}{Pixel\+Shader\+Blinn\+Phong}}, \mbox{\hyperlink{class_pixel_shader_bump_mapping_a004f731db6dab6b59949baed4a5a32d7}{Pixel\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_pixel_shader_cook_torrance_af2af86383b1724d1bf1364533a07fc5a}{Pixel\+Shader\+Cook\+Torrance}}で再実装されています。
 
 
 
- Pixel\+Shader\+Null.\+h の 45 行目に定義があります。
+ Pixel\+Shader\+Null.\+cpp の 28 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Shader/\+Shader\+Base/\mbox{\hyperlink{_pixel_shader_null_8h}{Pixel\+Shader\+Null.\+h}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\mbox{\hyperlink{_pixel_shader_null_8h}{Pixel\+Shader\+Null.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\+Source/\mbox{\hyperlink{_pixel_shader_null_8cpp}{Pixel\+Shader\+Null.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,291 @@
+\hypertarget{class_camera_state___normal}{}\section{Camera\+State\+\_\+\+Normal クラス}
+\label{class_camera_state___normal}\index{Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}}
+
+
+ノーマルカメラステート\+Class  
+
+
+
+
+{\ttfamily \#include $<$Camera\+State\+\_\+\+Normal.\+h$>$}
+
+
+
+Camera\+State\+\_\+\+Normal 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_camera_state___normal__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_state___normal_a9e08312abffe36e42e53decdd015f079}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_state___normal_a456267d93f83419f635c6e5c692a79bd}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_state___normal_a52b73e55084b36b1d085b62dc8f15b0a}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const float \mbox{\hyperlink{class_camera_state___normal_acd086e43e51154cb0bff449ea39db79c}{T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}} = \mbox{\hyperlink{class_meter_to_frame_aa5468938f59eb934bfc6a897a7513812}{Meter\+To\+Frame\+::\+Meter\+Per\+Second\+To\+Meter\+Per\+Flame}}(10.\+0f)
+\begin{DoxyCompactList}\small\item\em 速度 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_camera_state___normal_a793965d8e28c23dc9393f2f2657ebaee}{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}} = \mbox{\hyperlink{class_meter_to_frame_aa5468938f59eb934bfc6a897a7513812}{Meter\+To\+Frame\+::\+Meter\+Per\+Second\+To\+Meter\+Per\+Flame}}(60.\+0f)
+\begin{DoxyCompactList}\small\item\em 回転速度 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_camera_state___normal_a1cc19e3c91f60ff2d61ba13dff3fa038}{P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}} = 8.\+0f
+\begin{DoxyCompactList}\small\item\em Y座標 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_camera_state___normal_a4a606caae109107cc222287620b7e37d}{G\+A\+Z\+I\+N\+G\+\_\+\+P\+O\+I\+N\+T\+\_\+Y}} = \mbox{\hyperlink{class_camera_state___normal_a1cc19e3c91f60ff2d61ba13dff3fa038}{P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}} -\/ 5.\+0f
+\begin{DoxyCompactList}\small\item\em 注視点の\+Y座標 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_state___normal_a8989cddf35141ae6b875393755479c4c}{Input\+Translation}} ()
+\begin{DoxyCompactList}\small\item\em 平行移動入力関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_state___normal_acaaa5e148b8ce2769a54fe13892ae3bd}{Input\+Rotation}} ()
+\begin{DoxyCompactList}\small\item\em 回転入力関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_camera_state___normal_aa7b4ddcfeca36912e3236c7532e2e8eb}{lenght\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 距離 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_state___normal_ab55771b7c607d086c919fc761aca5399}{rotation\+\_\+speed\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 回転速度 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+ノーマルカメラステート\+Class 
+
+ノーマルのカメラステート\+Class 
+
+ Camera\+State\+\_\+\+Normal.\+h の 31 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_camera_state___normal_a9e08312abffe36e42e53decdd015f079}\label{class_camera_state___normal_a9e08312abffe36e42e53decdd015f079}} 
+\index{Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}!Init@{Init}}
+\index{Init@{Init}!Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Camera\+State\+\_\+\+Normal\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em camera} & カメラ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_camera_1_1_state_a11627f91e7dc5085d3cbb8841747a778}{Camera\+::\+State}}を実装しています。
+
+
+
+ Camera\+State\+\_\+\+Normal.\+cpp の 32 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_state___normal_acaaa5e148b8ce2769a54fe13892ae3bd}\label{class_camera_state___normal_acaaa5e148b8ce2769a54fe13892ae3bd}} 
+\index{Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}!Input\+Rotation@{Input\+Rotation}}
+\index{Input\+Rotation@{Input\+Rotation}!Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}}
+\subsubsection{\texorpdfstring{Input\+Rotation()}{InputRotation()}}
+{\footnotesize\ttfamily void Camera\+State\+\_\+\+Normal\+::\+Input\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+回転入力関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera\+State\+\_\+\+Normal.\+cpp の 90 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_state___normal_a8989cddf35141ae6b875393755479c4c}\label{class_camera_state___normal_a8989cddf35141ae6b875393755479c4c}} 
+\index{Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}!Input\+Translation@{Input\+Translation}}
+\index{Input\+Translation@{Input\+Translation}!Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}}
+\subsubsection{\texorpdfstring{Input\+Translation()}{InputTranslation()}}
+{\footnotesize\ttfamily void Camera\+State\+\_\+\+Normal\+::\+Input\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+平行移動入力関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Camera\+State\+\_\+\+Normal.\+cpp の 54 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_state___normal_a456267d93f83419f635c6e5c692a79bd}\label{class_camera_state___normal_a456267d93f83419f635c6e5c692a79bd}} 
+\index{Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Camera\+State\+\_\+\+Normal\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_camera_1_1_state_adb3f43b6c3f8100da7877867180e804b}{Camera\+::\+State}}を実装しています。
+
+
+
+ Camera\+State\+\_\+\+Normal.\+cpp の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_state___normal_a52b73e55084b36b1d085b62dc8f15b0a}\label{class_camera_state___normal_a52b73e55084b36b1d085b62dc8f15b0a}} 
+\index{Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}!Update@{Update}}
+\index{Update@{Update}!Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Camera\+State\+\_\+\+Normal\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_camera_1_1_state_ab94ec2ba6c56d974cf9e0d7d232948cf}{Camera\+::\+State}}を実装しています。
+
+
+
+ Camera\+State\+\_\+\+Normal.\+cpp の 46 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_camera_state___normal_a4a606caae109107cc222287620b7e37d}\label{class_camera_state___normal_a4a606caae109107cc222287620b7e37d}} 
+\index{Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}!G\+A\+Z\+I\+N\+G\+\_\+\+P\+O\+I\+N\+T\+\_\+Y@{G\+A\+Z\+I\+N\+G\+\_\+\+P\+O\+I\+N\+T\+\_\+Y}}
+\index{G\+A\+Z\+I\+N\+G\+\_\+\+P\+O\+I\+N\+T\+\_\+Y@{G\+A\+Z\+I\+N\+G\+\_\+\+P\+O\+I\+N\+T\+\_\+Y}!Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}}
+\subsubsection{\texorpdfstring{G\+A\+Z\+I\+N\+G\+\_\+\+P\+O\+I\+N\+T\+\_\+Y}{GAZING\_POINT\_Y}}
+{\footnotesize\ttfamily const float Camera\+State\+\_\+\+Normal\+::\+G\+A\+Z\+I\+N\+G\+\_\+\+P\+O\+I\+N\+T\+\_\+Y = \mbox{\hyperlink{class_camera_state___normal_a1cc19e3c91f60ff2d61ba13dff3fa038}{P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}} -\/ 5.\+0f\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+注視点の\+Y座標 
+
+
+
+ Camera\+State\+\_\+\+Normal.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_state___normal_aa7b4ddcfeca36912e3236c7532e2e8eb}\label{class_camera_state___normal_aa7b4ddcfeca36912e3236c7532e2e8eb}} 
+\index{Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}!lenght\+\_\+@{lenght\+\_\+}}
+\index{lenght\+\_\+@{lenght\+\_\+}!Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}}
+\subsubsection{\texorpdfstring{lenght\+\_\+}{lenght\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Camera\+State\+\_\+\+Normal\+::lenght\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+距離 
+
+
+
+ Camera\+State\+\_\+\+Normal.\+h の 47 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_state___normal_a1cc19e3c91f60ff2d61ba13dff3fa038}\label{class_camera_state___normal_a1cc19e3c91f60ff2d61ba13dff3fa038}} 
+\index{Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}!P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}}
+\index{P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}!Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}}
+\subsubsection{\texorpdfstring{P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y}{POSITION\_Y}}
+{\footnotesize\ttfamily const float Camera\+State\+\_\+\+Normal\+::\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+Y = 8.\+0f\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Y座標 
+
+
+
+ Camera\+State\+\_\+\+Normal.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_state___normal_a793965d8e28c23dc9393f2f2657ebaee}\label{class_camera_state___normal_a793965d8e28c23dc9393f2f2657ebaee}} 
+\index{Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}!R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED@{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}}
+\index{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED@{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}!Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}}
+\subsubsection{\texorpdfstring{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}{ROTATION\_SPEED}}
+{\footnotesize\ttfamily const float Camera\+State\+\_\+\+Normal\+::\+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED = \mbox{\hyperlink{class_meter_to_frame_aa5468938f59eb934bfc6a897a7513812}{Meter\+To\+Frame\+::\+Meter\+Per\+Second\+To\+Meter\+Per\+Flame}}(60.\+0f)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+回転速度 
+
+
+
+ Camera\+State\+\_\+\+Normal.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_state___normal_ab55771b7c607d086c919fc761aca5399}\label{class_camera_state___normal_ab55771b7c607d086c919fc761aca5399}} 
+\index{Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}!rotation\+\_\+speed\+\_\+@{rotation\+\_\+speed\+\_\+}}
+\index{rotation\+\_\+speed\+\_\+@{rotation\+\_\+speed\+\_\+}!Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}}
+\subsubsection{\texorpdfstring{rotation\+\_\+speed\+\_\+}{rotation\_speed\_}}
+{\footnotesize\ttfamily float Camera\+State\+\_\+\+Normal\+::rotation\+\_\+speed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+回転速度 
+
+
+
+ Camera\+State\+\_\+\+Normal.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_camera_state___normal_acd086e43e51154cb0bff449ea39db79c}\label{class_camera_state___normal_acd086e43e51154cb0bff449ea39db79c}} 
+\index{Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}!T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED@{T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}}
+\index{T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED@{T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}!Camera\+State\+\_\+\+Normal@{Camera\+State\+\_\+\+Normal}}
+\subsubsection{\texorpdfstring{T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}{TRANSLATION\_SPEED}}
+{\footnotesize\ttfamily const float Camera\+State\+\_\+\+Normal\+::\+T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED = \mbox{\hyperlink{class_meter_to_frame_aa5468938f59eb934bfc6a897a7513812}{Meter\+To\+Frame\+::\+Meter\+Per\+Second\+To\+Meter\+Per\+Flame}}(10.\+0f)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+速度 
+
+
+
+ Camera\+State\+\_\+\+Normal.\+h の 37 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Camera/\mbox{\hyperlink{_camera_state___normal_8h}{Camera\+State\+\_\+\+Normal.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Camera/\+Source/\mbox{\hyperlink{_camera_state___normal_8cpp}{Camera\+State\+\_\+\+Normal.\+cpp}}\end{DoxyCompactItemize}

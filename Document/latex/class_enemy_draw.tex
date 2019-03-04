@@ -2,7 +2,7 @@
 \label{class_enemy_draw}\index{Enemy\+Draw@{Enemy\+Draw}}
 
 
-敵描画クラス  
+敵描画\+Class  
 
 
 
@@ -11,41 +11,43 @@
 
 
 
-Enemy\+Draw の継承関係図\nopagebreak
+Enemy\+Draw 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=169pt]{class_enemy_draw__inherit__graph}
+\includegraphics[width=350pt]{class_enemy_draw__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
+unsigned \mbox{\hyperlink{class_enemy_draw_a1d8a943e4b625795bbd5ae614cc38ed1}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_enemy_draw_afbb8ac19041abda280ece7737103dc66}{getp\+Matrix}} (unsigned object\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em ワールド行列取得関数 \end{DoxyCompactList}\item 
+D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_enemy_draw_a3f2885da84533364daaaac4a801fbc46}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
+\begin{DoxyCompactList}\small\item\em マテリアル取得関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_enemy_draw_aa1659c35fa757db6a6cf07e26ad9ddfb}{Init}} () override
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_enemy_draw_a2861dc0623b0be7726bc69a6a469190e}{Uninit}} () override
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_enemy_draw_a20a23c1c5fd5e510d15e8ca27aabd821}{Draw}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
-unsigned \mbox{\hyperlink{class_enemy_draw_a1d8a943e4b625795bbd5ae614cc38ed1}{get\+Mesh\+Num}} (unsigned object\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em メッシュ数取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_enemy_draw_afbb8ac19041abda280ece7737103dc66}{getp\+Matrix}} (unsigned object\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em 行列ポインタ取得関数 \end{DoxyCompactList}\item 
-D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_enemy_draw_a3f2885da84533364daaaac4a801fbc46}{getp\+Material}} (unsigned object\+\_\+index, unsigned mesh\+\_\+index) override
-\begin{DoxyCompactList}\small\item\em マテリアルポインタ取得関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ \mbox{\hyperlink{class_enemy_draw_a95b8a7f07e810d1347f1704669c8f790}{enemy\+\_\+}}
-\begin{DoxyCompactList}\small\item\em 敵 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 敵 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cube_polygon}{Cube\+Polygon}} $\ast$ \mbox{\hyperlink{class_enemy_draw_a4f35f850ee5e41bb43fc6979e83589dd}{cube\+\_\+polygon\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 四角形ポリゴン \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
-敵描画クラス 
+敵描画\+Class 
 
-敵の描画クラス 
+敵の描画\+Class 
 
- Enemy\+Draw.\+h の 31 行目に定義があります。
+ Enemy\+Draw.\+h の 32 行目に定義があります。
 
 
 
@@ -62,16 +64,23 @@ D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_enemy_draw_a3f2885d
 
 
 \begin{DoxyParams}{引数}
-{\em object\+\_\+index} & \+: オブジェクトインデックス mesh\+\_\+index \+: メッシュインデックス \\
+{\em object\+\_\+index} & オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
 \mbox{\hyperlink{class_draw_null_a72ac0b7dc40b1469582419dcc5b0e114}{Draw\+Null}}を再実装しています。
 
 
 
- Enemy\+Draw.\+cpp の 50 行目に定義があります。
+ Enemy\+Draw.\+cpp の 80 行目に定義があります。
 
 \mbox{\Hypertarget{class_enemy_draw_a1d8a943e4b625795bbd5ae614cc38ed1}\label{class_enemy_draw_a1d8a943e4b625795bbd5ae614cc38ed1}} 
 \index{Enemy\+Draw@{Enemy\+Draw}!get\+Mesh\+Num@{get\+Mesh\+Num}}
@@ -84,8 +93,8 @@ D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_enemy_draw_a3f2885d
 メッシュ数取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
@@ -99,7 +108,7 @@ D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_enemy_draw_a3f2885d
 
 
 
- Enemy\+Draw.\+cpp の 64 行目に定義があります。
+ Enemy\+Draw.\+cpp の 21 行目に定義があります。
 
 \mbox{\Hypertarget{class_enemy_draw_a3f2885da84533364daaaac4a801fbc46}\label{class_enemy_draw_a3f2885da84533364daaaac4a801fbc46}} 
 \index{Enemy\+Draw@{Enemy\+Draw}!getp\+Material@{getp\+Material}}
@@ -109,18 +118,18 @@ D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_enemy_draw_a3f2885d
 
 
 
-マテリアルポインタ取得関数 
+マテリアル取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
-\mbox{\tt in}  & {\em mesh\+\_\+index} & メッシュインデックス \\
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアルポインタ \\
+{\em D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9$\ast$} & マテリアル \\
 \hline
 \end{DoxyRetVals}
 
@@ -129,26 +138,26 @@ D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_enemy_draw_a3f2885d
 
 
 
- Enemy\+Draw.\+cpp の 88 行目に定義があります。
+ Enemy\+Draw.\+cpp の 39 行目に定義があります。
 
 \mbox{\Hypertarget{class_enemy_draw_afbb8ac19041abda280ece7737103dc66}\label{class_enemy_draw_afbb8ac19041abda280ece7737103dc66}} 
 \index{Enemy\+Draw@{Enemy\+Draw}!getp\+Matrix@{getp\+Matrix}}
 \index{getp\+Matrix@{getp\+Matrix}!Enemy\+Draw@{Enemy\+Draw}}
 \subsubsection{\texorpdfstring{getp\+Matrix()}{getpMatrix()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Enemy\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Enemy\+Draw\+::getp\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-行列ポインタ取得関数 
+ワールド行列取得関数 
 
 
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em object\+\_\+index} & オブジェクトインデックス \\
+\begin{DoxyParams}{引数}
+{\em object\+\_\+index} & オブジェクトインデックス \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em M\+A\+T\+R\+I\+X$\ast$} & 行列ポインタ \\
+{\em M\+A\+T\+R\+I\+X$\ast$} & ワールド行列 \\
 \hline
 \end{DoxyRetVals}
 
@@ -157,7 +166,7 @@ D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_enemy_draw_a3f2885d
 
 
 
- Enemy\+Draw.\+cpp の 76 行目に定義があります。
+ Enemy\+Draw.\+cpp の 30 行目に定義があります。
 
 \mbox{\Hypertarget{class_enemy_draw_aa1659c35fa757db6a6cf07e26ad9ddfb}\label{class_enemy_draw_aa1659c35fa757db6a6cf07e26ad9ddfb}} 
 \index{Enemy\+Draw@{Enemy\+Draw}!Init@{Init}}
@@ -170,12 +179,22 @@ D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_enemy_draw_a3f2885d
 初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
 
 \mbox{\hyperlink{class_draw_null_a20aef1e54c1a158b741bfd731e18efdf}{Draw\+Null}}を再実装しています。
 
 
 
- Enemy\+Draw.\+cpp の 23 行目に定義があります。
+ Enemy\+Draw.\+cpp の 52 行目に定義があります。
 
 \mbox{\Hypertarget{class_enemy_draw_a2861dc0623b0be7726bc69a6a469190e}\label{class_enemy_draw_a2861dc0623b0be7726bc69a6a469190e}} 
 \index{Enemy\+Draw@{Enemy\+Draw}!Uninit@{Uninit}}
@@ -188,16 +207,40 @@ D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_enemy_draw_a3f2885d
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
 
 \mbox{\hyperlink{class_draw_null_a6e81d63efab7333e8d0e8af99362a4d9}{Draw\+Null}}を再実装しています。
 
 
 
- Enemy\+Draw.\+cpp の 40 行目に定義があります。
+ Enemy\+Draw.\+cpp の 73 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
+\mbox{\Hypertarget{class_enemy_draw_a4f35f850ee5e41bb43fc6979e83589dd}\label{class_enemy_draw_a4f35f850ee5e41bb43fc6979e83589dd}} 
+\index{Enemy\+Draw@{Enemy\+Draw}!cube\+\_\+polygon\+\_\+@{cube\+\_\+polygon\+\_\+}}
+\index{cube\+\_\+polygon\+\_\+@{cube\+\_\+polygon\+\_\+}!Enemy\+Draw@{Enemy\+Draw}}
+\subsubsection{\texorpdfstring{cube\+\_\+polygon\+\_\+}{cube\_polygon\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cube_polygon}{Cube\+Polygon}}$\ast$ Enemy\+Draw\+::cube\+\_\+polygon\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+四角形ポリゴン 
+
+
+
+ Enemy\+Draw.\+h の 39 行目に定義があります。
+
 \mbox{\Hypertarget{class_enemy_draw_a95b8a7f07e810d1347f1704669c8f790}\label{class_enemy_draw_a95b8a7f07e810d1347f1704669c8f790}} 
 \index{Enemy\+Draw@{Enemy\+Draw}!enemy\+\_\+@{enemy\+\_\+}}
 \index{enemy\+\_\+@{enemy\+\_\+}!Enemy\+Draw@{Enemy\+Draw}}
@@ -210,11 +253,11 @@ D3\+D\+M\+A\+T\+E\+R\+I\+A\+L9 $\ast$ \mbox{\hyperlink{class_enemy_draw_a3f2885d
 
 
 
- Enemy\+Draw.\+h の 37 行目に定義があります。
+ Enemy\+Draw.\+h の 38 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Enemy/\+Enemy\+Draw/\mbox{\hyperlink{_enemy_draw_8h}{Enemy\+Draw.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Enemy/\+Enemy\+Draw/\mbox{\hyperlink{_enemy_draw_8cpp}{Enemy\+Draw.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Enemy/\mbox{\hyperlink{_enemy_draw_8h}{Enemy\+Draw.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Enemy/\+Source/\mbox{\hyperlink{_enemy_draw_8cpp}{Enemy\+Draw.\+cpp}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var class_enemy_factory =
 [
-    [ "Create", "class_enemy_factory.html#a74729ede6a5f0e1cbdf3215a052e314a", null ]
+    [ "Create", "class_enemy_factory.html#ab0d5c26c51993cc9ee060fff2cafa9cd", null ]
 ];

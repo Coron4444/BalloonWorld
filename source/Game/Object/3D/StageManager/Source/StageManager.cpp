@@ -184,9 +184,9 @@ void StageManager::CreateStage()
 	scaffold_->setColor(XColor4(1.0f, 0.0f, 1.0f, 1.0f));
 	scaffold_->setScore(50);
 
-	/*
+	
 	// ‘«ê
-	ScaffoldFactory scaffold_factory;
+	//ScaffoldFactory scaffold_factory;
 	scaffold_ = scaffold_factory.Create();
 	scaffold_->setPosition(Vector3D(30.0f, 250.0f, 0.0f));
 	scaffold_->setScale(Vector3D(3.0f, 50.0f, 3.0f));
@@ -295,5 +295,5 @@ void StageManager::CreateStage()
 								  Random::getpInstance()->getFloat(-hani, hani)));
 		needle_->setScale(Random::getpInstance()->getFloat(2.0f, 10.0f));
 	}
-	*/
+	
 }

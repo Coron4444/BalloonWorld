@@ -1,0 +1,222 @@
+\hypertarget{class_scaffold_collision}{}\section{Scaffold\+Collision クラス}
+\label{class_scaffold_collision}\index{Scaffold\+Collision@{Scaffold\+Collision}}
+
+
+足場衝突\+Class  
+
+
+
+
+{\ttfamily \#include $<$Scaffold\+Collision.\+h$>$}
+
+
+
+Scaffold\+Collision 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scaffold_collision__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_scaffold_collision_a6fadd848bbcba4c102f93047214a8492}{Object\+Tag}} \{ \mbox{\hyperlink{class_scaffold_collision_a6fadd848bbcba4c102f93047214a8492ab50339a10e1de285ac99d4c3990b8693}{Object\+Tag\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_scaffold_collision_a6fadd848bbcba4c102f93047214a8492a186495f7da296bf880df3a22a492b378}{Object\+Tag\+::\+M\+A\+IN}}, 
+\mbox{\hyperlink{class_scaffold_collision_a6fadd848bbcba4c102f93047214a8492a26a4b44a837bf97b972628509912b4a5}{Object\+Tag\+::\+M\+AX}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_scaffold_collision_afba832e3de37d3177522a381af3d75e6}{Shape\+Tag}} \{ \mbox{\hyperlink{class_scaffold_collision_afba832e3de37d3177522a381af3d75e6ab50339a10e1de285ac99d4c3990b8693}{Shape\+Tag\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_scaffold_collision_afba832e3de37d3177522a381af3d75e6a186495f7da296bf880df3a22a492b378}{Shape\+Tag\+::\+M\+A\+IN}}, 
+\mbox{\hyperlink{class_scaffold_collision_afba832e3de37d3177522a381af3d75e6a26a4b44a837bf97b972628509912b4a5}{Shape\+Tag\+::\+M\+AX}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scaffold_collision_a604bdd1c99a88a81820f5c57d683015a}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scaffold_collision_ad57ee33c985c818f7f4a5af87a060e16}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_collision_object}{Collision\+Object}} $\ast$ \mbox{\hyperlink{class_scaffold_collision_a591e2714cf3e63f7001a8fff676e64f5}{collision\+\_\+object\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 衝突オブジェクト \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_b_b}{O\+BB}} $\ast$ \mbox{\hyperlink{class_scaffold_collision_a2d76e8aec6603cbe59d6811205b39acd}{main\+\_\+obb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em メイン\+O\+BB \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_scaffold_collision_a6e805be758e5e2c10b377b102eaa4083}{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}}
+\begin{DoxyCompactList}\small\item\em メイン\+O\+B\+B長さ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+足場衝突\+Class 
+
+足場の衝突\+Class 
+
+ Scaffold\+Collision.\+h の 25 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_scaffold_collision_a6fadd848bbcba4c102f93047214a8492}\label{class_scaffold_collision_a6fadd848bbcba4c102f93047214a8492}} 
+\index{Scaffold\+Collision@{Scaffold\+Collision}!Object\+Tag@{Object\+Tag}}
+\index{Object\+Tag@{Object\+Tag}!Scaffold\+Collision@{Scaffold\+Collision}}
+\subsubsection{\texorpdfstring{Object\+Tag}{ObjectTag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_scaffold_collision_a6fadd848bbcba4c102f93047214a8492}{Scaffold\+Collision\+::\+Object\+Tag}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Scaffold\+Collision@{Scaffold\+Collision}}\index{Scaffold\+Collision@{Scaffold\+Collision}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_scaffold_collision_a6fadd848bbcba4c102f93047214a8492ab50339a10e1de285ac99d4c3990b8693}\label{class_scaffold_collision_a6fadd848bbcba4c102f93047214a8492ab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+IN@{M\+A\+IN}!Scaffold\+Collision@{Scaffold\+Collision}}\index{Scaffold\+Collision@{Scaffold\+Collision}!M\+A\+IN@{M\+A\+IN}}}\mbox{\Hypertarget{class_scaffold_collision_a6fadd848bbcba4c102f93047214a8492a186495f7da296bf880df3a22a492b378}\label{class_scaffold_collision_a6fadd848bbcba4c102f93047214a8492a186495f7da296bf880df3a22a492b378}} 
+M\+A\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Scaffold\+Collision@{Scaffold\+Collision}}\index{Scaffold\+Collision@{Scaffold\+Collision}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_scaffold_collision_a6fadd848bbcba4c102f93047214a8492a26a4b44a837bf97b972628509912b4a5}\label{class_scaffold_collision_a6fadd848bbcba4c102f93047214a8492a26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Scaffold\+Collision.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_scaffold_collision_afba832e3de37d3177522a381af3d75e6}\label{class_scaffold_collision_afba832e3de37d3177522a381af3d75e6}} 
+\index{Scaffold\+Collision@{Scaffold\+Collision}!Shape\+Tag@{Shape\+Tag}}
+\index{Shape\+Tag@{Shape\+Tag}!Scaffold\+Collision@{Scaffold\+Collision}}
+\subsubsection{\texorpdfstring{Shape\+Tag}{ShapeTag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_scaffold_collision_afba832e3de37d3177522a381af3d75e6}{Scaffold\+Collision\+::\+Shape\+Tag}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Scaffold\+Collision@{Scaffold\+Collision}}\index{Scaffold\+Collision@{Scaffold\+Collision}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_scaffold_collision_afba832e3de37d3177522a381af3d75e6ab50339a10e1de285ac99d4c3990b8693}\label{class_scaffold_collision_afba832e3de37d3177522a381af3d75e6ab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+IN@{M\+A\+IN}!Scaffold\+Collision@{Scaffold\+Collision}}\index{Scaffold\+Collision@{Scaffold\+Collision}!M\+A\+IN@{M\+A\+IN}}}\mbox{\Hypertarget{class_scaffold_collision_afba832e3de37d3177522a381af3d75e6a186495f7da296bf880df3a22a492b378}\label{class_scaffold_collision_afba832e3de37d3177522a381af3d75e6a186495f7da296bf880df3a22a492b378}} 
+M\+A\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Scaffold\+Collision@{Scaffold\+Collision}}\index{Scaffold\+Collision@{Scaffold\+Collision}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_scaffold_collision_afba832e3de37d3177522a381af3d75e6a26a4b44a837bf97b972628509912b4a5}\label{class_scaffold_collision_afba832e3de37d3177522a381af3d75e6a26a4b44a837bf97b972628509912b4a5}} 
+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Scaffold\+Collision.\+h の 38 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_scaffold_collision_a604bdd1c99a88a81820f5c57d683015a}\label{class_scaffold_collision_a604bdd1c99a88a81820f5c57d683015a}} 
+\index{Scaffold\+Collision@{Scaffold\+Collision}!Init@{Init}}
+\index{Init@{Init}!Scaffold\+Collision@{Scaffold\+Collision}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Scaffold\+Collision\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_null_a18cfc21fefcd3e8dec380ac44a85f111}{Collision\+Null}}を再実装しています。
+
+
+
+ Scaffold\+Collision.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_scaffold_collision_ad57ee33c985c818f7f4a5af87a060e16}\label{class_scaffold_collision_ad57ee33c985c818f7f4a5af87a060e16}} 
+\index{Scaffold\+Collision@{Scaffold\+Collision}!Update@{Update}}
+\index{Update@{Update}!Scaffold\+Collision@{Scaffold\+Collision}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Scaffold\+Collision\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_collision_null_ad6ac0e9b06fcb4e3d19a5c3c1cadfe7e}{Collision\+Null}}を再実装しています。
+
+
+
+ Scaffold\+Collision.\+cpp の 46 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_scaffold_collision_a591e2714cf3e63f7001a8fff676e64f5}\label{class_scaffold_collision_a591e2714cf3e63f7001a8fff676e64f5}} 
+\index{Scaffold\+Collision@{Scaffold\+Collision}!collision\+\_\+object\+\_\+@{collision\+\_\+object\+\_\+}}
+\index{collision\+\_\+object\+\_\+@{collision\+\_\+object\+\_\+}!Scaffold\+Collision@{Scaffold\+Collision}}
+\subsubsection{\texorpdfstring{collision\+\_\+object\+\_\+}{collision\_object\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_object}{Collision\+Object}}$\ast$ Scaffold\+Collision\+::collision\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+衝突オブジェクト 
+
+
+
+ Scaffold\+Collision.\+h の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_scaffold_collision_a2d76e8aec6603cbe59d6811205b39acd}\label{class_scaffold_collision_a2d76e8aec6603cbe59d6811205b39acd}} 
+\index{Scaffold\+Collision@{Scaffold\+Collision}!main\+\_\+obb\+\_\+@{main\+\_\+obb\+\_\+}}
+\index{main\+\_\+obb\+\_\+@{main\+\_\+obb\+\_\+}!Scaffold\+Collision@{Scaffold\+Collision}}
+\subsubsection{\texorpdfstring{main\+\_\+obb\+\_\+}{main\_obb\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_b_b}{O\+BB}}$\ast$ Scaffold\+Collision\+::main\+\_\+obb\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+メイン\+O\+BB 
+
+
+
+ Scaffold\+Collision.\+h の 58 行目に定義があります。
+
+\mbox{\Hypertarget{class_scaffold_collision_a6e805be758e5e2c10b377b102eaa4083}\label{class_scaffold_collision_a6e805be758e5e2c10b377b102eaa4083}} 
+\index{Scaffold\+Collision@{Scaffold\+Collision}!M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}}
+\index{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}!Scaffold\+Collision@{Scaffold\+Collision}}
+\subsubsection{\texorpdfstring{M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH}{MAIN\_OBB\_LENGTH}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Scaffold\+Collision\+::\+M\+A\+I\+N\+\_\+\+O\+B\+B\+\_\+\+L\+E\+N\+G\+TH\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+メイン\+O\+B\+B長さ 
+
+
+
+ Scaffold\+Collision.\+h の 50 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Scaffold/\mbox{\hyperlink{_scaffold_collision_8h}{Scaffold\+Collision.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Scaffold/\+Source/\mbox{\hyperlink{_scaffold_collision_8cpp}{Scaffold\+Collision.\+cpp}}\end{DoxyCompactItemize}

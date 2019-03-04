@@ -1,6 +1,28 @@
 var class_game_object_manager =
 [
-    [ "GameObjectManager", "class_game_object_manager.html#aa5693c4aefc135e5e85140427c781d3e", null ],
-    [ "GameObjectManager", "class_game_object_manager.html#a8a8f9ec94ecca948fc7ab63454398e36", null ],
-    [ "operator=", "class_game_object_manager.html#af66275734b2098dc631fdb789d31fd52", null ]
+    [ "GameObjectManager", "class_game_object_manager.html#a58cbaec4182cda7c6d48eef7b14885e8", null ],
+    [ "GameObjectManager", "class_game_object_manager.html#a51232e494925f5638d6ff83f7581ad93", null ],
+    [ "AddComponentAndGameObjectBaseToManager", "class_game_object_manager.html#a3263b606ab6bac222bc07c72f0493012", null ],
+    [ "AddContentsOfAwaitAddArray", "class_game_object_manager.html#a783a9d55d566ab8c39e6ed86b3b52a09", null ],
+    [ "AddGameObjectBase", "class_game_object_manager.html#a30e496fe43d48b434da34ade418b4fdb", null ],
+    [ "Draw", "class_game_object_manager.html#a0549bd4b6575ee28803c0ff8fd2be2ee", null ],
+    [ "getpCollisionManager", "class_game_object_manager.html#a6bf9e0af21885440429e3e3b07a0451d", null ],
+    [ "getpDrawManager", "class_game_object_manager.html#a6692c72ceb9d059abeba91fd47cf3de7", null ],
+    [ "getpUpdateManager", "class_game_object_manager.html#a4804852e29b6cb4c065f6a60e5b95edd", null ],
+    [ "Init", "class_game_object_manager.html#abda84aa3b4c79090c43243f93b5a9c46", null ],
+    [ "operator=", "class_game_object_manager.html#a626e7ffb6c7f3e1ecb6521fcc485234d", null ],
+    [ "Release", "class_game_object_manager.html#ab4f76040ef97f1ad6604ffb89c796d8b", null ],
+    [ "ReleaseComponentAndGameObjectBaseFromManager", "class_game_object_manager.html#afaec520481683fb68ce045881def6b2e", null ],
+    [ "ReleaseContentsOfAwaitReleaseArray", "class_game_object_manager.html#a5a6c1208229decd93c6ef396bce35b3a", null ],
+    [ "ReleaseGameObjectBase", "class_game_object_manager.html#a0293d3dca4c52d908da0906d982b44cc", null ],
+    [ "Reset", "class_game_object_manager.html#a77f770050f7d8022bfeceda098846ae8", null ],
+    [ "Uninit", "class_game_object_manager.html#a4d2cb0e07fddeea160e64f6e1d2a326a", null ],
+    [ "UninitWhenChangeScene", "class_game_object_manager.html#ad962739b2c2f54d4160c3513132930da", null ],
+    [ "Update", "class_game_object_manager.html#a6f053b1c655de6ca1c9a8fa9b6e118ae", null ],
+    [ "all_game_object_", "class_game_object_manager.html#a6bde8822fae64e488627addb70c32182", null ],
+    [ "await_add_", "class_game_object_manager.html#a80f815a873b36d918b3fc93b8f2ca043", null ],
+    [ "await_release_", "class_game_object_manager.html#a4fd19d389327c8d414c6375eee223d8a", null ],
+    [ "collision_manager_", "class_game_object_manager.html#a3a173415abbd4acbe2abaf40e0a6c1b8", null ],
+    [ "draw_manager_", "class_game_object_manager.html#afad3b0a750982e55d71edd72b440c724", null ],
+    [ "update_manager_", "class_game_object_manager.html#a330c1759e1a075fb257a01c6f48cf9f3", null ]
 ];

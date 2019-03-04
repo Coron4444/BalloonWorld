@@ -1,0 +1,605 @@
+\hypertarget{class_matrix_group}{}\section{Matrix\+Group クラス}
+\label{class_matrix_group}\index{Matrix\+Group@{Matrix\+Group}}
+
+
+行列群\+Class  
+
+
+
+
+{\ttfamily \#include $<$Matrix\+Group.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_matrix_group_a98e52fd85547a0ce918072170e15ea9e}{getp\+Position\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 座標行列取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_group_afbf74f4d668b5d6e714d18e3acfc0a4c}{set\+Position\+Matrix}} (\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 座標行列設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_matrix_group_ad7b235e886ef5fcd23ef4ee4377a57fd}{getp\+Scale\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 拡縮行列取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_group_a16af3b64cf34bfa18a61aadc9cdb2ba9}{set\+Scale\+Matrix}} (\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 拡縮行列設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_matrix_group_a927f610535d5e9e308db0a42dc4fab65}{getp\+Rotation\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 回転行列取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_group_ad1703022974a4555854c8c1f0007c510}{set\+Rotation\+Matrix}} (\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 回転行列設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_matrix_group_a4227a527795409f939c78d58de5526f8}{getp\+Inverse\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 逆行列取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_group_ab503242a596d4cbf5952386a588a95c1}{set\+Inverse\+Matrix}} (\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 逆行列設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_matrix_group_aa800ec499808c1fb2b21e5ad2b824d7d}{getp\+Transpose\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 転置行列取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_group_a7ece21e92a61656dd6989e172d7f86f9}{set\+Transpose\+Matrix}} (\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$value, bool is\+\_\+position\+\_\+off=false)
+\begin{DoxyCompactList}\small\item\em 転置行列設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ \mbox{\hyperlink{class_matrix_group_adee3cb5fa992dff4f849de3899fc5ce0}{getp\+World\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em ワールド行列取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} \mbox{\hyperlink{class_matrix_group_a4d8785ad38523bba65ae5de3fc1b5202}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em 座標取得取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix_group_accbaedd4ff498f5f5c9dd6b586724760}{Matrix\+Group}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_group_a2a123f43e2af3c1767f7972bca9dfacb}{Create\+World\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em ワールド行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_group_a91fd88f4462a2a1eccf955382a4e1282}{Create\+World\+Matrix\+Plus\+Inverse}} ()
+\begin{DoxyCompactList}\small\item\em 逆行列付きワールド行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_group_a24045c3c4a4aa8eff02e0aa926e5e2d3}{Create\+World\+Matrix\+Plus\+Transpose}} ()
+\begin{DoxyCompactList}\small\item\em 転置行列付きワールド行列作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_group_a79162f8fa1bab75e5e9dd505c1c08f13}{Add\+Parent\+Matrix\+To\+World\+Matrix}} (\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$parent\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em ワールド行列に親行列追加関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_matrix_group_ace011440a1a9367bf60571d8db482ee7}{Reset\+All\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em 全行列リセット関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_matrix_group_a15328c5929f74d11755a9ac11f5cbfb2}{position\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 座標行列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_matrix_group_a51698db9bd361a12b1450a9596bdcd97}{scale\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 拡縮行列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_matrix_group_a614eb91623028b6c29bd8890f6f1c6d1}{rotation\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 回転行列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_matrix_group_aafc3e507a37830899c7a0775b6a30d15}{inverse\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 逆行列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_matrix_group_a1e5305fc950112de091922f97dc2872d}{transpose\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 転置行列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} \mbox{\hyperlink{class_matrix_group_a098fd7ddc68b1d9191ded4bb7bc0d187}{world\+\_\+}}
+\begin{DoxyCompactList}\small\item\em ワールド行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+行列群\+Class 
+
+行列の集合体\+Class 
+
+ Matrix\+Group.\+h の 24 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_matrix_group_accbaedd4ff498f5f5c9dd6b586724760}\label{class_matrix_group_accbaedd4ff498f5f5c9dd6b586724760}} 
+\index{Matrix\+Group@{Matrix\+Group}!Matrix\+Group@{Matrix\+Group}}
+\index{Matrix\+Group@{Matrix\+Group}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{Matrix\+Group()}{MatrixGroup()}}
+{\footnotesize\ttfamily Matrix\+Group\+::\+Matrix\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+
+ Matrix\+Group.\+cpp の 111 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_matrix_group_a79162f8fa1bab75e5e9dd505c1c08f13}\label{class_matrix_group_a79162f8fa1bab75e5e9dd505c1c08f13}} 
+\index{Matrix\+Group@{Matrix\+Group}!Add\+Parent\+Matrix\+To\+World\+Matrix@{Add\+Parent\+Matrix\+To\+World\+Matrix}}
+\index{Add\+Parent\+Matrix\+To\+World\+Matrix@{Add\+Parent\+Matrix\+To\+World\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{Add\+Parent\+Matrix\+To\+World\+Matrix()}{AddParentMatrixToWorldMatrix()}}
+{\footnotesize\ttfamily void Matrix\+Group\+::\+Add\+Parent\+Matrix\+To\+World\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$}]{parent\+\_\+matrix }\end{DoxyParamCaption})}
+
+
+
+ワールド行列に親行列追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em parent\+\_\+matrix} & 親の行列 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 142 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a2a123f43e2af3c1767f7972bca9dfacb}\label{class_matrix_group_a2a123f43e2af3c1767f7972bca9dfacb}} 
+\index{Matrix\+Group@{Matrix\+Group}!Create\+World\+Matrix@{Create\+World\+Matrix}}
+\index{Create\+World\+Matrix@{Create\+World\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{Create\+World\+Matrix()}{CreateWorldMatrix()}}
+{\footnotesize\ttfamily void Matrix\+Group\+::\+Create\+World\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ワールド行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 118 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a91fd88f4462a2a1eccf955382a4e1282}\label{class_matrix_group_a91fd88f4462a2a1eccf955382a4e1282}} 
+\index{Matrix\+Group@{Matrix\+Group}!Create\+World\+Matrix\+Plus\+Inverse@{Create\+World\+Matrix\+Plus\+Inverse}}
+\index{Create\+World\+Matrix\+Plus\+Inverse@{Create\+World\+Matrix\+Plus\+Inverse}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{Create\+World\+Matrix\+Plus\+Inverse()}{CreateWorldMatrixPlusInverse()}}
+{\footnotesize\ttfamily void Matrix\+Group\+::\+Create\+World\+Matrix\+Plus\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+逆行列付きワールド行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 126 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a24045c3c4a4aa8eff02e0aa926e5e2d3}\label{class_matrix_group_a24045c3c4a4aa8eff02e0aa926e5e2d3}} 
+\index{Matrix\+Group@{Matrix\+Group}!Create\+World\+Matrix\+Plus\+Transpose@{Create\+World\+Matrix\+Plus\+Transpose}}
+\index{Create\+World\+Matrix\+Plus\+Transpose@{Create\+World\+Matrix\+Plus\+Transpose}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{Create\+World\+Matrix\+Plus\+Transpose()}{CreateWorldMatrixPlusTranspose()}}
+{\footnotesize\ttfamily void Matrix\+Group\+::\+Create\+World\+Matrix\+Plus\+Transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+転置行列付きワールド行列作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 134 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a4227a527795409f939c78d58de5526f8}\label{class_matrix_group_a4227a527795409f939c78d58de5526f8}} 
+\index{Matrix\+Group@{Matrix\+Group}!getp\+Inverse\+Matrix@{getp\+Inverse\+Matrix}}
+\index{getp\+Inverse\+Matrix@{getp\+Inverse\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{getp\+Inverse\+Matrix()}{getpInverseMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Matrix\+Group\+::getp\+Inverse\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+逆行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & 逆行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 62 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a4d8785ad38523bba65ae5de3fc1b5202}\label{class_matrix_group_a4d8785ad38523bba65ae5de3fc1b5202}} 
+\index{Matrix\+Group@{Matrix\+Group}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} Matrix\+Group\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+座標取得取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vec3} & 座標 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 101 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a98e52fd85547a0ce918072170e15ea9e}\label{class_matrix_group_a98e52fd85547a0ce918072170e15ea9e}} 
+\index{Matrix\+Group@{Matrix\+Group}!getp\+Position\+Matrix@{getp\+Position\+Matrix}}
+\index{getp\+Position\+Matrix@{getp\+Position\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{getp\+Position\+Matrix()}{getpPositionMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Matrix\+Group\+::getp\+Position\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+座標行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & 座標行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 20 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a927f610535d5e9e308db0a42dc4fab65}\label{class_matrix_group_a927f610535d5e9e308db0a42dc4fab65}} 
+\index{Matrix\+Group@{Matrix\+Group}!getp\+Rotation\+Matrix@{getp\+Rotation\+Matrix}}
+\index{getp\+Rotation\+Matrix@{getp\+Rotation\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{getp\+Rotation\+Matrix()}{getpRotationMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Matrix\+Group\+::getp\+Rotation\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+回転行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & 拡縮行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_ad7b235e886ef5fcd23ef4ee4377a57fd}\label{class_matrix_group_ad7b235e886ef5fcd23ef4ee4377a57fd}} 
+\index{Matrix\+Group@{Matrix\+Group}!getp\+Scale\+Matrix@{getp\+Scale\+Matrix}}
+\index{getp\+Scale\+Matrix@{getp\+Scale\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{getp\+Scale\+Matrix()}{getpScaleMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Matrix\+Group\+::getp\+Scale\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+拡縮行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & 拡縮行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_aa800ec499808c1fb2b21e5ad2b824d7d}\label{class_matrix_group_aa800ec499808c1fb2b21e5ad2b824d7d}} 
+\index{Matrix\+Group@{Matrix\+Group}!getp\+Transpose\+Matrix@{getp\+Transpose\+Matrix}}
+\index{getp\+Transpose\+Matrix@{getp\+Transpose\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{getp\+Transpose\+Matrix()}{getpTransposeMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Matrix\+Group\+::getp\+Transpose\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+転置行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & 転置行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 76 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_adee3cb5fa992dff4f849de3899fc5ce0}\label{class_matrix_group_adee3cb5fa992dff4f849de3899fc5ce0}} 
+\index{Matrix\+Group@{Matrix\+Group}!getp\+World\+Matrix@{getp\+World\+Matrix}}
+\index{getp\+World\+Matrix@{getp\+World\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{getp\+World\+Matrix()}{getpWorldMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$ Matrix\+Group\+::getp\+World\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ワールド行列取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em M\+A\+T\+R\+I\+X$\ast$} & 転置行列 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 94 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_ace011440a1a9367bf60571d8db482ee7}\label{class_matrix_group_ace011440a1a9367bf60571d8db482ee7}} 
+\index{Matrix\+Group@{Matrix\+Group}!Reset\+All\+Matrix@{Reset\+All\+Matrix}}
+\index{Reset\+All\+Matrix@{Reset\+All\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{Reset\+All\+Matrix()}{ResetAllMatrix()}}
+{\footnotesize\ttfamily void Matrix\+Group\+::\+Reset\+All\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+全行列リセット関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 149 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_ab503242a596d4cbf5952386a588a95c1}\label{class_matrix_group_ab503242a596d4cbf5952386a588a95c1}} 
+\index{Matrix\+Group@{Matrix\+Group}!set\+Inverse\+Matrix@{set\+Inverse\+Matrix}}
+\index{set\+Inverse\+Matrix@{set\+Inverse\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{set\+Inverse\+Matrix()}{setInverseMatrix()}}
+{\footnotesize\ttfamily void Matrix\+Group\+::set\+Inverse\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+逆行列設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 逆行列にしたい行列 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 69 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_afbf74f4d668b5d6e714d18e3acfc0a4c}\label{class_matrix_group_afbf74f4d668b5d6e714d18e3acfc0a4c}} 
+\index{Matrix\+Group@{Matrix\+Group}!set\+Position\+Matrix@{set\+Position\+Matrix}}
+\index{set\+Position\+Matrix@{set\+Position\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{set\+Position\+Matrix()}{setPositionMatrix()}}
+{\footnotesize\ttfamily void Matrix\+Group\+::set\+Position\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+座標行列設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 行列にしたい座標値 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_ad1703022974a4555854c8c1f0007c510}\label{class_matrix_group_ad1703022974a4555854c8c1f0007c510}} 
+\index{Matrix\+Group@{Matrix\+Group}!set\+Rotation\+Matrix@{set\+Rotation\+Matrix}}
+\index{set\+Rotation\+Matrix@{set\+Rotation\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{set\+Rotation\+Matrix()}{setRotationMatrix()}}
+{\footnotesize\ttfamily void Matrix\+Group\+::set\+Rotation\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_a3ee38c9c46d9851e33a9a1113328dafc}{Quaternion}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+回転行列設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 行列にしたい回転値 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a16af3b64cf34bfa18a61aadc9cdb2ba9}\label{class_matrix_group_a16af3b64cf34bfa18a61aadc9cdb2ba9}} 
+\index{Matrix\+Group@{Matrix\+Group}!set\+Scale\+Matrix@{set\+Scale\+Matrix}}
+\index{set\+Scale\+Matrix@{set\+Scale\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{set\+Scale\+Matrix()}{setScaleMatrix()}}
+{\footnotesize\ttfamily void Matrix\+Group\+::set\+Scale\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_vector3_d_8h_ab16f59e4393f29a01ec8b9bbbabbe65d}{Vec3}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+拡縮行列設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 行列にしたい拡縮値 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a7ece21e92a61656dd6989e172d7f86f9}\label{class_matrix_group_a7ece21e92a61656dd6989e172d7f86f9}} 
+\index{Matrix\+Group@{Matrix\+Group}!set\+Transpose\+Matrix@{set\+Transpose\+Matrix}}
+\index{set\+Transpose\+Matrix@{set\+Transpose\+Matrix}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{set\+Transpose\+Matrix()}{setTransposeMatrix()}}
+{\footnotesize\ttfamily void Matrix\+Group\+::set\+Transpose\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} $\ast$}]{value,  }\item[{bool}]{is\+\_\+position\+\_\+off = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+転置行列設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 転置行列にしたい行列 \\
+\hline
+{\em is\+\_\+position\+\_\+off} & 平行移動\+O\+F\+Fフラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Matrix\+Group.\+cpp の 83 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_matrix_group_aafc3e507a37830899c7a0775b6a30d15}\label{class_matrix_group_aafc3e507a37830899c7a0775b6a30d15}} 
+\index{Matrix\+Group@{Matrix\+Group}!inverse\+\_\+@{inverse\+\_\+}}
+\index{inverse\+\_\+@{inverse\+\_\+}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{inverse\+\_\+}{inverse\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Matrix\+Group\+::inverse\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+逆行列 
+
+
+
+ Matrix\+Group.\+h の 33 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a15328c5929f74d11755a9ac11f5cbfb2}\label{class_matrix_group_a15328c5929f74d11755a9ac11f5cbfb2}} 
+\index{Matrix\+Group@{Matrix\+Group}!position\+\_\+@{position\+\_\+}}
+\index{position\+\_\+@{position\+\_\+}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{position\+\_\+}{position\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Matrix\+Group\+::position\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+座標行列 
+
+
+
+ Matrix\+Group.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a614eb91623028b6c29bd8890f6f1c6d1}\label{class_matrix_group_a614eb91623028b6c29bd8890f6f1c6d1}} 
+\index{Matrix\+Group@{Matrix\+Group}!rotation\+\_\+@{rotation\+\_\+}}
+\index{rotation\+\_\+@{rotation\+\_\+}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{rotation\+\_\+}{rotation\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Matrix\+Group\+::rotation\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+回転行列 
+
+
+
+ Matrix\+Group.\+h の 32 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a51698db9bd361a12b1450a9596bdcd97}\label{class_matrix_group_a51698db9bd361a12b1450a9596bdcd97}} 
+\index{Matrix\+Group@{Matrix\+Group}!scale\+\_\+@{scale\+\_\+}}
+\index{scale\+\_\+@{scale\+\_\+}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{scale\+\_\+}{scale\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Matrix\+Group\+::scale\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+拡縮行列 
+
+
+
+ Matrix\+Group.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a1e5305fc950112de091922f97dc2872d}\label{class_matrix_group_a1e5305fc950112de091922f97dc2872d}} 
+\index{Matrix\+Group@{Matrix\+Group}!transpose\+\_\+@{transpose\+\_\+}}
+\index{transpose\+\_\+@{transpose\+\_\+}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{transpose\+\_\+}{transpose\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Matrix\+Group\+::transpose\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+転置行列 
+
+
+
+ Matrix\+Group.\+h の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_matrix_group_a098fd7ddc68b1d9191ded4bb7bc0d187}\label{class_matrix_group_a098fd7ddc68b1d9191ded4bb7bc0d187}} 
+\index{Matrix\+Group@{Matrix\+Group}!world\+\_\+@{world\+\_\+}}
+\index{world\+\_\+@{world\+\_\+}!Matrix\+Group@{Matrix\+Group}}
+\subsubsection{\texorpdfstring{world\+\_\+}{world\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_matrix_8h_a032295cd9fb1b711757c90667278e744}{M\+A\+T\+R\+IX}} Matrix\+Group\+::world\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ワールド行列 
+
+
+
+ Matrix\+Group.\+h の 35 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_matrix_group_8h}{Matrix\+Group.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\+Source/\mbox{\hyperlink{_matrix_group_8cpp}{Matrix\+Group.\+cpp}}\end{DoxyCompactItemize}

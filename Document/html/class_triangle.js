@@ -1,13 +1,11 @@
 var class_triangle =
 [
-    [ "Triangle", "class_triangle.html#aaefe4ed500c07918d30c6f0e286332c5", null ],
+    [ "~Triangle", "class_triangle.html#a5199760a17454f4dc94c855a57e3a152", null ],
+    [ "CalculationMinAndMax", "class_triangle.html#a8e8c4d3a0bb8a4dfb15429d38a3bdaaa", null ],
     [ "getpPlane", "class_triangle.html#a4d0713aa2052d4b6cbde72202bcaca20", null ],
-    [ "getpPoint0", "class_triangle.html#a7fa9f7bdcffefa718b80cc9171575341", null ],
-    [ "getpPoint1", "class_triangle.html#aa97b6da9dfc28c1eea93bb5538004794", null ],
-    [ "getpPoint2", "class_triangle.html#a99a2a556b7c1cba1c5e777cebbb843d4", null ],
-    [ "Init", "class_triangle.html#a291c8c4aeeb85e4561e4fd162816f5da", null ],
+    [ "getpPoint", "class_triangle.html#a6975e48159ebbeeecce96691e039606a", null ],
+    [ "Init", "class_triangle.html#a4df576d68ba444035c7870f503451362", null ],
+    [ "Update", "class_triangle.html#acc4ecbf029aafe3cda4e6a49218e2e0b", null ],
     [ "plane_", "class_triangle.html#a93586199c2c173771f2e167f477eaa70", null ],
-    [ "point0_", "class_triangle.html#a307e9043e9755e06387458cd84993662", null ],
-    [ "point1_", "class_triangle.html#aa846eb6b25478f0227225c74c53bb5c1", null ],
-    [ "point2_", "class_triangle.html#af1850003b6274357b9b081395e1ab4e8", null ]
+    [ "point_", "class_triangle.html#a0ade12967df7d4c69d4b3841e59fd3c0", null ]
 ];

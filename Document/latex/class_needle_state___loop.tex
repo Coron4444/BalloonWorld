@@ -1,0 +1,204 @@
+\hypertarget{class_needle_state___loop}{}\section{Needle\+State\+\_\+\+Loop クラス}
+\label{class_needle_state___loop}\index{Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}}
+
+
+棘ステートループ\+Class  
+
+
+
+
+{\ttfamily \#include $<$Needle\+State\+\_\+\+Loop.\+h$>$}
+
+
+
+Needle\+State\+\_\+\+Loop 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_needle_state___loop__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_needle_state___loop_a97f3190ebbbad2943e60f27588b2175d}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_needle_state___loop_a059c3e62fde73c19292eb2510f4ab8fa}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_needle_state___loop_ace1091782491ee594b53bf08bb9bcf12}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_needle_state___loop_adbc09dcbbc7367754c5c14aa4ded7497}{rotation\+\_\+transform\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 回転用変形 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_needle_state___loop_a742827e05002a4efb72381f410a5ef8c}{C\+E\+N\+T\+E\+R\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}
+\begin{DoxyCompactList}\small\item\em 中心からの座標 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_needle_state___loop_a5b9359b2bdb87d3a83a14387cc21fc23}{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+S\+P\+E\+ED}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em 中心の回転速度 \end{DoxyCompactList}\item 
+static const float \mbox{\hyperlink{class_needle_state___loop_ab427c1fce0c2fb48cbfe6bdb6968b8cc}{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}} = 2.\+0f
+\begin{DoxyCompactList}\small\item\em 回転速度 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+棘ステートループ\+Class 
+
+棘ステートのループ\+Class 
+
+ Needle\+State\+\_\+\+Loop.\+h の 24 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_needle_state___loop_a97f3190ebbbad2943e60f27588b2175d}\label{class_needle_state___loop_a97f3190ebbbad2943e60f27588b2175d}} 
+\index{Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}!Init@{Init}}
+\index{Init@{Init}!Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Needle\+State\+\_\+\+Loop\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_needle_1_1_state_a0d1012f643be1fc3df2b977dc101fd6b}{Needle\+::\+State}}を実装しています。
+
+
+
+ Needle\+State\+\_\+\+Loop.\+cpp の 29 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_state___loop_a059c3e62fde73c19292eb2510f4ab8fa}\label{class_needle_state___loop_a059c3e62fde73c19292eb2510f4ab8fa}} 
+\index{Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Needle\+State\+\_\+\+Loop\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_needle_1_1_state_a8a4795ac9a90c7497ab8d039562691d2}{Needle\+::\+State}}を実装しています。
+
+
+
+ Needle\+State\+\_\+\+Loop.\+cpp の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_state___loop_ace1091782491ee594b53bf08bb9bcf12}\label{class_needle_state___loop_ace1091782491ee594b53bf08bb9bcf12}} 
+\index{Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}!Update@{Update}}
+\index{Update@{Update}!Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Needle\+State\+\_\+\+Loop\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_needle_1_1_state_af1455c890b581081c6135fe091984717}{Needle\+::\+State}}を実装しています。
+
+
+
+ Needle\+State\+\_\+\+Loop.\+cpp の 46 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_needle_state___loop_a742827e05002a4efb72381f410a5ef8c}\label{class_needle_state___loop_a742827e05002a4efb72381f410a5ef8c}} 
+\index{Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}!C\+E\+N\+T\+E\+R\+\_\+\+P\+O\+S\+I\+T\+I\+ON@{C\+E\+N\+T\+E\+R\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}
+\index{C\+E\+N\+T\+E\+R\+\_\+\+P\+O\+S\+I\+T\+I\+ON@{C\+E\+N\+T\+E\+R\+\_\+\+P\+O\+S\+I\+T\+I\+ON}!Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}}
+\subsubsection{\texorpdfstring{C\+E\+N\+T\+E\+R\+\_\+\+P\+O\+S\+I\+T\+I\+ON}{CENTER\_POSITION}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector3_d}{Vector3D}} Needle\+State\+\_\+\+Loop\+::\+C\+E\+N\+T\+E\+R\+\_\+\+P\+O\+S\+I\+T\+I\+ON\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+中心からの座標 
+
+
+
+ Needle\+State\+\_\+\+Loop.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_state___loop_a5b9359b2bdb87d3a83a14387cc21fc23}\label{class_needle_state___loop_a5b9359b2bdb87d3a83a14387cc21fc23}} 
+\index{Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}!R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+S\+P\+E\+ED@{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+S\+P\+E\+ED}}
+\index{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+S\+P\+E\+ED@{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+S\+P\+E\+ED}!Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}}
+\subsubsection{\texorpdfstring{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+S\+P\+E\+ED}{ROTATION\_CENTER\_SPEED}}
+{\footnotesize\ttfamily const float Needle\+State\+\_\+\+Loop\+::\+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+S\+P\+E\+ED = 0.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+中心の回転速度 
+
+
+
+ Needle\+State\+\_\+\+Loop.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_state___loop_ab427c1fce0c2fb48cbfe6bdb6968b8cc}\label{class_needle_state___loop_ab427c1fce0c2fb48cbfe6bdb6968b8cc}} 
+\index{Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}!R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED@{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}}
+\index{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED@{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}!Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}}
+\subsubsection{\texorpdfstring{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED}{ROTATION\_SPEED}}
+{\footnotesize\ttfamily const float Needle\+State\+\_\+\+Loop\+::\+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+E\+ED = 2.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+回転速度 
+
+
+
+ Needle\+State\+\_\+\+Loop.\+h の 32 行目に定義があります。
+
+\mbox{\Hypertarget{class_needle_state___loop_adbc09dcbbc7367754c5c14aa4ded7497}\label{class_needle_state___loop_adbc09dcbbc7367754c5c14aa4ded7497}} 
+\index{Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}!rotation\+\_\+transform\+\_\+@{rotation\+\_\+transform\+\_\+}}
+\index{rotation\+\_\+transform\+\_\+@{rotation\+\_\+transform\+\_\+}!Needle\+State\+\_\+\+Loop@{Needle\+State\+\_\+\+Loop}}
+\subsubsection{\texorpdfstring{rotation\+\_\+transform\+\_\+}{rotation\_transform\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}} Needle\+State\+\_\+\+Loop\+::rotation\+\_\+transform\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+回転用変形 
+
+
+
+ Needle\+State\+\_\+\+Loop.\+h の 39 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Needle/\mbox{\hyperlink{_needle_state___loop_8h}{Needle\+State\+\_\+\+Loop.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Needle/\+Source/\mbox{\hyperlink{_needle_state___loop_8cpp}{Needle\+State\+\_\+\+Loop.\+cpp}}\end{DoxyCompactItemize}

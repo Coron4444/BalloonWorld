@@ -1,0 +1,563 @@
+\hypertarget{class_stage_manager}{}\section{Stage\+Manager クラス}
+\label{class_stage_manager}\index{Stage\+Manager@{Stage\+Manager}}
+
+
+ステージマネージャ\+Class  
+
+
+
+
+{\ttfamily \#include $<$Stage\+Manager.\+h$>$}
+
+
+
+Stage\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stage_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_stage_manager_ad250f6b9d743f80e67f449abb49e7ac2}{get\+Is\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em 有効フラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stage_manager_a82938cb01ba1adbb3620fee0a12397ec}{set\+Is\+Enable}} (bool value)
+\begin{DoxyCompactList}\small\item\em 有効フラグ設定関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stage_manager_ae54498baebd27e0b48c7bcfbe6555b34}{get\+Score}} ()
+\begin{DoxyCompactList}\small\item\em スコア取得関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stage_manager_a861d2cd2829cb25ed06237307f5e98ab}{get\+Time}} ()
+\begin{DoxyCompactList}\small\item\em 時間取得関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stage_manager_a5f83c5c1f67d47393b4d0be426a21ec0}{get\+Balloon\+Num}} ()
+\begin{DoxyCompactList}\small\item\em 風船数取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stage_manager_a2c7f386ffc5087b8437abd5b881b7156}{set\+Player\+Camera}} (\mbox{\hyperlink{class_camera}{Camera}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em プレイヤーカメラ設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}} $\ast$ \mbox{\hyperlink{class_stage_manager_af778714de131c8b559c2860647a342a1}{getp\+Player}} ()
+\begin{DoxyCompactList}\small\item\em プレイヤー取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_stage_manager_a9681b6ab1d4c6b414bc81af515d1f20d}{get\+Is\+On\+The\+Ground}} ()
+\begin{DoxyCompactList}\small\item\em 地面着地フラグ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stage_manager_a6ee187d038d202439d696ff31b347226}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stage_manager_ab36f48dee34ce481c585b1d96df26dce}{Uninit}} () override
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stage_manager_a254173b565937107fdfe02c0871b3520}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stage_manager_a5fae84b1ae2f986bb79cb73d90595e77}{Create\+Stage}} ()
+\begin{DoxyCompactList}\small\item\em ステージ作成関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_stage_manager_a9b693a434f2aec42739c19daf6087da4}{is\+\_\+enable\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em 有効フラグ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_stage_manager_a80276fabfcdccd74dfd52fd2cc61b1db}{is\+\_\+ground\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em 着地フラグ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stage_manager_a21bdb2371d84c916dd594c453c50701e}{score\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em スコア \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stage_manager_afdb8bffaa00e7c4ed1ebbf136137f6e6}{time\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em 時間 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_balloon_group}{Balloon\+Group}} $\ast$ \mbox{\hyperlink{class_stage_manager_aac234fd37fef3fe233489e75c803ac47}{balloon\+\_\+group\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 風船群 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}} $\ast$ \mbox{\hyperlink{class_stage_manager_a378c995a369018f8595ba5cf4ab947d2}{player\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em プレイヤー \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_start_block}{Start\+Block}} $\ast$ \mbox{\hyperlink{class_stage_manager_a0ce3838c9fe4eaa1c9f8a6ecf361ea7a}{start\+\_\+block\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em スタートブロック \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_scaffold}{Scaffold}} $\ast$ \mbox{\hyperlink{class_stage_manager_ab5cf1a29d5a3f8c1e06c2ca64e369d24}{scaffold\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 足場 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_needle}{Needle}} $\ast$ \mbox{\hyperlink{class_stage_manager_aaebf5b60351f6406ba9ca9bfaaaf8959}{needle\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 棘 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_stage_manager_a46709c98366565c68f8de974385501a4}{M\+A\+X\+\_\+\+T\+I\+ME}} = \mbox{\hyperlink{class_time_to_frame_a02fe55cc63bdffd73d092d30cc7f0153}{Time\+To\+Frame\+::\+Second\+To\+Frame}}(60.\+0f)
+\begin{DoxyCompactList}\small\item\em 最大時間 \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{class_stage_manager_aeced4abe9b4df7b0105dd42745506a25}{B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+RE}} = 300
+\begin{DoxyCompactList}\small\item\em ボーナススコア \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{class_stage_manager_aed94634bfdb7bbc3e9cc46724ba87e12}{B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+R\+E\+\_\+\+R\+A\+I\+TO}} = 2
+\begin{DoxyCompactList}\small\item\em ボーナススコア比率 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+ステージマネージャ\+Class 
+
+ステージマネージャの\+Class 
+
+ Stage\+Manager.\+h の 35 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_stage_manager_a5fae84b1ae2f986bb79cb73d90595e77}\label{class_stage_manager_a5fae84b1ae2f986bb79cb73d90595e77}} 
+\index{Stage\+Manager@{Stage\+Manager}!Create\+Stage@{Create\+Stage}}
+\index{Create\+Stage@{Create\+Stage}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{Create\+Stage()}{CreateStage()}}
+{\footnotesize\ttfamily void Stage\+Manager\+::\+Create\+Stage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ステージ作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Stage\+Manager.\+cpp の 153 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_a5f83c5c1f67d47393b4d0be426a21ec0}\label{class_stage_manager_a5f83c5c1f67d47393b4d0be426a21ec0}} 
+\index{Stage\+Manager@{Stage\+Manager}!get\+Balloon\+Num@{get\+Balloon\+Num}}
+\index{get\+Balloon\+Num@{get\+Balloon\+Num}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{get\+Balloon\+Num()}{getBalloonNum()}}
+{\footnotesize\ttfamily int Stage\+Manager\+::get\+Balloon\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+風船数取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & 風船数 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Stage\+Manager.\+cpp の 83 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_ad250f6b9d743f80e67f449abb49e7ac2}\label{class_stage_manager_ad250f6b9d743f80e67f449abb49e7ac2}} 
+\index{Stage\+Manager@{Stage\+Manager}!get\+Is\+Enable@{get\+Is\+Enable}}
+\index{get\+Is\+Enable@{get\+Is\+Enable}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{get\+Is\+Enable()}{getIsEnable()}}
+{\footnotesize\ttfamily bool Stage\+Manager\+::get\+Is\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+有効フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em value} & 有効フラグ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Stage\+Manager.\+cpp の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_a9681b6ab1d4c6b414bc81af515d1f20d}\label{class_stage_manager_a9681b6ab1d4c6b414bc81af515d1f20d}} 
+\index{Stage\+Manager@{Stage\+Manager}!get\+Is\+On\+The\+Ground@{get\+Is\+On\+The\+Ground}}
+\index{get\+Is\+On\+The\+Ground@{get\+Is\+On\+The\+Ground}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{get\+Is\+On\+The\+Ground()}{getIsOnTheGround()}}
+{\footnotesize\ttfamily bool Stage\+Manager\+::get\+Is\+On\+The\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+地面着地フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Stage\+Manager.\+cpp の 104 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_af778714de131c8b559c2860647a342a1}\label{class_stage_manager_af778714de131c8b559c2860647a342a1}} 
+\index{Stage\+Manager@{Stage\+Manager}!getp\+Player@{getp\+Player}}
+\index{getp\+Player@{getp\+Player}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{getp\+Player()}{getpPlayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}} $\ast$ Stage\+Manager\+::getp\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+プレイヤー取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Stage\+Manager.\+cpp の 97 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_ae54498baebd27e0b48c7bcfbe6555b34}\label{class_stage_manager_ae54498baebd27e0b48c7bcfbe6555b34}} 
+\index{Stage\+Manager@{Stage\+Manager}!get\+Score@{get\+Score}}
+\index{get\+Score@{get\+Score}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{get\+Score()}{getScore()}}
+{\footnotesize\ttfamily int Stage\+Manager\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+スコア取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & スコア \\
+\hline
+\end{DoxyRetVals}
+
+
+ Stage\+Manager.\+cpp の 69 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_a861d2cd2829cb25ed06237307f5e98ab}\label{class_stage_manager_a861d2cd2829cb25ed06237307f5e98ab}} 
+\index{Stage\+Manager@{Stage\+Manager}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{get\+Time()}{getTime()}}
+{\footnotesize\ttfamily int Stage\+Manager\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+時間取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & 時間 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Stage\+Manager.\+cpp の 76 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_a6ee187d038d202439d696ff31b347226}\label{class_stage_manager_a6ee187d038d202439d696ff31b347226}} 
+\index{Stage\+Manager@{Stage\+Manager}!Init@{Init}}
+\index{Init@{Init}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Stage\+Manager\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Stage\+Manager.\+cpp の 114 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_a82938cb01ba1adbb3620fee0a12397ec}\label{class_stage_manager_a82938cb01ba1adbb3620fee0a12397ec}} 
+\index{Stage\+Manager@{Stage\+Manager}!set\+Is\+Enable@{set\+Is\+Enable}}
+\index{set\+Is\+Enable@{set\+Is\+Enable}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{set\+Is\+Enable()}{setIsEnable()}}
+{\footnotesize\ttfamily void Stage\+Manager\+::set\+Is\+Enable (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+有効フラグ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 有効フラグ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Stage\+Manager.\+cpp の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_a2c7f386ffc5087b8437abd5b881b7156}\label{class_stage_manager_a2c7f386ffc5087b8437abd5b881b7156}} 
+\index{Stage\+Manager@{Stage\+Manager}!set\+Player\+Camera@{set\+Player\+Camera}}
+\index{set\+Player\+Camera@{set\+Player\+Camera}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{set\+Player\+Camera()}{setPlayerCamera()}}
+{\footnotesize\ttfamily void Stage\+Manager\+::set\+Player\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+プレイヤーカメラ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & カメラ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Stage\+Manager.\+cpp の 90 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_ab36f48dee34ce481c585b1d96df26dce}\label{class_stage_manager_ab36f48dee34ce481c585b1d96df26dce}} 
+\index{Stage\+Manager@{Stage\+Manager}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Stage\+Manager\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_a1a70fbd3260fd1c0100320756830a0db}{Game\+Object\+Null}}を再実装しています。
+
+
+
+ Stage\+Manager.\+cpp の 125 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_a254173b565937107fdfe02c0871b3520}\label{class_stage_manager_a254173b565937107fdfe02c0871b3520}} 
+\index{Stage\+Manager@{Stage\+Manager}!Update@{Update}}
+\index{Update@{Update}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Stage\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_aeeb51b7e7aa41fd0b16f8f7c016bdb55}{Game\+Object\+Null}}を再実装しています。
+
+
+
+ Stage\+Manager.\+cpp の 132 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_stage_manager_aac234fd37fef3fe233489e75c803ac47}\label{class_stage_manager_aac234fd37fef3fe233489e75c803ac47}} 
+\index{Stage\+Manager@{Stage\+Manager}!balloon\+\_\+group\+\_\+@{balloon\+\_\+group\+\_\+}}
+\index{balloon\+\_\+group\+\_\+@{balloon\+\_\+group\+\_\+}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{balloon\+\_\+group\+\_\+}{balloon\_group\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_balloon_group}{Balloon\+Group}}$\ast$ Stage\+Manager\+::balloon\+\_\+group\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+風船群 
+
+
+
+ Stage\+Manager.\+h の 54 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_aeced4abe9b4df7b0105dd42745506a25}\label{class_stage_manager_aeced4abe9b4df7b0105dd42745506a25}} 
+\index{Stage\+Manager@{Stage\+Manager}!B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+RE@{B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+RE}}
+\index{B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+RE@{B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+RE}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+RE}{BONUS\_SCORE}}
+{\footnotesize\ttfamily const int Stage\+Manager\+::\+B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+RE = 300\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+ボーナススコア 
+
+
+
+ Stage\+Manager.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_aed94634bfdb7bbc3e9cc46724ba87e12}\label{class_stage_manager_aed94634bfdb7bbc3e9cc46724ba87e12}} 
+\index{Stage\+Manager@{Stage\+Manager}!B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+R\+E\+\_\+\+R\+A\+I\+TO@{B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+R\+E\+\_\+\+R\+A\+I\+TO}}
+\index{B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+R\+E\+\_\+\+R\+A\+I\+TO@{B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+R\+E\+\_\+\+R\+A\+I\+TO}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+R\+E\+\_\+\+R\+A\+I\+TO}{BONUS\_SCORE\_RAITO}}
+{\footnotesize\ttfamily const int Stage\+Manager\+::\+B\+O\+N\+U\+S\+\_\+\+S\+C\+O\+R\+E\+\_\+\+R\+A\+I\+TO = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+ボーナススコア比率 
+
+
+
+ Stage\+Manager.\+h の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_a9b693a434f2aec42739c19daf6087da4}\label{class_stage_manager_a9b693a434f2aec42739c19daf6087da4}} 
+\index{Stage\+Manager@{Stage\+Manager}!is\+\_\+enable\+\_\+@{is\+\_\+enable\+\_\+}}
+\index{is\+\_\+enable\+\_\+@{is\+\_\+enable\+\_\+}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{is\+\_\+enable\+\_\+}{is\_enable\_}}
+{\footnotesize\ttfamily bool Stage\+Manager\+::is\+\_\+enable\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+有効フラグ 
+
+
+
+ Stage\+Manager.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_a80276fabfcdccd74dfd52fd2cc61b1db}\label{class_stage_manager_a80276fabfcdccd74dfd52fd2cc61b1db}} 
+\index{Stage\+Manager@{Stage\+Manager}!is\+\_\+ground\+\_\+@{is\+\_\+ground\+\_\+}}
+\index{is\+\_\+ground\+\_\+@{is\+\_\+ground\+\_\+}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{is\+\_\+ground\+\_\+}{is\_ground\_}}
+{\footnotesize\ttfamily bool Stage\+Manager\+::is\+\_\+ground\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+着地フラグ 
+
+
+
+ Stage\+Manager.\+h の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_a46709c98366565c68f8de974385501a4}\label{class_stage_manager_a46709c98366565c68f8de974385501a4}} 
+\index{Stage\+Manager@{Stage\+Manager}!M\+A\+X\+\_\+\+T\+I\+ME@{M\+A\+X\+\_\+\+T\+I\+ME}}
+\index{M\+A\+X\+\_\+\+T\+I\+ME@{M\+A\+X\+\_\+\+T\+I\+ME}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+T\+I\+ME}{MAX\_TIME}}
+{\footnotesize\ttfamily const int Stage\+Manager\+::\+M\+A\+X\+\_\+\+T\+I\+ME = \mbox{\hyperlink{class_time_to_frame_a02fe55cc63bdffd73d092d30cc7f0153}{Time\+To\+Frame\+::\+Second\+To\+Frame}}(60.\+0f)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+最大時間 
+
+
+
+ Stage\+Manager.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_aaebf5b60351f6406ba9ca9bfaaaf8959}\label{class_stage_manager_aaebf5b60351f6406ba9ca9bfaaaf8959}} 
+\index{Stage\+Manager@{Stage\+Manager}!needle\+\_\+@{needle\+\_\+}}
+\index{needle\+\_\+@{needle\+\_\+}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{needle\+\_\+}{needle\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_needle}{Needle}}$\ast$ Stage\+Manager\+::needle\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+棘 
+
+
+
+ Stage\+Manager.\+h の 58 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_a378c995a369018f8595ba5cf4ab947d2}\label{class_stage_manager_a378c995a369018f8595ba5cf4ab947d2}} 
+\index{Stage\+Manager@{Stage\+Manager}!player\+\_\+@{player\+\_\+}}
+\index{player\+\_\+@{player\+\_\+}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{player\+\_\+}{player\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}}$\ast$ Stage\+Manager\+::player\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+プレイヤー 
+
+
+
+ Stage\+Manager.\+h の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_ab5cf1a29d5a3f8c1e06c2ca64e369d24}\label{class_stage_manager_ab5cf1a29d5a3f8c1e06c2ca64e369d24}} 
+\index{Stage\+Manager@{Stage\+Manager}!scaffold\+\_\+@{scaffold\+\_\+}}
+\index{scaffold\+\_\+@{scaffold\+\_\+}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{scaffold\+\_\+}{scaffold\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scaffold}{Scaffold}}$\ast$ Stage\+Manager\+::scaffold\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+足場 
+
+
+
+ Stage\+Manager.\+h の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_a21bdb2371d84c916dd594c453c50701e}\label{class_stage_manager_a21bdb2371d84c916dd594c453c50701e}} 
+\index{Stage\+Manager@{Stage\+Manager}!score\+\_\+@{score\+\_\+}}
+\index{score\+\_\+@{score\+\_\+}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{score\+\_\+}{score\_}}
+{\footnotesize\ttfamily int Stage\+Manager\+::score\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+スコア 
+
+
+
+ Stage\+Manager.\+h の 52 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_a0ce3838c9fe4eaa1c9f8a6ecf361ea7a}\label{class_stage_manager_a0ce3838c9fe4eaa1c9f8a6ecf361ea7a}} 
+\index{Stage\+Manager@{Stage\+Manager}!start\+\_\+block\+\_\+@{start\+\_\+block\+\_\+}}
+\index{start\+\_\+block\+\_\+@{start\+\_\+block\+\_\+}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{start\+\_\+block\+\_\+}{start\_block\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_start_block}{Start\+Block}}$\ast$ Stage\+Manager\+::start\+\_\+block\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+スタートブロック 
+
+
+
+ Stage\+Manager.\+h の 56 行目に定義があります。
+
+\mbox{\Hypertarget{class_stage_manager_afdb8bffaa00e7c4ed1ebbf136137f6e6}\label{class_stage_manager_afdb8bffaa00e7c4ed1ebbf136137f6e6}} 
+\index{Stage\+Manager@{Stage\+Manager}!time\+\_\+@{time\+\_\+}}
+\index{time\+\_\+@{time\+\_\+}!Stage\+Manager@{Stage\+Manager}}
+\subsubsection{\texorpdfstring{time\+\_\+}{time\_}}
+{\footnotesize\ttfamily int Stage\+Manager\+::time\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+時間 
+
+
+
+ Stage\+Manager.\+h の 53 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Stage\+Manager/\mbox{\hyperlink{_stage_manager_8h}{Stage\+Manager.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Stage\+Manager/\+Source/\mbox{\hyperlink{_stage_manager_8cpp}{Stage\+Manager.\+cpp}}\end{DoxyCompactItemize}

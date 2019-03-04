@@ -2,7 +2,7 @@
 \label{class_vertex_shader_base}\index{Vertex\+Shader\+Base@{Vertex\+Shader\+Base}}
 
 
-頂点シェーダー基底クラス  
+頂点シェーダー\+Bass\+Class  
 
 
 
@@ -11,88 +11,123 @@
 
 
 
-Vertex\+Shader\+Base の継承関係図\nopagebreak
+Vertex\+Shader\+Base 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=336pt]{class_vertex_shader_base__inherit__graph}
+\includegraphics[width=350pt]{class_vertex_shader_base__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_vertex_shader_base_a9f93697c5668852850f0a7b7ef7cb67f}{Set\+Shader}} () override
-\begin{DoxyCompactList}\small\item\em シェーダー設定関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+S\+H\+A\+D\+E\+R9 \mbox{\hyperlink{class_vertex_shader_base_a2111b20156419548afe14132651d5e21}{getp\+Vertex\+Shader}} ()
+\begin{DoxyCompactList}\small\item\em 頂点シェーダー取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_shader_base_a72c88a06560f530be7cb04923a916904}{Shader\+Set\+To\+Device}} () override
+\begin{DoxyCompactList}\small\item\em デバイスにシェーダー設定関数 \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_vertex_shader_base_a6565abadb8ac173d3273ab1698d31c6c}{Vertex\+Shader\+Compile}} (const char $\ast$file\+\_\+name, const char $\ast$entry\+\_\+function, const char $\ast$version)
 \begin{DoxyCompactList}\small\item\em 頂点シェーダーコンパイル関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_vertex_shader_base_a42ff1e32a2c231f77d0ba0e6a8312e63}{Release\+Vertex\+Shader}} ()
-\begin{DoxyCompactList}\small\item\em 頂点シェーダー解放関数 \end{DoxyCompactList}\item 
-L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+S\+H\+A\+D\+E\+R9 \mbox{\hyperlink{class_vertex_shader_base_ab10cf1aac4a54653c553b5c84e1d3703}{Get\+Vertex\+Shader}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 頂点シェーダー解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+S\+H\+A\+D\+E\+R9 \mbox{\hyperlink{class_vertex_shader_base_a06f34810bedce79d6115c88a61dfbea4}{vertex\+\_\+shader\+\_\+}} = nullptr
 \begin{DoxyCompactList}\small\item\em 頂点シェーダー \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
-頂点シェーダー基底クラス 
+頂点シェーダー\+Bass\+Class 
 
-頂点シェーダー基底クラス 
+頂点シェーダーの\+Bass\+Class 
 
- Vertex\+Shader\+Base.\+h の 26 行目に定義があります。
+ Vertex\+Shader\+Base.\+h の 24 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_vertex_shader_base_ab10cf1aac4a54653c553b5c84e1d3703}\label{class_vertex_shader_base_ab10cf1aac4a54653c553b5c84e1d3703}} 
-\index{Vertex\+Shader\+Base@{Vertex\+Shader\+Base}!Get\+Vertex\+Shader@{Get\+Vertex\+Shader}}
-\index{Get\+Vertex\+Shader@{Get\+Vertex\+Shader}!Vertex\+Shader\+Base@{Vertex\+Shader\+Base}}
-\subsubsection{\texorpdfstring{Get\+Vertex\+Shader()}{GetVertexShader()}}
-{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+S\+H\+A\+D\+E\+R9 Vertex\+Shader\+Base\+::\+Get\+Vertex\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_vertex_shader_base_a2111b20156419548afe14132651d5e21}\label{class_vertex_shader_base_a2111b20156419548afe14132651d5e21}} 
+\index{Vertex\+Shader\+Base@{Vertex\+Shader\+Base}!getp\+Vertex\+Shader@{getp\+Vertex\+Shader}}
+\index{getp\+Vertex\+Shader@{getp\+Vertex\+Shader}!Vertex\+Shader\+Base@{Vertex\+Shader\+Base}}
+\subsubsection{\texorpdfstring{getp\+Vertex\+Shader()}{getpVertexShader()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+S\+H\+A\+D\+E\+R9 Vertex\+Shader\+Base\+::getp\+Vertex\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
- Vertex\+Shader\+Base.\+h の 87 行目に定義があります。
+頂点シェーダー取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+S\+H\+A\+D\+E\+R9} & 頂点シェーダー \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vertex\+Shader\+Base.\+cpp の 20 行目に定義があります。
 
 \mbox{\Hypertarget{class_vertex_shader_base_a42ff1e32a2c231f77d0ba0e6a8312e63}\label{class_vertex_shader_base_a42ff1e32a2c231f77d0ba0e6a8312e63}} 
 \index{Vertex\+Shader\+Base@{Vertex\+Shader\+Base}!Release\+Vertex\+Shader@{Release\+Vertex\+Shader}}
 \index{Release\+Vertex\+Shader@{Release\+Vertex\+Shader}!Vertex\+Shader\+Base@{Vertex\+Shader\+Base}}
 \subsubsection{\texorpdfstring{Release\+Vertex\+Shader()}{ReleaseVertexShader()}}
-{\footnotesize\ttfamily void Vertex\+Shader\+Base\+::\+Release\+Vertex\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Base\+::\+Release\+Vertex\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 頂点シェーダー解放関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
- Vertex\+Shader\+Base.\+h の 81 行目に定義があります。
-
-\mbox{\Hypertarget{class_vertex_shader_base_a9f93697c5668852850f0a7b7ef7cb67f}\label{class_vertex_shader_base_a9f93697c5668852850f0a7b7ef7cb67f}} 
-\index{Vertex\+Shader\+Base@{Vertex\+Shader\+Base}!Set\+Shader@{Set\+Shader}}
-\index{Set\+Shader@{Set\+Shader}!Vertex\+Shader\+Base@{Vertex\+Shader\+Base}}
-\subsubsection{\texorpdfstring{Set\+Shader()}{SetShader()}}
-{\footnotesize\ttfamily void Vertex\+Shader\+Base\+::\+Set\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-シェーダー設定関数 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Vertex\+Shader\+Base.\+cpp の 62 行目に定義があります。
 
-\mbox{\hyperlink{class_shader_base_af45063254b80602db8626360d643baee}{Shader\+Base}}を実装しています。
+\mbox{\Hypertarget{class_vertex_shader_base_a72c88a06560f530be7cb04923a916904}\label{class_vertex_shader_base_a72c88a06560f530be7cb04923a916904}} 
+\index{Vertex\+Shader\+Base@{Vertex\+Shader\+Base}!Shader\+Set\+To\+Device@{Shader\+Set\+To\+Device}}
+\index{Shader\+Set\+To\+Device@{Shader\+Set\+To\+Device}!Vertex\+Shader\+Base@{Vertex\+Shader\+Base}}
+\subsubsection{\texorpdfstring{Shader\+Set\+To\+Device()}{ShaderSetToDevice()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Base\+::\+Shader\+Set\+To\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
- Vertex\+Shader\+Base.\+h の 43 行目に定義があります。
+デバイスにシェーダー設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_shader_base_a78e5b6f343821648409d50653e0105e2}{Shader\+Base}}を実装しています。
+
+
+
+ Vertex\+Shader\+Base.\+cpp の 30 行目に定義があります。
 
 \mbox{\Hypertarget{class_vertex_shader_base_a6565abadb8ac173d3273ab1698d31c6c}\label{class_vertex_shader_base_a6565abadb8ac173d3273ab1698d31c6c}} 
 \index{Vertex\+Shader\+Base@{Vertex\+Shader\+Base}!Vertex\+Shader\+Compile@{Vertex\+Shader\+Compile}}
 \index{Vertex\+Shader\+Compile@{Vertex\+Shader\+Compile}!Vertex\+Shader\+Base@{Vertex\+Shader\+Base}}
 \subsubsection{\texorpdfstring{Vertex\+Shader\+Compile()}{VertexShaderCompile()}}
-{\footnotesize\ttfamily bool Vertex\+Shader\+Base\+::\+Vertex\+Shader\+Compile (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name,  }\item[{const char $\ast$}]{entry\+\_\+function,  }\item[{const char $\ast$}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bool Vertex\+Shader\+Base\+::\+Vertex\+Shader\+Compile (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name,  }\item[{const char $\ast$}]{entry\+\_\+function,  }\item[{const char $\ast$}]{version }\end{DoxyParamCaption})}
 
 
 
@@ -100,15 +135,21 @@ L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+S\+H\+A\+D\+E\+R9 \mbox{\hyperlink
 
 
 \begin{DoxyParams}{引数}
-{\em file\+\_\+name} & \+: ファイル名 entry\+\_\+function \+: エントリ関数名 version \+: シェーダーバージョン \\
+{\em $\ast$file\+\_\+name} & ファイル名 \\
+\hline
+{\em $\ast$entry\+\_\+function} & エントリ関数名 \\
+\hline
+{\em $\ast$version} & シェーダーバージョン \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{戻り値}
-コンパイル成功ならtrue 
-\end{DoxyReturn}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & コンパイル成功ならtrue \\
+\hline
+\end{DoxyRetVals}
 
 
- Vertex\+Shader\+Base.\+h の 57 行目に定義があります。
+ Vertex\+Shader\+Base.\+cpp の 37 行目に定義があります。
 
 
 
@@ -125,10 +166,11 @@ L\+P\+D\+I\+R\+E\+C\+T3\+D\+V\+E\+R\+T\+E\+X\+S\+H\+A\+D\+E\+R9 \mbox{\hyperlink
 
 
 
- Vertex\+Shader\+Base.\+h の 32 行目に定義があります。
+ Vertex\+Shader\+Base.\+h の 30 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Shader/\+Shader\+Base/\mbox{\hyperlink{_vertex_shader_base_8h}{Vertex\+Shader\+Base.\+h}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Vertex\+Shader/\mbox{\hyperlink{_vertex_shader_base_8h}{Vertex\+Shader\+Base.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Vertex\+Shader/\+Source/\mbox{\hyperlink{_vertex_shader_base_8cpp}{Vertex\+Shader\+Base.\+cpp}}\end{DoxyCompactItemize}

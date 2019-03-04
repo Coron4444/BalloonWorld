@@ -2,7 +2,7 @@
 \label{class_shader_base}\index{Shader\+Base@{Shader\+Base}}
 
 
-シェーダー基底クラス  
+シェーダー\+Base\+Class  
 
 
 
@@ -11,91 +11,159 @@
 
 
 
-Shader\+Base の継承関係図\nopagebreak
+Shader\+Base 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_shader_base__inherit__graph}
+\includegraphics[width=350pt]{class_shader_base__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
+L\+P\+D3\+D\+X\+C\+O\+N\+S\+T\+A\+N\+T\+T\+A\+B\+LE \mbox{\hyperlink{class_shader_base_a89f6e1ba14f7db57248c794356f9b076}{getp\+Constant\+Table}} ()
+\begin{DoxyCompactList}\small\item\em 定数テーブル取得関数 \end{DoxyCompactList}\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_shader_base_aa16d631f799060854de36a024dcfce48}{getp\+Device}} ()
+\begin{DoxyCompactList}\small\item\em デバイス取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$ \mbox{\hyperlink{class_shader_base_a7637faa8fe5aa027dc91e00cfee26f33}{getp\+Draw\+Common\+Data}} ()
+\begin{DoxyCompactList}\small\item\em 描画共通データ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shader_base_abbffa59fae48651c11489de37a88b190}{set\+Draw\+Common\+Data}} (\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em 描画共通データ設定関数 \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_shader_base_a3b7c2337128ca825093ab3a47bce4084}{$\sim$\+Shader\+Base}} ()=0
+\begin{DoxyCompactList}\small\item\em デストラクタ関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_shader_base_a9622b2f5e0184a78d3af82820dc5113d}{Init}} ()=0
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_shader_base_a784edfa81bec4d08a257ed4f02c61222}{Uninit}} ()=0
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_shader_base_af45063254b80602db8626360d643baee}{Set\+Shader}} ()=0
-\begin{DoxyCompactList}\small\item\em シェーダー設定関数 \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_shader_base_aef6fa922223d71fbec81464ebbfaf687}{Common\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)=0
-\begin{DoxyCompactList}\small\item\em 共通設定関数 \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_shader_base_ac78c78ede3b8e48cf28b739b97456620}{Specific\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index, unsigned mesh\+\_\+index)=0
-\begin{DoxyCompactList}\small\item\em 固有設定関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_shader_base_a054bc5e129619ec976740e0698ef9a8b}{Object\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)=0
+\begin{DoxyCompactList}\small\item\em オブジェクト設定関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_shader_base_a04f6ce27a707f4040e8abe48f9840951}{Mesh\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index, unsigned mesh\+\_\+index)=0
+\begin{DoxyCompactList}\small\item\em メッシュ設定関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_shader_base_a78e5b6f343821648409d50653e0105e2}{Shader\+Set\+To\+Device}} ()=0
+\begin{DoxyCompactList}\small\item\em デバイスにシェーダー設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
 bool \mbox{\hyperlink{class_shader_base_ac6e791440374f97592cfb4cb36f4fa55}{Shader\+Compile}} (const char $\ast$file\+\_\+name, const char $\ast$entry\+\_\+function, const char $\ast$version, L\+P\+D3\+D\+X\+B\+U\+F\+F\+ER $\ast$compiled\+\_\+code)
 \begin{DoxyCompactList}\small\item\em シェーダーコンパイル関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_shader_base_aaac3419f1fce5bf12973e827daadbf8c}{Init\+Device}} ()
-\begin{DoxyCompactList}\small\item\em デバイスの初期化関数 \end{DoxyCompactList}\item 
-L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_shader_base_a4601ff3d20f01800ffd676d3db8d9289}{Get\+Device}} ()
-\item 
-L\+P\+D3\+D\+X\+C\+O\+N\+S\+T\+A\+N\+T\+T\+A\+B\+LE \mbox{\hyperlink{class_shader_base_a85a5c17b56b6ffa29f7784ab42696d7c}{Get\+Constant\+Table}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em デバイス初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shader_base_a30b6fc2252b39598f36e91aec1a207e7}{Release\+Constant\+Table}} ()
+\begin{DoxyCompactList}\small\item\em 定数テーブル解放関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
+L\+P\+D3\+D\+X\+C\+O\+N\+S\+T\+A\+N\+T\+T\+A\+B\+LE \mbox{\hyperlink{class_shader_base_a9b6b2a5920dd57ac463040224fb64b68}{constant\+\_\+table\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 定数テーブル \end{DoxyCompactList}\item 
 L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{class_shader_base_a15e4a4c1c1148433b9a0c60a7c32a366}{device\+\_\+}} = nullptr
 \begin{DoxyCompactList}\small\item\em デバイス \end{DoxyCompactList}\item 
-L\+P\+D3\+D\+X\+C\+O\+N\+S\+T\+A\+N\+T\+T\+A\+B\+LE \mbox{\hyperlink{class_shader_base_a9b6b2a5920dd57ac463040224fb64b68}{constant\+\_\+table\+\_\+}} = nullptr
-\begin{DoxyCompactList}\small\item\em 定数テーブル \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$ \mbox{\hyperlink{class_shader_base_a35b31a286a2d5df521f504e3d883da02}{common\+\_\+data\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em 描画共通データ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
-シェーダー基底クラス 
+シェーダー\+Base\+Class 
 
-シェーダー基底クラス 
+シェーダーの\+Base\+Class 
 
- Shader\+Base.\+h の 30 行目に定義があります。
-
-
-
-\subsection{関数詳解}
-\mbox{\Hypertarget{class_shader_base_aef6fa922223d71fbec81464ebbfaf687}\label{class_shader_base_aef6fa922223d71fbec81464ebbfaf687}} 
-\index{Shader\+Base@{Shader\+Base}!Common\+Setting@{Common\+Setting}}
-\index{Common\+Setting@{Common\+Setting}!Shader\+Base@{Shader\+Base}}
-\subsubsection{\texorpdfstring{Common\+Setting()}{CommonSetting()}}
-{\footnotesize\ttfamily virtual void Shader\+Base\+::\+Common\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+ Shader\+Base.\+h の 26 行目に定義があります。
 
 
 
-共通設定関数 
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_shader_base_a3b7c2337128ca825093ab3a47bce4084}\label{class_shader_base_a3b7c2337128ca825093ab3a47bce4084}} 
+\index{Shader\+Base@{Shader\+Base}!````~Shader\+Base@{$\sim$\+Shader\+Base}}
+\index{````~Shader\+Base@{$\sim$\+Shader\+Base}!Shader\+Base@{Shader\+Base}}
+\subsubsection{\texorpdfstring{$\sim$\+Shader\+Base()}{~ShaderBase()}}
+{\footnotesize\ttfamily Shader\+Base\+::$\sim$\+Shader\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+デストラクタ関数 
 
 
 \begin{DoxyParams}{引数}
-{\em draw} & \+: 描画基底クラス camera \+: カメラ object\+\_\+index \+: 描画オブジェクトインデックス \\
+{\em void} & なし \\
 \hline
 \end{DoxyParams}
 
 
-\mbox{\hyperlink{class_vertex_shader_bump_mapping_a7979584d035fff86d386c99617a8dd2c}{Vertex\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_pixel_shader_bump_mapping_af62a2b40930533a3bae17319f876705d}{Pixel\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_vertex_shader_fixed_a82bf2829b6fd0df26faedcbf650ba08d}{Vertex\+Shader\+Fixed}}, \mbox{\hyperlink{class_pixel_shader_null_a99c712ab174da29ba26a893820b64799}{Pixel\+Shader\+Null}}, \mbox{\hyperlink{class_vertex_shader_null_a95f1a66045fb39c42cf0566f1990b6a1}{Vertex\+Shader\+Null}}で実装されています。
-
-\mbox{\Hypertarget{class_shader_base_a85a5c17b56b6ffa29f7784ab42696d7c}\label{class_shader_base_a85a5c17b56b6ffa29f7784ab42696d7c}} 
-\index{Shader\+Base@{Shader\+Base}!Get\+Constant\+Table@{Get\+Constant\+Table}}
-\index{Get\+Constant\+Table@{Get\+Constant\+Table}!Shader\+Base@{Shader\+Base}}
-\subsubsection{\texorpdfstring{Get\+Constant\+Table()}{GetConstantTable()}}
-{\footnotesize\ttfamily L\+P\+D3\+D\+X\+C\+O\+N\+S\+T\+A\+N\+T\+T\+A\+B\+LE Shader\+Base\+::\+Get\+Constant\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+ Shader\+Base.\+cpp の 51 行目に定義があります。
 
 
 
- Shader\+Base.\+h の 142 行目に定義があります。
-
-\mbox{\Hypertarget{class_shader_base_a4601ff3d20f01800ffd676d3db8d9289}\label{class_shader_base_a4601ff3d20f01800ffd676d3db8d9289}} 
-\index{Shader\+Base@{Shader\+Base}!Get\+Device@{Get\+Device}}
-\index{Get\+Device@{Get\+Device}!Shader\+Base@{Shader\+Base}}
-\subsubsection{\texorpdfstring{Get\+Device()}{GetDevice()}}
-{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 Shader\+Base\+::\+Get\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_shader_base_a89f6e1ba14f7db57248c794356f9b076}\label{class_shader_base_a89f6e1ba14f7db57248c794356f9b076}} 
+\index{Shader\+Base@{Shader\+Base}!getp\+Constant\+Table@{getp\+Constant\+Table}}
+\index{getp\+Constant\+Table@{getp\+Constant\+Table}!Shader\+Base@{Shader\+Base}}
+\subsubsection{\texorpdfstring{getp\+Constant\+Table()}{getpConstantTable()}}
+{\footnotesize\ttfamily L\+P\+D3\+D\+X\+C\+O\+N\+S\+T\+A\+N\+T\+T\+A\+B\+LE Shader\+Base\+::getp\+Constant\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
- Shader\+Base.\+h の 141 行目に定義があります。
+
+定数テーブル取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D3\+D\+X\+C\+O\+N\+S\+T\+A\+N\+T\+T\+A\+B\+LE} & 定数テーブル \\
+\hline
+\end{DoxyRetVals}
+
+
+ Shader\+Base.\+cpp の 20 行目に定義があります。
+
+\mbox{\Hypertarget{class_shader_base_aa16d631f799060854de36a024dcfce48}\label{class_shader_base_aa16d631f799060854de36a024dcfce48}} 
+\index{Shader\+Base@{Shader\+Base}!getp\+Device@{getp\+Device}}
+\index{getp\+Device@{getp\+Device}!Shader\+Base@{Shader\+Base}}
+\subsubsection{\texorpdfstring{getp\+Device()}{getpDevice()}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 Shader\+Base\+::getp\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+デバイス取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9} & デバイス \\
+\hline
+\end{DoxyRetVals}
+
+
+ Shader\+Base.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_shader_base_a7637faa8fe5aa027dc91e00cfee26f33}\label{class_shader_base_a7637faa8fe5aa027dc91e00cfee26f33}} 
+\index{Shader\+Base@{Shader\+Base}!getp\+Draw\+Common\+Data@{getp\+Draw\+Common\+Data}}
+\index{getp\+Draw\+Common\+Data@{getp\+Draw\+Common\+Data}!Shader\+Base@{Shader\+Base}}
+\subsubsection{\texorpdfstring{getp\+Draw\+Common\+Data()}{getpDrawCommonData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$ Shader\+Base\+::getp\+Draw\+Common\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+描画共通データ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & 描画共通データ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Shader\+Base.\+cpp の 34 行目に定義があります。
 
 \mbox{\Hypertarget{class_shader_base_a9622b2f5e0184a78d3af82820dc5113d}\label{class_shader_base_a9622b2f5e0184a78d3af82820dc5113d}} 
 \index{Shader\+Base@{Shader\+Base}!Init@{Init}}
@@ -108,42 +176,154 @@ L\+P\+D3\+D\+X\+C\+O\+N\+S\+T\+A\+N\+T\+T\+A\+B\+LE \mbox{\hyperlink{class_shade
 初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
-\mbox{\hyperlink{class_vertex_shader_bump_mapping_a6c0f59d1f29fd883943a66bfe61b6b03}{Vertex\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_pixel_shader_bump_mapping_ab7807b7c56242e965ddb23e66e1a5d9e}{Pixel\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_vertex_shader_fixed_ae829ff736b33c45543804059255125b6}{Vertex\+Shader\+Fixed}}, \mbox{\hyperlink{class_pixel_shader_null_abfd7a6a986da09061a55d31024219eba}{Pixel\+Shader\+Null}}, \mbox{\hyperlink{class_vertex_shader_null_af30eb8057fe0537bc6ade214647b6fb5}{Vertex\+Shader\+Null}}で実装されています。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_bump_mapping_a6c0f59d1f29fd883943a66bfe61b6b03}{Vertex\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_vertex_shader_animated_default_a974cb247b42cb1c9288a9de9ed9048e9}{Vertex\+Shader\+Animated\+Default}}, \mbox{\hyperlink{class_vertex_shader_blinn_phong_a565b15a20d6c73d8b8e0c7dcc3078464}{Vertex\+Shader\+Blinn\+Phong}}, \mbox{\hyperlink{class_vertex_shader_cook_torrance_afab2193c27ca9cdc8490585743cd7ca3}{Vertex\+Shader\+Cook\+Torrance}}, \mbox{\hyperlink{class_vertex_shader_default_afdf5dbbc83e9007fa85ed345e228d304}{Vertex\+Shader\+Default}}, \mbox{\hyperlink{class_vertex_shader_default_shadow_ad0033ccbf57a28ab9879313d3f300338}{Vertex\+Shader\+Default\+Shadow}}, \mbox{\hyperlink{class_vertex_shader_shadow_map_ad05ff60e979b3d2af8603a118cb51185}{Vertex\+Shader\+Shadow\+Map}}, \mbox{\hyperlink{class_pixel_shader_default_a74187e4e936d79947753bf4028a411bf}{Pixel\+Shader\+Default}}, \mbox{\hyperlink{class_pixel_shader_default_shadow_a22be67e887bcad8d9b6725cbae7e3abc}{Pixel\+Shader\+Default\+Shadow}}, \mbox{\hyperlink{class_pixel_shader_shadow_map_a4e68df44391fdd93985ad7b361828f99}{Pixel\+Shader\+Shadow\+Map}}, \mbox{\hyperlink{class_pixel_shader_blinn_phong_af02b6b6659975f0285aebced953c567a}{Pixel\+Shader\+Blinn\+Phong}}, \mbox{\hyperlink{class_pixel_shader_bump_mapping_ab7807b7c56242e965ddb23e66e1a5d9e}{Pixel\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_pixel_shader_cook_torrance_aed6d21d6560d11fede08e596f49716d5}{Pixel\+Shader\+Cook\+Torrance}}, \mbox{\hyperlink{class_vertex_shader_fixed_ae829ff736b33c45543804059255125b6}{Vertex\+Shader\+Fixed}}, \mbox{\hyperlink{class_pixel_shader_null_a5318be2bf26892c385d863e3e8409571}{Pixel\+Shader\+Null}}, \mbox{\hyperlink{class_vertex_shader_null_a4d79b358dab49c840345d74823a16840}{Vertex\+Shader\+Null}} (計16項目)で実装されています。
 
 \mbox{\Hypertarget{class_shader_base_aaac3419f1fce5bf12973e827daadbf8c}\label{class_shader_base_aaac3419f1fce5bf12973e827daadbf8c}} 
 \index{Shader\+Base@{Shader\+Base}!Init\+Device@{Init\+Device}}
 \index{Init\+Device@{Init\+Device}!Shader\+Base@{Shader\+Base}}
 \subsubsection{\texorpdfstring{Init\+Device()}{InitDevice()}}
-{\footnotesize\ttfamily void Shader\+Base\+::\+Init\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Shader\+Base\+::\+Init\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-デバイスの初期化関数 
+デバイス初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Shader\+Base.\+cpp の 98 行目に定義があります。
+
+\mbox{\Hypertarget{class_shader_base_a04f6ce27a707f4040e8abe48f9840951}\label{class_shader_base_a04f6ce27a707f4040e8abe48f9840951}} 
+\index{Shader\+Base@{Shader\+Base}!Mesh\+Setting@{Mesh\+Setting}}
+\index{Mesh\+Setting@{Mesh\+Setting}!Shader\+Base@{Shader\+Base}}
+\subsubsection{\texorpdfstring{Mesh\+Setting()}{MeshSetting()}}
+{\footnotesize\ttfamily virtual void Shader\+Base\+::\+Mesh\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
- Shader\+Base.\+h の 129 行目に定義があります。
-
-\mbox{\Hypertarget{class_shader_base_af45063254b80602db8626360d643baee}\label{class_shader_base_af45063254b80602db8626360d643baee}} 
-\index{Shader\+Base@{Shader\+Base}!Set\+Shader@{Set\+Shader}}
-\index{Set\+Shader@{Set\+Shader}!Shader\+Base@{Shader\+Base}}
-\subsubsection{\texorpdfstring{Set\+Shader()}{SetShader()}}
-{\footnotesize\ttfamily virtual void Shader\+Base\+::\+Set\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+メッシュ設定関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
 
-シェーダー設定関数 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_bump_mapping_aea3347e35f823d5272b4adcd2ca9724a}{Vertex\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_vertex_shader_animated_default_ad19fa307106654c4e8337db832018cc6}{Vertex\+Shader\+Animated\+Default}}, \mbox{\hyperlink{class_vertex_shader_blinn_phong_a5a5e76dcd64d4da2b2d3a4d9b1f4af21}{Vertex\+Shader\+Blinn\+Phong}}, \mbox{\hyperlink{class_vertex_shader_cook_torrance_a56c481293790c7269d6973e2ddae97f2}{Vertex\+Shader\+Cook\+Torrance}}, \mbox{\hyperlink{class_vertex_shader_default_a9ad7c52aa9f82f9cb0d2c60fde2bac4a}{Vertex\+Shader\+Default}}, \mbox{\hyperlink{class_vertex_shader_default_shadow_ae30039c4431a79ffd56609f599c72058}{Vertex\+Shader\+Default\+Shadow}}, \mbox{\hyperlink{class_pixel_shader_default_a18985aa792820858e214f141643119c4}{Pixel\+Shader\+Default}}, \mbox{\hyperlink{class_pixel_shader_default_shadow_adec247949dea3a73545f602641a99103}{Pixel\+Shader\+Default\+Shadow}}, \mbox{\hyperlink{class_pixel_shader_blinn_phong_a5b4b61a3d51610d6a41dfb3b25704421}{Pixel\+Shader\+Blinn\+Phong}}, \mbox{\hyperlink{class_pixel_shader_bump_mapping_ac1ff541401f121f7bd15b6e11cab997f}{Pixel\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_pixel_shader_cook_torrance_a0e658d9792cc15730c800db5a509fad9}{Pixel\+Shader\+Cook\+Torrance}}, \mbox{\hyperlink{class_vertex_shader_fixed_ab6e2024e01390866d778aa6db4085ac4}{Vertex\+Shader\+Fixed}}, \mbox{\hyperlink{class_pixel_shader_null_a89b6f0558a969478b06af52bb8e6ee16}{Pixel\+Shader\+Null}}, \mbox{\hyperlink{class_vertex_shader_null_a7bd853b15ab81cec44f1b6a1ea70a3a9}{Vertex\+Shader\+Null}}で実装されています。
+
+\mbox{\Hypertarget{class_shader_base_a054bc5e129619ec976740e0698ef9a8b}\label{class_shader_base_a054bc5e129619ec976740e0698ef9a8b}} 
+\index{Shader\+Base@{Shader\+Base}!Object\+Setting@{Object\+Setting}}
+\index{Object\+Setting@{Object\+Setting}!Shader\+Base@{Shader\+Base}}
+\subsubsection{\texorpdfstring{Object\+Setting()}{ObjectSetting()}}
+{\footnotesize\ttfamily virtual void Shader\+Base\+::\+Object\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-\mbox{\hyperlink{class_pixel_shader_base_a73f41bda5cbb9309ad415cdc471954a2}{Pixel\+Shader\+Base}}, \mbox{\hyperlink{class_vertex_shader_base_a9f93697c5668852850f0a7b7ef7cb67f}{Vertex\+Shader\+Base}}で実装されています。
+オブジェクト設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_bump_mapping_a29aa8761a52dbd79b7cd3063027e67db}{Vertex\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_vertex_shader_animated_default_a43d82c0666bffa49704eda4eb1f549d3}{Vertex\+Shader\+Animated\+Default}}, \mbox{\hyperlink{class_vertex_shader_blinn_phong_ac1a1ee4254b6b44a680b31c2ee42f44f}{Vertex\+Shader\+Blinn\+Phong}}, \mbox{\hyperlink{class_vertex_shader_cook_torrance_ac58b40e7b64d3460c66fac23bd067789}{Vertex\+Shader\+Cook\+Torrance}}, \mbox{\hyperlink{class_vertex_shader_default_aaf5f5716a2ec33bf374ae7b7f16e5c8b}{Vertex\+Shader\+Default}}, \mbox{\hyperlink{class_vertex_shader_default_shadow_ab86431938f31721d1c5d6fe60ebe2f92}{Vertex\+Shader\+Default\+Shadow}}, \mbox{\hyperlink{class_vertex_shader_shadow_map_a49f6120c2ca0200ca4d8bcb05cfae4d8}{Vertex\+Shader\+Shadow\+Map}}, \mbox{\hyperlink{class_pixel_shader_default_ae70580bd12afdbf654122bdb4dce85d0}{Pixel\+Shader\+Default}}, \mbox{\hyperlink{class_pixel_shader_default_shadow_ac7e4f76ddef588b97dd898c31023be37}{Pixel\+Shader\+Default\+Shadow}}, \mbox{\hyperlink{class_pixel_shader_blinn_phong_a772f7d20219ce7a563a8e608306f0ca1}{Pixel\+Shader\+Blinn\+Phong}}, \mbox{\hyperlink{class_pixel_shader_bump_mapping_a03839e7482a4a53ff1dc18ab288fec05}{Pixel\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_pixel_shader_cook_torrance_a2eff8f1808d5c7686599949537e7fdc4}{Pixel\+Shader\+Cook\+Torrance}}, \mbox{\hyperlink{class_vertex_shader_fixed_abe7cdb76b7da899680b1079344631cef}{Vertex\+Shader\+Fixed}}, \mbox{\hyperlink{class_pixel_shader_null_a488bde4a2c9a9c45c4ec0ad42487d3b1}{Pixel\+Shader\+Null}}, \mbox{\hyperlink{class_vertex_shader_null_aae3231bb3fa5df2578ba89701867ffb3}{Vertex\+Shader\+Null}} (計15項目)で実装されています。
+
+\mbox{\Hypertarget{class_shader_base_a30b6fc2252b39598f36e91aec1a207e7}\label{class_shader_base_a30b6fc2252b39598f36e91aec1a207e7}} 
+\index{Shader\+Base@{Shader\+Base}!Release\+Constant\+Table@{Release\+Constant\+Table}}
+\index{Release\+Constant\+Table@{Release\+Constant\+Table}!Shader\+Base@{Shader\+Base}}
+\subsubsection{\texorpdfstring{Release\+Constant\+Table()}{ReleaseConstantTable()}}
+{\footnotesize\ttfamily void Shader\+Base\+::\+Release\+Constant\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+定数テーブル解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Shader\+Base.\+cpp の 111 行目に定義があります。
+
+\mbox{\Hypertarget{class_shader_base_abbffa59fae48651c11489de37a88b190}\label{class_shader_base_abbffa59fae48651c11489de37a88b190}} 
+\index{Shader\+Base@{Shader\+Base}!set\+Draw\+Common\+Data@{set\+Draw\+Common\+Data}}
+\index{set\+Draw\+Common\+Data@{set\+Draw\+Common\+Data}!Shader\+Base@{Shader\+Base}}
+\subsubsection{\texorpdfstring{set\+Draw\+Common\+Data()}{setDrawCommonData()}}
+{\footnotesize\ttfamily void Shader\+Base\+::set\+Draw\+Common\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+描画共通データ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$value} & 描画共通データ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Shader\+Base.\+cpp の 41 行目に定義があります。
 
 \mbox{\Hypertarget{class_shader_base_ac6e791440374f97592cfb4cb36f4fa55}\label{class_shader_base_ac6e791440374f97592cfb4cb36f4fa55}} 
 \index{Shader\+Base@{Shader\+Base}!Shader\+Compile@{Shader\+Compile}}
 \index{Shader\+Compile@{Shader\+Compile}!Shader\+Base@{Shader\+Base}}
 \subsubsection{\texorpdfstring{Shader\+Compile()}{ShaderCompile()}}
-{\footnotesize\ttfamily bool Shader\+Base\+::\+Shader\+Compile (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name,  }\item[{const char $\ast$}]{entry\+\_\+function,  }\item[{const char $\ast$}]{version,  }\item[{L\+P\+D3\+D\+X\+B\+U\+F\+F\+ER $\ast$}]{compiled\+\_\+code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bool Shader\+Base\+::\+Shader\+Compile (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name,  }\item[{const char $\ast$}]{entry\+\_\+function,  }\item[{const char $\ast$}]{version,  }\item[{L\+P\+D3\+D\+X\+B\+U\+F\+F\+ER $\ast$}]{compiled\+\_\+code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -151,34 +331,47 @@ L\+P\+D3\+D\+X\+C\+O\+N\+S\+T\+A\+N\+T\+T\+A\+B\+LE \mbox{\hyperlink{class_shade
 
 
 \begin{DoxyParams}{引数}
-{\em file\+\_\+name} & \+: ファイル名 entry\+\_\+function \+: エントリ関数名 version \+: シェーダーバージョン compiled\+\_\+code \+: コンパイル済みコード \\
+{\em $\ast$file\+\_\+name} & \+: ファイル名 \\
+\hline
+{\em $\ast$entry\+\_\+function} & \+: エントリ関数名 \\
+\hline
+{\em $\ast$version} & \+: シェーダーバージョン \\
+\hline
+{\em $\ast$compiled\+\_\+code} & \+: コンパイル済みコード \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{戻り値}
-コンパイル成功ならtrue 
-\end{DoxyReturn}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & コンパイル成功ならtrue \\
+\hline
+\end{DoxyRetVals}
 
 
- Shader\+Base.\+h の 95 行目に定義があります。
+ Shader\+Base.\+cpp の 58 行目に定義があります。
 
-\mbox{\Hypertarget{class_shader_base_ac78c78ede3b8e48cf28b739b97456620}\label{class_shader_base_ac78c78ede3b8e48cf28b739b97456620}} 
-\index{Shader\+Base@{Shader\+Base}!Specific\+Setting@{Specific\+Setting}}
-\index{Specific\+Setting@{Specific\+Setting}!Shader\+Base@{Shader\+Base}}
-\subsubsection{\texorpdfstring{Specific\+Setting()}{SpecificSetting()}}
-{\footnotesize\ttfamily virtual void Shader\+Base\+::\+Specific\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+\mbox{\Hypertarget{class_shader_base_a78e5b6f343821648409d50653e0105e2}\label{class_shader_base_a78e5b6f343821648409d50653e0105e2}} 
+\index{Shader\+Base@{Shader\+Base}!Shader\+Set\+To\+Device@{Shader\+Set\+To\+Device}}
+\index{Shader\+Set\+To\+Device@{Shader\+Set\+To\+Device}!Shader\+Base@{Shader\+Base}}
+\subsubsection{\texorpdfstring{Shader\+Set\+To\+Device()}{ShaderSetToDevice()}}
+{\footnotesize\ttfamily virtual void Shader\+Base\+::\+Shader\+Set\+To\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-固有設定関数 
+デバイスにシェーダー設定関数 
 
 
 \begin{DoxyParams}{引数}
-{\em draw} & \+: 描画基底クラス camera \+: カメラ object\+\_\+index \+: 描画オブジェクトインデックス mesh\+\_\+index \+: メッシュインデックス \\
+{\em void} & なし \\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\hyperlink{class_vertex_shader_bump_mapping_ad81d57336763441c4071f967b57dbce1}{Vertex\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_pixel_shader_bump_mapping_afa80c2404b490a444d54cc47c681ca8f}{Pixel\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_vertex_shader_fixed_a87523c320f6f6767d59d7b24265db7ec}{Vertex\+Shader\+Fixed}}, \mbox{\hyperlink{class_pixel_shader_null_a8dd0194b5a22da5261ab35233a7cfdcd}{Pixel\+Shader\+Null}}, \mbox{\hyperlink{class_vertex_shader_null_aa2234c6ea083e3c0233d59f222145992}{Vertex\+Shader\+Null}}で実装されています。
+
+\mbox{\hyperlink{class_pixel_shader_base_a6cb7e981ff245b27a30f1943c28f2229}{Pixel\+Shader\+Base}}, \mbox{\hyperlink{class_vertex_shader_base_a72c88a06560f530be7cb04923a916904}{Vertex\+Shader\+Base}}で実装されています。
 
 \mbox{\Hypertarget{class_shader_base_a784edfa81bec4d08a257ed4f02c61222}\label{class_shader_base_a784edfa81bec4d08a257ed4f02c61222}} 
 \index{Shader\+Base@{Shader\+Base}!Uninit@{Uninit}}
@@ -191,12 +384,36 @@ L\+P\+D3\+D\+X\+C\+O\+N\+S\+T\+A\+N\+T\+T\+A\+B\+LE \mbox{\hyperlink{class_shade
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
-\mbox{\hyperlink{class_vertex_shader_bump_mapping_abed4e0aa9655fa7a7a21e03d00e7c0e5}{Vertex\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_pixel_shader_bump_mapping_a004f731db6dab6b59949baed4a5a32d7}{Pixel\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_vertex_shader_fixed_a49f630aee4757c8fd8bae886f22dfeb0}{Vertex\+Shader\+Fixed}}, \mbox{\hyperlink{class_pixel_shader_null_ae5ee2fa95e5da787918ccbd1877cd0ef}{Pixel\+Shader\+Null}}, \mbox{\hyperlink{class_vertex_shader_null_a16334df4ac02db3dd63f042622032301}{Vertex\+Shader\+Null}}で実装されています。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_bump_mapping_abed4e0aa9655fa7a7a21e03d00e7c0e5}{Vertex\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_vertex_shader_animated_default_a683f221e9b70d13fdb63e7b8fb15f31c}{Vertex\+Shader\+Animated\+Default}}, \mbox{\hyperlink{class_vertex_shader_blinn_phong_a26af54fcf9adccbe449a65d7a078c02f}{Vertex\+Shader\+Blinn\+Phong}}, \mbox{\hyperlink{class_vertex_shader_cook_torrance_ab2cc9cc8ed675abc5f1194a82bc8d405}{Vertex\+Shader\+Cook\+Torrance}}, \mbox{\hyperlink{class_vertex_shader_default_a8091b23a7742804b4e9d8de4bee17f44}{Vertex\+Shader\+Default}}, \mbox{\hyperlink{class_vertex_shader_default_shadow_aee16a04757ab1698d76bdca43834c633}{Vertex\+Shader\+Default\+Shadow}}, \mbox{\hyperlink{class_vertex_shader_shadow_map_a5b36c3531d6116c609c8a62bc4ffd95d}{Vertex\+Shader\+Shadow\+Map}}, \mbox{\hyperlink{class_pixel_shader_default_af195bc2ba2e5f7352d4b762b20825d95}{Pixel\+Shader\+Default}}, \mbox{\hyperlink{class_pixel_shader_default_shadow_abd9b03c980fed91c4fc14bbab244adbd}{Pixel\+Shader\+Default\+Shadow}}, \mbox{\hyperlink{class_pixel_shader_shadow_map_aa95a200a1bf5bd91ffaa526a647818f1}{Pixel\+Shader\+Shadow\+Map}}, \mbox{\hyperlink{class_pixel_shader_blinn_phong_a50450f0ad9c6c0ad011361ee153088af}{Pixel\+Shader\+Blinn\+Phong}}, \mbox{\hyperlink{class_pixel_shader_bump_mapping_a004f731db6dab6b59949baed4a5a32d7}{Pixel\+Shader\+Bump\+Mapping}}, \mbox{\hyperlink{class_pixel_shader_cook_torrance_af2af86383b1724d1bf1364533a07fc5a}{Pixel\+Shader\+Cook\+Torrance}}, \mbox{\hyperlink{class_vertex_shader_fixed_a49f630aee4757c8fd8bae886f22dfeb0}{Vertex\+Shader\+Fixed}}, \mbox{\hyperlink{class_pixel_shader_null_adca4c44cd25c90a5ebd75b459f5e641e}{Pixel\+Shader\+Null}}, \mbox{\hyperlink{class_vertex_shader_null_adf758f295d2803c6d8bd7e05e461abec}{Vertex\+Shader\+Null}} (計16項目)で実装されています。
 
 
 
 \subsection{メンバ詳解}
+\mbox{\Hypertarget{class_shader_base_a35b31a286a2d5df521f504e3d883da02}\label{class_shader_base_a35b31a286a2d5df521f504e3d883da02}} 
+\index{Shader\+Base@{Shader\+Base}!common\+\_\+data\+\_\+@{common\+\_\+data\+\_\+}}
+\index{common\+\_\+data\+\_\+@{common\+\_\+data\+\_\+}!Shader\+Base@{Shader\+Base}}
+\subsubsection{\texorpdfstring{common\+\_\+data\+\_\+}{common\_data\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_draw_common_data}{Draw\+Common\+Data}}$\ast$ Shader\+Base\+::common\+\_\+data\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+描画共通データ 
+
+
+
+ Shader\+Base.\+h の 34 行目に定義があります。
+
 \mbox{\Hypertarget{class_shader_base_a9b6b2a5920dd57ac463040224fb64b68}\label{class_shader_base_a9b6b2a5920dd57ac463040224fb64b68}} 
 \index{Shader\+Base@{Shader\+Base}!constant\+\_\+table\+\_\+@{constant\+\_\+table\+\_\+}}
 \index{constant\+\_\+table\+\_\+@{constant\+\_\+table\+\_\+}!Shader\+Base@{Shader\+Base}}
@@ -209,7 +426,7 @@ L\+P\+D3\+D\+X\+C\+O\+N\+S\+T\+A\+N\+T\+T\+A\+B\+LE \mbox{\hyperlink{class_shade
 
 
 
- Shader\+Base.\+h の 37 行目に定義があります。
+ Shader\+Base.\+h の 32 行目に定義があります。
 
 \mbox{\Hypertarget{class_shader_base_a15e4a4c1c1148433b9a0c60a7c32a366}\label{class_shader_base_a15e4a4c1c1148433b9a0c60a7c32a366}} 
 \index{Shader\+Base@{Shader\+Base}!device\+\_\+@{device\+\_\+}}
@@ -223,10 +440,11 @@ L\+P\+D3\+D\+X\+C\+O\+N\+S\+T\+A\+N\+T\+T\+A\+B\+LE \mbox{\hyperlink{class_shade
 
 
 
- Shader\+Base.\+h の 36 行目に定義があります。
+ Shader\+Base.\+h の 33 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Shader/\+Shader\+Base/\mbox{\hyperlink{_shader_base_8h}{Shader\+Base.\+h}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\mbox{\hyperlink{_shader_base_8h}{Shader\+Base.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Source/\mbox{\hyperlink{_shader_base_8cpp}{Shader\+Base.\+cpp}}\end{DoxyCompactItemize}

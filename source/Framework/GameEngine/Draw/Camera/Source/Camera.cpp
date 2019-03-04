@@ -17,9 +17,9 @@
 //****************************************
 // 定数定義
 //****************************************
-const float Camera::NEAR_CLIPPING_PLANE = 0.1f;
-const float Camera::FAR_CLIPPING_PLANE = 1000.0f;
 const float Camera::DEFAULT_ANGLE_OF_VIEW = 60.0f;
+const float Camera::DEFAULT_NEAR_CLIP = 0.1f;
+const float Camera::DEFAULT_FAR_CLIP = 1000.0f;
 
 
 
@@ -99,7 +99,7 @@ Vector3D* Camera::getpGazingPoint()
 
 
 
-float Camera::getAngleOfView()
+float Camera::getAngleOfView() const
 {
 	return angle_of_view_;
 }
@@ -109,6 +109,38 @@ float Camera::getAngleOfView()
 void Camera::setAngleOfView(float value)
 {
 	angle_of_view_ = value;
+	CreateProjectionMatrixPerspectiveFov();
+	CreateProjectionMatrixOrtho();
+}
+
+
+
+float Camera::getNearClip() const
+{
+	return near_clip_;
+}
+
+
+
+void Camera::setNearClip(float value)
+{
+	near_clip_ = value;
+	CreateProjectionMatrixPerspectiveFov();
+	CreateProjectionMatrixOrtho();
+}
+
+
+
+float Camera::getFarClip() const
+{
+	return far_clip_;
+}
+
+
+
+void Camera::setFarClip(float value)
+{
+	far_clip_ = value;
 	CreateProjectionMatrixPerspectiveFov();
 	CreateProjectionMatrixOrtho();
 }
@@ -207,6 +239,8 @@ Camera::State::~State()
 
 Camera::Camera() :
 	angle_of_view_(DEFAULT_ANGLE_OF_VIEW),
+	near_clip_(DEFAULT_NEAR_CLIP),
+	far_clip_(DEFAULT_FAR_CLIP),
 	state_(nullptr),
 	type_(Type::NONE)
 {
@@ -230,13 +264,17 @@ Camera::~Camera()
 
 
 
-void Camera::Init(State* state, Vector3D position, Vector3D gazing_point, Vector3D up)
+void Camera::Init(State* state, Vector3D position, 
+				  Vector3D gazing_point, Vector3D up, float angle_of_view,
+				  float near_clip, float far_clip)
 {
 	// 各種代入
 	position_ = position;
 	gazing_point_ = gazing_point;
 	up_ = up;
-	angle_of_view_ = DEFAULT_ANGLE_OF_VIEW;
+	angle_of_view_ = angle_of_view;
+	near_clip_ = near_clip;
+	far_clip_ = far_clip;
 
 	// ステートの初期化
 	setState(state);
@@ -287,8 +325,8 @@ void Camera::CreateProjectionMatrixPerspectiveFov()
 	projection_perspective_.CreateProjectionPerspectiveFovLH(angle_of_view_,
 		(float)GameEngine::SCREEN_WIDTH,
 															 (float)GameEngine::SCREEN_HEIGHT,
-															 NEAR_CLIPPING_PLANE,
-															 FAR_CLIPPING_PLANE);
+															 near_clip_,
+															 far_clip_);
 }
 
 
@@ -299,8 +337,8 @@ void Camera::CreateProjectionMatrixOrtho()
 	projection_ortho_.CreateProjectionOrtho(angle_of_view_,
 		(float)GameEngine::SCREEN_WIDTH,
 											(float)GameEngine::SCREEN_HEIGHT,
-											NEAR_CLIPPING_PLANE,
-											FAR_CLIPPING_PLANE);
+											near_clip_,
+											far_clip_);
 }
 
 

@@ -32,9 +32,9 @@ sampler DIFFUSE_SAMPLER = sampler_state
 sampler SHADOW_MAP_SAMPLER = sampler_state
 {
     Texture = <SHADOW_MAP_TEXTURE>;
-    MinFilter = LINEAR;
-    MagFilter = LINEAR;
-    MipFilter = NONE;
+    MinFilter = POINT;//LINEAR;
+    MagFilter = POINT;//LINEAR;
+    MipFilter = POINT;//NONE;
     AddressU = Clamp;
     AddressV = Clamp;
 };
@@ -53,10 +53,7 @@ struct Input
 {
     float4 color_            : COLOR0;      //!< 色
     float2 ps_uv_            : TEXCOORD0;   //!< PS用UV
-    float4 ps_diffuse_       : TEXCOORD1;   //!< PS用ディヒューズ
-    float4 ps_ambient_       : TEXCOORD2;   //!< PS用アンビエント
-    float4 ps_shadow_map_uv_ : TEXCOORD3;   //!< PS用シャドウマップUV
-    float4 ps_depth_         : TEXCOORD4;   //!< PS用深度値
+    float4 ps_shadow_map_uv_ : TEXCOORD1;   //!< PS用シャドウマップUV
 };
 
 
@@ -74,14 +71,26 @@ struct Input
 void MainPixelShader(Input input, out float4 out_color : COLOR0)
 {
     // 影の縞模様を緩和するバイアス値
-    const float bias = 1.0f;
+    const float BIAS = 0.005f;
 
     // 出力データ初期化
     out_color = (float4)0.0f;
 
-    // 色算出
-    float shadow = tex2Dproj(SHADOW_MAP_SAMPLER, input.ps_shadow_map_uv_).x;
-    float4 diffuse = shadow * input.ps_depth_.w < input.ps_depth_.z - bias ? 0 : input.ps_diffuse_;
-    out_color = input.ps_ambient_ + diffuse;
-    out_color *= tex2D(DIFFUSE_SAMPLER, input.ps_uv_);
+    //　ライト目線によるZ値の再算出
+    float z_value = input.ps_shadow_map_uv_.z / input.ps_shadow_map_uv_.w;
+
+    // 射影空間のXY座標をテクスチャ座標に変換
+    float2 texture_uv;
+    texture_uv.x = (1.0f + input.ps_shadow_map_uv_.x / input.ps_shadow_map_uv_.w) * 0.5f;
+    texture_uv.y = (1.0f + input.ps_shadow_map_uv_.y / input.ps_shadow_map_uv_.w) * 0.5f;
+
+    // 実際のZ値抽出
+    float actual_z_value = tex2D(SHADOW_MAP_SAMPLER, texture_uv).x;
+
+    // 色算出(シャドウマップよりもZ値が大きければ影)
+    out_color = input.color_ * tex2D(DIFFUSE_SAMPLER, input.ps_uv_);
+    if (z_value > actual_z_value + BIAS)
+    {
+        out_color.rgb *= 0.5f;
+    }
 }

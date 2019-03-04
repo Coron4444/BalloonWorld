@@ -1,0 +1,582 @@
+\hypertarget{class_interpolation_1_1_iterator__}{}\section{Interpolation$<$ Value, Distance, Add\+Info, Strategy $>$\+:\+:Iterator\+\_\+ クラス}
+\label{class_interpolation_1_1_iterator__}\index{Interpolation$<$ Value, Distance, Add\+Info, Strategy $>$\+::\+Iterator\+\_\+@{Interpolation$<$ Value, Distance, Add\+Info, Strategy $>$\+::\+Iterator\+\_\+}}
+
+
+補間コンテナイテレータ\+Class  
+
+
+
+
+{\ttfamily \#include $<$Interpolation.\+h$>$}
+
+
+
+Interpolation$<$ Value, Distance, Add\+Info, Strategy $>$\+:\+:Iterator\+\_\+ 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_interpolation_1_1_iterator____coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+Value \& \mbox{\hyperlink{class_interpolation_1_1_iterator___ab27823f286435ba0a18fe2c18ba00229}{get\+Value}} ()
+\begin{DoxyCompactList}\small\item\em 現在の補間値取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_interpolation_1_1_iterator___a6186c74f7276b8fbb521b133390fdcbf}{set\+Distance\+Unit}} (Distance \&value)
+\begin{DoxyCompactList}\small\item\em 単位距離設定関数 \end{DoxyCompactList}\item 
+Distance \mbox{\hyperlink{class_interpolation_1_1_iterator___a0930994b23a1ef6107ed6ce651b3e344}{get\+Cumulative\+Distance}} ()
+\begin{DoxyCompactList}\small\item\em 累積の距離取得関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_interpolation_1_1_iterator___a05c51e62f7a2f97f8dc6fc3f1cff7b78}{get\+Is\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em 終端フラグ取得関数 \end{DoxyCompactList}\item 
+Value \& \mbox{\hyperlink{class_interpolation_1_1_iterator___adb8f40c63f30301266f26d74742dcbd3}{operator$\ast$}} ()
+\begin{DoxyCompactList}\small\item\em $\ast$間接指定演算子関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_interpolation_1_1_iterator___a3c6e608dce87d136b0d7ed5b933b9db4}{operator++}} (int dummy)
+\begin{DoxyCompactList}\small\item\em ++増加単項演算子関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_interpolation_1_1_iterator___a922fd7a71f9c457df07b7d8070d01c08}{operator==}} (\mbox{\hyperlink{class_interpolation_1_1_iterator__}{Iterator\+\_\+}} iterator)
+\begin{DoxyCompactList}\small\item\em ==比較演算子関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_interpolation_1_1_iterator___a60ad4c8de6408cac63947d0c11db011a}{operator!=}} (\mbox{\hyperlink{class_interpolation_1_1_iterator__}{Iterator\+\_\+}} iterator)
+\begin{DoxyCompactList}\small\item\em !=比較演算子関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_interpolation_1_1_iterator___a6d4d602b7d46bd9882944de310dc9696}{Iterator\+\_\+}} (\mbox{\hyperlink{class_interpolation_a01e71544809483d7a2ee72fe0007bcb0}{Element}} $\ast$$\ast$element\+\_\+array=nullptr, \mbox{\hyperlink{class_interpolation}{Interpolation}} $\ast$interpolation=nullptr)
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_interpolation_1_1_iterator__}{Iterator\+\_\+}} \mbox{\hyperlink{class_interpolation_1_1_iterator___ae7872acdf3be40953a070e4c84a0e8a1}{next}} (Distance \&distance)
+\begin{DoxyCompactList}\small\item\em イテレータ更新関数 \end{DoxyCompactList}\item 
+Distance \mbox{\hyperlink{class_interpolation_1_1_iterator___a74cc0e2ed214dbda534e7d69aab89394}{Calculation\+Distance}} (Distance \&distance)
+\begin{DoxyCompactList}\small\item\em 補間距離算出関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_interpolation_1_1_iterator___a8e886db816553a1d9f0c573e87f7a715}{Substitution\+Element}} (size\+\_\+t need\+\_\+element\+\_\+num, \mbox{\hyperlink{class_interpolation_a01e71544809483d7a2ee72fe0007bcb0}{Element}} $\ast$$\ast$element\+\_\+array)
+\begin{DoxyCompactList}\small\item\em 補間計算用配列に要素を代入関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_interpolation_a01e71544809483d7a2ee72fe0007bcb0}{Element}} $\ast$$\ast$ \mbox{\hyperlink{class_interpolation_1_1_iterator___a7f82f4aca84c8510f9f6eb7467ba1963}{first\+\_\+pointer\+\_\+}}
+\begin{DoxyCompactList}\small\item\em イテレータの最初のポインタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_interpolation}{Interpolation}} $\ast$ \mbox{\hyperlink{class_interpolation_1_1_iterator___a0205ea80def2848af9e388e12a4bbaf8}{interpolation\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 補間クラス \end{DoxyCompactList}\item 
+Value \mbox{\hyperlink{class_interpolation_1_1_iterator___a436aa805d692156f4cbce6000077e241}{current\+\_\+value\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 現在の補間値 \end{DoxyCompactList}\item 
+Distance \mbox{\hyperlink{class_interpolation_1_1_iterator___a7bbbda549ad4929ca4230f9e492a8377}{distance\+\_\+unit\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 単位距離 \end{DoxyCompactList}\item 
+Distance \mbox{\hyperlink{class_interpolation_1_1_iterator___aa15b1800d74b447f44844b69584f3bcc}{current\+\_\+distance\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 現在の距離 \end{DoxyCompactList}\item 
+Distance \mbox{\hyperlink{class_interpolation_1_1_iterator___a3f81fac380c54424671b6bd123e3fd9f}{cumulative\+\_\+distance\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 累積の距離 \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_interpolation_1_1_iterator___abdbf4ab755008781e80bbc5ec2405d83}{offset\+\_\+index\+\_\+}}
+\begin{DoxyCompactList}\small\item\em オフセットインデックス値 \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_interpolation_1_1_iterator___adecbf93696c431a25a2d8cd4f094ef33}{max\+\_\+index\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 最大インデックス値 \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_interpolation_1_1_iterator___abe644d37f27f54fb28f6e9c117f651d5}{target\+\_\+index\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 目標要素のインデックス \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_interpolation_a01e71544809483d7a2ee72fe0007bcb0}{Element}} $\ast$ \mbox{\hyperlink{class_interpolation_1_1_iterator___a580ce898a3f5a82003a19ddd781ad485}{target\+\_\+element\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 目標の要素 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_interpolation_1_1_iterator___a181cd3e72e883edd269ae2a2cc64bcde}{is\+\_\+finished\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 終端フラグ \end{DoxyCompactList}\item 
+Strategy \mbox{\hyperlink{class_interpolation_1_1_iterator___ac18d51aa7e4870305637f2ef4c0d93e1}{strategy\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 補間計算 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$\newline
+class Interpolation$<$ Value, Distance, Add\+Info, Strategy $>$\+::\+Iterator\+\_\+}
+
+補間コンテナイテレータ\+Class 
+
+補間コンテナのイテレータ\+Class 
+
+ Interpolation.\+h の 245 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a6d4d602b7d46bd9882944de310dc9696}\label{class_interpolation_1_1_iterator___a6d4d602b7d46bd9882944de310dc9696}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!Iterator\+\_\+@{Iterator\+\_\+}}
+\index{Iterator\+\_\+@{Iterator\+\_\+}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{Iterator\+\_\+()}{Iterator\_()}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+\mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::\+Iterator\+\_\+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interpolation_a01e71544809483d7a2ee72fe0007bcb0}{Element}} $\ast$$\ast$}]{element\+\_\+array = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{class_interpolation}{Interpolation}} $\ast$}]{interpolation = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$$\ast$element\+\_\+array} & 要素配列 \\
+\hline
+{\em $\ast$interpolation} & 補間クラス \\
+\hline
+\end{DoxyParams}
+
+
+ Interpolation.\+h の 375 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a74cc0e2ed214dbda534e7d69aab89394}\label{class_interpolation_1_1_iterator___a74cc0e2ed214dbda534e7d69aab89394}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!Calculation\+Distance@{Calculation\+Distance}}
+\index{Calculation\+Distance@{Calculation\+Distance}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{Calculation\+Distance()}{CalculationDistance()}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+Distance \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::\+Calculation\+Distance (\begin{DoxyParamCaption}\item[{Distance \&}]{distance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+補間距離算出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em \&distance} & 補間距離 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Distance} & 補間距離 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 457 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a0930994b23a1ef6107ed6ce651b3e344}\label{class_interpolation_1_1_iterator___a0930994b23a1ef6107ed6ce651b3e344}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!get\+Cumulative\+Distance@{get\+Cumulative\+Distance}}
+\index{get\+Cumulative\+Distance@{get\+Cumulative\+Distance}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{get\+Cumulative\+Distance()}{getCumulativeDistance()}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+Distance \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::get\+Cumulative\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+累積の距離取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Distance} & 累積の距離 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 297 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a05c51e62f7a2f97f8dc6fc3f1cff7b78}\label{class_interpolation_1_1_iterator___a05c51e62f7a2f97f8dc6fc3f1cff7b78}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!get\+Is\+Finished@{get\+Is\+Finished}}
+\index{get\+Is\+Finished@{get\+Is\+Finished}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{get\+Is\+Finished()}{getIsFinished()}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+bool \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::get\+Is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+終端フラグ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 終端フラグ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 308 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___ab27823f286435ba0a18fe2c18ba00229}\label{class_interpolation_1_1_iterator___ab27823f286435ba0a18fe2c18ba00229}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+Value\& \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+現在の補間値取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Value\&} & 現在の補間値 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 275 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___ae7872acdf3be40953a070e4c84a0e8a1}\label{class_interpolation_1_1_iterator___ae7872acdf3be40953a070e4c84a0e8a1}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!next@{next}}
+\index{next@{next}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+\mbox{\hyperlink{class_interpolation_1_1_iterator__}{Iterator\+\_\+}} \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::next (\begin{DoxyParamCaption}\item[{Distance \&}]{distance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+イテレータ更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em \&distance} & 補間距離 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_interpolation_1_1_iterator__}{Iterator\+\_\+}}} & 更新後のイテレータ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 415 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a60ad4c8de6408cac63947d0c11db011a}\label{class_interpolation_1_1_iterator___a60ad4c8de6408cac63947d0c11db011a}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+bool \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interpolation_1_1_iterator__}{Iterator\+\_\+}}}]{iterator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+!=比較演算子関数 
+
+
+\begin{DoxyParams}{引数}
+{\em iterator} & イテレータ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 358 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___adb8f40c63f30301266f26d74742dcbd3}\label{class_interpolation_1_1_iterator___adb8f40c63f30301266f26d74742dcbd3}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+Value\& \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+$\ast$間接指定演算子関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Value\&} & 現在の補間値 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 323 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a3c6e608dce87d136b0d7ed5b933b9db4}\label{class_interpolation_1_1_iterator___a3c6e608dce87d136b0d7ed5b933b9db4}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!operator++@{operator++}}
+\index{operator++@{operator++}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+void \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{dummy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+++増加単項演算子関数 
+
+
+\begin{DoxyParams}{引数}
+{\em dummy} & ダミー \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 334 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a922fd7a71f9c457df07b7d8070d01c08}\label{class_interpolation_1_1_iterator___a922fd7a71f9c457df07b7d8070d01c08}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!operator==@{operator==}}
+\index{operator==@{operator==}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+bool \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interpolation_1_1_iterator__}{Iterator\+\_\+}}}]{iterator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+==比較演算子関数 
+
+
+\begin{DoxyParams}{引数}
+{\em iterator} & イテレータ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 346 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a6186c74f7276b8fbb521b133390fdcbf}\label{class_interpolation_1_1_iterator___a6186c74f7276b8fbb521b133390fdcbf}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!set\+Distance\+Unit@{set\+Distance\+Unit}}
+\index{set\+Distance\+Unit@{set\+Distance\+Unit}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{set\+Distance\+Unit()}{setDistanceUnit()}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+void \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::set\+Distance\+Unit (\begin{DoxyParamCaption}\item[{Distance \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+単位距離設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 単位距離 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 286 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a8e886db816553a1d9f0c573e87f7a715}\label{class_interpolation_1_1_iterator___a8e886db816553a1d9f0c573e87f7a715}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!Substitution\+Element@{Substitution\+Element}}
+\index{Substitution\+Element@{Substitution\+Element}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{Substitution\+Element()}{SubstitutionElement()}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+bool \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::\+Substitution\+Element (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{need\+\_\+element\+\_\+num,  }\item[{\mbox{\hyperlink{class_interpolation_a01e71544809483d7a2ee72fe0007bcb0}{Element}} $\ast$$\ast$}]{element\+\_\+array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+補間計算用配列に要素を代入関数 
+
+
+\begin{DoxyParams}{引数}
+{\em need\+\_\+element\+\_\+num} & 補間に必要な要素数 \\
+\hline
+{\em element\+\_\+array} & 要素を代入する配列 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 要素格納の成功の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Interpolation.\+h の 497 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a3f81fac380c54424671b6bd123e3fd9f}\label{class_interpolation_1_1_iterator___a3f81fac380c54424671b6bd123e3fd9f}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!cumulative\+\_\+distance\+\_\+@{cumulative\+\_\+distance\+\_\+}}
+\index{cumulative\+\_\+distance\+\_\+@{cumulative\+\_\+distance\+\_\+}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{cumulative\+\_\+distance\+\_\+}{cumulative\_distance\_}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+Distance \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::cumulative\+\_\+distance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+累積の距離 
+
+
+
+ Interpolation.\+h の 256 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___aa15b1800d74b447f44844b69584f3bcc}\label{class_interpolation_1_1_iterator___aa15b1800d74b447f44844b69584f3bcc}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!current\+\_\+distance\+\_\+@{current\+\_\+distance\+\_\+}}
+\index{current\+\_\+distance\+\_\+@{current\+\_\+distance\+\_\+}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{current\+\_\+distance\+\_\+}{current\_distance\_}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+Distance \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::current\+\_\+distance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+現在の距離 
+
+
+
+ Interpolation.\+h の 255 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a436aa805d692156f4cbce6000077e241}\label{class_interpolation_1_1_iterator___a436aa805d692156f4cbce6000077e241}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!current\+\_\+value\+\_\+@{current\+\_\+value\+\_\+}}
+\index{current\+\_\+value\+\_\+@{current\+\_\+value\+\_\+}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{current\+\_\+value\+\_\+}{current\_value\_}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+Value \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::current\+\_\+value\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+現在の補間値 
+
+
+
+ Interpolation.\+h の 253 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a7bbbda549ad4929ca4230f9e492a8377}\label{class_interpolation_1_1_iterator___a7bbbda549ad4929ca4230f9e492a8377}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!distance\+\_\+unit\+\_\+@{distance\+\_\+unit\+\_\+}}
+\index{distance\+\_\+unit\+\_\+@{distance\+\_\+unit\+\_\+}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{distance\+\_\+unit\+\_\+}{distance\_unit\_}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+Distance \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::distance\+\_\+unit\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+単位距離 
+
+
+
+ Interpolation.\+h の 254 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a7f82f4aca84c8510f9f6eb7467ba1963}\label{class_interpolation_1_1_iterator___a7f82f4aca84c8510f9f6eb7467ba1963}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!first\+\_\+pointer\+\_\+@{first\+\_\+pointer\+\_\+}}
+\index{first\+\_\+pointer\+\_\+@{first\+\_\+pointer\+\_\+}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{first\+\_\+pointer\+\_\+}{first\_pointer\_}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+\mbox{\hyperlink{class_interpolation_a01e71544809483d7a2ee72fe0007bcb0}{Element}}$\ast$$\ast$ \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::first\+\_\+pointer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+イテレータの最初のポインタ 
+
+
+
+ Interpolation.\+h の 251 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a0205ea80def2848af9e388e12a4bbaf8}\label{class_interpolation_1_1_iterator___a0205ea80def2848af9e388e12a4bbaf8}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!interpolation\+\_\+@{interpolation\+\_\+}}
+\index{interpolation\+\_\+@{interpolation\+\_\+}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{interpolation\+\_\+}{interpolation\_}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+\mbox{\hyperlink{class_interpolation}{Interpolation}}$\ast$ \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::interpolation\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+補間クラス 
+
+
+
+ Interpolation.\+h の 252 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a181cd3e72e883edd269ae2a2cc64bcde}\label{class_interpolation_1_1_iterator___a181cd3e72e883edd269ae2a2cc64bcde}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!is\+\_\+finished\+\_\+@{is\+\_\+finished\+\_\+}}
+\index{is\+\_\+finished\+\_\+@{is\+\_\+finished\+\_\+}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{is\+\_\+finished\+\_\+}{is\_finished\_}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+bool \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::is\+\_\+finished\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+終端フラグ 
+
+
+
+ Interpolation.\+h の 261 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___adecbf93696c431a25a2d8cd4f094ef33}\label{class_interpolation_1_1_iterator___adecbf93696c431a25a2d8cd4f094ef33}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!max\+\_\+index\+\_\+@{max\+\_\+index\+\_\+}}
+\index{max\+\_\+index\+\_\+@{max\+\_\+index\+\_\+}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{max\+\_\+index\+\_\+}{max\_index\_}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+size\+\_\+t \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::max\+\_\+index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+最大インデックス値 
+
+
+
+ Interpolation.\+h の 258 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___abdbf4ab755008781e80bbc5ec2405d83}\label{class_interpolation_1_1_iterator___abdbf4ab755008781e80bbc5ec2405d83}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!offset\+\_\+index\+\_\+@{offset\+\_\+index\+\_\+}}
+\index{offset\+\_\+index\+\_\+@{offset\+\_\+index\+\_\+}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{offset\+\_\+index\+\_\+}{offset\_index\_}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+size\+\_\+t \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::offset\+\_\+index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+オフセットインデックス値 
+
+
+
+ Interpolation.\+h の 257 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___ac18d51aa7e4870305637f2ef4c0d93e1}\label{class_interpolation_1_1_iterator___ac18d51aa7e4870305637f2ef4c0d93e1}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!strategy\+\_\+@{strategy\+\_\+}}
+\index{strategy\+\_\+@{strategy\+\_\+}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{strategy\+\_\+}{strategy\_}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+Strategy \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::strategy\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+補間計算 
+
+
+
+ Interpolation.\+h の 262 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___a580ce898a3f5a82003a19ddd781ad485}\label{class_interpolation_1_1_iterator___a580ce898a3f5a82003a19ddd781ad485}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!target\+\_\+element\+\_\+@{target\+\_\+element\+\_\+}}
+\index{target\+\_\+element\+\_\+@{target\+\_\+element\+\_\+}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{target\+\_\+element\+\_\+}{target\_element\_}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+\mbox{\hyperlink{class_interpolation_a01e71544809483d7a2ee72fe0007bcb0}{Element}}$\ast$ \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::target\+\_\+element\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+目標の要素 
+
+
+
+ Interpolation.\+h の 260 行目に定義があります。
+
+\mbox{\Hypertarget{class_interpolation_1_1_iterator___abe644d37f27f54fb28f6e9c117f651d5}\label{class_interpolation_1_1_iterator___abe644d37f27f54fb28f6e9c117f651d5}} 
+\index{Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}!target\+\_\+index\+\_\+@{target\+\_\+index\+\_\+}}
+\index{target\+\_\+index\+\_\+@{target\+\_\+index\+\_\+}!Interpolation\+::\+Iterator\+\_\+@{Interpolation\+::\+Iterator\+\_\+}}
+\subsubsection{\texorpdfstring{target\+\_\+index\+\_\+}{target\_index\_}}
+{\footnotesize\ttfamily template$<$class Value, class Distance = double, class Add\+Info = double, class Strategy = Liner\+Interpolation\+Strategy$<$\+Value, Distance, Add\+Info$>$$>$ \\
+size\+\_\+t \mbox{\hyperlink{class_interpolation}{Interpolation}}$<$ Value, Distance, Add\+Info, Strategy $>$\+::Iterator\+\_\+\+::target\+\_\+index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+目標要素のインデックス 
+
+
+
+ Interpolation.\+h の 259 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Tool/\mbox{\hyperlink{_interpolation_8h}{Interpolation.\+h}}\end{DoxyCompactItemize}

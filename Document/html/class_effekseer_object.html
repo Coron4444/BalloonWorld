@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3DAction: EffekseerObject クラス</title>
+<title>BalloonWorld: EffekseerObject クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,10 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3DAction
-   &#160;<span id="projectnumber">version 1.3</span>
+   <div id="projectname">BalloonWorld
+   &#160;<span id="projectnumber">version 1.0</span>
    </div>
-   <div id="projectbrief">DirectX9を用いたアクションゲーム</div>
+   <div id="projectbrief">BalloonWorld</div>
   </td>
  </tr>
  </tbody>
@@ -98,138 +98,152 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>エフェクシアオブジェクトClass  
+ <a href="class_effekseer_object.html#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a>&gt;</code></p>
+<div class="dynheader">
+EffekseerObject 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_effekseer_object__coll__graph.png" border="0" usemap="#_effekseer_object_coll__map" alt="Collaboration graph"/></div>
+<map name="_effekseer_object_coll__map" id="_effekseer_object_coll__map">
+<area shape="rect" id="node2" href="class_effekseer_1_1_effect.html" title="エフェクトパラメータークラス " alt="" coords="602,5,719,32"/>
+<area shape="rect" id="node3" href="class_effekseer_1_1_i_reference.html" title="参照カウンタのインターフェース " alt="" coords="107,64,252,91"/>
+<area shape="rect" id="node5" href="class_effekseer_renderer_1_1_renderer.html" title="EffekseerRenderer::\lRenderer" alt="" coords="433,57,569,98"/>
+<area shape="rect" id="node6" href="class_effekseer_1_1_manager.html" title="エフェクト管理クラス " alt="" coords="593,115,728,141"/>
+<area shape="rect" id="node4" href="class_effekseer_renderer_d_x9_1_1_renderer.html" title="描画クラス " alt="" coords="752,67,903,109"/>
+<area shape="rect" id="node7" href="class_transform.html" title="変形Class " alt="" coords="788,259,867,285"/>
+<area shape="rect" id="node8" href="class_matrix.html" title="行列Class " alt="" coords="472,313,531,340"/>
+<area shape="rect" id="node10" href="class_vector3_d.html" title="3DベクトルClass " alt="" coords="141,387,217,413"/>
+<area shape="rect" id="node12" href="struct_effekseer_1_1_matrix43.html" title="4x3行列 " alt="" coords="760,309,895,336"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a8e1e081f62efa87b31e00bcfd9cf1a45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a8e1e081f62efa87b31e00bcfd9cf1a45">EffekseerObject</a> (const std::string *file_path)</td></tr>
-<tr class="separator:a8e1e081f62efa87b31e00bcfd9cf1a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0463ba508e3c83576991138465847054"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a0463ba508e3c83576991138465847054">~EffekseerObject</a> ()</td></tr>
-<tr class="separator:a0463ba508e3c83576991138465847054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae109ced0206affab5d002a218d3c825c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#ae109ced0206affab5d002a218d3c825c">setDisposable</a> (bool value)</td></tr>
+<tr class="memdesc:ae109ced0206affab5d002a218d3c825c"><td class="mdescLeft">&#160;</td><td class="mdescRight">使い捨てフラグ設定関数  <a href="#ae109ced0206affab5d002a218d3c825c">[詳解]</a><br /></td></tr>
+<tr class="separator:ae109ced0206affab5d002a218d3c825c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c09306dca9956b1f2518f10a10dd698"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a2c09306dca9956b1f2518f10a10dd698">getpIsPlaying</a> ()</td></tr>
+<tr class="memdesc:a2c09306dca9956b1f2518f10a10dd698"><td class="mdescLeft">&#160;</td><td class="mdescRight">再生中フラグ取得関数  <a href="#a2c09306dca9956b1f2518f10a10dd698">[詳解]</a><br /></td></tr>
+<tr class="separator:a2c09306dca9956b1f2518f10a10dd698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a321097534dd21b16862f56f66e730b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a5a321097534dd21b16862f56f66e730b">setIsRepeat</a> (bool value)</td></tr>
+<tr class="memdesc:a5a321097534dd21b16862f56f66e730b"><td class="mdescLeft">&#160;</td><td class="mdescRight">リピートフラグ設定関数  <a href="#a5a321097534dd21b16862f56f66e730b">[詳解]</a><br /></td></tr>
+<tr class="separator:a5a321097534dd21b16862f56f66e730b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8963108c1ddd2ce6926f974b5f0acc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transform.html">Transform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#adb8963108c1ddd2ce6926f974b5f0acc">getpTransform</a> ()</td></tr>
+<tr class="memdesc:adb8963108c1ddd2ce6926f974b5f0acc"><td class="mdescLeft">&#160;</td><td class="mdescRight">変形取得関数  <a href="#adb8963108c1ddd2ce6926f974b5f0acc">[詳解]</a><br /></td></tr>
+<tr class="separator:adb8963108c1ddd2ce6926f974b5f0acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a868153244f3b30ed4ab63e3b9cee91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a1a868153244f3b30ed4ab63e3b9cee91">Init</a> (std::string *file_path, const std::string *map_key_name)</td></tr>
+<tr class="memdesc:a1a868153244f3b30ed4ab63e3b9cee91"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#a1a868153244f3b30ed4ab63e3b9cee91">[詳解]</a><br /></td></tr>
+<tr class="separator:a1a868153244f3b30ed4ab63e3b9cee91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d5a00238954a2368bbf870dfa8908f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a8d5a00238954a2368bbf870dfa8908f7">Release</a> ()</td></tr>
+<tr class="memdesc:a8d5a00238954a2368bbf870dfa8908f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">解放関数  <a href="#a8d5a00238954a2368bbf870dfa8908f7">[詳解]</a><br /></td></tr>
+<tr class="separator:a8d5a00238954a2368bbf870dfa8908f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e36b36fbd554807987b55495250dd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a59e36b36fbd554807987b55495250dd2">ForcedRelease</a> ()</td></tr>
+<tr class="memdesc:a59e36b36fbd554807987b55495250dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">強制解放関数  <a href="#a59e36b36fbd554807987b55495250dd2">[詳解]</a><br /></td></tr>
+<tr class="separator:a59e36b36fbd554807987b55495250dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeacb87988d36d3c255cbf53631ad715f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#aeacb87988d36d3c255cbf53631ad715f">AddReferenceCounter</a> ()</td></tr>
+<tr class="memdesc:aeacb87988d36d3c255cbf53631ad715f"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照カウンタ追加関数  <a href="#aeacb87988d36d3c255cbf53631ad715f">[詳解]</a><br /></td></tr>
+<tr class="separator:aeacb87988d36d3c255cbf53631ad715f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecb9314a5ff922c9420301129d2f26f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#aecb9314a5ff922c9420301129d2f26f7">Update</a> ()</td></tr>
+<tr class="memdesc:aecb9314a5ff922c9420301129d2f26f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新関数  <a href="#aecb9314a5ff922c9420301129d2f26f7">[詳解]</a><br /></td></tr>
 <tr class="separator:aecb9314a5ff922c9420301129d2f26f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc628e5089ca0cdc418e92729943a3b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#adc628e5089ca0cdc418e92729943a3b2">Draw</a> ()</td></tr>
+<tr class="memdesc:adc628e5089ca0cdc418e92729943a3b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画関数  <a href="#adc628e5089ca0cdc418e92729943a3b2">[詳解]</a><br /></td></tr>
 <tr class="separator:adc628e5089ca0cdc418e92729943a3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59c8a12b4eb558449622660d892b3cf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a59c8a12b4eb558449622660d892b3cf4">Play</a> ()</td></tr>
+<tr class="memdesc:a59c8a12b4eb558449622660d892b3cf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">再生関数  <a href="#a59c8a12b4eb558449622660d892b3cf4">[詳解]</a><br /></td></tr>
 <tr class="separator:a59c8a12b4eb558449622660d892b3cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fe253dd3387bdfd9305878ff194f305"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a6fe253dd3387bdfd9305878ff194f305">IsPlaing</a> ()</td></tr>
-<tr class="separator:a6fe253dd3387bdfd9305878ff194f305"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfbdfbe202b78441b33d76656453e536"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#adfbdfbe202b78441b33d76656453e536">Stop</a> ()</td></tr>
+<tr class="memdesc:adfbdfbe202b78441b33d76656453e536"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止関数  <a href="#adfbdfbe202b78441b33d76656453e536">[詳解]</a><br /></td></tr>
 <tr class="separator:adfbdfbe202b78441b33d76656453e536"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeec933c68ceb4bafc69d65590c470d72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#aeec933c68ceb4bafc69d65590c470d72">SetPause</a> (bool is_pause)</td></tr>
-<tr class="separator:aeec933c68ceb4bafc69d65590c470d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a482a0e824d8719b7676ae15948ae7348"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a482a0e824d8719b7676ae15948ae7348">GetPause</a> ()</td></tr>
-<tr class="separator:a482a0e824d8719b7676ae15948ae7348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77122f2d71d44d6cceec2b6bdedb4b2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a77122f2d71d44d6cceec2b6bdedb4b2a">SetRepeat</a> (bool is_repeat)</td></tr>
-<tr class="separator:a77122f2d71d44d6cceec2b6bdedb4b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c44b29c016fb5b3618e2d39060844be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a3c44b29c016fb5b3618e2d39060844be">GetRepeat</a> ()</td></tr>
-<tr class="separator:a3c44b29c016fb5b3618e2d39060844be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c14fd4215640b648b14e445b99564f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a3c14fd4215640b648b14e445b99564f7">SetVelocity</a> (float velocity)</td></tr>
-<tr class="separator:a3c14fd4215640b648b14e445b99564f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c496e56785ef7b784b13642d59d4e7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a5c496e56785ef7b784b13642d59d4e7f">SetColor</a> (uint8_t r, uint8_t g, uint8_t b, uint8_t a)</td></tr>
-<tr class="separator:a5c496e56785ef7b784b13642d59d4e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3849f176ccb493b162d08c1ef387996"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#aa3849f176ccb493b162d08c1ef387996">SetProjectionMatrix</a> (<a class="el" href="struct_effekseer_1_1_matrix44.html">Effekseer::Matrix44</a> *projection_matrix)</td></tr>
-<tr class="separator:aa3849f176ccb493b162d08c1ef387996"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7f3145b79b5e65e45014abd30ee5de8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#ac7f3145b79b5e65e45014abd30ee5de8">SetViewMatrix</a> (<a class="el" href="struct_effekseer_1_1_matrix44.html">Effekseer::Matrix44</a> *view_matrix)</td></tr>
-<tr class="separator:ac7f3145b79b5e65e45014abd30ee5de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7e825d08856df48459437ad759d7a00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transform.html">Transform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#ad7e825d08856df48459437ad759d7a00">GetTransform</a> ()</td></tr>
-<tr class="separator:ad7e825d08856df48459437ad759d7a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01365c03b533af22fd1b9eee766d16ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a01365c03b533af22fd1b9eee766d16ca">Pause</a> (bool is_pause)</td></tr>
+<tr class="memdesc:a01365c03b533af22fd1b9eee766d16ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">一時停止関数  <a href="#a01365c03b533af22fd1b9eee766d16ca">[詳解]</a><br /></td></tr>
+<tr class="separator:a01365c03b533af22fd1b9eee766d16ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52c47feeb74058661f8db31a20a51dbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a52c47feeb74058661f8db31a20a51dbf">ChangeVelocity</a> (float velocity)</td></tr>
+<tr class="memdesc:a52c47feeb74058661f8db31a20a51dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度変更関数  <a href="#a52c47feeb74058661f8db31a20a51dbf">[詳解]</a><br /></td></tr>
+<tr class="separator:a52c47feeb74058661f8db31a20a51dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fbff4e565c771d1b8e2a83b197294b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#aa3fbff4e565c771d1b8e2a83b197294b">ChangeColor</a> (uint8_t r, uint8_t g, uint8_t b, uint8_t a)</td></tr>
+<tr class="memdesc:aa3fbff4e565c771d1b8e2a83b197294b"><td class="mdescLeft">&#160;</td><td class="mdescRight">色変更関数  <a href="#aa3fbff4e565c771d1b8e2a83b197294b">[詳解]</a><br /></td></tr>
+<tr class="separator:aa3fbff4e565c771d1b8e2a83b197294b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a822247e8b5effa83ccf7239283f83326"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a822247e8b5effa83ccf7239283f83326">ChangeViewMatrix</a> (<a class="el" href="struct_effekseer_1_1_matrix44.html">Effekseer::Matrix44</a> *view_matrix)</td></tr>
+<tr class="memdesc:a822247e8b5effa83ccf7239283f83326"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビュー行列変更関数  <a href="#a822247e8b5effa83ccf7239283f83326">[詳解]</a><br /></td></tr>
+<tr class="separator:a822247e8b5effa83ccf7239283f83326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8ad42a6cf622ae1ef145f66af3af7c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#ad8ad42a6cf622ae1ef145f66af3af7c3">ChangeProjectionMatrix</a> (<a class="el" href="struct_effekseer_1_1_matrix44.html">Effekseer::Matrix44</a> *projection_matrix)</td></tr>
+<tr class="memdesc:ad8ad42a6cf622ae1ef145f66af3af7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロジェクション行列変更関数  <a href="#ad8ad42a6cf622ae1ef145f66af3af7c3">[詳解]</a><br /></td></tr>
+<tr class="separator:ad8ad42a6cf622ae1ef145f66af3af7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 非公開メンバ関数</h2></td></tr>
-<tr class="memitem:a4f8e7ad6b6ebfa341302f6b78e846f1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a4f8e7ad6b6ebfa341302f6b78e846f1e">InitRenderer_Manager</a> ()</td></tr>
-<tr class="separator:a4f8e7ad6b6ebfa341302f6b78e846f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1566339dd4acebff341a867a2fd05c17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a1566339dd4acebff341a867a2fd05c17">InputEffect</a> (const std::string *file_path)</td></tr>
-<tr class="separator:a1566339dd4acebff341a867a2fd05c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afde70f366e91d31a84ff9b280d4ae3c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#afde70f366e91d31a84ff9b280d4ae3c4">SetWorldMatrix</a> (const <a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *world_matrix)</td></tr>
-<tr class="separator:afde70f366e91d31a84ff9b280d4ae3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b7b077ec4d0892add6e0958dae833db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a6b7b077ec4d0892add6e0958dae833db">CreateRendererAndManager</a> ()</td></tr>
+<tr class="memdesc:a6b7b077ec4d0892add6e0958dae833db"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダラー&amp;マネージャ生成関数  <a href="#a6b7b077ec4d0892add6e0958dae833db">[詳解]</a><br /></td></tr>
+<tr class="separator:a6b7b077ec4d0892add6e0958dae833db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af55a8edc8ff64371e28fe3e00b6af7ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#af55a8edc8ff64371e28fe3e00b6af7ae">CreateEffect</a> (std::string *file_path)</td></tr>
+<tr class="memdesc:af55a8edc8ff64371e28fe3e00b6af7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">エフェクト生成関数  <a href="#af55a8edc8ff64371e28fe3e00b6af7ae">[詳解]</a><br /></td></tr>
+<tr class="separator:af55a8edc8ff64371e28fe3e00b6af7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc76cdd2fb6f4ff38e20ec9c21bdef5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a7bc76cdd2fb6f4ff38e20ec9c21bdef5">ChangeWorldMatrix</a> (<a class="el" href="_matrix_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *world_matrix)</td></tr>
+<tr class="memdesc:a7bc76cdd2fb6f4ff38e20ec9c21bdef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド行列変更関数  <a href="#a7bc76cdd2fb6f4ff38e20ec9c21bdef5">[詳解]</a><br /></td></tr>
+<tr class="separator:a7bc76cdd2fb6f4ff38e20ec9c21bdef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 非公開変数類</h2></td></tr>
-<tr class="memitem:a39d29eb6a967f325b3d8659c231e0525"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_effekseer_renderer_d_x9_1_1_renderer.html">EffekseerRendererDX9::Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a39d29eb6a967f325b3d8659c231e0525">effekseer_renderer_</a></td></tr>
+<tr class="memitem:a39d29eb6a967f325b3d8659c231e0525"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_effekseer_renderer_d_x9_1_1_renderer.html">EffekseerRendererDX9::Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a39d29eb6a967f325b3d8659c231e0525">effekseer_renderer_</a> = nullptr</td></tr>
+<tr class="memdesc:a39d29eb6a967f325b3d8659c231e0525"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダラー  <a href="#a39d29eb6a967f325b3d8659c231e0525">[詳解]</a><br /></td></tr>
 <tr class="separator:a39d29eb6a967f325b3d8659c231e0525"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f66433b8cecd6753b478a73f93f8179"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_effekseer_1_1_manager.html">Effekseer::Manager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a9f66433b8cecd6753b478a73f93f8179">effekseer_manager_</a></td></tr>
+<tr class="memitem:a9f66433b8cecd6753b478a73f93f8179"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_effekseer_1_1_manager.html">Effekseer::Manager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a9f66433b8cecd6753b478a73f93f8179">effekseer_manager_</a> = nullptr</td></tr>
+<tr class="memdesc:a9f66433b8cecd6753b478a73f93f8179"><td class="mdescLeft">&#160;</td><td class="mdescRight">マネージャ  <a href="#a9f66433b8cecd6753b478a73f93f8179">[詳解]</a><br /></td></tr>
 <tr class="separator:a9f66433b8cecd6753b478a73f93f8179"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66c732f526b92301c72070648ca7e70f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_effekseer_1_1_effect.html">Effekseer::Effect</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a66c732f526b92301c72070648ca7e70f">effekseer_effect_</a></td></tr>
+<tr class="memitem:a66c732f526b92301c72070648ca7e70f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_effekseer_1_1_effect.html">Effekseer::Effect</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a66c732f526b92301c72070648ca7e70f">effekseer_effect_</a> = nullptr</td></tr>
+<tr class="memdesc:a66c732f526b92301c72070648ca7e70f"><td class="mdescLeft">&#160;</td><td class="mdescRight">エフェクト  <a href="#a66c732f526b92301c72070648ca7e70f">[詳解]</a><br /></td></tr>
 <tr class="separator:a66c732f526b92301c72070648ca7e70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3e771c9f05d91dfe392959591595b7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_effekseer.html#afba58b8d812da862190e9bbfc040824a">Effekseer::Handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#ac3e771c9f05d91dfe392959591595b7e">effekseer_handle_</a></td></tr>
+<tr class="memdesc:ac3e771c9f05d91dfe392959591595b7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドル  <a href="#ac3e771c9f05d91dfe392959591595b7e">[詳解]</a><br /></td></tr>
 <tr class="separator:ac3e771c9f05d91dfe392959591595b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16171d7157607b9d6a5fc0aa4ad9d454"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_effekseer_1_1_matrix43.html">Effekseer::Matrix43</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a16171d7157607b9d6a5fc0aa4ad9d454">world_matrix_</a></td></tr>
+<tr class="memdesc:a16171d7157607b9d6a5fc0aa4ad9d454"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列  <a href="#a16171d7157607b9d6a5fc0aa4ad9d454">[詳解]</a><br /></td></tr>
 <tr class="separator:a16171d7157607b9d6a5fc0aa4ad9d454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ec40aadcda493d25823d95a3035c29d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a4ec40aadcda493d25823d95a3035c29d">is_playing_</a></td></tr>
+<tr class="memitem:ae48424a2f453590f97ce1b412882943f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#ae48424a2f453590f97ce1b412882943f">is_disposable_</a> = false</td></tr>
+<tr class="memdesc:ae48424a2f453590f97ce1b412882943f"><td class="mdescLeft">&#160;</td><td class="mdescRight">使い捨てフラグ  <a href="#ae48424a2f453590f97ce1b412882943f">[詳解]</a><br /></td></tr>
+<tr class="separator:ae48424a2f453590f97ce1b412882943f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec40aadcda493d25823d95a3035c29d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a4ec40aadcda493d25823d95a3035c29d">is_playing_</a> = false</td></tr>
+<tr class="memdesc:a4ec40aadcda493d25823d95a3035c29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">再生フラグ  <a href="#a4ec40aadcda493d25823d95a3035c29d">[詳解]</a><br /></td></tr>
 <tr class="separator:a4ec40aadcda493d25823d95a3035c29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad34fd902c49b1f68dc7b212fe9d2676d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#ad34fd902c49b1f68dc7b212fe9d2676d">is_pause_</a></td></tr>
+<tr class="memitem:ad34fd902c49b1f68dc7b212fe9d2676d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#ad34fd902c49b1f68dc7b212fe9d2676d">is_pause_</a> = false</td></tr>
+<tr class="memdesc:ad34fd902c49b1f68dc7b212fe9d2676d"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止フラグ  <a href="#ad34fd902c49b1f68dc7b212fe9d2676d">[詳解]</a><br /></td></tr>
 <tr class="separator:ad34fd902c49b1f68dc7b212fe9d2676d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4beb29e4b63e4013d1916ccada3c5635"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a4beb29e4b63e4013d1916ccada3c5635">is_repeat_</a></td></tr>
+<tr class="memitem:a4beb29e4b63e4013d1916ccada3c5635"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a4beb29e4b63e4013d1916ccada3c5635">is_repeat_</a> = false</td></tr>
+<tr class="memdesc:a4beb29e4b63e4013d1916ccada3c5635"><td class="mdescLeft">&#160;</td><td class="mdescRight">リピートフラグ  <a href="#a4beb29e4b63e4013d1916ccada3c5635">[詳解]</a><br /></td></tr>
 <tr class="separator:a4beb29e4b63e4013d1916ccada3c5635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53e096d7eebae5339b2df3c91bc30e7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a53e096d7eebae5339b2df3c91bc30e7e">transform_</a></td></tr>
+<tr class="memdesc:a53e096d7eebae5339b2df3c91bc30e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">変形  <a href="#a53e096d7eebae5339b2df3c91bc30e7e">[詳解]</a><br /></td></tr>
 <tr class="separator:a53e096d7eebae5339b2df3c91bc30e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a815d735c9c282cdee2ccfb734eb2bb57"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a815d735c9c282cdee2ccfb734eb2bb57">map_key_name_</a></td></tr>
+<tr class="memdesc:a815d735c9c282cdee2ccfb734eb2bb57"><td class="mdescLeft">&#160;</td><td class="mdescRight">マップ用キー名  <a href="#a815d735c9c282cdee2ccfb734eb2bb57">[詳解]</a><br /></td></tr>
+<tr class="separator:a815d735c9c282cdee2ccfb734eb2bb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7bcf0ab26c7601b005cc7d76eb39a9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#ad7bcf0ab26c7601b005cc7d76eb39a9a">reference_counter_</a> = 0</td></tr>
+<tr class="memdesc:ad7bcf0ab26c7601b005cc7d76eb39a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照カウンタ  <a href="#ad7bcf0ab26c7601b005cc7d76eb39a9a">[詳解]</a><br /></td></tr>
+<tr class="separator:ad7bcf0ab26c7601b005cc7d76eb39a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 静的非公開変数類</h2></td></tr>
 <tr class="memitem:a6edfdaac66134eee3264923075abb1f0"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effekseer_object.html#a6edfdaac66134eee3264923075abb1f0">MAX_SPRITE_NUM</a> = 2000</td></tr>
+<tr class="memdesc:a6edfdaac66134eee3264923075abb1f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大スプライト数  <a href="#a6edfdaac66134eee3264923075abb1f0">[詳解]</a><br /></td></tr>
 <tr class="separator:a6edfdaac66134eee3264923075abb1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00040">40</a> 行目に定義があります。</p>
-</div><h2 class="groupheader">構築子と解体子</h2>
-<a id="a8e1e081f62efa87b31e00bcfd9cf1a45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e1e081f62efa87b31e00bcfd9cf1a45">&#9670;&nbsp;</a></span>EffekseerObject()</h2>
+<div class="textblock"><p>エフェクシアオブジェクトClass </p>
+<p>エフェクシアのオブジェクトClass </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00029">29</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="aeacb87988d36d3c255cbf53631ad715f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeacb87988d36d3c255cbf53631ad715f">&#9670;&nbsp;</a></span>AddReferenceCounter()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">EffekseerObject::EffekseerObject </td>
-          <td>(</td>
-          <td class="paramtype">const std::string *&#160;</td>
-          <td class="paramname"><em>file_path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00047">47</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a0463ba508e3c83576991138465847054"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0463ba508e3c83576991138465847054">&#9670;&nbsp;</a></span>~EffekseerObject()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">EffekseerObject::~EffekseerObject </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00067">67</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<h2 class="groupheader">関数詳解</h2>
-<a id="adc628e5089ca0cdc418e92729943a3b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc628e5089ca0cdc418e92729943a3b2">&#9670;&nbsp;</a></span>Draw()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void EffekseerObject::Draw </td>
+          <td class="memname">void EffekseerObject::AddReferenceCounter </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -237,200 +251,32 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00126">126</a> 行目に定義があります。</p>
+<p>参照カウンタ追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00105">105</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a482a0e824d8719b7676ae15948ae7348"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a482a0e824d8719b7676ae15948ae7348">&#9670;&nbsp;</a></span>GetPause()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool EffekseerObject::GetPause </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00077">77</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a3c44b29c016fb5b3618e2d39060844be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c44b29c016fb5b3618e2d39060844be">&#9670;&nbsp;</a></span>GetRepeat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool EffekseerObject::GetRepeat </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00081">81</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ad7e825d08856df48459437ad759d7a00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7e825d08856df48459437ad759d7a00">&#9670;&nbsp;</a></span>GetTransform()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_transform.html">Transform</a>* EffekseerObject::GetTransform </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00096">96</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a4f8e7ad6b6ebfa341302f6b78e846f1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f8e7ad6b6ebfa341302f6b78e846f1e">&#9670;&nbsp;</a></span>InitRenderer_Manager()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void EffekseerObject::InitRenderer_Manager </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00239">239</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a1566339dd4acebff341a867a2fd05c17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1566339dd4acebff341a867a2fd05c17">&#9670;&nbsp;</a></span>InputEffect()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void EffekseerObject::InputEffect </td>
-          <td>(</td>
-          <td class="paramtype">const std::string *&#160;</td>
-          <td class="paramname"><em>file_path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00277">277</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a6fe253dd3387bdfd9305878ff194f305"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fe253dd3387bdfd9305878ff194f305">&#9670;&nbsp;</a></span>IsPlaing()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool EffekseerObject::IsPlaing </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00070">70</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a59c8a12b4eb558449622660d892b3cf4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59c8a12b4eb558449622660d892b3cf4">&#9670;&nbsp;</a></span>Play()</h2>
+<a id="aa3fbff4e565c771d1b8e2a83b197294b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3fbff4e565c771d1b8e2a83b197294b">&#9670;&nbsp;</a></span>ChangeColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void EffekseerObject::Play </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00141">141</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a5c496e56785ef7b784b13642d59d4e7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c496e56785ef7b784b13642d59d4e7f">&#9670;&nbsp;</a></span>SetColor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void EffekseerObject::SetColor </td>
+          <td class="memname">void EffekseerObject::ChangeColor </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>r</em>, </td>
@@ -461,38 +307,35 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00200">200</a> 行目に定義があります。</p>
+<p>色変更関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>赤 </td></tr>
+    <tr><td class="paramname">g</td><td>緑 </td></tr>
+    <tr><td class="paramname">b</td><td>青 </td></tr>
+    <tr><td class="paramname">a</td><td>透過度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00223">223</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aeec933c68ceb4bafc69d65590c470d72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeec933c68ceb4bafc69d65590c470d72">&#9670;&nbsp;</a></span>SetPause()</h2>
+<a id="ad8ad42a6cf622ae1ef145f66af3af7c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8ad42a6cf622ae1ef145f66af3af7c3">&#9670;&nbsp;</a></span>ChangeProjectionMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void EffekseerObject::SetPause </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>is_pause</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00171">171</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="aa3849f176ccb493b162d08c1ef387996"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3849f176ccb493b162d08c1ef387996">&#9670;&nbsp;</a></span>SetProjectionMatrix()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void EffekseerObject::SetProjectionMatrix </td>
+          <td class="memname">void EffekseerObject::ChangeProjectionMatrix </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_effekseer_1_1_matrix44.html">Effekseer::Matrix44</a> *&#160;</td>
           <td class="paramname"><em>projection_matrix</em></td><td>)</td>
@@ -501,46 +344,32 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00213">213</a> 行目に定義があります。</p>
+<p>プロジェクション行列変更関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">velocity</td><td>速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00237">237</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a77122f2d71d44d6cceec2b6bdedb4b2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77122f2d71d44d6cceec2b6bdedb4b2a">&#9670;&nbsp;</a></span>SetRepeat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void EffekseerObject::SetRepeat </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>is_repeat</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00080">80</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a3c14fd4215640b648b14e445b99564f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c14fd4215640b648b14e445b99564f7">&#9670;&nbsp;</a></span>SetVelocity()</h2>
+<a id="a52c47feeb74058661f8db31a20a51dbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52c47feeb74058661f8db31a20a51dbf">&#9670;&nbsp;</a></span>ChangeVelocity()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void EffekseerObject::SetVelocity </td>
+          <td class="memname">void EffekseerObject::ChangeVelocity </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>velocity</em></td><td>)</td>
@@ -549,18 +378,32 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00186">186</a> 行目に定義があります。</p>
+<p>速度変更関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">velocity</td><td>速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00216">216</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ac7f3145b79b5e65e45014abd30ee5de8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7f3145b79b5e65e45014abd30ee5de8">&#9670;&nbsp;</a></span>SetViewMatrix()</h2>
+<a id="a822247e8b5effa83ccf7239283f83326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a822247e8b5effa83ccf7239283f83326">&#9670;&nbsp;</a></span>ChangeViewMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void EffekseerObject::SetViewMatrix </td>
+          <td class="memname">void EffekseerObject::ChangeViewMatrix </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_effekseer_1_1_matrix44.html">Effekseer::Matrix44</a> *&#160;</td>
           <td class="paramname"><em>view_matrix</em></td><td>)</td>
@@ -569,12 +412,26 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00226">226</a> 行目に定義があります。</p>
+<p>ビュー行列変更関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">velocity</td><td>速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00230">230</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="afde70f366e91d31a84ff9b280d4ae3c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afde70f366e91d31a84ff9b280d4ae3c4">&#9670;&nbsp;</a></span>SetWorldMatrix()</h2>
+<a id="a7bc76cdd2fb6f4ff38e20ec9c21bdef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bc76cdd2fb6f4ff38e20ec9c21bdef5">&#9670;&nbsp;</a></span>ChangeWorldMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -583,9 +440,9 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void EffekseerObject::SetWorldMatrix </td>
+          <td class="memname">void EffekseerObject::ChangeWorldMatrix </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="_vector3_d_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="_matrix_8h.html#a032295cd9fb1b711757c90667278e744">MATRIX</a> *&#160;</td>
           <td class="paramname"><em>world_matrix</em></td><td>)</td>
           <td></td>
         </tr>
@@ -597,7 +454,449 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00297">297</a> 行目に定義があります。</p>
+<p>ワールド行列変更関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*file_path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00244">244</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af55a8edc8ff64371e28fe3e00b6af7ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af55a8edc8ff64371e28fe3e00b6af7ae">&#9670;&nbsp;</a></span>CreateEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EffekseerObject::CreateEffect </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>file_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>エフェクト生成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*file_path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00144">144</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6b7b077ec4d0892add6e0958dae833db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b7b077ec4d0892add6e0958dae833db">&#9670;&nbsp;</a></span>CreateRendererAndManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EffekseerObject::CreateRendererAndManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>レンダラー&amp;マネージャ生成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*file_path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00112">112</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adc628e5089ca0cdc418e92729943a3b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc628e5089ca0cdc418e92729943a3b2">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EffekseerObject::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00179">179</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a59e36b36fbd554807987b55495250dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e36b36fbd554807987b55495250dd2">&#9670;&nbsp;</a></span>ForcedRelease()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EffekseerObject::ForcedRelease </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>強制解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00097">97</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2c09306dca9956b1f2518f10a10dd698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c09306dca9956b1f2518f10a10dd698">&#9670;&nbsp;</a></span>getpIsPlaying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EffekseerObject::getpIsPlaying </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>再生中フラグ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>再生中の有無 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00036">36</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adb8963108c1ddd2ce6926f974b5f0acc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb8963108c1ddd2ce6926f974b5f0acc">&#9670;&nbsp;</a></span>getpTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_transform.html">Transform</a> * EffekseerObject::getpTransform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>変形取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Transform*</td><td>変形 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00050">50</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1a868153244f3b30ed4ab63e3b9cee91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a868153244f3b30ed4ab63e3b9cee91">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EffekseerObject::Init </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>file_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramname"><em>map_key_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*file_path</td><td>ファイルパス </td></tr>
+    <tr><td class="paramname">*map_key_name</td><td>マップ用キー名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00060">60</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a01365c03b533af22fd1b9eee766d16ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01365c03b533af22fd1b9eee766d16ca">&#9670;&nbsp;</a></span>Pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EffekseerObject::Pause </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_pause</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>一時停止関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_pause</td><td>一時停止フラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00207">207</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a59c8a12b4eb558449622660d892b3cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59c8a12b4eb558449622660d892b3cf4">&#9670;&nbsp;</a></span>Play()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EffekseerObject::Play </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>再生関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00188">188</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8d5a00238954a2368bbf870dfa8908f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d5a00238954a2368bbf870dfa8908f7">&#9670;&nbsp;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EffekseerObject::Release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00074">74</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae109ced0206affab5d002a218d3c825c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae109ced0206affab5d002a218d3c825c">&#9670;&nbsp;</a></span>setDisposable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EffekseerObject::setDisposable </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使い捨てフラグ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>使い捨てフラグの値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00029">29</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5a321097534dd21b16862f56f66e730b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a321097534dd21b16862f56f66e730b">&#9670;&nbsp;</a></span>setIsRepeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EffekseerObject::setIsRepeat </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>リピートフラグ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>リピートフラグの値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00043">43</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -616,7 +915,21 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00157">157</a> 行目に定義があります。</p>
+<p>停止関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00198">198</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -635,7 +948,21 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00090">90</a> 行目に定義があります。</p>
+<p>更新関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a> の <a class="el" href="_effekseer_object_8cpp_source.html#l00157">157</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -650,7 +977,7 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_effekseer_1_1_effect.html">Effekseer::Effect</a>* EffekseerObject::effekseer_effect_</td>
+          <td class="memname"><a class="el" href="class_effekseer_1_1_effect.html">Effekseer::Effect</a>* EffekseerObject::effekseer_effect_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -660,7 +987,9 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00111">111</a> 行目に定義があります。</p>
+<p>エフェクト </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00044">44</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -684,7 +1013,9 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00112">112</a> 行目に定義があります。</p>
+<p>ハンドル </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00045">45</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -698,7 +1029,7 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_effekseer_1_1_manager.html">Effekseer::Manager</a>* EffekseerObject::effekseer_manager_</td>
+          <td class="memname"><a class="el" href="class_effekseer_1_1_manager.html">Effekseer::Manager</a>* EffekseerObject::effekseer_manager_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -708,7 +1039,9 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00110">110</a> 行目に定義があります。</p>
+<p>マネージャ </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00043">43</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -722,7 +1055,7 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_effekseer_renderer_d_x9_1_1_renderer.html">EffekseerRendererDX9::Renderer</a>* EffekseerObject::effekseer_renderer_</td>
+          <td class="memname"><a class="el" href="class_effekseer_renderer_d_x9_1_1_renderer.html">EffekseerRendererDX9::Renderer</a>* EffekseerObject::effekseer_renderer_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -732,7 +1065,35 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00109">109</a> 行目に定義があります。</p>
+<p>レンダラー </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae48424a2f453590f97ce1b412882943f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48424a2f453590f97ce1b412882943f">&#9670;&nbsp;</a></span>is_disposable_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EffekseerObject::is_disposable_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使い捨てフラグ </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00047">47</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -746,7 +1107,7 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool EffekseerObject::is_pause_</td>
+          <td class="memname">bool EffekseerObject::is_pause_ = false</td>
         </tr>
       </table>
   </td>
@@ -756,7 +1117,9 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00115">115</a> 行目に定義があります。</p>
+<p>停止フラグ </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00049">49</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -770,7 +1133,7 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool EffekseerObject::is_playing_</td>
+          <td class="memname">bool EffekseerObject::is_playing_ = false</td>
         </tr>
       </table>
   </td>
@@ -780,7 +1143,9 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00114">114</a> 行目に定義があります。</p>
+<p>再生フラグ </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00048">48</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -794,7 +1159,7 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool EffekseerObject::is_repeat_</td>
+          <td class="memname">bool EffekseerObject::is_repeat_ = false</td>
         </tr>
       </table>
   </td>
@@ -804,7 +1169,35 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00116">116</a> 行目に定義があります。</p>
+<p>リピートフラグ </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00050">50</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a815d735c9c282cdee2ccfb734eb2bb57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a815d735c9c282cdee2ccfb734eb2bb57">&#9670;&nbsp;</a></span>map_key_name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string EffekseerObject::map_key_name_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マップ用キー名 </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00052">52</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -828,7 +1221,35 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00044">44</a> 行目に定義があります。</p>
+<p>最大スプライト数 </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad7bcf0ab26c7601b005cc7d76eb39a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7bcf0ab26c7601b005cc7d76eb39a9a">&#9670;&nbsp;</a></span>reference_counter_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EffekseerObject::reference_counter_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>参照カウンタ </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00053">53</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -852,7 +1273,9 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00118">118</a> 行目に定義があります。</p>
+<p>変形 </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00051">51</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -876,13 +1299,15 @@ $(document).ready(function(){initNavTree('class_effekseer_object.html','');});
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00113">113</a> 行目に定義があります。</p>
+<p>行列 </p>
+
+<p class="definition"> <a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a> の <a class="el" href="_effekseer_object_8h_source.html#l00046">46</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/05_Resource/Effekseer/EffekseerObject/<a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a></li>
-<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/05_Resource/Effekseer/EffekseerObject/<a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Resource/Effekseer/<a class="el" href="_effekseer_object_8h_source.html">EffekseerObject.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/Project/source/Framework/Resource/Effekseer/Source/<a class="el" href="_effekseer_object_8cpp_source.html">EffekseerObject.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

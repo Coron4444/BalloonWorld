@@ -1,0 +1,194 @@
+\hypertarget{class_pixel_shader_default_shadow}{}\section{Pixel\+Shader\+Default\+Shadow クラス}
+\label{class_pixel_shader_default_shadow}\index{Pixel\+Shader\+Default\+Shadow@{Pixel\+Shader\+Default\+Shadow}}
+
+
+デフォルト影ピクセルシェーダー\+Class  
+
+
+
+
+{\ttfamily \#include $<$Pixel\+Shader\+Default\+Shadow.\+h$>$}
+
+
+
+Pixel\+Shader\+Default\+Shadow 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_pixel_shader_default_shadow__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pixel_shader_default_shadow_a22be67e887bcad8d9b6725cbae7e3abc}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_shader_default_shadow_abd9b03c980fed91c4fc14bbab244adbd}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_shader_default_shadow_ac7e4f76ddef588b97dd898c31023be37}{Object\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)
+\begin{DoxyCompactList}\small\item\em オブジェクト設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_shader_default_shadow_adec247949dea3a73545f602641a99103}{Mesh\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index, unsigned mesh\+\_\+index)
+\begin{DoxyCompactList}\small\item\em メッシュ設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \mbox{\hyperlink{class_pixel_shader_default_shadow_a689c29d30938bcd03246929bc99b3907}{P\+A\+TH}} = \char`\"{}resource/H\+L\+SL/Effect/Pixel\+Shader/Default\+Shadow.\+psh\char`\"{}
+\begin{DoxyCompactList}\small\item\em ファイルパス \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+デフォルト影ピクセルシェーダー\+Class 
+
+デフォルト影のピクセルシェーダー\+Class 
+
+ Pixel\+Shader\+Default\+Shadow.\+h の 26 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_pixel_shader_default_shadow_a22be67e887bcad8d9b6725cbae7e3abc}\label{class_pixel_shader_default_shadow_a22be67e887bcad8d9b6725cbae7e3abc}} 
+\index{Pixel\+Shader\+Default\+Shadow@{Pixel\+Shader\+Default\+Shadow}!Init@{Init}}
+\index{Init@{Init}!Pixel\+Shader\+Default\+Shadow@{Pixel\+Shader\+Default\+Shadow}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Default\+Shadow\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_a5318be2bf26892c385d863e3e8409571}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Default\+Shadow.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_default_shadow_adec247949dea3a73545f602641a99103}\label{class_pixel_shader_default_shadow_adec247949dea3a73545f602641a99103}} 
+\index{Pixel\+Shader\+Default\+Shadow@{Pixel\+Shader\+Default\+Shadow}!Mesh\+Setting@{Mesh\+Setting}}
+\index{Mesh\+Setting@{Mesh\+Setting}!Pixel\+Shader\+Default\+Shadow@{Pixel\+Shader\+Default\+Shadow}}
+\subsubsection{\texorpdfstring{Mesh\+Setting()}{MeshSetting()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Default\+Shadow\+::\+Mesh\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+メッシュ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_a89b6f0558a969478b06af52bb8e6ee16}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Default\+Shadow.\+cpp の 59 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_default_shadow_ac7e4f76ddef588b97dd898c31023be37}\label{class_pixel_shader_default_shadow_ac7e4f76ddef588b97dd898c31023be37}} 
+\index{Pixel\+Shader\+Default\+Shadow@{Pixel\+Shader\+Default\+Shadow}!Object\+Setting@{Object\+Setting}}
+\index{Object\+Setting@{Object\+Setting}!Pixel\+Shader\+Default\+Shadow@{Pixel\+Shader\+Default\+Shadow}}
+\subsubsection{\texorpdfstring{Object\+Setting()}{ObjectSetting()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Default\+Shadow\+::\+Object\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+オブジェクト設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_a488bde4a2c9a9c45c4ec0ad42487d3b1}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Default\+Shadow.\+cpp の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_default_shadow_abd9b03c980fed91c4fc14bbab244adbd}\label{class_pixel_shader_default_shadow_abd9b03c980fed91c4fc14bbab244adbd}} 
+\index{Pixel\+Shader\+Default\+Shadow@{Pixel\+Shader\+Default\+Shadow}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Pixel\+Shader\+Default\+Shadow@{Pixel\+Shader\+Default\+Shadow}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Default\+Shadow\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_adca4c44cd25c90a5ebd75b459f5e641e}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Default\+Shadow.\+cpp の 41 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_pixel_shader_default_shadow_a689c29d30938bcd03246929bc99b3907}\label{class_pixel_shader_default_shadow_a689c29d30938bcd03246929bc99b3907}} 
+\index{Pixel\+Shader\+Default\+Shadow@{Pixel\+Shader\+Default\+Shadow}!P\+A\+TH@{P\+A\+TH}}
+\index{P\+A\+TH@{P\+A\+TH}!Pixel\+Shader\+Default\+Shadow@{Pixel\+Shader\+Default\+Shadow}}
+\subsubsection{\texorpdfstring{P\+A\+TH}{PATH}}
+{\footnotesize\ttfamily const char $\ast$ Pixel\+Shader\+Default\+Shadow\+::\+P\+A\+TH = \char`\"{}resource/H\+L\+SL/Effect/Pixel\+Shader/Default\+Shadow.\+psh\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+ファイルパス 
+
+
+
+ Pixel\+Shader\+Default\+Shadow.\+h の 32 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\mbox{\hyperlink{_pixel_shader_default_shadow_8h}{Pixel\+Shader\+Default\+Shadow.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\+Source/\mbox{\hyperlink{_pixel_shader_default_shadow_8cpp}{Pixel\+Shader\+Default\+Shadow.\+cpp}}\end{DoxyCompactItemize}

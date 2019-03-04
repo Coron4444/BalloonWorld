@@ -11,45 +11,60 @@
 
 
 
-Collision\+Shape\+Base の継承関係図\nopagebreak
+Collision\+Shape\+Base 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_collision_shape_base__inherit__graph}
+\includegraphics[width=184pt]{class_collision_shape_base__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開型}
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Type}} \{ \newline
-\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba1129630002cc3cf03126a4ef39383c98}{N\+O\+NE}} = -\/1, 
-\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba2512ecb2c7c72bdbdf8aa3f5a07671c7}{A\+A\+BB}}, 
-\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba2cae7484589db3e777b158aeae2a633b}{C\+A\+P\+S\+U\+LE}}, 
-\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba92f81388af31f36357b692f2aead2f19}{C\+Y\+L\+I\+N\+D\+ER}}, 
+\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbab50339a10e1de285ac99d4c3990b8693}{Type\+::\+N\+O\+NE}} = -\/1, 
+\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba4276d50f05d2cac4c98c17337ac30c99}{Type\+::\+A\+A\+BB}}, 
+\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba67586f12c9792da11a4bdf60360d40e9}{Type\+::\+C\+A\+P\+S\+U\+LE}}, 
+\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbaddec32fe897072b48368b1abe03de2aa}{Type\+::\+C\+Y\+L\+I\+N\+D\+ER}}, 
 \newline
-\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba56e56c8ee634330847018d716ca222b0}{O\+BB}}, 
-\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba740709eb8c52c5d67d1c9af02af074cf}{P\+L\+A\+NE}}, 
-\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba8cae4c6afb929fa9a9f3ca67c35f78bd}{L\+I\+N\+E\+\_\+\+S\+E\+G\+M\+E\+NT}}, 
-\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbaf5cbf5af4d5ef779592f1a293895c63e}{S\+P\+H\+E\+RE}}, 
+\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba9aac15e014ce3a36fcbf4a3f669332da}{Type\+::\+O\+BB}}, 
+\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbaad6990fc23cd957328515fde2db852a3}{Type\+::\+P\+L\+A\+NE}}, 
+\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbaa553bd03b2c1935b2632e97e19ce7826}{Type\+::\+L\+I\+N\+E\+\_\+\+S\+E\+G\+M\+E\+NT}}, 
+\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba6f7cea7381e843e2ee0338b4a92b0d43}{Type\+::\+S\+P\+H\+E\+RE}}, 
 \newline
-\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba4b6a6ea5d0152ec22ef54af55a4c872b}{T\+R\+I\+A\+N\+G\+LE}}, 
-\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba4636454f94c8f39be9fed0b1a3124a2c}{M\+AX}}
+\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba9bcd89070cae224dce305f5011659ef4}{Type\+::\+T\+R\+I\+A\+N\+G\+LE}}, 
+\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba26a4b44a837bf97b972628509912b4a5}{Type\+::\+M\+AX}}
  \}
 \end{DoxyCompactItemize}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Type}} \mbox{\hyperlink{class_collision_shape_base_a3dac385b3718f80171046cde33da04b1}{get\+Type}} ()
-\begin{DoxyCompactList}\small\item\em 形状タイプ取得関数 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_collision_shape_base_a9dd2ab42e2a6e96c6bff832ce8ca62b9}{Collision\+Shape\+Base}} (\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Type}} type)
-\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em タイプ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_collision_shape_base_a82a91baac1983dab014be36864eecf54}{set\+Type}} (\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Type}} value)
+\begin{DoxyCompactList}\small\item\em タイプ設定関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_collision_shape_base_aec0443ca3ada3e6fd6e9b23e2463c9c9}{getp\+Max}} ()
+\begin{DoxyCompactList}\small\item\em 最大座標取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ \mbox{\hyperlink{class_collision_shape_base_a426957f57223656c8ef26cec368288d0}{getp\+Min}} ()
+\begin{DoxyCompactList}\small\item\em 最小座標取得関数 \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_collision_shape_base_af6fb40d8815d749743555bd2ab505fe6}{$\sim$\+Collision\+Shape\+Base}} ()=0
-\begin{DoxyCompactList}\small\item\em 仮想デストラクタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 仮想デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_collision_shape_base_a7aaa0f4de4e208f168f78e3445313929}{Update}} ()=0
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_collision_shape_base_ad227c2f83038d7c05bc6b1d510cb4000}{Calculation\+Min\+And\+Max}} ()=0
+\begin{DoxyCompactList}\small\item\em 最小値と最大値算出関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Type}} \mbox{\hyperlink{class_collision_shape_base_a46413b1e4d4b3a35075232fa9012addb}{type\+\_\+}}
-\begin{DoxyCompactList}\small\item\em 形状タイプ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Type}} \mbox{\hyperlink{class_collision_shape_base_a46413b1e4d4b3a35075232fa9012addb}{type\+\_\+}} = \mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbab50339a10e1de285ac99d4c3990b8693}{Type\+::\+N\+O\+NE}}
+\begin{DoxyCompactList}\small\item\em タイプ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_collision_shape_base_af6b4c8627469bfe135d02b67de688bac}{min\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 最小値 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_d}{Vector3D}} \mbox{\hyperlink{class_collision_shape_base_a4a9788a4a72f5dd77cd26a281c2d17e4}{max\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 最大値 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
@@ -57,7 +72,7 @@ virtual \mbox{\hyperlink{class_collision_shape_base_af6fb40d8815d749743555bd2ab5
 
 衝突形状の\+Base\+Class 
 
- Collision\+Shape\+Base.\+h の 17 行目に定義があります。
+ Collision\+Shape\+Base.\+h の 24 行目に定義があります。
 
 
 
@@ -66,76 +81,57 @@ virtual \mbox{\hyperlink{class_collision_shape_base_af6fb40d8815d749743555bd2ab5
 \index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!Type@{Type}}
 \index{Type@{Type}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
 \subsubsection{\texorpdfstring{Type}{Type}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Collision\+Shape\+Base\+::\+Type}}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Collision\+Shape\+Base\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
 
 \begin{DoxyEnumFields}{列挙値}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba1129630002cc3cf03126a4ef39383c98}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba1129630002cc3cf03126a4ef39383c98}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbab50339a10e1de285ac99d4c3990b8693}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbab50339a10e1de285ac99d4c3990b8693}} 
 N\+O\+NE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+A\+BB@{A\+A\+BB}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!A\+A\+BB@{A\+A\+BB}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba2512ecb2c7c72bdbdf8aa3f5a07671c7}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba2512ecb2c7c72bdbdf8aa3f5a07671c7}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+A\+BB@{A\+A\+BB}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!A\+A\+BB@{A\+A\+BB}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba4276d50f05d2cac4c98c17337ac30c99}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba4276d50f05d2cac4c98c17337ac30c99}} 
 A\+A\+BB&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+A\+P\+S\+U\+LE@{C\+A\+P\+S\+U\+LE}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!C\+A\+P\+S\+U\+LE@{C\+A\+P\+S\+U\+LE}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba2cae7484589db3e777b158aeae2a633b}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba2cae7484589db3e777b158aeae2a633b}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+A\+P\+S\+U\+LE@{C\+A\+P\+S\+U\+LE}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!C\+A\+P\+S\+U\+LE@{C\+A\+P\+S\+U\+LE}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba67586f12c9792da11a4bdf60360d40e9}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba67586f12c9792da11a4bdf60360d40e9}} 
 C\+A\+P\+S\+U\+LE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+Y\+L\+I\+N\+D\+ER@{C\+Y\+L\+I\+N\+D\+ER}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!C\+Y\+L\+I\+N\+D\+ER@{C\+Y\+L\+I\+N\+D\+ER}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba92f81388af31f36357b692f2aead2f19}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba92f81388af31f36357b692f2aead2f19}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+Y\+L\+I\+N\+D\+ER@{C\+Y\+L\+I\+N\+D\+ER}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!C\+Y\+L\+I\+N\+D\+ER@{C\+Y\+L\+I\+N\+D\+ER}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbaddec32fe897072b48368b1abe03de2aa}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbaddec32fe897072b48368b1abe03de2aa}} 
 C\+Y\+L\+I\+N\+D\+ER&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+BB@{O\+BB}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!O\+BB@{O\+BB}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba56e56c8ee634330847018d716ca222b0}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba56e56c8ee634330847018d716ca222b0}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+BB@{O\+BB}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!O\+BB@{O\+BB}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba9aac15e014ce3a36fcbf4a3f669332da}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba9aac15e014ce3a36fcbf4a3f669332da}} 
 O\+BB&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+L\+A\+NE@{P\+L\+A\+NE}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!P\+L\+A\+NE@{P\+L\+A\+NE}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba740709eb8c52c5d67d1c9af02af074cf}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba740709eb8c52c5d67d1c9af02af074cf}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+L\+A\+NE@{P\+L\+A\+NE}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!P\+L\+A\+NE@{P\+L\+A\+NE}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbaad6990fc23cd957328515fde2db852a3}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbaad6990fc23cd957328515fde2db852a3}} 
 P\+L\+A\+NE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+I\+N\+E\+\_\+\+S\+E\+G\+M\+E\+NT@{L\+I\+N\+E\+\_\+\+S\+E\+G\+M\+E\+NT}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!L\+I\+N\+E\+\_\+\+S\+E\+G\+M\+E\+NT@{L\+I\+N\+E\+\_\+\+S\+E\+G\+M\+E\+NT}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba8cae4c6afb929fa9a9f3ca67c35f78bd}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba8cae4c6afb929fa9a9f3ca67c35f78bd}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+I\+N\+E\+\_\+\+S\+E\+G\+M\+E\+NT@{L\+I\+N\+E\+\_\+\+S\+E\+G\+M\+E\+NT}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!L\+I\+N\+E\+\_\+\+S\+E\+G\+M\+E\+NT@{L\+I\+N\+E\+\_\+\+S\+E\+G\+M\+E\+NT}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbaa553bd03b2c1935b2632e97e19ce7826}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbaa553bd03b2c1935b2632e97e19ce7826}} 
 L\+I\+N\+E\+\_\+\+S\+E\+G\+M\+E\+NT&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+P\+H\+E\+RE@{S\+P\+H\+E\+RE}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!S\+P\+H\+E\+RE@{S\+P\+H\+E\+RE}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbaf5cbf5af4d5ef779592f1a293895c63e}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbaf5cbf5af4d5ef779592f1a293895c63e}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+P\+H\+E\+RE@{S\+P\+H\+E\+RE}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!S\+P\+H\+E\+RE@{S\+P\+H\+E\+RE}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba6f7cea7381e843e2ee0338b4a92b0d43}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba6f7cea7381e843e2ee0338b4a92b0d43}} 
 S\+P\+H\+E\+RE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+R\+I\+A\+N\+G\+LE@{T\+R\+I\+A\+N\+G\+LE}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!T\+R\+I\+A\+N\+G\+LE@{T\+R\+I\+A\+N\+G\+LE}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba4b6a6ea5d0152ec22ef54af55a4c872b}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba4b6a6ea5d0152ec22ef54af55a4c872b}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+R\+I\+A\+N\+G\+LE@{T\+R\+I\+A\+N\+G\+LE}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!T\+R\+I\+A\+N\+G\+LE@{T\+R\+I\+A\+N\+G\+LE}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba9bcd89070cae224dce305f5011659ef4}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba9bcd89070cae224dce305f5011659ef4}} 
 T\+R\+I\+A\+N\+G\+LE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba4636454f94c8f39be9fed0b1a3124a2c}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba4636454f94c8f39be9fed0b1a3124a2c}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+AX@{M\+AX}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!M\+AX@{M\+AX}}}\mbox{\Hypertarget{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba26a4b44a837bf97b972628509912b4a5}\label{class_collision_shape_base_a8abcef092855ad0ca191047044b002cba26a4b44a837bf97b972628509912b4a5}} 
 M\+AX&\\
 \hline
 
 \end{DoxyEnumFields}
 
 
- Collision\+Shape\+Base.\+h の 24 行目に定義があります。
+ Collision\+Shape\+Base.\+h の 31 行目に定義があります。
 
 
 
 \subsection{構築子と解体子}
-\mbox{\Hypertarget{class_collision_shape_base_a9dd2ab42e2a6e96c6bff832ce8ca62b9}\label{class_collision_shape_base_a9dd2ab42e2a6e96c6bff832ce8ca62b9}} 
-\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
-\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
-\subsubsection{\texorpdfstring{Collision\+Shape\+Base()}{CollisionShapeBase()}}
-{\footnotesize\ttfamily Collision\+Shape\+Base\+::\+Collision\+Shape\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Type}}}]{type }\end{DoxyParamCaption})}
-
-
-
-コンストラクタ 
-
-
-\begin{DoxyParams}[1]{引数}
-\mbox{\tt in}  & {\em type} & 形状タイプ \\
-\hline
-\end{DoxyParams}
-
-
- Collision\+Shape\+Base.\+cpp の 30 行目に定義があります。
-
 \mbox{\Hypertarget{class_collision_shape_base_af6fb40d8815d749743555bd2ab505fe6}\label{class_collision_shape_base_af6fb40d8815d749743555bd2ab505fe6}} 
 \index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!````~Collision\+Shape\+Base@{$\sim$\+Collision\+Shape\+Base}}
 \index{````~Collision\+Shape\+Base@{$\sim$\+Collision\+Shape\+Base}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
@@ -153,20 +149,20 @@ M\+AX&\\
 \end{DoxyParams}
 
 
- Collision\+Shape\+Base.\+cpp の 37 行目に定義があります。
+ Collision\+Shape\+Base.\+cpp の 52 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_collision_shape_base_a3dac385b3718f80171046cde33da04b1}\label{class_collision_shape_base_a3dac385b3718f80171046cde33da04b1}} 
-\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!get\+Type@{get\+Type}}
-\index{get\+Type@{get\+Type}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
-\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Collision\+Shape\+Base\+::\+Type}} Collision\+Shape\+Base\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_collision_shape_base_ad227c2f83038d7c05bc6b1d510cb4000}\label{class_collision_shape_base_ad227c2f83038d7c05bc6b1d510cb4000}} 
+\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!Calculation\+Min\+And\+Max@{Calculation\+Min\+And\+Max}}
+\index{Calculation\+Min\+And\+Max@{Calculation\+Min\+And\+Max}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
+\subsubsection{\texorpdfstring{Calculation\+Min\+And\+Max()}{CalculationMinAndMax()}}
+{\footnotesize\ttfamily virtual void Collision\+Shape\+Base\+::\+Calculation\+Min\+And\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
 
 
-形状タイプ取得関数 
+最小値と最大値算出関数 
 
 
 \begin{DoxyParams}{引数}
@@ -175,33 +171,181 @@ M\+AX&\\
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{戻り値}
-{\em Type} & 形状タイプ \\
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_o_b_b_a638080ada1be9bef353359358dba23bc}{O\+BB}}, \mbox{\hyperlink{class_capsule_a52ada68cdb0c18a4dd8b4b169ad0d6df}{Capsule}}, \mbox{\hyperlink{class_cylinder_ac8fb25627ff41e9ae265cd80bfbde03a}{Cylinder}}, \mbox{\hyperlink{class_line_segment_aa680211e185d2c98febb5af5a6527496}{Line\+Segment}}, \mbox{\hyperlink{class_a_a_b_b_a9f2f03e02053b4f170fc030bdc4ba6b6}{A\+A\+BB}}, \mbox{\hyperlink{class_triangle_a8e8c4d3a0bb8a4dfb15429d38a3bdaaa}{Triangle}}, \mbox{\hyperlink{class_plane_a8df0a1a800b32aa21a2a22c7cb52aa86}{Plane}}, \mbox{\hyperlink{class_sphere_a651b659cec38a3a93a4be589f25899d7}{Sphere}}で実装されています。
+
+\mbox{\Hypertarget{class_collision_shape_base_aec0443ca3ada3e6fd6e9b23e2463c9c9}\label{class_collision_shape_base_aec0443ca3ada3e6fd6e9b23e2463c9c9}} 
+\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!getp\+Max@{getp\+Max}}
+\index{getp\+Max@{getp\+Max}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
+\subsubsection{\texorpdfstring{getp\+Max()}{getpMax()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Collision\+Shape\+Base\+::getp\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+最大座標取得関数 
+
+形状を包む\+A\+A\+B\+Bの最大座標 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 最大座標 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Shape\+Base.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_collision_shape_base_a426957f57223656c8ef26cec368288d0}\label{class_collision_shape_base_a426957f57223656c8ef26cec368288d0}} 
+\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!getp\+Min@{getp\+Min}}
+\index{getp\+Min@{getp\+Min}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
+\subsubsection{\texorpdfstring{getp\+Min()}{getpMin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} $\ast$ Collision\+Shape\+Base\+::getp\+Min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+最小座標取得関数 
+
+形状を包む\+A\+A\+B\+Bの最小座標 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Vector3\+D$\ast$} & 最小座標 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Shape\+Base.\+cpp の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_collision_shape_base_a3dac385b3718f80171046cde33da04b1}\label{class_collision_shape_base_a3dac385b3718f80171046cde33da04b1}} 
+\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Collision\+Shape\+Base\+::\+Type}} Collision\+Shape\+Base\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+タイプ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Type} & タイプ \\
 \hline
 \end{DoxyRetVals}
 
 
  Collision\+Shape\+Base.\+cpp の 20 行目に定義があります。
 
+\mbox{\Hypertarget{class_collision_shape_base_a82a91baac1983dab014be36864eecf54}\label{class_collision_shape_base_a82a91baac1983dab014be36864eecf54}} 
+\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
+\subsubsection{\texorpdfstring{set\+Type()}{setType()}}
+{\footnotesize\ttfamily void Collision\+Shape\+Base\+::set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Collision\+Shape\+Base\+::\+Type}}}]{value }\end{DoxyParamCaption})}
+
+
+
+タイプ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & タイプ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Collision\+Shape\+Base.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_collision_shape_base_a7aaa0f4de4e208f168f78e3445313929}\label{class_collision_shape_base_a7aaa0f4de4e208f168f78e3445313929}} 
+\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!Update@{Update}}
+\index{Update@{Update}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Collision\+Shape\+Base\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_o_b_b_af9b3e9a2d810f5b37cf849a3804d7bc7}{O\+BB}}, \mbox{\hyperlink{class_capsule_abfa1026590603a2971c5269171a50864}{Capsule}}, \mbox{\hyperlink{class_cylinder_a7b835c069d873b53d57fd01b9f44bacd}{Cylinder}}, \mbox{\hyperlink{class_line_segment_af38555a54ae3cae5e06876331b9d7522}{Line\+Segment}}, \mbox{\hyperlink{class_a_a_b_b_a0a96be8dec3969d893bf90d3f05e22b7}{A\+A\+BB}}, \mbox{\hyperlink{class_triangle_acc4ecbf029aafe3cda4e6a49218e2e0b}{Triangle}}, \mbox{\hyperlink{class_plane_a1dd55b527bae8194b21bf2009f53afb0}{Plane}}, \mbox{\hyperlink{class_sphere_a5e72970f207683a3cf5fe430f6a62e15}{Sphere}}で実装されています。
+
 
 
 \subsection{メンバ詳解}
+\mbox{\Hypertarget{class_collision_shape_base_a4a9788a4a72f5dd77cd26a281c2d17e4}\label{class_collision_shape_base_a4a9788a4a72f5dd77cd26a281c2d17e4}} 
+\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!max\+\_\+@{max\+\_\+}}
+\index{max\+\_\+@{max\+\_\+}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
+\subsubsection{\texorpdfstring{max\+\_\+}{max\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Collision\+Shape\+Base\+::max\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+最大値 
+
+
+
+ Collision\+Shape\+Base.\+h の 52 行目に定義があります。
+
+\mbox{\Hypertarget{class_collision_shape_base_af6b4c8627469bfe135d02b67de688bac}\label{class_collision_shape_base_af6b4c8627469bfe135d02b67de688bac}} 
+\index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!min\+\_\+@{min\+\_\+}}
+\index{min\+\_\+@{min\+\_\+}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
+\subsubsection{\texorpdfstring{min\+\_\+}{min\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3_d}{Vector3D}} Collision\+Shape\+Base\+::min\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+最小値 
+
+
+
+ Collision\+Shape\+Base.\+h の 51 行目に定義があります。
+
 \mbox{\Hypertarget{class_collision_shape_base_a46413b1e4d4b3a35075232fa9012addb}\label{class_collision_shape_base_a46413b1e4d4b3a35075232fa9012addb}} 
 \index{Collision\+Shape\+Base@{Collision\+Shape\+Base}!type\+\_\+@{type\+\_\+}}
 \index{type\+\_\+@{type\+\_\+}!Collision\+Shape\+Base@{Collision\+Shape\+Base}}
 \subsubsection{\texorpdfstring{type\+\_\+}{type\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Type}} Collision\+Shape\+Base\+::type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cb}{Type}} Collision\+Shape\+Base\+::type\+\_\+ = \mbox{\hyperlink{class_collision_shape_base_a8abcef092855ad0ca191047044b002cbab50339a10e1de285ac99d4c3990b8693}{Type\+::\+N\+O\+NE}}\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-形状タイプ 
+タイプ 
 
 
 
- Collision\+Shape\+Base.\+h の 43 行目に定義があります。
+ Collision\+Shape\+Base.\+h の 50 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\mbox{\hyperlink{_collision_shape_base_8h}{Collision\+Shape\+Base.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component/\+Collision/\+Collision\+Base/\+Collision\+Object/\+Collision\+Shape\+Base/\mbox{\hyperlink{_collision_shape_base_8cpp}{Collision\+Shape\+Base.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\mbox{\hyperlink{_collision_shape_base_8h}{Collision\+Shape\+Base.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Collision/\+Collision\+Shape/\+Source/\mbox{\hyperlink{_collision_shape_base_8cpp}{Collision\+Shape\+Base.\+cpp}}\end{DoxyCompactItemize}

@@ -2,104 +2,121 @@
 \label{class_enemy}\index{Enemy@{Enemy}}
 
 
+敵\+Class  
+
+
+
+
 {\ttfamily \#include $<$Enemy.\+h$>$}
 
 
 
-Enemy の継承関係図\nopagebreak
+Enemy 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=174pt]{class_enemy__inherit__graph}
+\includegraphics[width=350pt]{class_enemy__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_enemy_a678f73f8af13e1bc55be3fdad2608399}{Init}} (\mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$update, \mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$collision)
-\item 
-void \mbox{\hyperlink{class_enemy_a9aeaa757abdf0c37fd67c4ce5aed6962}{Uninit}} () override
-\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_enemy_ab86571061e7fcabcf8c646b1abad5581}{Reset}} () override
-\begin{DoxyCompactList}\small\item\em リセット関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{公開変数類}
+void \mbox{\hyperlink{class_enemy_a3150c4d6c741494eda76bd59e9ed751b}{Init}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$collision)
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_enemy_a614ad271f07ecf63cb3e665155b7e258}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_cube_polygon}{Cube\+Polygon}} $\ast$ \mbox{\hyperlink{class_enemy_a9a24b765d76b789cc678701886570511}{cube\+\_\+polygon\+\_\+}}
-\end{DoxyCompactItemize}
+static const float \mbox{\hyperlink{class_enemy_aeed9db9b2062bfa87f2b77462dc47ba5}{S\+P\+E\+ED}} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em 速度 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
+敵\+Class 
 
+敵の\+Class 
 
- Enemy.\+h の 31 行目に定義があります。
+ Enemy.\+h の 24 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_enemy_a678f73f8af13e1bc55be3fdad2608399}\label{class_enemy_a678f73f8af13e1bc55be3fdad2608399}} 
+\mbox{\Hypertarget{class_enemy_a3150c4d6c741494eda76bd59e9ed751b}\label{class_enemy_a3150c4d6c741494eda76bd59e9ed751b}} 
 \index{Enemy@{Enemy}!Init@{Init}}
 \index{Init@{Init}!Enemy@{Enemy}}
 \subsubsection{\texorpdfstring{Init()}{Init()}}
-{\footnotesize\ttfamily void Enemy\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_update_base}{Update\+Base}} $\ast$}]{update,  }\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$}]{collision }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Enemy\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_collision_base}{Collision\+Base}} $\ast$}]{collision }\end{DoxyParamCaption})}
 
 
 
- Enemy.\+cpp の 32 行目に定義があります。
-
-\mbox{\Hypertarget{class_enemy_ab86571061e7fcabcf8c646b1abad5581}\label{class_enemy_ab86571061e7fcabcf8c646b1abad5581}} 
-\index{Enemy@{Enemy}!Reset@{Reset}}
-\index{Reset@{Reset}!Enemy@{Enemy}}
-\subsubsection{\texorpdfstring{Reset()}{Reset()}}
-{\footnotesize\ttfamily void Enemy\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$collision} & 衝突基底クラス \\
+\hline
+\end{DoxyParams}
 
-リセット関数 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
 
+ Enemy.\+cpp の 27 行目に定義があります。
 
-\mbox{\hyperlink{class_game_object_base_a85c59554f734bcb09f1a1e18d9517dce}{Game\+Object\+Base}}を実装しています。
-
-
-
- Enemy.\+cpp の 69 行目に定義があります。
-
-\mbox{\Hypertarget{class_enemy_a9aeaa757abdf0c37fd67c4ce5aed6962}\label{class_enemy_a9aeaa757abdf0c37fd67c4ce5aed6962}} 
-\index{Enemy@{Enemy}!Uninit@{Uninit}}
-\index{Uninit@{Uninit}!Enemy@{Enemy}}
-\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
-{\footnotesize\ttfamily void Enemy\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_enemy_a614ad271f07ecf63cb3e665155b7e258}\label{class_enemy_a614ad271f07ecf63cb3e665155b7e258}} 
+\index{Enemy@{Enemy}!Update@{Update}}
+\index{Update@{Update}!Enemy@{Enemy}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Enemy\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-終了関数 
+更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_game_object_null_aeeb51b7e7aa41fd0b16f8f7c016bdb55}{Game\+Object\+Null}}を再実装しています。
 
 
 
-\mbox{\hyperlink{class_game_object_base_a97e1bc277d7b1c0156d4735de29a022c}{Game\+Object\+Base}}を再実装しています。
-
-
-
- Enemy.\+cpp の 52 行目に定義があります。
+ Enemy.\+cpp の 37 行目に定義があります。
 
 
 
 \subsection{メンバ詳解}
-\mbox{\Hypertarget{class_enemy_a9a24b765d76b789cc678701886570511}\label{class_enemy_a9a24b765d76b789cc678701886570511}} 
-\index{Enemy@{Enemy}!cube\+\_\+polygon\+\_\+@{cube\+\_\+polygon\+\_\+}}
-\index{cube\+\_\+polygon\+\_\+@{cube\+\_\+polygon\+\_\+}!Enemy@{Enemy}}
-\subsubsection{\texorpdfstring{cube\+\_\+polygon\+\_\+}{cube\_polygon\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_cube_polygon}{Cube\+Polygon}}$\ast$ Enemy\+::cube\+\_\+polygon\+\_\+}
+\mbox{\Hypertarget{class_enemy_aeed9db9b2062bfa87f2b77462dc47ba5}\label{class_enemy_aeed9db9b2062bfa87f2b77462dc47ba5}} 
+\index{Enemy@{Enemy}!S\+P\+E\+ED@{S\+P\+E\+ED}}
+\index{S\+P\+E\+ED@{S\+P\+E\+ED}!Enemy@{Enemy}}
+\subsubsection{\texorpdfstring{S\+P\+E\+ED}{SPEED}}
+{\footnotesize\ttfamily const float Enemy\+::\+S\+P\+E\+ED = 0.\+1f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
- Enemy.\+h の 46 行目に定義があります。
+速度 
+
+
+
+ Enemy.\+h の 30 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Enemy/\mbox{\hyperlink{_enemy_8h}{Enemy.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/03\+\_\+\+Object/3\+D/\+Enemy/\mbox{\hyperlink{_enemy_8cpp}{Enemy.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Enemy/\mbox{\hyperlink{_enemy_8h}{Enemy.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Game/\+Object/3\+D/\+Enemy/\+Source/\mbox{\hyperlink{_enemy_8cpp}{Enemy.\+cpp}}\end{DoxyCompactItemize}

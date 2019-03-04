@@ -2,7 +2,7 @@
 \label{class_vertex_shader_fixed}\index{Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}}
 
 
-固定機能頂点シェーダークラス  
+固定機能頂点シェーダー\+Class  
 
 
 
@@ -11,11 +11,11 @@
 
 
 
-Vertex\+Shader\+Fixed の継承関係図\nopagebreak
+Vertex\+Shader\+Fixed 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=180pt]{class_vertex_shader_fixed__inherit__graph}
+\includegraphics[height=550pt]{class_vertex_shader_fixed__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{公開メンバ関数}
@@ -25,59 +25,37 @@ void \mbox{\hyperlink{class_vertex_shader_fixed_ae829ff736b33c45543804059255125b
 \begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_vertex_shader_fixed_a49f630aee4757c8fd8bae886f22dfeb0}{Uninit}} ()
 \begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_vertex_shader_fixed_a82bf2829b6fd0df26faedcbf650ba08d}{Common\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)
-\begin{DoxyCompactList}\small\item\em 共通設定関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_vertex_shader_fixed_a87523c320f6f6767d59d7b24265db7ec}{Specific\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index, unsigned mesh\+\_\+index)
-\begin{DoxyCompactList}\small\item\em 固有設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_vertex_shader_fixed_abe7cdb76b7da899680b1079344631cef}{Object\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)
+\begin{DoxyCompactList}\small\item\em オブジェクト設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_shader_fixed_ab6e2024e01390866d778aa6db4085ac4}{Mesh\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index, unsigned mesh\+\_\+index)
+\begin{DoxyCompactList}\small\item\em メッシュ設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_vertex_shader_fixed_a1caad0cf4c86788ed17c2a8da8645414}{Set\+Texture}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, unsigned object\+\_\+index, unsigned mesh\+\_\+index)
-\item 
+\begin{DoxyCompactList}\small\item\em テクスチャ設定関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_vertex_shader_fixed_a05ce5fdd8ff190b9934497f42cf19a38}{Set\+Material}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, unsigned object\+\_\+index, unsigned mesh\+\_\+index)
-\item 
+\begin{DoxyCompactList}\small\item\em マテリアル設定関数 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_vertex_shader_fixed_ae15e2c1ce81ca57cf657a6edff36cf9c}{Update\+Directional\+Lignt}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 拡散照明更新関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{非公開変数類}
 \begin{DoxyCompactItemize}
 \item 
 D3\+D\+L\+I\+G\+H\+T9 \mbox{\hyperlink{class_vertex_shader_fixed_ae2409965de90816f89ba8797880b3cd2}{directional\+\_\+light\+\_\+}}
 \begin{DoxyCompactList}\small\item\em ディレクショナルライト \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
 
 
 \subsection{詳解}
-固定機能頂点シェーダークラス 
+固定機能頂点シェーダー\+Class 
 
-固定機能の頂点シェーダークラス 
+固定機能の頂点シェーダー\+Class 
 
- Vertex\+Shader\+Fixed.\+h の 34 行目に定義があります。
+ Vertex\+Shader\+Fixed.\+h の 24 行目に定義があります。
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{class_vertex_shader_fixed_a82bf2829b6fd0df26faedcbf650ba08d}\label{class_vertex_shader_fixed_a82bf2829b6fd0df26faedcbf650ba08d}} 
-\index{Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}!Common\+Setting@{Common\+Setting}}
-\index{Common\+Setting@{Common\+Setting}!Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}}
-\subsubsection{\texorpdfstring{Common\+Setting()}{CommonSetting()}}
-{\footnotesize\ttfamily void Vertex\+Shader\+Fixed\+::\+Common\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-共通設定関数 
-
-
-\begin{DoxyParams}{引数}
-{\em draw} & \+: 描画基底クラス camera \+: カメラ object\+\_\+index \+: 描画オブジェクトインデックス \\
-\hline
-\end{DoxyParams}
-
-
-\mbox{\hyperlink{class_vertex_shader_null_a95f1a66045fb39c42cf0566f1990b6a1}{Vertex\+Shader\+Null}}を再実装しています。
-
-
-
- Vertex\+Shader\+Fixed.\+cpp の 62 行目に定義があります。
-
 \mbox{\Hypertarget{class_vertex_shader_fixed_ae829ff736b33c45543804059255125b6}\label{class_vertex_shader_fixed_ae829ff736b33c45543804059255125b6}} 
 \index{Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}!Init@{Init}}
 \index{Init@{Init}!Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}}
@@ -89,12 +67,88 @@ D3\+D\+L\+I\+G\+H\+T9 \mbox{\hyperlink{class_vertex_shader_fixed_ae2409965de9081
 初期化関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
-\mbox{\hyperlink{class_vertex_shader_null_af30eb8057fe0537bc6ade214647b6fb5}{Vertex\+Shader\+Null}}を再実装しています。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_a4d79b358dab49c840345d74823a16840}{Vertex\+Shader\+Null}}を再実装しています。
 
 
 
- Vertex\+Shader\+Fixed.\+cpp の 27 行目に定義があります。
+ Vertex\+Shader\+Fixed.\+cpp の 19 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_fixed_ab6e2024e01390866d778aa6db4085ac4}\label{class_vertex_shader_fixed_ab6e2024e01390866d778aa6db4085ac4}} 
+\index{Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}!Mesh\+Setting@{Mesh\+Setting}}
+\index{Mesh\+Setting@{Mesh\+Setting}!Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}}
+\subsubsection{\texorpdfstring{Mesh\+Setting()}{MeshSetting()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Fixed\+::\+Mesh\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+メッシュ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_a7bd853b15ab81cec44f1b6a1ea70a3a9}{Vertex\+Shader\+Null}}を再実装しています。
+
+
+
+ Vertex\+Shader\+Fixed.\+cpp の 66 行目に定義があります。
+
+\mbox{\Hypertarget{class_vertex_shader_fixed_abe7cdb76b7da899680b1079344631cef}\label{class_vertex_shader_fixed_abe7cdb76b7da899680b1079344631cef}} 
+\index{Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}!Object\+Setting@{Object\+Setting}}
+\index{Object\+Setting@{Object\+Setting}!Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}}
+\subsubsection{\texorpdfstring{Object\+Setting()}{ObjectSetting()}}
+{\footnotesize\ttfamily void Vertex\+Shader\+Fixed\+::\+Object\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+オブジェクト設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_aae3231bb3fa5df2578ba89701867ffb3}{Vertex\+Shader\+Null}}を再実装しています。
+
+
+
+ Vertex\+Shader\+Fixed.\+cpp の 47 行目に定義があります。
 
 \mbox{\Hypertarget{class_vertex_shader_fixed_a05ce5fdd8ff190b9934497f42cf19a38}\label{class_vertex_shader_fixed_a05ce5fdd8ff190b9934497f42cf19a38}} 
 \index{Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}!Set\+Material@{Set\+Material}}
@@ -104,7 +158,25 @@ D3\+D\+L\+I\+G\+H\+T9 \mbox{\hyperlink{class_vertex_shader_fixed_ae2409965de9081
 
 
 
- Vertex\+Shader\+Fixed.\+cpp の 111 行目に定義があります。
+マテリアル設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vertex\+Shader\+Fixed.\+cpp の 87 行目に定義があります。
 
 \mbox{\Hypertarget{class_vertex_shader_fixed_a1caad0cf4c86788ed17c2a8da8645414}\label{class_vertex_shader_fixed_a1caad0cf4c86788ed17c2a8da8645414}} 
 \index{Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}!Set\+Texture@{Set\+Texture}}
@@ -114,30 +186,25 @@ D3\+D\+L\+I\+G\+H\+T9 \mbox{\hyperlink{class_vertex_shader_fixed_ae2409965de9081
 
 
 
- Vertex\+Shader\+Fixed.\+cpp の 98 行目に定義があります。
-
-\mbox{\Hypertarget{class_vertex_shader_fixed_a87523c320f6f6767d59d7b24265db7ec}\label{class_vertex_shader_fixed_a87523c320f6f6767d59d7b24265db7ec}} 
-\index{Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}!Specific\+Setting@{Specific\+Setting}}
-\index{Specific\+Setting@{Specific\+Setting}!Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}}
-\subsubsection{\texorpdfstring{Specific\+Setting()}{SpecificSetting()}}
-{\footnotesize\ttfamily void Vertex\+Shader\+Fixed\+::\+Specific\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-固有設定関数 
+テクスチャ設定関数 
 
 
 \begin{DoxyParams}{引数}
-{\em draw} & \+: 描画基底クラス camera \+: カメラ object\+\_\+index \+: 描画オブジェクトインデックス mesh\+\_\+index \+: メッシュインデックス \\
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
 
-\mbox{\hyperlink{class_vertex_shader_null_aa2234c6ea083e3c0233d59f222145992}{Vertex\+Shader\+Null}}を再実装しています。
 
-
-
- Vertex\+Shader\+Fixed.\+cpp の 84 行目に定義があります。
+ Vertex\+Shader\+Fixed.\+cpp の 77 行目に定義があります。
 
 \mbox{\Hypertarget{class_vertex_shader_fixed_a49f630aee4757c8fd8bae886f22dfeb0}\label{class_vertex_shader_fixed_a49f630aee4757c8fd8bae886f22dfeb0}} 
 \index{Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}!Uninit@{Uninit}}
@@ -150,12 +217,22 @@ D3\+D\+L\+I\+G\+H\+T9 \mbox{\hyperlink{class_vertex_shader_fixed_ae2409965de9081
 終了関数 
 
 
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
 
-\mbox{\hyperlink{class_vertex_shader_null_a16334df4ac02db3dd63f042622032301}{Vertex\+Shader\+Null}}を再実装しています。
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_vertex_shader_null_adf758f295d2803c6d8bd7e05e461abec}{Vertex\+Shader\+Null}}を再実装しています。
 
 
 
- Vertex\+Shader\+Fixed.\+cpp の 52 行目に定義があります。
+ Vertex\+Shader\+Fixed.\+cpp の 41 行目に定義があります。
 
 \mbox{\Hypertarget{class_vertex_shader_fixed_ae15e2c1ce81ca57cf657a6edff36cf9c}\label{class_vertex_shader_fixed_ae15e2c1ce81ca57cf657a6edff36cf9c}} 
 \index{Vertex\+Shader\+Fixed@{Vertex\+Shader\+Fixed}!Update\+Directional\+Lignt@{Update\+Directional\+Lignt}}
@@ -165,7 +242,21 @@ D3\+D\+L\+I\+G\+H\+T9 \mbox{\hyperlink{class_vertex_shader_fixed_ae2409965de9081
 
 
 
- Vertex\+Shader\+Fixed.\+cpp の 126 行目に定義があります。
+拡散照明更新関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Vertex\+Shader\+Fixed.\+cpp の 97 行目に定義があります。
 
 
 
@@ -182,11 +273,11 @@ D3\+D\+L\+I\+G\+H\+T9 \mbox{\hyperlink{class_vertex_shader_fixed_ae2409965de9081
 
 
 
- Vertex\+Shader\+Fixed.\+h の 40 行目に定義があります。
+ Vertex\+Shader\+Fixed.\+h の 30 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Shader/\+Vertex\+Shader/\+Vertex\+Shader\+Fixed/\mbox{\hyperlink{_vertex_shader_fixed_8h}{Vertex\+Shader\+Fixed.\+h}}\item 
-C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/04\+\_\+\+Tool/\+Component\+Manager/\+Draw\+Manager/\+Shader/\+Vertex\+Shader/\+Vertex\+Shader\+Fixed/\mbox{\hyperlink{_vertex_shader_fixed_8cpp}{Vertex\+Shader\+Fixed.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Vertex\+Shader/\mbox{\hyperlink{_vertex_shader_fixed_8h}{Vertex\+Shader\+Fixed.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Vertex\+Shader/\+Source/\mbox{\hyperlink{_vertex_shader_fixed_8cpp}{Vertex\+Shader\+Fixed.\+cpp}}\end{DoxyCompactItemize}

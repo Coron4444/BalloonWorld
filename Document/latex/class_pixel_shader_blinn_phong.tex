@@ -1,0 +1,213 @@
+\hypertarget{class_pixel_shader_blinn_phong}{}\section{Pixel\+Shader\+Blinn\+Phong クラス}
+\label{class_pixel_shader_blinn_phong}\index{Pixel\+Shader\+Blinn\+Phong@{Pixel\+Shader\+Blinn\+Phong}}
+
+
+ブリン・フォンの鏡面反射ピクセルシェーダー\+Class  
+
+
+
+
+{\ttfamily \#include $<$Pixel\+Shader\+Blinn\+Phong.\+h$>$}
+
+
+
+Pixel\+Shader\+Blinn\+Phong 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_pixel_shader_blinn_phong__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pixel_shader_blinn_phong_af02b6b6659975f0285aebced953c567a}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_shader_blinn_phong_a50450f0ad9c6c0ad011361ee153088af}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_shader_blinn_phong_a772f7d20219ce7a563a8e608306f0ca1}{Object\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index)
+\begin{DoxyCompactList}\small\item\em オブジェクト設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixel_shader_blinn_phong_a5b4b61a3d51610d6a41dfb3b25704421}{Mesh\+Setting}} (\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$draw, \mbox{\hyperlink{class_camera}{Camera}} $\ast$camera, unsigned object\+\_\+index, unsigned mesh\+\_\+index)
+\begin{DoxyCompactList}\small\item\em メッシュ設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+D3\+D\+X\+M\+A\+T\+R\+IX \mbox{\hyperlink{class_pixel_shader_blinn_phong_a5647e2717c06218e1ead9a9dbd6a95fb}{math\+\_\+matrix\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 計算用行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \mbox{\hyperlink{class_pixel_shader_blinn_phong_a23dbaf1801f99d9275b87f63ca58069d}{P\+A\+TH}} = \char`\"{}resource/H\+L\+SL/Effect/Pixel\+Shader/Blinn\+Phong.\+psh\char`\"{}
+\begin{DoxyCompactList}\small\item\em ファイルパス \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+ブリン・フォンの鏡面反射ピクセルシェーダー\+Class 
+
+ブリン・フォンの鏡面反射のピクセルシェーダーの\+Class 
+
+ Pixel\+Shader\+Blinn\+Phong.\+h の 24 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_pixel_shader_blinn_phong_af02b6b6659975f0285aebced953c567a}\label{class_pixel_shader_blinn_phong_af02b6b6659975f0285aebced953c567a}} 
+\index{Pixel\+Shader\+Blinn\+Phong@{Pixel\+Shader\+Blinn\+Phong}!Init@{Init}}
+\index{Init@{Init}!Pixel\+Shader\+Blinn\+Phong@{Pixel\+Shader\+Blinn\+Phong}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Blinn\+Phong\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_a5318be2bf26892c385d863e3e8409571}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Blinn\+Phong.\+cpp の 27 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_blinn_phong_a5b4b61a3d51610d6a41dfb3b25704421}\label{class_pixel_shader_blinn_phong_a5b4b61a3d51610d6a41dfb3b25704421}} 
+\index{Pixel\+Shader\+Blinn\+Phong@{Pixel\+Shader\+Blinn\+Phong}!Mesh\+Setting@{Mesh\+Setting}}
+\index{Mesh\+Setting@{Mesh\+Setting}!Pixel\+Shader\+Blinn\+Phong@{Pixel\+Shader\+Blinn\+Phong}}
+\subsubsection{\texorpdfstring{Mesh\+Setting()}{MeshSetting()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Blinn\+Phong\+::\+Mesh\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index,  }\item[{unsigned}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+メッシュ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+{\em mesh\+\_\+index} & メッシュインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_a89b6f0558a969478b06af52bb8e6ee16}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Blinn\+Phong.\+cpp の 80 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_blinn_phong_a772f7d20219ce7a563a8e608306f0ca1}\label{class_pixel_shader_blinn_phong_a772f7d20219ce7a563a8e608306f0ca1}} 
+\index{Pixel\+Shader\+Blinn\+Phong@{Pixel\+Shader\+Blinn\+Phong}!Object\+Setting@{Object\+Setting}}
+\index{Object\+Setting@{Object\+Setting}!Pixel\+Shader\+Blinn\+Phong@{Pixel\+Shader\+Blinn\+Phong}}
+\subsubsection{\texorpdfstring{Object\+Setting()}{ObjectSetting()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Blinn\+Phong\+::\+Object\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_draw_base}{Draw\+Base}} $\ast$}]{draw,  }\item[{\mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned}]{object\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+オブジェクト設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$draw} & 描画基底クラス \\
+\hline
+{\em $\ast$camera} & カメラ \\
+\hline
+{\em object\+\_\+index} & 描画オブジェクトインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_a488bde4a2c9a9c45c4ec0ad42487d3b1}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Blinn\+Phong.\+cpp の 49 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_blinn_phong_a50450f0ad9c6c0ad011361ee153088af}\label{class_pixel_shader_blinn_phong_a50450f0ad9c6c0ad011361ee153088af}} 
+\index{Pixel\+Shader\+Blinn\+Phong@{Pixel\+Shader\+Blinn\+Phong}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Pixel\+Shader\+Blinn\+Phong@{Pixel\+Shader\+Blinn\+Phong}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Pixel\+Shader\+Blinn\+Phong\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+\mbox{\hyperlink{class_pixel_shader_null_adca4c44cd25c90a5ebd75b459f5e641e}{Pixel\+Shader\+Null}}を再実装しています。
+
+
+
+ Pixel\+Shader\+Blinn\+Phong.\+cpp の 41 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_pixel_shader_blinn_phong_a5647e2717c06218e1ead9a9dbd6a95fb}\label{class_pixel_shader_blinn_phong_a5647e2717c06218e1ead9a9dbd6a95fb}} 
+\index{Pixel\+Shader\+Blinn\+Phong@{Pixel\+Shader\+Blinn\+Phong}!math\+\_\+matrix\+\_\+@{math\+\_\+matrix\+\_\+}}
+\index{math\+\_\+matrix\+\_\+@{math\+\_\+matrix\+\_\+}!Pixel\+Shader\+Blinn\+Phong@{Pixel\+Shader\+Blinn\+Phong}}
+\subsubsection{\texorpdfstring{math\+\_\+matrix\+\_\+}{math\_matrix\_}}
+{\footnotesize\ttfamily D3\+D\+X\+M\+A\+T\+R\+IX Pixel\+Shader\+Blinn\+Phong\+::math\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+計算用行列 
+
+
+
+ Pixel\+Shader\+Blinn\+Phong.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_pixel_shader_blinn_phong_a23dbaf1801f99d9275b87f63ca58069d}\label{class_pixel_shader_blinn_phong_a23dbaf1801f99d9275b87f63ca58069d}} 
+\index{Pixel\+Shader\+Blinn\+Phong@{Pixel\+Shader\+Blinn\+Phong}!P\+A\+TH@{P\+A\+TH}}
+\index{P\+A\+TH@{P\+A\+TH}!Pixel\+Shader\+Blinn\+Phong@{Pixel\+Shader\+Blinn\+Phong}}
+\subsubsection{\texorpdfstring{P\+A\+TH}{PATH}}
+{\footnotesize\ttfamily const char $\ast$ Pixel\+Shader\+Blinn\+Phong\+::\+P\+A\+TH = \char`\"{}resource/H\+L\+SL/Effect/Pixel\+Shader/Blinn\+Phong.\+psh\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+ファイルパス 
+
+
+
+ Pixel\+Shader\+Blinn\+Phong.\+h の 30 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\mbox{\hyperlink{_pixel_shader_blinn_phong_8h}{Pixel\+Shader\+Blinn\+Phong.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Project/source/\+Framework/\+Game\+Engine/\+Draw/\+Draw\+Manager/\+Shader/\+Pixel\+Shader/\+Source/\mbox{\hyperlink{_pixel_shader_blinn_phong_8cpp}{Pixel\+Shader\+Blinn\+Phong.\+cpp}}\end{DoxyCompactItemize}
