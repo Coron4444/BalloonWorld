@@ -29,7 +29,7 @@ Features
 --------------------
 * オリジナル性のあるゲームシステム
 * 自作フレームワーク
-* FBXからコンバートした独自形式バイナリーデータを使用([FBXConverter1.0][url_fbx_converter])
+* FBXからコンバートした独自形式バイナリーデータを使用([FBXConverter][url_fbx_converter])
 * Bullet Physics採用
 * Doxygen採用
 
